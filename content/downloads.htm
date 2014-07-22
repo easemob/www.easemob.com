@@ -11,12 +11,12 @@
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" href=" http://www.easemob.com/downloads/iOSSDK.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" href=" http://www.easemob.com/downloads/iOSSDK.zip">下载IOS版开发包（SDK+文档+Demo)</a>
 						<span><em><a href="http://developer.easemob.com/docs/emchat/ios/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/ios/singlechat.html" target="_blank">iOS SDK 集成指南</a></em>V 2.0.0　下载次数：2583</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a class="ios_btn andriod_btn" href="http://www.easemob.com/downloads/androidsdk.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn id="androidHref" andriod_btn" href="http://www.easemob.com/downloads/androidsdk.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
 						<span><em><a href="http://developer.easemob.com/docs/emchat/android/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/android/singlechat.html" target="_blank">Android SDK 集成指南</a></em>V 2.0.0　下载次数：3231</span>
 					</li>
 				</ul>
@@ -238,7 +238,17 @@
 					</li>
 			    </ul>
 			</div>
+			
 			<script type="text/javascript">
+				$(function(){
+						var androidHref = $('#iosHref').attr('href');
+						var iosHref = $('#iosHref').attr('href');
+					
+						var date = new Date();
+						$('#android_href').attr('href', androidHref + date);
+						$('#ios_href').attr('href', iosHref + date);
+				});
+				
 				function iosToggle(){
 				    $(".ios_ul").slideToggle(2000);//窗帘效果的切换,点一下收,点一下开,参数可以无,参数说明同上
 				    $(".ios_more").hide();
@@ -252,4 +262,3 @@
 	</div>
 	<div class="clearfix"></div>
 </div>
-
