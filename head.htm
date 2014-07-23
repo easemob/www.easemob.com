@@ -12,12 +12,14 @@
       continuous: true
     });
     
-    var androidHref = $('#iosHref').attr('href');
+	if($('#androidHref').length && $('#iosHref').length) { 
+		var androidHref = $('#androidHref').attr('href');
 		var iosHref = $('#iosHref').attr('href');
-					
+
 		var date = new Date();
-		$('#android_href').attr('href', androidHref + "?vb=" + date);
-		$('#ios_href').attr('href', iosHref + "?vb=" + date);	
+		$('#androidHref').attr('href', androidHref + "?vb=" + date.getTime());
+		$('#iosHref').attr('href', iosHref + "?vb=" + date.getTime());
+    }
     
   }); 
 </script>
