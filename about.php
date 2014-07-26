@@ -3,7 +3,7 @@
 include ("head.htm");
 ?>
 <body>
-<?php include_once("analyticstracking.php") ?>
+
 <?php
 include ("header.htm");
 ?>
