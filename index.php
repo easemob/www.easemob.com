@@ -12,6 +12,8 @@
 <meta property="qc:admins" content="5547407677651355726375" />
 <meta content="IE=8" http-equiv="X-Ua-Compatible"/>
 <link type="text/css" rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/slider.jquery.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){ 
     $("#slider").easySlider({
@@ -32,7 +34,5 @@ include ("footer.htm");
 
 </body>
 <!--<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.9.1/jquery.min.js"></script>-->
-<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="js/slider.jquery.js"></script>
 </html>
 
