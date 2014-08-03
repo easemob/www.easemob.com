@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>后台登录</title>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+		<!--fonts-->
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+		<!--ace styles-->
+
+<link href="assets/css/ace.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/css/ace-responsive.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/css/ace-skins.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+<link href="assets/css/management.css" rel="stylesheet" type="text/css" media="screen"/>
+<script src="assets/js/jquery-1.7.2.min.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/theme/bootstrap/js/bootstrap.js"></script>
+<style type="text/css">
+.login-layout {
+	background: none repeat scroll 0 0 #e3eaf0;
+}
+.login-layout .widget-box {
+	background-color: #ccc;
+	border-bottom: 0 none;
+	box-shadow: none;
+	overflow: hidden;
+	padding: 6px;
+	position: absolute;
+	transform: scale(0, 1) translate(-150px);
+	visibility: hidden;
+	width: 100%;
+}
+</style>
+
+<script>
+
+	$(function(){
+		//读取cookie
+		if($('#rememberme:checked').length>0){
+			$('#username').val($.cookie('tvs-cookies-userName'));
+			$('#password').val($.cookie('tvs-cookies-password'));
+		}
+	})
+
+</script>
+</head>
+
+<body class="login-layout">
+<div id="main-container" class="container-fluid">
+  <div id="main-content">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="login-container">
+          <div class="row-fluid">
+            <div class="center">
+              <h1 style="margin-top: 40px;" class="blue"> <img border="0" style="height:102px;" src="assets/css/images/em_logo.png" alt=""> </h1>
+            </div>
+          </div>
+          <div class="space-6"></div>
+          <div class="row-fluid">
+            <div class="position-relative">
+              <div class="visible widget-box no-border" id="login-box">
+                <div class="widget-body">
+                  <div class="widget-main">
+                    <h4 class="header blue lighter bigger"> 请输入您的信息 </h4>
+                    <div class="space-6"></div>
+                      <fieldset>                      
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="text" placeholder="用户名称" nullmsg="请输入用户名！" datatype="*" class="span12" name="username" id="username">
+                          <i class="icon-user"></i> <span class="Validform_checktip"></span></span> </label>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="password" nullmsg="请输入密码！" placeholder="密码" class="span12" name="password" id="password">
+                          <i class="icon-lock"></i> <span class="Validform_checktip"></span></span> </label>
+                        <div class="space"></div>
+                        <div class="row-fluid">
+                          <label class="span8">
+                            <input type="checkbox" checked="true" name="rememberme" id="rememberme">
+                            <span class="lbl"> 记住我</span> </label>
+                          <button class="span4 btn btn-small btn-primary" onclick="login();"> <i class="icon-key"></i> 登录 </button>
+                        </div>
+                      </fieldset>
+                  </div>
+                  <div class="toolbar clearfix">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="widget-box no-border" id="forgot-box">
+                <div class="widget-body">
+                  <div class="widget-main">
+                    <h4 class="header red lighter bigger"> <i class="icon-key"></i> 找回密码 </h4>
+                    <div class="space-6"></div>
+                    <p> 请输入您的邮箱 </p>
+                    <form>
+                      <fieldset>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="email" placeholder="Email" class="span12">
+                          <i class="icon-envelope"></i> </span> </label>
+                        <div class="row-fluid">
+                          <button class="span5 offset7 btn btn-small btn-danger" onclick="return false;"> <i class="icon-lightbulb"></i> 找回! </button>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                  <div class="toolbar center"> <a class="back-to-login-link" onclick="show_box('login-box'); return false;" href="javascript:void(0);"> 返回登录 <i class="icon-arrow-right"></i> </a> </div>
+                </div>
+              </div>
+              
+              <div class="widget-box no-border" id="signup-box">
+                <div class="widget-body">
+                  <div class="widget-main">
+                    <h4 class="header green lighter bigger"> <i class="icon-group blue"></i> 新用户注册 </h4>
+                    <div class="space-6"></div>
+                    <p> 请详细输入您的信息: </p>
+                    <form method="post" action="index.html">
+                      <fieldset>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="text" placeholder="公司名称" class="span12" name="companyName">
+                          <i class="icon-user"></i> </span> </label>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="email" placeholder="电子邮件" class="span12" name="email">
+                          <i class="icon-envelope"></i> </span> </label>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="text" placeholder="用户名" class="span12" name="username">
+                          <i class="icon-user"></i> </span> </label>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="password" placeholder="密码" class="span12" name="password">
+                          <i class="icon-lock"></i> </span> </label>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="password" placeholder="重复密码" class="span12">
+                          <i class="icon-retweet"></i> </span> </label>
+                        <label>
+                          <input type="checkbox">
+                          <span class="lbl"> I accept the <a href="#">User Agreement</a> </span> </label>
+                        <div class="space-24"></div>
+                        <div class="row-fluid">
+                          <button class="span6 btn btn-small" type="reset"> <i class="icon-refresh"></i> 重新填写 </button>
+                          <button class="span6 btn btn-small btn-success" onclick="formSubmit('singup-box');"> 注册 <i class="icon-arrow-right icon-on-right"></i> </button>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                  <div class="toolbar center"> <a class="back-to-login-link" onclick="show_box('login-box'); return false;" href="javascript:void(0);"> <i class="icon-arrow-left"></i> 返回登录 </a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="assets/js/management.js"></script>
+</html>
