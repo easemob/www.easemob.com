@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>管理后台</title>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<!--[if IE 7]>
+<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+<![endif]-->
+<!--fonts-->
+<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+<!--ace styles-->
+<link href="assets/css/ace.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/css/ace-responsive.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/css/ace-skins.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<!--[if lte IE 8]>
+  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+<![endif]-->
+
+<link href="assets/css/management.css" rel="stylesheet" type="text/css" media="screen"/>
+
+<script src="assets/js/jquery-1.7.2.min.js"></script>
+<script src="assets/theme/bootstrap/js/bootstrap.js"></script>
+<script src="assets/js/ace-elements.min.js"></script>
+<script src="assets/js/ace.min.js"></script>
+
+<script>
+$(function(){
+	getAuditedScripts();
+})
+
+</script>
+</head>
+
+<body>
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container-fluid"> <a class="brand" href="javascript:void(0);"> <small> <img style="height:24px;" src="assets/css/images/logo.png" alt="管理后台"/> </small> </a>
+      <ul class="nav ace-nav pull-right">
+        <li class="light-blue user-profile"> <a class="user-menu dropdown-toggle" href="javascript:void(0);" data-toggle="dropdown"> <span id="user_info"> <small>Welcome,</small> jliu </span> <i class="icon-caret-down"></i> </a>
+          <ul id="user_menu" class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
+            <li class="divider"></li>
+            <li> <a onclick="logout();" href="javascript:void(0);"> <i class="icon-off"></i> 退出 </a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="main-container" class="container-fluid"> <a href="javascript:void(0);" id="menu-toggler"> <span></span> </a>
+  <div id="sidebar">
+    <div id="sidebar-shortcuts">
+      <div style="min-height: 40px;" id="sidebar-shortcuts-large"> </div>
+      <div style="min-height: 40px;" id="sidebar-shortcuts-mini"> </div>
+    </div>
+    <ul class="nav nav-list">
+	   <li class="active"> <a href="index.html" target="_self"> <i class="icon-text-width"></i> <span>广播管理</span> </a> </li>
+      <li> <a href="yhgl.html" target="_self"> <i class="icon-user"></i> <span>用户管理</span> </a> </li>
+      <li> <a href="xqgl.html" target="_self"> <i class="icon-ambulance xiaoqu-icon"></i> <span>小区管理</span> </a> </li>
+      <li> <a href="tjfx.html"> <i class="icon-table"></i> <span>统计分析</span> </a> </li>
+    </ul>
+    <div id="sidebar-collapse"> <i class="icon-double-angle-left toLeft-icon"></i> </div>
+  </div>
+  <div class="clearfix" id="main-content">
+    <div id="breadcrumbs">
+      <ul class="breadcrumb">
+        <li> <i class="icon-home"></i> <a href="index.html" target="_self"> 首页</a> <span class="divider"> <i class="icon-angle-right"></i> </span> </li>
+        <li class="active">段子管理</li>
+      </ul>
+    </div>
+    <div class="clearfix" id="page-content">
+      <div class="row-fluid">
+        <div class="row-fluid">
+          <div class="table-header">
+            <div class="row-fluid">
+              <div class="span12"> <a  class="btn" href="javascript:void(0);"> <i class="icon-plus"></i>已审核 </a> </div>
+            </div>
+          </div>
+            <div style="padding:5px 0px;line-height:38px;text-align:right;">
+              <button onclick="batcDeleteAuditedScripts();">批量删除</button>
+            </div>
+            <table class="table table-striped table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th> <i></i>选项</th>
+                  <th> <i class="icon-user"></i>昵称</th>
+                  <th class="hidden-480"><i></i>时间</th>
+                  <th class="hidden-phone"> <i class="icon-dashboard"></i>段子</th>
+                  <th class="hidden-480"> <i class="icon-hdd"></i>顶</th>
+                  <th class="hidden-480"> <i class="icon-tasks"></i>踩</th>
+                  <th class="hidden-480"> <i class="icon-tasks"></i>评</th>
+                  <th class="hidden-480"> <i class="icon-tasks"></i>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+			  <!--
+                <tr>
+                  <td class="text-center"><input type="checkbox" value="" name="checkbox" style="opacity:1;" autocomplete="off"></td>
+                  <td class="text-center">我叫mt</td>
+                  <td class="text-center">2013-10-21</td>
+                  <td>老婆怀孕三月，一天问老公：老公你喜欢什么样的孩子，老公回</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center a-center"><a href="javascript:void(0);">通过审核</a><a href="javascript:void(0);">删除</a><a href="dzxq.html" target="_self">查看</a></td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input type="checkbox" value="" name="checkbox" style="opacity:1;" autocomplete="off"></td>
+                  <td class="text-center">我叫mt</td>
+                  <td class="text-center">2013-10-21</td>
+                  <td>老婆怀孕三月，一天问老公：老公你喜欢什么样的孩子，老公回</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center a-center"><a href="javascript:void(0);">通过审核</a><a href="javascript:void(0);">删除</a><a href="dzxq.html" target="_self">查看</a></td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input type="checkbox" value="" name="checkbox" style="opacity:1;" autocomplete="off"></td>
+                  <td class="text-center">我叫mt</td>
+                  <td class="text-center">2013-10-21</td>
+                  <td>老婆怀孕三月，一天问老公：老公你喜欢什么样的孩子，老公回</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center a-center"><a href="javascript:void(0);">通过审核</a><a href="javascript:void(0);">删除</a><a href="dzxq.html" target="_self">查看</a></td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input type="checkbox" value="" name="checkbox" style="opacity:1;" autocomplete="off"></td>
+                  <td class="text-center">我叫mt</td>
+                  <td class="text-center">2013-10-21</td>
+                  <td>老婆怀孕三月，一天问老公：老公你喜欢什么样的孩子，老公回</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center a-center"><a href="javascript:void(0);">通过审核</a><a href="javascript:void(0);">删除</a><a href="dzxq.html" target="_self">查看</a></td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input type="checkbox" value="" name="checkbox" style="opacity:1;" autocomplete="off"></td>
+                  <td class="text-center">我叫mt</td>
+                  <td class="text-center">2013-10-21</td>
+                  <td>老婆怀孕三月，一天问老公：老公你喜欢什么样的孩子，老公回</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center a-center"><a href="javascript:void(0);">通过审核</a><a href="javascript:void(0);">删除</a><a href="dzxq.html" target="_self">查看</a></td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input type="checkbox" value="" name="checkbox" style="opacity:1;" autocomplete="off"></td>
+                  <td class="text-center">我叫mt</td>
+                  <td class="text-center">2013-10-21</td>
+                  <td>老婆怀孕三月，一天问老公：老公你喜欢什么样的孩子，老公回</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center a-center"><a href="javascript:void(0);">通过审核</a><a href="javascript:void(0);">删除</a><a href="dzxq.html" target="_self">查看</a></td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input type="checkbox" value="" name="checkbox" style="opacity:1;" autocomplete="off"></td>
+                  <td class="text-center">我叫mt</td>
+                  <td class="text-center">2013-10-21</td>
+                  <td>老婆怀孕三月，一天问老公：老公你喜欢什么样的孩子，老公回</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center a-center"><a href="javascript:void(0);">通过审核</a><a href="javascript:void(0);">删除</a><a href="dzxq.html" target="_self">查看</a></td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input type="checkbox" value="" name="checkbox" style="opacity:1;" autocomplete="off"></td>
+                  <td class="text-center">我叫mt</td>
+                  <td class="text-center">2013-10-21</td>
+                  <td>老婆怀孕三月，一天问老公：老公你喜欢什么样的孩子，老公回</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center a-center"><a href="javascript:void(0);">通过审核</a><a href="javascript:void(0);">删除</a><a href="dzxq.html" target="_self">查看</a></td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input type="checkbox" value="" name="checkbox" style="opacity:1;" autocomplete="off"></td>
+                  <td class="text-center">我叫mt</td>
+                  <td class="text-center">2013-10-21</td>
+                  <td>老婆怀孕三月，一天问老公：老公你喜欢什么样的孩子，老公回</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center a-center"><a href="javascript:void(0);">通过审核</a><a href="javascript:void(0);">删除</a><a href="dzxq.html" target="_self">查看</a></td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input type="checkbox" value="" name="checkbox" style="opacity:1;" autocomplete="off"></td>
+                  <td class="text-center">我叫mt</td>
+                  <td class="text-center">2013-10-21</td>
+                  <td>老婆怀孕三月，一天问老公：老公你喜欢什么样的孩子，老公回</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center">1223</td>
+                  <td class="text-center a-center"><a href="javascript:void(0);">通过审核</a><a href="javascript:void(0);">删除</a><a href="dzxq.html" target="_self">查看</a></td>
+                </tr>
+				-->
+              </tbody>
+            </table>
+          <div class="pagination pagination-right">
+            <ul>
+              <li> <a onclick="getAuditedScripts('forward');" href="#">上一页</a> </li>
+              <li> <a onclick="getAuditedScripts('next');" href="#">下一页</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="assets/js/management.js"></script>
+</html>
