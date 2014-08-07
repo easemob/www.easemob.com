@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+
+# A few helpful tips about the Rules file:
+#
+# * The order of rules is important: for each item, only the first matching
+#   rule is applied.
+#
+# * Item identifiers start and end with a slash (e.g. “/about/” for the file
+#   “content/about.html”). To select all children, grandchildren, … of an
+#   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
+#   because “*” matches zero or more characters.
+
+# Reset search-index by deleting it every time
+preprocess do
+  File.delete("output/search-index.json") if File.exists?("output/search-index.json")
+end
+
+compile '/static/*' do
+end
+
+compile '/CNAME/' do
+end
+
+
+#d.html 供下载连接
+compile '/downloadLink/*' do
+  layout 'downloadLink'
+end 
+
+
+#about  关于我们
+compile '/about/*' do
+  filter :kramdown, :toc_levels => [2]
+  filter :erb
+  layout 'about'
+end 
+
+
+compile '*' do
+  filter :erb
+  filter :kramdown, :toc_levels => [2]
+  filter :colorize_syntax,
+    :colorizers => {:javascript => :rouge}
+  layout item[:layout] || 'default'
+end
+
+route '/static/*' do
+  item.identifier[7..-2]
+end
+
+route '/CNAME/' do
+  '/CNAME'
+end
+
+
+route '*' do
+  item.identifier + 'index.html'
+end
+
+layout '*', :erb
