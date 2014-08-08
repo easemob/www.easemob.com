@@ -2,19 +2,7 @@
 title: 环信即时通讯云
 layout: overview
 ---
-<!-- run once  后续需要修改，不知道为什么要只运行一次-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-42752333-1', 'easemob.com');
-  ga('send', 'pageview');
-
-</script>
-
-<!-- run once-->
+<script type="text/javascript" src="/js/analyticsCount.js"></script>
 <div class="wrap_bd">
   <div id="container" class="price-wrap">
     <div id="content">
@@ -44,7 +32,7 @@ layout: overview
                 <a class="btn pricing green" title="Sign-up now" href="https://console.easemob.com?comeFrom=easemobHome" target="_blank">注册</a>
               </td>
               <td class="button col-free">
-                <table class="col-table">
+                <table class="col-table new-price-table">
                   <tr>
                     <td class="col2 col-main"><span>版本</span></td>
                     <td class="col2 col-main"><span>定价</span></td>

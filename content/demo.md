@@ -3,6 +3,7 @@ title: 环信即时通讯云
 layout: overview
 ---
 
+<script type="text/javascript" src="/js/analyticsCount.js"></script>
 <div class="wrap_bd">
 	<div class="w990 download_demo">
 		<div class="demo_hd">
@@ -14,7 +15,7 @@ layout: overview
 					<a class="demo_iphone" href="http://www.easemob.com/downloads/ChatDemo-UI.ipa"></a>
 					<p>支持iPhone4、iTouch2及以上设备<br />
 						IOS版也可通过在手机的safari浏览器浏览器中打开以下地址安装：
-						<a href="http://www.easemob.com/downloadLink/d">http://www.easemob.com/downloadLink/d</a>
+						<a href="http://www.easemob.com/d.html">http://www.easemob.com/d.html</a>
 					</p>
 				</dt>
 				<dd><img src="/img/demo_wx_ico.png" alt="微信下载" /></dd>
