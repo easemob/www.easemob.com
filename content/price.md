@@ -26,7 +26,7 @@ layout: overview
               <td class="col1 col-main">定价方案</td>
               <td class="button free">
                 <br>
-                <span class="small"><strong>注册用户数在300万以下或者日活用户在10万以下终身免费</strong></span>
+                <span class="small"><strong>注册用户数300万以下或者日活用户30万以下终身免费</strong></span>
                 <br>
                 <br>
                 <a class="btn pricing green" title="Sign-up now" href="https://console.easemob.com?comeFrom=easemobHome" target="_blank">注册</a>
