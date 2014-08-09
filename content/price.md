@@ -8,7 +8,7 @@ layout: overview
     <div id="content">
       <div class="padded">
         <div class="entry-content">
-          <h5><em>*</em> 以下用户数均指同时在线用户人数，即以当月内同时在线人数的最高峰值为计费标准。</h5>
+          <h5><em>*</em> 以下周计费周期都按自然月计量，即从每月1日到月末最后一天。</h5>
           <table id="pricing-chart">
             <tr>
               <th class="col1 col-main"></th>
@@ -26,7 +26,7 @@ layout: overview
               <td class="col1 col-main">定价方案</td>
               <td class="button free">
                 <br>
-                <span class="small"><strong>5000用户以下终身免费</strong></span>
+                <span class="small"><strong>注册用户数在300万以下同时日活用户用户在10万以下终身免费</strong></span>
                 <br>
                 <br>
                 <a class="btn pricing green" title="Sign-up now" href="https://console.easemob.com?comeFrom=easemobHome" target="_blank">注册</a>
@@ -34,23 +34,22 @@ layout: overview
               <td class="button col-free">
                 <table class="col-table new-price-table">
                   <tr>
+					<td class="col2 col-main"><span>收费方式(两种)</span></td>
                     <td class="col2 col-main"><span>版本</span></td>
-                    <td class="col2 col-main"><span>定价</span></td>
+                    <td class="col2 col-main"><span>周期</span></td>
                   </tr>
                   <tr>
-                    <td>5000到100万用户</td>
-                    <td>0.04元／人／月</td>
+					<td>一、按注册用户数</td>
+                    <td>超过300万每100万用户×3000元</td>
+                    <td>自然月</td>
                   </tr>
                   <tr>
-                    <td>100万到300万用户</td>
-                    <td>0.03元／人／月</td>
+					<td>二、按日活用户数</td>
+                    <td>超过10万每10万用户×5000元</td>
+                    <td>自然月</td>
                   </tr>
-                  <tr>
-                    <td>300万以上用户</td>
-                    <td>敬请垂询</td>
-                  </tr>
-                  <tr>
-                    <td colspan="2">
+                   <tr>
+                    <td colspan="3">
                       <a class="btn pricing green col-btn" title="Sign-up now" href="https://console.easemob.com?comeFrom=easemobHome" target="_blank">注册</a>
                     </td>
                   </tr>
@@ -67,8 +66,8 @@ layout: overview
             </tr>
             <tr>
               <td class="col1 col-main">离线存储空间</td>
-              <td class="free">有效用户×10MB</td>
-              <td>有效用户×10MB</td>
+              <td class="free">有效用户×100MB</td>
+              <td>有效用户×100MB</td>
               <!--<td class="free">不限</td>-->
             </tr>
             <tr>
