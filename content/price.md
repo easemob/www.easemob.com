@@ -48,9 +48,15 @@ layout: overview
                     <td>超过10万每10万用户×5000元</td>
                     <td>自然月</td>
                   </tr>
+
+					<tr>
+                    <td colspan="3">
+(温馨提示：在选择按注册用户或日活按的计费方式时，用户可选择付费最少的方式)         
+                   </td>
+                  </tr>
+
                    <tr>
                     <td colspan="3">
-(温馨提示：在选择按注册用户或日活按的计费方式时，用户可选择付费最少的方式)
                       <a class="btn pricing green col-btn" title="Sign-up now" href="https://console.easemob.com?comeFrom=easemobHome" target="_blank">注册</a>
 
                     </td>
