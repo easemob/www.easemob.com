@@ -51,6 +51,7 @@ layout: overview
                    <tr>
                     <td colspan="3">
                       <a class="btn pricing green col-btn" title="Sign-up now" href="https://console.easemob.com?comeFrom=easemobHome" target="_blank">注册</a>
+(温馨提示：在选择按注册用户或日活按的计费方式时，用户可选择付费最少的方式)
                     </td>
                   </tr>
                 </table>
