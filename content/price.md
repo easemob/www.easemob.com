@@ -254,8 +254,8 @@ layout: overview
                               <td class="col1">
                                 <span>WebIM</span>
                               </td>
-                              <td class="free">即将推出</td>
-                              <td>即将推出</td>
+                              <td class="free"></td>
+                              <td></td>
                               <!--<td class="free">即将推出</td>-->
                             </tr>
                             <tr>
