@@ -66,8 +66,8 @@ layout: overview
             </tr>
             <tr>
               <td class="col1 col-main">离线存储空间</td>
-              <td class="free">有效用户×100MB</td>
-              <td>有效用户×100MB</td>
+              <td class="free">每个用户×100MB</td>
+              <td>每个用户×100MB</td>
               <!--<td class="free">不限</td>-->
             </tr>
             <tr>
