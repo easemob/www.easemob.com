@@ -258,7 +258,7 @@ layout: overview
                               <td></td>
                               <!--<td class="free"></td>-->
                             </tr>
-                            <tr>
+                            <tr class="check">
                               <td class="col1">
                                 <span>WebIM</span>
                               </td>
