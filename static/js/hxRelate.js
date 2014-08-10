@@ -34,6 +34,8 @@ $(document).ready(function() {
 	    	} else if (listTag[1] == 'price') {
 	    		// 价格
 	    		selectFlag = 5;
+	    	} else if (listTag[1] == '404') {
+	    		return ;
 	    	}
 
 	    	// 给选中的导航加class
