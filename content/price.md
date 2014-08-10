@@ -16,7 +16,7 @@ layout: overview
                 <h4>免费版</h4>
               </th>
               <th>
-                <h4>标准版</h4>
+                <h4>标准版(300万注册用户或30万日活以上)</h4>
               </th>
               <!--<th>
                 <h4>企业私有云部署</h4>
@@ -26,7 +26,7 @@ layout: overview
               <td class="col1 col-main">定价方案</td>
               <td class="button free">
                 <br>
-                <span class="small"><strong>注册用户数300万以下或者日活用户30万以下终身免费</strong></span>
+                <span class="small"><strong>注册用户300万以下或日活30万以下终身免费</strong></span>
                 <br>
                 <br>
                 <a class="btn pricing green" title="Sign-up now" href="https://console.easemob.com?comeFrom=easemobHome" target="_blank">注册</a>
@@ -74,8 +74,8 @@ layout: overview
             </tr>
             <tr>
               <td class="col1 col-main">离线存储空间</td>
-              <td class="free">每个用户×100MB</td>
-              <td>每个用户×100MB</td>
+              <td class="free">每个用户100MB</td>
+              <td>每个用户100MB</td>
               <!--<td class="free">不限</td>-->
             </tr>
             <tr>
