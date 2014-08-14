@@ -22,7 +22,7 @@ var _hmt = _hmt || [];
 						<span class="ios_icon"></span>
 						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'style', 'click', 'FengStyle'])" href=" http://www.easemob.com/downloads/iOSSDK.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="http://developer.easemob.com/docs/emchat/ios/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/ios/singlechat.html" target="_blank">iOS SDK 集成指南</a></em>V 2.0.6　下载次数：9613</span>
+						<span><em><a href="http://developer.easemob.com/docs/emchat/ios/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/ios/singlechat.html" target="_blank">iOS SDK 集成指南</a></em>V 2.0.7　下载次数：11036</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -38,6 +38,26 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+			      	<li>
+						<h3><em></em><span>版本：V2.0.7 2014-08-14</span></h3>
+						<dl>
+							<dt>
+							    <span>新功能/改进：<br/>
+							    
+									1、创建群组时，支持传最大成员数 EMGroupStyleSetting.groupMaxUsersCount，3 ~ 2000，ios默认是200；<br/>
+									2、已创建的群组，获取详情时增加属性： 群组实际总人数和群组;<br/>
+									3、添加 获取群组详情相关信息的接口;<br/>
+									4、添加图片压缩比率开关 IChatImageOptions;<br/>
+									5、后台发送纯文字信息（暂不支持发送图片），客户端正常显示。<br>
+                                    Bug Fix：<br/>
+									1、创建群组时，invitees中去除创建者自己的username。<br/>
+									 性能优化<br/>
+									1、优化聊天记录搜索功能；<br/>
+									2、优化聊天记录获取。<br/>
+                                </span>
+							</dt>
+						</dl>
+					</li>
 			      	<li>
 						<h3><em></em><span>版本：V2.0.6 2014-07-31</span></h3>
 						<dl>
