@@ -20,13 +20,13 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'style', 'click', 'FengStyle'])" href=" http://www.easemob.com/downloads/iOSSDK.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
 						<span><em><a href="http://developer.easemob.com/docs/emchat/ios/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/ios/singlechat.html" target="_blank">iOS SDK 集成指南</a></em>V 2.0.7　下载次数：11036</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'style', 'click', 'FengStyle'])" href="http://www.easemob.com/downloads/androidsdk.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/androidsdk.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
 						<span><em><a href="http://developer.easemob.com/docs/emchat/android/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/android/singlechat.html" target="_blank">Android SDK 集成指南</a></em>V 2.0.6　下载次数：10926</span>
 					</li>
