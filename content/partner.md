@@ -8,7 +8,7 @@ layout: overview
       <div class="about_con_box partner" style="display:block">
 			<ul class="list">
 				<li>
-                	<a href="http://www.matrixpartners.com.cn/"target="_blank" rel="external nofollow" title="经纬中国">
+                	<a href="http://www.matrixpartners.com.cn/" target="_blank" rel="external nofollow" title="经纬中国">
                     <img src="/img/smile/partner_jingweizg.png" alt="经纬中国" /></a>
                  </li>
 				 <li>
