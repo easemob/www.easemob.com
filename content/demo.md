@@ -40,10 +40,10 @@ layout: overview
 			<div class="info_content">
 				<h2>简介:</h2>
 				<section class="info_readmore">
-					<p>APP(中国)隶属于印尼金光集团(sinarmas)旗下亚洲浆纸业有限公司(Asia Pulp & Paper Co., Ltd,简称APP)。金光集团投资范围远涉亚洲、北美、欧洲、澳洲等地，主要经营浆纸业、金融业、农业、食品加工业和房地产业。APP(中国)自上世纪90年代初投身中国市场以来，以长江三角洲和珠江三角洲为重点，截止到2010年4月，已经以独资或合作形式建立共20余家浆纸企业以及32万公顷人工林，总资产达......<a class="info_show" href="javascript:void(0);">展开</a></p>
+					<p>环信demo是环信SDK的展示demo。包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。更多关于环信demo的介绍请查看<a href="http://developer.easemob.com/docs/emchat/android/quickstartUI.html">http://developer.easemob.com/docs/emchat/android/quickstartUI.html</a>和<a href="http://developer.easemob.com/docs/emchat/ios/ChatDemo_UI.html">http://developer.easemob.com/docs/emchat/ios/ChatDemo_UI.html</a>。</p>
 				</section>
 				<section class="info_readmore_show">
-					<p>APP(中国)隶属于印尼金光集团(sinarmas)旗下亚洲浆纸业有限公司(Asia Pulp & Paper Co., Ltd,简称APP)。金光集团投资范围远涉亚洲、北美、欧洲、澳洲等地，主要经营浆纸业、金融业、农业、食品加工业和房地产业。APP(中国)自上世纪90年代初投身中国市场以来，以长江三角洲和珠江三角洲为重点，截止到2010年4月，已经以独资或合作形式建立共20余家浆纸企业以及32万公顷人工林，总资产达790亿人民币，拥有全职员工3.7万余名。2009年在华销售额超过345亿人民币。......<a class="info_hide" href="javascript:void(0);">收起</a></p>
+					<p>环信demo是环信SDK的展示demo。包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。更多关于环信demo的介绍请查看<a href="http://developer.easemob.com/docs/emchat/android/quickstartUI.html">http://developer.easemob.com/docs/emchat/android/quickstartUI.html</a>和<a href="http://developer.easemob.com/docs/emchat/ios/ChatDemo_UI.html">http://developer.easemob.com/docs/emchat/ios/ChatDemo_UI.html</a>。<a class="info_hide" href="javascript:void(0);">收起</a></p>
 				</section>
 			</div>
 		</div>
