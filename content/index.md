@@ -8,7 +8,7 @@ layout: overview
     <div class="w990">
       <div class="im_hd">
         <div class="im_left">
-          <h2><span>5</span>分钟，为你的应用加入<span>移动IM</span>功能</h2>
+          <h2><img alt="5分钟，为你的应用加入移动IM功能" src="img/index_banner_left.png"></h2>
           <p>无需购买维护服务器，无需服务器端开发，无需客户端/服务器端通讯编程，只需几行SDK代码调用即可实现</p>
           <a class="free_btn" href="https://console.easemob.com?comeFrom=easemobHome" target="_parent">立即使用</a>
         </div>
@@ -67,9 +67,9 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
       </div>
       <div class="tabs_info">
         <h2>快速集成</h2>
-        <p>√ 只需几行代码，就可以在任意APP中快速集成移动IM。<br />
-          √ IM系统与APP业务系统和用户系统完全解耦，独立运行。无需同步或修改现有APP用户体系。<br />
-          √ 提供多种风格的UI模板及源码，开发者即可直接使用，也可在源码基础上快速改出自己风格的聊天页面。<span><a class="info_details" href="http://developer.easemob.com/docs/emchat/ui.html" target="_blank">查看UI模板</a></span></p>
+        <p><span>√</span>只需几行代码，就可以在任意APP中快速集成移动IM。</p>
+        <p><span>√</span>IM系统与APP业务系统和用户系统完全解耦，独立运行，IM只需要知道聊天双方的聊天ID。</p>
+        <p><span>√</span>提供多种风格的UI模板及源码，开发者即可直接使用，也可在源码基础上快速改出自己风格的聊天页面。<span><a class="info_details" href="http://developer.easemob.com/docs/emchat/ui.html" target="_blank">查看UI模板</a></span></p>
       </div>
       <!-- 切换效果 Strat -->
       <script type="text/javascript">
@@ -91,9 +91,9 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
       <img src="/img/index_chat_01.png" alt="单聊 发语音，图片，表情，文字，位置，名片，附件。可扩展自定义消息类型消息发送回执：已发送，已接收，已阅读">
       <div class="txt">
         <h2>单聊</h2>
-        <p>√ 发语音，图片，表情，文字，位置，名片，附件。<br />
-        √ 可扩展自定义消息类型<br />
-        √ 消息发送回执：已发送，已接收，已阅读</p>
+        <p><span>√</span>发语音，图片，表情，文字，位置，名片，附件。</p>
+        <p><span>√</span>可扩展自定义消息类型</p>
+        <p><span>√</span>消息发送回执：已发送，已接收，已阅读</p>
       </div>
     </div>
   </div>
@@ -103,8 +103,20 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
       <img src="/img/index_chat_02.png" alt="群聊 支持500人到2000人大群 完善的群组权限管理">
       <div class="txt">
         <h2>群聊</h2>
-        <p>√ 支持500人到2000人大群<br />
-          √ 完善的群组权限管理</p>
+        <p><span>√</span>支持500人到2000人大群</p>
+        <p><span>√</span>完善的群组权限管理</p>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="im_default_bg">
+    <div id="container" class="chat_pic_06">
+      <img src="/img/index_chat_06.png" alt="开源的UI模板库">
+      <div class="txt">
+        <h2>开源的UI模板库</h2>
+        <p><span>√</span>源代码完全开源的UI模板。多种风格任意选择。<br /><br /></p>
+        <p><span>√</span>开发者即可直接使用，也可在源码基础上快速改出自己风格的聊天页面。<a class="info_details" href="http://developer.easemob.com/docs/emchat/ui.html" target="_blank">查看UI模板</a>
+        </p>
       </div>
     </div>
   </div>
@@ -114,14 +126,14 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
       <img src="/img/index_chat_03.png" alt="简单的API，强大的架构，深度优化">
       <div class="txt">
         <h2>简单的API，强大的架构，深度优化</h2>
-        <p>我们来自开发者，我们深知做好移动IM的种种坑点和难点，深知一个支撑几万用户的聊天服务器到一个千万用户在线的运营级的聊天服务器的差距。<br />
-          我们对环信的各个方面做了深入的优化，让开发者通过简单的API调用就能零门槛获得成熟的运营级移动IM技术：<br /><br />
-          √ 强大成熟的服务器集群架构，支持千万级同时在线用户，低延迟，高并发，水平扩展，平滑扩容。<br />
-          √ 不稳定网络环境下的长连接可靠性优化。<br />
-          √ 流量优化，比标准协议优化70%以上。<br />
-          √ 耗电量优化。<br />
-          √ 语音录制降噪算法，语音高清压缩算法，图片压缩优化。<br />
-          √ 安全：端对端加密，本地存储加密，语音图片加密，远程擦除。</p>
+        <p style="padding-left:0;">我们来自开发者，我们深知做好移动IM的种种坑点和难点，深知一个支撑几万用户的聊天服务器到一个千万用户在线的运营级的聊天服务器的差距。<br />
+          我们对环信的各个方面做了深入的优化，让开发者通过简单的API调用就能零门槛获得成熟的运营级移动IM技术：<br /><br /></p>
+        <p><span>√</span>强大成熟的服务器集群架构，支持千万级同时在线用户，低延迟，高并发，水平扩展，平滑扩容。</p>
+        <p><span>√</span>不稳定网络环境下的长连接可靠性优化。</p>
+        <p><span>√</span>流量优化，比标准协议优化70%以上。</p>
+        <p><span>√</span>耗电量优化。</p>
+        <p><span>√</span>语音录制降噪算法，语音高清压缩算法，图片压缩优化。</p>
+        <p><span>√</span>安全：端对端加密，本地存储加密，语音图片加密，远程擦除。</p>
       </div>
     </div>
   </div>

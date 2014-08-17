@@ -7,19 +7,24 @@ layout: overview
 <div class="wrap_bd">
 	<div class="w990 download_demo">
 		<div class="demo_hd">
-			<h2>环信Demo下载</h2>
-			<dl>
-				<dt>
-					<a class="demo_android" href="http://www.easemob.com/downloads/chatdemo-ui.apk"></a>
-					<p>支持Android2.2及以上版本</p>
-					<a class="demo_iphone" href="http://www.easemob.com/downloads/ChatDemo-UI.ipa"></a>
-					<p>支持iPhone4、iTouch2及以上设备<br />
-						IOS版也可通过在手机的safari浏览器浏览器中打开以下地址安装：
-						<a href="http://www.easemob.com/d.html">http://www.easemob.com/d.html</a>
-					</p>
-				</dt>
-				<dd><img src="/img/demo_wx_ico.png" alt="微信下载" /></dd>
-			</dl>
+			<div class="demo_hd_l">
+				<img src="img/demo_icon.png" alt="环信Demo下载" />
+			</div>
+			<div class="demo_hd_r">
+				<h2>环信Demo下载</h2>
+				<dl>
+					<dt>
+						<a class="demo_android" href="http://www.easemob.com/downloads/chatdemo-ui.apk"></a>
+						<p>支持Android2.1及以上版本</p>
+						<a class="demo_iphone" href="http://www.easemob.com/downloads/ChatDemo-UI.ipa"></a>
+						<p>支持iPhone4、iTouch2及以上设备<br />
+							也可在手机的safari浏览器中打开链接安装：
+							<a href="http://www.easemob.com/d.html">www.easemob.com/d.html</a>
+						</p>
+					</dt>
+					<dd><img src="img/demo_wx_ico.png" alt="微信下载" /></dd>
+				</dl>
+			</div>
 		</div>
 		<div class="demo_bd">
 			<div class="container2">
@@ -34,26 +39,28 @@ layout: overview
 			<div class="info_content">
 				<h2>简介:</h2>
 				<section class="info_readmore">
-					<p>环信demo是环信SDK的展示demo。包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。更多关于环信demo的介绍请查看<a href="http://developer.easemob.com/docs/emchat/android/quickstartUI.html">http://developer.easemob.com/docs/emchat/android/quickstartUI.html</a>和<a href="http://developer.easemob.com/docs/emchat/ios/ChatDemo_UI.html">http://developer.easemob.com/docs/emchat/ios/ChatDemo_UI.html</a>。</p>
+					<p>APP(中国)隶属于印尼金光集团(sinarmas)旗下亚洲浆纸业有限公司(Asia Pulp & Paper Co., Ltd,简称APP)。金光集团投资范围远涉亚洲、北美、欧洲、澳洲等地，主要经营浆纸业、金融业、农业、食品加工业和房地产业。APP(中国)自上世纪90年代初投身中国市场以来，以长江三角洲和珠江三角洲为重点，截止到2010年4月，已经以独资或合作形式建立共20余家浆纸企业以及32万公顷人工林，总资产达......<a class="info_show" href="javascript:void(0);">展开</a></p>
 				</section>
-				<a class="info_readmore_toggle" href="javascript:void(0);">展开</a>
+				<section class="info_readmore_show">
+					<p>APP(中国)隶属于印尼金光集团(sinarmas)旗下亚洲浆纸业有限公司(Asia Pulp & Paper Co., Ltd,简称APP)。金光集团投资范围远涉亚洲、北美、欧洲、澳洲等地，主要经营浆纸业、金融业、农业、食品加工业和房地产业。APP(中国)自上世纪90年代初投身中国市场以来，以长江三角洲和珠江三角洲为重点，截止到2010年4月，已经以独资或合作形式建立共20余家浆纸企业以及32万公顷人工林，总资产达790亿人民币，拥有全职员工3.7万余名。2009年在华销售额超过345亿人民币。......<a class="info_hide" href="javascript:void(0);">收起</a></p>
+				</section>
 			</div>
 		</div>
 	</div>
+	<div class="demo_bd_bg"></div>
 	<div class="clearfix"></div>
 </div>
 <script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="/js/hScrollPane.js"></script>
 <script type="text/javascript">
     // 展开收缩效果
-	$(".info_readmore_toggle").click(function(){
-		if($("section.info_readmore")[0].scrollHeight > $("section.info_readmore").height()){
-		    $(".info_readmore").css({"height":"auto"});
-		    $(this).text("收缩");
-		}else{
-			$(".info_readmore").css({"height":"80px"});
-		    $(this).text("展开");
-		}
+	$(".info_show").click(function(){
+		$(".info_readmore").hide();
+		$(".info_readmore_show").show();
+	});
+	$(".info_hide").click(function(){
+		$(".info_readmore").show();
+		$(".info_readmore_show").hide();
 	});
 
 	//水平滚动条滚动图片
