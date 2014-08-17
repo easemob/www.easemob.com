@@ -69,7 +69,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
         <h2>快速集成</h2>
         <p><span>√</span>只需几行代码，就可以在任意APP中快速集成移动IM。</p>
         <p><span>√</span>IM系统与APP业务系统和用户系统完全解耦，独立运行，IM只需要知道聊天双方的聊天ID。</p>
-        <p><span>√</span>提供多种风格的UI模板及源码，开发者即可直接使用，也可在源码基础上快速改出自己风格的聊天页面。<span><a class="info_details" href="http://developer.easemob.com/docs/emchat/ui.html" target="_blank">查看UI模板</a></span></p>
+        <p><span>√</span>提供多种风格的UI模板及源码，开发者即可直接使用，也可在源码基础上快速改出自己风格的聊天页面。<a class="info_details" href="http://developer.easemob.com/docs/emchat/ui.html" target="_blank">查看UI模板</a></p>
       </div>
       <!-- 切换效果 Strat -->
       <script type="text/javascript">
@@ -121,7 +121,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
     </div>
   </div>
   <div class="clearfix"></div>
-  <div class="im_default_bg">
+  <div class="im_default_bg white_bg">
     <div id="container" class="chat_pic_02">
       <img src="/img/index_chat_03.png" alt="简单的API，强大的架构，深度优化">
       <div class="txt">
@@ -138,7 +138,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
     </div>
   </div>
   <div class="clearfix"></div>
-  <div class="im_default_bg white_bg">
+  <div class="im_default_bg">
     <div id="container" class="chat_pic_03">
       <div class="txt">
         <h2>我们将持续为你增加最新最cool的IM功能……</h2>
@@ -147,7 +147,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
     </div>
   </div>
   <div class="clearfix"></div>
-  <div class="im_default_bg">
+  <div class="im_default_bg white_bg">
     <div id="container" class="chat_pic_05">
       <h2>开发者使用心得分享</h2>
       <div class="share_head">

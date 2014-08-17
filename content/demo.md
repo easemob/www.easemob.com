@@ -8,7 +8,7 @@ layout: overview
 	<div class="w990 download_demo">
 		<div class="demo_hd">
 			<div class="demo_hd_l">
-				<img src="img/demo_icon.png" alt="环信Demo下载" />
+				<img src="/img/demo_icon.png" alt="环信Demo下载" />
 			</div>
 			<div class="demo_hd_r">
 				<h2>环信Demo下载</h2>
@@ -22,10 +22,11 @@ layout: overview
 							<a href="http://www.easemob.com/d.html">www.easemob.com/d.html</a>
 						</p>
 					</dt>
-					<dd><img src="img/demo_wx_ico.png" alt="微信下载" /></dd>
+					<dd><img src="/img/demo_wx_ico.png" alt="微信下载" /></dd>
 				</dl>
 			</div>
 		</div>
+		<div class="demo_bd_bg"></div>
 		<div class="demo_bd">
 			<div class="container2">
 				<ul>
@@ -47,7 +48,6 @@ layout: overview
 			</div>
 		</div>
 	</div>
-	<div class="demo_bd_bg"></div>
 	<div class="clearfix"></div>
 </div>
 <script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
