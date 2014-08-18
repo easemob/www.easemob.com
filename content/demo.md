@@ -4,9 +4,27 @@ layout: overview
 ---
 
 <script type="text/javascript" src="/js/analyticsCount.js"></script>
+<script>
+var _hmt = _hmt || [];
+</script>
 <div class="wrap_bd">
 	<div class="w990 download_demo">
 		<div class="demo_hd">
+<<<<<<< HEAD
+			<h2>环信Demo下载</h2>
+			<dl>
+				<dt>
+					<a class="demo_android" id="androidHref" onclick="_hmt.push(['_trackEvent', 'IMDEMO', 'click', 'ANDROIDSDK_DEMO'])" href="http://www.easemob.com/downloads/chatdemo-ui.apk"></a>
+					<p>支持Android2.2及以上版本</p>
+					<a class="demo_iphone" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMDEMO', 'click', 'IOSSDK_DEMO'])" href="http://www.easemob.com/downloads/ChatDemo-UI.ipa"></a>
+					<p>支持iPhone4、iTouch2及以上设备<br />
+						IOS版也可通过在手机的safari浏览器浏览器中打开以下地址安装：
+						<a href="http://www.easemob.com/d.html">http://www.easemob.com/d.html</a>
+					</p>
+				</dt>
+				<dd><img src="/img/demo_wx_ico.png" alt="微信下载" /></dd>
+			</dl>
+=======
 			<div class="demo_hd_l">
 				<img src="/img/demo_icon.png" alt="环信Demo下载" />
 			</div>
@@ -25,6 +43,7 @@ layout: overview
 					<dd><img src="/img/demo_wx_ico.png" alt="微信下载" /></dd>
 				</dl>
 			</div>
+>>>>>>> origin/master
 		</div>
 		<div class="demo_bd_bg"></div>
 		<div class="demo_bd">
