@@ -5,10 +5,10 @@ layout: overview
 
 <style>
 
-.about_con{ width: 768px; height: auto; padding-left: 38px; border-left: 2px solid #f8f8f8; padding-bottom: 30px;}
+.about_con{ width: 968px; height: auto; padding-left: 38px; border-left: 2px solid #f8f8f8; padding-bottom: 30px;}
 .about_con_box{ padding-top: 15px; min-height: 400px;}
 .partner ul{ width: 100%; height: auto;}
-.partner ul li{ width: 33%; float: left; margin-bottom: 20px; width: 182px; height: 72px; border: 1px solid #e5e5e5; margin-right: 108px;}
+.partner ul li{ width: 33%; float: left; margin-bottom: 20px; width: 182px; height: 72px; border: 1px solid #e5e5e5; margin-right: 58px;}
 .partner ul li a{ display: block; width: 182px; height: 72px;}
 .partner ul li img{ display: block; width: 100%;}
 
@@ -23,8 +23,9 @@ em,i{ font-style: normal;}
 
 
 </style>
+<h4 class="entry-title">媒体报道</h4>
   <div class="about_con">
-				<h4 class="entry-title">媒体报道</h4>
+				
 				<div class="all_about_con">
 					
 					<div class="about_con_box partner" style="display:block">
