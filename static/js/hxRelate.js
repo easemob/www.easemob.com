@@ -68,6 +68,9 @@ $(document).ready(function() {
 	    	} else if (listTag[2] && listTag[2] == 'mediaReport') {
 	    		// 价格
 	    		selectFlag = 4;
+	    	} else if (listTag[2] && listTag[2] == 'partner') {
+	    		// 价格
+	    		selectFlag = 5;
 	    	}
 
 	    	// 给选中的导航加class
