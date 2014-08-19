@@ -20,9 +20,14 @@ body input{outline:none;}
 ul li{ list-style:none}
 em,i{ font-style: normal;}
 
+
+
 </style>
-<h4 class="entry-title">媒体报道</h4>
-  <div class="about_con">
+				
+				<div class="about_r">
+  <h4 class="entry-title">合伙伙伴</h4>
+ 
+			<div class="about_con">
 				
 				<div class="all_about_con">
 					
@@ -39,3 +44,8 @@ em,i{ font-style: normal;}
 				</div>
 				
  </div>
+
+
+
+
+</div>
