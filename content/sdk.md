@@ -28,7 +28,7 @@ var _hmt = _hmt || [];
 						<span class="andriod_icon"></span>
 						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/androidsdk.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="http://developer.easemob.com/docs/emchat/android/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/android/singlechat.html" target="_blank">Android SDK 集成指南</a></em>V 2.0.6　下载次数：10926</span>
+						<span><em><a href="http://developer.easemob.com/docs/emchat/android/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/android/singlechat.html" target="_blank">Android SDK 集成指南</a></em>V 2.0.7　下载次数：12115</span>
 					</li>
 				</ul>
 			</div>
@@ -237,6 +237,26 @@ var _hmt = _hmt || [];
 			    </ul>
 
 			    <ul class="history_right">
+				<h2 class="first">Andriod SDK 更新日志</h2>
+						<li>
+						<h3><em></em><span>版本：V2.0.7 2014-08-19</span></h3>
+							<dl>
+								<dt>
+									<span>新功能/改进：<br/>
+										1、加入了log 文件。环信sdk的debug 信息会存储到log文件<br/>
+										2、加入群组成员限制，群组人数达到最大限制时不让再加<br/>
+										3、demo更新支持显示非联系人<br/>
+										4、优化的聊天窗口里图片的显示<br/>
+										5、demo文字消息支持网页链接提示<br/>									
+										 Bug Fix：<br/>
+										1、修复了再次进入应用，未读数显示不对的问题<br/>		
+										2、修复了离线消息的时间问题<br/>
+										3、修复在某些机型上不能收发文件及视频消息的bug<br/>
+									</span>
+								</dt>
+							</dl>
+					</li>
+				
 			    	<h2 class="first">Andriod SDK 更新日志</h2>
 						<li>
 						<h3><em></em><span>版本：V2.0.6 2014-08-01</span></h3>
