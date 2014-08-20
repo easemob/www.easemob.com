@@ -13,10 +13,10 @@ layout: overview
             <tr>
               <th class="col1 col-main"></th>
               <th class="startup">
-                <h4>免费版</h4>
+                <h4>免费用户数量</h4>
               </th>
               <th>
-                <h4>标准版(300万注册用户或30万日活以上)</h4>
+                <h4>收费用户数量(300万注册用户或30万日活以上)</h4>
               </th>
               <!--<th>
                 <h4>企业私有云部署</h4>
