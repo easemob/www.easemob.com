@@ -257,7 +257,6 @@ var _hmt = _hmt || [];
 							</dl>
 					</li>
 				
-			    	<h2 class="first">Andriod SDK 更新日志</h2>
 						<li>
 						<h3><em></em><span>版本：V2.0.6 2014-08-01</span></h3>
 							<dl>
