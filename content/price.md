@@ -34,17 +34,17 @@ layout: overview
               <td class="button col-free">
                 <table class="col-table new-price-table">
                   <tr>
-					<td class="col2 col-main"><span>收费方式(两种)</span></td>
-                    <td class="col2 col-main"><span>版本</span></td>
-                    <td class="col2 col-main"><span>周期</span></td>
+					<td class="col2 col-main" style="width:183px"><span>收费方式(两种)</span></td>
+                    <td class="col2 col-main" style="width:183px"><span>版本</span></td>
+                    <td class="col2 col-main" style="width:123px"><span>周期</span></td>
                   </tr>
                   <tr>
-					<td>一、按注册用户数,300万以上</td>
+					<td>一、按注册用户数(300万以上)</td>
                     <td>每100万注册用户5000元每月</td>
                     <td>自然月</td>
                   </tr>
                   <tr>
-					<td>二、按日活用户数,30万以上</td>
+					<td>二、按日活用户数(30万以上)</td>
                     <td>每10万日活5000元每月</td>
                     <td>自然月</td>
                   </tr>
