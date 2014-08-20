@@ -29,7 +29,7 @@ layout: overview
                 <span class="small"><strong>注册用户300万以下或日活30万以下终身免费</strong></span>
                 <br>
                 <br>
-                <a class="btn pricing green" title="Sign-up now" href="https://console.easemob.com?comeFrom=easemobHome" target="_blank">注册</a>
+                <a class="btn pricing green" title="Sign-up now" href="https://console.easemob.com?comeFrom=easemobHome" target="_blank">立即体验</a>
               </td>
               <td class="button col-free">
                 <table class="col-table new-price-table">
@@ -55,12 +55,7 @@ layout: overview
                    </td>
                   </tr>
 
-                   <tr>
-                    <td colspan="3">
-                      <a class="btn pricing green col-btn" title="Sign-up now" href="https://console.easemob.com?comeFrom=easemobHome" target="_blank">注册</a>
-
-                    </td>
-                  </tr>
+                 
                 </table>
               </td>
               <!--<td class="free">
