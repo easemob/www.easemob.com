@@ -55,7 +55,6 @@ var _hmt = _hmt || [];
 						</dl>
 					</li>
 			      	<li>
-			      	<li>
 						<h3><em></em><span>版本：V2.0.7 2014-08-14</span></h3>
 						<dl>
 							<dt>
