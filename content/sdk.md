@@ -22,7 +22,7 @@ var _hmt = _hmt || [];
 						<span class="ios_icon"></span>
 						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="http://developer.easemob.com/docs/emchat/ios/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/ios/singlechat.html" target="_blank">iOS SDK 集成指南</a></em>V 2.0.7　下载次数：11036</span>
+						<span><em><a href="http://developer.easemob.com/docs/emchat/ios/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/ios/singlechat.html" target="_blank">iOS SDK 集成指南</a></em>V 2.0.8　下载次数：13074</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -38,6 +38,23 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+			      	<li>
+						<h3><em></em><span>版本：V2.0.8 2014-08-28</span></h3>
+						<dl>
+							<dt>
+							    <span>新功能/改进：<br/>
+							    
+									1、EMMessage中新添加了isOfflineMessage属性，在didReceiveMessage的时候， 可以根据是否为离线消息而决定是否重绘界面。
+同时在offline message在接收过程中， 会有willReceiveOfflineMessages和didFinishedReceiveOfflineMessages：发出，用户可以根据此事件决定是否需要重绘UI。<br/>
+									2、屏蔽群消息：接收并提醒 && 只接收不提醒。<br>
+                                    Bug Fix：<br/>
+									1、消息中的图片缩略图，在某些情况下，size.height为0。<br/>
+									2、修正断线重连方面：切到后台，3分钟后，切回前台，有时会掉线的问题。<br/>
+                                </span>
+							</dt>
+						</dl>
+					</li>
+			      	<li>
 			      	<li>
 						<h3><em></em><span>版本：V2.0.7 2014-08-14</span></h3>
 						<dl>
