@@ -177,7 +177,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
         <li style="float:left; padding-left:40px;"><a href="http://58.83.224.180:8090/bskdownload/BSKSugar-v13.apk" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/tang.png"></a></li>
         
         <li style="float:left; padding-left:40px;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/dj.png"></a></li>
-        <li style="float:left; padding-left:40px;"><a href="http://www.xiaoneimimi.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';" ><img src="images/xy.png"></a></li>
+        <li style="float:left; padding-left:40px;"><a href="http://www.xiaoneimimi.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';" ><img src="../img/xy.png"></a></li>
         <li style="float:left; padding-left:40px;"><a href="http://www.ifanmi.cn/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/fm.png"></a></li>
         <li style="float:left; padding-left:40px;"><a href="http://paopao.fm/" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/pp.png"></a></li>
         <li style="float:left; padding-left:40px;"><a href="#" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/mxd.png" style="padding-left:3px;"></a></li>
