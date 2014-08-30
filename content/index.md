@@ -166,7 +166,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
       </div>
     </div>
   </div>
- <div class="anli" style="color:#666; font-size:36px; height:312px; background:#FFF; font-weight:normal; width:1349px;">
+ <div class="anli" style="color:#666; font-size:36px; height:312px; background:#FFF; font-weight:normal; width:1349px; margin:0 auto;">
   	<h2 style="font-weight:normal; margin-left:180px;">他们都在使用环信</h2>
     <img src="../img/xian.png" style="margin-left:180px; padding:25px 0;">
     <ul style="margin-left:220px; width:990px;">
