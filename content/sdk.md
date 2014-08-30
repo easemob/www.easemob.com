@@ -28,7 +28,7 @@ var _hmt = _hmt || [];
 						<span class="andriod_icon"></span>
 						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/androidsdk.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="http://developer.easemob.com/docs/emchat/android/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/android/singlechat.html" target="_blank">Android SDK 集成指南</a></em>V 2.0.7　下载次数：12115</span>
+						<span><em><a href="http://developer.easemob.com/docs/emchat/android/quickstart.html"  target="_blank">5分钟快速入门</a> | <a href="http://developer.easemob.com/docs/emchat/android/singlechat.html" target="_blank">Android SDK 集成指南</a></em>V 2.0.8　下载次数：14327</span>
 					</li>
 				</ul>
 			</div>
@@ -254,6 +254,24 @@ var _hmt = _hmt || [];
 
 			    <ul class="history_right">
 				<h2 class="first">Andriod SDK 更新日志</h2>
+            <li>
+              <h3><em></em><span>版本：V2.0.8 2014-08-30</span></h3>
+                <dl>
+                  <dt>
+                    <span>新功能/改进：<br/>
+                      1、优化了token 的获取和更新<br/>
+                      2、优化了在 wifi 环境下的长连接维护部分<br/>
+                      3、支持设置用户昵称，ios APNS 推送的时候能显示此名称<br/>
+                      4、EMChatConfig.getInstance().AccessToken的调用方式改成EMChatManager.getInstance().getAccessToken()<br/>
+                      5、支持消息notification提示时修改通知的标题<br/>									
+                       Bug Fix：<br/>
+                      1、修复了有些情况下网络切换无法自动重连的问题<br/>		
+                      2、修复了消息中包含某些特殊字符时接收到内容不一致的问题<br/>
+                      3、修复了concurrent access conversation 的问题<br/>
+                    </span>
+                  </dt>
+                </dl>
+            </li>
 						<li>
 						<h3><em></em><span>版本：V2.0.7 2014-08-19</span></h3>
 							<dl>
