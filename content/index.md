@@ -170,17 +170,17 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
   	<h2 style="font-weight:normal; margin-left:180px;">他们都在使用环信</h2>
     <img src="images/xian.png" style="margin-left:180px; padding:25px 0;">
     <ul style="margin-left:220px; width:990px;">
-    	<li style="float:left;"><a href="http://www.qingting.fm/#/recommend"  target="_black" style="color:#828187; font-size:15px; font-family:'宋体'; padding-left:21px;"><img src="images/qt.png"></a></li>
-        <!--<li style="float:left; padding-left:40px;"><a href="https://itunes.apple.com/cn/app/shi-shang-mao-re-men-fa-xing./id673935108?l=zh&ls=1&mt=8"   target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="images/ssm.png"></a></li>-->
-        <li style="float:left; padding-left:40px;"><a href="www.tuotuo.im" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="images/kk.png"></a></li>
-        <li style="float:left; padding-left:40px;"><a href="http://www.xzhichang.com/xapp/index" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="images/zc.png"></a></li>
-        <li style="float:left; padding-left:40px;"><a href="http://58.83.224.180:8090/bskdownload/BSKSugar-v13.apk" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="images/tang.png"></a></li>
+    	<li style="float:left;"><a href="http://www.qingting.fm/#/recommend"  target="_black" style="color:#828187; font-size:15px; font-family:'宋体'; padding-left:21px;"><img src="../img/qt.png"></a></li>
+        <!--<li style="float:left; padding-left:40px;"><a href="https://itunes.apple.com/cn/app/shi-shang-mao-re-men-fa-xing./id673935108?l=zh&ls=1&mt=8"   target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/ssm.png"></a></li>-->
+        <li style="float:left; padding-left:40px;"><a href="www.tuotuo.im" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/kk.png"></a></li>
+        <li style="float:left; padding-left:40px;"><a href="http://www.xzhichang.com/xapp/index" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/zc.png"></a></li>
+        <li style="float:left; padding-left:40px;"><a href="http://58.83.224.180:8090/bskdownload/BSKSugar-v13.apk" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/tang.png"></a></li>
         
-        <li style="float:left; padding-left:40px;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="images/dj.png"></a></li>
-        <li style="float:left; padding-left:40px;""><a href="http://www.xiaoneimimi.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';" ><img src="images/xy.png"></a></li>
-        <li style="float:left; padding-left:40px;"><a href="http://www.ifanmi.cn/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="images/fm.png"></a></li>
-        <li style="float:left; padding-left:40px;"><a href="http://paopao.fm/" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="images/pp.png"></a></li>
-        <li style="float:left; padding-left:40px;""><a href="#" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="images/mxd.png" style="padding-left:3px;"></a></li>
+        <li style="float:left; padding-left:40px;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/dj.png"></a></li>
+        <li style="float:left; padding-left:40px;"><a href="http://www.xiaoneimimi.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';" ><img src="../img/xy.png"></a></li>
+        <li style="float:left; padding-left:40px;"><a href="http://www.ifanmi.cn/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/fm.png"></a></li>
+        <li style="float:left; padding-left:40px;"><a href="http://paopao.fm/" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/pp.png"></a></li>
+        <li style="float:left; padding-left:40px;"><a href="#" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/mxd.png" style="padding-left:3px;"></a></li>
     </ul>
     <dl style="width:990px;; float:left; font-size:15px; a:hover:#039; padding-left:245px;">
     	<dd style=" float:left; margin-right:60px;"><a href="http://www.qingting.fm/#/recommend" target="_black">蜻蜓fm</a></dd>
@@ -191,8 +191,8 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
         
         <dd style=" float:left; margin-right:56px;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" target="_black">点近</a></dd>
         <dd style=" float:left; margin-right:58px;"><a href="http://www.xiaoneimimi.com/" target="_black">校园秘密</a></dd>
-        <dd style=" float:left; margin-right:73px;"><a href="http://www.ifanmi.cn/" target="_black" ;>番迷</a></dd>
-        <dd style=" float:left; margin-right:65px;"><a href="http://paopao.fm/" target="_black" ;>跑跑</a></dd>
+        <dd style=" float:left; margin-right:73px;"><a href="http://www.ifanmi.cn/" target="_black">番迷</a></dd>
+        <dd style=" float:left; margin-right:65px;"><a href="http://paopao.fm/" target="_black">跑跑</a></dd>
         <dd style=" float:left;"><!--<a href="#">-->毛小豆<!--</a>--></dd>
     </dl>
   
