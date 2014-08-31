@@ -157,12 +157,12 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
       <div class="share_head">
         <img src="/img/index_head_01.png" alt="开发者使用心得分享">
         <span>
-          <em>刘松</em><br/>
-          微星座CEO
+          <em>伏英娜</em><br/>
+          哈图创始人
         </span>
       </div>
       <div class="txt">
-        <p><span class="colon_up"></span>给广大中小创业团队推荐一下这个环信。如果你的APP需要类微信聊天的功能，比如单聊，群聊，发语音，发图片，发位置，发视频，你的团队又不想花时间精力自己研究IM，那就用环信吧。微星座是一个社交手游，对UI风格和设计有非常高的要求，所以我们对环信提供的标准UI模板做了深度的定制，但我们也一共只用了3天时间，就在微星座里集成了完整的聊天功能。<a class="info_details" href="https://itunes.apple.com/cn/app/wei-xing-zuo-wo-zhuan-shu/id696468083?mt=8" target="_blank">下载体验</a><span class="colon_down"></span></p>
+        <p><span class="colon_up"></span>“如果你的APP没有用户之间的互动和社交，你的APP就始终只是一个工具，你只是在为微博、微信导流而已”。作为国内最大的图片分享社交APP，拥有百万用户的<a class="info_details" href="http://www.appmagics.cn/" target="_blank">哈图</a>非常重视社交建设。哈图搭载了基于环信开发的实时私信系统。不仅有对电量流量消耗的深度优化，还能保证消息实时到达，能发送语音图片位置等多种富媒体消息，各项用户体验完全接近微信。“感谢环信，我们只用了2天就完成了私信系统的集成，从而能把节约下来的资源投入到为哈图的用户提供更好的用户体验上”<span class="colon_down"></span></p>
       </div>
     </div>
   </div>
