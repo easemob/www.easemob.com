@@ -185,7 +185,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
     <dl style="width:990px;; float:left; font-size:15px; a:hover:#039; padding-left:245px;">
     	<dd style=" float:left; margin-right:60px;"><a href="http://www.qingting.fm/#/recommend" target="_black">蜻蜓fm</a></dd>
         <!--<dd style=" float:left; margin-right:65px;"><a href="https://itunes.apple.com/cn/app/shi-shang-mao-re-men-fa-xing./id673935108?l=zh&ls=1&mt=8" target="_black">时尚猫</a></dd>-->
-        <dd style=" float:left; margin-right:67px;"><a href="www.tuotuo.im" target="_black" >拓拓</a></dd>
+        <dd style=" float:left; margin-right:67px;"><a href="http://www.tuotuo.im" target="_black" >拓拓</a></dd>
         <dd style=" float:left; margin-right:50px;"><a href="http://www.xzhichang.com/xapp/index" target="_black">X职场</a></dd>
         <dd style=" float:left; margin-right:55px;"><a href="http://58.83.224.180:8090/bskdownload/BSKSugar-v13.apk" target="_black">血糖高管</a></dd>
         
