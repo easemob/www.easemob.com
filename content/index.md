@@ -118,7 +118,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
       <img src="/img/index_chat_06.png" alt="开源的UI模板库">
       <div class="txt">
         <h2>开源的UI模板库</h2>
-        <p><span>√</span>源代码完全开源的UI模板。多种风格任意选择。<br /><br /></p>
+        <p><span>√</span>源代码完全开源的UI模板。多种风格任意选择。</p>
         <p><span>√</span>开发者即可直接使用，也可在源码基础上快速改出自己风格的聊天页面。<a class="info_details" href="http://developer.easemob.com/docs/emchat/ui.html" target="_blank">查看UI模板</a>
         </p>
       </div>
