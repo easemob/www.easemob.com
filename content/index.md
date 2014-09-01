@@ -202,7 +202,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
     	<li style="float:left;"><a href="http://yeba.im/"  target="_black" style="color:#828187; font-size:15px; font-family:'宋体'; padding-left:3px;"><img src="../img/yb.png"></a></li>
         <li style="float:left; padding-left:55px;"><a href="http://www.xzhichang.com/xapp/index" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/zc.png"></a></li>
         <li style="float:left; padding-left:55px;"><a href="http://paopao.fm/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/pp.png"></a></li>
-        <li style="float:left; padding-left:54px;"><a href="https://itunes.apple.com/cn/app/wei-xing-zuo-xing-zuo-jiao/id696468083?mt=8" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';><img src="../img/wxz.png"></a></li>
+        <li style="float:left; padding-left:54px;"><a href="https://itunes.apple.com/cn/app/wei-xing-zuo-xing-zuo-jiao/id696468083?mt=8" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/wxz.png"></a></li>
         <li style="float:left; padding-left:54px;"><a href="http://www.imlxs.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/lxs.png"></a></li>
         <li style="float:left; padding-left:55px;"><a href="http://www.iyuanquan.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';" ><img src="../img/yq.png"></a></li>
         <li style="float:left; padding-left:55px;"><a href="http://www.ifanmi.cn/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/fm.png"></a></li>
