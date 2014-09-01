@@ -173,7 +173,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
 <div class="anli">
    <div class="anli1">
   	<h2>他们都在使用环信</h2>
-    <img src="images/xian.png" style=" margin-top:20px;">
+    <img src="../img/xian.png" style=" margin-top:20px;">
     <ul style=" width:990px;">
     	<li style="float:left;"><a href="http://www.qingting.fm/#/recommend"  target="_black" style="color:#828187; font-size:15px; font-family:'宋体'; padding-left:3px;"><img src="../img/qt.png"></a></li>
         <li style="float:left; padding-left:55px;"><a href="http://m.qiuying.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/qy.png"></a></li>
