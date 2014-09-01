@@ -194,7 +194,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
         <dd style=" float:left; margin-right:80px;"><a href="http://www.pgyer.com/nh0N" target="_black">小黑马</a></dd>
         <dd style=" float:left; margin-right:71px;"><a href="http://www.appmagics.com/" target="_black">哈图</a></dd>
         <dd style=" float:left; margin-right:65px;"><a href="http://www.xiaoneimimi.com/" target="_black">校内秘密</a></dd>
-        <dd style=" float:left; margin-right:78px;"><a href="http:https://itunes.apple.com/cn/app/shi-shang-mao-re-men-fa-xing./id673935108?l=zh&ls=1&mt=8" target="_black">时尚猫</a></dd>
+        <dd style=" float:left; margin-right:78px;"><a href="https://itunes.apple.com/cn/app/shi-shang-mao-re-men-fa-xing./id673935108?l=zh&ls=1&mt=8" target="_black">时尚猫</a></dd>
         <dd style=" float:left;"><a href="http://www.tuotuo.im" target="_black">拓拓</a></dd>
 
     </dl>
