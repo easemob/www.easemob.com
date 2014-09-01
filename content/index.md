@@ -207,7 +207,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
         <li style="float:left; padding-left:55px;"><a href="http://www.iyuanquan.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';" ><img src="../img/yq.png"></a></li>
         <li style="float:left; padding-left:55px;"><a href="http://www.ifanmi.cn/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/fm.png"></a></li>
         <li style="float:left; padding-left:55px;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/dj.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://android.myapp.com/myapp/detail.htm?apkName=yidongqi.da" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/dx.png" style="padding-left:3px;"></a></li>
+        <li style="float:left; padding-left:55px;"><a href="http://android.myapp.com/myapp/detail.htm?apkName=yidongqi.da" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/dx.png" style="padding-left:3px;"></a></li>
     </ul>
     <dl style="width:990px;; float:left; font-size:15px; a:hover:#039; padding-left:3px;">
     	<dd style=" float:left; margin-right:82px; padding-left:14px;"><a href="http://yeba.im/" target="_black">夜吧</a></dd>
