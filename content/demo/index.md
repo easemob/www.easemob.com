@@ -28,15 +28,6 @@ layout: overview
 		</div>
 		<div class="demo_bd_bg"></div>
 		<div class="demo_bd">
-			<div class="container2">
-				<ul>
-					<li><img src="/img/demo1.png" alt="" /></li>
-					<li><img src="/img/demo2.png" alt="" /></li>
-					<li><img src="/img/demo3.png" alt="" /></li>
-					<li><img src="/img/demo4.png" alt="" /></li>
-					<li><img src="/img/demo5.png" alt="" /></li>
-				</ul>
-			</div>
 			<div class="info_content">
 				<h2>简介:</h2>
 				<section class="info_readmore">
@@ -46,6 +37,16 @@ layout: overview
 					<p>环信demo是环信SDK的展示demo。包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。更多关于环信demo的介绍请查看<a href="/docs/android/">环信Android Demo快速入门</a>和<a href="/docs/ios/">环信iOS Demo快速入门</a>。<a class="info_hide" href="javascript:void(0);">收起</a></p>
 				</section>
 			</div>
+			<div class="container2">
+				<ul>
+					<li><img src="/img/demo1.png" alt="" /></li>
+					<li><img src="/img/demo2.png" alt="" /></li>
+					<li><img src="/img/demo3.png" alt="" /></li>
+					<li><img src="/img/demo4.png" alt="" /></li>
+					<li><img src="/img/demo5.png" alt="" /></li>
+				</ul>
+			</div>
+			
 		</div>
 	</div>
 	<div class="clearfix"></div>
