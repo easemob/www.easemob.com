@@ -19,7 +19,7 @@ layout: overview
 						<a class="demo_iphone" id="iOS_DEMO_Href" onclick="_hmt.push(['_trackEvent', 'IMDEMO', 'click', 'iOSSDK_DEMO'])" href="http://www.easemob.com/downloads/ChatDemo-UI.ipa"></a>
 						<p>支持iPhone4、iTouch2及以上设备<br />
 							也可在手机的safari浏览器中打开链接安装：
-							<a href="http://www.easemob.com/d.html">www.easemob.com/d.html</a>
+							<a href="http://www.easemob.com/d.html">http://www.easemob.com/d.html</a>
 						</p>
 					</dt>
 					<dd><img src="/img/demo_wx_ico.png" alt="微信下载" /></dd>
@@ -40,10 +40,10 @@ layout: overview
 			<div class="info_content">
 				<h2>简介:</h2>
 				<section class="info_readmore">
-					<p>环信demo是环信SDK的展示demo。包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。更多关于环信demo的介绍请查看<a href="/docs/android/quickstartUI">http://developer.easemob.com/docs/emchat/android/quickstartUI.html</a>和<a href="/docs/ios/ChatDemo_UI">http://developer.easemob.com/docs/emchat/ios/ChatDemo_UI.html</a>。</p>
+					<p>环信demo是环信SDK的展示demo。包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。更多关于环信demo的介绍请查看<a href="/docs/android/">环信Android Demo快速入门</a>和<a href="/docs/ios/">环信iOS Demo快速入门</a>。</p>
 				</section>
 				<section class="info_readmore_show">
-					<p>环信demo是环信SDK的展示demo。包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。更多关于环信demo的介绍请查看<a href="/docs/android/quickstartUI">http://developer.easemob.com/docs/emchat/android/quickstartUI.html</a>和<a href="/docs/ios/ChatDemo_UI">http://developer.easemob.com/docs/emchat/ios/ChatDemo_UI.html</a>。<a class="info_hide" href="javascript:void(0);">收起</a></p>
+					<p>环信demo是环信SDK的展示demo。包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。更多关于环信demo的介绍请查看<a href="/docs/android/">环信Android Demo快速入门</a>和<a href="/docs/ios/">环信iOS Demo快速入门</a>。<a class="info_hide" href="javascript:void(0);">收起</a></p>
 				</section>
 			</div>
 		</div>
