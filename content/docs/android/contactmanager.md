@@ -59,32 +59,31 @@ secondnavandroid: true
 </code></pre>
 ### 监听好友状态事件
 <pre class="hll"><code class="language-java">
-	EMContactManager.getInstance().setContactListener(new EMContactListener() {
-			
-			@Override
-			public void onContactAgreed(String username) {
-				//好友请求被同意
-			}
-			
-			@Override
-			public void onContactRefused(String username) {
-				//好友请求被拒绝
-			}
-			
-			@Override
-			public void onContactInvited(String username, String reason) {
-				//收到好友邀请
-			}
-			
-			@Override
-			public void onContactDeleted(List<String> usernameList) {
-				//被删除时回调此方法
-			}
-			
-			
-			@Override
-			public void onContactAdded(List<String> usernameList) {
-				//增加了联系人时回调此方法
-			}
-		});
+EMContactManager.getInstance().setContactListener(new EMContactListener() {
+	@Override
+	public void onContactAgreed(String username) {
+		//好友请求被同意
+	}
+	
+	@Override
+	public void onContactRefused(String username) {
+		//好友请求被拒绝
+	}
+	
+	@Override
+	public void onContactInvited(String username, String reason) {
+		//收到好友邀请
+	}
+	
+	@Override
+	public void onContactDeleted(List<String> usernameList) {
+		//被删除时回调此方法
+	}
+	
+	
+	@Override
+	public void onContactAdded(List<String> usernameList) {
+		//增加了联系人时回调此方法
+	}
+});
 </code></pre>
