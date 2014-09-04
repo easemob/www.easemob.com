@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Apache Usergrid data query overview | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Apache Usergrid data query overview
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h1 id="apache-usergrid-data-query-overview">Apache Usergrid data query overview</h1>
+
+<p>You can write code to query for data you've stored in your Apache Usergrid
+application. You'll most likely use queries as filters to retrieve
+specific entities. For example, you might want to get data about users
+who are "following" a specific other user, businesses in specific
+geographical locations, and so on.</p>
+
+<p>The following example retrieves a list of restaurants (from a
+restaurants collection) whose name property contains the value "diner",
+sorting the list in ascending order by name:</p>
+
+<pre><code>/restaurants?ql=select * where name contains 'diner' order by name asc
+</code></pre>
+
+<blockquote>
+  <p><strong>Note:</strong>Query examples in this content are shown unencoded to make
+them easier to read. Keep in mind that you might need to encode query
+strings if you're sending them as part of URLs, such as when you're
+executing them with the cURL tool.</p>
+</blockquote>
+
+<p>Having retrieved the list of restaurants, your code could display the
+list to your users. You could also use a query to retrieve a list of
+diners that are located within a particular geographical area (such as
+near your user's current location).</p>
+
+<blockquote>
+  <p><strong>Important:</strong> By default, results from queries of your Apache Usergrid
+data are limited to 10 items at a time. You can control this with the
+<code>limit</code> parameter, as discussed in <a href="/working-queries">Working with
+queries</a>.</p>
+</blockquote>
+
+<p>You query your Apache Usergrid data by using a query syntax that's like
+Structured Query Language (SQL), the query language for relational
+databases. Unlike a relational database, where you specify tables and
+columns containing the data you want to query, in your Apache Usergrid
+queries you specify collections and entities.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> The syntax of Apache Usergrid queries only <em>resembles</em> SQL to
+make queries familiar and easier to write. However, the language isn't
+SQL. Only the syntax items documented here are supported.</p>
+</blockquote>
+
+<p>The examples in these topics illustrate queries using simple strings to
+make the queries easier to read. You can also use one of the Apigee
+SDKs, which provide functions through which you can pass query strings,
+and in some cases shortcuts for bypassing queries altogether.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Queries replace filters, which are deprecated.</p>
+</blockquote>
+
+<p>For more detail about support for queries your Apache Usergrid database,
+see the following topics:</p>
+
+<ul>
+  <li><a href="/basic-query-syntax">Basic query syntax</a></li>
+  <li><a href="/query-response-values">Query response values</a></li>
+  <li><a href="/data-types-supported-queries">Data types supported in queries</a></li>
+  <li><a href="/querying-data-admin-portal">Querying data from the admin portal</a></li>
+  <li><a href="/working-queries">Working with queries</a></li>
+</ul>
+
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

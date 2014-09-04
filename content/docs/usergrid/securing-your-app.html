@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Securing your app | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body>
+    <div id="content" class="bs-header">
+      <div class="container">
+        <h1>
+          Securing your app
+        </h1>
+        <p>
+          Easemob
+        </p>
+      </div>
+    </div>
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-12" role="main">
+          <h1 id="securing-your-app">Securing your app</h1>
+          
+          <p>There a number of actions you should take to ensure that your app is
+          secure before you put it into production.</p>
+          
+          <h2 id="review-permissions-in-your-apps">Review permissions in your apps</h2>
+          
+          <p>Prior to launching your app into a production environment, it is
+          advisable to review all the roles and permissions you have set up.
+          During development, you may find that you added various permissions
+          which may or may not still be required once the app is complete. Review
+          all permissions and delete any that are no longer required.</p>
+          
+          <p>Also make sure that you review the roles and permissions that are set up
+          for the sandbox app. By default, every new Apache Usergrid account has an
+          app named “sandbox” that is already created under your new organization.
+          This app is no different than any other app that you might create,
+          except that the Guest role has been given full permissions (that is,
+          /** for GET, POST, PUT, and DELETE). This eliminates the need for a
+          token when making application level calls, and can make it much easier
+          to get your app up and running.</p>
+          
+          <p>Prior to taking your app live, you should secure it by removing any
+          Guest permissions for /**. (See <a href="/managing-access-defining-permission-rules">Managing access by defining
+          permission rules</a> for
+          further information about setting permissions.) After you secure your
+          the app, any calls to the API will need to include an OAuth token. Oauth
+          tokens (also called access tokens) are obtained by the API in response
+          to successful authentication calls. Your app saves the token and uses it
+          for all future calls during that session. Learn more about access tokens
+          in <a href="/authenticating-users-and-application-clients">Authenticating users and application
+          clients</a>.</p>
+          
+          <h2 id="review-test-accounts">Review test accounts</h2>
+          
+          <p>If you created any test user or test administrator accounts during
+          development, these should also be reviewed for relevancy and security.
+          Delete any test accounts that are no longer needed. If these accounts
+          are still needed, make sure that passwords have been secured to the
+          standards required by your app.</p>
+          
+          <h2 id="use-https">Use https</h2>
+          
+          <p>Make sure that any calls you make to the API are done using the secure
+          https protocol, and not the insecure http protocol. The proper
+          application endpoint is: https://api.usergrid.com</p>
+          
+          <p>If your app is a web app, that is, an app served by a web server, make
+          sure that the app is served using https.</p>
+          
+          <h2 id="acquire-access-tokens-in-a-secure-way">Acquire access tokens in a secure way</h2>
+          
+          <p>There are various methods for acquiring an access token (see
+          <a href="/authenticating-users-and-application-clients">Authenticating users and application
+          clients</a>). One method is
+          to use the application or organization level client secret-client id
+          combination. This method should not be used in client applications (this
+          is, apps that are deployed to a device, and which authenticate and make
+          calls against the API).</p>
+          
+          <p>That’s because a hacker could analyze your app (even a compiled, binary
+          distribution of your app), and retrieve the secret-id combination. Armed
+          with this information, an attacker could gain full access to the data in
+          your account.</p>
+          
+          <p>Instead, use application user credentials. This means that your app’s
+          users should provide a username and password. Your app would use these
+          to authenticate against the API and retrieve an access token.</p>
+          
+          <p>The client secret-client id combination should be used only in secure,
+          server-side applications where there is no possibility of a hacker
+          gaining control of the credentials.</p>
+          
+        </div>
+      </div>
+    </div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

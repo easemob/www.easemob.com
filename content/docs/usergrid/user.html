@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>User | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      User
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h1 id="user">User</h1>
+
+<p><a href="/docs/usergrid/content/application-entities">See all application
+entities</a>[](/docs/usergrid/content/application-entities)</p>
+
+<p> </p>
+
+<p>A user entity represents an application user. Using App services APIs
+you can create, retrieve, update, delete, and query user entities. See
+<a href="#user_properties">User entity properties</a> for a list of the
+system-defined  properties for user entities. In addition, you can
+create user properties specific to your application.</p>
+
+<p><strong>Note:</strong> Although not shown in the API examples below, you need to
+provide a valid access token with each API call. See <a href="/authenticating-users-and-application-clients">Authenticating
+users and application
+clients</a> for details.</p>
+
+<h2 id="creating-a-new-user">Creating a new user</h2>
+
+<p>Use the POST method to create a new user in the users collection.</p>
+
+<h3 id="request-uri">Request URI</h3>
+
+<p>POST /{org_id}/{app_id}/users {request body}</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| arg uuid|string org_id              | Organization UUID or organization    |
+|                                      | name                                 |
++————————————–+————————————–+
+| arg uuid|string app_id              | Application UUID or application name |
++————————————–+————————————–+
+| request body                         | One or more sets of user properties, |
+|                                      | of which username is mandatory and   |
+|                                      | must be unique:                      |
+|                                      |                                      |
+|                                      |     {                                |
+|                                      |       "username" : "john.doe",       |
+|                                      |       "email" : "john.doe@gmail.com" |
+|                                      | ,                                    |
+|                                      |       "name" : "John Doe",           |
+|                                      |       "password" : "test1234"        |
+|                                      |     }                                |
++————————————–+————————————–+</p>
+
+<p>Although the password parameter is not mandatory, if you don't specify
+it, the user will not be able to log in using username and password
+credentials. If a password is not specified for the user, and you're an
+Admin, you can set a password for the user (see <a href="#set_password">Setting a
+password</a>).</p>
+
+<p><strong>Note:</strong> The username can contain any combination of characters,
+including those that represent letters, numbers, and symbols.</p>
+
+<h3 id="example---request">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_create_user">cURL</a></li>
+  <li><a href="#javascript_create_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_create_user">Ruby</a></li>
+  <li><a href="#nodejs_create_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X POST "https://api.usergrid.com/my-org/my-app/users" -d '{"username":"john.doe","email":"john.doe@gmail.com","name":"John Doe"}'
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'users',
+    body:{ username:'john.doe', name:'John Doe', email:'john.doe@gmail.com' }
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+result = app.create_user username: 'john.doe', name: 'John Doe', email: 'john.doe@gmail.com'
+john_doe = result.entity
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'users',
+    body:{ username:'john.doe', name:'John Doe', email:'john.doe@gmail.com' }
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response">Example - Response</h3>
+
+<pre><code>{
+  "action" : "post",
+  "application" : "4353136f-e978-11e0-8264-005056c00008",
+  "params" : {
+  },
+  "path" : "/users",
+  "uri" : "https://api.usergrid.com/005056c00008-4353136f-e978-11e0-8264/4353136f-e978-11e0-8264-005056c00008/users",
+
+  "entities" : [ {
+    "uuid" : "7d1aa429-e978-11e0-8264-005056c00008",
+    "type" : "user",
+    "created" : 1317176452536016,
+    "modified" : 1317176452536016,
+    "activated" : true,
+    "email" : "john.doe@gmail.com",
+    "metadata" : {
+      "path" : "/users/7d1aa429-e978-11e0-8264-005056c00008",
+      "sets" : {
+        "rolenames" : "/users/7d1aa429-e978-11e0-8264-005056c00008/rolenames",
+        "permissions" : "/users/7d1aa429-e978-11e0-8264-005056c00008/permissions"
+      },
+      "collections" : {
+        "activities" : "/users/7d1aa429-e978-11e0-8264-005056c00008/activities",
+        "devices" : "/users/7d1aa429-e978-11e0-8264-005056c00008/devices",
+        "feed" : "/users/7d1aa429-e978-11e0-8264-005056c00008/feed",
+        "groups" : "/users/7d1aa429-e978-11e0-8264-005056c00008/groups",
+        "roles" : "/users/7d1aa429-e978-11e0-8264-005056c00008/roles",
+        "following" : "/users/7d1aa429-e978-11e0-8264-005056c00008/following",
+        "followers" : "/users/7d1aa429-e978-11e0-8264-005056c00008/followers"
+      }
+    },
+    "name" : "John Doe",
+    "username" : "john.doe"
+  } ],
+  "timestamp" : 1317176452528,
+  "duration" : 52,
+  "organization" : "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="settingupdating-a-user-password">Setting/updating a user password</h2>
+
+<p>If you're an Admin, use the POST method to initially set a user's
+password or reset the user's existing password. If you're a user, use
+the POST method to reset your password</p>
+
+<p>To protect password visibility, passwords are stored in an Apache Usergrid
+credentials vault. Passwords must be at least 5 characters long and can
+include the characters a-z, 0-9, @, #, $, %, \^, and &amp;.</p>
+
+<h3 id="request-uri-1">Request URI</h3>
+
+<p>POST /{org_id}/{app_id}/users/{user}/password {request body}</p>
+
+<h3 id="parameters-1">Parameters</h3>
+
+<p>Parameter</p>
+
+<p>Description</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>arg uuid</td>
+      <td>string org_id</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Organization UUID or organization name</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>arg uuid</td>
+      <td>string app_id</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Application UUID or application name</p>
+
+<p>arg string user</p>
+
+<p>User email or username</p>
+
+<p>request body</p>
+
+<p>New and old passwords:</p>
+
+<pre><code>{"newpassword":"foo9876a","oldpassword":"bar1234b"}
+</code></pre>
+
+<p><strong>Note:</strong> If you are accessing an endpoint with application-level access
+(rather than application user-level access or anonymous access), it is
+not necessary to provide an old password. See <a href="/authenticating-users-and-application-clients">Authenticating users and
+application clients</a> for
+further information about access levels.</p>
+
+<h3 id="example---request-1">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_set_password">cURL</a></li>
+  <li><a href="#javascript_set_password">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_set_password">Ruby</a></li>
+  <li><a href="#nodejs_set_password">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X PUT "https://api.usergrid.com/my-org/my-app/users/john.doe/password" -d '{"newpassword":"foo9876a","oldpassword":"bar1234b"}'
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'PUT',
+    endpoint:'users/john.doe',
+    body:{ newpassword:'foo9876a' }
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — PUT failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+john_doe = app['users/john.doe'].entity
+john_doe.newpassword = 'foo9876a'
+john_doe.save
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'PUT',
+    endpoint:'users/john.doe',
+    body:{ newpassword:'foo9876a' }
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — PUT failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-1">Example - Response</h3>
+
+<pre><code>{
+  "action": "set user password",
+  "timestamp": 1355185897894,
+  "duration": 47
+}
+</code></pre>
+
+<h2 id="getting-a-user">Getting a user</h2>
+
+<p>Use the GET method to retrieve a user given a specified UUID, username,
+or email address.</p>
+
+<h3 id="request-uri-2">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>GET /{org_id}/{app_id}/users/{uuid</td>
+      <td>username</td>
+      <td>email_address}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="parameters-2">Parameters</h3>
+
+<p>Parameter                                      Description
+  ———————————————- ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————–
+  arg uuid|string org_id                        Organization UUID or organization name
+  arg uuid|string app_id                        Application UUID or application name
+  arg uuid|string uuid|username|email_address   User UUID, username, or email address. The alias /users/me can be used in place of the current user’s uuid, username, or email address. <strong>Note:</strong> The /users/me endpoint is accessible only if you provide an access token with the request (see <a href="/authenticating-users-and-application-clients">Authenticating users and application clients</a>). If you make an anonymous ("guest") call, the system will not be able to determine which user to return as /users/me.</p>
+
+<h3 id="example---request-2">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_user">cURL</a></li>
+  <li><a href="#javascript_get_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_user">Ruby</a></li>
+  <li><a href="#nodejs_get_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/my-org/my-app/users/jane.doe"
+</code></pre>
+
+<p>OR</p>
+
+<pre><code>curl -X GET "https://api.usergrid.com/my-org/my-app/users/a407b1e7-58e8-11e1-ac46-22000a1c5a67e"
+</code></pre>
+
+<p>OR</p>
+
+<pre><code>curl -X GET "https://api.usergrid.com/my-org/my-app/users/jane.doe@gmail.com"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'users/jane.doe'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+user = app['users/jane.doe'].entity
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'users/jane.doe'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-2">Example - Response</h3>
+
+<pre><code>{
+  "action" : "get",
+  "application" : "1c8f60e4-da67-11e0-b93d-12313f0204bb8",
+  "params" : {
+    "_": [
+    "1315524419746"
+    ]
+  },
+  "path" : "https://api.usergrid.com/12313f0204bb-1c8f60e4-da67-11e0-b93d/1c8f60e4-da67-11e0-b93d-12313f0204bb/users",
+  "uri" : "https://api.usergrid.com/005056c00008-4353136f-e978-11e0-8264/4353136f-e978-11e0-8264-005056c00008/users",
+
+  "entities" : [ {
+    "uuid" : "78c54a82-da71-11e0-b93d-12313f0204b",
+    "type" : "user",
+    "created" : 1315524171347008,
+    "modified" : 1315524171347008,
+    "activated" : true,
+    "email" : "jane.doe@gmail.com",
+    "metadata" : {
+      "path" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb",
+      "sets" : {
+        "rolenames" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/rolenames",
+        "permissions" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/permissions"
+      },
+      "collections" : {
+        "activities" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/activities",
+        "devices" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/devices",
+        "feed" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/feed",
+        "groups" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/groups",
+        "roles" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/roles",
+        "following" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/following",
+        "followers" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/followers"
+      }
+    },
+    "username" : "jane.doe"
+  } ],
+  "timestamp" : 1315524421071,
+  "duration" : 107,
+  "organization" : "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<h3 id="example---request-get-multiple-users">Example - Request: Get multiple users</h3>
+
+<p>You can retrieve multiple users by specifying their UUIDs in the
+resource path. You cannot specify usernames. Use a semicolon (not a
+slash) to separate the users collection name from the UUIDs and a
+semicolon to separate each UUID.</p>
+
+<ul>
+  <li><a href="#curl_get_multuser">cURL</a></li>
+  <li><a href="#javascript_get_multuser">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_multuser">Ruby</a></li>
+  <li><a href="#nodejs_get_multuser">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/my-org/my-app/users;7d1aa429-e978-11e0-8264-005056c00008;a407b1e7-58e8-11e1-ac46-22000a1c5a67e"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'users;7d1aa429-e978-11e0-8264-005056c00008;a407b1e7-58e8-11e1-ac46-22000a1c5a67e'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+users = app['users;7d1aa429-e978-11e0-8264-005056c00008;a407b1e7-58e8-11e1-ac46-22000a1c5a67e'].entity
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'users;7d1aa429-e978-11e0-8264-005056c00008;a407b1e7-58e8-11e1-ac46-22000a1c5a67e'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-get-multiple-users">Example - Response: Get multiple users</h3>
+
+<pre><code>{
+  "action" : "get",
+  "application" : "1c8f60e4-da67-11e0-b93d-12313f0204bb8",
+  "params" : { },
+  "path" : "/users",
+  "uri" : "https://api.usergrid.com/005056c00008-4353136f-e978-11e0-8264/4353136f-e978-11e0-8264-005056c00008/users",
+ "entities" : [ {
+    "uuid" : "7d1aa429-e978-11e0-8264-005056c00008",
+    "type" : "user",
+    "created" : 1317176452536016,
+    "modified" : 1317176452536016,
+    "activated" : true,
+    "email" : "john.doe@gmail.com",
+    "metadata" : {
+      "path" : "/users/7d1aa429-e978-11e0-8264-005056c00008",
+      "sets" : {
+        "rolenames" : "/users/7d1aa429-e978-11e0-8264-005056c00008/rolenames",
+        "permissions" : "/users/7d1aa429-e978-11e0-8264-005056c00008/permissions"
+      },
+      "collections" : {
+        "activities" : "/users/7d1aa429-e978-11e0-8264-005056c00008/activities",
+        "devices" : "/users/7d1aa429-e978-11e0-8264-005056c00008/devices",
+        "feed" : "/users/7d1aa429-e978-11e0-8264-005056c00008/feed",
+        "groups" : "/users/7d1aa429-e978-11e0-8264-005056c00008/groups",
+        "roles" : "/users/7d1aa429-e978-11e0-8264-005056c00008/roles",
+        "following" : "/users/7d1aa429-e978-11e0-8264-005056c00008/following",
+        "followers" : "/users/7d1aa429-e978-11e0-8264-005056c00008/followers"
+      }
+    },
+    "name" : "John Doe",
+    "username" : "john.doe"
+  }, {
+     "uuid" : "78c54a82-da71-11e0-b93d-12313f0204b",
+    "type" : "user",
+    "created" : 1315524171347008,
+    "modified" : 1315524171347008,
+    "activated" : true,
+    "email" : "jane.doe@gmail.com",
+    "metadata" : {
+      "path" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb",
+      "sets" : {
+        "rolenames" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/rolenames",
+        "permissions" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/permissions"
+      },
+      "collections" : {
+        "activities" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/activities",
+        "devices" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/devices",
+        "feed" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/feed",
+        "groups" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/groups",
+        "roles" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/roles",
+        "following" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/following",
+        "followers" : "/users/78c54a82-da71-11e0-b93d-12313f0204bb/followers"
+      }
+    },
+    "username" : "jane.doe"
+  } ],
+  "timestamp" : 1360253587934,
+  "duration" : 35,
+  "organization" : "my-org",
+  "applicationName" : "my-app"
+}
+</code></pre>
+
+<h2 id="updating-a-user">Updating a user</h2>
+
+<p>Use the PUT method to update a user with new or changed property values.</p>
+
+<h3 id="request-uri-3">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>PUT /{org_id}/{app_id}/users/{uuid</td>
+      <td>username} {request body}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="parameters-3">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| arg uuid|string org_id              | Organization UUID or                 |
+|                                      | organization name                    |
++————————————–+————————————–+
+| arg uuid|string app_id              | Application UUID or application name |
++————————————–+————————————–+
+| arg uuid|string uuid|username        | User UUID or username. The alias     |
+|                                      | /users/me can be used in place of    |
+|                                      | the current user’s uuid or username. |
+|                                      | <strong>Note:</strong> The /users/me endpoint is  |
+|                                      | accessible only if you provide an    |
+|                                      | access token with the request (see   |
+|                                      | <a href="/authenticating-users-and-a |
+|                                      | pplication-clients">Authenticating users and            |
+|                                      | application                          |
+|                                      | clients</a>).                |
+|                                      | If you make an anonymous ("guest")   |
+|                                      | call, the system will not be able to |
+|                                      | determine which user to return as    |
+|                                      | /users/me.                           |
++————————————–+————————————–+
+| request body                         | One or more sets of user properties: |
+|                                      |                                      |
+|                                      |     {                                |
+|                                      |       "email" : "john.doe@mail.com", |
+|                                      |       "city" : "san francisco"       |
+|                                      |     }                                |
++————————————–+————————————–+</p>
+
+<h3 id="example---request-3">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_update_user">cURL</a></li>
+  <li><a href="#javascript_update_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_update_user">Ruby</a></li>
+  <li><a href="#nodejs_update_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X PUT "https://api.usergrid.com/my-org/my-app/users/john.doe" -d '{"email":"john.doe@mail.com", "city":"san francisco"}'
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'PUT',
+    endpoint:'users/john.doe',
+    body:{ email:'john.doe@mail.com', city:'san francisco' }
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — PUT failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+john_doe = app['users/john.doe'].entity
+john_doe.email = 'john.doe@mail.com'
+john_doe.city = 'san francisco'
+john_doe.save
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'PUT',
+    endpoint:'users/john.doe',
+    body:{ email:'john.doe@mail.com', city:'san francisco' }
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — PUT failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response-3">Example - Response</h3>
+
+<pre><code>{
+  "action" : "put",
+  "application" : "1c8f60e4-da67-11e0-b93d-12313f0204bb8",
+  "params" : {
+  },
+  "path" : "/users",
+  "uri" : "https://api.usergrid.com/005056c00008-4353136f-e978-11e0-8264/4353136f-e978-11e0-8264-005056c00008/users",
+
+  "entities" : [ {
+    "uuid" : "7d1aa429-e978-11e0-8264-005056c00008",
+    "type" : "user",
+    "created" : 1317176452536016,
+    "modified" : 1317176452536016,
+    "activated" : true,
+    "city" : "san francisco",
+    "email" : "john.doe@mail.com",
+    "metadata" : {
+      "path" : "/users/7d1aa429-e978-11e0-8264-005056c00008",
+      "sets" : {
+        "rolenames" : "/users/7d1aa429-e978-11e0-8264-005056c00008/rolenames",
+        "permissions" : "/users/7d1aa429-e978-11e0-8264-005056c00008/permissions"
+      },
+      "collections" : {
+        "activities" : "/users/7d1aa429-e978-11e0-8264-005056c00008/activities",
+        "devices" : "/users/7d1aa429-e978-11e0-8264-005056c00008/devices",
+        "feed" : "/users/7d1aa429-e978-11e0-8264-005056c00008/feed",
+        "groups" : "/users/7d1aa429-e978-11e0-8264-005056c00008/groups",
+        "roles" : "/users/7d1aa429-e978-11e0-8264-005056c00008/roles",
+        "following" : "/users/7d1aa429-e978-11e0-8264-005056c00008/following",
+        "followers" : "/users/7d1aa429-e978-11e0-8264-005056c00008/followers"
+      }
+    },
+    "name" : "John Doe",
+    "username" : "john.doe"
+  } ],
+  "timestamp" : 1317176452528,
+  "duration" : 52,
+  "organization" : "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="deleting-a-user">Deleting a user</h2>
+
+<p>Use the DELETE method to delete the specified user given the UUID or
+username.</p>
+
+<p>Returns the contents of the deleted user.</p>
+
+<h3 id="request-uri-4">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>DELETE /{org_id}/{app_id}/users/{uuid</td>
+      <td>username}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="parameters-4">Parameters</h3>
+
+<p>Parameter                       Description
+  ——————————- —————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+  arg uuid|string org_id         Organization UUID or organization name
+  arg uuid|string app_id         Application UUID or application name
+  arg uuid|string uuid|username   User UUID or username. The alias /users/me can be used in place of the current user’s uuid or username. <strong>Note:</strong> The /users/me endpoint is accessible only if you provide an access token with the request (see <a href="/authenticating-users-and-application-clients">Authenticating users and application clients</a>). If you make an anonymous ("guest") call, the system will not be able to determine which user to return as /users/me.
+  request body                    One or more sets of user properties</p>
+
+<h3 id="example---request-4">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_delete_user">cURL</a></li>
+  <li><a href="#javascript_delete_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_delete_user">Ruby</a></li>
+  <li><a href="#nodejs_delete_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X DELETE "https://api.usergrid.com/my-org/my-app/users/john.doe"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'users/john.doe'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+john_doe = app['users/john.doe'].entity
+john_doe.delete
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'users/john.doe'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response-4">Example - Response</h3>
+
+<pre><code>{
+  "action": "delete",
+  "application": "438a1ca1-cf9b-11e0-bcc1-12313f0204bb",
+  "params": {
+    "_": [
+    "1329432186755" ]
+  },
+  "path": "/users",
+  "uri": "https://api.usergrid.com/12313f0204bb-438a1ca1-cf9b-11e0-bcc1/438a1ca1-cf9b-11e0-bcc1-12313f0204bb/users",
+
+  "entities": [
+     {
+    "uuid": "78c54a82-da71-11e0-b93d-12313f0204bb",
+    "type": "user",
+    "name": "John Doe",
+    "created": 1315524171347008,
+    "modified": 1315524526405008,
+    "activated": true,
+    "city": "san francisco",
+    "email": "john.doe@gmail.com",
+    "metadata": {
+      "path": "/users/78c54a82-da71-11e0-b93d-12313f0204bb",
+      "sets": {
+        "rolenames": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/rolenames",
+        "permissions": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/permissions"
+      },
+      "collections": {
+        "activities": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/activities",
+        "devices": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/devices",
+        "feed": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/feed",
+        "groups": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/groups",
+        "messages": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/messages",
+        "queue": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/queue",
+        "roles": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/roles",
+        "following": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/following",
+        "followers": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/followers"
+    },
+
+    "username": "john.doe"
+  }
+],
+"timestamp": 1315524526343,
+"duration": 84,
+"organization": "my-org",
+"applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="querying-to-get-users">Querying to get users</h2>
+
+<p>Use the GET method with a query to retrieve a set of users that meet the
+query criteria. Standard querying methods and filters can be applied to
+users. See <a href="/queries-and-parameters">Queries and parameters</a> for details
+on options for querying or filtering. By default, a maximum of 10
+entities is returned at once.</p>
+
+<h3 id="request-uri-5">Request URI</h3>
+
+<p>GET /{org_id}/{app_id}/users?{query}</p>
+
+<h3 id="parameters-5">Parameters</h3>
+
+<p>Parameter                 Description
+  ————————- ————————————————————————————-
+  arg uuid|string org_id   Organization UUID or organization name
+  arg uuid|string app_id   Application UUID or application name
+  optparam string query     Query in the query language. See <a href="/queries-and-parameters">Queries and parameters</a>.</p>
+
+<h3 id="example---request-5">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_query_users">cURL</a></li>
+  <li><a href="#javascript_query_users">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_query_users">Ruby</a></li>
+  <li><a href="#nodejs_query_users">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/my-org/my-app/users?ql=select%20*%20where%20city%3D'Chicago'"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'users',
+    qs:{ql:"select * where city='Chicago'"}
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+result = app['users'].query "select * where city = 'Chicago'"
+users = result.collection
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'users',
+    qs:{ql:"select * where city='Chicago'"}
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response-5">Example - Response</h3>
+
+<pre><code>{
+"action": "get",
+"application": "1c8f60e4-da67-11e0-b93d-12313f0204bb",
+"params": {
+   "filter": [
+     "city='chicago'?_=1329433677419"
+   ]
+   },
+"path": "/users",
+"uri": "https://api.usergrid.com/12313f0204bb-1c8f60e4-da67-11e0-b93d/1c8f60e4-da67-11e0-b93d-12313f0204bb/users",
+
+"entities": [
+  {
+    "uuid": "78c54a82-da71-11e0-b93d-12313f0204bb",
+    "type": "user",
+    "created": 1315524171347008,
+    "modified": 1315524526405008,
+    "activated": true,
+    "city": "chicago",
+    "email": "jdoe57@gmail.com",
+    "metadata": {
+      "path": "/users/78c54a82-da71-11e0-b93d-12313f0204bb",
+      "collections": {
+        "activities": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/activities",
+        "devices": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/devices",
+        "feed": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/feed",
+        "groups": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/groups",
+        "messages": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/messages",
+        "queue": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/queue",
+        "roles": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/roles",
+        "following": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/following",
+        "followers": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/followers"
+        },
+      "sets": {
+        "rolenames": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/rolenames",
+        "permissions": "/users/78c54a82-da71-11e0-b93d-12313f0204bb/permissions"
+      }
+    },
+    "username": "jane.doe"
+  }
+  ],
+  "timestamp": 1329433677599,
+  "duration": 41,
+  "organization": "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<p><strong>Note:</strong> As described in the “Getting a user” section, you can use the
+username, UUID, or email property in the URL to retrieve a user. You can
+also use those properties (as well as any entity properties) in queries
+and filters. However, you cannot use the username, UUID, or email
+properties in a “contains” search. That’s because these properties are
+primary keys, which means that they’re stored in slightly different way
+than other properties.</p>
+
+<p>This means that you can issue a query that searches for an exact match
+to a username, UUID, or email property. You can also do a wildcard
+search based on a partial match to those properties. But, you can’t
+issue a query that uses the “contains” keyword to search for a partial
+match to those properties.</p>
+
+<p>For example, the following cURL request will return the jane.doe user
+entity:</p>
+
+<pre><code>curl -X GET "https://api.usergrid.com/edort1/sandbox/users?users?ql=username%3D'jane.doe'"
+</code></pre>
+
+<p>The following cURL request will also work:</p>
+
+<pre><code>curl -X GET "https://api.usergrid.com/edort1/sandbox/users?ql=username%3D'ja*'"
+</code></pre>
+
+<p>The following cURL request will fail:</p>
+
+<pre><code>curl -X GET "https://api.usergrid.com/edort1/sandbox/users?users?ql=username%20'contains%20'ja*'"
+</code></pre>
+
+<h2 id="adding-a-user-to-a-group">Adding a user to a group</h2>
+
+<p>Use the POST method to add a user to a group. If the named group does
+not yet exist, an error message is returned.</p>
+
+<h3 id="request-uri-6">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>POST /{org_id}/{app_id}/groups/{uuid</td>
+      <td>groupname}/users/{uuid</td>
+      <td>username}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="parameters-6">Parameters</h3>
+
+<p>Parameter                   Description
+  ————————— —————————————-
+  arg uuid|string org_id     Organization UUID or organization name
+  arg uuid|string app_id     Application UUID or application name
+  arg uuid|string groupname   UUID or name of the group
+  arg uuid|string username    UUID or username of user</p>
+
+<h3 id="example---request-6">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_add_user">cURL</a></li>
+  <li><a href="#javascript_add_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_add_user">Ruby</a></li>
+  <li><a href="#nodejs_add_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X POST "https://api.usergrid.com/my-org/my-app/groups/mynewgroup/users/john.doe"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'groups/mynewgroup/users/john.doe'    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['groups/mynewgroup/users/john.doe'].post nil
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'groups/mynewgroup/users/john.doe'    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response-6">Example - Response</h3>
+
+<pre><code>{
+"action": "post",
+"application": "7fb8d891-477d-11e1-b2bd-22000a1c4e22",
+"params": {},
+"path": "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users",
+"uri": "https://api.usergrid.com/22000a1c4e22-7fb8d891-477d-11e1-b2bd/7fb8d891-477d-11e1-b2bd-22000a1c4e22/groups/a668717b-67cb-11e1-8223-12313d14bde7/users",
+
+"entities": [
+      {
+        "uuid": "6fbc8157-4786-11e1-b2bd-22000a1c4e22",
+        "type": "user",
+        "nanme": "John Doe",
+        "created": 1327517852364015,
+        "modified": 1327517852364015,
+        "activated": true,
+        "email": "john.doe@mail.com",
+        "metadata": {
+          "connecting": {
+            "owners":   "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users/6fbc8157-4786-11e1-b2bd-22000a1c4e22/connecting/owners"
+             },
+          "path": "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users/6fbc8157-4786-11e1-b2bd-22000a1c4e22",
+          "sets": {
+            "rolenames": "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users/6fbc8157-4786-11e1-b2bd-22000a1c4e22/rolenames",
+            "permissions": "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users/6fbc8157-4786-11e1-b2bd-22000a1c4e22/permissions"
+             },
+          "collections": {
+            "activities": "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users/6fbc8157-4786-11e1-b2bd-22000a1c4e22/activities",
+            "devices": "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users/6fbc8157-4786-11e1-b2bd-22000a1c4e22/devices",
+            "feed": "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users/6fbc8157-4786-11e1-b2bd-22000a1c4e22/feed",
+            "groups": "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users/6fbc8157-4786-11e1-b2bd-22000a1c4e22/groups",
+            "roles": "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users/6fbc8157-4786-11e1-b2bd-22000a1c4e22/roles",
+            "following": "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users/6fbc8157-4786-11e1-b2bd-22000a1c4e22/following",
+            "followers": "/groups/a668717b-67cb-11e1-8223-12313d14bde7/users/6fbc8157-4786-11e1-b2bd-22000a1c4e22/followers"
+             }
+        },
+        "picture": "https://www.gravatar.com/avatar/90f823ba15655b8cc8e3b4d63377576f",
+        "username": "john.doe"
+      }
+   ],
+   "timestamp": 1331066031380,
+   "duration": 64,
+   "organization" : "my-org",
+   "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="adding-a-user-to-a-collection-or-creating-a-connection">Adding a user to a collection or creating a connection</h2>
+
+<p>Use the POST method to add a user to a collection or create a
+relationship between a user and another entity.</p>
+
+<p>There are two common use cases, described separately as Use Case 1 and 2
+below.</p>
+
+<h3 id="request-uri---use-case-1">Request URI - Use Case 1</h3>
+
+<p>POST /{org_id}/{app_id}/{collection}/{first_entity_id}/{relationship}/{second_entity_id}</p>
+
+<h3 id="parameters---use-case-1">Parameters - Use Case 1</h3>
+
+<p>Parameter                           Description
+  ———————————– ————————————————–
+  arg uuid|string org_id             Organization UUID or organization name
+  arg uuid|string app_id             Application UUID or application name
+  arg string collection               Collection name
+  arg uuid|string first_entity_id   First entity UUID or entity name
+  arg string relationship             Collection name or connection type (e.g., likes)
+  arg uuid second_entity_id         Second entity UUID</p>
+
+<p>If the relationship is a collection (such as a users collection for the
+group employees), this request adds the second entity to the first
+entity’s collection of the specified name. (Note that employees is an
+entity name within the groups collection.) In the case of a group, this
+is how you add users as group members.</p>
+
+<h3 id="example---request---use-case-1-add-a-user-to-a-collection">Example - Request - Use Case 1 (Add a user to a collection)</h3>
+
+<ul>
+  <li><a href="#curl_add_user_collection">cURL</a></li>
+  <li><a href="#javascript_add_user_collection">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_add_user_collection">Ruby</a></li>
+  <li><a href="#nodejs_add_user_collection">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X POST "https://api.usergrid.com/my-org/my-app/groups/employees/users/jane.doe"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'groups/employees/users/jane.doe'    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success &amp;mdash: data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['groups/employees/users/jane.doe'].post nil
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'groups/employees/users/jane.doe'    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success &amp;mdash: data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response---use-case-1-add-a-user-to-a-collection">Example - Response - Use Case 1 (Add a user to a collection)</h3>
+
+<pre><code>{
+"action": "post",
+"application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+"params": {},
+"path": "/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users",
+"uri": "https://api.usergrid.com/12313d14bde7-3e163873-6725-11e1-8223/3400ba10-cd0c-11e1-bcf7-12313d1c4491/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users",
+
+"entities": [
+   "uuid": "ab225e6d-d503-11e1-b36a-12313b01d5c1",
+   "type": "user",
+   "created": 1343074753060,
+   "modified": 1350688633477,
+   "activated": true,
+   "city": "san Francisco",
+   "email": "jane.doe@gmail.com",
+   "metadata": {
+     "path": "/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users/ab225e6d-d503-11e1-b36a-12313b01d5c1",
+     "sets": {
+       "rolenames": "/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/rolenames",
+       "permissions": "/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/permissions"
+        },
+       "collections": {
+          "activities": "/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/activities",
+          "devices": "/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/devices",
+          "feed": "/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/feed",
+          "groups": "/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/groups",
+          "roles": "/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/roles",
+          "following": "/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/following",
+          "followers": "/groups/d87edec7-fc4d-11e1-9917-12313d1520f1/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/followers"
+        }
+      },
+      "username": "jane.doe"
+    }
+],
+"timestamp": 1331075231504,
+"duration": 42,
+"organization": "my-org",
+"applicationName": "my-app"
+}
+</code></pre>
+
+<p>If the relationship is not previously defined for the entity, a
+connection is created. For example, if the relationship is specified as
+likes, and that relationship has not been previously been defined for
+the entity, the second entity is connected to the first with a likes
+relationship.</p>
+
+<h3 id="example---request---use-case-1-create-a-connection">Example - Request - Use Case 1 (Create a connection)</h3>
+
+<ul>
+  <li><a href="#curl_create_connection1">cURL</a></li>
+  <li><a href="#javascript_create_connection1">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_create_connection1">Ruby</a></li>
+  <li><a href="#nodejs_create_connection1">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X POST "https://api.usergrid.com/my-org/my-app/users/jane.doe/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'users/jane.doe/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0'    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['users/jane.doe/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0'].post nil
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'users/jane.doe/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0'    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response---use-case-1-create-a-connection">Example - Response - Use Case 1 (Create a connection)</h3>
+
+<pre><code>{
+"action": "post",
+"application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+"params": {},
+"path": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes",
+"uri": "https://api.usergrid.com/12313d14bde7-3e163873-6725-11e1-8223/3400ba10-cd0c-11e1-bcf7-12313d1c4491/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes",
+entities": [
+   "uuid": "d9693ec3-61c9-11e2-9ffc-02e81adcf3d0",
+   "type": "user",
+   "created": 13430746203740,
+   "modified": 1351893399022,
+   "activated": true,
+   "city": "san Francisco",
+   "email": "john.doe@mail.com",
+   "metadata": {
+     "connecting": {
+          "likes": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/connecting/likes"
+     },
+     "path": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0",
+     "sets": {
+       "rolenames": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/rolenames",
+       "permissions": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/permissions"
+        },
+       "collections": {
+          "activities": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/activities",
+          "devices": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/devices",
+          "feed": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/feed",
+          "groups": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/groups",
+          "roles": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/5c0c1789-d503-11e1-b36a-12313b01d5c1/roles",
+          "following": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/following",
+          "followers": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/followers"
+        }
+      },
+      "username": "john.doe"
+    }
+],
+"timestamp": 1352140583264,
+"duration": 42,
+organization": "my-org",
+"applicationName": "my-app"
+}
+</code></pre>
+
+<h3 id="request-uri---use-case-2">Request URI - Use Case 2</h3>
+
+<p>POST /{org_id}/{app_id}/{collection}/{first_entity_id}/{relationship}/{second_entity_type}/{second_entity_id}</p>
+
+<h3 id="parameters---use-case-2">Parameters - Use Case 2</h3>
+
+<p>Parameter                            Description
+  ———————————— ————————————————–
+  arg uuid|string org_id              Organization UUID or organization name
+  arg uuid|string app_id              Application UUID or application name
+  arg string collection                Collection name
+  arg uuid|string first_entity_id    First entity UUID or entity name
+  arg string relationship              Collection name or connection type (e.g., likes)
+  arg string second_entity_type      Second entity type
+  arg uuid|string second_entity_id   Second entity UUID or entity name</p>
+
+<h3 id="example---request---use-case-2">Example - Request - Use Case 2</h3>
+
+<p>When creating a connection, if you specify the entity type for the
+second entity, then you can create the connection using the entity’s
+name rather than its UUID.</p>
+
+<ul>
+  <li><a href="#curl_create_connection2">cURL</a></li>
+  <li><a href="#javascript_create_connection2">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_create_connection2">Ruby</a></li>
+  <li><a href="#nodejs_create_connection2">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X POST "https://api.usergrid.com/my-org/my-app/users/john.doe/likes/food/pizza"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'users/john.doe/likes/food/pizza'    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['users/john.doe/likes/food/pizza'].post nil
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'users/john.doe/likes/food/pizza'    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response---use-case-2">Example - Response - Use Case 2</h3>
+
+<pre><code>{
+"action": "post",
+"application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+"params": {},
+"path": "/users/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/likes",
+"uri": "https://api.usergrid.com/12313d14bde7-3e163873-6725-11e1-8223/3400ba10-cd0c-11e1-bcf7-12313d1c4491/users/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/likes",
+
+"entities": [
+{
+      "uuid": "5c93163a-277b-11e2-8d42-02e81ae640dc",
+      "type": "food",
+      "name": "pizza",
+      "created": 1352142156214,
+      "modified": 1352142156214,
+      "metadata": {
+        "path": "/users/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/likes/5c93163a-277b-11e2-8d42-02e81ae640dc"
+      }
+    }
+],
+"timestamp": 1331075231504,
+"duration": 42,
+"organization": "my-org",
+"applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="deleting-a-user-from-a-collection-or-deleting-a-connection">Deleting a user from a collection or deleting a connection</h2>
+
+<p>Use the DELETE method to delete a user from a collection or delete a
+relationship between a user and another entity.</p>
+
+<p>There are two common use cases, described separately as Use Case 1 and 2
+below.</p>
+
+<h3 id="request-uri---use-case-1-1">Request URI - Use Case 1</h3>
+
+<p>DELETE /{org_id}/{app_id}/{collection}/{first_entity_id}/{relationship}/{second_entity_id}</p>
+
+<h3 id="parameters---use-case-1-1">Parameters - Use Case 1</h3>
+
+<p>Parameter                           Description
+  ———————————– ————————————————-
+  arg uuid|string org_id             Organization UUID or organization name
+  arg uuid|string app_id             Application UUID or application name
+  arg string collection               Collection name
+  arg uuid|string first_entity_id   First entity UUID or entity name
+  arg string relationship             Collection name or connection type (e.g., likes
+  arg uuid second_entity_id         Second entity UUID</p>
+
+<p>If the relationship is a collection (such as a users collection for the
+group employees), this request removes the second entity from the first
+entity’s collection of the specified name. In the case of a group, this
+is how you delete users as group members.</p>
+
+<h3 id="example---request---use-case-1-remove-a-user-from-a-collection">Example - Request - Use Case 1 (Remove a user from a collection)</h3>
+
+<ul>
+  <li><a href="#curl_delete_user_collection">cURL</a></li>
+  <li><a href="#javascript_delete_user_collection">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_delete_user_collection">Ruby</a></li>
+  <li><a href="#nodejs_delete_user_collection">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X DELETE "https://api.usergrid.com/my-org/my-app/groups/employees/users/jane.doe"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'groups/employees/users/jane.doe'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['groups/employees/users/jane.doe'].delete
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'groups/employees/users/jane.doe'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response---use-case-1-remove-a-user-from-a-collection">Example - Response - Use Case 1 (Remove a user from a collection)</h3>
+
+<pre><code>{
+  "action" : "delete",
+  "application" : "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+  "params" : {},
+  "path" : "/groups/3cc5ae7e-64e6-11e2-b6fb-02e81ae640dc/users",
+  "uri" : "https://api.usergrid.com/005056c00008-4353136f-e978-11e0-8264/3400ba10-cd0c-11e1-bcf7-12313d1c4491/users",
+
+  "entities" : [ {
+    "uuid" : "ab225e6d-d503-11e1-b36a-12313b01d5c1",
+    "type" : "user",
+    "created" : 1343074753060,
+    "modified" : 1352227377822,
+    "activated" : true,
+    "email" : "jane.doe@gmail.com",
+    "metadata" : {
+      "path" : "/groups/3cc5ae7e-64e6-11e2-b6fb-02e81ae640dc/users/ab225e6d-d503-11e1-b36a-12313b01d5c1",
+      "sets" : {
+        "rolenames" : "/groups/3cc5ae7e-64e6-11e2-b6fb-02e81ae640dc/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/rolenames",
+        "permissions" : "/groups/3cc5ae7e-64e6-11e2-b6fb-02e81ae640dc/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/permissions"
+      },
+      "collections" : {
+        "activities" : "//groups/3cc5ae7e-64e6-11e2-b6fb-02e81ae640dc/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/activities",
+        "devices" : "/groups/3cc5ae7e-64e6-11e2-b6fb-02e81ae640dc/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/devices",
+        "feed" : "/groups/3cc5ae7e-64e6-11e2-b6fb-02e81ae640dc1/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/fee",
+        "groups" : "/groups/3cc5ae7e-64e6-11e2-b6fb-02e81ae640dc/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/groups",
+        "roles" : "/groups/3cc5ae7e-64e6-11e2-b6fb-02e81ae640dc/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/roles",
+        "following" : /groups/3cc5ae7e-64e6-11e2-b6fb-02e81ae640dc/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/following",
+        "followers" : "/groups/3cc5ae7e-64e6-11e2-b6fb-02e81ae640dc/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/followers"
+      }
+    },
+    "username" : "jane.doe"
+  } ],
+  "timestamp" : 1352238030137,
+  "duration" : 477,
+  "organization" : "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<p>For connections, you provide the connection type. For example, if the
+second entity is connected to the first with a likes relationship, the
+delete request removes the connection.</p>
+
+<h3 id="example---request---use-case-1-remove-a-connection">Example - Request - Use Case 1 (Remove a connection)</h3>
+
+<ul>
+  <li><a href="#curl_delete_connection">cURL</a></li>
+  <li><a href="#javascript_delete_connection">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_delete_connection">Ruby</a></li>
+  <li><a href="#nodejs_delete_connection">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X DELETE "https://api.usergrid.com/my-org/my-app/users/jane.doe/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'users/jane.doe/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['users/jane.doe/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0'].delete
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'users/jane.doe/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response---use-case-1-remove-a-connection">Example - Response - Use Case 1 (Remove a connection)</h3>
+
+<pre><code>{
+"action": "delete",
+"application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+"params": {},
+"path": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes",
+"uri": "https://api.usergrid.com/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes",
+
+"entities": [
+   "uuid": "d9693ec3-61c9-11e2-9ffc-02e81adcf3d0",
+   "type": "user",
+   "created": 134307462037,
+   "modified": 1352227377728,
+   "activated": true,
+   "city": "san Francisco",
+   "email": "john.doe@mail.comm",
+   "metadata": {
+        "connecting": {
+          "likes": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/connecting/likes"
+        },
+     "path": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0",
+     "sets": {
+       "rolenames": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/rolenames",
+       "permissions": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/permissions"
+        },
+        "connections": {
+          "likes": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/likes"
+        },
+       "collections": {
+          "activities": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/activities",
+          "devices": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/devices",
+          "feed": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/feed",
+          "groups": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/group",
+          "roles": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/roles",
+          "following": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/following",
+          "followers": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/followers"
+        }
+      },
+      "username": "john.doe"
+    }
+],
+"timestamp": 1352240516683,
+"duration": 196,
+"organization": "my-org",
+"applicationName": "my-app"
+}
+</code></pre>
+
+<h3 id="request-uri---use-case-2-1">Request URI - Use Case 2</h3>
+
+<p>DELETE /{org_id}/{app_id}/{collection}/{first_entity_id}/{relationship}/{second_entity_type}/{second_entity_id}</p>
+
+<h3 id="parameters---use-case-2-1">Parameters - Use Case 2</h3>
+
+<p>Parameter                            Description
+  ———————————— ————————————————–
+  arg uuid|string org_id              Organization UUID or organization name
+  arg uuid|string app_id              Application UUID or application name
+  arg string collection                Collection name
+  arg uuid|string first_entity_id    First entity UUID or entity name
+  arg string relationship              Collection name or connection type (e.g., likes)
+  arg string second_entity_type      Second entity type
+  arg uuid|string second_entity_id   Second entity UUID or entity name</p>
+
+<h3 id="example---request---use-case-2-1">Example - Request - Use Case 2</h3>
+
+<p>When removing a connection, if you specify the entity type for the
+second entity, then you can delete the connection using the entity’s
+name rather than its UUID.</p>
+
+<ul>
+  <li><a href="#curl_delete_connection1">cURL</a></li>
+  <li><a href="#javascript_delete_connection1">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_delete_connection1">Ruby</a></li>
+  <li><a href="#nodejs_delete_connection1">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X DELETE "https://api.usergrid.com/my-org/my-app/users/test-user-1/follows/test-user-2"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'users/test-user-1/follows/test-user-2'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['users/test-user-1/follows/test-user-2'].delete
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'users/test-user-1/follows/test-user-2'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response-7">Example - Response</h3>
+
+<pre><code>{
+ "action":
+ "delete",
+ "application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+ "params": {},
+ "path": "/users/dd26b1d9-2863-11e2-b4c6-02e81ac5a17b/follows",
+ "uri": "https://api.usergrid.com/"3400ba10-cd0c-11e1-bcf7-12313d1c4491/users/dd26b1d9-2863-11e2-b4c6-02e81ac5a17b/follows",
+ "entities": [],
+ "timestamp": 1331075473194,
+ "duration": 22,
+ "organization": "my-org",
+ "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="querying-a-users-collections-or-connections">Querying a user’s collections or connections</h2>
+
+<p>Use the GET method with a query to retrieve a user’s collections or
+connections that meet the query criteria. Standard querying methods and
+filters can be applied to users. See <a href="/queries-and-parameters">Queries and
+parameters</a> for details on options for querying
+or filtering. By default, a maximum of 10 entities is returned at once.</p>
+
+<h3 id="request-uri-7">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>GET /{org_id}/{app_id}/users/{uuid</td>
+      <td>username}/{relationship}?{query}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="parameters-7">Parameters</h3>
+
+<p>Parameter                  Description
+  ————————– ————————————————————————————-
+  arg uuid|string org_id    Organization UUID or organization name
+  arg uuid|string app_id    Application UUID or application name
+  arg uuid|string username   Entity UUID or username
+  arg string relationship    Collection name or connection type (e.g., likes)
+  optparam string query      Query in the query language. See <a href="/queries-and-parameters">Queries and parameters</a>.</p>
+
+<h3 id="example---request-7">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_query_user_collections">cURL</a></li>
+  <li><a href="#javascript_query_user_collections">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_query_user_collections">Ruby</a></li>
+  <li><a href="#nodejs_query_user_collections">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/my-org/my-app/users/jane.doe/likes?ql=select%20*%20where%20city%3D'milwaukee'"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'users/jane.doe/likes',
+    qs:{'ql':"select * where city='milwaukee'"}
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['users/jane.doe/likes'].query "select * where city = 'milwaukee'"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'users',
+    users.qs = {'ql':"select * where city='milwaukee'"};
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response-8">Example - Response</h3>
+
+<pre><code>{
+  "action": "get",
+  "application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+  "params":{
+    "ql" : [ "select * where city='milwaukee'" ]
+  },
+  "path": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes",
+  "uri": "https://api.usergrid.com/22000a1c4e22-5ea08de5-4d23-11e1-b41d/3400ba10-cd0c-11e1-bcf7-12313d1c4491/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes",
+
+  "entities": [
+    {
+      "uuid": "895d7c11-5901-11e1-ac46-22000a1c5a67",
+      "type": "restaurant",
+      "created": 1329439893227,
+      "modified": 1329439893227,
+      "city": "milwaukee",
+      "metadata": {
+        "connecting": {
+          "likes": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c17/connecting/likes"
+          },
+          "connection": "likes",
+          "cursor": "gGkAAQEAgHMACW1pbHdhdWtlZQCAdQAQiV18EVkBEeGsRiIAChxaZwCAcwAKcmVzdGF1cmFudACAdQAQUrM7mVkCEeGsRiIAChxaZwA",
+          "associated": "42039286-c984-3b46-bbfb-28c4abb9b27c",
+          "path": "/users/ab225e6d-d503-11e1-b36a-12313b01d5c1/likes/895d7c11-5901-11e1-ac46-22000a1c5a67"
+      },
+      "name": "Tulep"
+    }
+  ]
+  "timestamp": 1315357451949,
+  "duration": 52,
+  "organization": "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="getting-a-users-feed">Getting a user’s feed</h2>
+
+<p>Use the GET method to retrieve a user’s feed.</p>
+
+<h3 id="request-uri-8">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>GET /{org_id}/{app_id}/users/{uuid</td>
+      <td>username}/feed</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example---request-8">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_user_feed">cURL</a></li>
+  <li><a href="#javascript_get_user_feed">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_user_feed">Ruby</a></li>
+  <li><a href="#nodejs_get_user_feed">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/my-org/my-app/users/john.doe/feed"
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'users/john.doe/feed'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+activities = app['users/john.doe/feed'].collection
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'users/john.doe/feed'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response-9">Example - Response</h3>
+
+<pre><code>{
+  "action" : "get",
+  "application" : "3400ba10-cd0c-11e1-bcf7-12313d1c44914",
+  "params" : {},
+  "path" : "/users/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/feed",
+  "uri" : "https://api.usergrid.com/3400ba10-cd0c-11e1-bcf7-12313d1c44914/users/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/feed",
+  "entities" : [ {
+    "uuid" : "ffd79647-f399-11e1-aec3-12313b06ae01",
+    "type" : "activity",
+    "created" : 1346437854569,
+    "modified" : 1346437854569,
+    "actor" : {
+      "displayName" : "John Doe",
+      "image" : {
+        "duration" : 0,
+        "height" : 80,
+        "url" : "http://www.gravatar.com/avatar/",
+        "width" : 80
+      },
+      "uuid" : "d9693ec3-61c9-11e2-9ffc-02e81adcf3d0",
+      "email" : "john.doe@gmail.com",
+      "username" : "john.doe"
+    },
+    "content" : "Hello World!",
+    "metadata" : {
+      "cursor" : "gGkAAQMAgGkABgE5ffM1aQCAdQAQ_9eWR_OZEeGuwxIxOwauAQCAdQAQABlaOvOaEeGuwxIxOwauAQA",
+      "path" : "/users/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/feed/ffd79647-f399-11e1-aec3-12313b06ae01"
+    },
+    "published" : 1346437854569,
+    "verb" : "post"
+  }, {
+    "uuid" : "2482a1c5-e7d0-11e1-96f6-12313b06d112",
+    "type" : "activity",
+    "created" : 1345141694958,
+    "modified" : 1345141694958,
+    "actor" : {
+      "displayName" : "moab",
+      "image" : {
+        "duration" : 0,
+        "height" : 80,
+        "url" : "http://www.gravatar.com/avatar/",
+        "width" : 80
+      },
+      "uuid" : "d9693ec3-61c9-11e2-9ffc-02e81adcf3d0",
+      "email" : "massoddb@mfdsadfdsaoabl.com",
+      "username" : "moab"
+    },
+    "content" : "checking in code left and right!!",
+    "metadata" : {
+      "cursor" : "gGkAAQMAgGkABgE5MLFh7gCAdQAQJIKhxefQEeGW9hIxOwbREgCAdQAQJNEP6ufQEeGW9hIxOwbREgA",
+      "path" : "/users/d9693ec3-61c9-11e2-9ffc-02e81adcf3d0/feed/2482a1c5-e7d0-11e1-96f6-12313b06d112"
+    },
+    "published" : 1345141694958,
+    "verb" : "post"
+  } ],
+  "timestamp" : 1346438331316,
+  "duration" : 144,
+  "organization": "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="user-properties">User properties</h2>
+
+<p>The following are the system-defined properties for user entities. You
+can create application-specific properties for a user entity in addition
+to the system-defined properties. The system-defined properties are
+reserved. You cannot use these names to create other properties for a
+user entity. In addition the users name is reserved for the users
+collection — you can't use it to name another collection.</p>
+
+<p>Property     Type      Description
+  ———— ——— ———————————————————————————
+  uuid         UUID      User’s unique entity ID
+  type         string    Type of entity, in this case “user”
+  created      long      <a href="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</a> of entity creation
+  modified     long      <a href="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</a> of entity modification
+  username     string    Valid and unique string username (mandatory)
+  password     string    User password
+  email        string    Valid and unique email address
+  name         string    User display name
+  activated    boolean   Whether the user account is activated
+  disabled     boolean   Whether the user account is administratively disabled
+  firstname    string    User first name
+  middlename   string    User middle name
+  lastname     string    User last name
+  picture      string    User picture</p>
+
+<p>The following property sets are assigned to user entities.</p>
+
+<p>Set           Type     Description
+  ————- ——– —————————————
+  connections   string   Set of connection types (e.g., likes)
+  rolenames     string   Set of roles assigned to a user
+  permissions   string   Set of user permissions
+  credentials   string   Set of user credentials</p>
+
+<p>Users have the following associated collections.</p>
+
+<p>Collection   Type       Description
+  ———— ———- —————————————————–
+  groups       group      Collection of groups to which a user belongs
+  devices      device     Collection of devices in the service
+  activities   activity   Collection of activities a user has performed
+  feed         activity   Inbox of activity notifications a user has received
+  roles        role       Set of roles assigned to a user</p>
+
+<p> </p>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

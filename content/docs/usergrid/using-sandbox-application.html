@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Using a Sandbox Application | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Using a Sandbox Application
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h1 id="using-a-sandbox-application">Using a Sandbox Application</h1>
+
+<p>When you create a new Apigee account (see <a href="/creating-apigee-account">Creating an Apigee
+Account</a>) for Apache Usergrid, Apigee creates a
+new application for you on its servers. With the new application, called
+"sandbox," you can add your own example data and try out API calls that
+do things with the data. Be sure to see <a href="/using-api">Using the API</a> for
+suggestions.</p>
+
+<p>To keep things simple and make it easier for you to try things out, the
+sandbox application has all authentication disabled. That way, it
+doesn’t require an access token for application-level calls to the API.
+Permissions are so open on the sandbox application because its "guest"
+role offers full permissions for all access paths – that is, GET, POST,
+PUT, and DELETE for /**. Learn more about roles and permissions in
+<a href="/managing-access-defining-permission-rules">Managing access by defining permission
+rules</a>.</p>
+
+<h3 id="a-note-about-security">A note about security</h3>
+
+<p>Keep in mind that the lack of authentication means that <strong>a sandbox
+application is not secure enough for important or sensitive data</strong>. A
+sandbox is just for experimentation while you learn how Apache Usergrid
+works, and should never be used for a production application.</p>
+
+<p>As with other kinds of Apache Usergrid applications, a sandbox application
+is an area of the Apache Usergrid data store where you can put your own
+data. You can create as many other applications as you like, including
+more sandbox applications. When it comes to production (secured)
+applications, a good rule of thumb is to create one Apache Usergrid
+application for each mobile app you develop.</p>
+
+<h2 id="creating-a-new-sandbox-application">Creating a New Sandbox Application</h2>
+
+<p>You may want to create (or re-create) a sandbox application. For
+example, you may want to create a sandbox application for another
+organization or you may want to create another application for testing
+purposes.</p>
+
+<p>Giving the guest role full permissions should be used only for testing
+and should not be used in production. Before you make your app “live”,
+you should remove the guest permissions for /**.</p>
+
+<p>Use the following steps to create a sandbox app:</p>
+
+<ol>
+  <li>Create a new application using the admin portal. You can name the
+application whatever you like (including "sandbox").</li>
+  <li>Set full access permissions for the guest role, as follows:
+    <ol>
+      <li>In the admin portal, click <strong>Users</strong>, then click <strong>Roles</strong>.</li>
+      <li>On the <strong>Roles</strong> page, in the list of roles, click <strong>Guest</strong>.</li>
+      <li>For the Guest role, under<strong> Permissions</strong>, click <strong>Add
+Permission</strong>.</li>
+      <li>
+        <p>In the <strong>New Permission</strong> dialog, enter the following in the
+<strong>Path</strong> box:\</p>
+
+        <pre><code>/**
+</code></pre>
+      </li>
+      <li>Select the following check boxes: <strong>get</strong>, <strong>post</strong>, <strong>put</strong>,
+and <strong>delete</strong>.</li>
+      <li>Click the <strong>Add</strong> button.</li>
+      <li>If there are other permissions listed, delete them.</li>
+    </ol>
+  </li>
+</ol>
+
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

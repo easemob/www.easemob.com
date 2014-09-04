@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Easemob推送 | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Easemob推送
+    </h1>
+    <p>
+      Easemob推送, 在1秒内推送上万条数据, 并且支持tag等多维度推送
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main"><h2 id="asset">Asset</h2>
+
+<p>Asset在API Service中主要是用来存储二进制文件的, 例如照片, 视频和音频等, 但是asset并不只限于二进制文件, 也可以用来模拟一个文件系统.</p>
+
+<h3 id="folder">创建目录(folder)</h3>
+
+<p>例如, 你有一些照片想要存储进API Service当中, 为了方便管理, 还想把这些照片放到一个目录当中, 那么, 需要现在API Service中创建一个folder</p>
+
+<pre><code>POST /:org/:app/folders {request body}
+
+例如 post /folders {"name":"照片","owner":"2bbc8b8a-b22f-11e2-ac3f-c97fdfc6de31","path":"/images"}
+</code></pre>
+
+<p>其中, request body中有一些必须的属性:</p>
+
+<ul>
+  <li>name 此目录的名称 </li>
+  <li>owner 此目录的所有者 – User UUID</li>
+  <li>path 此目录的路径, 绝对路径</li>
+</ul>
+
+<p>POST的返回结果中会包含此folder的UUID (35618fba-b8af-11e2-ba5e-9176b8e27aa2), 这个在以后会用到的.</p>
+
+<h3 id="asset-1">创建文件(asset)</h3>
+<p>接下来就该为每个照片来创建一个asset了, 例如, 有一个照片名称叫做 <em>my_image.jpg</em>, 可以通过这样的方法来创建一个asset</p>
+
+<pre><code>POST /:org/:app/assets {request body}
+例如 post /assets {"name":"照片1.jpg","owner":"2bbc8b8a-b22f-11e2-ac3f-c97fdfc6de31","path":"/images/a1.jpg"}
+</code></pre>
+
+<p>其中, request body需要的一些必须的属性包括:</p>
+
+<ul>
+  <li>name 此目录的名称 </li>
+  <li>owner 此目录的所有者 – User UUID</li>
+  <li>path 此目录的路径, 绝对路径</li>
+</ul>
+
+<p>还有一个可选的属性, 如果这个属性没有设置的话,那么API Service会去监测上传上来的文件来判断此文件的类型.</p>
+
+<ul>
+  <li>content-type 存储的文件的类型, 例如 "images/jpeg"</li>
+</ul>
+
+<p>这个POST同样会返回一个UUID (64c51a5a-b8b0-11e2-bc5d-99b2f605e77f)用来唯一标识此Asset.</p>
+
+<h3 id="section">链接目录和文件</h3>
+
+<p>接下来就是把这个文件(asset)添加到之前创建好的目录中了</p>
+
+<pre><code>POST /:org/:app/folders/:folder_uuid/assets/:asset_uuid
+例如 post /folders/35618fba-b8af-11e2-ba5e-9176b8e27aa2/assets/64c51a5a-b8b0-11e2-bc5d-99b2f605e77f
+
+返回结果如下, 可以看到metadata.path给出了此asset的路径
+注意, 也可以直接访问asset而不使用folder
+
+{
+  "action": "post",
+  "application": "09621090-affb-11e2-ac08-773f1211b6de",
+  "params": {},
+  "path": "/folders/35618fba-b8af-11e2-ba5e-9176b8e27aa2/assets",
+  "uri": "http://localhost:8080/test-organization/test1-app/folders/35618fba-b8af-11e2-ba5e-9176b8e27aa2/assets",
+  "entities": [
+    {
+      "uuid": "64c51a5a-b8b0-11e2-bc5d-99b2f605e77f",
+      "type": "asset",
+      "name": "照片1.jpg",
+      "created": 1368107851893,
+      "modified": 1368107851893,
+      "owner": "2bbc8b8a-b22f-11e2-ac3f-c97fdfc6de31",
+      "path": "/images/a1.jpg",
+      "metadata": {
+        "path": "/folders/35618fba-b8af-11e2-ba5e-9176b8e27aa2/assets/64c51a5a-b8b0-11e2-bc5d-99b2f605e77f"
+      }
+    }
+  ],
+  "timestamp": 1368108005446,
+  "duration": 101,
+  "organization": "test-organization",
+  "applicationName": "test1-app"
+}
+</code></pre>
+
+<h3 id="section-1">获取目录或文件</h3>
+
+<p>获取目录</p>
+
+<pre><code>GET /:org/:app/folders/:folder_uuid
+</code></pre>
+
+<p>获取文件</p>
+
+<pre><code>GEt /:org/:app/assets/:assets_uuid
+</code></pre>
+
+<p>注意, 这里是获取的目录或者文件的元信息, 例如</p>
+
+<pre><code>/folders/35618fba-b8af-11e2-ba5e-9176b8e27aa2
+ 
+{
+  "action": "get",
+  "application": "09621090-affb-11e2-ac08-773f1211b6de",
+  "params": {
+    "_": [
+      "1368108289401"
+    ]
+  },
+  "path": "/folders",
+  "uri": "http://localhost:8080/test-organization/test1-app/folders",
+  "entities": [
+    {
+      "uuid": "35618fba-b8af-11e2-ba5e-9176b8e27aa2",
+      "type": "folder",
+      "name": "照片",
+      "created": 1368107342891,
+      "modified": 1368107342891,
+      "owner": "2bbc8b8a-b22f-11e2-ac3f-c97fdfc6de31",
+      "path": "/images2",
+      "metadata": {
+        "path": "/folders/35618fba-b8af-11e2-ba5e-9176b8e27aa2",
+        "connections": {
+          "assets": "/folders/35618fba-b8af-11e2-ba5e-9176b8e27aa2/assets"
+        }
+      }
+    }
+  ],
+  "timestamp": 1368108290171,
+  "duration": 16,
+  "organization": "test-organization",
+  "applicationName": "test1-app"
+}     
+</code></pre>
+
+<h3 id="asset-2">上传实际的文件内容到Asset</h3>
+
+<p>注意, 文件的实际内容是和Asset分开存放的</p>
+
+<p>上传文件是通过往asset的data POST数据的方式</p>
+
+<pre><code>POST /:org/:app/assets/:assets_uuid/data {binary-data}
+</code></pre>
+
+<p>其中, binary-data是要上传文件的二进制内容, 使用cURL的方法的话, 可以这样来做</p>
+
+<pre><code>POST  --data-binary "@src/resources/my-image.jpg" -H
+"Content-Type: application/octet-stream"
+‘http://api.easemob.com/my-org/my-app/assets/9501cda1-2d21-11e2-b4c6-02e81ac5a17b/data’    
+</code></pre>
+
+<h3 id="section-2">下载文件内容</h3>
+
+<pre><code>GET /:org/:app/assets/:asset_uuid/data
+</code></pre>
+
+<p>修改的话, 则可以使用PUT方法              </p>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

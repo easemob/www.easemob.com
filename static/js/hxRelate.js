@@ -25,8 +25,12 @@ $(document).ready(function() {
 			navList = $("#menu_topmenu .menu-item-one");
 
 		if (navList.length > 0) {
-	    	// "下载"被选中
-	    	if (listTag[1] == 'sdk' || listTag[1] == 'demo') {
+			
+	    	if (listTag[1] == 'docs') {
+	    		// 文档
+	    		selectFlag = 1;
+	    	}else if (listTag[1] == 'sdk' || listTag[1] == 'demo') {	
+	    		// "下载"被选中
 	    		selectFlag = 2;
 	    	} else if (listTag[1] == 'faq') {
 	    		// “FAQ”被选中
@@ -56,8 +60,12 @@ $(document).ready(function() {
 			leftNavList = $('#about_nav a');
 
 		if (leftNavList.length > 0) {
-	    	// "下载"被选中
-	    	if (listTag[2] && listTag[2] == 'joinus') {
+	    	
+	    	if (listTag[1] == 'docs') {
+	    		// 文档
+	    		selectFlag = 1;
+	    	}else if (listTag[2] && listTag[2] == 'joinus') {
+	    		// "下载"被选中
 	    		selectFlag = 1;
 	    	} else if (listTag[2] && listTag[2] == 'contactus') {
 	    		// “FAQ”被选中

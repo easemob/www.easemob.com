@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Easemob推送 | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Easemob推送
+    </h1>
+    <p>
+      Easemob推送, 在1秒内推送上万条数据, 并且支持tag等多维度推送
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main"><h2 id="event">Event</h2>
+
+<p>event 在 API Service当中主要是用来统计信息的(例如做app的数据分析), 例如一个功能被使用了多少次, 被哪些用户使用的多, 被哪个group的用户使用的多, 甚至每个event还可以添加一个location的属性, 这样就可以知道一些基于地理位置的信息, 例如那里的用户喜欢哪种功能.</p>
+
+<p>Event可以和user / group关联起来, 来做精准的分析, 也可以给每个event指定一个category, 这样查询起来就能够按照类别来查询了.</p>
+
+<p>Event还是用来存储计数器的主要手段.</p>
+
+<h3 id="event-1">创建Event</h3>
+
+<pre><code>POST /:org/:app/events {request body}
+</code></pre>
+
+<p>其中, request body可以是下面这样的内容</p>
+
+<pre><code>{
+  "timestamp":0,
+  "category" : "advertising",
+  "counters" : {
+    "ad_clicks" : 5
+  }
+}    
+</code></pre>
+
+<p>需要注意的是, "timestamp"属性是必须的, 但是如果这个属性的值是0的话, 系统会给它自动设置为当前值</p>
+
+<p>上面的执行结果类似:</p>
+
+<pre><code>{
+  "action": "post",
+  "application": "09621090-affb-11e2-ac08-773f1211b6de",
+  "params": {},
+  "path": "/events",
+  "uri": "http://localhost:8080/test-organization/test1-app/events",
+  "entities": [
+    {
+      "uuid": "7de5230a-d4b7-1f8c-8d5a-01bc0167a5d5",
+      "type": "event",
+      "created": 1368044791454,
+      "modified": 1368044791454,
+      "timestamp": 1368044791454,
+      "category": "advertising",
+      "counters": {
+        "ad_clicks": 5
+      },
+      "message": null,
+      "metadata": {
+        "path": "/events/7de5230a-d4b7-1f8c-8d5a-01bc0167a5d5"
+      }
+    }
+  ],
+  "timestamp": 1368044791448,
+  "duration": 39,
+  "organization": "test-organization",
+  "applicationName": "test1-app"
+}
+</code></pre>
+
+<p>对于event的request body, 系统还内置了如下的属性:</p>
+
+<ul>
+  <li>user : 需要关联的user的UUID</li>
+  <li>group : 需要关联的user group的UUID</li>
+  <li>message : String, 这个event的描述信息</li>
+</ul>
+
+<p>除了这些之外, 你也可以增加任何你想要自定义的属性 </p>
+
+<h2 id="section">应用数据统计</h2>
+
+<p>应用数据的统计是通过 <em>counter</em> 来实现的, 具体的API就是</p>
+
+<p>/{org_name}/{app_name}/counters</p>
+
+<p>此API支持如下的参数:</p>
+
+<ol>
+  <li>
+    <p>start_time</p>
+
+    <p>要获取数据的起始时间, long类型</p>
+  </li>
+  <li>
+    <p>end_time</p>
+
+    <p>要获取数据的截止时间, long类型</p>
+  </li>
+  <li>
+    <p>resolution</p>
+
+    <p>数据的时间间隔类型, 有all, minute, five_minute, half_hour, hour, six_hour, half_day, day, week, month</p>
+
+    <p>这个时间间隔会对上面给出的start_time, end_time进行自动的修正</p>
+  </li>
+  <li>
+    <p>pad</p>
+
+    <p>不知道, 但是必须有这个参数, 其值为'true'</p>
+  </li>
+  <li>
+    <p>counter</p>
+
+    <p>要查询的counter</p>
+  </li>
+</ol>
+
+<h3 id="counter">Counter</h3>
+
+<p>当前系统中所支持的counter</p>
+
+<ul>
+  <li>
+    <p>app.users.activity</p>
+
+    <p>用户发出的request中包括了正确的token(即有用户调用)的时候, 此counter自动加1</p>
+  </li>
+  <li>
+    <p>application.collection.restaurants</p>
+
+    <p>restaurants 是用户自定义的集合, 也就是说可以通过这种形势来获取到每个用户数据的总数</p>
+  </li>
+  <li>
+    <p>application.collection.roles</p>
+
+    <p>当前应用中roles的总数</p>
+  </li>
+  <li>
+    <p>application.collection.user:members</p>
+
+    <p>N/A</p>
+  </li>
+  <li>
+    <p>application.collection.users</p>
+
+    <p>当前应用中user的总数</p>
+  </li>
+  <li>
+    <p>application.entities</p>
+
+    <p>当前应用中user的总数</p>
+  </li>
+  <li>
+    <p>application.request.upload</p>
+
+    <p>此应用通过request的方式一共上传了多少byte的数据</p>
+  </li>
+  <li>
+    <p>application.request.download</p>
+
+    <p>系统通过response的方式一共返回给了此应用多少byte的数据</p>
+  </li>
+  <li>
+    <p>application.request.time</p>
+
+    <p>此应用的request一共消耗了系统多少cpu时间(毫秒)</p>
+  </li>
+  <li>
+    <p>application.requests.get</p>
+
+    <p>此应用调用HTTP GET的次数</p>
+  </li>
+  <li>
+    <p>application.requests.post</p>
+
+    <p>此应用调用HTTP POST的次数</p>
+  </li>
+  <li>
+    <p>application.requests.put</p>
+
+    <p>此应用调用HTTP PUT的次数</p>
+  </li>
+</ul>
+
+<p>下面的实例可供参考</p>
+
+<p>"http://localhost:8080/test-organization/test1-app/counters?start_time=1366848000000&amp;end_time=1209600001&amp;resolution=day&amp;counter=application.entities&amp;counter=application.request.download&amp;counter=application.request.time&amp;counter=application.request.upload&amp;pad=true"</p>
+
+<pre><code>{
+  "action" : "get",
+  "application" : "09621090-affb-11e2-ac08-773f1211b6de",
+  "params" : {
+    "pad" : [ "true" ],
+    "end_time" : [ "1209600001" ],
+    "counter" : [ "application.entities", "application.request.download", "application.request.time", "application.request.upload" ],
+    "start_time" : [ "1366848000000" ],
+    "resolution" : [ "day" ]
+  },
+  "uri" : "http://localhost:8080/test-organization/test1-app",
+  "entities" : [ ],
+  "timestamp" : 1367423375607,
+  "duration" : 10,
+  "organization" : "test-organization",
+  "applicationName" : "test1-app",
+  "count" : 0,
+  "counters" : [ {
+    "name" : "application.entities",
+    "values" : [ {
+      "timestamp" : 1366848000000,
+      "value" : 0
+    }, {
+      "timestamp" : 1366934400000,
+      "value" : 0
+    }, {
+      "timestamp" : 1367020800000,
+      "value" : 0
+    }, {
+      "timestamp" : 1367107200000,
+      "value" : 4
+    }, {
+      "timestamp" : 1367193600000,
+      "value" : 0
+    }, {
+      "timestamp" : 1367280000000,
+      "value" : 2
+    }, {
+      "timestamp" : 1367366400000,
+      "value" : 105
+    } ]
+  }, {
+    "name" : "application.request.download",
+    "values" : [ {
+      "timestamp" : 1366848000000,
+      "value" : 0
+    }, {
+      "timestamp" : 1366934400000,
+      "value" : 0
+    }, {
+      "timestamp" : 1367020800000,
+      "value" : 0
+    }, {
+      "timestamp" : 1367107200000,
+      "value" : 21482
+    }, {
+      "timestamp" : 1367193600000,
+      "value" : 35334
+    }, {
+      "timestamp" : 1367280000000,
+      "value" : 133942
+    }, {
+      "timestamp" : 1367366400000,
+      "value" : 437878
+    } ]
+  }, {
+    "name" : "application.request.time",
+    "values" : [ {
+      "timestamp" : 1366848000000,
+      "value" : 0
+    }, {
+      "timestamp" : 1366934400000,
+      "value" : 0
+    }, {
+      "timestamp" : 1367020800000,
+      "value" : 0
+    }, {
+      "timestamp" : 1367107200000,
+      "value" : 28760
+    }, {
+      "timestamp" : 1367193600000,
+      "value" : 4182
+    }, {
+      "timestamp" : 1367280000000,
+      "value" : 104346
+    }, {
+      "timestamp" : 1367366400000,
+      "value" : 366653
+    } ]
+  }, {
+    "name" : "application.request.upload",
+    "values" : [ {
+      "timestamp" : 1366848000000,
+      "value" : 0
+    }, {
+      "timestamp" : 1366934400000,
+      "value" : 0
+    }, {
+      "timestamp" : 1367020800000,
+      "value" : 0
+    }, {
+      "timestamp" : 1367107200000,
+      "value" : 102
+    }, {
+      "timestamp" : 1367193600000,
+      "value" : 0
+    }, {
+      "timestamp" : 1367280000000,
+      "value" : 758
+    }, {
+      "timestamp" : 1367366400000,
+      "value" : 10825
+    } ]
+  } ]
+</code></pre>
+
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

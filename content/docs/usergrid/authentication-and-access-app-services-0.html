@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Authentication and access in App services | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Authentication and access in App services
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h1 id="authentication-and-access-in-app-services">Authentication and access in App services</h1>
+
+<p>App services requests are authenticated via OAuth (Open Authorization)
+2.0. OAuth is an authentication mechanism that allows users to grant
+access to their web resources or mobile apps safely, without having to
+share their passwords. The analogy of a valet key is sometimes used to
+describe OAuth, because users can permit general access, but limit
+access rights to perform certain operations. Instead of an app user
+having to share a password, OAuth enables access using a security token
+tied specifically to an app and device.</p>
+
+<p>Unlike OAuth 1.0, which requires special support in the client code for
+signing requests, OAuth 2.0 can be used by any web service client
+libraries. Although the OAuth 2.0 specification isn’t finalized yet, it
+is sufficiently complete so that many web service providers, including
+Google and Facebook, are now using it for authentication. More
+information about OAuth 2.0 is available at
+<a href="http://oauth.net/2/">oauth.net</a>.</p>
+
+<h2 id="access-types">Access types</h2>
+
+<p>App services take advantage of standard OAuth 2.0 mechanisms that
+require an access token with data operation requests. To obtain the
+access token, you connect to an appropriate web service endpoint and
+provide the correct client credentials. The credentials required to get
+the token depend on the type of access you need.</p>
+
+<p>There are four access types.</p>
+
+<p>Access Type        Description
+  —————— ——————————————————————————————————-
+  Organization       Full access to perform any operation on a App services organization account
+  Admin User         Full access to perform any operation on all organization accounts of which the admin user is a member
+  Application        Full access to perform any operation on a App services application account
+  Application User   Policy-limited access to perform operations on a App services application account</p>
+
+<p>The <em>Organization</em> and <em>Application</em> access types are intended for
+server-side applications because they are "superuser" access mechanisms
+with few constraints on what they are permitted to do. When connecting
+via OAuth, you supply organization or application client ID and client
+secret parameters as client credentials. The Home page of the developer
+portal shows these parameters for the organization, while the Settings
+page displays them for the currently selected app.</p>
+
+<p>The <em>Admin User</em> and <em>Application User</em> access types are appropriate for
+connections on behalf of a known user account, such as an admin user who
+is a member of several organizations and has management rights to
+several apps, or an application user authorized for an application. When
+connecting via OAuth on behalf of a known user, you supply username and
+password parameters as client credentials.</p>
+
+<p>Each access type is discussed below, along with information on supplying
+an access token in an API request.</p>
+
+<h3 id="organizations">Organizations</h3>
+
+<p>When you sign up for the App services developer portal, you create an
+organization account in addition to your personal admin user account.
+Access to a single organization requires client ID and client secret
+credentials (or an admin user can supply username and password
+credentials, as shown in the next section).</p>
+
+<p>As an example of accessing an organization, you can obtain your client
+ID and client secret values from the developer portal and connect to the
+following URL (substituting the correct values for &lt;client_id&gt; and
+&lt;client_secret&gt;):</p>
+
+<pre><code>https://api.usergrid.com/management/token?grant_type=client_credentials&amp;client_id=&lt;client_id&gt;&amp;client_secret=&lt;client_secret&gt;
+</code></pre>
+
+<p>The results show the access token needed to make subsequent API
+requests, as well as additional information about the organization:</p>
+
+<pre><code>{
+  "access_token": "gAuFEOlXEeCfRgBQVsAACA:b3U6AAABMqz-Cn0wtDxxkxmQLgZvTMubcP20FulCZQ",
+  "expires_in": 3600,
+  "organization": {
+    "users": {
+      "test": {
+        "name": "Test User",
+        "disabled": false,
+        "uuid": "7ff1946d-e957-11e0-9f46-005056c00008",
+        "activated": true,
+        "username": "test",
+        "applicationId": "00000000-0000-0000-0000-000000000001",
+        "email": "test@usergrid.com",
+        "adminUser": true,
+        "mailTo": "Test User &lt;test@usergrid.com&gt;"
+      }
+    },
+    "name": "test-organization",
+    "applications": {
+      "test-app": "8041893b-e957-11e0-9f46-005056c00008"
+    },
+    "uuid": "800b8510-e957-11e0-9f46-005056c00008"
+  }
+}
+</code></pre>
+
+<h3 id="admin-users">Admin users</h3>
+
+<p><em>Admin Users</em> are users of the Usergrid.com service as well as members
+of one or more organizations. In turn, an organization can have one or
+more admin users. Currently all admin users in an organization have full
+access permissions after they authenticate using their basic username
+and password credentials. In a subsequent release, App services will
+support a more fine-grained, delegated administration model in which
+access rights for admin users are configurable.</p>
+
+<p>As an example. to authenticate as an admin user, use the username and
+password values specified when you created your admin user account and
+connect to the following URL (substituting the correct values for
+&lt;username&gt; and &lt;password&gt;):</p>
+
+<pre><code>https://api.usergrid.com/management/token?grant_type=password&amp;username=&lt;username&gt;&amp;password=&lt;password&gt;
+</code></pre>
+
+<p>In these results, note the access token needed to make subsequent API
+requests on behalf of the admin user:</p>
+
+<pre><code>{
+  "access_token": "f_GUbelXEeCfRgBQVsAACA:YWQ6AAABMqz_xUyYeErOkKjnzN7YQXXlpgmL69fvaA",
+  "expires_in": 3600,
+  "user": {
+    "username": "test",
+    "email": "test@usergrid.com",
+    "organizations": {
+      "test-organization": {
+        "users": {
+          "test": {
+            "name": "Test User",
+            "disabled": false,
+            "uuid": "7ff1946d-e957-11e0-9f46-005056c00008",
+            "activated": true,
+            "username": "test",
+            "applicationId": "00000000-0000-0000-0000-000000000001",
+            "email": "test@usergrid.com",
+            "adminUser": true,
+            "mailTo": "Test User &lt;test@usergrid.com&gt;"
+          }
+        },
+        "name": "test-organization",
+        "applications": {
+          "test-app": "8041893b-e957-11e0-9f46-005056c00008"
+        },
+        "uuid": "800b8510-e957-11e0-9f46-005056c00008"
+      }
+    },
+    "adminUser": true,
+    "activated": true,
+    "name": "Test User",
+    "mailTo": "Test User &lt;test@usergrid.com&gt;",
+    "applicationId": "00000000-0000-0000-0000-000000000001",
+    "uuid": "7ff1946d-e957-11e0-9f46-005056c00008",
+    "disabled": false
+  }
+}
+</code></pre>
+
+<h2 id="applications">Applications</h2>
+
+<p>Users can access applications in three ways:</p>
+
+<ul>
+  <li>With application client ID and client secret credentials</li>
+  <li>With the client ID and client secret credentials of the organization
+that owns the application</li>
+  <li>With username and password credentials of an admin user associated
+with the application’s organization</li>
+</ul>
+
+<p>Using your client ID and client secret values (obtained from the
+Application Settings section of the developer portal), you can connect
+to the following URL (substituting the correct values for
+&lt;org-name&gt;,&lt;app-name&gt;, &lt;client_id&gt;, and &lt;client_secret&gt;):</p>
+
+<pre><code>https://api.usergrid.com/&lt;org-name&gt;/&lt;app-name&gt;/token?grant_type=client_credentials&amp;client_id=&lt;client_id&gt;&amp;client_secret=&lt;client_secret&gt;
+</code></pre>
+
+<p>The results show the access token needed to make subsequent API requests
+on behalf of the application:</p>
+
+<pre><code>{
+  "access_token": "F8zeMOlcEeCUBwBQVsAACA:YXA6AAABMq0d4Mep_UgbZA0-sOJRe5yWlkq7JrDCkA",
+  "expires_in": 3600,
+  "application": {
+    "name": "test-app",
+    "id": "17ccde30-e95c-11e0-9407-005056c00008"
+  }
+}
+</code></pre>
+
+<h2 id="application-users">Application users</h2>
+
+<p><em>Application Users</em> are members of the "users" collection within an
+application. They are the actual users of an app and their data is
+stored separately from any other app in App services.</p>
+
+<p>Application users can authenticate with either basic username/password
+credentials or OAuth client ID and client secret credentials. When
+authenticated, these users can access App services entities depending on
+their assigned permissions, their roles, and the permissions assigned to
+those roles.</p>
+
+<p>Using the username and password values specified when the application
+user was created, you can connect to the following URL (substituting the
+correct values for &lt;org-name&gt;,&lt;app-name&gt;, &lt;username&gt;, and
+&lt;password&gt;):</p>
+
+<pre><code>https://api.usergrid.com/management/&lt;org-name&gt;/&lt;app-name&gt;/token?grant_type=password&amp;username=&lt;username&gt;&amp;password=&lt;password&gt;
+</code></pre>
+
+<p>The results show the access token needed to make subsequent API requests
+on behalf of the application user:</p>
+
+<pre><code>{
+  "access_token": "5wuGd-lcEeCUBwBQVsAACA:F8zeMOlcEeCUBwBQVsAACA:YXU6AAABMq0hdy4Lh0ewmmnOWOR-DaepCrpWx9oPmw",
+  "expires_in": 3600,
+  "user": {
+    "uuid": "e70b8677-e95c-11e0-9407-005056c00008",
+    "type": "user",
+    "username": "edanuff",
+    "email": "ed@anuff.com",
+    "activated": true,
+    "created": 1317164604367013,
+    "modified": 1317164604367013
+  }
+}
+</code></pre>
+
+<h2 id="using-an-access-token">Using an access token</h2>
+
+<p>When you obtain an access token, you must provide it with every
+subsequent API call that you make. There are two ways to provide your
+access token.</p>
+
+<ul>
+  <li>
+    <p>You can add the token to the API querystring:\
+\</p>
+
+    <pre><code>https://api.usergrid.com/&lt;org-name&gt;/&lt;app-name&gt;/users?access_token=&lt;access_token&gt;
+</code></pre>
+  </li>
+  <li>
+    <p>You can include the token in an HTTP authorization header:\
+\</p>
+
+    <pre><code>Authorization: Bearer &lt;access_token&gt;
+</code></pre>
+  </li>
+</ul>
+
+<p><strong>Note:</strong> The App services documentation assumes you are providing a
+valid access token with every API call whether or not it is shown
+explicitly in the examples. Unless the documentation specifically says
+that you can access an API endpoint without an access token, you should
+assume that you must provide it.</p>
+
+<h2 id="safe-mobile-access">Safe mobile access</h2>
+
+<p>For mobile access, it is recommended that you connect as an application
+user with configured access control policies. Mobile applications are
+inherently untrusted because they can be easily examined and even
+decompiled.</p>
+
+<p>Any credentials stored in a mobile app should be considered secure only
+to the level of the application user. This means that if you don’t want
+the user to be able to access or delete data in your App services
+application, you need to make sure that you don’t enable that capability
+via roles or permissions. Because most web applications talk to the
+database using some elevated level of permissions, such as root, it’s
+generally a good idea for mobile applications to connect with a more
+restricted set of permissions. For more information, see <a href="/managing-access-defining-permission-rules">Managing
+access by defining permission
+rules</a>.</p>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

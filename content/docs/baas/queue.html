@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Easemob推送 | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Easemob推送
+    </h1>
+    <p>
+      Easemob推送, 在1秒内推送上万条数据, 并且支持tag等多维度推送
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main"><h2 id="section">通用的查询条件</h2>
+
+<p>当执行GET的时候, 可以指定的查询参数</p>
+
+<ul>
+  <li>
+    <p>filter</p>
+
+    <p>一个查询可以有多个filter, 例如 <code>/:org/:app/users?filter="name='todd'"&amp;filter="id&gt;=10"&amp;filter="id &lt;= 20"</code></p>
+  </li>
+</ul>
+
+<h2 id="queue">queue</h2>
+
+<h3 id="post-orgappqueuesqueuename-id1">POST /:org/:app/queues/:queue_name {"id":1}</h3>
+
+<p>note: post的时候必须的有data, 否则会报错, 而data可以是任何东西, 上面的{"id":1} 仅仅是示例, 没必要有id属性</p>
+
+<p>note2: queue是可以嵌套的, 也就是支持这样的语法</p>
+
+<p>/:org/:app/queues/:queue_name1/:queue_name2/:queue_name3</p>
+
+<p>并且, 并不要求:queue_name1在:queue_name2之前被创建好</p>
+
+<h3 id="get-orgappqueuesqueuename">GET /:org/:app/queues/:queue_name</h3>
+
+<p>返回结果类似 </p>
+
+<pre><code>{
+  "path": "/test4",
+  "queue": "9ecae721-b2c9-3208-924c-d03908e75294",
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": 1368037837063,
+      "uuid": "60ade170-b80d-11e2-9685-f375fc8b3371"
+    }
+  ],
+  "last": "60ade170-b80d-11e2-9685-f375fc8b3371",
+  "consumer": "9ecae721-b2c9-3208-924c-d03908e75294"
+}
+</code></pre>
+
+<p>从queue中取消息的时候, 消息是按照先进先出的顺序排列的, 并且, 如果一个消息被从queue中取出了, 那么就会被从queue中删除掉, 也就是一个消息只能被取出一次.</p>
+
+<p>查询参数:</p>
+
+<ul>
+  <li>limit – 限制每次取出的message数量</li>
+  <li>start</li>
+  <li>consumer – 上面说了, 当一个消息被取出的时候, 这个消息会从queue中被删除, 但是如果指定了consumer的话, 那么这个消息会一直留在queue中, 并且可以一直被这个consumer获取</li>
+  <li>last</li>
+  <li>time</li>
+  <li>
+    <p>pos – 可选值: start, end, last, consumer</p>
+
+    <ul>
+      <li>start </li>
+    </ul>
+  </li>
+  <li>update</li>
+  <li>synchronized</li>
+  <li>timeout</li>
+  <li>
+    <p>filter</p>
+
+    <p>任何查询都可以</p>
+  </li>
+</ul>
+
+<h3 id="get-orgappqueuesqueuenameproperties">GET /:org/:app/queues/:queue_name/properties</h3>
+
+<p>可以用来获取这个queue的基本信息, 返回内容如下:</p>
+
+<pre><code>/queues/test5/properties
+ 
+{
+  "created": 1368039729095,
+  "modified": 1368039968979,
+  "newest": "57667230-b812-11e2-a98f-f19a8cce16b5",
+  "oldest": "c86b0d70-b811-11e2-ad74-fbcea2a0fc92"
+} 
+</code></pre>
+
+<p>需要注意的是, 在执行这个的时候, 需要确认:queue_name是存在的, 否则会报错</p>
+
+<h3 id="put-orgappqueuesqueuenameproperties">PUT /:org/:app/queues/:queue_name/properties</h3>
+
+<p>可以通过PUT的方法来给这个queue增加自定义的属性</p>
+
+<p>例如, 可以给它增加一个name的属性</p>
+
+<pre><code>put /queues/test5/properties {"name":"test5-queue"}
+</code></pre>
+
+<p>返回结果如下:</p>
+
+<pre><code>{
+  "name": "test5-queue",
+  "path": "/test5"
+}
+</code></pre>
+
+<p>再次执行GET的话, 就会得到</p>
+
+<pre><code>{
+  "created": 1368039729095,
+  "modified": 1368040489047,
+  "name": "test5-queue",
+  "newest": "57667230-b812-11e2-a98f-f19a8cce16b5",
+  "oldest": "c86b0d70-b811-11e2-ad74-fbcea2a0fc92",
+  "path": "/test5"
+}
+</code></pre>
+
+<h3 id="put-orgappqueuesqueuenamesubscriberssubscribername">PUT /:org/:app/queues/:queue_name/subscribers/:subscriber_name</h3>
+
+<p>一个queue可以有多个订阅者(这个订阅者其实也是一个queue), 这样, 当一个message被发送到这个queue的时候, 此message会自动的被发送到此queue的各个订阅者queue中</p>
+
+<p>使用这个PUT (或者POST也一样)可以为:queue_name增加一个订阅者</p>
+
+<p>或者也可以通过这样的方法为一个queue添加订阅者</p>
+
+<ul>
+  <li>put /:org/:app/queues/:queue_name/subscribers {"subscriber" : "s1"}     </li>
+  <li>put /:org/:app/queues/:queue_name/subscribers {"subscribers" : ["s1","s2","s3"]}  </li>
+</ul>
+
+<p>注意, 一个订阅者可以订阅多个queue, 这样发送到每个queue的消息都会被拷贝到这个订阅者的queue当中</p>
+
+<h3 id="get-orgappqueuesqueuenamesubscribers">GET /:org/:app/queues/:queue_name/subscribers</h3>
+
+<p>查看一个queue有那些订阅者</p>
+
+<h3 id="delete-orgappqueuesqueuenamesubscriberssubscribername">DELETE /:org/:app/queues/:queue_name/subscribers/:subscriber_name</h3>
+
+<p>取消订阅</p>
+
+<h3 id="get-orgappqueuesqueuenamesubscriptions">GET /:org/:app/queues/:queue_name/subscriptions</h3>
+
+<p>查看一个queue(这是一个订阅者queue)都订阅了哪些queue</p>
+
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

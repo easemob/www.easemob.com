@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Applications | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body>
+    <div id="content" class="bs-header">
+      <div class="container">
+        <h1>
+          Applications
+        </h1>
+        <p>
+          Easemob
+        </p>
+      </div>
+    </div>
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-12" role="main">
+          <h2 id="applications">Applications</h2>
+          
+          <p>You can create a new application in an organization through the <a href="/admin-portal">Admin
+          portal</a>. The Admin portal creates the new application by
+          issuing a post against the management endpoint (see the "Creating an
+          organization application" section in <a href="/organization">Organization</a> for
+          details). If you need to create an application programmatically in your
+          app, you can also use the API to do this. You can access application
+          entities using your app name or UUID, prefixed with the organization
+          name or UUID:</p>
+          
+          <table>
+            <tbody>
+              <tr>
+                <td><a href="http://api.usergrid.com/">https://api.usergrid.com</a>/{org_name</td>
+                <td>uuid}/{app_name</td>
+                <td>uuid}</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p>Most mobile apps never access the application entity directly. For
+          example you might have a server-side web app that accesses the
+          application entity for configuration purposes. If you want to access
+          your application entity programmatically, you can use the API.</p>
+          
+          <h3 id="application-properties">Application properties</h3>
+          
+          <p>The following are the system-defined properties for application
+          entities. You can create application-specific properties for an
+          application entity in addition to the system-defined properties. The
+          system-defined properties are reserved. You cannot use these names to
+          create other properties for an application entity. In addition the
+          applications name is reserved for the applications collection — you
+          can't use it to name another collection.</p>
+          
+          <p>The look-up properties for the entities of type application are uuid and
+          name, that is, you can use the uuid and name properties to reference an
+          application entity in an API call. However, you can search on a role
+          using any property of the application entity. See <a href="/queries-and-parameters">Queries and
+          parameters</a> for details on searching.</p>
+          
+          <p>Property                                Type      Description
+            ————————————— ——— ———————————————————————————
+            uuid                                    UUID      Application’s unique entity ID
+            type                                    string    "application"
+            created                                 long      <a href="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</a> of entity creation
+            modified                                long      <a href="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</a> of entity modification
+            name                                    string    Application name (mandatory)
+            title                                   string    Application title
+            description                             string    Application description
+            activated                               boolean   Whether application is activated
+            disabled                                boolean   Whether application is administratively disabled
+            allowOpenRegistration                   boolean   Whether application allows any user to register
+            registrationRequiresEmailConfirmation   boolean   Whether registration requires email confirmation
+            registrationRequiresAdminApproval       boolean   Whether registration requires admin approval
+            accesstokenttl                          long      Time to live value for an access token obtained within the application</p>
+          
+          <h3 id="set-properties">Set properties</h3>
+          
+          <p>The set properties for applications are listed in the table below.</p>
+          
+          <p>Set              Type     Description
+            —————- ——– —————————————————-
+            collections      string   Set of collections
+            rolenames        string   Set of roles assigned to an application
+            counters         string   Set of counters assigned to an application
+            oauthproviders   string   Set of OAuth providers for the application
+            credentials      string   Set of credentials required to run the application</p>
+          
+          <h3 id="collections">Collections</h3>
+          
+          <p>The collections for applications are listed in the table below.</p>
+          
+          <p>Collection      Type           Description
+            ————— ————– ———————————————————————————-
+            users           user           Collection of users
+            groups          group          Collection of groups
+            folders         folder         Collection of assets that represent folder-like objects
+            events          event          Collection of events posted by the application
+            assets          asset          Collection of assets that represent file-like objects
+            activities      activity       Collection of activity stream actions
+            devices         device         Collection of devices in the service
+            notifiers       notifier       Collection of notifiers used for push notifications
+            notifications   notification   Collection of push notifications that have been sent or are scheduled to be sent
+            receipts        receipt        Collection of receipts from push notifications that were sent</p>
+          
+        </div>
+      </div>
+    </div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

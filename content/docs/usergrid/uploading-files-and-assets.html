@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Uploading files and assets | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Uploading files and assets
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h1 id="uploading-files-and-assets">Uploading files and assets</h1>
+
+<p><strong>Beta Feature</strong>\
+ Please note that this is currently a beta feature. As a result, some
+functionality may not work as expected.</p>
+
+<p>Using Apache Usergrid APIs, you can store and retrieve files and assets
+that hold data objects such as images, video, and audio content.</p>
+
+<p>Apache Usergrid manages these objects as <a href="/assets">Assets</a> entities.
+Optionally, you can use <a href="/folder">Folder</a> entities to organize related
+assets.</p>
+
+<p><strong>Note:</strong> All binary objects are managed as assets. However, an asset
+does not have to be used for a binary object. For example, assets can be
+used to model a file system.</p>
+
+<h2 id="creating-a-folder-to-hold-assets">Creating a folder to hold assets</h2>
+
+<p>Suppose you have some images that you want to store. Suppose too that
+you want to organize your images in folders. To create a folder, you
+issue a POST request to the folders endpoint. The general format of the
+request is:</p>
+
+<pre><code>POST /{org-uuid}/{app-uuid}/folders {request body}
+</code></pre>
+
+<p>The request body must specify the name of the folder, the UUID of the
+owner of the folder, as well as the relative path to the folder.</p>
+
+<p>Here’s how you could create a folder named myfirstfolder to hold some of
+the images:</p>
+
+<pre><code>POST https://api.usergrid.com/my-org/my-app/folders {"name": "myfirstfolder","owner": "7d1aa429-e978-11e0-8264-005056c00008", "path": "/myfolders/folder1"}
+</code></pre>
+
+<p><strong>Note:</strong> Although not shown in the API examples, you need to provide a
+valid access token with each API call. See <a href="/authenticating-users-and-application-clients">Authenticating users and
+application clients</a> for
+details. You also need to replace my-org with the name of your
+organization, my-app with the name of your application, and the UUID and
+path values as appropriate.</p>
+
+<p>The response to the API request should include the UUID of the created
+folder, for example:</p>
+
+<pre><code> "uuid": "6640a601-2ac6-11e2-92c3-02e81ae640dc"
+</code></pre>
+
+<p>You’ll need this UUID to link the folder to assets.</p>
+
+<h2 id="creating-an-assets-entity">Creating an assets entity</h2>
+
+<p>Assume that one of the images is named my-image.jpg. You can create an
+asset for the image by issuing a POST request to the assets endpoint.
+The general format of the request is:</p>
+
+<pre><code>POST /{org-uuid}/{app-uuid}/assets {request body}
+</code></pre>
+
+<p>The request body must specify the UUID of the name of the asset, the
+owner of the asset, as well as the relative path to the asset. For
+example, you can create an asset for the my-image.jpg image like this:</p>
+
+<pre><code>POST https://api.usergrid.com/my-org/my-app/assets {"name": "my-image.jpg","owner": "7d1aa429-e978-11e0-8264-005056c00008", "path": "/myassets/asset1"}
+</code></pre>
+
+<p>You can also specify a content-type property for the asset in the
+request body. For example, you can specify "content-type”:”image/jpeg”.
+That content type is then set as a property of the asset. It is also set
+(as specified) in the response header. Specifying the content-type is
+optional. Apache Usergrid can automatically detect the content type of the
+asset when the binary data for the asset is uploaded. It then sets this
+as the content-type property value on the asset.</p>
+
+<p>The response to the API request should include the UUID of the created
+asset, for example:</p>
+
+<pre><code>"uuid": "9501cda1-2d21-11e2-b4c6-02e81ac5a17b"
+</code></pre>
+
+<p>You’ll need this UUID when you upload or retrieve the image.</p>
+
+<h2 id="linking-a-folder-to-an-asset">Linking a folder to an asset</h2>
+
+<p>In order to access the asset for the image in the folder, you need to
+link the folder to the asset. You can do that by issuing a POST request
+in the following format:</p>
+
+<pre><code>POST /{org-uuid}/{app-uuid}/folders/{folder-uuid}/assets/{assets_id}
+</code></pre>
+
+<p>where {folder-uuid} is the UUID of the folder, and {assets-uuid} is the
+UUID of the assets entity.</p>
+
+<p>Here’s how you could link the folder and the asset you created for the
+my-image.jpg image:</p>
+
+<pre><code>POST https://api.usergrid.com/my-org/my-app/folders/6640a601-2ac6-11e2-92c3-02e81ae640dc/assets/9501cda1-2d21-11e2-b4c6-02e81ac5a17b 
+</code></pre>
+
+<p>In the response, you should see the assets entity for the image added to
+the folder:</p>
+
+<pre><code>{
+  "action": "post",
+  "application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+  "params": {},
+  "path": "/folders/6640a601-2ac6-11e2-92c3-02e81ae640dc/assets",
+  "uri": "https://api.usergrid.com/my-org/my-app/folders/6640a601-2ac6-11e2-92c3-02e81ae640dc/assets",
+  "entities": [
+    {
+      "uuid": "9501cda1-2d21-11e2-b4c6-02e81ac5a17b",
+      "type": "asset",
+      "name": "my-image.jpg",
+      "created": 1352763303163,
+      "modified": 1352763303163,
+      "metadata": {
+        "path": "/folders/6640a601-2ac6-11e2-92c3-02e81ae640dc/assets/9501cda1-2d21-11e2-b4c6-02e81ac5a17b"
+      },
+      "owner": "5c0c1789-d503-11e1-b36a-12313b01d5c1",
+      "path": "/myassets/asset1"
+    }
+  ],
+  "timestamp": 1352830448045,
+  "duration": 54,
+  "organization": "my-org”,
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<p>You can also request a list of the linked contents of the folder like
+this:</p>
+
+<pre><code>GET https://api.usergrid.com/my-org/my-app/folders/6640a601-2ac6-11e2-92c3-02e81ae640dc/assets
+</code></pre>
+
+<p>The response should look something like this:</p>
+
+<pre><code>{
+  "action": "get",
+  "application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+  "params": {
+    "_": [
+      "1352830364891"
+    ]
+  },
+  "path": "/folders/6640a601-2ac6-11e2-92c3-02e81ae640dc/assets",
+  "uri": "https://api.usergrid.com/my-org/my-app/folders/6640a601-2ac6-11e2-92c3-02e81ae640dc/assets",
+  "entities": [
+    {
+      "uuid": "7bf47435-2ac8-11e2-b4c6-02e81ac5a17b",
+      "type": "asset",
+      "name": "my-image.jpg",
+      "created": 1352505133598,
+      "modified": 1352507245108,
+      "checksum": "8e0cd3866ee20746c99e9a9825f38ad8",
+      "content-length": 11853,
+      "content-type": "image/jpeg",
+      "etag": "\"8e0cd3866ee20746c99e9a9825f38ad8\"",
+      "metadata": {
+        "connecting": {
+          "assets": "/folders/6640a601-2ac6-11e2-92c3-02e81ae640dc/assets/7bf47435-2ac8-11e2-b4c6-02e81ac5a17b/connecting/assets"
+        },
+        "connection": "assets",
+        "path": "/folders/6640a601-2ac6-11e2-92c3-02e81ae640dc/assets/7bf47435-2ac8-11e2-b4c6-02e81ac5a17b"
+      },
+      "owner": "5c0c1789-d503-11e1-b36a-12313b01d5c1",
+      "path": "my-image"
+    }
+  ],
+  "timestamp": 1352830363797,
+  "duration": 57,
+  "organization": "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="retrieving-an-asset">Retrieving an asset</h2>
+
+<p>You can retrieve an asset by its UUID. The general form of the request
+is:</p>
+
+<pre><code>GET /{org-uuid}/{app-uuid}/assets/{asset-uuid}
+</code></pre>
+
+<p>For example, to retrieve the asset for the my-image.jpg image, you make
+a request like this:</p>
+
+<pre><code>GET https://api.usergrid.com/my-org/my-app/assets/9501cda1-2d21-11e2-b4c6-02e81ac5a17b
+</code></pre>
+
+<p>The response should look something like this:</p>
+
+<pre><code>{
+  "action": "get",
+  "application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+  "params": {
+    "_": [
+      "1352833055831"
+    ]
+  },
+  "path": "/assets",
+  "uri": "https://api.usergrid.com/my-org/my-app/assets",
+  "entities": [
+    {
+      "uuid": "9501cda1-2d21-11e2-b4c6-02e81ac5a17b",
+      "type": "asset",
+      "name": "edhead3.jpg",
+      "created": 1352763303163,
+      "modified": 1352763303163,
+      "metadata": {
+        "connecting": {
+          "assets": "/assets/9501cda1-2d21-11e2-b4c6-02e81ac5a17b/connecting/assets"
+        },
+        "path": "/assets/9501cda1-2d21-11e2-b4c6-02e81ac5a17b"
+      },
+      "owner": "5c0c1789-d503-11e1-b36a-12313b01d5c1",
+      "path": "/myassets/asset1"
+    }
+  ],
+  "timestamp": 1352833055408,
+  "duration": 17,
+  "organization": "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="uploading-and-retrieving-binary-data-for-an-asset">Uploading and retrieving binary data for an asset</h2>
+
+<p>So far the focus has been on assets entities, which App services uses to
+manage binary objects such as images. But what about the data for those
+objects? You can use Apache Usergrid APIs to upload the data for a binary
+object and retrieve the data.</p>
+
+<p><strong>Note:</strong> The data for an asset is stored separately from the entity
+itself.</p>
+
+<p>To upload data for an asset, you issue a POST request to the endpoint
+for the asset’s data. The general form of the request is:</p>
+
+<pre><code>POST /{org-uuid}/{app-uuid}/assets/{asset-uuid}/data {binary-data}
+</code></pre>
+
+<p>where {binary-data} is the binary data for the asset.</p>
+
+<p>For example, you can upload the binary data for the my-image.jpg image
+asset like this:</p>
+
+<pre><code>POST https://api.usergrid.com/my-org/my-app/assets/9501cda1-2d21-11e2-b4c6-02e81ac5a17b/data {binary data}
+</code></pre>
+
+<p>where {binary-data} is the binary data for the image.</p>
+
+<p>In cURL format, the upload request would look something like this:</p>
+
+<pre><code>POST  --data-binary "@src/resources/my-image.jpg" -H
+"Content-Type: application/octet-stream"
+‘https://api.usergrid.com/my-org/my-app/assets/9501cda1-2d21-11e2-b4c6-02e81ac5a17b/data’
+</code></pre>
+
+<p>In the cURL example, the binary data is in a file whose relative path is
+src/resources/my-image.jpg.</p>
+
+<p><strong>Note:</strong> Currently, a 5 MB limitation exists for the size of the
+uploaded binary data. This limitation is temporary and the allowable
+size of a data upload should increase soon.</p>
+
+<p>To retrieve the data, issue a GET request to the same endpoint, for
+example:</p>
+
+<pre><code>GET https://api.usergrid.com/my-org/my-app/assets/9501cda1-2d21-11e2-b4c6-02e81ac5a17b/data
+</code></pre>
+
+<p>In response, you’ll get the binary data for the asset.</p>
+
+<h2 id="updating-the-binary-data-for-an-asset">Updating the binary data for an asset</h2>
+
+<p>Suppose, you want to update the my-image.jpg image. You can do it by
+replacing the binary data for the asset through a PUT request. Here’s an
+example:</p>
+
+<pre><code>PUT https://api.usergrid.com/my-org/my-app/assets/9501cda1-2d21-11e2-b4c6-02e81ac5a17b/data {binary-data}
+</code></pre>
+
+<p>where {binary-data} is the updated binary data for the image.</p>
+
+<p>In cURL format, the update request would look something like this:</p>
+
+<pre><code>PUT  --data-binary "@src/resources/my-image2.jpg" -H
+"Content-Type: application/octet-stream"
+‘https://api.usergrid.com/my-org/my-app/assets/9501cda1-2d21-11e2-b4c6-02e81ac5a17b/data’
+</code></pre>
+
+<p>In the cURL example, the updated binary data is in a file whose relative
+path is src/resources/my-image2.jpg.</p>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

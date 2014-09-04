@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Admin user | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Admin user
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h1 id="admin-user">Admin user</h1>
+
+<p><a href="/docs/usergrid/content/management-resources">See all management
+resources</a><a href="/docs/usergrid/content/management-resources"><img src="/docs/sites/docs/files/learnmore%20arrow_0.png" alt="" /></a></p>
+
+<p>An admin user has full access to perform any operation on all
+organization accounts of which the admin user is a member. Using the App
+services API, you can create, update, or retrieve an admin user. You can
+also set or reset an admin user's password, activite or reactivate an
+admin user, and get an admin user's activity feed.</p>
+
+<p>In addition, you can add,  retrieve, or remove an admin user from an
+organization. For information on these organization-related operations,
+see <a href="/organization">Organization</a>.</p>
+
+<p><strong>Note:</strong> Although not shown in the API examples below, you need to
+provide a valid access token with each API call. See <a href="/authenticating-users-and-application-clients">Authenticating
+users and application
+clients</a> for details.</p>
+
+<h2 id="creating-an-admin-user">Creating an admin user</h2>
+
+<p>Use the POST method to create an admin user.</p>
+
+<h3 id="request-uri">Request URI</h3>
+
+<p>POST /management/organizations/{org}/users {request body}</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| request body                         | One or more sets of user properties, |
+|                                      | of which username is mandatory and   |
+|                                      | must be unique:                      |
+|                                      |                                      |
+|                                      |     {                                |
+|                                      |       "username" : "jim.admin",      |
+|                                      |       "email" : "jim.admin@gmail.com |
+|                                      | ",                                   |
+|                                      |       "name" : "Jim Admin",          |
+|                                      |       "password" : "test12345"       |
+|                                      |     }                                |
++————————————–+————————————–+</p>
+
+<p> </p>
+
+<h3 id="example---request">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_create_admin_user">cURL</a></li>
+  <li><a href="#javascript_create_admin_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_create_admin_user">Ruby</a></li>
+  <li><a href="#nodejs_create_admin_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X -i POST "https://api.usergrid.com/management/organizations/my-org/users" -d '{"username":"jim.admin","name":"Jim Admin","email":"jim.admin@gmail.com","password":"test12345"}'
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/management/organizations/my-org/'
+result = mgmt.create_user username: 'jim.admin', name: 'Jim Admin', email: 'jim.admin@gmail.com', password: 'test12345'
+jim_admin = result.entity
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'management/organizations/my-org/users',
+    body:{ username:'jim.admin', name:'Jim Admin', email:'jim.admin@gmail.com',  
+    password:'test12345' }
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response">Example - Response</h3>
+
+<pre><code>{
+  "action": "post",
+  "status": "ok",
+  "data":  {
+    "user":  {
+      "applicationId": "00000000-0000-0000-0000-000000000001",
+      "username": "jim.admin",
+      "name": "Jim Admin",
+      "email": "jim.admin@gmail.com",
+      "activated": true,
+      "disabled": false,
+      "uuid": "335b527f-cd0d-11e1-bef8-12331d1c5591",
+      "adminUser": true,
+      "displayEmailAddress": "jim.admin &lt;jim.admin@gmail.com&gt;",
+      "htmldisplayEmailAddress": "jim.admin &lt;a href="mailto:jim.admin@gmail.com"&gt;jinm.admin@gmail.com&lt;/a&gt;"
+    }
+  },
+  "timestamp": 1349390189106,
+  "duration": 11808
+}
+</code></pre>
+
+<h2 id="updating-an-admin-user">Updating an admin user</h2>
+
+<p>Use the PUT method to update an admin user.</p>
+
+<h3 id="request-uri-1">Request URI</h3>
+
+<p>PUT /management/organizations/{org}/users/{user|username|email|uuid}
+{request body}</p>
+
+<h3 id="parameters-1">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| string user|string username|string   | Admin username, name, email address, |
+| email|arg uuid                       | or UUID.                             |
++————————————–+————————————–+
+| request body                         | One or more sets of user properties: |
+|                                      |                                      |
+|                                      |     {                                |
+|                                      |       "city" : "San Francisco",      |
+|                                      |       "state" : "California"         |
+|                                      |     }                                |
++————————————–+————————————–+</p>
+
+<p> </p>
+
+<h3 id="example---request-1">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_update_admin_user">cURL</a></li>
+  <li><a href="#javascript_update_admin_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_update_admin_user">Ruby</a></li>
+  <li><a href="#nodejs_update_admin_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X -i PUT "https://api.usergrid.com/management/organizations/my-org/users/jim.admin" -d '{"city":"San Francisco","state":"California"}'
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/management/organizations/my-org/'
+jim_admin = mgmt['users/jim.admin'].entity
+jim_admin.city = 'San Francisco'
+jim_admin.state = 'California'
+jim_admin.save
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'PUT',
+    endpoint:'management/organizations/my-org/users/jim.admin',
+    body:{ email:'john.doe@mail.com', city:'San Francisco', state:'California' }
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — PUT failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response-1">Example - Response</h3>
+
+<pre><code>{
+  "action": "update user info",
+  "timestamp": 1349479321874,
+  "duration": 0
+}
+</code></pre>
+
+<h2 id="getting-an-admin-user">Getting an admin user</h2>
+
+<p>Use the GET method to retrieve details about an admin user.</p>
+
+<h3 id="request-uri-2">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>GET /management/organizations/{org}/users/{user</td>
+      <td>username</td>
+      <td>email</td>
+      <td>uuid}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="parameters-2">Parameters</h3>
+
+<p>Parameter                                           Description
+  ————————————————— ———————————————–
+  string user|string username|string email|arg uuid   Admin username, name, email address, or UUID.</p>
+
+<p> </p>
+
+<h3 id="example---request-2">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_admin_user">cURL</a></li>
+  <li><a href="#javascript_get_admin_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_admin_user">Ruby</a></li>
+  <li><a href="#nodejs_get_admin_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/organizations/my-org/users/jim.admin"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/management/organizations/my-org/'
+jim_admin = mgmt['users/jim.admin'].entity
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/organizations/my-org/users/jim.admin'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-2">Example - Response</h3>
+
+<pre><code>{
+  "action": "get admin user",
+  "status": "ok",
+  "data":  {
+    "username": "jim.admin",
+    "token": "YWMt4NqE8Q9GEeLYJhIxPSiO4AAAATo5fQfcG0cEd2h9nwmDmRorkNNrEeQyDOF",
+    "email": "edort1@gmail.com",
+    "organizations":  {
+      "jim.admin":  {
+        "users":  {
+          "jim.admin":  {
+            "applicationId": "00000000-0000-0000-0000-000000000001",
+            "username": "jim.admin",
+            "name": "Jim Admin",
+            "email": "jim.admin@gmail.com",
+            "activated": true,
+            "disabled": false,
+            "uuid": "328b526e-cd0c-11e1-bcf8-12424d1c4491",
+            "adminUser": true,
+            "displayEmailAddress": "jim.admin &lt;jim.admin@gmail.com&gt;",
+            "htmldisplayEmailAddress": "jim.admin &lt;&lt;a href="mailto:jim.admin@gmail.com"&gt;jim.admin@gmail.com&gt;"
+    },
+    ...
+    "adminUser": true,
+    "activated": true,
+    "name": "edort1",
+    "applicationId": "00000000-0000-0000-0000-000000000001",
+    "uuid": "328b526e-cd0c-11e1-bcf8-12424d1c4491",
+    "htmldisplayEmailAddress": "jim.admin &lt;&lt;a href="mailto:jim.admin@gmail.com"&gt;jim.admin@gmail.com&gt;&gt;",
+    "displayEmailAddress": "jim.admin &lt;jim.admin@gmail.com&gt;",
+    "disabled": false
+  },
+  "timestamp": 1349480786906,
+</code></pre>
+
+<h2 id="setting-an-admin-users-password">Setting an admin user's password</h2>
+
+<p>Use the PUT method to update an admin user's password.</p>
+
+<h3 id="request-uri-3">Request URI</h3>
+
+<p>PUT
+/management/organizations/{org}/users/{user|username|email|uuid}/password
+{request body}</p>
+
+<h3 id="parameters-3">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| string user|string username|string   | Admin username, name, email address, |
+| email|arg uuid                       | or UUID.                             |
++————————————–+————————————–+
+| request body                         | The password property and value:     |
+|                                      |                                      |
+|                                      |     {                                |
+|                                      |       "password": "test123"          |
+|                                      |     }                                |
++————————————–+————————————–+</p>
+
+<p> </p>
+
+<h3 id="example---request-3">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_set_admin_pw">cURL</a></li>
+  <li><a href="#javascript_set_admin_pw">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_set_admin_pw">Ruby</a></li>
+  <li><a href="#nodejs_set_admin_pw">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X -i PUT "https://api.usergrid.com/management/organizations/my-org/users/jim.admin/password" -d '{"password":"test123"}'
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p> </p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/management/organizations/my-org'
+jim_admin = mgmt['users/jim.admin'].entity
+jim_admin.password = 'test123'
+jim_admin.save
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'PUT',
+    endpoint:'management/organizations/my-org/users/jim.admin',
+    body:{ password:'test123' }
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — PUT failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-3">Example - Response</h3>
+
+<pre><code>{
+  "action": "set user password",
+  "timestamp": 1349714010142,
+  "duration": 0
+}
+</code></pre>
+
+<h2 id="resetting-an-admin-users-password">Resetting an admin user's password</h2>
+
+<p>Resetting an admin user's password is a two step process. In the first
+step, you initiate the password reset. This returns a browser page. The
+page includes a field for the user to enter his or her email address,
+and a field to enter a response to a Captcha challenge. In the second
+step, you handle the user's responses from the form.</p>
+
+<h3 id="initiating-a-password-reset">Initiating a password reset</h3>
+
+<p>Use the GET method to initiate the password reset.</p>
+
+<h3 id="request-uri-4">Request URI</h3>
+
+<p>GET /management/organizations/{org}/users/resetpw</p>
+
+<h3 id="example---request-4">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_init_pw_reset">cURL</a></li>
+  <li><a href="#javascript_init_pw_reset">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_init_pw_reset">Ruby</a></li>
+  <li><a href="#nodejs_init_pw_reset">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/organizations/my-org/users/resetpw"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/management/organizations/my-org/'
+resetpw = mgmt['users/resetpw']
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/organizations/my-org/users/resetpw'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-4">Example - Response</h3>
+
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;
+    &lt;title&gt;Reset Password&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css" href="../../css/styles.css" /&gt;
+    &lt;script type="text/javascript"&gt;&gt;
+        var RecaptchaOptions = {
+            theme : 'clean'
+        };
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="dialog-area"&gt;
+        &lt;div class="dialog-form-message"&gt;Incorrect Captcha, try again...&lt;/div&gt;
+        &lt;form class="dialog-form" action="" method="post"&gt;
+            &lt;fieldset&gt;
+                &lt;p&gt;
+                    &lt;label for="email"&gt;Please type your &lt;strong&gt;email
+                            address&lt;/strong&gt; or &lt;strong&gt;username&lt;/strong&gt; below.&lt;/label&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;input class="text_field" id="email" name="email" type="text" /&gt;
+                &lt;/p&gt;
+                &lt;p id="human-proof"&gt;&lt;/p&gt;
+                &lt;script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=6LdSTNESAAAAAKHdVglHmMu86_EoYxsJjqQD1IpZ"&gt;&lt;/script&gt;
+
+                &lt;p class="buttons"&gt;
+                    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+                &lt;/p&gt;
+            &lt;/fieldset&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/pre&gt;
+</code></pre>
+
+<h3 id="completing-a-password-reset">Completing a password reset</h3>
+
+<p>Use the POST method to complete the password reset.</p>
+
+<h3 id="request-uri-5">Request URI</h3>
+
+<p>POST /management/organizations/{org}/users/resetpw {request body}</p>
+
+<h3 id="parameters-4">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| request body                         | Parameters and value for the Captcha |
+|                                      | challenge, the admin user's response |
+|                                      | to the Captcha challenge, and the    |
+|                                      | admin user's email address, for      |
+|                                      | example:                             |
+|                                      |                                      |
+|                                      |     {                                |
+|                                      |       "recaptcha_response_field" : " |
+|                                      | Atistophanes tseFia",                |
+|                                      |       "recaptcha_challenge_field" :  |
+|                                      | "Atistophanes tseFia",               |
+|                                      |       "email" : "jim.admin@gmail.com |
+|                                      | "                                    |
+|                                      |     }                                |
++————————————–+————————————–+</p>
+
+<p> </p>
+
+<h3 id="example---request-5">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_complete_pw_reset">cURL</a></li>
+  <li><a href="#javascript_complete_pw_reset">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_complete_pw_reset">Ruby</a></li>
+  <li><a href="#nodejs_complete_pw_reset">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X -i POST "https://api.usergrid.com/management/organizations/my-org/users/resetpw" -d '{"recaptcha_response_field":"Atistophanes tseFia","recaptcha_challenge_field":"Atistophanes tseFia","email":"jim.admin@gmail.com"}'
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p> </p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/management/organizations/my-org/'
+resetpw = mgmt['users/resetpw']
+resetpw { recaptcha_response_field: 'Atistophanes tseFia', recaptcha_challenge_field: 'Atistophanes tseFia', email: 'jim.admin@gmail.com' }
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'management/organizations/my-org/users/resetpw',
+    body:{ 
+       recaptcha_response_field:'Atistophanes tseFia', 
+       recaptcha_challenge_field:'Atistophanes tseFia', 
+       email:'jim.admin@gmail.com' 
+    }
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-5">Example - Response</h3>
+
+<pre><code>{
+  "action": "reset user password",
+  "timestamp": 13546154010321,
+  "duration": 0
+}
+</code></pre>
+
+<h2 id="activating-an-admin-user">Activating an admin user</h2>
+
+<p>Use the GET method to activate an admin user from a link provided in an
+email notification.</p>
+
+<h3 id="request-uri-6">Request URI</h3>
+
+<p>GET
+/management/organizations/{org}/users/{user|username|email|uuid}/activate?token={token}&amp;confirm={confirm_email}</p>
+
+<h3 id="parameters-5">Parameters</h3>
+
+<p>Parameter                                           Description
+  ————————————————— ————————————————-
+  string user|string username|string email|arg uuid   Admin username, name, email address, or UUID.
+  string token                                        Activation token (supplied via email).
+  boolean confirm_email                              Send confirmation email (false is the default).</p>
+
+<p> </p>
+
+<h3 id="example---request-6">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_activate_admin_user">cURL</a></li>
+  <li><a href="#javascript_activate_admin_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_activate_admin_user">Ruby</a></li>
+  <li><a href="#nodejs_activate_admin_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/organizations/my-org/users/jim.admin/activate?token=33dd0563-cd0c-11e1-bcf7-12313d1c4491"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/management/organizations/my-org/'
+mgmt['users/jim.admin/activate'].get params: { token: '33dd0563-cd0c-11e1-bcf7-12313d1c4491' }
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/organizations/my-org/users/jim.admin/activate',
+    qs:{token:'33dd0563-cd0c-11e1-bcf7-12313d1c4491'}
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-6">Example - Response</h3>
+
+<pre><code>{
+  "action": "activate user",
+  "timestamp": 1349718021324,
+  "duration": 0
+}
+</code></pre>
+
+<h2 id="reactivating-an-admin-user">Reactivating an admin user</h2>
+
+<p>Use the GET method to reactivate an admin user.</p>
+
+<h3 id="request-uri-7">Request URI</h3>
+
+<p>GET
+/management/organizations/{org}/users/{user|username|email|uuid}/reactivate</p>
+
+<h3 id="parameters-6">Parameters</h3>
+
+<p>Parameter                                           Description
+  ————————————————— ———————————————–
+  string user|string username|string email|arg uuid   Admin username, name, email address, or UUID.</p>
+
+<p> </p>
+
+<h3 id="example---request-7">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_reactivate_admin_user">cURL</a></li>
+  <li><a href="#javascript_reactivate_admin_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_reactivate_admin_user">Ruby</a></li>
+  <li><a href="#nodejs_reactivate_admin_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/organizations/my-org/users/jim.admin/reactivate"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/management/organizations/my-org/'
+mgmt['users/jim.admin/reactivate']
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/organizations/my-org/users/jim.admin/reactivate'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-7">Example - Response</h3>
+
+<pre><code>{
+  "action": "reactivate user",
+  "timestamp": 1349735217217,
+  "duration": 3541
+}
+</code></pre>
+
+<h2 id="getting-an-admin-users-activity-feed">Getting an admin user's activity feed</h2>
+
+<p>Use the GET method to retrieve an admin user's activity feed.</p>
+
+<h3 id="request-uri-8">Request URI</h3>
+
+<p>GET
+/management/organizations/{org}/users/{user|username|email|uuid}/feed</p>
+
+<h3 id="parameters-7">Parameters</h3>
+
+<p>Parameter                                           Description
+  ————————————————— ———————————————–
+  string user|string username|string email|arg uuid   Admin username, name, email address, or UUID.</p>
+
+<h3 id="example---request-8">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_user_feed">cURL</a></li>
+  <li><a href="#javascript_get_user_feed">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_user_feed">Ruby</a></li>
+  <li><a href="#nodejs_get_user_feed">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/organizations/my-org/users/jim.admin/feed"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/management/organizations/my-org/'
+mgmt['users/jim.admin/feed'].get
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/organizations/my-org/users/jim.admin/feed'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-8">Example - Response</h3>
+
+<pre><code>{
+  "action": "get admin user feed",
+  "status": "ok",
+ "entities":  [
+     {
+      "uuid": "cf3e981c-fe80-11e1-95c8-12331b144c65",
+      "type": "activity",
+      "created": 1347643370454,
+      "modified": 1347643370454,
+      "actor":  {
+        "displayName": "jim.admin",
+        "objectType": "person",
+        "uuid": "335b527f-cd0d-11e1-bef8-12331d1c5591",
+        "entityType": "user"
+      },
+      "category": "admin",
+      "metadata":  {
+        "cursor": "gGkAAQMAgGkABgE5xc3r1gCAdQAQz02YHP6QEeGVyBIxOxIsVgCAdQAQz4ZbYf6QEeGVyBIxOxIsVgA",
+        "path": "/users/327b527f-cd0c-11e1-bcf7-12313d1c4491/feed/cf4d981c-fe90-11e1-95c8-12313b122c56"
+      },
+    "object":  {
+    ...
+    },
+    "published": 1342198809251,
+            "title": "&lt;a mailto="jim.admingmail.com"&gt;jim.admin (jim.admin@gmail.com)&lt;/a&gt; created a new organization account named jim.admin",
+            "verb": "create"
+          }
+        ],
+  "timestamp": 1349735719320,
+</code></pre>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

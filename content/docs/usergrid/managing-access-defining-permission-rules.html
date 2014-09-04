@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Managing access by defining permission rules | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Managing access by defining permission rules
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h1 id="managing-access-by-defining-permission-rules">Managing access by defining permission rules</h1>
+
+<p>You control your app users' access to application resources by defining
+roles and permission rules. In your Apache Usergrid application, you assign
+application users a <em>role</em> that represents a set of permissions. Through
+these permissions, you allow users to perform certain operations (GET,
+POST, PUT, or DELETE) on specific resources. When the user submits a
+request via your app code to the Apache Usergrid API, the user’s
+permissions are checked against the resource paths that the user is
+trying to access. The request succeeds only if access to the resource is
+allowed by the permission rules you specify.</p>
+
+<p>You specify roles for unauthenticated users and those who authenticate
+as an Application User, as defined in <a href="/authenticating-users-and-application-clients">Authenticating users and
+application clients</a>.
+Roles are not applied for the other authentication levels: Application,
+Admin User, and Organization. Access at these levels can't be restricted
+by roles and permission rules. You should allow clients to authenticate
+at these levels sparingly and carefully.</p>
+
+<h2 id="roles-included-by-default">Roles included by default</h2>
+
+<p>When defining user access to your application's data, you create roles,
+specify permission rules for them, then associate users with the roles.
+Apache Usergrid includes three predefined roles when you create an
+application.</p>
+
+<p>The following table lists the three roles included by default. Note that
+two of these are in effect and applied from the time your application is
+created (until you change them). Apache Usergrid applies the following
+default behavior:</p>
+
+<ol>
+  <li>An unauthenticated user is automatically added to the Guest role so
+that they can register for a user account.</li>
+  <li>A user who has a user account and authenticates with it is
+automatically added to the Default role. <strong>Note that by default,
+this role is very permissive.</strong> Be sure to restrict it with specific
+permission rules before deploying to production.</li>
+</ol>
+
+<p>+————————-+————————-+————————-+
+| Role                    | Description             | Notes                   |
++=========================+=========================+=========================+
+| Guest                   | Default for             | Grants permission for a |
+|                         | unauthenticated users.  | user to create a user   |
+|                         | Includes a basic set of | account and for their   |
+|                         | permissions for         | device to be            |
+|                         | unregistered or         | registered. You can     |
+|                         | unauthenticated users.  | change permission rules |
+|                         | Users are automatically | based on your goals for |
+|                         | added to the Guest role | unregistered user       |
+|                         | before they’re          | access. This role is    |
+|                         | authenticated. After    | designed to provide     |
+|                         | they’re authenticated,  | access for people who   |
+|                         | users are automatically | haven't yet registered, |
+|                         | added to the Default    | and allow them to       |
+|                         | role.                   | register.               |
++————————-+————————-+————————-+
+| Default                 | Default for             | By default, <strong>grants    |
+|                         | authenticated users.    | full access for all     |
+|                         | Includes permissions    | resources in your       |
+|                         | for the set of          | application</strong>. A first  |
+|                         | operations you want an  | task in securing your   |
+|                         | authenticated user to   | application should be   |
+|                         | be able to perform.     | to restrict access by   |
+|                         | Users are added to this | redefining this role to |
+|                         | role after they're      | narrow the access it    |
+|                         | authenticated.          | provides. Remove the    |
+|                         |                         | default full permission |
+|                         |                         | rule and add            |
+|                         |                         | restrictive permission  |
+|                         |                         | rules for a production  |
+|                         |                         | deployment.             |
++————————-+————————-+————————-+
+| Administrator           | Unused until you        | Grants no access.       |
+|                         | associate it with users | Consider this a blank   |
+|                         | or groups. By default,  | slate. Add permission   |
+|                         | includes no permissions | rules and associate     |
+|                         | that provide access.    | this role with users    |
+|                         |                         | and groups as needed.   |
+|                         |                         |                         |
+|                         |                         | <strong>Note</strong>: The           |
+|                         |                         | Administrator role is   |
+|                         |                         | <em>not the same</em> as an    |
+|                         |                         | organization            |
+|                         |                         | administrator – that   |
+|                         |                         | is, someone who         |
+|                         |                         | authenticates as an     |
+|                         |                         | Admin User. The Admin   |
+|                         |                         | User is an implicit     |
+|                         |                         | user created when you   |
+|                         |                         | create an organization. |
+|                         |                         | After authenticating,   |
+|                         |                         | the Admin User has full |
+|                         |                         | access to all of the    |
+|                         |                         | administration features |
+|                         |                         | of the Apache Usergrid     |
+|                         |                         | API. By comparison, the |
+|                         |                         | Administrator role is   |
+|                         |                         | simply a role           |
+|                         |                         | (initially without      |
+|                         |                         | permissions) that can   |
+|                         |                         | be assigned to any      |
+|                         |                         | user.                   |
++————————-+————————-+————————-+</p>
+
+<h2 id="defining-your-own-roles-andpermissions">Defining your own roles and permissions</h2>
+
+<p>When preparing an application for production use, a good first step is
+to edit permission rules for the Default role. This role will be applied
+for every user who authenticates as an Application User.</p>
+
+<p>The admin portal is the best place to manage roles. While you can manage
+roles and permissions programmatically (see <a href="/role">Role</a>),
+security-related calls from a mobile app will pose a security risk.
+Consider doing so only from a server-side web application.</p>
+
+<p>For easy-to-read examples, this section expresses permission rules in
+this way:</p>
+
+<pre><code>&lt;operations&gt;:&lt;entity path pattern&gt;
+</code></pre>
+
+<ul>
+  <li>&lt;operations&gt; is a comma-delimited set of REST operations
+(GET, PUT, POST, DELETE) that are allowed for the specified entity
+path.</li>
+  <li>&lt;entity path pattern&gt; is a parameter evaluated using Apache Ant
+pattern matching
+(see <a href="http://ant.apache.org/manual/dirtasks.html#patterns">http://ant.apache.org/manual/dirtasks.html#patterns</a>).</li>
+</ul>
+
+<p>For example, in the Default role, first remove the permission rule that
+grants full access to all authenticated users. You could then begin by
+creating a rule that grants access for the authenticated user to makes
+changes only to data associated with their account. </p>
+
+<pre><code>GET,PUT,POST,DELETE:/users/me/**
+</code></pre>
+
+<p>Use the Admin Portal to make role and permission rule changes. On the
+left sidebar of the portal, click Users, then click Roles. This displays
+the roles defined for the application. To create a role, click the Add
+button (it looks like a person's silhouette). To delete a role, select
+the role you want to delete and click the Remove button (it looks like a
+trash can). To view the privileges in a role, click the role.</p>
+
+<p>Suppose you created a role named "customer". Here’s what the privileges
+for the role might look like:</p>
+
+<p><img src="/docs/sites/docs/files/worker_permissions.png" alt="" /></p>
+
+<p>Notice that specific privileges for operations are represented using
+checkboxes in the Permission Rules section. The path indicates the
+resource path for which the permissions apply. The permissions apply to
+all resources in the specified path directory and its subdirectories. As
+currently specified, the worker role has GET permission on the base
+directory path (/) and all resource paths below it (in other words, all
+resource paths).</p>
+
+<p>You can add a permission, by entering the entity path pattern in the
+Path field of the Add Permission Rule section, and checking the
+operation checkboxes (get, post, put, and delete) as appropriate. For
+example, the following adds permission to create a user:</p>
+
+<p><img src="/docs/sites/docs/files/add_permission.png" alt="" /></p>
+
+<p>Click Add, and the permission is added to the role.</p>
+
+<p><img src="/docs/sites/docs/files/pemission_list.png" alt="" /></p>
+
+<h2 id="permission-rule-examples">Permission rule examples</h2>
+
+<p>Here are some examples to illustrate how permissions are specified:</p>
+
+<ul>
+  <li>
+    <p>Authenticated user can change any data related to the:\</p>
+
+    <pre><code>POST:/users/*
+</code></pre>
+  </li>
+  <li>
+    <p>A permission the permits the current user to make any changes to
+resources associated with them:\</p>
+
+    <pre><code>GET,PUT,POST,DELETE:/users/me/**
+</code></pre>
+  </li>
+  <li>
+    <p>A permission that allows someone to look at a specific user:\</p>
+
+    <pre><code>GET:/users/john.doe
+</code></pre>
+  </li>
+  <li>
+    <p>A permission that allows the current user to see his activity feed:\</p>
+
+    <pre><code>GET:/users/${user}/feed/*
+</code></pre>
+
+    <p>The ${user} in the entity path refers to a variable that represents
+the current user’s UUID.</p>
+  </li>
+  <li>
+    <p>A permission allowing linked entities to be read:\</p>
+
+    <pre><code>GET:/users/${user}/**
+</code></pre>
+
+    <p>The /** in the entity path is a wildcard that matches everything
+under that path. This means that the full specification matches
+multiple resource paths, including, but not limited to, the
+following:</p>
+
+    <pre><code>/users/${user}/feed
+/users/${user}/feed/item1/a/b/c
+</code></pre>
+  </li>
+  <li>
+    <p>A permission that allows the current user to add himself or another
+user to a group:\</p>
+
+    <pre><code>POST:/groups/${user}/users/**
+</code></pre>
+  </li>
+</ul>
+
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

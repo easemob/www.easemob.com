@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Default Data Entities | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body>
+    <div id="content" class="bs-header">
+      <div class="container">
+        <h1>
+          Default Data Entities
+        </h1>
+        <p>
+          Easemob
+        </p>
+      </div>
+    </div>
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-12" role="main">
+          <h1 id="default-data-entities">Default Data Entities</h1>
+          
+          <p>This following describes all of the default data entities available in
+          Apache Usergrid, and their default properties. Each entity can be accessed
+          in a corresponding collection, named with the plural form of the entity
+          name (see <a href="/app-services-data-model-1">Apache Usergrid Data model</a> for more
+          information on how data is stored in Apache Usergrid).</p>
+          
+          <p>Properties marked 'required' must be set for the entity to be
+          successfully created. Properties marked 'optional' are reserved by the
+          API but not required. All other properties are automatically set and
+          returned by the API when the entity is created.</p>
+          
+          <p>For information on creating custom entities or custom properties for any
+          entity, see You do not have access to view this node.</p>
+          
+          <h2 id="activity">Activity</h2>
+          
+          <p>The <em>activity</em> entity represents a user activity, and is specifically
+          designed for use in data streams as defined by the <a href="http://activitystrea.ms/specs/json/1.0/">JSON Activity
+          Streams 1.0 specification</a>.</p>
+          
+          <p>For more information on using the activity entity, see
+          <a href="/activity">Activity</a>.</p>
+          
+          <h3 id="properties">Properties</h3>
+          
+          <p>The following are the system-defined properties for activity entities:</p>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity ID        |
+          +————————-+————————-+————————-+
+          | type                    | string                  | Type of entity, in this |
+          |                         |                         | case "activity"         |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | actor                   | ActivityObject          | <strong>Required.</strong> Entity    |
+          |                         |                         | that performed the      |
+          |                         |                         | 'action' of the         |
+          |                         |                         | activity (see <a href="http://a |
+          |                         |                         | ctivitystrea.ms/specs/j |
+          |                         |                         | son/1.0/">JSON     |
+          |                         |                         | Activity Streams 1.0    |
+          |                         |                         | specification</a>).             |
+          |                         |                         | By default, the UUID of |
+          |                         |                         | the user who performed  |
+          |                         |                         | the action is recorded  |
+          |                         |                         | as the value of the     |
+          |                         |                         | 'uuid' property of this |
+          |                         |                         | object.                 |
+          +————————-+————————-+————————-+
+          | verb                    | string                  | <strong>Required.</strong> The       |
+          |                         |                         | action performed by the |
+          |                         |                         | user (for example,      |
+          |                         |                         | <em>post</em>)                 |
+          +————————-+————————-+————————-+
+          | published               | long                    | <strong>Required.</strong> <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC      |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the activity was        |
+          |                         |                         | published               |
+          +————————-+————————-+————————-+
+          | content                 | string                  | <em>Optional.</em> Description |
+          |                         |                         | of the activity         |
+          +————————-+————————-+————————-+
+          | icon                    | MediaLink               | <em>Optional.</em> Visual      |
+          |                         |                         | representation of a     |
+          |                         |                         | media link resource     |
+          |                         |                         | (see <a href="http://a |
+          |                         |                         | ctivitystrea.ms/specs/j |
+          |                         |                         | son/1.0/">JSON Activity     |
+          |                         |                         | Streams 1.0             |
+          |                         |                         | specification</a>)              |
+          +————————-+————————-+————————-+
+          | category                | string                  | <em>Optional.</em> Category    |
+          |                         |                         | used to organize        |
+          |                         |                         | activities              |
+          +————————-+————————-+————————-+
+          | verb                    | string                  | <em>Optional.</em> Action that |
+          |                         |                         | the actor performs (for |
+          |                         |                         | example, <em>post</em>)        |
+          +————————-+————————-+————————-+
+          | published               | long                    | <em>Optional.</em> <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC        |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds when    |
+          |                         |                         | the activity was        |
+          |                         |                         | published               |
+          +————————-+————————-+————————-+
+          | object                  | ActivityObject          | <em>Optional.</em> Object on   |
+          |                         |                         | which the action is     |
+          |                         |                         | performed (see <a href="http://a |
+          |                         |                         | ctivitystrea.ms/specs/j |
+          |                         |                         | son/1.0/">JSON    |
+          |                         |                         | Activity Streams 1.0    |
+          |                         |                         | specification</a>)              |
+          +————————-+————————-+————————-+
+          | title                   | string                  | <em>Optional.</em> Title or    |
+          |                         |                         | headline for the        |
+          |                         |                         | activity                |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides the       |
+          |                         |                         | relative path to the    |
+          |                         |                         | activity entity, as     |
+          |                         |                         | well as additional data |
+          |                         |                         | entities associated     |
+          |                         |                         | with the activity. The  |
+          |                         |                         | following properties    |
+          |                         |                         | are included in         |
+          |                         |                         | metadata:               |
+          |                         |                         |                         |
+          |                         |                         | <strong>path</strong>: Path to       |
+          |                         |                         | retrieve the activity   |
+          |                         |                         | entity, including the   |
+          |                         |                         | UUID of the user entity |
+          |                         |                         | associated with the     |
+          |                         |                         | activity and the UUID   |
+          |                         |                         | of the activity entity  |
+          +————————-+————————-+————————-+</p>
+          
+          <h2 id="application">Application</h2>
+          
+          <p>The <em>application</em> entity is the base entity for accessing your
+          application data in Apache Usergrid. Aside from creating the application
+          entity, most apps using Apache Usergrid will never need to access the
+          application entity directly; however, you can add custom entities or
+          make changes to the default properties of the entity for configuration
+          purposes via the Apache Usergrid.</p>
+          
+          <p>For more information on creating and configuring applications in App
+          Services, see <a href="/creating-new-application-admin-console">Creating a New Application with the Admin
+          Console</a>.</p>
+          
+          <h3 id="properties-1">Properties</h3>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity ID        |
+          +————————-+————————-+————————-+
+          | type                    | String                  | Type of entity, in this |
+          |                         |                         | case "application"      |
+          +————————-+————————-+————————-+
+          | name                    | string                  | <em>Optional.</em> Application |
+          |                         |                         | name                    |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | accesstokenttl          | long                    | <em>Optional.</em> Time to     |
+          |                         |                         | live value for an       |
+          |                         |                         | access token obtained   |
+          |                         |                         | within the application  |
+          +————————-+————————-+————————-+
+          | organizationName        | string                  | Name of the             |
+          |                         |                         | organization the        |
+          |                         |                         | application belongs to  |
+          +————————-+————————-+————————-+
+          | applicationName         | string                  | Name of the application |
+          +————————-+————————-+————————-+
+          | title                   | string                  | <em>Optional.</em> Application |
+          |                         |                         | title                   |
+          +————————-+————————-+————————-+
+          | description             | string                  | <em>Optional.</em> Application |
+          |                         |                         | description             |
+          +————————-+————————-+————————-+
+          | activated               | boolean                 | <em>Optional.</em> Whether     |
+          |                         |                         | application is          |
+          |                         |                         | activated               |
+          +————————-+————————-+————————-+
+          | disabled                | boolean                 | <em>Optional.</em> Whether     |
+          |                         |                         | application is          |
+          |                         |                         | administratively        |
+          |                         |                         | disabled                |
+          +————————-+————————-+————————-+
+          | allowOpenRegistration   | boolean                 | <em>Optional.</em> Whether     |
+          |                         |                         | application allows any  |
+          |                         |                         | user to register        |
+          +————————-+————————-+————————-+
+          | registrationRequiresEma | boolean                 | <em>Optional.</em> Whether     |
+          | ilConfirmation          |                         | registration requires   |
+          |                         |                         | email confirmation      |
+          +————————-+————————-+————————-+
+          | registrationRequiresAdm | boolean                 | <em>Optional.</em> Whether     |
+          | inApproval              |                         | registration requires   |
+          |                         |                         | admin approval          |
+          +————————-+————————-+————————-+
+          | notify_admin_of_new\ | boolean                 | <em>Optional.</em> Whether     |
+          | _users                  |                         | application admins      |
+          |                         |                         | should be notified of   |
+          |                         |                         | new users               |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides a         |
+          |                         |                         | 'collections' object    |
+          |                         |                         | with the relative paths |
+          |                         |                         | to all entity           |
+          |                         |                         | collections associated  |
+          |                         |                         | with the application.   |
+          |                         |                         | The following           |
+          |                         |                         | collections are         |
+          |                         |                         | included in metadata by |
+          |                         |                         | default:                |
+          |                         |                         |                         |
+          |                         |                         | -   <strong>users</strong>: Path to  |
+          |                         |                         |     retrieve the /users |
+          |                         |                         |     collection          |
+          |                         |                         | -   <strong>groups</strong>: Path to |
+          |                         |                         |     retrieve the        |
+          |                         |                         |     /groups collection  |
+          |                         |                         | -   <strong>folders</strong>: Path   |
+          |                         |                         |     to retrieve the     |
+          |                         |                         |     /folders collection |
+          |                         |                         | -   <strong>events</strong>: Path to |
+          |                         |                         |     retrieve the        |
+          |                         |                         |     /events collection  |
+          |                         |                         | -   <strong>assets</strong>: Path to |
+          |                         |                         |     retrieve the        |
+          |                         |                         |     /assets collection  |
+          |                         |                         | -   <strong>activities</strong>:     |
+          |                         |                         |     Path to retrieve    |
+          |                         |                         |     the /activities     |
+          |                         |                         |     collection          |
+          |                         |                         | -   <strong>devices</strong>: Path   |
+          |                         |                         |     to retrieve the     |
+          |                         |                         |     /devices collection |
+          |                         |                         | -   <strong>notifiers</strong>: Path |
+          |                         |                         |     to retrieve the     |
+          |                         |                         |     /notifiers          |
+          |                         |                         |     collection          |
+          |                         |                         | -   <strong>notifications</strong>:  |
+          |                         |                         |     Path to retrieve    |
+          |                         |                         |     the /notifications  |
+          |                         |                         |     collection          |
+          |                         |                         | -   <strong>receipts</strong>: Path  |
+          |                         |                         |     to retrieve the     |
+          |                         |                         |     /receipts           |
+          |                         |                         |     collection          |
+          +————————-+————————-+————————-+</p>
+          
+          <h2 id="asset">Asset</h2>
+          
+          <p>The <em>asset</em> entity represents a binary data object stored in App
+          Services infrastructure, such as an image, video or audio file. The
+          asset entity does not contain the binary data, but rather contains
+          information about the data and points to the location where it can be
+          accessed in Apache Usergrid infrastructure.</p>
+          
+          <p>For more information on using the asset entity, see <a href="/assets">Assets</a>.</p>
+          
+          <h3 id="properties-2">Properties</h3>
+          
+          <p>The following are the system-defined properties for asset entities:</p>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity ID        |
+          +————————-+————————-+————————-+
+          | type                    | string                  | Type of entity, in this |
+          |                         |                         | case"asset"             |
+          +————————-+————————-+————————-+
+          | name                    | string                  | <em>Optional.</em> Asset name  |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | owner                   | UUID                    | <strong>Required.</strong> UUID of   |
+          |                         |                         | the user entity that    |
+          |                         |                         | owns the asset          |
+          +————————-+————————-+————————-+
+          | path                    | string                  | <strong>Required.</strong> Relative  |
+          |                         |                         | path to the asset       |
+          +————————-+————————-+————————-+
+          | content-type            | string                  | MIME media type that    |
+          |                         |                         | describes the asset     |
+          |                         |                         | (see <a href="http://www.iana. |
+          |                         |                         | org/assignments/media-t |
+          |                         |                         | ypes">media             |
+          |                         |                         | types</a>)                  |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides the       |
+          |                         |                         | relative path to the    |
+          |                         |                         | asset entity, as well   |
+          |                         |                         | as additional data      |
+          |                         |                         | entities associated     |
+          |                         |                         | with the asset. The     |
+          |                         |                         | following properties    |
+          |                         |                         | are included in         |
+          |                         |                         | metadata:               |
+          |                         |                         |                         |
+          |                         |                         | -   <strong>path</strong>: Path to   |
+          |                         |                         |     retrieve the asset  |
+          |                         |                         |     entity              |
+          +————————-+————————-+————————-+</p>
+          
+          <h2 id="device">Device</h2>
+          
+          <p>The <em>device</em> entity represents a unique device that is being used to
+          access your app. Device entities should be associated with a user
+          entity. The Apache Usergrid push notification feature requires the device
+          entity.</p>
+          
+          <p>For more information on using the device entity, see <a href="/device">Device</a>.</p>
+          
+          <h3 id="properties-3">Properties</h3>
+          
+          <p>The following are the system-defined properties for device entities:</p>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity ID        |
+          +————————-+————————-+————————-+
+          | type                    | string                  | Type of entity, in this |
+          |                         |                         | case "device"           |
+          +————————-+————————-+————————-+
+          | name                    | string                  | <em>Optional.</em> Device name |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides the       |
+          |                         |                         | relative path to the    |
+          |                         |                         | device entity, as well  |
+          |                         |                         | as additional data      |
+          |                         |                         | entities associated     |
+          |                         |                         | with the user. The      |
+          |                         |                         | following properties    |
+          |                         |                         | are included in         |
+          |                         |                         | metadata:               |
+          |                         |                         |                         |
+          |                         |                         | <strong>path</strong>: Path to       |
+          |                         |                         | retrieve the device     |
+          |                         |                         | entity, including the   |
+          |                         |                         | device UUID             |
+          |                         |                         |                         |
+          |                         |                         | <strong>collections</strong>: Nested |
+          |                         |                         | object that contains    |
+          |                         |                         | paths to data entity    |
+          |                         |                         | collections associated  |
+          |                         |                         | with the device.        |
+          |                         |                         |                         |
+          |                         |                         | -   receipts: Receipt   |
+          |                         |                         |     entities associated |
+          |                         |                         |     with the device     |
+          |                         |                         | -   users: User         |
+          |                         |                         |     entities associated |
+          |                         |                         |     with the device     |
+          |                         |                         |                         |
+          |                         |                         |                         |
+          +————————-+————————-+————————-+</p>
+          
+          <h2 id="event">Event</h2>
+          
+          <p>The <em>event</em> entity is used to log application data, primarily for
+          performance and error monitoring. Event entities can be also associated
+          with users and groups. The event mechanism in Apache Usergrid is optimized
+          to handle large numbers of events, so it is an ideal mechanism for
+          logging in your application.</p>
+          
+          <p>For more information on using the event entity, see <a href="/events-and-counters">Events and
+          counters</a>.</p>
+          
+          <h3 id="properties-4">Properties</h3>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity ID        |
+          +————————-+————————-+————————-+
+          | type                    | String                  | Type of entity, in this |
+          |                         |                         | case "event"            |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | timestamp               | long                    | <strong>Required.</strong> <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC      |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the application event   |
+          |                         |                         | occurred                |
+          +————————-+————————-+————————-+
+          | user                    | UUID                    | <em>Optional.</em> UUID of     |
+          |                         |                         | application user that   |
+          |                         |                         | posted the event        |
+          +————————-+————————-+————————-+
+          | group                   | UUID                    | <em>Optional.</em> UUID of     |
+          |                         |                         | application group that  |
+          |                         |                         | posted the event        |
+          +————————-+————————-+————————-+
+          | category                | string                  | <em>Optional.</em> Category    |
+          |                         |                         | used for organizing     |
+          |                         |                         | similar events          |
+          +————————-+————————-+————————-+
+          | counters                | map                     | <em>Optional.</em> Counter     |
+          |                         |                         | used for tracking       |
+          |                         |                         | number of similar       |
+          |                         |                         | events                  |
+          +————————-+————————-+————————-+
+          | message                 | string                  | <em>Optional.</em> Message     |
+          |                         |                         | describing event. Will  |
+          |                         |                         | be <em>null</em> if no message |
+          |                         |                         | is specified            |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides the       |
+          |                         |                         | relative path to the    |
+          |                         |                         | event entity, as well   |
+          |                         |                         | as additional data      |
+          |                         |                         | entities associated     |
+          |                         |                         | with the event. The     |
+          |                         |                         | following properties    |
+          |                         |                         | are included in         |
+          |                         |                         | metadata:               |
+          |                         |                         |                         |
+          |                         |                         | -   <strong>path</strong>: Path to   |
+          |                         |                         |     retrieve the event  |
+          |                         |                         |     entity              |
+          +————————-+————————-+————————-+</p>
+          
+          <h2 id="folder">Folder</h2>
+          
+          <p>The <em>folder</em> entity is used to emulate a file structure for the purpose
+          of organizing assets or custom entities.</p>
+          
+          <p>For more information on using the folder entity, see <a href="/folder">Folder</a>.</p>
+          
+          <h3 id="properties-5">Properties</h3>
+          
+          <p>The following are the system-defined properties for folder entities:</p>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity ID        |
+          +————————-+————————-+————————-+
+          | type                    | string                  | Type of entity, in this |
+          |                         |                         | case"folder"            |
+          +————————-+————————-+————————-+
+          | name                    | string                  | <em>Optional.</em> Folder name |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | owner                   | UUID                    | <strong>Required.</strong> UUID of   |
+          |                         |                         | the folder’s owner      |
+          +————————-+————————-+————————-+
+          | path                    | string                  | <strong>Required.</strong> Relative  |
+          |                         |                         | path to the folder      |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides the       |
+          |                         |                         | relative path to the    |
+          |                         |                         | folder entity, as well  |
+          |                         |                         | as additional data      |
+          |                         |                         | entities associated     |
+          |                         |                         | with the asset. The     |
+          |                         |                         | following properties    |
+          |                         |                         | are included in         |
+          |                         |                         | metadata:               |
+          |                         |                         |                         |
+          |                         |                         | -   <strong>path</strong>: Path to   |
+          |                         |                         |     retrieve the folder |
+          |                         |                         |     entity              |
+          +————————-+————————-+————————-+</p>
+          
+          <h2 id="group">Group</h2>
+          
+          <p>The <em>group</em> entity allows you to group users based on any criteria.
+          Multiple group entities can be nested to create sub-groups. Users can
+          also belong to multiple groups. Examples of uses for the group entity
+          include grouping users by interest or location.</p>
+          
+          <p>The look-up properties for the entities of type group are UUID and path,
+          that is, you can use the uuid or path property to reference a group in
+          an API call. However, you can search on a group using any property of
+          the group entity. See <a href="/queries-and-parameters">Queries and parameters</a>
+          for details on searching.</p>
+          
+          <p>For more information on using the group entity, see <a href="/group">Group</a>.</p>
+          
+          <h3 id="properties-6">Properties</h3>
+          
+          <p>The following are the system-defined properties for group entities</p>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity UUID      |
+          +————————-+————————-+————————-+
+          | type                    | string                  | Type of entity, in this |
+          |                         |                         | case “group”            |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | path                    | string                  | <strong>Required.</strong> Relative  |
+          |                         |                         | path where the group    |
+          |                         |                         | can be retrieved        |
+          +————————-+————————-+————————-+
+          | title                   | string                  | <em>Optional.</em> Display     |
+          |                         |                         | name for the group      |
+          |                         |                         | entity                  |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides the       |
+          |                         |                         | relative path to the    |
+          |                         |                         | group entity, as well   |
+          |                         |                         | as additional data      |
+          |                         |                         | entities associated     |
+          |                         |                         | with the group. The     |
+          |                         |                         | following properties    |
+          |                         |                         | are included in         |
+          |                         |                         | metadata:               |
+          |                         |                         |                         |
+          |                         |                         | <strong>path</strong>: Path to       |
+          |                         |                         | retrieve the group      |
+          |                         |                         | entity, including the   |
+          |                         |                         | group UUID              |
+          |                         |                         |                         |
+          |                         |                         | <strong>sets</strong>: Nested object |
+          |                         |                         | that contains the       |
+          |                         |                         | 'rolenames' and         |
+          |                         |                         | 'permissions'           |
+          |                         |                         | properties.             |
+          |                         |                         |                         |
+          |                         |                         | -   rolenames: Path to  |
+          |                         |                         |     retrieve a list of  |
+          |                         |                         |     roles associated    |
+          |                         |                         |     with the group.     |
+          |                         |                         | -   permissions: Path   |
+          |                         |                         |     to retrieve a list  |
+          |                         |                         |     of all permissions  |
+          |                         |                         |     directly associated |
+          |                         |                         |     with the group. If  |
+          |                         |                         |     the group is        |
+          |                         |                         |     associated with a   |
+          |                         |                         |     role, the list will |
+          |                         |                         |     not include         |
+          |                         |                         |     permissions         |
+          |                         |                         |     associated with the |
+          |                         |                         |     role entity.        |
+          |                         |                         |                         |
+          |                         |                         |                         |
+          |                         |                         |                         |
+          |                         |                         | <strong>collections</strong>: Nested |
+          |                         |                         | object that contains    |
+          |                         |                         | paths to data entity    |
+          |                         |                         | collections associated  |
+          |                         |                         | with the group.         |
+          |                         |                         |                         |
+          |                         |                         | -   activities:         |
+          |                         |                         |     Activity entities   |
+          |                         |                         |     associated with the |
+          |                         |                         |     group               |
+          |                         |                         | -   feed: A feed of all |
+          |                         |                         |     activities          |
+          |                         |                         |     published by users  |
+          |                         |                         |     associated with the |
+          |                         |                         |     group               |
+          |                         |                         | -   roles: Role         |
+          |                         |                         |     entities associated |
+          |                         |                         |     with the group      |
+          |                         |                         | -   users: User         |
+          |                         |                         |     entities associated |
+          |                         |                         |     with the group      |
+          |                         |                         |                         |
+          |                         |                         |                         |
+          +————————-+————————-+————————-+</p>
+          
+          <h2 id="notification">Notification</h2>
+          
+          <p>The <em>notification</em> entity represents a push notification, including
+          notification message and details. A notification entity is sent in
+          conjunction with a notifier entity to a notification service, such as
+          Apple Push Notification Service, to initiate a push notification.</p>
+          
+          <p>For more information on using the notification entity, see <a href="/create-manage-notifications">Create &amp;
+          Manage Notifications</a>.</p>
+          
+          <h3 id="properties-7">Properties</h3>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity ID        |
+          +————————-+————————-+————————-+
+          | type                    | string                  | Type of entity, in this |
+          |                         |                         | case “notification”     |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | payloads                | string                  | <strong>Required.</strong> The push  |
+          |                         |                         | notifications to be     |
+          |                         |                         | delivered, formatted as |
+          |                         |                         | key-value pairs of      |
+          |                         |                         | notifier entities and   |
+          |                         |                         | messages                |
+          |                         |                         | (&lt;notifier_name1&gt;:&lt; |
+          |                         |                         | message1&gt;,             |
+          |                         |                         | &lt;notifier_name2&gt;:&lt;m |
+          |                         |                         | essage2&gt;,              |
+          |                         |                         | …)                    |
+          +————————-+————————-+————————-+
+          | errorMessage            | string                  | Error message returned  |
+          |                         |                         | by the notification     |
+          |                         |                         | service (APNs or GCM)   |
+          |                         |                         | if the notification     |
+          |                         |                         | fails entirely          |
+          +————————-+————————-+————————-+
+          | scheduled               | bool                    | Whether the             |
+          |                         |                         | notification is         |
+          |                         |                         | currently scheduled for |
+          |                         |                         | delivery                |
+          +————————-+————————-+————————-+
+          | state                   | string                  | The current delivery    |
+          |                         |                         | status of the           |
+          |                         |                         | notification:           |
+          |                         |                         | "FINISHED", "SCHEDULED" |
+          |                         |                         | or "CANCELED".          |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides the       |
+          |                         |                         | relative path to the    |
+          |                         |                         | notification entity, as |
+          |                         |                         | well as additional data |
+          |                         |                         | entities associated     |
+          |                         |                         | with the notification.  |
+          |                         |                         | The following           |
+          |                         |                         | properties are included |
+          |                         |                         | in metadata:            |
+          |                         |                         |                         |
+          |                         |                         | <strong>path</strong>: Path to       |
+          |                         |                         | retrieve the            |
+          |                         |                         | notification object     |
+          |                         |                         |                         |
+          |                         |                         | <strong>collections</strong>: Nested |
+          |                         |                         | object that contains    |
+          |                         |                         | paths to data entity    |
+          |                         |                         | collections associated  |
+          |                         |                         | with the notification.  |
+          |                         |                         |                         |
+          |                         |                         | -   <strong>queue</strong>: Device   |
+          |                         |                         |     entities scheduled  |
+          |                         |                         |     to receive the push |
+          |                         |                         |     notification        |
+          |                         |                         | -   <strong>receipts</strong>":      |
+          |                         |                         |     Receipt entities    |
+          |                         |                         |     for delivery        |
+          |                         |                         |     attempts"           |
+          +————————-+————————-+————————-+</p>
+          
+          <h2 id="notifier">Notifier</h2>
+          
+          <p>The <em>notifier</em> entity contains the credentials necessary to securely
+          access push notification service providers, which in turn send your
+          notifications to targeted devices.</p>
+          
+          <p>For more information on using the notifier entity, see <a href="/create-notifiers">Create
+          Notifiers</a>.</p>
+          
+          <h3 id="properties-8">Properties</h3>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity ID        |
+          +————————-+————————-+————————-+
+          | type                    | string                  | Type of entity, in this |
+          |                         |                         | case “notifier”         |
+          +————————-+————————-+————————-+
+          | name                    | string                  | <em>Optional.</em> Notifier    |
+          |                         |                         | display name            |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | provider                | string                  | <strong>Required.</strong> Push      |
+          |                         |                         | notification provider:  |
+          |                         |                         | "apple" or "google"     |
+          +————————-+————————-+————————-+
+          | environment             | string                  | <strong>Required.</strong> The       |
+          |                         |                         | environment that        |
+          |                         |                         | corresponds to your     |
+          |                         |                         | app: "development" or   |
+          |                         |                         | "production"            |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides the       |
+          |                         |                         | relative path to the    |
+          |                         |                         | notifier entity         |
+          |                         |                         |                         |
+          |                         |                         | <strong>path</strong>: Path to       |
+          |                         |                         | retrieve the            |
+          |                         |                         | notification object     |
+          +————————-+————————-+————————-+</p>
+          
+          <h2 id="receipt">Receipt</h2>
+          
+          <p>The <em>receipt</em> entity is created after a push notification has been sent
+          using Apache Usergrid. The receipt is a record of an attempted push
+          notification, including if the notification was successful, and when it
+          was sent.</p>
+          
+          <p>For more information on the receipt entity, see <a href="/create-manage-notifications">Create &amp; Manage
+          Notifications</a>.</p>
+          
+          <h3 id="properties-9">Properties</h3>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity ID        |
+          +————————-+————————-+————————-+
+          | type                    | string                  | Type of entity, in this |
+          |                         |                         | case “receipt”          |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | payload                 | string                  | The push notification   |
+          |                         |                         | message that was        |
+          |                         |                         | specified in the        |
+          |                         |                         | 'payload' property of   |
+          |                         |                         | the notification entity |
+          |                         |                         | associated with the     |
+          |                         |                         | push notification.      |
+          +————————-+————————-+————————-+
+          | errorMessage            | string                  | Error message returned  |
+          |                         |                         | by the notification     |
+          |                         |                         | service (APNs or GCM)   |
+          |                         |                         | if delivery of the      |
+          |                         |                         | notification to a       |
+          |                         |                         | device fails            |
+          +————————-+————————-+————————-+
+          | errorCode               | String                  | Error code returned by  |
+          |                         |                         | the notification        |
+          |                         |                         | service, if any.        |
+          +————————-+————————-+————————-+
+          | sent                    | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds for     |
+          |                         |                         | when the notification   |
+          |                         |                         | was sent                |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides the       |
+          |                         |                         | relative path to the    |
+          |                         |                         | notifier entity         |
+          |                         |                         |                         |
+          |                         |                         | <strong>path</strong>: Path to       |
+          |                         |                         | retrieve the            |
+          |                         |                         | notification object     |
+          +————————-+————————-+————————-+</p>
+          
+          <h2 id="role">Role</h2>
+          
+          <p>The <em>role</em> entity is used to define standard permission sets that can be
+          assigned to user and groups entities. For example, you might create an
+          Administrator role to easily grant certain users full access to all app
+          features.</p>
+          
+          <p>For more information on using the role entity, see <a href="/role">Role</a>.</p>
+          
+          <h3 id="properties-10">Properties</h3>
+          
+          <p>The following are the system-defined properties for role entities:</p>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity ID        |
+          +————————-+————————-+————————-+
+          | type                    | string                  | Type of entity, in this |
+          |                         |                         | case "role"             |
+          +————————-+————————-+————————-+
+          | name                    | string                  | <em>Optional.</em> Unique name |
+          |                         |                         | that identifies the     |
+          |                         |                         | role                    |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | roleName                | string                  | Identical to the value  |
+          |                         |                         | of the 'name' property  |
+          |                         |                         | by default              |
+          +————————-+————————-+————————-+
+          | title                   | string                  | Identical to the value  |
+          |                         |                         | of the 'name' property  |
+          |                         |                         | by default              |
+          +————————-+————————-+————————-+
+          | inactivity              | string                  | The amount of time, in  |
+          |                         |                         | milliseconds, that a    |
+          |                         |                         | user or group           |
+          |                         |                         | associated with the     |
+          |                         |                         | role can be inactive    |
+          |                         |                         | before they lose the    |
+          |                         |                         | permissions associated  |
+          |                         |                         | with that role. By      |
+          |                         |                         | default, 'inactivity'   |
+          |                         |                         | is set to 0 so that the |
+          |                         |                         | user/group never loses  |
+          |                         |                         | the role.               |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides the       |
+          |                         |                         | relative path to the    |
+          |                         |                         | role entity, as well as |
+          |                         |                         | additional data         |
+          |                         |                         | entities associated     |
+          |                         |                         | with the role. The      |
+          |                         |                         | following properties    |
+          |                         |                         | are included in         |
+          |                         |                         | metadata:               |
+          |                         |                         |                         |
+          |                         |                         | <strong>path</strong>: Path to       |
+          |                         |                         | retrieve the role       |
+          |                         |                         | entity                  |
+          |                         |                         |                         |
+          |                         |                         | <strong>sets</strong>: Nested object |
+          |                         |                         | that contains the       |
+          |                         |                         | 'permissions' property. |
+          |                         |                         |                         |
+          |                         |                         | -   permissions: Path   |
+          |                         |                         |     to retrieve a list  |
+          |                         |                         |     of all permissions  |
+          |                         |                         |     associated with the |
+          |                         |                         |     role.               |
+          |                         |                         |                         |
+          |                         |                         |                         |
+          |                         |                         |                         |
+          |                         |                         | <strong>collections</strong>: Nested |
+          |                         |                         | object that contains    |
+          |                         |                         | paths to data entity    |
+          |                         |                         | collections associated  |
+          |                         |                         | with the role.          |
+          |                         |                         |                         |
+          |                         |                         | -   groups: Group       |
+          |                         |                         |     entities associated |
+          |                         |                         |     with the role       |
+          |                         |                         | -   users: User         |
+          |                         |                         |     entities associated |
+          |                         |                         |     with the role       |
+          |                         |                         |                         |
+          |                         |                         |                         |
+          +————————-+————————-+————————-+</p>
+          
+          <h2 id="user">User</h2>
+          
+          <p>The <em>user</em> entity represents a registered user of your app, and includes
+          optional properties for common user details, such as real name, email
+          address, and password.</p>
+          
+          <p>For more information on using the user entity, see <a href="/user">User</a>.</p>
+          
+          <h3 id="properties-11">Properties</h3>
+          
+          <p>The following are the system-defined properties for user entities:</p>
+          
+          <p>+————————-+————————-+————————-+
+          | Property                | Type                    | Description             |
+          +=========================+=========================+=========================+
+          | uuid                    | UUID                    | Unique entity ID        |
+          +————————-+————————-+————————-+
+          | type                    | string                  | Type of entity, in this |
+          |                         |                         | case “user”             |
+          +————————-+————————-+————————-+
+          | created                 | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was created  |
+          +————————-+————————-+————————-+
+          | modified                | long                    | <a href="http://en.wi |
+          |                         |                         | kipedia.org/wiki/Coordi |
+          |                         |                         | nated_Universal_Time">UTC                    |
+          |                         |                         | timestamp</a>   |
+          |                         |                         | in milliseconds of when |
+          |                         |                         | the entity was last     |
+          |                         |                         | modified                |
+          +————————-+————————-+————————-+
+          | username                | string                  | <strong>Required.</strong>Valid and  |
+          |                         |                         | unique username         |
+          +————————-+————————-+————————-+
+          | password                | string                  | <em>Optional.</em> User        |
+          |                         |                         | password                |
+          +————————-+————————-+————————-+
+          | name                    | string                  | <em>Optional.</em> <em>Optional.</em> |
+          |                         |                         | User display name       |
+          +————————-+————————-+————————-+
+          | email                   | string                  | <em>Optional.</em>User's email |
+          |                         |                         | address. Note that this |
+          |                         |                         | is a required field for |
+          |                         |                         | user entities created   |
+          |                         |                         | with the User           |
+          |                         |                         | Management tool in the  |
+          |                         |                         | Apache Usergrid console.   |
+          +————————-+————————-+————————-+
+          | firstname               | string                  | <em>Optional.</em> User first  |
+          |                         |                         | name                    |
+          +————————-+————————-+————————-+
+          | middlename              | string                  | <em>Optional.</em> User middle |
+          |                         |                         | name                    |
+          +————————-+————————-+————————-+
+          | lastname                | string                  | <em>Optional.</em> User last   |
+          |                         |                         | name                    |
+          +————————-+————————-+————————-+
+          | picture                 | string                  | <em>Optional.</em> URL where   |
+          |                         |                         | the user's profile      |
+          |                         |                         | picture can be          |
+          |                         |                         | retrieved               |
+          +————————-+————————-+————————-+
+          | activated               | boolean                 | Whether the user        |
+          |                         |                         | account is activated.   |
+          |                         |                         | Set to 'true' by        |
+          |                         |                         | default when the user   |
+          |                         |                         | is created.             |
+          +————————-+————————-+————————-+
+          | metadata                | object                  | A nested,               |
+          |                         |                         | JSON-formatted object   |
+          |                         |                         | that provides the       |
+          |                         |                         | relative path to the    |
+          |                         |                         | user entity, as well as |
+          |                         |                         | additional data         |
+          |                         |                         | entities associated     |
+          |                         |                         | with the user. The      |
+          |                         |                         | following properties    |
+          |                         |                         | are included in         |
+          |                         |                         | metadata:               |
+          |                         |                         |                         |
+          |                         |                         | <strong>path</strong>: Path to       |
+          |                         |                         | retrieve the user       |
+          |                         |                         | entity                  |
+          |                         |                         |                         |
+          |                         |                         | <strong>sets</strong>: Nested object |
+          |                         |                         | that contains the       |
+          |                         |                         | 'rolenames' and         |
+          |                         |                         | 'permissions'           |
+          |                         |                         | properties.             |
+          |                         |                         |                         |
+          |                         |                         | -   rolenames:          |
+          |                         |                         |     <em>Deprecated</em>. Use   |
+          |                         |                         |     <strong>/users/\/roles</strong> |
+          |                         |                         |     instead. Path to    |
+          |                         |                         |     retrieve a list of  |
+          |                         |                         |     roles associated    |
+          |                         |                         |     with the user.      |
+          |                         |                         | -   permissions: Path   |
+          |                         |                         |     to retrieve a list  |
+          |                         |                         |     of all permissions  |
+          |                         |                         |     directly associated |
+          |                         |                         |     with the user. If   |
+          |                         |                         |     the user is         |
+          |                         |                         |     associated with a   |
+          |                         |                         |     role or group, the  |
+          |                         |                         |     list will not       |
+          |                         |                         |     include permissions |
+          |                         |                         |     associated with     |
+          |                         |                         |     those entities.     |
+          |                         |                         |                         |
+          |                         |                         |                         |
+          |                         |                         |                         |
+          |                         |                         | <strong>collections</strong>: Nested |
+          |                         |                         | object that contains    |
+          |                         |                         | paths to data entity    |
+          |                         |                         | collections associated  |
+          |                         |                         | with the user.          |
+          |                         |                         |                         |
+          |                         |                         | -   activities:         |
+          |                         |                         |     Activity entities   |
+          |                         |                         |     associated with the |
+          |                         |                         |     user                |
+          |                         |                         | -   devices: Device     |
+          |                         |                         |     entities associated |
+          |                         |                         |     with the user       |
+          |                         |                         | -   feed: A feed of all |
+          |                         |                         |     activities          |
+          |                         |                         |     published by the    |
+          |                         |                         |     user                |
+          |                         |                         | -   groups: Group       |
+          |                         |                         |     entities associated |
+          |                         |                         |     with the user       |
+          |                         |                         | -   roles: Role         |
+          |                         |                         |     entities associated |
+          |                         |                         |     with the user       |
+          |                         |                         | -   following: Users    |
+          |                         |                         |     that the user is    |
+          |                         |                         |     following           |
+          |                         |                         | -   followers: Users    |
+          |                         |                         |     that are following  |
+          |                         |                         |     the user            |
+          |                         |                         |                         |
+          |                         |                         |                         |
+          +————————-+————————-+————————-+</p>
+          
+          
+        </div>
+      </div>
+    </div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

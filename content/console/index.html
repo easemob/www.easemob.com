@@ -1,0 +1,484 @@
+---
+title: 环信开发者中心
+---
+
+<!-- 邮箱提示 -->
+<script src="/assets/js/email.js"></script>
+ <style type="text/css">
+     .out_box{border:1px solid #ccc; background:#fff; font:12px/20px Tahoma;}
+     .list_box{border-bottom:1px solid #eee; padding:0 5px; cursor:pointer;}
+     .focus_box{background:#f0f3f9;}
+     .mark_box{color:#c00;}
+  </style>
+<!-- 邮箱提示 -->
+<style type="text/css">
+.login-layout {
+	background: none repeat scroll 0 0 #e3eaf0;
+}
+.login-layout .widget-box {
+	background-color: #ccc;
+	border-bottom: 0 none;
+	box-shadow: none;
+	overflow: hidden;
+	padding: 6px;
+	position: absolute;
+	transform: scale(0, 1) translate(-150px);
+	visibility: hidden;
+	width: 100%;
+}
+</style>
+
+<script type="text/javascript">
+	$(function(){
+		var browserVersion = getBrowserVersion();
+		if(browserVersion != '' && browserVersion < 10){
+			alert('系统检测到您的浏览器版本是IE10以下,为了不影响您的使用,建议先升级浏览器或更换其它浏览器!')
+		}
+		
+		//读取cookie
+		if($('#rememberme:checked').length>0){
+			$('#username').val($.cookie('tvs-cookies-userName'));
+			$('#password').val($.cookie('tvs-cookies-password'));
+		}else{
+            $('#username').val($.cookie('tvs-cookies-userName'));
+			$('#password').val($.cookie('tvs-cookies-password'));
+		}
+
+		$('#username').focus();
+		
+		// 官网注册链接
+		var QSTR = getQueryString('comeFrom');
+		if(QSTR == 'easemobHome'){
+			$('#btnRegist').trigger('click');
+		}
+		var token = $.cookie('access_token');
+		if(token != null && typeof(token)!='undefined'){
+			window.location.href = '/console/app_list';
+			return;
+		}
+		
+	});
+	
+	/**
+	 * 判断浏览器;
+	 * @return
+	 */
+	function getBrowser() {
+	    if(navigator.userAgent.indexOf("MSIE")>0) { 
+	         return "MSIE"; 
+	    } 
+	    if(isFirefox=navigator.userAgent.indexOf("Firefox")>0){ 
+	         return "Firefox"; 
+	    }  
+	    if(isChrome=navigator.userAgent.indexOf("Chrome")>0){ 
+	         return "Chrome"; 
+	    }
+	}
+ 
+	/**
+	 * 判断浏览器具体版本号
+	 * @return
+	 */
+	function getBrowserVersion() {
+	    if(navigator.userAgent.indexOf("MSIE 6.0") > 0 ) { 
+	         return "6"; 
+	    }
+	    if(navigator.userAgent.indexOf("MSIE 7.0") > 0 ) { 
+	         return "7"; 
+	    } 
+	   	if(navigator.userAgent.indexOf("MSIE 8.0") > 0 ) { 
+	         return "8"; 
+	    }
+	    if(navigator.userAgent.indexOf("MSIE 9.0") > 0 ) { 
+	         return "9"; 
+	    }
+	    if(navigator.userAgent.indexOf("MSIE 10.0") > 0 ) { 
+	         return "10"; 
+	    }
+	    if(navigator.userAgent.indexOf("MSIE 11.0") > 0 ) { 
+	         return "11"; 
+	    }
+	} 
+	
+	// 回车键登录
+	function keyLogin(){
+		if(!$('#login-box').hasClass('visible')){
+			return;	
+		}
+		if(getBrowser() == 'Firefox'){
+      //判断IE还是火狐浏览器;
+      $("html").die().live("keydown",function(event){     
+          if(event.keyCode==13){
+            //调用登陆方法;
+						$('#loginBtn').click();//调用登录按钮的登录事件
+						$('#loginBtn').attr('disable','true');
+          }     
+      });   
+		} else if(getBrowser() == 'MSIE' || getBrowser() == 'Chrome'){
+				if(event.keyCode==13){    
+        	//调用登陆方法;
+					$('#loginBtn').click();//调用登录按钮的登录事件
+      	}
+		}
+  	}
+	
+	function onBlurRegOrgNameCheck(){
+		$('#regOrgName').val($('#regOrgName').val().trim());
+		
+		var regOrgName = $('#regOrgName').val();
+		var regOrgNameRegex = /^(?!-)(?!.*?-$)[a-zA-Z0-9-]+$/;
+		if(regOrgName != '' && !regOrgNameRegex.test(regOrgName)){
+			$('#regOrgNameSMsg').css('display','none');
+			$('#regOrgNameEMsg').text('只能使用数字,字母,横线,且不能以横线开头和结尾！');
+	 		//$('#regOrgName').focus();
+	 		return;
+	 	}
+	 	if(regOrgName != '' && regOrgName.length < 3 || regOrgName.length > 18){
+			$('#regOrgNameSMsg').css('display','none');
+			$('#regOrgNameEMsg').text('企业ID长度在3-18个字符之间！');	
+			//$('#regOrgName').focus();
+			return;
+		}
+	 	
+	 	$('#regOrgNameSMsg').css('display','block');
+	 	$('#regOrgNameEMsg').text('');	
+	}
+	
+	function onBlurRegUserNameCheck(){
+		$('#regUserName').val($('#regUserName').val().trim());
+		
+		var regUserName = $('#regUserName').val();
+		
+		var regUserNameRegex = /^[0-9a-zA-Z]*$/;
+		if(regUserName != '' && !regUserNameRegex.test(regUserName)){
+			$('#regUserNameSMsg').css('display','none');
+		 	$('#regUserNameEMsg').text('只能使用字母,数字或字母数字组合！');	
+	 		//$('#regUserName').focus();
+	 		return;
+	 	}
+	 	if(regUserName != '' && regUserName.length < 1 || regUserName.length > 18){
+			$('#regUserNameSMsg').css('display','none');
+			$('#regUserNameEMsg').text('用户长度在1-18个字符之间！');	
+			//$('#regUserName').focus();
+			return;
+		}
+	 	
+	 	$('#regUserNameSMsg').css('display','block');
+	 	$('#regUserNameEMsg').text('');	
+	}
+	
+	function onBlurRegPasswordCheck(){
+		$('#regPassword').val($('#regPassword').val().trim());
+		
+		var regPassword = $('#regPassword').val();
+		
+		if(regPassword != '' && regPassword.length < 6 || regPassword.length > 20){
+			$('#regPasswordSMsg').css('display','none');
+			$('#regPasswordEMsg').text('密码长度在6-20个字符之间！');	
+			//$('#regPassword').focus();
+			return;
+		}
+		
+		$('#regPasswordSMsg').css('display','block');
+	 	$('#regPasswordEMsg').text('');	
+	}
+	
+	function onBlurRegRePasswordCheck(){
+		var regPassword = $('#regPassword').val();
+		$('#regRePassword').val($('#regRePassword').val().trim());
+		
+		var regRePassword = $('#regRePassword').val();
+		var regPassword = $('#regPassword').val();
+		if('' != regPassword && regPassword != regRePassword){
+			$('#regRePasswordEMsg').text('两次输入密码不一致！');
+			//$('#regRePassword').focus();
+			return;
+		}
+		
+	 	$('#regRePasswordEMsg').text('');
+	}
+	
+	function onBlurRegEmailCheck(){
+		$('#regEmail').val($('#regEmail').val().trim());
+		
+		var regEmail = $('#regEmail').val();
+		
+		//var emailReg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+		var emailReg = /^([a-zA-Z0-9]+[_|\_|\-|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\-|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+		if(regEmail != '' && !emailReg.test(regEmail)){
+			$('#regEmailSEMsg').css('display','none');
+			$('#regEmailEMsg').text('请输入有效的邮箱！');
+			//$('#regEmail').focus();
+			return;
+		}else if(regEmail==''){
+		    $('#regEmailSEMsg').css('display','none');
+            $('#regEmailEMsg').text('邮箱不能为空！');
+			return;
+		}
+		
+	 	$('#regEmailEMsg').text('');	
+	}
+	function onBlurRegTelCheck(){
+		$('#regTel').val($('#regTel').val().trim());
+		var regTel = $('#regTel').val();
+		
+		var regTelReg = /^[0-9]*$/;
+		if(regTel != '' && !regTelReg.test(regTel)){
+			$('#regTelSEMsg').css('display','none');
+			$('#regTelEMsg').text('联系电话号码格式不符合要求！');
+			//$('#regEmail').focus();
+			return;
+		}	
+	 	$('#regTellEMsg').text('');
+	}
+	
+	function login(){
+		/*var adminType12 = $('#loginRole').find('option:selected').val();
+		if(adminType12 == 'app'){
+		   if($('#yingyongname').val()==''){
+                //$('#regqiyeid').css('display','none');
+			    $('#regyingyongname').text('企业应用不能为空！');
+				return;
+		   }
+			appAdminLogin();
+		} else if(adminType12 == 'org'){
+		*/
+			orgAdminLogin();
+		//}
+	}
+	/*$(function(){
+         $('#qiyeid').hide();
+		 $('#yingyongname').hide();
+	})*/
+	function app_org(){
+        var adminType = $('#loginRole').find('option:selected').val();
+		if(adminType == 'app'){
+			$('#qiyeid').show();
+			$('#yingyongname').show();
+			//appAdminLogin();
+		} else if(adminType == 'org'){
+			$('#qiyeid').hide();
+			$('#yingyongname').hide();
+		}
+	}
+	//function changeLabel(){
+		//var adminType = $('#loginRole').find('option:selected').val();
+		//if(adminType == 'app'){
+			//$('#appkeyLabel').show();
+		//} else if(adminType == 'org'){
+		//	$('#appkeyLabel').hide();
+		//}
+	//}
+	
+	// 点击返回登录清空注册数据
+	function clearBox(){
+		$('#regOrgName').val('');
+		$('#regUserName').val('');	
+		$('#regPassword').val('');
+		$('#regRePassword').val('');	
+		$('#regEmail').val('');
+		$('#regCompanyName').val('sss');
+		$('#regTel').val('');
+		
+		$('#regOrgNameEMsg').text('');
+		$('#regUserNameEMsg').text('');	
+		$('#regPasswordEMsg').text('');
+		$('#regRePasswordEMsg').text('');	
+		$('#regEmailEMsg').text('');
+		$('#regTelEMsg').text('');
+	}
+
+	window.onload = app_org();
+</script>
+
+
+<!--add this line-->
+<div class="login-layout" onkeydown="keyLogin();">
+<div id="main-container" class="container-fluid">
+  <div id="main-content">
+    <div class="row-fluid">
+      <div class="span12"><p>
+        <div class="login-container min-height-result">
+          <div class="row-fluid">
+            <div class="center">
+              <h1 style="margin-top: 40px;" class="blue"> <img border="0" style="height:60px;" src="/assets/images/login_logo.png" alt=""> </h1>
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div class="position-relative">
+            	<!-- ORG管理员登录 -->
+              <div class="visible widget-box no-border" id="login-box">
+                <div class="widget-body">
+                  <div class="widget-main">
+                    <div><h4 class="header blue lighter bigger"><img src="/assets/images/cup.png" /> 请输入您的信息 </h4></div>
+                    <div class="space-6"></div>
+                      <fieldset> 
+                      	<!-- 应用标示符 -->        
+                      	<!--<label id="appkeyLabel"><span class="block input-icon input-icon-right">
+                          <input type="text" placeholder="应用标识" nullmsg="应用标识！" datatype="*" class="span12" name="appkey" id="appkey"/>
+                          <i class="icon-user"></i> <span class="Validform_checktip"></span></span>
+                          <span id="appkeyEMsg" style="font-size:12px;color:red"></span>
+                        </label>-->
+                        <!-- 用户名 -->           
+                        <label><span class="block input-icon input-icon-right">
+                          <input type="text" placeholder="用户名" nullmsg="请输入用户名！" datatype="*" class="span12" name="username" id="username" onClick="keyLogin()"/>
+                          <i class="icon-user"></i> <span class="Validform_checktip"></span></span>
+                          <span id="usernameEMsg" style="font-size:12px;color:red"></span>
+                        </label>
+                        <!-- 密码 -->
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="password" nullmsg="请输入密码！" placeholder="密码" class="span12" name="password" id="password" onClick="keyLogin()" />
+                          <i class="icon-lock"></i> <span class="Validform_checktip"></span></span> 
+                          <span id="passwordEMsg" style="font-size:12px;color:red"></span>
+                        </label>
+                       <!--<label><span class="block input-icon input-icon-right">
+                          <input type="text" placeholder="企业ID" nullmsg="请输入企业ID！" datatype="*" value="" class="span12" name="qiyeid" id="qiyeid" onclick="keyLogin()"/>
+						  <span class="Validform_checktip"></span></span>
+						  <span id="regqiyeid" style="font-size:12px;color:red"></span>
+                        </label>
+						<label><span class="block input-icon input-icon-right">
+                          <input type="text" placeholder="应用名称" nullmsg="请输入应用名称！" datatype="*" class="span12" name="yingyongname" id="yingyongname" onclick="keyLogin()"/><span class="Validform_checktip"></span><span id="regyingyongname" style="font-size:12px;color:red"></span></span>
+                        </label>
+
+                        <div class="row-fluid">
+                        	<div class="span8">
+                        			<select name="loginRole" id="loginRole" style="WIDTH:300px" onchange="app_org()">
+                        				<option value="org">企业管理员</option>
+                        				<option value="app">APP管理员</option>
+		                        	</select>
+                        	</div>
+                        </div>
+                        -->
+                        <div class="space"></div>
+                        <div class="row-fluid">
+                          <div class="span8">
+                            <input type="checkbox" checked="true" name="rememberme" id="rememberme">
+                            <span class="lbl">记住我</span>
+                          </div>
+                          <button id="loginBtn" class="span4 btn btn-small btn-primary" onClick="login();"> <i class="icon-key"></i> <span id="cont">登录</span> </button>
+                        </div>
+                      </fieldset>
+                  </div>
+                  <div class="toolbar clearfix">
+                  	<div>
+											<a href="javascript:void(0);" onClick="show_box('forgot-box'); return false;" class="forgot-password-link">
+												<i class="icon-arrow-left"></i>
+												忘记密码？
+											</a>
+										</div>
+										<div>
+											<a href="javascript:void(0);" id="btnRegist" onClick="show_box('signup-box'); return false;" class="forgot-password-link">
+												去注册
+												<i class="icon-arrow-right"></i>
+											</a>
+										</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- ORG管理员找回密码 -->
+              <div class="widget-box no-border" id="forgot-box">
+                <div class="widget-body">
+                  <div class="widget-main">
+                    <h4 class="header red lighter bigger"> <i class="icon-key"></i> 找回密码 </h4>
+                    <div class="space-6"></div>
+                    <p> 请输入您的注册时使用的邮箱 </p>
+                      <fieldset>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="text" id="email" name="email" placeholder="Email" class="span12" value="">
+                          <i class="icon-envelope"></i> </span>
+                          <span id="emailEMsg" style="font-size:12px;color:red"></span>
+                        </label>
+                        <div class="row-fluid">
+                        	<a class="span5 offset7 btn btn-small btn-danger" onClick="resetPasswd();"> <i class="icon-lightbulb"></i> 找回!</a>
+                        </div>
+                      </fieldset>
+                  </div>
+                  <div class="toolbar center"> <a class="back-to-login-link" onClick="show_box('login-box'); return false;" href="javascript:void(0);"> 返回登录 <i class="icon-arrow-right"></i> </a> </div>
+                </div>
+              </div>
+              
+              <!-- ORG管理员注册 -->
+              <div class="widget-box no-border" id="signup-box">
+                <div class="widget-body">
+                  <div class="widget-main">
+                    <h4 class="header green lighter bigger"> <i class="icon-group blue"></i> 新用户注册 </h4>
+                    <div class="space-6"></div>
+                    <p> 请详细输入您的信息: </p>
+                      <fieldset>
+                      	<label> <span class="block input-icon input-icon-right">
+                          <input type="text" id="regOrgName" name="regOrgName" placeholder="企业ID" class="span12" onBlur="onBlurRegOrgNameCheck()" value="" onKeyUp="value=value.replace(/[\uFF00-\uFFFF]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\uFF00-\uFFFF]/g,''))" />
+                          <i class="icon-home"></i></span>
+                          <span id="regOrgNameSMsg" style="font-size:12px">3~18个字符，可使用字母,数字,横线,不能以横线开头</span>
+                          <span id="regOrgNameEMsg" style="font-size:12px;color:red"></span>
+                        </label>
+                      	<label> <span class="block input-icon input-icon-right">
+                          <input type="text" id="regUserName" placeholder="用户名" class="span12" name="regUserName" value="" onBlur="onBlurRegUserNameCheck()">
+                          <i class="icon-user"></i></span>
+                          <span id="regUserNameSMsg" style="font-size:12px">1~18个字符，可使用字母、数字</span>
+                          <span id="regUserNameEMsg" style="font-size:12px;color:red"></span>
+                        </label>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="password" id="regPassword" placeholder="密码" class="span12" name="regPassword" value="" onBlur="onBlurRegPasswordCheck()">
+                          <i class="icon-lock"></i> </span>
+                          <span id="regPasswordSMsg" style="font-size:12px">6~20个字符，区分大小写</span>
+                          <span id="regPasswordEMsg" style="font-size:12px;color:red"></span>
+                        </label>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="password" id="regRePassword" placeholder="重复密码" class="span12" name="regRePassword" value="" onBlur="onBlurRegRePasswordCheck()" />
+                          <i class="icon-lock"></i> </span>
+                          <span id="regRePasswordEMsg" style="font-size:12px;color:red"></span>
+                        </label>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="text" id="regEmail" placeholder="电子邮件" size="48px" class="span12" name="regEmail" value="" onBlur="onBlurRegEmailCheck()">
+                          <i class="icon-envelope"></i></span>
+                          <span id="regEmailSEMsg" style="font-size:12px;"></span>
+                          <span id="regEmailEMsg" style="font-size:12px;color:red"></span>
+                        </label>
+						<script type="text/javascript">
+                           $("#regEmail").mailAutoComplete({
+                             boxClass: "out_box", //外部box样式
+                             listClass: "list_box", //默认的列表样式
+                             focusClass: "focus_box", //列表选样式中
+                             markCalss: "mark_box", //高亮样式
+                             autoClass: false,
+                             textHint: true //提示文字自动隐藏
+                             });
+                         </script>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="text" id="regCompanyName" placeholder="企业名称" class="span12" name="regCompanyName" value="" />
+                          <i class="icon-home" style="z-index:0;"></i></span>
+                          <span id="regCompanyNameSEMsg" style="font-size:12px;"></span>
+                          <span id="regCompanyNameEMsg" style="font-size:12px;color:red"></span>
+                        </label>
+                        <label><span class="block input-icon input-icon-right">
+                          <input type="text" id="regTel" placeholder="联系电话" class="span12" name="regTel" value="" onBlur="onBlurRegTelCheck()">
+                          <i class="icon-dashboard" style="z-index:0;"></i></span>
+                          <span id="regTelSEMsg" style="font-size:12px;">固话或者移动电话号码</span>
+                          <span id="regTelEMsg" style="font-size:12px;color:red"></span>
+                        </label>
+                        <label>
+                          <input type="checkbox" id="agreeCBox" checked="checked">
+                          <span class="lbl"> 同意遵守<a href="/about/terms" target="_blank">【环信开发者平台服务协议】</a></span> 
+                        </label>
+                        <div class="space-24"></div>
+                        <div class="row-fluid">
+                          <button class="span6 btn btn-small" id="resetForm" onClick="resetForm()"> <i class="icon-refresh"></i> 重新填写 </button>
+                          <button class="span6 btn btn-small" id="formSubBtn" onClick="formSubmit();"> 注册 <i class="icon-arrow-right icon-on-right"></i> </button>
+                        </div>
+                      </fieldset>
+                  </div>
+                  <div class="toolbar center"> <a class="back-to-login-link" onClick="clearBox();show_box('login-box');" href="javascript:void(0);"> <i class="icon-arrow-left"></i> 返回登录 </a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/management.js"></script>
+<!--add this line-->
+</div>

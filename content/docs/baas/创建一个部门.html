@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Easemob推送 | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Easemob推送
+    </h1>
+    <p>
+      Easemob推送, 在1秒内推送上万条数据, 并且支持tag等多维度推送
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main"><h3 id="section">创建一个部门</h3>
+
+<pre><code>post /easemob/qixin/departments {"name":"dev", "fullname":"开发部", "description":"this is a description, you can put anything here, no matter english or chinese", "any other attribute":"the attribute value"}
+</code></pre>
+
+<p>note, the "departments" used in the URL above, it is just a <em>collection</em> name, you can call it anything ( except the names existing in system, like "users" )    </p>
+
+<p>so, now you have create a department which is called "开发部" with its <em>fullname</em></p>
+
+<p>and this department resource can be referenced by <code>/easemob/qixin/departments/dev</code></p>
+
+<h3 id="section-1">添加员工到一个部门</h3>
+
+<pre><code>post /easemob/qixin/departments/dev/employees/users/stliu
+</code></pre>
+
+<p>some notes:</p>
+
+<ol>
+  <li>"employees" here is a "relationship" between department and users, you can choose any word to replace this</li>
+  <li>"stliu" here is an existing user's username, user's uuid can be used here as well</li>
+  <li>by doing this request, you're linking the dev department and stliu together</li>
+</ol>
+
+<h3 id="section-2">获取一个部门的所有员工</h3>
+
+<pre><code>get /easemob/qixin/departments/dev/employees/users
+</code></pre>
+
+<p>get w/ query</p>
+
+<pre><code>get /easemob/qixin/departments/dev/employees/users?ql="select * where employed_time&gt;3"
+
+获取在职时间大于三年的dev部门的员工(这里假设user里面有个属性是employed_time)
+</code></pre>
+
+<h3 id="section-3">添加员工到一个部门2</h3>
+
+<p>上面所做的是把一个user单向的和一个department链接在一起, 所以, 我们可以知道一个部门的所有员工, 可是, 我们有需求是在已知一个员工(user)的时候, 找到它所在的部门, 如果用UML来表示的话, 则之前我们已经做了</p>
+
+<pre><code>Department --&gt; User            
+</code></pre>
+
+<p>现在我们来做</p>
+
+<pre><code>User --&gt; Department
+</code></pre>
+
+<p>有两种方法可以做到这一点, 先来看简单的方法:</p>
+
+<pre><code>put /easemob/qixin/users/stliu {"dep":["dev"]}
+</code></pre>
+
+<p>这里实际上就是修改user的属性, 确切的说是添加了一个_dep_的属性, 其值我这里是用的数组, 因为我想可能会有一个员工属于多个部门的情况(兼职), 当然这个也是随时可以改的, 所以无所谓</p>
+
+<p>这样, 员工的user entity就有了department的信息, 在user已知的情况下, 我们就可以知道其_dep_的值, 然后通过 <code>/easemob/qixin/departments/${dep_value}</code>的形式来操作department</p>
+
+<p>另外一种方法也是建立relationship</p>
+
+<pre><code>post /easemob/qixin/users/stliu/belongsto/department/dev
+</code></pre>
+
+<p>这里我使用了另外一个relationship的动词_belongsto_, 仍旧提醒一下, 这个动词是任意的</p>
+
+<p>建立了这个链接之后, 我们就可以来查询这个user是属于那个部门的了</p>
+
+<pre><code>get /easemob/qixin/users/stliu/belongsto/department
+</code></pre>
+
+<h3 id="section-4">删除一个部门</h3>
+
+<pre><code>delete /easemob/qixin/departments/dev
+</code></pre>
+
+<h3 id="section-5">创建一个子部门</h3>
+
+<p>首先需要明确的是,通常情况下, 子部门和上级部门之间都是双向的关联关系, 即我们需要知道一个部门有哪些子部门, 也需要能够知道一个部门自己的上级部门是什么</p>
+
+<p>所以, 在创建一个子部门的时候, 实际上是有三个<strong>逻辑</strong>步骤的        </p>
+
+<ol>
+  <li>创建一个部门</li>
+  <li>修改这个部门, 告诉它它的上级部门是哪个</li>
+  <li>修改上级部门, 告诉它新增加了一个子部门</li>
+</ol>
+
+<p>而具体到怎么做, 实际上是完全取决于如何建模的, 同"添加一个员工到一个部门"的情况一样, 也有两种建模方法</p>
+
+<ol>
+  <li>
+    <p>把这些信息存放在department的模型内部</p>
+
+    <pre><code> department{
+     children:[$sub-dep-ids],
+     parent: $parent-dep-id
+ }
+</code></pre>
+
+    <p>采用这种建模方法的时候, 对应到上面的三步, 其实1和2就可以合并了</p>
+  </li>
+  <li>
+    <p>使用上面已经介绍过的relation的方法, 注意这个时候实际上就真的得执行那三个罗技步骤了            </p>
+  </li>
+</ol>
+
+<h3 id="section-6">删除一个部门, 并且删除它的所有子部门</h3>
+
+<p>首先, 先要删除这个部门的所有子部门, 这个可以通过查询的方式来做</p>
+
+<pre><code>delete /easemob/qixin/departments?ql="select * wehre parent=${the department to be deleted}"                   
+</code></pre>
+
+<p>然后再删除这个parent department</p>
+
+<pre><code>delete /easemob/qixin/departments/dev
+</code></pre>
+
+<p>注意, api service不会自动的帮你去完成递归的操作, 因为它内部对你的这个树状的部门模型完全不知道    </p>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

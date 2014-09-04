@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>权限 | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      权限
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h1 id="role">Role</h1>
+
+<p><a href="/docs/usergrid/content/application-entities">See all application
+entities</a>[](/docs/usergrid/content/application-entities)</p>
+
+<p>A role represents a set of permissions that enable certain operations to
+be performed on a specific endpoint. You can assign a user to a role,
+and in this way give the user the permissions associated with that role.
+For further information about roles and their use, see <a href="/managing-access-defining-permission-rules">Managing access
+by defining permission
+rules</a>.</p>
+
+<p>Using App services APIs you can create, retrieve, update, delete, and
+query roles. See <a href="#role_prop">Role properties</a> for a list of the
+system-defined properties for roles. In addition, you can create role
+properties specific to your application.</p>
+
+<p><strong>Note:</strong> Although not shown in the API examples below, you need to
+provide a valid access token with each API call. See <a href="/authenticating-users-and-application-clients">Authenticating
+users and application
+clients</a> for details.</p>
+
+<p>Also, the /rolenames endpoint is no longer valid. If your code currently
+makes calls to /rolenames, you need to change the calls to use /roles.</p>
+
+<h2 id="creating-a-new-role">Creating a new role</h2>
+
+<p>Use the POST method to create a new application role.</p>
+
+<h3 id="request-uri">Request URI</h3>
+
+<p>POST /{org_id}/{app_id}/roles {request body}</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| arg uuid|string org_id              | Organization UUID or organization    |
+|                                      | name                                 |
++————————————–+————————————–+
+| arg uuid|string app_id              | Application UUID or application name |
++————————————–+————————————–+
+| request body                         | Role name and title:                 |
+|                                      |                                      |
+|                                      |     { "name" : "manager", "title" :  |
+|                                      | "Manager" }                          |
++————————————–+————————————–+</p>
+
+<h3 id="example---request">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_create_role">cURL</a></li>
+  <li><a href="#javascript_create_role">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_create_role">Ruby</a></li>
+  <li><a href="#nodejs_create_role">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X POST "https://api.usergrid.com/my-org/my-app/roles/ -d '{"name":"manager","title":"Manager"}'
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+result = app.create_role name: 'manager', title: 'Manager'
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'roles',
+    body:{ name:'manager', title:'Manager' }    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response">Example - Response</h3>
+
+<pre><code>{
+  "action" : "post",
+  "application" : "7fb8d891-477d-11e1-b2bd-22000a1c4e22",
+  "params" : {},
+  "uri" : "https://api.usergrid.com/22000a1c4e22-7fb8d891-477d-11e1-b2bd/7fb8d891-477d-11e1-b2bd-22000a1c4e22",
+  "entities" : [
+     {
+      "uuid": "98e772a3-327a-11e2-aef7-02e81adcf3d0",
+      "type": "role",
+      "name": "manager",
+      "created": 1353351290724,
+      "modified": 1353351290724,
+      "inactivity": 0,
+      "metadata":  {
+        "path": "/roles/98e772a3-327a-11e2-aef7-02e81adcf3d0",
+        "sets":  {
+          "permissions": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/permissions"
+        },
+        "collections":  {
+          "groups": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/groups",
+          "users": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users"
+        }
+      },
+      "roleName": "manager",
+      "title": "Manager"
+    }
+  ],
+  "timestamp": 1353358474917,
+  "duration": 46,
+  "duration": 45,
+  "organization": "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="getting-the-roles-in-an-application">Getting the roles in an application</h2>
+
+<p>Use the GET method to get the roles for a specific application.</p>
+
+<h3 id="request-uri-1">Request URI</h3>
+
+<p>GET /{org_id}/{app_id}/roles</p>
+
+<h3 id="parameters-1">Parameters</h3>
+
+<p>Parameter                 Description
+  ————————- —————————————-
+  arg uuid|string org_id   Organization UUID or organization name
+  arg uuid|string app_id   Application UUID or application name</p>
+
+<h3 id="example---request-1">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_roles">cURL</a></li>
+  <li><a href="#javascript_get_roles">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_roles">Ruby</a></li>
+  <li><a href="#nodejs_get_roles">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/my-org/my-app/roles"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+roles = app['roles'].collection
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'roles'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-1">Example - Response</h3>
+
+<pre><code>{
+  "action" : "get",
+  "application" : "7fb8d891-477d-11e1-b2bd-22000a1c4e22",
+  "params" : {
+    "_" : [ "1328058070002" ]
+  },
+  "uri" : "https://api.usergrid.com/22000a1c4e22-7fb8d891-477d-11e1-b2bd/7fb8d891-477d-11e1-b2bd-22000a1c4e22",
+  "entities" : [ 
+{
+      "uuid": "70f39f36-1825-379d-8385-7a7fbe9ec74a",
+      "type": "role",
+      "name": "admin",
+      "created": 1342198809382,
+      "modified": 1350688633265,
+      "inactivity": 0,
+      "metadata": {
+        "path": "/roles/70f39f36-1825-379d-8385-7a7fbe9ec74a",
+        "sets": {
+          "permissions": "/roles/70f39f36-1825-379d-8385-7a7fbe9ec74a/permissions"
+        },
+        "collections": {
+          "groups": "/roles/70f39f36-1825-379d-8385-7a7fbe9ec74a/groups",
+          "users": "/roles/70f39f36-1825-379d-8385-7a7fbe9ec74a/users"
+        }
+      },
+      "roleName": "admin",
+      "title": "Administrator"
+    },
+    {
+      "uuid": "b8f8f336-30c9-3553-b447-6891f3e1e6bf",
+      "type": "role",
+      "name": "default",
+      "created": 1342198809472,
+      "modified": 1350688633282,
+      "inactivity": 0,
+      "metadata": {
+        "path": "/roles/b8f8f336-30c9-3553-b447-6891f3e1e6bf",
+        "sets": {
+          "permissions": "/roles/b8f8f336-30c9-3553-b447-6891f3e1e6bf/permissions"
+        },
+        "collections": {
+          "groups": "/roles/b8f8f336-30c9-3553-b447-6891f3e1e6bf/groups",
+          "users": "/roles/b8f8f336-30c9-3553-b447-6891f3e1e6bf/users"
+        }
+      },
+      "roleName": "default",
+      "title": "Default"
+    },
+    {
+      "uuid": "bd397ea1-a71c-3249-8a4c-62fd53c78ce7",
+      "type": "role",
+      "name": "guest",
+      "created": 1342198809551,
+      "modified": 1350688633299,
+      "inactivity": 0,
+      "metadata": {
+        "path": "/roles/bd397ea1-a71c-3249-8a4c-62fd53c78ce7",
+        "sets": {
+          "permissions": "/roles/bd397ea1-a71c-3249-8a4c-62fd53c78ce7/permissions"
+        },
+        "collections": {
+          "groups": "/roles/bd397ea1-a71c-3249-8a4c-62fd53c78ce7/groups",
+          "users": "/roles/bd397ea1-a71c-3249-8a4c-62fd53c78ce7/users"
+        }
+      },
+      "roleName": "guest",
+      "title": "Guest"
+    }
+  ],
+  "timestamp": 1353351684225,
+  "duration": 35,
+  "organization": "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="deleting-a-role">Deleting a role</h2>
+
+<p>Use the DELETE method to delete the specified role and return the
+revised set of application roles.</p>
+
+<h3 id="request-uri-2">Request URI</h3>
+
+<p>DELETE /{org_id}/{app_id}/roles/{rolename}</p>
+
+<h3 id="parameters-2">Parameters</h3>
+
+<p>Parameter                 Description
+  ————————- —————————————-
+  arg uuid|string org_id   Organization UUID or organization name
+  arg uuid|string app_id   Application UUID or application name
+  arg string rolename       Role name</p>
+
+<h3 id="example---request-2">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_delete_role">cURL</a></li>
+  <li><a href="#javascript_delete_role">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_delete_role">Ruby</a></li>
+  <li><a href="#nodejs_delete_role">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X DELETE "https://api.usergrid.com/my-org/my-app/roles/manager"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['roles/manager'].delete
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'roles'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-2">Example - Response</h3>
+
+<pre><code>{
+  "action" : "delete",
+  "application" : "7fb8d891-477d-11e1-b2bd-22000a1c4e22",
+  "params" : {
+    "_" : [ "1328058070002" ]
+  },
+  "path": "/roles",
+  "uri" : "https://api.usergrid.com/22000a1c4e22-7fb8d891-477d-11e1-b2bd/7fb8d891-477d-11e1-b2bd-22000a1c4e22",
+  "entities": [
+    {
+      "uuid": "382d0991-74bb-3548-8166-6b07e44495ef",
+      "type": "role",
+      "name": "manager",
+      "created": 1353358474924,
+      "modified": 1353358474924,
+      "inactivity": 0,
+      "metadata": {
+        "path": "/roles/382d0991-74bb-3548-8166-6b07e44495ef",
+        "sets": {
+          "permissions": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/permissions"
+        },
+        "collections": {
+          "groups": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/groups",
+          "users": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users"
+        }
+      },
+      "roleName": "manager",
+      "title": "Manager"
+    }
+  ],
+  "timestamp": 1353359131580,
+  "duration": 218,
+  "organization": "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="getting-permissions-for-an-application-role">Getting permissions for an application role</h2>
+
+<p>Use the GET method to get permissions for the specific app role.</p>
+
+<h3 id="request-uri-3">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>GET /{org_id}/{app_id}/roles/{rolename</td>
+      <td>role_id}/permissions</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="parameters-3">Parameters</h3>
+
+<p>Parameter                   Description
+  ————————— —————————————-
+  arg uuid|string org_id     Organization UUID or organization name
+  arg uuid|string app_id     Application UUID or application name
+  arg  uuid|string rolename   Role UUID or role name</p>
+
+<h3 id="example---request-3">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_role_permissions">cURL</a></li>
+  <li><a href="#javascript_get_role_permissions">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_role_permissions">Ruby</a></li>
+  <li><a href="#nodejs_get_role_permissions">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/my-org/my-app/roles/manager/permissions"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+response = app['roles']['guest']['permissions'].entity
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'roles/manager/permissions'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-3">Example - Response</h3>
+
+<pre><code>{
+  "action" : "get",
+  "application" : "f34f4222-a166-11e2-a7f7-02e81adcf3d0",
+  "params" : { },
+  "uri" : "http://api.usergrid.com/your-org/your-app",
+  "entities" : [ ],
+  "data" : [ "get,post,put,delete:/**", "post:/devices", "post:/users", "put:/devices/*" ],
+  "timestamp" : 1376589421592,
+  "duration" : 89,
+  "organization" : "your-org",
+  "applicationName" : "your-app"
+}
+</code></pre>
+
+<h2 id="adding-permissions-to-an-application-role">Adding permissions to an application role</h2>
+
+<p>Use the POST method to add permissions for the specified application
+role.</p>
+
+<h3 id="request-uri-4">Request URI</h3>
+
+<p>POST /{org_id}/{app_id}/roles/{rolename|role_id}/permissions {request
+body}</p>
+
+<h3 id="parameters-4">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| arg uuid|string org_id              | Organization UUID or organization    |
+|                                      | name                                 |
++————————————–+————————————–+
+| arg uuid|string app_id              | Application UUID or application name |
++————————————–+————————————–+
+| arg uuid|string rolename             | Role UUID or role name               |
++————————————–+————————————–+
+| request body                         | JSON object with a single            |
+|                                      | permissions property. The value of   |
+|                                      | that property is a string containing |
+|                                      | a permissions specification. The     |
+|                                      | spec is a comma-separated list of    |
+|                                      | verbs, followed by a colon, followed |
+|                                      | by a URL pattern:                    |
+|                                      |                                      |
+|                                      |     { "permission" : "get,put,post,d |
+|                                      | elete:/users/me/groups" }            |
++————————————–+————————————–+</p>
+
+<h3 id="example---request-4">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_add_role_permissions">cURL</a></li>
+  <li><a href="#javascript_add_role_permissions">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_add_role_permissions">Ruby</a></li>
+  <li><a href="#nodejs_add_role_permissions">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X POST "https://api.usergrid.com/my-org/my-app/roles/manager/permissions" -d '{"permission":"get,put,post,delete:/users/me/groups" }'
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['roles/manager/permissions'].post permission:'get,put,post,delete:/users/me/groups'
+</code></pre>
+
+<p>The example assumes use of the
+<a href="https://github.com/apigee/usergrid-node-module">Node.js</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'roles/manager/permissions',
+    body:{ permission:'get,put,post,delete:/users/me/groups' }    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response-4">Example - Response</h3>
+
+<pre><code>{
+  "action" : "post",
+  "application" : "f34f4222-a166-11e2-a7f7-02e815df8rd0",
+  "params" : { },
+  "uri" : "http://api.usergrid.com/your-org/your-app",
+  "entities" : [ ],
+  "data" : [ "get,put,post,delete:/users/me/groups" ],
+  "timestamp" : 1376590904061,
+  "duration" : 21,
+  "organization" : "your-org",
+  "applicationName" : "your-app"
+}
+</code></pre>
+
+<h2 id="deleting-permissions-from-an-application-role">Deleting permissions from an application role</h2>
+
+<p>Use the DELETE method to remove permissions from the specified
+application role.</p>
+
+<h3 id="request-uri-5">Request URI</h3>
+
+<p>DELETE
+/{org_id}/{app_id}/roles/{rolename|role_id}/permissions?permission={permissions_spec}</p>
+
+<h3 id="parameters-5">Parameters</h3>
+
+<p>Parameter              Description
+  ———————- —————————————————-
+  uuid|string org_id    Organization UUID or organization name
+  uuid|string app_id    Application UUID or application name
+  uuid|string rolename   Role UUID or role name
+  grant_url_pattern    The pattern on which the permissions were granted.</p>
+
+<h3 id="example---request-5">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_delete_role_permissions">cURL</a></li>
+  <li><a href="#javascript_delete_role_permissions">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_delete_role_permissions">Ruby</a></li>
+  <li><a href="#nodejs_delete_role_permissions">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X DELETE -H "authorization: Bearer INSERT_BEARER_TOKEN_HERE" "https://api.usergrid.com/my-org/my-app/roles/default/permissions?permission=get,post,delete:/notes"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['roles/manager/permission'].delete permission:'delete'
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'roles/manager/permission',
+    body:{ permission:'delete' }    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response-5">Example - Response</h3>
+
+<pre><code>{
+  "action" : "delete",
+  "application" : "7fb8d891-477d-11e1-b2bd-22000a1c4e22",
+  "params" : {
+    "permission":  [
+       "delete"
+    ]
+  },
+  "path": "/roles",
+  "uri" : "https://api.usergrid.com/22000a1c4e22-7fb8d891-477d-11e1-b2bd/7fb8d891-477d-11e1-b2bd-22000a1c4e22",
+  "entities":  [
+      {
+      "uuid": "382d0991-74bb-3548-8166-6b07e44495ef",
+      "type": "role",
+      "name": "manager",
+      "created": 1353359536973,
+      "modified": 1353359536973,
+      "inactivity": 0,
+      "metadata":  {
+        "path": "/roles/382d0991-74bb-3548-8166-6b07e44495ef",
+        "sets":  {
+          "permissions": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/permissions"
+        },
+        "collections":  {
+          "groups": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/groups",
+          "users": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users"
+        }
+      },
+      "roleName": "manager",
+            "title": "Manager"
+          }
+   ],
+   "timestamp": 1353360762403,
+   "duration": 181,
+   "organization": "my-org",
+   "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="adding-a-user-to-a-role">Adding a user to a role</h2>
+
+<p>Use the POST method to add a user to a role.</p>
+
+<h3 id="request-uri-6">Request URI</h3>
+
+<pre><code>POST /{org_id}/{app_id}/roles/{role_id}/users/{uuid|username}
+</code></pre>
+
+<p>or</p>
+
+<pre><code>POST /{org_id}/{app_id}/users/{uuid|username}/roles/{role_id}
+</code></pre>
+
+<h3 id="parameters-6">Parameters</h3>
+
+<p>Parameter                   Description
+  ————————— —————————————-
+  arg uuid|string org_id     Organization UUID or organization name
+  arg uuid|string app_id     Application UUID or application name
+  arg uuid|string role_id    Role UUID or role name
+  arg uuid|string uuid|name   User UUID or username</p>
+
+<h3 id="example---request-6">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_add_role_user">cURL</a></li>
+  <li><a href="#javascript_add_role_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_add_role_user">Ruby</a></li>
+  <li><a href="#nodejs_add_role_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X POST "https://api.usergrid.com/my-org/my-app/roles/manager/users/john.doe"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['roles/manager/users/someuser'].post nil
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'roles/manager/users/john.doe'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-6">Example - Response</h3>
+
+<pre><code>{
+  "action": "post",
+  "application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+  "params": {},
+  "path": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users",
+  "uri": "https://api.usergrid.com/my-org/my-app/roles/382d0991-74bb-3548-8166-6b07e44495ef/users",
+  "entities": [
+    {
+      "uuid": "34e26bc9-2d00-11e2-a065-02e81ae640dc",
+      "type": "user",
+      "name": "John Doe",
+      "created": 1352748968504,
+      "modified": 1352748968504,
+      "activated": true,
+      "email": "john.doe@mail.com",
+      "metadata": {
+        "path": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc",
+        "sets": {
+          "rolenames": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/rolenames",
+          "permissions": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/permissions"
+        },
+        "connections": {
+          "likes": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/likes"
+        },
+        "collections": {
+          "activities": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/activities",
+          "devices": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/devices",
+          "feed": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/feed",
+          "groups": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/groups",
+          "roles": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/roles",
+          "following": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/following",
+          "followers": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/followers"
+        }
+      },
+      "picture": "http://www.gravatar.com/avatar/90f82dba15655b8cc8e3b4d63377576f",
+      "username": "someuser"
+    }
+  ],
+  "timestamp": 1352999087337,
+  "duration": 65,
+  "organization": "my-org",
+  "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="getting-the-users-in-a-role">Getting the users in a role</h2>
+
+<p>Use the GET method to get the users in a role.</p>
+
+<h3 id="request-uri-7">Request URI</h3>
+
+<pre><code>GET /{org_id}/{app_id}/roles/{role_id}/users
+</code></pre>
+
+<h3 id="parameters-7">Parameters</h3>
+
+<p>Parameter                  Description
+  ————————– —————————————-
+  arg uuid|string org_id    Organization UUID or organization name
+  arg uuid|string app_id    Application UUID or application name
+  arg uuid|string role_id   Role UUID or role name</p>
+
+<h3 id="example---request-7">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_role_users">cURL</a></li>
+  <li><a href="#javascript_get_role_users">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_role_users">Ruby</a></li>
+  <li><a href="#nodejs_get_role_users">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/my-org/my-app/roles/manager/users"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+users = app['roles/manager/users'].collection
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'roles/manager/users'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-7">Example - Response</h3>
+
+<pre><code>{
+  "action": "get",
+  "application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+  "params": {
+    "_": [
+      "1352999121468"
+    ]
+  },
+  "path": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users",
+  "uri": "https://api.usergrid.com/my-org/my-app/roles/382d0991-74bb-3548-8166-6b07e44495ef/users",
+  "entities": [
+    {
+      "uuid": "34e26bc9-2d00-11e2-a065-02e81ae640dc",
+      "type": "user",
+      "name": "John Doe",
+      "created": 1352748968504,
+      "modified": 1352748968504,
+      "activated": true,
+      "email": "john.doe@mail.com",
+      "metadata": {
+        "path": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc",
+        "sets": {
+          "rolenames": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/rolenames",
+          "permissions": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/permissions"
+        },
+        "connections": {
+          "likes": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/likes"
+        },
+        "collections": {
+          "activities": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/activities",
+          "devices": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/devices",
+          "feed": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/feed",
+          "groups": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/groups",
+          "roles": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/roles",
+          "following": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/following",
+          "followers": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/followers"
+        }
+      },
+      "picture": "http://www.gravatar.com/avatar/90f823ba15655b8cc8e3b4d63377576f",
+      "username": "john.doe"
+    }
+  ],
+  "timestamp": 1352999119136,
+  "duration": 28,
+  "organization": "my-org",
+  "applicationName": "my-app"
+</code></pre>
+
+<h2 id="deleting-a-user-from-a-role">Deleting a user from a role</h2>
+
+<p>Use the DELETE method to delete a user from a role.</p>
+
+<h3 id="request-uri-8">Request URI</h3>
+
+<pre><code>DELETE /{org_id}/{app_id}/roles/{role_id}/users/{uuid|username}
+</code></pre>
+
+<h3 id="parameters-8">Parameters</h3>
+
+<p>Parameter                   Description
+  ————————— —————————————-
+  arg uuid|string org_id     Organization UUID or organization name
+  arg uuid|string app_id     Application UUID or application name
+  arg uuid|string role_id    Role UUID or role name
+  arg uuid|string uuid|name   User UUID or username</p>
+
+<h3 id="example---request-8">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_delete_role_user">cURL</a></li>
+  <li><a href="#javascript_delete_role_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_delete_role_user">Ruby</a></li>
+  <li><a href="#nodejs_delete_role_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X DELETE "https://api.usergrid.com/my-org/my-app/roles/manager/users/john.doe"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+app['roles/manager/users/john.doe'].delete
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'roles/manager/users/john.doe'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-8">Example - Response</h3>
+
+<pre><code>{
+   "action": "delete",
+   "application": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+   "params": {
+     "_": [
+       "1353000719265"
+     ]
+   },
+   "path": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users",
+   "uri": "equest
+curl -X DELETE "https://api.usergrid.com/my-org/my-app/roles/382d0991-74bb-3548-8166-6b07e44495ef/users",
+   "entities": [
+     {
+       "uuid": "34e26bc9-2d00-11e2-a065-02e81ae640dc",
+       "type": "user",
+       "name": "John Doe",
+       "created": 1352748968504,
+       "modified": 1352748968504,
+       "activated": true,
+       "email": "john.doe@mail.com",
+       "metadata": {
+         "path": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc",
+         "sets": {
+           "rolenames": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/rolenames",
+           "permissions": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/permissions"
+         },
+         "connections": {
+           "likes": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/likes"
+         },
+         "collections": {
+           "activities": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/activities",
+           "devices": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/devices",
+           "feed": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/feed",
+           "groups": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/groups",
+           "roles": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/roles",
+           "following": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/following",
+           "followers": "/roles/382d0991-74bb-3548-8166-6b07e44495ef/users/34e26bc9-2d00-11e2-a065-02e81ae640dc/followers"
+         }
+       },
+       "picture": "http://www.gravatar.com/avatar/90f823ba13655b8cc8e3b4d63377576f",
+       "username": "john.doe"
+     }
+   ],
+   "timestamp": 1353000717531,
+   "duration": 338,
+   "organization": "my-org",
+   "applicationName": "my-app"
+ }
+</code></pre>
+
+<h2 id="role-properties">Role properties</h2>
+
+<p>The following are the system-defined properties for role entities. You
+can create application-specific properties for a role entity in addition
+to the system-defined properties. The system-defined properties are
+reserved. You cannot use these names to create other properties for a
+role entity. In addition the roles name is reserved for the roles
+collection — you can't use it to name another collection.</p>
+
+<p>The look-up property for a role is name that is, you can use the name
+property to reference a role in an API call. However, you can search on
+a role using any property of the role entity. See\</p>
+
+<p>Nonexistent node nid: 9321.</p>
+
+<p>for details on searching.</p>
+
+<h3 id="general-properties">General properties</h3>
+
+<p>Roles have the following general properties.</p>
+
+<p>Property   Type     Description
+  ———- ——– ———————————————————————————
+  uuid       UUID     Role’s unique entity ID
+  type       string   "role"
+  created    long     <a href="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</a> of entity creation
+  modified   long     <a href="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</a> of entity modification
+  name       string   Unique name identifying the role (mandatory)
+  roleName   string   Informal role name
+  title      string   Role title</p>
+
+<h3 id="set-properties">Set properties</h3>
+
+<p>Roles have the following set property.</p>
+
+<p>Set           Type     Description
+  ————- ——– ————————-
+  permissions   string   Set of user permissions</p>
+
+<h3 id="collection-properties">Collection properties</h3>
+
+<p>Roles have the following collections.</p>
+
+<p>Collection   Type    Description
+  ———— ——- —————————————–
+  users        user    Collection of users assigned to a role
+  groups       group   Collection of groups assigned to a role</p>
+
+<p> </p>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

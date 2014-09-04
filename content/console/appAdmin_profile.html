@@ -1,0 +1,164 @@
+---
+title: 环信开发者中心
+---
+
+<link href="/assets/css/manage.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="/assets/css/SpryTabbedPanels.css" rel="stylesheet" type="text/css" media="screen"/>
+
+
+<script src="/assets/js/ace-elements.min.js"></script>
+<script src="/assets/js/ace.min.js"></script>
+<script src="/assets/js/management.js"></script>
+<script tyep="text/javascript">
+	var appname = $.cookie('appName');
+	
+	$(function(){
+		if (!getToken() || getToken()==''){
+			logout();
+		}
+		
+		var access_token = $.cookie('access_token');
+		var cuser = $.cookie('cuser');
+		var orgName = $.cookie('orgName');
+		
+		 
+		//getAppProfile(appName);
+		
+		$('#appKey').text(orgName+'#'+appname);
+		$('#xmlandroidAppkey').text(orgName+'#'+appname);
+		$('#xmliosAppkey').text(orgName+'#'+appname);
+	});	
+	
+// 应用概述页
+function toApppofile(){
+	window.location.href = '/console/appAdmin_profile?appUuid='+appname;
+}
+
+// 用户管理页
+function toAppUsersPage(){
+	window.location.href = '/console/appAdmin_users?appUuid='+appname;
+}
+
+// 群组管理页
+function toAppChatroomsPage(){
+	window.location.href = '/console/appAdmin_chatrooms?appUuid='+appUuid;
+}
+
+// 推送证书管理页
+function toAppCredentialsPage(){
+	window.location.href = '/console/appAdmin_credentials?appUuid='+appUuid;
+}
+// 数据统计页面
+function toApppofileCounter(){
+	window.location.href = '/console/app_profile_counter?appUuid='+appUuid;
+}
+</script>
+
+
+<div id="main-container" class="container-fluid"> <a href="javascript:void(0);" id="menu-toggler"> <span></span> </a>
+  	<div id="sidebar">
+	    <div id="sidebar-shortcuts">
+	      <div style="min-height: 40px;" id="sidebar-shortcuts-large"> </div>
+	      <div style="min-height: 40px;" id="sidebar-shortcuts-mini"> </div>
+	    </div>
+	    <ul class="nav nav-list">
+			<li class="active"> <a href="javascript:toApppofile()" target="_self"> <i class="icon-ambulance"></i> <span>应用概况</span> </a></li>
+			<li> <a href="javascript:toAppUsersPage()" target="_self"> <i class="icon-user"></i> <span>IM用户</span> </a></li>
+			<li> <a href="javascript:toAppCredentialsPage()" target="_self"> <i class="icon-ambulance"></i> <span>推送证书</span> </a></li>
+			<li> <a href="javascript:toApppofileCounter()" target="_self"> <i class="icon-user"></i> <span>数据统计</span> </a></li>
+	    </ul>
+    	<div id="sidebar-collapse"> <i class="icon-double-angle-left"></i> </div>
+  	</div>
+  	<div class="clearfix" id="main-content">
+	    <div id="breadcrumbs">
+      		<ul class="breadcrumb">
+	        	<li> <i class="icon-home"></i> 我的应用 </li>
+	      	</ul>
+	    </div>
+	    <div class="clearfix app-admin-profile-minslider" id="page-content">
+	      	<div class="row-fluid">
+		        <div class="row-fluid">
+		        	<div class="apply" style="background:#FFF">
+						<table class="table table-striped table-bordered table-hover" style="width:400px;">
+							<tr>
+							  <td align="right" width="150px;">
+							  	<strong>应用标识(AppKey): </strong>
+							  </td>
+							  <td width="160px;">
+							  	<span id="appKey"></span>
+							  </td>
+							</tr>
+							<tr>
+							  <td align="right" width="150px"><strong>创建时间:</strong> </td>
+							  <td width="150px;"><span id="created"></span></td>
+							</tr>
+							<tr>
+							  <td align="right" width="150px"><strong>最后修改时间:</strong> </td>
+							  <td width="150px;"><span id="modified"></span></td>
+							</tr>
+							<tr>
+							  <td align="right" width="150px"><strong>注册授权状态: </strong></td>
+							  <td width="150px;">
+							  	<span id="allowOpen"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="changeAllowOpen();" class="btn btn-mini btn-info">切换</a>
+								<input type="hidden" id="allowOpenHdd" name="allowOpenHdd" value="" />
+							  </td>
+							</tr>
+						</table>
+			      	</div>
+			      	<p></p>
+				      	<div class="apply">
+				      		<font size="3">快速集成&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.easemob.com/sdk" target="_blank">下载SDK</a></font>
+				      	</div>
+			      	<p></p>
+			      	<div class="count">
+			        	<div class="left" style="width:555px;">
+			        		<div id="TabbedPanels1" class="TabbedPanels">
+								<ul class="TabbedPanelsTabGroup">
+								    <li class="TabbedPanelsTab" tabindex="0"><font size="2px;">Android</font></li>
+								</ul>
+								<div class="TabbedPanelsContentGroup">
+								    <div class="TabbedPanelsContent">
+								    	<div>// 向AndroidManifest.xml文件中加入以下配置</div>
+								    	<div>&lt!-- 环聊sdk需要的权限 --&gt</div>
+									    <div>&ltuses-permission android:name="android.permission.VIBRATE" /&gt</div>
+									    <div>&ltuses-permission android:name="android.permission.INTERNET" /&gt</div>
+									    <div>&ltuses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /&gt</div>
+									    <div>&ltuses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt</div>
+									    <div>&ltuses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt</div>
+									    <div>&ltuses-permission android:name="android.permission.CALL_PHONE" /&gt</div>
+									    <div>&ltuses-permission android:name="android.permission.GET_TASKS" /&gt</div>
+									    <div>&ltuses-permission android:name="android.permission.ACCESS_WIFI_STATE" /&gt</div>
+									    <div>&ltuses-permission android:name="android.permission.CHANGE_WIFI_STATE" /&gt</div>
+									    <div>&ltuses-permission android:name="android.permission.WAKE_LOCK" /&gt</div>
+									   	<div>&ltuses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /&gt</div>
+									    <div>&ltuses-permission android:name="android.permission.READ_PHONE_STATE" /&gt</div>
+											<div> </div>
+									    <div>&lt!-- 设置应用的 appkey --&gt</div>
+									    <div>&ltmeta-data</div>
+									    <div>android:name="EASEMOB_APPKEY"</div>
+									    <div>android:value="<span id="xmlandroidAppkey"></span>" /&gt</div>	
+								    </div>
+								</div>
+							</div>
+			        	</div>
+			        	<div class="right" style="width:523px;">
+			        		<div id="TabbedPanels1" class="TabbedPanels">
+								<ul class="TabbedPanelsTabGroup">
+								    <li class="TabbedPanelsTab" tabindex="0">IOS</li>
+								</ul>
+								<div class="TabbedPanelsContentGroup">
+								    <div class="TabbedPanelsContent">
+								    	<div>// 向info.plist文件中加入以下配置</div>
+								    	<div>Key:EASEMOB_APPKEY;</div>
+										<div>Value:<span id="xmliosAppkey"></span>;</div>
+										<div>Type:String;</div>
+								    </div>
+								</div>
+							</div>
+			        	</div>
+			       	</div>
+		      	</div>
+	    	</div>
+	  	</div>
+	</div>
+</div>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Query response values | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Query response values
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<p>When you query Apache Usergrid data, the query’s response is formatted in
+JavaScript Object Notation (JSON). This is a common format used for
+parameter and return values in REST web services.</p>
+
+<p>So for the following query:</p>
+
+<pre><code>/users?ql=select * where name = ‘Gladys Kravitz’
+</code></pre>
+
+<p>…you would get a response such as the the one below. The JSON format
+arranges the data in name/value pairs. Many of the values correspond to
+specifics of the request, including the request’s HTTP action (GET), the
+application’s UUID, the request’s parameters (the query string you
+sent), and so on.</p>
+
+<blockquote>
+  <p><strong>Note:</strong>Query examples in this content are shown unencoded to make
+them easier to read. Keep in mind that you might need to encode query
+strings if you're sending them as part of URLs, such as when you're
+executing them with the cURL tool.</p>
+</blockquote>
+
+<p>Here, the query is asking for whole entities in the users collection.
+Data corresponding to the response is captured in the response’s
+<code>entities</code> array. The array has one member here, corresponding to the
+one user found by the query (another kind of query might have found more
+users). That one member gives the UUID of the entity (user), the entity
+type, and values for properties such as name, username, email, and so
+on.</p>
+
+<p><code>js
+{
+  "action" : "get",
+  "application" : "8272c9b0-d86a-11e2-92e2-cdf1ce04c1c0",
+  "params" : {
+    "ql" : [ "select * where name = 'Gladys Kravitz'" ]
+  },
+  "path" : "/users",
+  "uri" : "http://api.usergrid.com/myorg/myapp/users",
+  "entities" : [ {
+    "uuid" : "d0d7d0ba-e97b-11e2-8cef-411c466c4f2c",
+    "type" : "user",
+    "name" : "Gladys Kravitz",
+    "created" : 1373472876859,
+    "modified" : 1373472876859,
+    "username" : "gladys",
+    "email" : "gladys@example.com",
+    "activated" : true,
+    "picture" : "http://www.gravatar.com/avatar/20c57d4f41cf51f2db44165eb058b3b2",
+    "metadata" : {
+      "path" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c",
+      "sets" : {
+        "rolenames" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c/rolenames",
+        "permissions" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c/permissions"
+      },
+      "connections" : {
+        "firstname" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c/firstname",
+        "lastname" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c/lastname"
+      },
+      "collections" : {
+        "activities" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c/activities",
+        "devices" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c/devices",
+        "feed" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c/feed",
+        "groups" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c/groups",
+        "roles" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c/roles",
+        "following" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c/following",
+        "followers" : "/users/d0d7d0ba-e97b-11e2-8cef-411c466c4f2c/followers"
+      }
+    }
+  } ],
+  "timestamp" : 1374694196061,
+  "duration" : 48,
+  "organization" : "myorg",
+  "applicationName" : "myapp",
+  "count" : 1
+}
+</code></p>
+
+<p>Compare the preceding example with the following for another kind of
+query. Imagine the following request string, where the query string is
+asking for only the values of two of the entity’s properties (username
+and name):</p>
+
+<pre><code>/users?ql=select username,name where name=’Gladys Kravitz’
+</code></pre>
+
+<p>In the response JSON from this query, the return value is specified as
+the property of the <code>list</code> item – here, an array containing only the
+values of the properties the query asked for, in the order they were
+requested (username first, then name).</p>
+
+<pre><code>{
+  "action" : "get",
+  "application" : "8272c9b0-d86a-11e2-92e2-cdf1ce04c1c0",
+  "params" : {
+    "ql" : [ "select username,name where name='Gladys Kravitz'" ]
+  },
+  "path" : "/users",
+  "uri" : "http://api.usergrid.com/myorg/myapp/users",
+  "list" : [ [ "gladys", "Gladys Kravitz" ] ],
+  "timestamp" : 1374697463190,
+  "duration" : 25,
+  "organization" : "myorg",
+  "applicationName" : "myapp",
+  "count" : 1
+}
+</code></pre>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

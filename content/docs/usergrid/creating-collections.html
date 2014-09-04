@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Creating Collections | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Creating Collections
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h1 id="creating-collections">Creating Collections</h1>
+
+<p>This article describes how to create collections in Apache Usergrid. In App
+Services, all entities are automatically associated with a corresponding
+collection based on the <code>type</code> property of the entity. You may create
+empty collections if you wish, but creating an entity of a new type will
+automatically create a corresponding collection for you. For example,
+creating a new custom "item" entity, creates an "items" collection.</p>
+
+<p><strong>Note:</strong> Although not shown in the API examples below, you need to
+provide a valid access token with each API call. See <a href="/authenticating-users-and-application-clients">Authenticating
+users and application
+clients</a> for details.</p>
+
+<h2 id="creating-a-collection">Creating a collection</h2>
+
+<ul>
+  <li><a href="#portal_create_collection">Admin Portal</a></li>
+  <li><a href="#curl_create_collection">cURL</a></li>
+  <li><a href="#ios_create_collection">iOS</a></li>
+  <li><a href="#android_create_collection">Android</a></li>
+  <li><a href="#javascript_create_collection">JavaScript</a></li>
+  <li><a href="#ruby_create_collection">Ruby</a></li>
+  <li><a href="#nodejs_create_collection">Node.js</a></li>
+</ul>
+
+<p>The easiest way to create a new, empty collection is by using the <em>Data
+Explorer</em> tool in the Apache Usergrid Admin Portal by doing the following:</p>
+
+<ol>
+  <li><a href="https://www.apigee.com/usergrid">Login</a> to the Apache Usergrid Admin
+Portal.</li>
+  <li>In the left menu, click <em>Data Explorer</em>.</li>
+  <li>In the middle column, click the <em>Add Collection</em> button.</li>
+  <li>In the form, enter the name for the collection you want to create.
+If the provided value is not a plural word, Apache Usergrid will
+pluralize it.</li>
+  <li>Click <em>Create</em>. The new collection will appear in the list.</li>
+</ol>
+
+<h3 id="example-requestresponse">Example Request/Response</h3>
+
+<h4 id="request">Request:</h4>
+
+<pre><code>curl -X POST "https://api.usergrid.com/your-org/your-app/item"
+</code></pre>
+
+<h4 id="response">Response:</h4>
+
+<pre><code>{
+  "action" : "post",
+  "application" : "f34f4222-a166-11e2-a7f7-02e81adcf3d0",
+  "params" : { },
+  "path" : "/items",
+  "uri" : "http://api.usergrid.com/your-org/your-app/items",
+  "entities" : [ ],
+  "timestamp" : 1378857079220,
+  "duration" : 31,
+  "organization" : "your-org",
+  "applicationName" : "your-app"
+}
+</code></pre>
+
+<h3 id="request-syntax">Request Syntax</h3>
+
+<pre><code>curl -X POST https://api.usergrid.com/&lt;org&gt;/&lt;app&gt;/&lt;collection_name&gt;
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| org                                  | Organization UUID or organization    |
+|                                      | name                                 |
++————————————–+————————————–+
+| app                                  | Application UUID or application name |
++————————————–+————————————–+
+| collection_name                     | Name of the collection to create. If |
+|                                      | the provided value is not a plural   |
+|                                      | word, Apache Usergrid will pluralize    |
+|                                      | it.                                  |
+|                                      |                                      |
+|                                      | For example, providing 'item' will   |
+|                                      | create a collection named 'items'    |
+|                                      | but providing 'items' will not       |
+|                                      | create 'itemses'.                    |
++————————————–+————————————–+</p>
+
+<p>This example uses the <a href="/app-services-sdks#ios">Apache Usergrid iOS SDK</a>.</p>
+
+<h3 id="example-requestresponse-1">Example Request/Response</h3>
+
+<h4 id="request-1">Request:</h4>
+
+<pre><code>-(NSString*)createCollection {
+
+NSString *url = @"https://api.usergrid.com/your-org/your-app/items";
+NSString *op = @"POST";
+NSString *opData = nil;
+
+    //we recommend you call ApigeeClient from your AppDelegate. 
+    //for more information see the iOS SDK install guide: http://apigee.com/docs/app-services/content/installing-apigee-sdk-ios
+    //create an instance of AppDelegate
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    //call createEntity to initiate the API call
+    ApigeeClientResponse *response = [appDelegate.dataClient apiRequest: url operation: op data: opData];
+
+@try {
+    //success
+}
+@catch (NSException * e) {
+    //fail
+}
+
+}
+</code></pre>
+
+<h4 id="response-1">Response:</h4>
+
+<pre><code>{
+  "action" : "post",
+  "application" : "f34f4222-a166-11e2-a7f7-02e81adcf3d0",
+  "params" : { },
+  "path" : "/items",
+  "uri" : "http://api.usergrid.com/your-org/your-app/items",
+  "entities" : [ ],
+  "timestamp" : 1378857079220,
+  "duration" : 31,
+  "organization" : "your-org",
+  "applicationName" : "your-app"
+}
+</code></pre>
+
+<h3 id="sdk-method">SDK Method</h3>
+
+<pre><code>(ApigeeClientResponse *)apiRequest: (NSString *)url operation:(NSString *)op data:(NSString *)opData
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| url                                  | A fully-formed url in the following  |
+|                                      | format:                              |
+|                                      |     https://api.usergrid.com/<org>/&lt; |
+|                                      | app&gt;/<collection>                    |
++--------------------------------------+--------------------------------------+
+| op                                   | The HTTP method - in this case,      |
+|                                      | 'POST'                               |
++--------------------------------------+--------------------------------------+
+| opData                               | No data is being sent, so the value  |
+|                                      | is `nil`                             |
++--------------------------------------+--------------------------------------+</collection></org></p>
+
+<p>Currently, creating an empty collection is not supported by the <a href="/app-services-sdks#android">App
+Services SDK for Android</a>.</p>
+
+<p>This example uses the <a href="/app-services-sdks#javascript">Apache Usergrid JavaScript (HTML5)
+SDK</a>.</p>
+
+<h3 id="example-requestresponse-2">Example Request/Response</h3>
+
+<h4 id="request-2">Request:</h4>
+
+<pre><code>//create the basic client object
+var dataClient = new Usergrid.Client({
+org_name:'your-org',
+app_name:'your-app'
+});
+
+//options for the request
+var options = {
+endpoint:"items",
+method:"POST"
+}
+
+dataClient.request(options,function (error,response) {
+
+if (error) { 
+    // Error
+} else { 
+    // Success
+}
+
+});    
+</code></pre>
+
+<h4 id="response-2">Response:</h4>
+
+<pre><code>Object {action: "post", application: "f34f4222-a166-11e2-a7f7-02e81adcf3d0", params: Object, path: "/items", uri: "http://api.usergrid.com/your-org/your-app/items"…}
+action: "post"
+application: "f34f4222-a166-11e2-a7f7-02e81adcf3d0"
+applicationName: "your-app"
+duration: 29
+entities: Array[0]
+organization: "your-org"
+params: Object
+path: "/items"
+timestamp: 1378872945962
+uri: "http://api.usergrid.com/your-org/your-app/items"
+__proto__: Object               
+</code></pre>
+
+<h3 id="sdk-method-1">SDK Method</h3>
+
+<pre><code>request(options, callback)
+</code></pre>
+
+<h3 id="parameters-1">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| options                              | A JSON-formatted object containing   |
+|                                      | the following properties:            |
+|                                      |                                      |
+|                                      | -   endpoint: the name of the        |
+|                                      |     collection to be created         |
+|                                      | -   method: the HTTP method for the  |
+|                                      |     request, in this case <em>POST</em>     |
++————————————–+————————————–+
+| callback                             | Callback function to handle the API  |
+|                                      | response                             |
++————————————–+————————————–+</p>
+
+<p>This example uses the <a href="/app-services-sdks#ruby">Apache Usergrid RubyGem</a>.</p>
+
+<h3 id="example-requestresponse-3">Example Request/Response</h3>
+
+<h4 id="request-3">Request:</h4>
+
+<pre><code>#Create a client object
+usergrid_api = 'https://api.usergrid.com'
+organization = 'your-org'
+application = 'your-app'
+
+client = Usergrid::Application.new "#{usergrid_api}/#{organization}/#{application}"
+
+begin
+    # Call create_entity to initiate the API call
+    # By specifying 'nil' for the request body, we get an empty collection
+    client.create_entity('item', nil)
+rescue
+    #fail
+end
+</code></pre>
+
+<h4 id="response-3">Response:</h4>
+
+<pre><code>{
+  "action" : "post",
+  "application" : "f34f4222-a166-11e2-a7f7-02e81adcf3d0",
+  "params" : { },
+  "path" : "/items",
+  "uri" : "http://api.usergrid.com/your-org/your-app/items",
+  "entities" : [ ],
+  "timestamp" : 1378857079220,
+  "duration" : 31,
+  "organization" : "your-org",
+  "applicationName" : "your-app"
+}
+</code></pre>
+
+<h3 id="sdk-method-2">SDK Method</h3>
+
+<pre><code>create_entity(type, properties)
+</code></pre>
+
+<h3 id="properties-1">Properties</h3>
+
+<p>Parameter    Description
+  ———— —————————————————————–
+  type         Custom entity type that will correspond to the collection
+  properties   Object that contains the entity properties – in this case 'nil'</p>
+
+<p>This example uses the <a href="/app-services-sdks#nodejs">Apache Usergrid Node.js
+module</a>.</p>
+
+<h3 id="example-requestresponse-4">Example Request/Response</h3>
+
+<h4 id="request-4">Request:</h4>
+
+<pre><code>//create the basic client object
+var dataClient = new Usergrid.client({
+org_name:'your-org',
+app_name:'your-app'
+});
+
+//options for the request
+var options = {
+endpoint:"items",
+method:"POST"
+}
+
+dataClient.request(options,function (error,response) {
+
+    if (error) { 
+        // Error
+    } else { 
+        // Success
+    }
+
+});     
+</code></pre>
+
+<h4 id="response-4">Response:</h4>
+
+<pre><code>{ action: 'post',
+  application: 'f34f4222-a166-11e2-a7f7-02e81adcf3d0',
+  params: {},
+  path: '/items',
+  uri: 'http://api.usergrid.com/your-org/your-app/items',
+  entities: [],
+  timestamp: 1378873689426,
+  duration: 29,
+  organization: 'your-org',
+  applicationName: 'your-app' }
+</code></pre>
+
+<h3 id="sdk-method-3">SDK Method</h3>
+
+<pre><code>entity.request(options,callback)
+</code></pre>
+
+<h3 id="parameters-2">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| options                              | A JSON-formatted object containing   |
+|                                      | the following properties:            |
+|                                      |                                      |
+|                                      | -   endpoint: the name of the        |
+|                                      |     collection to be created         |
+|                                      | -   method: the HTTP method for the  |
+|                                      |     request, in this case <em>POST</em>     |
++————————————–+————————————–+
+| callback                             | Callback function to handle the API  |
+|                                      | response                             |
++————————————–+————————————–+</p>
+
+<p> </p>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

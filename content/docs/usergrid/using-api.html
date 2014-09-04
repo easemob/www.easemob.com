@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Using the API | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Using the API
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h1 id="using-the-api">Using the API</h1>
+
+<p>Apache Usergrid uses a pure REST API. (See <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">Representational State
+Transfer</a>
+at Wikipedia for more information about the principles behind this type
+of API.)</p>
+
+<p>A REST API is built as a collection of resources. Resource locations are
+described by paths that are related intrinsically to collections and
+entities in collections. When building a REST API, the challenge is to
+represent the data and the action upon the data as a path to a resource
+that can be created, retrieved, updated, or deleted. The HTTP methods
+POST, GET, PUT, and DELETE correspond to the actions that are applied to
+resources.</p>
+
+<p>In forming Apache Usergrid API requests, resource paths are specified as
+URLs. For example, to cause the application my-app to retrieve data
+about a user named john.doe, you construct the following API request:</p>
+
+<pre><code>https://api.usergrid.com/my-org/my-app/users/john.doe
+</code></pre>
+
+<p>To get a listing of everything the user john.doe likes, use the
+following URL:</p>
+
+<pre><code>https://api.usergrid.com/my-org/my-app/users/john.doe/likes
+</code></pre>
+
+<p>To limit returned likes to entities of type restaurant, specify the
+following URL:</p>
+
+<pre><code>https://api.usergrid.com/my-org/my-app/users/john.doe/likes/restaurant
+</code></pre>
+
+<h2 id="basic-api-request-construction">Basic API request construction</h2>
+
+<p>All Apache Usergrid API requests are made
+to <a href="https://api.usergrid.com/">https://api.usergrid.com</a>.</p>
+
+<p>Apache Usergrid interprets the URL resource path as a list of names, UUIDs,
+or queries. The basic path format is:</p>
+
+<pre><code>https://{hostname}/{org-uuid|org-name}/{app-uuid|app-name}/{collection-name}[/{entity-uuid|entity-name}]
+</code></pre>
+
+<p>where {hostname} is https://api.usergrid.com.</p>
+
+<p><strong>Note:</strong> You cannot mix UUIDs and names in the URL resource path. For
+example, the following is incorrect:</p>
+
+<pre><code>https://api.usergrid.com/my-org/62de5d97-d28c-11e1-8d5c-12313b01d5c1/users/john.doe
+</code></pre>
+
+<p>Either use names only in the URL resource path, like this:</p>
+
+<pre><code>https://api.usergrid.com/my-org/my-app/users/john.doe
+</code></pre>
+
+<p>or UUIDs only.</p>
+
+<p>This section gives several examples of how to construct Apache Usergrid API
+requests. To focus on what's important, the examples use an abbreviated
+path that starts after the application UUID, or application name. For
+example, instead of giving a fully qualified path name as in:</p>
+
+<pre><code>https://api.usergrid.com/my-org/my-app/users
+</code></pre>
+
+<p>the example simply lists this:</p>
+
+<pre><code>/users
+</code></pre>
+
+<p>However, remember that in almost all cases, HTTP requests must include
+the fully qualified URL, as well as an access token for authentication.</p>
+
+<h2 id="accessing-collections">Accessing collections</h2>
+
+<p>To access all entities in a collection, specify the path as follows:</p>
+
+<pre><code>/users
+</code></pre>
+
+<p>Such a request retrieves the first 10 entities in the collection /users
+sorted by their entity UUID.</p>
+
+<h2 id="accessing-entities">Accessing entities</h2>
+
+<p>To access an entity in a collection, specify the path as follows:</p>
+
+<pre><code>/{collection}/{uuid|name}
+</code></pre>
+
+<p>where {collection} is the collection name, and {uuid|name} is the
+entity’s uuid or name.</p>
+
+<p>To access a user in the users collection, specify the path as follows:</p>
+
+<pre><code>/users/{uuid|username|email_address}
+</code></pre>
+
+<p>where {uuid|username|email_address} is the user’s uuid, username, or
+email address.</p>
+
+<p>For example, the following request retrieves the entity named dino from
+the dogs collection:</p>
+
+<pre><code>/dogs/dino
+</code></pre>
+
+<p>Anytime a logged-in user makes a request, the user can substitute "me"
+for the uuid or username. For example, the following request retrieves
+the current user:</p>
+
+<pre><code>/users/me
+</code></pre>
+
+<p><strong>Note:</strong> The /users/me endpoint is accessible only if the user provides
+an access token with the request (see <a href="/authenticating-users-and-application-clients">Authenticating users and
+application clients</a>). If
+an access token is not provided with the request, that is, the user
+makes an anonymous (or "guest") call, the system will not be able to
+determine which user to return as /users/me.</p>
+
+<h2 id="issuing-queries">Issuing queries</h2>
+
+<p>You can issue a query in an API request that retrieves items from a
+collection. Here is the typical format for queries:</p>
+
+<pre><code>/{collection}?ql={query}
+</code></pre>
+
+<p>where</p>
+
+<p>{query} is a query in the query language.</p>
+
+<p>For example, this request retrieves users whose Facebook first name is
+john:</p>
+
+<pre><code>/users?ql=select * where facebook.first_name ='john'
+</code></pre>
+
+<p>For further information about queries, see <a href="/queries-and-parameters">Queries and
+parameters</a>.</p>
+
+<h2 id="format-of-response-data">Format of response data</h2>
+
+<p>All API methods return a response object that typically contains an
+array of entities:</p>
+
+<pre><code>{
+  "entities" : [
+    ...
+  ]
+}
+</code></pre>
+
+<p>Not everything can be included inside the entity, and some of the data
+that gets associated with specific entities isn't part of their
+persistent representation. This is metadata, and it can be part of the
+response as well as associated with a specific entity. Metadata is just
+an arbitrary key/value JSON structure.</p>
+
+<p>For example:</p>
+
+<pre><code>{
+  "entities" : {
+    {
+      "name" : "ed",
+      "metadata" : {
+        "collections" : ["activities", "groups", "followers"]
+      }
+    }
+  },
+  "metadata" : {
+    "foo" : ["bar", "baz"]
+  }
+}
+</code></pre>
+
+<p>Here's a full example of the response object with one entity in the
+response (note that the Facebook property, which contains the entire
+Facebook profile of the user, is not displayed in the example due to its
+size):</p>
+
+<pre><code>{
+  "action" : "get",
+  "application" : "ddde7630-90b1-11e0-b91b-12313f0204bb",
+  "params" : { },
+  "path" : "/users",
+  "uri" : "https://api.usergrid.com/b91b-12313f0204bb-ddde7630-90b1-11e0/ddde7630-90b1-11e0-b91b-12313f0204bb/users",
+
+  "entities" : [
+    {
+      "created" : 1307415547108000,
+      "facebook" : { ... },
+      "uuid" : "1c18ca40-90b2-11e0-b91b-12313f0204bb",
+      "metadata" : {
+        "path" : "/users/1c18ca40-90b2-11e0-b91b-12313f0204bb",
+        "collections" : {
+          "activities" : "/users/1c18ca40-90b2-11e0-b91b-12313f0204bb/activities",
+          "feed" : "/users/1c18ca40-90b2-11e0-b91b-12313f0204bb/feed",
+          "groups" : "/users/1c18ca40-90b2-11e0-b91b-12313f0204bb/groups",
+          "messages" : "/users/1c18ca40-90b2-11e0-b91b-12313f0204bb/messages",
+          "queue" : "/users/1c18ca40-90b2-11e0-b91b-12313f0204bb/queue",
+          "roles" : "/users/1c18ca40-90b2-11e0-b91b-12313f0204bb/roles",
+          "following" : "/users/1c18ca40-90b2-11e0-b91b-12313f0204bb/following",
+          "followers" : "/users/1c18ca40-90b2-11e0-b91b-12313f0204bb/followers"
+        },
+        "sets" : {
+          "rolenames" : "/users/1c18ca40-90b2-11e0-b91b-12313f0204bb/rolenames",
+          "permissions" : "/users/1c18ca40-90b2-11e0-b91b-12313f0204bb/permissions"
+        }
+      },
+      "modified" : 1307415547108000,
+      "name" : "John Doe",
+      "picture" : "https://profile.ak.fbcdn.net/hprofile-ak-snc4/41501_217925_2656_q.jpg",
+      "type" : "user",
+      "username" : "john.doe"
+    }
+  ],
+  "timestamp" : 1309218486419,
+  "duration" : 40
+}
+</code></pre>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

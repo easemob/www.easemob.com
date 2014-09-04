@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Organization | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Organization
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<p>An organization represents the highest level of the Apache Usergrid data
+hierarchy. It contains applications (and the entities and collections
+they contain) and is associated with one or more administrators. An
+organization can be representative of a company, team, or project. It
+allows multiple applications  to be shared within the organization with
+other administrators.</p>
+
+<p>Using the App services API, you can create an organization through a
+form post and get an organization by UUID or name. In addition, you can
+activate or reactivate an organization, generate and retrieve an
+organization's client credentials, and get an organization's activity
+feed. You can also create an organization application through a form
+post, generate and retrieve credentials for the application, and delete
+the application. You can also get the applications in an organization.
+Additionally, you can add an admin user to an organization, get the
+admin users in an organization, and remove an admin user from an
+organization.</p>
+
+<h2 id="creating-an-organization">Creating an organization</h2>
+
+<p>Use the POST method to create an organization through a form post.</p>
+
+<h3 id="request-uri">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>POST /organizations</td>
+      <td>orgs {request body}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>Parameter</p>
+
+<p>Description</p>
+
+<p>request body</p>
+
+<p>The following set of organization properties supplied through a form:</p>
+
+<p>Property</p>
+
+<p>Description</p>
+
+<p>organization (string)</p>
+
+<p>The name of the organization.</p>
+
+<p>username (string)</p>
+
+<p>The username of the administrator.</p>
+
+<p>name (string)</p>
+
+<p>The name of the administrator.</p>
+
+<p>email (string)</p>
+
+<p>The email address of the administrator.</p>
+
+<p>password (string)</p>
+
+<p>The password of the administrator.</p>
+
+<p> </p>
+
+<h3 id="example---request">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_create_org">cURL</a></li>
+  <li><a href="#javascript_create_org">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_create_org">Ruby</a></li>
+  <li><a href="#nodejs_create_org">Node.js</a></li>
+</ul>
+
+<p><code>bash
+$ curl -X POST "https://api.usergrid.com/management/orgs" \
+       -d '{"password":"test12345","email":"tester123@hotmail.com","name":"test","username":"test123","organization":"testorg"}'
+</code></p>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<p><code>ruby
+mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+management.create_organization 'testorg', 'test123', 'test', 'tester123@hotmail.com', 'test12345'
+</code></p>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<p><code>javascript
+var options = {
+    method:'POST',
+    endpoint:'management/orgs',
+    body:{ 
+          password:'test12345', 
+          email:'tester12345@gmail.com', 
+          name:'test', 
+          username:'tes123', 
+          organization:'testorg' 
+    }    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></p>
+
+<h3 id="example---response">Example - Response</h3>
+
+<p><code>javascript
+{
+  "action": "new organization",
+  "status": "ok",
+  "data":  {
+    "owner":  {
+      "applicationId": "00000000-0000-0000-0000-000000000001",
+      "username": "tester123",
+      "name": "test",
+      "email": "tester123@hotmail.com",
+      "activated": false,
+      "disabled": false,
+      "uuid": "48c92c73-0d7e-11e2-98b9-12313d288ee0",
+      "adminUser": true,
+      "displayEmailAddress": "tester123 &lt;tester123@hotmail.com&gt;",
+      "htmldisplayEmailAddress": "tester123 &lt;&lt;a href="mailto:tester123@hotmail.com"&gt;tester123@hotmail.com&lt;/a&gt;&gt;"
+    },
+    "organization":  {
+      "name": "testorg",
+      "uuid": "5de0bb69-0d7f-11e2-87b9-12313d288ff0"
+    }
+  },
+  "timestamp": 1349284674173,
+  "duration": 21376
+}
+</code></p>
+
+<h2 id="getting-an-organization">Getting an organization</h2>
+
+<p>Use the GET method to retrieve an organization given a specified UUID or
+username.</p>
+
+<h3 id="request-uri-1">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>GET /organizations</td>
+      <td>orgs/{org_name}</td>
+      <td>{uuid}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Parameters</p>
+
+<p>Parameter                   Description
+  ————————— —————————————–
+  string org_name|arg uuid   Organization name or organization UUID.</p>
+
+<p><strong>Note:</strong> You also need to provide a valid access token with the API
+call. See <a href="/authenticating-users-and-application-clients">Authenticating users and application
+clients</a> for details.</p>
+
+<p> </p>
+
+<h3 id="example---request-1">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_org">cURL</a></li>
+  <li><a href="#javascript_get_org">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_org">Ruby</a></li>
+  <li><a href="#nodejs_get_org">Node.js</a></li>
+</ul>
+
+<p><code>bash
+curl -X GET "https://api.usergrid.com/management/orgs/testorg"
+</code></p>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<p><code>ruby
+mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+org = mgmt.organization 'testorg'
+</code></p>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<p><code>javascript
+var options = {
+    method:'GET',
+    endpoint:'management/orgs/testorg'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></p>
+
+<h3 id="example---response-1">Example - Response</h3>
+
+<p><code>javascript
+{
+  "timestamp": 1349286861746,
+  "duration": 18,
+  "organization":  {
+    "users":  {
+      "tester123":  {
+        "applicationId": "00000000-0000-0000-0000-000000000001",
+        "username": "tester123",
+        "name": "test",
+        "email": "tester123@hotmail.com",
+        "activated": true,
+        "disabled": false,
+        "uuid": "327b527f-cd0c-11e1-bcf7-12313d1c4491",
+        "adminUser": true,
+        "displayEmailAddress": "tester123 &lt;tester123@hotmail.com&gt;",
+        "htmldisplayEmailAddress": "tester123 &lt;&lt;a href="mailto:tester123@hotmail.com"&gt;tester123@hotmail.com&lt;/a&gt;&gt;"
+      }
+    },
+    "name": "testorg",
+    "applications":  {
+      "tester123/sandbox": "3400ba10-cd0c-11e1-bcf7-12313d1c4491",
+      "tester123/testapp1": "be08a5f9-fdd3-11e1-beca-12313d027471",
+      "tester123/testapp2": "cede5b7e-fe90-11e1-95c8-12313b122c56"
+    },
+    "uuid": "33dd0563-cd0c-11e1-bcf7-12313d1c4491"
+  }
+</code></p>
+
+<h2 id="activating-an-organization">Activating an organization</h2>
+
+<p>Use the GET method to activate an organization from a link provided in
+an email notification.</p>
+
+<h3 id="request-url">Request URL</h3>
+
+<p>GET
+/organizations|orgs/{org_name}|{uuid}/activate?token={token}&amp;confirm={confirm_email}</p>
+
+<p>Parameters</p>
+
+<p>Parameter                   Description
+  ————————— ————————————————-
+  string org_name|arg uuid   Organization name or organization UUID.
+  string token                Activation token (supplied via email).
+  boolean confirm_email      Send confirmation email (false is the default).</p>
+
+<p> </p>
+
+<h3 id="example---request-2">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_activate_org">cURL</a></li>
+  <li><a href="#javascript_activate_org">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_activate_org">Ruby</a></li>
+  <li><a href="#nodejs_activate_org">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/orgs/testorg/activate?token=33dd0563-cd0c-11e1-bcf7-12313d1c4491"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+mgmt['orgs/testorg/activate'].get params: { token: '33dd0563-cd0c-11e1-bcf7-12313d1c4491' }
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/orgs/testorg/activate',
+    qs:{token:'33dd0563-cd0c-11e1-bcf7-12313d1c4491'}
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-2">Example - Response</h3>
+
+<pre><code>{
+  "action": "activate organization",
+  "timestamp": 1337928462810,              
+  "duration": 3342
+}
+</code></pre>
+
+<h2 id="reactivating-an-organization">Reactivating an organization</h2>
+
+<p>Use the GET method to reactivate an organization.</p>
+
+<h3 id="request-uri-2">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>GET /organizations</td>
+      <td>orgs/{org_name}</td>
+      <td>{uuid}/reactivate</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Parameters</p>
+
+<p>Parameter                   Description
+  ————————— —————————————–
+  string org_name|arg uuid   Organization name or organization UUID.</p>
+
+<p> </p>
+
+<h3 id="example---request-3">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_reactivate_org">cURL</a></li>
+  <li><a href="#javascript_reactivate_org">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_reactivate_org">Ruby</a></li>
+  <li><a href="#nodejs_reactivate_org">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/orgs/testorg/reactivate"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p> </p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+mgmt['orgs/testorg/reactivate']
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/orgs/testorg/reactivate'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-3">Example - Response</h3>
+
+<pre><code>{
+  "action": "reactivate organization",
+  "timestamp": 1349385280891,
+  "duration": 3612
+}
+</code></pre>
+
+<h2 id="generating-organization-client-credentials">Generating organization client credentials</h2>
+
+<p>Use the POST method to generate new credentials for an organization
+client.</p>
+
+<h3 id="request-uri-3">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>POST /organizations</td>
+      <td>orgs/{org_name}</td>
+      <td>{uuid}/credentials</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Parameters</p>
+
+<p>Parameter                   Description
+  ————————— —————————————–
+  string org_name|arg uuid   Organization name or organization UUID.</p>
+
+<p><strong>Note:</strong> You also need to provide a valid access token with the API
+call. See <a href="/authenticating-users-and-application-clients">Authenticating users and application
+clients</a> for details.</p>
+
+<p> </p>
+
+<h3 id="example---request-4">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_gen_org_credentials">cURL</a></li>
+  <li><a href="#javascript_gen_org_credentials">JavaScript</a></li>
+  <li><a href="#ruby_gen_org_credentials">Ruby</a></li>
+  <li><a href="#nodejs_gen_org_credentials">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X POST "https://api.usergrid.com/management/orgs/credentials"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+mgmt['orgs/credentials'].create
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'management/orgs/credentials'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-4">Example - Response</h3>
+
+<pre><code>{
+  "action": "generate organization client credentials",
+  "timestamp": 1349385795647,
+  "duration": 7,
+  "credentials":  {
+    "client_id": "c2V7N61DY90MCdG78xIxPRxFdQ",                  
+    "client_secret": "c2V7WEdXIutZWEkWdySLCt_lYDFVMMN"                      
+  }
+}
+</code></pre>
+
+<h2 id="retrieving-organization-client-credentials">Retrieving organization client credentials</h2>
+
+<p>Use the GET method to retrieve the credentials for an organization
+client.</p>
+
+<h3 id="request-url-1">Request URL</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>GET /organizations</td>
+      <td>orgs/{org_name}</td>
+      <td>{uuid}/credentials</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Parameters</p>
+
+<p>Parameter                   Description
+  ————————— —————————————–
+  string org_name|arg uuid   Organization name or organization UUID.</p>
+
+<p><strong>Note:</strong> You also need to provide a valid access token with the API
+call. See <a href="/authenticating-users-and-application-clients">Authenticating users and application
+clients</a> for details.</p>
+
+<p> </p>
+
+<h3 id="example---request-5">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_org_credentials">cURL</a></li>
+  <li><a href="#javascript_get_org_credentials">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_org_credentials">Ruby</a></li>
+  <li><a href="#nodejs_get_org_credentials">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/orgs/testorg/credentials"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+mgmt['orgs/testorg/credentials']
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/orgs/testorg/credentials'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-5">Example - Response</h3>
+
+<pre><code>{
+  "action": "get organization client credentials",
+  "timestamp": 1349386672984,
+  "duration": 690,
+  "credentials":  {
+    "client_id": "c2V7N61DY90MCdG78xIxPRxFdQ",                  
+    "client_secret": "c2V7WEdXIutZWEkWdySLCt_lYDFVMMN"                      
+  }
+}
+</code></pre>
+
+<h2 id="getting-an-organizations-activity-feed">Getting an organization's activity feed</h2>
+
+<p>Use the GET method to get an organization's activity feed.</p>
+
+<h3 id="request-uri-4">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>GET /organizations</td>
+      <td>orgs/{org_name}</td>
+      <td>{uuid}/feed</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Parameters</p>
+
+<p>Parameter                   Description
+  ————————— —————————————–
+  string org_name|arg uuid   Organization name or organization UUID.</p>
+
+<p><strong>Note:</strong> You also need to provide a valid access token with the API
+call. See <a href="/authenticating-users-and-application-clients">Authenticating users and application
+clients</a> for details.</p>
+
+<p> </p>
+
+<h3 id="example---request-6">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_org_feed">cURL</a></li>
+  <li><a href="#javascript_get_org_feed">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_org_feed">Ruby</a></li>
+  <li><a href="#nodejs_get_org_feed">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/orgs/testorg/feed"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+activities = mgmt['orgs/testorg/feed'].collection
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/orgs/testorg/feed'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-6">Example - Response</h3>
+
+<pre><code>{
+ {
+  "action": "get organization feed",
+  "status": "ok",
+  "entities":  [
+     {
+      "uuid": "cf4d981c-fe90-11e1-95c8-12313b122c56",
+      "type": "activity",
+      "created": 1347643370454,
+      "modified": 1347643370454,
+      "actor":  {
+        "displayName": "tester123",
+        "objectType": "person",
+        "uuid": "327b527f-cd0c-11e1-bcf7-12313d1c4491",
+        "entityType": "user"
+      },
+      "category": "admin",
+      "metadata":  {
+        "cursor": "gGkAAQMAgGkABgE5xc3r1gCAdQAQz02YHP6QEeGVyBIxOxIsVgCAdQAQz3SoH_6QEeGVyBIxOxIsVgA",
+        "path": "/groups/33dd0563-cd0c-11e1-bcf7-12313d1c4491/feed/cf4d981c-fe90-11e1-95c8-12313b122c56"
+      },
+"object":  {
+        "displayName": "testapp2",
+        "objectType": "Application",
+        "uuid": "cede5b7e-fe90-11e1-95c8-12313b122c56",
+        "entityType": "application_info"
+      },
+      "published": 1347643370454,
+      "title": "&lt;a mailto="mailto:tester123@hotmail.com"&gt;tester123 (tester123@hotmail.com)&lt;/a&gt; created a new application named testapp2",
+      "verb": "create"
+    },...
+,
+  "timestamp": 1349387253811,
+</code></pre>
+
+<h2 id="creating-an-organization-application">Creating an organization application</h2>
+
+<p>Use the POST method to create an application for an organization through
+a form post.</p>
+
+<h3 id="request-uri-5">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>POST /organizations</td>
+      <td>orgs/{org_name}</td>
+      <td>{org_uuid}/apps {request body}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="parameters-1">Parameters</h3>
+
+<p>Parameter</p>
+
+<p>Description</p>
+
+<p>request body</p>
+
+<p>The following set of organization properties supplied through a form:.</p>
+
+<p>Property</p>
+
+<p>Description</p>
+
+<p>access token (string)</p>
+
+<p>The OAuth2 access token.</p>
+
+<p>name (string)</p>
+
+<p>The name of the application.</p>
+
+<p> </p>
+
+<h3 id="example---request-7">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_create_org_app">cURL</a></li>
+  <li><a href="#javascript_create_org_app">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_create_org_app">Ruby</a></li>
+  <li><a href="#nodejs_create_org_app">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X -i POST "https://api.usergrid.com/management/orgs/testorg/apps" -d '{"access_token":"YWMtmNIFFBI6EeKvXSIACowF7QAAATpL0bVQtGOWe8PMwLfQ9kD_VKQa7IH4UBQ","name":"testapp1"}'
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p> </p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+mynewapp = mgmt['orgs/testorg/apps'].create name: 'testapp1', access_token: 'YWMtmNIFFBI6EeKvXSIACowF7QAAATpL0bVQtGOWe8PMwLfQ9kD_VKQa7IH4UBQ'
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'management/orgs/testorg/apps',
+    body:{ 
+          access_token:'YWMtmNIFFBI6EeKvXSIACowF7QAAATpL0bVQtGOWe8PMwLfQ9kD_VKQa7IH4UBQ', 
+          name:'testapp1' 
+    }    
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call        
+    }
+});
+</code></pre>
+
+<h3 id="example---response-7">Example - Response</h3>
+
+<pre><code>{
+  "action": "new application for organization",
+  "timestamp": 1338914698135,
+  "duration": 701
+}
+</code></pre>
+
+<h2 id="deleting-an-organization-application">Deleting an organization application</h2>
+
+<p>Use the DELETE method to delete an application from an organization.</p>
+
+<h3 id="request-uri-6">Request URI</h3>
+
+<p>DELETE
+/organizations|orgs/{org_name}|{org_uuid}/apps/{app_name}|{app_uuid}</p>
+
+<p>Parameters</p>
+
+<p>Parameter                   Description
+  ————————— —————————————–
+  string org_name|arg uuid   Organization name or organization UUID.
+  string app_name|arg uuid   Application name or application UUID.</p>
+
+<p><strong>Note:</strong> You also need to provide a valid access token with the API
+call. See <a href="/authenticating-users-and-application-clients">Authenticating users and application
+clients</a> for details.</p>
+
+<p> </p>
+
+<h3 id="example---request-8">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_delete_org_app">cURL</a></li>
+  <li><a href="#javascript_delete_org_app">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_delete_org_app">Ruby</a></li>
+  <li><a href="#nodejs_delete_org_app">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X DELETE "https://api.usergrid.com/management/orgs/testorg/apps/testapp1"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p> </p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+mgmt['orgs/testorg/apps/testapp1'].delete
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'management/orgs/testorg/apps/testapp1'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-8">Example - Response</h3>
+
+<pre><code>{
+  "action": "delete application from organization",
+  "timestamp": 1349817715666,
+  "duration": 0
+}
+</code></pre>
+
+<h2 id="generating-application-credentials">Generating application credentials</h2>
+
+<p>Use the POST method to generate the client ID and client secret
+credentials for an application in an organization.</p>
+
+<h3 id="request-uri-7">Request URI</h3>
+
+<p>POST
+/organizations|orgs/{org_name}|{uuid}/applications|apps/{app_name}|{uuid}/credentials</p>
+
+<p>Parameters</p>
+
+<p>Parameter                   Description
+  ————————— —————————————–
+  string org_name|arg uuid   Organization name or organization UUID.
+  string app_name|arg uuid   Application name or application UUID.</p>
+
+<p><strong>Note:</strong> You also need to provide a valid access token with the API
+call. See <a href="/authenticating-users-and-application-clients">Authenticating users and application
+clients</a> for details.</p>
+
+<p> </p>
+
+<h3 id="example---request-9">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_gen_app_credentials">cURL</a></li>
+  <li><a href="#javascript_gen_app_credentials">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_gen_app_credentials">Ruby</a></li>
+  <li><a href="#nodejs_gen_app_credentials">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X POST "https://api.usergrid.com/management/orgs/testorg/apps/testapp1/credentials"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+mgmt['orgs/testorg/apps/testapp1/credentials'].create
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'management/orgs/testorg/apps/testapp1/credentials'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — POST failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-9">Example - Response</h3>
+
+<pre><code>{
+  "action": "generate application client credentials",
+  "timestamp": 1349815979529,
+  "duration": 535,
+  "credentials":  {
+    "client_id": "YXA7ygil-f3TEeG-yhIxPQK1cQ",
+    "client_secret": "YXA65gYlqja8aYYSAy8Ox3Vg5aRZp48"
+  }
+}
+</code></pre>
+
+<h2 id="getting-application-credentials">Getting application credentials</h2>
+
+<p>Use the GET method to retrieve the client ID and client secret
+credentials for an application in an organization.</p>
+
+<h3 id="request-uri-8">Request URI</h3>
+
+<p>GET
+/organizations|orgs/{org_name}|{uuid}/applications|apps/{app_name}|{uuid}/credentials</p>
+
+<p>Parameters</p>
+
+<p>Parameter                   Description
+  ————————— —————————————–
+  string org_name|arg uuid   Organization name or organization UUID.
+  string app_name|arg uuid   Application name or application UUID.</p>
+
+<p><strong>Note:</strong> You also need to provide a valid access token with the API
+call. See <a href="/authenticating-users-and-application-clients">Authenticating users and application
+clients</a> for details.</p>
+
+<p> </p>
+
+<h3 id="example---request-10">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_app_credentials">cURL</a></li>
+  <li><a href="#javascript_get_app_credentials">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_app_credentials">Ruby</a></li>
+  <li><a href="#nodejs_get_app_credentials">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/orgs/testorg/apps/testapp1/credentials"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+mgmt['orgs/testorg/apps/testapp1/credentials']
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/orgs/testorg/apps/testapp1/credentials'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-10">Example - Response</h3>
+
+<pre><code>{
+  "action": "get application client credentials",
+  "timestamp": 1349816819545,
+  "duration": 7,
+  "credentials":  {
+    "client_id": "YXA7ygil-f3TEeG-yhIxPQK1cQ",
+    "client_secret": "YXA65gYlqja8aYYSAy8Ox3Vg5aRZp48"
+  }
+}
+</code></pre>
+
+<h2 id="getting-the-applications-in-an-organization">Getting the applications in an organization</h2>
+
+<p>Use the GET method to retrieve the applications in an organization.</p>
+
+<h3 id="request-uri-9">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>GET /organizations</td>
+      <td>orgs/{org_name}</td>
+      <td>{uuid}/applications</td>
+      <td>apps</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Parameters</p>
+
+<p>Parameter                   Description
+  ————————— —————————————–
+  string org_name|arg uuid   Organization name or organization UUID.</p>
+
+<p><strong>Note:</strong> You also need to provide a valid access token with the API
+call. See <a href="/authenticating-users-and-application-clients">Authenticating users and application
+clients</a> for details.</p>
+
+<p> </p>
+
+<h3 id="example---request-11">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_apps_org">cURL</a></li>
+  <li><a href="#javascript_get_apps_org">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_apps_org">Ruby</a></li>
+  <li><a href="#nodejs_get_apps_org">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/orgs/testorg/apps"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p> </p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+apps = mgmt['orgs/testorg/apps'].collection
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/orgs/testorg/apps'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<p> </p>
+
+<h3 id="example---response-11">Example - Response</h3>
+
+<pre><code>{
+  "action": "get organization application",
+  "data":  {
+    "testorg/sandbox": "3500ba10-cd0c-11e1-bcf8-12313d1c5591",
+    "testorg/testapp1": "be09a5f9-fdd3-11e1-beca-12313d027361",
+    "testorg/testapp2": "cede5b8e-fe90-11e1-65c8-12313b111c56"    
+  },
+  "timestamp": 1349815338635,
+  "duration": 22
+}
+</code></pre>
+
+<h2 id="adding-an-admin-user-to-an-organization">Adding an admin user to an organization</h2>
+
+<p>Use the PUT method to add an existing admin user to an organization.</p>
+
+<h3 id="request-uri-10">Request URI</h3>
+
+<p>PUT
+/organizations|orgs/{org_name}|{org_uuid}/users/{username|email|uuid}</p>
+
+<h3 id="parameters-2">Parameters</h3>
+
+<p>Parameter                               Description
+  ————————————— ———————————————-
+  string org_name|arg org_uuid          Organization name or organization UUID.
+  string username|string email|arg uuid   User name, user email address, or user UUID.</p>
+
+<p> </p>
+
+<h3 id="example---request-12">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_add_admin_user">cURL</a></li>
+  <li><a href="#javascript_add_admin_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_add_admin_user">Ruby</a></li>
+  <li><a href="#nodejs_add_admin_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X PUT "https://api.usergrid.com/management/orgs/testorg/users/test123"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+mgmt['orgs/testorg/users/test123'].put nil
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'PUT',
+    endpoint:'management/orgs/testorg/users/test123'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — PUT failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-12">Example - Response</h3>
+
+<pre><code>{
+  "action": "add user to organization",
+  "status": "ok",
+  "data":  {
+    "user":  {
+      "applicationId": "00000000-0000-0000-0000-000000000001",
+      "username": "tester123",
+      "name": "test",
+      "email": "tester123@hotmail.com",
+      "activated": true,
+      "disabled": false,
+      "uuid": "335b527f-cd0d-11e1-bef8-12331d1c5591",
+      "adminUser": true,
+      "displayEmailAddress": "tester123 &lt;tester123@hotmail.com&gt;",
+      "htmldisplayEmailAddress": "tester123 &lt;&lt;a href="mailto:tester123@hotmail.com"&gt;tester123@hotmail.com&lt;/a&gt;&gt;"
+    }
+  },
+  "timestamp": 1349390189106,
+  "duration": 11808
+}
+</code></pre>
+
+<h2 id="getting-the-admin-users-in-an-organization">Getting the admin users in an organization</h2>
+
+<p>Use the GET method to retrieve details about the admin users in an
+organization.</p>
+
+<h3 id="request-uri-11">Request URI</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>GET /organizations</td>
+      <td>orgs/{org_name}</td>
+      <td>{org_uuid}/users</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="parameters-3">Parameters</h3>
+
+<p>Parameter                        Description
+  ——————————– —————————————–
+  string org_name|arg org_uuid   Organization name or organization UUID.</p>
+
+<p> </p>
+
+<h3 id="example---request-13">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_get_admin_users">cURL</a></li>
+  <li><a href="#javascript_get_admin_users">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_get_admin_users">Ruby</a></li>
+  <li><a href="#nodejs_get_admin_users">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X GET "https://api.usergrid.com/management/orgs/testorg/users"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+admins = mgmt['orgs/testorg/users']
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'GET',
+    endpoint:'management/orgs/testorg/users'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — GET failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-13">Example - Response</h3>
+
+<pre><code>{
+  "action": "get organization users",
+  "data":  {
+    "user":  {
+      "applicationId": "00000000-0000-0000-0000-000000000001",
+      "username": "tester123",
+      "name": "test",
+      "email": "tester123@hotmail.com",
+      "activated": true,
+      "disabled": false,
+      "uuid": "335b527f-cd0d-11e1-bef8-12331d1c5591",
+      "adminUser": true,
+      "displayEmailAddress": "tester123 &lt;tester123@hotmail.com&gt;",
+      "htmldisplayEmailAddress": "tester123 &lt;&lt;a href="mailto:tester123@hotmail.com"&gt;tester123@hotmail.com&lt;/a&gt;&gt;"
+    }
+  },
+  "timestamp": 13494542201685,
+  "duration": 10
+}
+</code></pre>
+
+<h2 id="removing-an-admin-user-from-an-organization">Removing an admin user from an organization</h2>
+
+<p>Use the DELETE method to remove an admin user from an organization.</p>
+
+<h3 id="request-uri-12">Request URI</h3>
+
+<p>DELETE
+/organizations|orgs/{org_name}|{org_uuid}/users/{username|email|uuid}</p>
+
+<h3 id="parameters-4">Parameters</h3>
+
+<p>Parameter                               Description
+  ————————————— ———————————————-
+  string org_name|arg org_uuid          Organization name or organization UUID.
+  string username|string email|arg uuid   User name, user email address, or user UUID.</p>
+
+<p> </p>
+
+<h3 id="example---request-14">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_delete_admin_user">cURL</a></li>
+  <li><a href="#javascript_delete_admin_user">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_delete_admin_user">Ruby</a></li>
+  <li><a href="#nodejs_delete_admin_user">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X DELETE "https://api.usergrid.com/management/orgs/testorg/users/test123"
+</code></pre>
+
+<p>It is recommended that you use the <a href="http://apigee.com/usergrid">Admin
+Portal</a> for administrative activities
+instead of using JavaScript to do them programmatically in your app.</p>
+
+<p><strong>Note:</strong>You can see the response below in the Admin Portal by using the
+<a href="/docs/usergrid/content/displaying-app-services-api-calls-curl-commands">JavaScript
+Console</a>.</p>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>mgmt = Usergrid::Management.new 'https://api.usergrid.com/'
+mgmt['orgs/testorg/users/test123'].delete
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'DELETE',
+    endpoint:'management/orgs/testorg/users/test123'
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error — DELETE failed
+    } else {
+        //success — data will contain raw results from API call       
+    }
+});
+</code></pre>
+
+<h3 id="example---response-14">Example - Response</h3>
+
+<pre><code>{
+  "action": "remove user from organization",
+  "status": "ok",
+  "data":  {
+    "user":  {
+      "applicationId": "00000000-0000-0000-0000-000000000001",
+      "username": "tester123",
+      "name": "test",
+      "email": "tester123@hotmail.com",
+      "activated": true,
+      "disabled": false,
+      "uuid": "335b527f-cd0d-11e1-bef8-12331d1c5591",
+      "adminUser": true,
+      "displayEmailAddress": "tester123 &lt;tester123@hotmail.com&gt;",
+      "htmldisplayEmailAddress": "tester123 &lt;&lt;a href="mailto:tester123@hotmail.com"&gt;tester123@hotmail.com&lt;/a&gt;&gt;"
+    }
+  },
+  "timestamp": 1349453590005,
+  "duration": 727
+}
+</code></pre>
+
+<p> </p>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

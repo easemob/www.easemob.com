@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>App Security Overview | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body>
+    <div id="content" class="bs-header">
+      <div class="container">
+        <h1>
+          App Security Overview
+        </h1>
+        <p>
+          Easemob
+        </p>
+      </div>
+    </div>
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-12" role="main">
+          <h1 id="app-security-overview">App Security Overview</h1>
+          
+          <p>Any app you put into production should feature security that protects
+          your app, your users, and your app's data. Implementing security means
+          taking steps in your mobile app's code and in your Apache Usergrid
+          application.</p>
+          
+          <p><strong>Warning:</strong> When you register for Apache Usergrid, you get a sandbox
+          application that you can use to try things out. This application is not
+          for use in production. By default, the sandbox application is not
+          protected by any security measures whatsoever. Use the sandbox only for
+          experimentation, and only with data that isn't in any way sensitive.</p>
+          
+          <p>When securing your app, follow these high-level steps:</p>
+          
+          <ol>
+            <li>In your Apache Usergrid application, use the admin portal to define
+          your app users' access to your app's data and features. You do this
+          by creating permission rules, then associating those rules with your
+          users. For more information, see <a href="/managing-access-defining-permission-rules">Managing access by defining
+          permission rules</a>.</li>
+            <li>In your app, write code through which your app's users can verify
+          who they are to your Apache Usergrid application. You do this by
+          writing code that uses their username and password as credentials to
+          initially authenticate with the Apache Usergrid application, then uses
+          a token thereafter. (This authentication style supports the OAuth
+          2.0 model.) For more information, see <a href="/authenticating-users-and-application-clients">Authenticating users and
+          application clients</a>.</li>
+            <li>Be sure to use coding best practices that help ensure that your app
+          is protected from malicious attacks. For more information, see
+          <a href="/securing-your-app">Securing your app</a>.</li>
+          </ol>
+          
+          <p>The following illustration describes these high-level areas.</p>
+          
+          <p><img src="/docs/sites/docs/files/styles/large/public/security_model_0.png?itok=_fErNYbL" alt="" /></p>
+          
+        </div>
+      </div>
+    </div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

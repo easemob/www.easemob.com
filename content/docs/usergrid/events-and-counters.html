@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Events and counters | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Events and counters
+    </h1>
+    <p>
+      Easemob
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h1 id="events-and-counters">Events and counters</h1>
+
+<p><strong>Beta Feature</strong>\
+\
+ Please note that this is currently a beta feature. As a result, some
+functionality may not work as expected.</p>
+
+<p>Events are typically used for application logging. For example, they
+could be used to log error messages that a system administrator might
+review at a later time. The event mechanism is optimized to handle large
+numbers of events, so it is an ideal mechanism for logging in your
+application.</p>
+
+<p>You can link events to specific users, groups, or custom-defined
+categories. When created with these links, events offer a powerful tool
+for running highly targeted, custom reports.</p>
+
+<p>Events are also the primary way to store custom counter data for
+analytics. See Counters (below) for further details.</p>
+
+<p><strong>Note:</strong> Although not shown in the API examples below, you need to
+provide a valid access token with each API call. See <a href="/authenticating-users-and-application-clients">Authenticating
+users and application
+clients</a> for details.</p>
+
+<p>Using App services APIs you can create an event.</p>
+
+<h2 id="creating-a-new-event">Creating a new event</h2>
+
+<p>Use the POST method to create a new event in the events collection.</p>
+
+<h3 id="request-uri">Request URI</h3>
+
+<p>POST /{org_id}/{app_id}/events {request body}</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>+————————————–+————————————–+
+| Parameter                            | Description                          |
++======================================+======================================+
+| arg uuid|string org_id              | Organization UUID or organization    |
+|                                      | name                                 |
++————————————–+————————————–+
+| arg uuid|string app_id              | Application UUID or application name |
++————————————–+————————————–+
+| request body                         | One or more sets of event            |
+|                                      | properties. You must provide a       |
+|                                      | timestamp property, but if you set   |
+|                                      | it to 0 it is assigned by the        |
+|                                      | system.                              |
+|                                      |                                      |
+|                                      |     {                                |
+|                                      |       "timestamp":0,                 |
+|                                      |       "category" : "advertising",    |
+|                                      |       "counters" : {                 |
+|                                      |         "ad_clicks" : 5              |
+|                                      |       }                              |
+|                                      |     }                                |
++————————————–+————————————–+</p>
+
+<h3 id="example---request">Example - Request</h3>
+
+<ul>
+  <li><a href="#curl_create_event">cURL</a></li>
+  <li><a href="#javascript_create_event">JavaScript (HTML5)</a></li>
+  <li><a href="#ruby_create_event">Ruby</a></li>
+  <li><a href="#nodejs_create_event">Node.js</a></li>
+</ul>
+
+<!-- -->
+
+<pre><code>curl -X POST "https://api.usergrid.com/my-org/my-app/events" -d '{"timestamp":0, "category" : "advertising", "counters" : {"ad_clicks" : 5}}'
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-javascript-sdk">JavaScript (HTML5)
+SDK</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'events',
+    body:{timestamp:0, category:'advertising', counters:{ad_clicks : 5}}
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error
+    } else {
+        //success - data will contain raw results from API call
+    }
+});
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/scottganyo/usergrid_iron">Ruby
+SDK</a>.</p>
+
+<pre><code>app = Usergrid::Application.new 'https://api.usergrid.com/my-org/my-app/'
+result = app.create_event timestamp: '0', category: 'advertising', counters: { ad_clicks: 5 }
+mynewevent = result.entity   
+</code></pre>
+
+<p>The example assumes use of the <a href="https://github.com/apigee/usergrid-node-module">Node.js
+module</a>.</p>
+
+<pre><code>var options = {
+    method:'POST',
+    endpoint:'events',
+    body:{timestamp:0, category:'advertising', counters:{ad_clicks : 5}}
+};
+client.request(options, function (err, data) {
+    if (err) {
+        //error
+    } else {
+        //success - data will contain raw results from API call
+    }
+});
+</code></pre>
+
+<h3 id="example---response">Example - Response</h3>
+
+<pre><code>{
+      "action": "post",
+      "application": "7fb8d891-477d-11e1-b2bd-22000a1c4e22",
+      "params": {},
+      "path": "/events",
+      "uri": "https://api.usergrid.com/22000a1c4e22-7fb8d891-477d-11e1-b2bd/7fb8d891-477d-11e1-b2bd-22000a1c4e22/events",
+      "entities": [
+        {
+          "uuid": "ce07ea3c-68b5-11e1-a586-9227e40e3559",
+          "type": "event",
+          "created": 1331166585282,
+          "modified": 1331166585282,
+          "counters": {
+            "ad_clicks": 5
+          },
+          "metadata": {
+            "path": "/events/ce07ea3c-68b5-11e1-a586-9227e40e3559"
+          },
+          "timestamp": 1331166585282
+        }
+      ],
+      "timestamp": 1331166585018,
+      "duration": 919,
+      "organization": "my-org",
+      "applicationName": "my-app"
+}
+</code></pre>
+
+<h2 id="event-properties">Event properties</h2>
+
+<p>You can pass various system-defined properties for an event. For
+example, you can specify a user property, with a uuid as its value. This
+will link the event to the user and can be used to query against the
+events queue (see Categorization below). The same is true for the group
+property. Pass it with a uuid as the value and the event will be linked
+to the group. To include a uuid of a user or group, add the uuid to the
+request body, for example:</p>
+
+<pre><code>POST https://api.usergrid.com/my-org/my-app/events {"timestamp":0, "category" : "advertising", "counters" :  {"ad_clicks" : 5},"user" : "1234891-477d-11e1-b2bd-22005a1c4e22", "group" : "75577d891-347d-2231-b5bd-23400a1c4e22"}
+</code></pre>
+
+<p>The response body would look something like this:</p>
+
+<pre><code>{
+ "action": "post",
+ "application": "7fb8d891-477d-11e1-b2bd-22000a1c4e22",
+ "params": {},
+ "path": "/events",
+ "uri": "https://api.usergrid.com/22000a1c4e22-7fb8d891-477d-11e1-b2bd/7fb8d891-477d-11e1-b2bd-22000a1c4e22/events",
+ "entities": [
+   {
+     "uuid": "ce07ea3c-68b5-11e1-a586-9227e40e3559",
+     "user": "1234891-477d-11e1-b2bd-22005a1c4e22",
+     "group": "75577d891-347d-2231-b5bd-23400a1c4e22",
+     "type": "event",
+     "created": 1331166585282,
+     "modified": 1331166585282,
+     "counters": {
+       "ad_clicks": 5
+     },
+     "metadata": {
+       "path": "/events/ce07ea3c-68b5-11e1-a586-9227e40e3559"
+     },
+     "timestamp": 1331166585282
+   }
+ ],
+ "timestamp": 1331166585018,
+ "duration": 919,
+ "organization": "my-org",
+ "applicationName": "my-app"
+}
+</code></pre>
+
+<p>You can also create application-specific event properties in addition to
+these predefined properties. The system-defined properties are reserved.
+You cannot use these names to create other properties for an event
+entity. In addition the events name is reserved for the events
+collection — you can't use it to name another collection.</p>
+
+<p>The System-defined properties are as follows:</p>
+
+<p>Property    Type     Description
+  ———– ——– ——————————————————————————————-
+  uuid        UUID     Event’s unique entity ID
+  type        String   "event"
+  created     long     <a href="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</a> of entity creation
+  modified    long     <a href="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</a> of entity modification
+  timestamp   long     <a href="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</a> of application event (mandatory)
+  user        UUID     UUID of application user that posted the event
+  group       UUID     UUID of application group that posted the event
+  category    string   Category used for organizing similar events
+  counters    map      Counter used for tracking number of similar events
+  message     string   Message describing event</p>
+
+<h3 id="categorizing-events">Categorizing events</h3>
+
+<p>As mentioned previously, you can link an event to a user or a group.
+This enables you to categorize and qualify event data for use in
+tracking and analysis. For example, linking events to users and groups,
+enables you to track how often people use a feature. Not only can you
+determine the total number of users that used the feature, but also
+which groups contain users that made the most use of the feature. Or,
+you could provide a location with the event, so you could see how often
+a feature was used by people in San Francisco versus Los Angeles.</p>
+
+<h2 id="counters">Counters</h2>
+
+<p>User-defined counters are used in conjunction with events to keep
+statistics on many aspects of an application. User-defined counters are
+JSON objects that are added to events when they are posted. The act of
+posting an event increments the counter. Once created, user-defined
+counters can be used to get reports.</p>
+
+<p><strong>Note:</strong> It may take up to 30 seconds for a counter to be updated.</p>
+
+<h3 id="user-defined-counters">User-Defined Counters</h3>
+
+<p>With Apache Usergrid, you can define your own counters. Some of the things
+that you might track with a user-defined counter are:</p>
+
+<ul>
+  <li>How many times people click on the help button in your application.</li>
+  <li>How many times your game is played each day.</li>
+  <li>How many times your banner ads are clicked each day.</li>
+</ul>
+
+<p>You can choose any name for a user-defined counter. For example, the
+counter for the help button might be named “help_button” or
+“help_button_clicks”.</p>
+
+<p>To create a user-defined counter, you post to the events collection and
+specify the name and increment value of the counter in the request body.
+The increment value is the value that the counter is incremented by for
+each tracked event. An increment value of 1, means that the counter is
+increment by 1 for each tracked event. You could also specify a higher
+increment value, such as 15, which would increment the value by that
+number, or a negative number, which would decrement the value.  You can
+also reset the value of the counter, by specifying an increment value of
+0.</p>
+
+<p>When a counter is incremented by an event, there will be a 20-30 second
+delay between when the event is posted and when the counter is
+incremented. </p>
+
+<p>As an example, here's how to create a user-defined counter named
+“button_clicks” with an increment value of 1:</p>
+
+<pre><code>POST https://api.usergrid.com/my-org/my-app/events {"counters" : {"button_clicks" : 1},"timestamp" : "0"}
+</code></pre>
+
+<p>The response body would look something like this:</p>
+
+<pre><code>{
+   "action": "post",
+   "path": "/events",
+   "uri": "http://api.usergrid.com/438a1ca1-cf9b-11e0-bcc1-12313f0204bb/events",
+   "entities": [
+       {
+           "uuid": "39d41c46-d8e4-11e0-bcc1-12313f0204bb",
+           "type": "event",
+           "timestamp": 1315353555546016,
+           "category":"advertising",
+           "counters": {
+               "button_clicks": 1
+           },
+           "created": 1315353555546016,
+           "modified": 1315353555546016,
+           "metadata": {
+           "path": "/events/39d41c46-d8e4-11e0-bcc1-12313f0204bb"
+           }
+       }
+   ],
+   "timestamp": 1315353555537,
+   "duration": 110,
+   "organization": "my-org",
+   "applicationName": "my-app"
+}
+</code></pre>
+
+<h3 id="counter-hierarchy">Counter hierarchy</h3>
+
+<p>Counters are hierarchical in their structure and in the way they are
+incremented. Each level of the hierarchy is separated by the dot “.”
+operator. The hierarchical structure can be useful if you want to store
+or view statistics in a hierarchical way. For example, suppose you want
+to log errors that your app generates. One way to do this, is to fire an
+event every time an error occurs, by creating a counter called “errors”.
+However, you can get more detail by adding additional parameters to the
+counter. Imagine that you want to track errors in a specific module and
+function within that module, say module_1, function_1, you could use a
+counter like this:</p>
+
+<p>errors.module_1.function_1</p>
+
+<p>And then for a different function in the same module:</p>
+
+<p>errors.module_1.function_2</p>
+
+<p>And then for a different function in a different module:</p>
+
+<p>errors.module_2.function_3</p>
+
+<p>If each of the preceding examples were called once, the resulting values
+would be:</p>
+
+<p>errors = 3\
+\
+ errors.module_1 = 2\
+\
+ errors.module_1.function_1 = 1\
+\
+ errors.module_1.function_2 = 1\
+\
+ errors.module_2 = 1\
+\
+ errors.module_2.function_3 = 1</p>
+
+<p>This tells you that there were 3 errors in the application, with 2 of
+those errors in module_1. You can then drill down further to see errors
+in specific functions.</p>
+
+<h3 id="using-counters-in-time-series-queries">Using counters in time series queries</h3>
+
+<p>Knowing the value of a counter is useful. However, you often need to
+know how the value varies over time. Fortunately, the API provides a
+method for you to view this data over any time interval or level of
+granularity.</p>
+
+<p>For example, let’s say you’re incrementing a counter every time someone
+launches your application. You might be interested in which days of the
+week the application sees the most usage. Using the API, you can examine
+the counter over a set of weeks, with the data split into daily
+intervals. Using this information, you can see which are your peak days
+of usage. You can also view usage across a single day, so you can see if
+your application is used more in the mornings or the evenings. For
+business reporting, you may be more interested in monthly reporting.</p>
+
+<p>Note that the system is able to provide you with the report data as you
+need it. The data is maintained in real-time so it can be viewed
+instantly.</p>
+
+<h3 id="retrieving-counter-data">Retrieving counter data</h3>
+
+<p>To retrieve counter data, you issue a GET request to the /counters
+endpoint. This is a special, built-in collection that gives you access
+to all the counters currently in the system. The API also provides a
+number of parameters that you can use to search for counter data, as
+follows:</p>
+
+<p>Parameter     Type                                                                                 Description
+  ————- ———————————————————————————— ————————————————————————————————————————————————————————————————————————————————————————————————
+  start_time   An <a href="http://en.wikipedia.org/wiki/Unix_time">Epoch(Unix)</a> timestamp in milliseconds   The beginning of the time period to search
+  end_time     An <a href="http://en.wikipedia.org/wiki/Unix_time">Epoch(Unix)</a> timestamp in milliseconds   The end of the time period to search
+  counter       string                                                                               The name of a specific counter to search. You can specify more than one counter in a query (for example, counter=counter1&amp;counter=counter2…)
+  resolution    string                                                                               The interval at which counters are displayed. For example, if the interval is day, and the start time and end time values span 4 days, you will get aggregate counts for each of the 4 days. Possible values are all, minute, five_minutes, half_hour, hour, six_day, day, week, and month.</p>
+
+<p>For example, to retrieve a time range of values, with a granularity of
+"day", for a counter called "button_clicks", the GET request would look
+like this:</p>
+
+<pre><code>GET /my-org/my-app/counters?start_time=1315119600000&amp;end_time=1315724400000&amp;resolution=day&amp;counter=button_clicks
+</code></pre>
+
+<p>The response body would look something like this:</p>
+
+<pre><code>{
+ action: "get",
+    uri: "http://api.usergrid.com/438a1ca1-cf9b-11e0-bcc1-12313f0204bb/counters",
+    timestamp: 1315354369272,
+    duration: 28,
+    counters: [
+        {
+            name: "button_clicks",
+            values: [
+                {
+                    value: 2
+                    timestamp: 1315180800000
+                },
+                {
+                    value: 1
+                    timestamp: 1315267200000
+                },
+                {
+                    value: 1
+                    timestamp: 1315353600000
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

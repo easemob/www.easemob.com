@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Easemob推送 | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Easemob推送
+    </h1>
+    <p>
+      Easemob推送, 在1秒内推送上万条数据, 并且支持tag等多维度推送
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main"><h3 id="section">统计一周内每天的新增用户数量</h3>
+<p>GET /${org_name}/${app_name}/counters
+* 描述:获得小区列表
+* 权限: app授权
+* Url参数: start_time=1388505600000&amp;end_time=1390060800000&amp;resolution=day&amp;counter=application.collection.users&amp;pad=true
+* Request body: 无
+* 错误代码：
+* curl示例：</p>
+
+<pre><code>curl -X GET -i -H "Authorization: Bearer YWMtC5jqgoAWEeOCFZWmJT9oxwAAAUPIZmzZbMU5tYkckVOPSI1LGWoA7PAQ9x8" "http://api.easemob.com/ljs/ljs/counters?start_time=1388505600000&amp;end_time=1390060800000&amp;resolution=day&amp;counter=application.collection.users&amp;pad=true"
+</code></pre>
+
+<p>返回的json数据的entities包含了统计数据.</p>
+
+<pre><code>{
+  "action" : "get",
+  "application" : "339d73d0-7a86-11e3-8907-b7afdbf7c043",
+  "params" : {
+    "pad" : [ "true" ],
+    "end_time" : [ "1390060800000" ],
+    "counter" : [ "application.collection.users" ],
+    "start_time" : [ "1388505600000" ],
+    "resolution" : [ "day" ]
+  },
+  "uri" : "http://api.easemob.com/ljs/ljs",
+  "entities" : [ ],
+  "timestamp" : 1390031809955,
+  "duration" : 8,
+  "organization" : "ljs",
+  "applicationName" : "ljs",
+  "count" : 0,
+  "counters" : [ {
+    "name" : "application.collection.users",
+    "values" : [ {
+      "timestamp" : 1388448000000,
+      "value" : 0
+    }, {
+      "timestamp" : 1388534400000,
+      "value" : 0
+    }, {
+      "timestamp" : 1388620800000,
+      "value" : 0
+    }, {
+      "timestamp" : 1388707200000,
+      "value" : 0
+    }, {
+      "timestamp" : 1388793600000,
+      "value" : 0
+    }, {
+      "timestamp" : 1388880000000,
+      "value" : 0
+    }, {
+      "timestamp" : 1388966400000,
+      "value" : 0
+    }, {
+      "timestamp" : 1389052800000,
+      "value" : 0
+    }, {
+      "timestamp" : 1389139200000,
+      "value" : 0
+    }, {
+      "timestamp" : 1389225600000,
+      "value" : 0
+    }, {
+      "timestamp" : 1389312000000,
+      "value" : 0
+    }, {
+      "timestamp" : 1389398400000,
+      "value" : 0
+    }, {
+      "timestamp" : 1389484800000,
+      "value" : 2
+    }, {
+      "timestamp" : 1389571200000,
+      "value" : 0
+    }, {
+      "timestamp" : 1389657600000,
+      "value" : 0
+    }, {
+      "timestamp" : 1389744000000,
+      "value" : 0
+    }, {
+      "timestamp" : 1389830400000,
+      "value" : 0
+    }, {
+      "timestamp" : 1389916800000,
+      "value" : 1
+    }, {
+      "timestamp" : 1390003200000,
+      "value" : 0
+    } ]
+  } ]
+    }
+</code></pre>
+
+<p>这里需要注意/修改的是几个查询参数:</p>
+
+<ul>
+  <li>
+    <p>start_time</p>
+
+    <p>查询范围的开始时间</p>
+  </li>
+  <li>
+    <p>end_time</p>
+
+    <p>查询范围的结束时间</p>
+  </li>
+  <li>
+    <p>resolution</p>
+
+    <ul>
+      <li>按天来统计数据的话就是 "day"</li>
+      <li>按周来统计数据的话就是 "week"</li>
+      <li>按月来统计数据的话就是 "month"</li>
+    </ul>
+  </li>
+</ul>
+
+<p>上面说的时间都是一个long类型的</p>
+
+<blockquote>
+  <p>Returns the number of milliseconds since January 1, 1970, 00:00:00 GMT</p>
+</blockquote>
+
+<p>在Java中可以通过这个方法获取</p>
+
+<pre><code>java.util.Date#getTime	
+</code></pre>
+
+<p>所以, 如果想要查询本周内的每天的新增加用户量, 可以这么来做</p>
+
+<ol>
+  <li>先获取当前的时间, 得到一个 <em>end_time</em>	</li>
+  <li>在计算七天前的时间, 得到一个 <em>start_time</em></li>
+  <li>然后执行上面的查询</li>
+</ol>
+
+<h3 id="section-1">统计一周/一个月内每天的总用户数量</h3>
+<p>暂时同统计一周内每天的新增用户数量</p>
+
+<h3 id="section-2">统计一周/一个月内每天的活跃用户数量</h3>
+<p>暂时同统计一周内每天的新增用户数量</p>
+
+<h3 id="section-3">统计当前总用户数量</h3>
+<p>GET /${org_name}/${app_name}/counters
+* 描述:获得当前总用户数量
+* 权限: app授权
+* Url参数: counter=application.collection.users
+* Request body: 无
+* 错误代码：
+* curl示例：</p>
+
+<pre><code>   curl -X GET -i -H "Authorization: Bearer YWMtC5jqgoAWEeOCFZWmJT9oxwAAAUPIZmzZbMU5tYkckVOPSI1LGWoA7PAQ9x8" "http://api.easemob.com/ljs/ljs/counters?counter=application.collection.users"
+</code></pre>
+
+<p>返回的json数据的entities包含了统计数据.</p>
+
+<pre><code>{
+  "action" : "get",
+  "application" : "339d73d0-7a86-11e3-8907-b7afdbf7c043",
+  "params" : {
+    "counter" : [ "application.collection.users" ]
+  },
+  "uri" : "http://api.easemob.com/ljs/ljs",
+  "entities" : [ ],
+  "timestamp" : 1390032656215,
+  "duration" : 7,
+  "organization" : "ljs",
+  "applicationName" : "ljs",
+  "count" : 0,
+  "counters" : [ {
+    "name" : "application.collection.users",
+    "values" : [ {
+      "timestamp" : 1,
+      "value" : 3
+    } ]
+  } ]
+    }
+</code></pre>
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

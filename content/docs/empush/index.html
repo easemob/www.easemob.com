@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easemob - 即时通讯云-五分钟为你的APP加入聊天功能。" name="description">
+    <meta content="Easemob" name="author">
+    <title>Easemob推送 | Easemob</title>
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+      h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      pre code { background: transparent; }
+      @media (min-width: 768px) {
+          .bs-docs-home .bs-social,
+          .bs-docs-home .bs-masthead-links {
+            margin-left: 0;
+          }
+      }
+    </style>
+    <!--[if lt IE 9]
+    script  type='text/javascript' src=("/assets/js/ie8-responsive-file-warning.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" ) 
+    script  type='text/javascript' src=("http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js" ) -->
+    <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/assets/ico/favicon.ico" rel="shortcut icon">
+  </head>
+  <body><div id="content" class="bs-header">
+  <div class="container">
+    <h1>
+      Easemob推送
+    </h1>
+    <p>
+      Easemob推送, 在1秒内推送上万条数据, 并且支持tag等多维度推送
+    </p>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+<h2 id="section">注册设备</h2>
+
+<p>为了让移动设备能够接收到推送的消息, app必须在启动的时候, 先到EMPush中注册</p>
+
+<p>REST API:</p>
+
+<pre><code>POST http://{push_server_host:port}/subscribers
+</code></pre>
+
+<p>这个API支持以下的参数:</p>
+
+<ul>
+  <li>
+    <p>proto </p>
+
+    <p>当前设备的类型, 有两个可选值, 分别为</p>
+
+    <ul>
+      <li>apns – iOS 设备</li>
+      <li>xmpp – android 设备</li>
+    </ul>
+  </li>
+  <li>
+    <p>token</p>
+
+    <p>当前设备的device token</p>
+  </li>
+  <li>
+    <p>jiduser</p>
+
+    <p>为了支持离线聊天消息的推送, app可以选择同时提交当前登陆用户的jid, 这样, 在用户离线的情况下, 还能够通过push消息来得到聊天的离线消息</p>
+  </li>
+</ul>
+
+<p>同时, 在调用此API的时候, 还需要带有一个HTTP Header, key为<em>appkey</em>    </p>
+
+<p>这些参数需要组织成一个json数据来post到此API, 例如下面的示例    </p>
+
+<pre><code>$ curl -d proto=apns \
+       -d token=FE66489F304DC75B8D6E8200DFF8A456E8DAEACEC428B427E9518741C92C6660 \
+       --header 'appkey: 1234567890' \
+       http://223.202.120.59:7874/subscribers
+</code></pre>
+
+<p>系统会返回一个json</p>
+
+<pre><code>{
+  "proto": "apns",
+  "token": "7ee2400ca162be71eebafdb46056ff0afc973c8fab272d2b6627df4f86bac457",
+  "lang": "zh",
+  "badge": 0,
+  "updated": 1379343042,
+  "created": 1379343042,
+  "id": "UeJvEkzXLqA"
+}	       
+</code></pre>
+
+<p>需要把返回值中的_id_即为EMPush中此设备的_push id_保存下来</p>
+
+<h2 id="section-1">删除设备</h2>
+
+<!-- 当一个app注册之后, 每次这个app启动的时候, 都需要ping push server, 来确保server知道这个设备还存在着, 不然, server有可能会把这个设备给移除掉 (目前没有做)
+
+    curl -d lang=zh -d badge=0 http://223.202.120.59:7874/subscriber/UeJvEkzXLqA -->
+
+<p>把一个设备从EMPush中移出 (例如, app中的设置关闭了推送通知), 那么可以通过来完成</p>
+
+<pre><code>DELETE http://{push_server_host:port}/subscribers/{push_id}
+</code></pre>
+
+<p>例如(注意, 在调用这个API的时候, 同样需要在HTTP Header当中附带_appkey_信息)</p>
+
+<pre><code>curl --header "appkey: 1234567890" http://223.202.120.59:7874/subscriber/UeJvEkzXLqA
+</code></pre>
+
+<h2 id="topic">创建Topic</h2>
+
+<p>topic无需创建，当订阅topic时，如果该topic不存在，则系统自动创建该topic.</p>
+
+<!-- 
+## 删除Topic
+
+## 查询已有Topic
+-->
+
+<h2 id="topic-1">订阅Topic</h2>
+
+<p>对于每个在EMPush中注册的设备, 都可以选择订阅到多个topic中, 从而接收这些topic中的push消息, 例如, 对于一个新闻类型的app, 可能就可以同时订阅到"sport", "news"等topics当中.</p>
+
+<p>REST API</p>
+
+<pre><code>POST http://{push_server_host:port}/subscribers/{push_id}/subscriptions/{topic_name}
+</code></pre>
+
+<p>例如    </p>
+
+<pre><code>curl --header "appkey: 1234567890" -X POST http://223.202.120.59:7874/subscriber/UeJvEkzXLqA/subscriptions/sport		
+</code></pre>
+
+<h2 id="topic-2">批量订阅Topic</h2>
+
+<p>可以通过一次调用来完成订阅多个topic的操作 (<strong>TODO</strong> xmpp is not supported yet)</p>
+
+<pre><code>curl -H 'Content-Type: application/json' -d '{"sport":{}, "music":{}}' http://223.202.120.59:7874/subscriber/UeJvEkzXLqA/subscriptions
+</code></pre>
+
+<p>这样, 对于每个app user, 可以自动的把他们注册到某些topic, 从而发送全局消息, 例如先获取用户的地理位置, 然后把他们注册到对应的城市中, 或者国家中等等</p>
+
+<h2 id="topic-3">取消订阅Topic</h2>
+
+<p>可以通过 <strong>DELETE</strong> 来取消订阅某一个topic的消息 (<strong>TODO xmpp is not support this yet</strong>)</p>
+
+<p>REST API</p>
+
+<pre><code>DELETE http://{push_server_host:port}/subscribers/{push_id}/subscriptions/{topic_name}
+</code></pre>
+
+<h2 id="topics">查看已订阅的Topics</h2>
+
+<p>REST API</p>
+
+<pre><code>GET http://{push_server_host:port}/subscribers/{push_id}/subscriptions
+</code></pre>
+
+<h2 id="section-2">发送推送消息</h2>
+
+<p>现在, 我们就可以给设备发送推送消息了, 注意, 消息是发送到topic的, 这里我们(推送消息的发送方)不需要知道topic中有哪些设备, 如果一个设备都没有的话, push server会直接忽略的</p>
+
+<p>REST API</p>
+
+<pre><code>POST http://{push_server_host:port}/event/{topic_name}  {推送的消息}    
+</code></pre>
+
+<!--### 其他推送参数
+
+如何发送其他推送参数？
+time_to_live
+从消息推送时起，保存离线的时长。秒为单位。最多支持10天（864000秒）。
+
+ 0 表示该消息不保存离线。即：用户在线马上发出，当前不在线用户将不会收到此消息。
+
+此参数不设置则表示默认，默认为保存1天的离线消息（86400秒）
+
+
+verification_code
+
+验证串，用于校验发送的合法性。
+
+由 sendno, receiver_type, receiver_value, master_secret 4个值拼接起来（直接拼接字符串）后，进行一次MD5生成。
+
+-->
+
+<h3 id="section-3">推送消息内容格式</h3>
+<p>推送消息要求为JSON格式</p>
+
+<pre><code>{
+    "title": "通知栏弹出的消息",
+    "data": {
+        //具体的消息体,可以是任何合法的json值
+    },
+}
+</code></pre>
+
+<p>只有title是必须的, data属性的值可以是任何合法的json值, 这部分数据只有在用户响应了通知之后, 打开app, app才会得到</p>
+
+<h3 id="section-4">推送自定义消息内容</h3>
+<p>推送自定义消息内容可以通过发送自定义data实现。比如，以下示例在data中增加了2个自定义字段:</p>
+
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>type字段：推送消息的类型，比如工单</td>
+          <td>开会通知</td>
+          <td>工资通知。这样手机客户端收到推送消息后，可以根据type字段的值跳转到不同的页面。也可以为不同的推送消息类型显示不同的icon。</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>from字段：用来表示发送者</p>
+
+    <pre><code> {
+     "title": "通知栏弹出的消息",
+     "data": {
+         "type": "自定义消息类型，如工单|开会通知|工资通知",
+         "from": "推送发送者"
+     },
+ }
+</code></pre>
+  </li>
+</ol>
+
+<h3 id="ios-apns-">iOS APNs 特别说明</h3>
+
+<p>通过 EMPush API 推送 iOS APNs 消息时，部分内容需要与 APNs 适配。</p>
+
+<p>关于 APNs 的详细定义，请参考官方文档：<a href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW12">Apple Push Notification Service</a>。</p>
+
+<p>EMPush 字段	APNs 字段</p>
+
+<pre><code>{
+    "title": "通知栏弹出的消息", //对应APNs的alert
+    "badge":88	//对应APNs的badge
+    "sound":""	//对应APNs的sound
+}
+</code></pre>
+
+<p>title 字段必须存在，但可以为空字符串。这时，如果 extras 里带了 badge 字段，则收到的通知会显示应用图标右上角数字，而没有通知栏内容。</p>
+
+<p>指定了 iOS 特定参数的完整的通知 msg_content JSON串示例：</p>
+
+<pre><code>{
+    "title": "通知栏弹出的消息", 
+    "data": {
+        //具体的消息体
+    },
+    "badge":88,	
+    "sound":"default"	
+}
+</code></pre>
+
+<h3 id="section-5">通知长度限制说明</h3>
+
+<p>EMPush 同时支持 Andorid 与 iOS 平台的通知推送。</p>
+
+<p>由于 APNs 限制是 255 个字节，所以 EMPush 推送通知也依据 APNs 来统一限制。</p>
+
+<p>注意：长度指字节。由于使用 UTF-8 编码，所以一个中文字符占 3 个字节。</p>
+
+<h3 id="android">Android推送特别说明</h3>
+
+<p>因为android推送没有长度限制，所以可以把推送内容直接发送给接收设备。为保证兼容性，请在data下使用android:details字段来发送android的推送内容。易推服务器会对android:details字段做特别处理。只将该字段发给android设备，不发送给ios设备。</p>
+
+<pre><code>{
+    "title": "通知栏弹出的消息", 
+    "data": {
+        "android:details":"android特定消息，长度不受限制。ios不会收到这个字段"
+    },
+    "badge":88,	
+    "sound":"default"	
+}
+</code></pre>
+
+<!-- 
+## 单点推送
+
+通过这个功能, 我们可以根据push id来推送给单独的一个人
+
+    POST /send/:push_id {}
+
+这里POST的数据遵循上面event message部分的规则
+
+当前这个单点推送只支持ios     -->
+
+    </div>
+  </div>
+</div><footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">
+          环信即时通讯云
+        </p>
+      </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e5b3453fdcff1e4dec124ea22f1e189' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="/assets/js/application.js"></script>
+  </body>
+</html>

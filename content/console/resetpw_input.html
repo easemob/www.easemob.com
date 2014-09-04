@@ -1,0 +1,90 @@
+---
+title: 环信开发者中心
+---
+
+
+<style type="text/css">
+.login-layout {
+	background: none repeat scroll 0 0 #e3eaf0;
+}
+.login-layout .widget-box {
+	background-color: #ccc;
+	border-bottom: 0 none;
+	box-shadow: none;
+	overflow: hidden;
+	padding: 6px;
+	position: absolute;
+	transform: scale(0, 1) translate(-150px);
+	visibility: hidden;
+	width: 100%;
+}
+</style>
+
+<script>
+
+	$(function(){
+		token = getQueryString('token');
+		uuid = getQueryString('uuid');
+	})
+	
+	// Post 
+	function presetPasswdReq(){
+		resetPasswdReq(token,uuid)	
+	}
+	
+	function toConsole(){
+		window.location.href='https://console.easemob.com';	
+	}
+</script>
+
+<!--add this line-->
+<div class="login-layout">
+<div id="main-container" class="container-fluid">
+  <div id="main-content">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="login-container min-height-result">
+          <div class="row-fluid">
+            <div class="center">
+              <h1 style="margin-top: 40px;" class="blue"> <img border="0" style="height:102px;" src="/assets/css/images/em_logo.png" alt=""> </h1>
+            </div>
+          </div>
+          <div class="space-6"></div>
+          <div class="row-fluid">
+            <div class="position-relative">
+              <div class="visible widget-box no-border" id="login-box">
+                <div class="widget-body">
+                  <div class="widget-main">
+                    <h4 class="header blue lighter bigger"> 设置新密码 </h4>
+                    <div class="space-6"></div>
+                      <fieldset>                      
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="password" placeholder="新密码" nullmsg="请输入用户名！" datatype="*" class="span12" name="password1" id="password1">
+                          <i class="icon-user"></i> <span class="Validform_checktip"></span></span> 
+                        </label>
+                        <label> <span class="block input-icon input-icon-right">
+                          <input type="password" nullmsg="请再次输入新密码！" placeholder="密码" class="span12" name="password2" id="password2">
+                          <i class="icon-lock"></i> <span class="Validform_checktip"></span></span> 
+                        </label>
+                        <div class="row-fluid">
+                          <a class="span4 btn btn-small btn-primary" onclick="presetPasswdReq();"> <i class="icon-key"></i> 确定 </a>
+                          <button class="span4 btn btn-small btn-primary" onclick="toConsole();"> <i class="icon-lock"></i> 放弃 </button>
+                        </div>
+                      </fieldset>
+                  </div>
+                  <div class="toolbar clearfix">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/management.js"></script>
+
+<!--add this line-->
+</div>

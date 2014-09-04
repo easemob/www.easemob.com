@@ -5,7 +5,7 @@ $.event.special.mousewheel = {
 		var handler = $.event.special.mousewheel.handler;
 		
 		// Fix pageX, pageY, clientX and clientY for mozilla
-		if ( $.browser.mozilla )
+		if ( $.browser && $.browser.mozilla )
 			$(this).bind('mousemove.mousewheel', function(event) {
 				$.data(this, 'mwcursorposdata', {
 					pageX: event.pageX,
