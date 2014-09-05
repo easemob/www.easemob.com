@@ -28,7 +28,9 @@ secondnavwebim: true
 
 运行之前，需要调整appkey，打开easymob-webim1.0目录中的index.html，找到
 
-	appKey : 'easemob-demo#chatdemoui'
+<pre class="hll"><code class="language-javascript">
+appKey : 'easemob-demo#chatdemoui'
+</code></pre>
 
 将这里的值做相应调整。
 
