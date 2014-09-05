@@ -6,7 +6,7 @@ title: 环信
 
 为进一步加快环信开发者的开发速度，环信还提供多种风格的UI模板及源码，开发者即可直接使用，也可在源码基础上快速改出自己风格的聊天页面。
 
-以下页面是环信提供的标准UI模板。该UI模板源代码已经开源，可在以下地址下载：[http://easemob.com/downloads.php](http://www.easemob.com/downloads.php)
+以下页面是环信提供的标准UI模板。该UI模板源代码已经开源，可在以下地址下载：[http://www.easemob.com/demo/](http://www.easemob.com/demo/)
 
 
 # 会话
