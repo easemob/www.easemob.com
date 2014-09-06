@@ -4,684 +4,109 @@ sidebar: webimsidebar
 secondnavwebim: true
 ---
 
-# WebIM SDK介绍:
+## 下载环信demo (webIM) 
 
-## 初始化
+### 什么是环信WEB-IM demo 
 
-### 1.创建连接
-<pre class="hll"><code class="language-javascript">
-var conn = new Easemob.im.Connection();
-</code></pre>
+环信WEB-IM demo展示了怎样使用环信WEB-IM-SDK快速创建一个完整的类微信网页聊天示例。展示的功能包括：登录，登出，操作好友、收发个人消息，群组消息。
 
-### 2.初始化连接
-<pre class="hll"><code class="language-javascript">
-conn.init({
-    onOpened : function() {
-        curUserId = conn.context.userId;
-        //查询好友列表
-        conn.getRoster(....);
-    },
-    onClosed : function() {
-        //处理登出事件
-    },
-    onTextMessage : function(message) {
-        /**处理文本消息，消息格式为：
-            {
-                from : from,
-                to : too,
-                data : { "type":"txt",
-                    "msg":"hello from test2"
-                }
-            }
-        */
-        handleTextMessage(message);
-    },
-    onEmotionMessage : function(message) {
-        /*处理表情消息,消息格式为：
-            {
-                from : from,
-                to : too,
-                data : [{ "type":"txt",
-                    "msg":"hello from test2"
-                },
-                { "type":"emotion",
-                  "msg":"data:image/png;base64, ……"//图片的base64编码
-                }]
-            }
-        */
-        handleEmotion(message);
-    },
-    onPictureMessage : function(message) {
-        /**处理图片消息，消息格式为：
-            {
-                from : "test1",
-                to : "test2",
-                url : "http://s1.easemob.com/weiquan2/a2/chatfiles/0c0f5f3a-e66b-11e3-8863-f1c202c2b3ae",
-                secret : "NSgGYPCxEeOou00jZasg9e-GqKUZGdph96EFxJ4WxW-qkxV4",
-                filename : "logo.png",
-                thumb : "http://s1.easemob.com/weiquan2/a2/chatfiles/0c0f5f3a-e66b-11e3-8863-f1c202c2b3ae",
-                thumb_secret : "0595b06a-ed8b-11e3-9b85-93fade9c198c",
-                file_length : 42394,
-                width : 280,
-                height : 160,
-                filetype : "image/png",
-                accessToken :"YWMtjPPoovCqEeOQs7myPqqaOwAAAUaqNH0a8rRj4PwJLQju6-S47ZO6wYs3Lwo"
-            }
-        */
+环信WEB-IM源代码已在github上开源供开发者下载(https://github.com/easemob/web-im)，以帮助开发者更好的学习了解环信SDK。
 
-        handlePictureMessage(message);
-    },
-    onAudioMessage : function(message) {
-        /**处理音频消息，消息格式为：
-           {
-                from : "test1",
-                to : "test2",
-                url : "http://s1.easemob.com/weiquan2/a2/chatfiles/0c0f5f3a-e66b-11e3-8863-f1c202c2b3ae",
-                secret :"NSgGYPCxEeOou00jZasg9e-GqKUZGdph96EFxJ4WxW-qkxV4",
-                filename : "风雨无阻.mp3",
-                length :45223,
-                file_length : 304,
-                filetype : "mp3",
-                accessToken :"YWMtjPPoovCqEeOQs7myPqqaOwAAAUaqNH0a8rRj4PwJLQju6-S47ZO6wYs3Lwo"
-            }
-        */
-        handleAudioMessage(message);
-    },
-    //收到联系人订阅请求的回调方法
-    onPresence : function (message){
-        /**
-            {
-                from: "l2",
-                fromJid: "easemob-demo#chatdemoui_l2@easemob.com",
-                status: "下午11:44:47",
-                to: "test1",
-                toJid: "easemob-demo#chatdemoui_test1@easemob.com/13856640471403797405809685",
-                type: "subscribed"
-            }
-        */
-        handlePresence(message);
-    },
-    //收到联系人信息的回调方法
-    onRoster : function (message){
-        /**
-            [{
-                groups: [{0: "default",
-                        length: 1}],
-                jid: "easemob-demo#chatdemoui_l2@easemob.com",
-                name: "l2",
-                subscription: "to"
-            }]
-        */
-        handleRoster(message);
-    },
-    onError : function(e) {
-        //异常处理
-        alert(e.msg);
-    }
-});
-</code></pre>
+### 下载环信WEB-IM-DEMO 
 
-###3.打开连接
-<pre class="hll"><code class="language-javascript">
-//用户名
-var user = document.getElementById("username").value;
-//密码
-var pass = document.getElementById("password").value;
-if (user == '' || pass == '') {
-    alert("请输入用户名和密码");
-    return;
-}
-conn.open({
-    user : user,
-    pwd : pass,
-    appKey : 'easemob-demo#chatdemoui'//开发者APPKey
-});
-</code></pre>
+1. 下载环信WEB-IM及SDK： [下载](http://www.easemob.com/sdk/)
 
-## 聊天
+2. 解压缩WEB-IM.zip后会得到以下目录结构：
+ 
+ ![alt text](/webIM_zip.png "Title")
 
-###1.发送文本（表情）聊天消息
-<pre class="hll"><code class="language-javascript">
-//发送文本消息
-conn.sendTextMessage({
-    to : to,
-    msg :'hello world！' //文本消息
-});
 
-//发送表情消息，调用接口同文本消息
-conn.sendTextMessage({
-    to : to,
-    msg :'hello world！[(*)][(#)]' //文本消息+表情
-});
-</code></pre>
+## 运行环信WEB-IM 
 
-###2.发送图片消息
-
-发送图片消息sdk自动分两步完成：<br>
-1）上传图片文件<br>
-2）发送图片消息同初始化连接中的onPictureMessage的格式
+运行之前，需要调整appkey，打开easymob-webim1.0目录中的index.html，找到
 
 <pre class="hll"><code class="language-javascript">
-function sendPic() {
-    //图片接收者，如“test1”
-    var to = curChatUserId;
-    if (to == null) {
-        alert("请选择联系人");
-        return;
-    }
-    //fileInputId：文件选择输入框的Id，sdk自动根据id自动获取文件对象（含图片，或者其他类型文件）
-    var fileObj = Easemob.im.Helper.getFileUrl(fileInputId);
-    if (fileObj.url == null || fileObj.url == '') {
-        alert("请选择发送图片");
-        return;
-    }
-    var filetype = fileObj.filetype;
-    var filename = fileObj.filename;
-    if (filetype in  {
-                    "jpg" : true,
-                    "gif" : true,
-                    "png" : true,
-                    "bmp" : true
-                    }) 
-    {
-        var opt = {
-            fileInputId : fileInputId,
-            to : to,
-            onFileUploadError : function(error) {
-                //处理图片上传失败
-            },
-            onFileUploadComplete : function(data) {
-                //处理图片上传成功，如本地消息显示
-            }
-        };
-        conn.sendPicture(opt);
-        return;
-    }
-    alert("不支持此图片类型" + filetype);
-};
+appKey : 'easemob-demo#chatdemoui'
 </code></pre>
 
-###3.发送音频消息
-sdk处理同发送图片消息，分两步：1）上传音频；2）发送消息
+将这里的值做相应调整。
 
-<pre class="hll"><code class="language-javascript">
-function sendAudio () {
-    var to = curChatUserId;
-    if (to == null) {
-        alert("请选择联系人");
-        return;
-    }
-    var fileObj = Easemob.im.Helper.getFileUrl(fileInputId);
-    if (fileObj.url == null || fileObj.url == '') {
-        alert("请选择发送音频");
-        return;
-    }
-    var filetype = fileObj.filetype;
-    var filename = fileObj.filename;
-    if (filetype in {
-                "mp3" : true,
-                "wma" : true,
-                "wav" : true,
-                "avi" : true
-                })
-    {
-        var opt = {
-            fileInputId : fileInputId,
-            to : to,
-            onFileUploadError : function(error) {
-                //处理上传音频失败
-            },
-            onFileUploadComplete : function(data) {
-                //处理上传音频成功，如本地消息提示发送成功
-            }
-        };
-        conn.sendAudio(opt);
-        return;
-    }
-    alert("不支持此音频类型" + filetype);
-};
-</code></pre>
+运行方式有两种：
 
-###4.群聊
+1、直接使用浏览器打开index.html文件。
 
-####4.1发送文本（表情）聊天消息
+2、将easymob-webim1.0目录部署到web服务器通过url访问index.html。
 
-<pre class="hll"><code class="language-javascript">
-//发送文本消息
-conn.sendTextMessage({
-    to : to,
-    type : 'groupchat',
-    msg :'hello world！' //文本消息
-});
+## WEB-IM功能演示
 
-//发送表情消息，调用接口同文本消息
-conn.sendTextMessage({
-    to : to,
-    type : 'groupchat',
-    msg :'hello world！[(*)][(#)]' //文本消息+表情
-});
-</code></pre>
+功能操作页面如下：
 
-####4.2发送图片消息
+登录：
 
-发送图片消息sdk自动分两步完成：<br>
-1）上传图片文件<br>
-2）发送图片消息初始化连接中的onPictureMessage的格式
+登录可以使用app用户的账号和密码。 
 
-<pre class="hll"><code class="language-javascript">
-//发送图片消息时调用方法
-var sendPic = function() {
-    var to = curChatUserId;
-    if (to == null) {
-        return;
-    }
-    // Easemob.im.Helper.getFileUrl为easemobwebim-sdk获取发送文件对象的方法，fileInputId为 input 标签的id值
-    var fileObj = Easemob.im.Helper.getFileUrl(fileInputId);
-    if (fileObj.url == null || fileObj.url == '') {
-        alert("请选择发送图片");
-        return;
-    }
-    var filetype = fileObj.filetype;
-    var filename = fileObj.filename;
-    if (filetype in pictype) {
-        document.getElementById("fileSend").disabled = true;
-        document.getElementById("cancelfileSend").disabled = true;
-        var opt = {
-            type:'chat',
-            fileInputId : fileInputId,
-            to : to,
-            onFileUploadError : function(error) {
-                //处理图片上传失败
-            },
-            onFileUploadComplete : function(data) {
-                //关闭文件选择窗口
-                $('#fileModal').modal('hide');
-                //本地缩略图
-                var file = document.getElementById(fileInputId);
-                if (file && file.files) {
-                    var objUrl = getObjectURL(file.files[0]);
-                    if (objUrl) {
-                        var img = document.createElement("img");
-                        img.src = objUrl;
-                        img.width = maxWidth;
-                    }
-                }
-            
-            }
-        };
-        //判断是否为群组标识
-        if (curChatUserId.indexOf(groupFlagMark) >= 0) {
-            opt.type = 'groupchat';//群组标识符
-            opt.to = curRoomId;
-        }
-        conn.sendPicture(opt);
-        return;
-    }
-    alert("不支持此图片类型" + filetype);
-};
-</code></pre>
+![alt text](/webIM_zm.png "Title")
 
-####4.3发送音频消息
+发送文本及表情消息：
 
-sdk处理同群发送图片消息，分两步：1）上传音频；2）发送消息
+![alt text](/webIM_emotion.png "Title")
 
-<pre class="hll"><code class="language-javascript">
-//发送音频消息时调用的方法
-var sendAudio = function() {
-    var to = curChatUserId;
-    if (to == null) {
-        alert("请选择联系人");
-        return;
-    }
-    //利用easemobwebim-sdk提供的方法来构造一个file对象
-    var fileObj = Easemob.im.Helper.getFileUrl(fileInputId);
-    if (fileObj.url == null || fileObj.url == '') {
-            alert("请选择发送音频");
-        return;
-    }
-    var filetype = fileObj.filetype;
-    var filename = fileObj.filename;
-    if (filetype in audtype) {
-        document.getElementById("fileSend").disabled = true;
-        document.getElementById("cancelfileSend").disabled = true;
-        var opt = {
-            type:"chat",
-            fileInputId : fileInputId,
-            to : to,//发给谁
-            onFileUploadError : function(error) {
-                //处理上传音频失败
-            },
-            onFileUploadComplete : function(data) {
-                //处理上传音频成功，如本地消息提示发送成功
-            }
-        };
-        //构造完opt对象后调用easemobwebim-sdk中发送音频的方法
-        if (curChatUserId.indexOf(groupFlagMark) >= 0) {
-            opt.type = 'groupchat';
-            opt.to = curRoomId;
-        }
-        conn.sendAudio(opt);
-        return;
-    }
-    alert("不支持此音频类型" + filetype);
-};
-</code></pre>
+发送图片消息页面：
 
-## 添加好友
+![alt text](/webIM_mess.png "Title")
 
-###1.申请添加好友
+个人聊天页面：
 
-<pre class="hll"><code class="language-javascript">   
-//主动添加好友操作的实现方法
-var startAddFriend = function startAddFriend(){
-    //获取要添加的用户账号
-    var user = document.getElementById("addfridentId").value;
-    //添加联系人列表，开发者可以放到订阅者同意后再进行此操作
-    conn.addRoster({
-        to : user,
-        name : user,
-        groups : ['default'],//此处默认添加到default分组
-        success : function(){
-            alert("等待对方确认");
-        },
-        error : function(){
-            alert('添加操作成功失败');
-        }
-    });
-    var date = new Date().toLocaleTimeString();
-    //发送订阅请求
-    conn.subscribe({to : user,message:date});
-    return;
-};
+![alt text](/webIM_page.png "Title")
 
-//回调方法执行时对方同意了添加好友的实现方法
-var agreeAddFriend = function agreeAddFriend(connection,who,jid){
-    var date = new Date().toLocaleTimeString();
-    conn.addRoster({
-        toJid : jid,
-        name : who,//who为对方
-        groups : ['default'],//好友默认分组
-        success : function(){
-            alert(who+"通过了您添加好友的申请");
-        },
-        error : function(){
-            alert('加好友操作失败');
-        }
-    });
-    var date = new Date().toLocaleTimeString();
-    //发送者允许接收者接收他们的出席信息
-    connection.subscribed({
-        toJid : jid,
-        message : date
-    });
-    //发送订阅请求
-    conn.subscribe({toJid : jid,message:date});
-};
-</code></pre>
-对于好友的分组，添加好友时在addroster可以指定group属性（默认为：default组），添加好友成功后，好友列表渲染时，根据好友的group属性进行分组渲染，实现类似其他聊天工具的自定义好友分组管理的功能。
+群组聊天：
 
-###2.添加好友的回调方法实现
+![alt text](/webIM_group.png "Title")
 
-<pre class="hll"><code class="language-javascript">
-//easemobwebim-sdk中收到联系人订阅请求的处理方法，具体的type值所对应的值请参考xmpp协议规范
-var handlePresence = function (e){
-    //（发送者希望订阅接收者的出席信息）
-    if(e.type=='subscribe'){
-        alert("receive subscribe friend request");
-        var fromJid = e.fromJid;
-        //此处默认为双方互加好友，具体使用时请结合具体业务进行处理
-        agreeAddFriend(conn,e.from,e.fromJid);//e.from用户名，e.fromJid含有appkey用户名
-        return;
-    }
-    //(发送者允许接收者接收他们的出席信息)
-    if(e.type=='subscribed'){
-        alert("receive friend subscribed message");
-        return;
-    }
-    //（发送者取消订阅另一个实体的出席信息）
-    if(e.type=='unsubscribe'){
-        alert("receive unsubscribe friend request");
-        //单向删除自己的好友信息，具体使用时请结合具体业务进行处理
-        delFriend(conn,from,e.fromJid);
-        return;
-    }
-    //（订阅者的请求被拒绝或以前的订阅被取消）
-    if(e.type=='unsubscribed'){
-        alert("receive delete friend message");
-        return;
-    }
-};
-</code></pre>
+操作菜单：
 
-###3.删除好友
+![alt text](/webIM_bar.png "Title")
 
-<pre class="hll"><code class="language-javascript">
-var date = new Date().toLocaleTimeString();
-conn.removeRoster({
-    toJid : jid,
-    name : who,
-    groups : ['default'],
-    success : function(){
-        var date = new Date().toLocaleTimeString();
-        connection.unsubscribed({
-            toJid : jid,
-            message : date
-        });
-        conn.subscribe({toJid : jid,message:date});
-        
-    },
-    error : function(){
-        alert('删除联系人失败');
-    }
-});
-</code></pre>
+申请添加好友通知：
 
-###4.查询好友列表
+收到添加为好友请求通知，可以进行“同意”、“拒绝”处理，默认为双向添加互为好友。
 
-查询好友列表时，要注意susciption（both，to,from）为不同值得处理,此处认为both和to的为好友，开发者自定义处理，保持跟APP处理一致即可。
+![alt text](/webIM_notice.png "Title")
 
-<pre class="hll"><code class="language-javascript">
-conn.getRoster({
-    success : function(roster) {
-        hiddenWaitLoginedUI();// 页面处理
-        //获取好友列表，并进行好友列表渲染，roster格式为：
-        /** [
-                {
-                    jid:"asemoemo#chatdemoui_test1@easemob.com",
-                    name:"test1",
-                    subscription: "both"
-                },
-                {
-                    jid:"asemoemo#chatdemoui_test2@easemob.com",
-                    name:"test2",
-                    subscription: "from"
-                }
-            ]
-        */
-        for(var i in roster){
-            var ros = roster[i];    
-            //ros.subscriptio值为both/to为要显示的联系人,此处与APP需保持一致，才能保证两个客户端登录后的好友列表一致
-            if(ros.subscription =='both' || ros.subscription=='to'){
-                newroster.push(ros);
-            }
-        }
-        if (newroster.length >=0) {
-            buildContactDiv("contractlist", newroster);//页面处理
-            if (newroster.length > 0) {
-                setCurrentContact(newroster[0].name);//页面处理将第一个联系人作为当前聊天div
-            }
-        }
-        //conn.setPresence();
-    },    
-});
-</code></pre>
+删除好友操作：
 
-## 群组
+输入要删除的好友账号。
 
-###1.获取群组成员
+![alt text](/webIM_del.png "Title")
 
-<pre class="hll"><code class="language-javascript">
-//根据roomId查询room成员列表
-var queryOccupants = function queryOccupants(roomId) {
-    var occupants = [];//存放成员容器
-    //查询获取room信息
-    conn.queryRoomInfo({
-        roomId : roomId,
-        success : function(occs) {
-            if (occs) {
-                for ( var i = 0; i < occs.length; i++) {
-                    occupants.push(occs[i]);
-                }
-            }
-            //查询获取room成员信息
-            conn.queryRoomMember({
-                roomId : roomId,
-                success : function(members) {
-                    if (members) {
-                        for ( var i = 0; i < members.length; i++) {
-                            occupants.push(members[i]);
-                        }
-                    }
-                }
-            });
-        }
-    });
-};
-</code></pre>
+## WEB-IM功能说明
 
+easemob webim sdk已支持如下功能：
 
-## 工具类说明
+1.sdk本身已支持IE10+、FireFox10+、Chrome15+、Safari6+之间文本、表情、图片、音频消息相互发送；低版本的浏览器只能收发文本消息。
 
-###1.表情工具类-object
+2.sdk支持web端之间，web端与android端/IOS端相互添加、删除好友功能。
 
-<pre class="hll"><code class="language-javascript">
-//返回表情JSON object，格式为：
-    {
-        "[):]" : "data:image/png;base64,iVBORw0K....==",
-        "[:D]" : "data:image/png;base64,iVBORw0KGgoAAAANSUh....=="
-    }
+3.sdk支持与ios、android sdk之间相互发送文本、图片、音频、地址消息。
 
-var emotion_json = Easemob.im.Helper.EmotionPicData;
-</code></pre>
+4.sdk提供的公共方法参见解压后sdk目录中的quickstart.md。
 
-###2.Base64工具类-object
+5.sdk对于消息的处理方式如下：
 
-<pre class="hll"><code class="language-javascript">
-var base64  = Easemob.im.Helper.Base64;
-var srcstr="ssss";
-var base64str = base64.encode(srcstr);
-var orgstr = base64.decode(srcstr);
-</code></pre>
+   1）文本消息，直接发送，接收方接收到为文本消息。
 
-###3.文件上传工具类-attribute
+   2）表情消息，sdk得到表情对应的编码后，发送的文本消息，接收方接收到后处理根据编码还原表情。
 
-<pre class="hll"><code class="language-javascript">
-//是否能上传file
-var canupload = Easemob.im.Helper.isCanUploadFile;
-//是否能下载file
-var candownload = Easemob.im.Helper.isCanDownLoadFile ;
-//是否设置header
-var hasheader = Easemob.im.Helper.hasSetRequestHeader;
-//是否设置mimetype
-var hasmimetype = Easemob.im.Helper.hasOverrideMimeType;
-</code></pre>
+   3）图片消息，sdk上传图片到聊天服务器，然后发送图片基本信息消息，消息中带有发送方上传的图片url等，接收方根据图片url、secret和自身的登录信息，以流的形式从服务器上下载图片到本地显示。
 
-###4.表情解析工具类-Method
+   4）音频消息，sdk上传音频到聊天服务器，然后发送音频基本消息消息，消息中含有发送方上传的音频url等，接收房根据音频url、secret和自身的登录信息，以流的形式从服务器上下载音频到本地播放。
 
-<pre class="hll"><code class="language-javascript">
-//返回表情JSON，格式为：
-{
-    isemotion:true;
-    body:[{
-        type:txt,
-        msg:ssss
-    },
-    {
-        type:emotion,
-        msg:imgdata
-    }]
-}
+6.提供demo，方便大家参考，已实现聊天添加/删除好友/群组功能。
 
-var emotionMsg = Easemob.im.Helper.parseTextMessage(message);
-</code></pre>
-
-###5.文件上传工具类-Method
-
-<pre class="hll"><code class="language-javascript">
-//返回fileinfo对象，格式为：
-    {
-        url : '',
-        filename : '',
-        filetype : ''
-    }
-var fileInfo = Easemob.im.Helper.getFileUrl(fileInputId);
-//上传
-var options={
-    appName = 'chatdemoui',
-    orgName = 'easemob-demo',
-    accessToken = 'YWMtjPPoovCqEeOQs7myPqqaOwAAAUaqNH0a8rRj4PwJLQju6-S47ZO6wYs3Lwo',
-    onFileUploadComplete:function(data){//upload file success },
-    onFileUploadError:function(e){//upload file error },
-    width:100,//only for pic
-    heght:100//only for pic
-}
-Easemob.im.Helper.upload(options);
-//下载
-var options = {
-    method:'GET',//default GET
-    responseType:'blob',//default blob
-    mimeType:'text/plain; charset=x-user-defined',//default
-    url:'http://s1.easemob.com/weiquan2/a2/chatfiles/0c0f5f3a-e66b-11e3-8863-f1c202c2b3ae',
-    secret = 'NSgGYPCxEeOou00jZasg9e-GqKUZGdph96EFxJ4WxW-qkxV4',
-    accessToken = 'YWMtjPPoovCqEeOQs7myPqqaOwAAAUaqNH0a8rRj4PwJLQju6-S47ZO6wYs3Lwo',
-    onFileUploadComplete:function(data){//upload file success },
-    onFileUploadError:function(e){//upload file error },
-}
-Easemob.im.Helper.download(options);
-//文件大小 
-var options={
-    fileInputId:'uploadfileinput'//文件输入框id
-};
-var fileSize = getFileSize(options.fileInputId);;
-</code></pre>
-
-###6.发送Ajax请求-Method
-
-<pre class="hll"><code class="language-javascript">
-var options = {
-    dataType:'text',//default
-    success:function(){//handle request success},
-    error :function(){//handle request error},
-    type : 'post',//default 'post'
-    url : 'http://s1.easemob.com/weiquan2/a2/chatfiles/0c0f5f3a-e66b-11e3-8863-f1c202c2b3ae',
-    headers:'',//default {}
-    data : '';//default null
-};
-Easemob.im.Helper.xhr(options);
-</code></pre>
-
-###7.登录usergrid-Method
-
-<pre class="hll"><code class="language-javascript">
-var options = {
-    appKey:'easemob-demo#chatdemoui',//default ''
-    success:function(data){ //login success },//default emptyFn
-    error : cunction(error){ //login error }, //default emptyFn
-    user : 'test1', //default ''
-    pwd : '123456'  //default ''
-};
-Easemob.im.Helper.login2UserGrid(options);
-</code></pre>
-
-###8.内置空函数-Method
-
-当所有需要回调的地方接受到函数时，默认采用此函数
-
-<pre class="hll"><code class="language-javascript">
-var emptyFn = function() {};
-</code></pre>
+7.目前各浏览器均已支持直接播放mp3，而amr格式则需要安装插件才能播放。另外，有的浏览器能够提供base64的下载，有的则不能。因此demo中音频这块的处理比较复杂：FF、Chrome收到后音频提供下载功能，IE浏览器只做提示。
 
 ## 浏览器支持列表
+
 <table>
 <tr><td>Browser\Func</td><td>Text Message</td><td>Emotion Message</td><td>Picture Message</td><td>Audio Message</td></tr>
 <tr><td>IE8</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
@@ -693,8 +118,11 @@ var emptyFn = function() {};
 <tr><td>Safari5X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 <tr><td>Safari6X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 </table>
----
+
+
 备注：
+
 1. 已知Picture Message格式支持：png、jpg、bmp；
 2. 已知Audio Message格式支持：MP3（amr不支持）。
+
 
