@@ -6,7 +6,7 @@ sidebar: restsidebar
 
 ## 多租户用户体系
 
-## 数据结构
+## 数据结构 {#schema}
  > 环信作为一个聊天通道，只需要提供环信ID和密码就够了.
  
  |  属性     |  字段名    | 数据类型  |  描述  |
@@ -14,7 +14,7 @@ sidebar: restsidebar
  |  环信ID   |  username  | String   | username是用户的primarykey,在appkey的范围内唯一 |
  |  用户密码 | password   | String   |  用户登录环信使用的密码       |
 
-## 环信ID规则
+## 环信ID规则 {#eid}
 
 当App和环信集成的时候， 需要把App系统内的已有用户和新注册的用户和环信继承， 为每个已有用户创建一个环信的账号(环信ID)， 并且App有新用户注册的时候， 需要同步的在环信中注册。
 
@@ -37,7 +37,7 @@ sidebar: restsidebar
 
 强烈建议保护好org管理员及app管理员的用户名和密码,尽量只在APP的服务器后台对环信用户做增删改查的管理，包括新用户注册。为了您的信息安全,请一定不要将org管理员或app管理员的用户名和密码写死在手机客户端中,因为手机app很容易被反编译,从而导致别人获取到您的管理员账号和密码,导致数据泄露 .
 
-## 注册IM用户[单个]
+## 注册IM用户[单个] {#im}
 在url指定的org和app中创建一个新的用户,分两种模式：开放注册 和 授权注册
 - "开放注册"模式：注册环信账号时不用携带管理员身份认证信息；
 - "授权注册"模式：注册环信账号必须携带管理员身份认证信息。推荐使用"授权注册"，这样可以防止某些已经获取了注册url和知晓注册流程的人恶意向服务器大量注册垃圾用户。
@@ -121,7 +121,8 @@ curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4V
 }
 </code></pre>
 
-## 注册IM用户[批量]
+## 注册IM用户[批量] {#im-1}
+
 > 建议批量不要过多, 在20-60之间
 
 - Path : /{org_name}/{app_name}/users
@@ -168,7 +169,7 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 }
 </code></pre>
 
-## 获取IM用户[主键查询]
+## 获取IM用户[主键查询]  {#im-2}
 > 对users来说，有两个primary key: username 和 uuid,通过他们都可以获取到一个用户
 
 - Path : /{org_name}/{app_name}/users/{user_primary_key}
@@ -242,7 +243,8 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP
 }
 </code></pre>
 
-## 获取IM用户[条件查询]
+## 获取IM用户[条件查询]  {#im-3}
+
 > 该接口默认返回最近创建的10个用户，如果需要指定获取数量，需加上参数limit=N，N为数量值.
 关于分页：如果DB中的数量大于N，返回json会携带一个字段“cursor”,我们把它叫做"游标"，该游标可理解为结果集的指针，值是变化的。往下取数据的时候带着游标，就可以获取到下一页的值。如果还有下一页，返回值里依然还有这个字段，直到没有这个字段，说明已经到最后一页。cursor的意义在于数据(真)分页。
 
@@ -604,7 +606,8 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 }
 </code></pre>
 
-## 获取IM用户[批量查询]
+## 获取IM用户[批量查询]  {#im-4}
+
 > 查询通过ql类实现 类似RDB的sql语句。比如说查询username为ywuxvxuir6的用户，查询语句就是：ql=select * where username='ywuxvxuir6',查询语句需要做urlencode成：select%20%2A%20where%20username%3D%27ywuxvxuir6%27
 
 - Path : /{org_name}/{app_name}/users/{username}
@@ -647,7 +650,7 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 }
 </code></pre>
 
-## 删除IM用户[单个]
+## 删除IM用户[单个]  {#im-5}
 
 - Path : /{org_name}/{app_name}/users/{user_primary_key}
 - HTTP Method : DELETE
@@ -686,7 +689,7 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 }
 </code></pre>
 
-## 删除IM用户[批量]
+## 删除IM用户[批量]  {#im-6}
 > 删除某个app下指定数量的环信账号。可一次删除N个用户,数值可以修改.建议这个数值在100-500之间，不要过大. 需要注意的是, 这里只是批量的一次性删除掉N个用户, 具体删除哪些并没有指定, 可以在返回值中查看到哪些用户被删除掉了。
 
 > 可以通过增加查询条件来做到精确的删除, 例如:
@@ -774,7 +777,7 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 }
 </code></pre>
 
-## 重置IM用户密码
+## 重置IM用户密码  {#im-7}
 
 - Path : /{org_name}/{app_name}/users/{user_primary_key}/password
 - HTTP Method : PUT
@@ -799,7 +802,7 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 }
 </code></pre>
 
-## 好友管理
+## 好友管理  {#contacts}
 
 ### 添加好友
 > 给一个用户添加好友, 好友必须是和自己在一个app下的IM用户.{owner_username} 是要添加好友的用户名, {friend_username} 是被添加的用户名

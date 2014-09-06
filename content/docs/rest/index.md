@@ -6,7 +6,7 @@ sidebar: restsidebar
 
 ## 环信服务器端REST平台概述
 
-#### 关于REST
+#### 关于REST {#rest}
 > 
 &emsp;&emsp;REST（Representational State Transfer）是一种轻量级的Web Service架构风格,可以翻译成“表属性状态转移”，实现和操作明显比SOAP和XML-RPC更为简洁，可以完全通过HTTP协议实现，还可以利用缓存Cache来提高响应速度，性能、效率和易用性上都优于SOAP协议。
 > 
@@ -52,7 +52,7 @@ sidebar: restsidebar
 > Python
 对于python程序, 我们推荐使用[request](http://docs.python-requests.org/en/latest/)这个类库来调用环信的REST服务.
 
-## 环信服务器基本架构
+## 环信服务器基本架构 {#arch}
 
 &emsp;&emsp;当用户在[环信开发者管理后台](https://console.easemob.com)中注册的时候, 需要填写一个"企业ID", 这是因为环信是一个支持多租户的云服务平台, 并且环信是支持"企业"(或者理解成团队)-"App"两级结构的.即, 在环信平台中, 每个企业ID之间的数据都是严格相互隔离的, 而每个企业ID内部的每个App之间的数据, 也都是严格相互隔离的.
 
