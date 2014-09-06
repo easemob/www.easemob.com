@@ -49,7 +49,7 @@ sidebar: restsidebar
 - Path : /{org_name}/{app_name}/users
 - HTTP Method : POST
 - URL Params ： 无
-- Request Headers : {"Content-Type":"applicatioin/json"}
+- Request Headers : {"Content-Type":"application/json"}
 - Request Body ： {"username":"${用户名}","password":"${密码}"}
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
