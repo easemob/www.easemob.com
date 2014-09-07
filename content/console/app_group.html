@@ -23,6 +23,27 @@ title: 环信开发者中心
 				searchUserTmp();
 				return false;
 		});
+
+		// 默认选中文字消息
+		$('#msgTypeVtext').checked = true;
+		$('#myForm').hide();
+
+		$("#msgTypeVtext").click(function(){
+			var checkedInput = $('#msgType').find('input:checked');
+			if(checkedInput.val() == "ttext") {
+				$('#msgTypeVtext').checked = true;
+				$('#msgTypeVimg').checked = false;
+				$('#myForm').hide();
+			}
+		});
+		$("#msgTypeVtimg").click(function(){
+			var checkedInput = $('#msgType').find('input:checked');
+			if(checkedInput.val() == "timg"){
+				$('#msgTypeVimg').checked = true;
+				$('#msgTypeVtext').checked = false;
+				$('#myForm').show();
+	   		}
+		});
 	});	
 	// 上一页数据
 	function getPrevAppUserList(){
@@ -138,29 +159,23 @@ title: 环信开发者中心
 		  var access_token = $.cookie('access_token');
 		  var orgName = $.cookie('orgName');
 		  var ajax_option = {
-		  url:baseUrl + '/' + orgName + '/' + appUuid + '/chatfiles',
-		  headers:{
-		    'Accept':'application/json',
-			'restrict-access':true,
-			'Accept-Encoding':'gzip,deflate',
-			'Authorization':'Bearer ' + access_token,
-			},
-			success:function(respData){
-			document.getElementById('messegeContent').style.display="none";
-				$('#div1').append('<img id="img1" src="'+baseUrl + '/' + orgName + '/' + appUuid + '/chatfiles/'+respData.entities[0].uuid+'" />');
-				var str = $('#file').val()+","+respData.entities[0]['share-secret'];
-				$('#share-secret').val(str);
+			  url:baseUrl + '/' + orgName + '/' + appUuid + '/chatfiles',
+			  headers:{
+			    'Accept':'application/json',
+				'restrict-access':true,
+				'Accept-Encoding':'gzip,deflate',
+				'Authorization':'Bearer ' + access_token,
+				},
+				success:function(respData){
+					document.getElementById('messegeContent').style.display="none";
+					$('#div1').append('<img id="img1" src="'+baseUrl + '/' + orgName + '/' + appUuid + '/chatfiles/'+respData.entities[0].uuid+'" />');
+					var str = $('#file').val()+","+respData.entities[0]['share-secret'];
+					$('#share-secret').val(str);
+					$('#imgUuid').val(baseUrl + '/' + orgName + '/' + appUuid + '/chatfiles/'+respData.entities[0].uuid);
 				},
 				error:function(respData){
 				}
-				}
-
-				$('#myForm').ajaxSubmit(ajax_option);
-				}else{
-				alert('此文件不是图片！请选择图片');
-				}
-
-	}
+		}
 </script>
 
 
@@ -348,10 +363,28 @@ title: 环信开发者中心
 	<div class="modal-header">
 		<button id="closeButn" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 		<h3 id="myModalLabel">发送消息</h3>
-	</div>
+	<input type="hidden" id="imgUuid" />
+			</div>
+			<div class="modal-header">
+				<h3 id="msgType"><font style="font-size:13px">消息类型：</font>
+				<input style="opacity:1;" type="radio" name="msgTypeV" id="msgTypeVtext" value="ttext" checked="checked" /><font style="font-size:13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文字</font>
+				<input style="opacity:1;" type="radio" name="msgTypeV" id="msgTypeVtimg" value="timg" /><font style="font-size:13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 图片</font></h3>
+			</div>
 	<div class="modal-body">
 		<div class="row-fluid">
 			<div class="span12">
+			<form id="myForm" method="POST" enctype="multipart/form-data" action=""> 
+							<div class="control-group">
+								<label class="control-label" for="messegeContent">路径：</label>
+								<div class="controls" id="div1">
+                         						<input type="text" readonly="readonly" id="f_file"/>
+					      	      			<input type="button" value="浏览..." class="btn btn-mini btn-primary" onClick="file.click()" />
+                                   					<input type="button" value="确定" class="btn btn-mini btn-primary" onClick="imgMessage()" />
+									<input type="file" name="file" id="file" onChange="f_file.value=this.value;validateSuffix(this.value)" style="display:none">
+                                                    			<input type="hidden" id="share-secret" />
+								</div>
+							</div>
+                         			</form>
 				<div class="control-group">
 					<label class="control-label" for="messegeContent">消息内容：</label>
 					<div class="controls" id="div1">
@@ -360,18 +393,7 @@ title: 环信开发者中心
 						<input type="hidden" id="appUuidMessage" name="appUuidMessage" value=""/>
 					</div>
 				</div>
-                     <form id="myForm" method="POST" enctype="multipart/form-data" action=""> 
-				<div class="control-group">
-					<label class="control-label" for="messegeContent">路径：</label>
-					<div class="controls" id="div1">
-                 	<input type="text" readonly="readonly" id="f_file"/>
-			      	      	<input type="button" value="浏览..." class="btn btn-mini btn-primary" onClick="file.click()" />
-                            <input type="button" value="确定" class="btn btn-mini btn-primary" onClick="imgMessage()" />
-											<input type="file" name="file" id="file" onChange="f_file.value=this.value;validateSuffix(this.value)" style="display:none">
-                                            <input type="hidden" id="share-secret" />
-					</div>
-				</div>
-                 </form>
+                    
 			</div>
 		</div>
 

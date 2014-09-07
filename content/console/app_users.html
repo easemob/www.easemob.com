@@ -12,6 +12,7 @@ title: 环信开发者中心
 <script tyep="text/javascript">
 	var appUuid = getQueryString('appUuid');
 	var Application = $.cookie('Application');
+
 	$(function(){
 	    $('#showName').text(Application);
 		if (!getToken() || getToken()==''){
@@ -24,6 +25,27 @@ title: 环信开发者中心
 		$('#searchForm').submit(function(){
 				searchUserTmp();
 				return false;
+		});
+
+		// 默认选中文字消息
+		$('#msgTypeVtext').checked = true;
+		$('#myForm').hide();
+
+		$("#msgTypeVtext").click(function(){
+			var checkedInput = $('#msgType').find('input:checked');
+			if(checkedInput.val() == "ttext") {
+				$('#msgTypeVtext').checked = true;
+				$('#msgTypeVimg').checked = false;
+				$('#myForm').hide();
+			}
+		});
+		$("#msgTypeVtimg").click(function(){
+			var checkedInput = $('#msgType').find('input:checked');
+			if(checkedInput.val() == "timg"){
+				$('#msgTypeVimg').checked = true;
+				$('#msgTypeVtext').checked = false;
+				$('#myForm').show();
+	   		}
 		});
 	});	
 	function imgMessage(){
@@ -322,10 +344,28 @@ title: 环信开发者中心
 	<div class="modal-header">
 		<button id="closeButn" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 		<h3 id="myModalLabel">发送消息</h3>
+		<input type="hidden" id="imgUuid" />
+	</div>
+	<div class="modal-header">
+		<h3 id="msgType"><font style="font-size:13px">消息类型：</font>
+		<input style="opacity:1;" type="radio" name="msgTypeV" id="msgTypeVtext" value="ttext" checked="checked" /><font style="font-size:13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文字</font>
+		<input style="opacity:1;" type="radio" name="msgTypeV" id="msgTypeVtimg" value="timg" /><font style="font-size:13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 图片</font></h3>
 	</div>
 	<div class="modal-body">
 		<div class="row-fluid">
 			<div class="span12">
+			<form id="myForm" method="POST" enctype="multipart/form-data" action=""> 
+							<div class="control-group">
+								<label class="control-label" for="f_file">路径：</label>
+								<div class="controls" id="div2">
+		                 				<input type="text" readonly="readonly" id="f_file"/>
+						      	      	<input type="button" value="浏览..." class="btn btn-mini btn-primary" onClick="file.click()" />
+		                            			<input type="button" value="确定" class="btn btn-mini btn-primary" onClick="imgMessage()" />
+								<input type="file" name="file" id="file" onChange="f_file.value=this.value;validateSuffix(this.value)" style="display:none">
+		                                            	<input type="hidden" id="share-secret" />
+								</div>
+							</div>
+                         			</form>
 				<div class="control-group">
 					<label class="control-label" for="messegeContent">消息内容：</label>
 					<div class="controls" id="div1">
@@ -334,18 +374,6 @@ title: 环信开发者中心
 						<input type="hidden" id="appUuidMessage" name="appUuidMessage" value=""/>
 					</div>
 				</div>
-                     <form id="myForm" method="POST" enctype="multipart/form-data" action=""> 
-				<div class="control-group">
-					<label class="control-label" for="messegeContent">路径：</label>
-					<div class="controls" id="div1">
-                 	<input type="text" readonly="readonly" id="f_file"/>
-			      	      	<input type="button" value="浏览..." class="btn btn-mini btn-primary" onClick="file.click()" />
-                            <input type="button" value="确定" class="btn btn-mini btn-primary" onClick="imgMessage()" />
-											<input type="file" name="file" id="file" onChange="f_file.value=this.value;validateSuffix(this.value)" style="display:none">
-                                            <input type="hidden" id="share-secret" />
-					</div>
-				</div>
-                 </form>
 			</div>
 		</div>
 

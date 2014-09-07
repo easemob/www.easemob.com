@@ -70,6 +70,17 @@ compile '/console/*' do
   layout item[:layout] || 'console'
 end
 
+compile 'changes/*' do
+  filter :erb
+  filter :kramdown, :toc_levels => [2]
+  filter :colorize_syntax,
+         :colorizers => {:java => :rouge,
+                        :objective_c => :rouge,
+                        :javascript => :rouge
+                        }
+  layout item[:layout] || 'blog'
+end
+
 compile '*' do
   filter :erb
   filter :kramdown, :toc_levels => [2]
@@ -113,6 +124,9 @@ route '/console/app_profile/*' do
   item.identifier + 'index.html'
 end
 
+route '/feed' do
+  '/changes.atom'
+end
 
 route '*' do
   item.identifier + 'index.html'
