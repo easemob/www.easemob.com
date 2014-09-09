@@ -6,10 +6,10 @@ secondnavios: true
 
 #群聊：
 
-##收发消息及聊天记录相关等
+##收发消息及聊天记录相关等 {#group-chatsingle}
 这部分与单聊是一样的，详情见单聊[http://developer.easemob.com/docs/ios/singlechat](http://developer.easemob.com/docs/ios/singlechat)
 
-##新建群组
+##新建群组 {#group-new}
 
 接口
 
@@ -87,7 +87,7 @@ secondnavios: true
 	    } onQueue:nil];
 </code></pre>
 
-##群组加人
+##群组加人 {#group-joincontact}
 
 接口
 
@@ -147,7 +147,7 @@ secondnavios: true
 
 </code></pre>
 
-##群组踢人
+##群组踢人 {#group-subcontact}
 
 接口
 
@@ -204,7 +204,7 @@ secondnavios: true
 	                    } onQueue:nil];
 </code></pre>
 
-##退出群组
+##退出群组 {#group-exit}
 
 接口
 
@@ -250,13 +250,13 @@ secondnavios: true
 	    } onQueue:nil];
 </code></pre>
 
-##解散群组
+##解散群组 {#group-dismiss}
 
 **需要创建者权限**
 
 接口及用法同<5、退出群聊>，SDK中会判断调用者是否是创建者，如果是则解散群组。  
 
-##群组事件监听
+##群组事件监听 {#group-listener}
 
 **前提条件**
 
@@ -407,7 +407,7 @@ secondnavios: true
 	                          error:(EMError *)error;
 </code></pre>
 	                          
-##获取与自己相关的群组列表（加入或者创建的）
+##获取群组列表（加入或者创建的） {#group-getlist}
 
 接口
 
@@ -451,7 +451,7 @@ secondnavios: true
     } onQueue:nil];
 </code></pre>
     
-##获取公开群组列表
+##获取公开群组列表 {#group-publiclist}
 
 接口
 
@@ -491,7 +491,7 @@ secondnavios: true
 	    } onQueue:nil];	   
 </code></pre>	    
 
-##搜索公开群组	 
+##搜索公开群组	{#group-searchpublic} 
 
 接口
 
