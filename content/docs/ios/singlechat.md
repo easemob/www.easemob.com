@@ -6,7 +6,7 @@ secondnavios: true
 
 #单聊：
 
-##  初始化 
+##  初始化 {#init}
 
 在Appdelegate生命中期中，加入对应的初始化，以便SDK能正常工作;
 
@@ -69,7 +69,7 @@ secondnavios: true
 	
 </code></pre>
 
-##  登录 
+##  登录 {#login}
 
 如果使用自己的用户体系，需要先**登录您的用户体系**，成功后登录IM部分;
 
@@ -88,7 +88,7 @@ secondnavios: true
      
 loginInfo包含账号，密码等信息;
 
-###  退出登录 
+###  退出登录 {#logout}
 
 **退出登录时, 需要先退出自己的用户系统, 然后调用下面的方法退出EaseMob服务器**
 
@@ -97,7 +97,7 @@ loginInfo包含账号，密码等信息;
 
 </code></pre>
 
-##发文字，语音，图片，位置
+##发文字，语音，图片，位置 {#sendmessage}
 
 ###  发送消息 
 
@@ -185,7 +185,7 @@ loginInfo包含账号，密码等信息;
 	[[EaseMob sharedInstance].chatManager sendMessage:msg progress:nil error:nil];
 </code></pre>
 
-##  接收消息 
+##  接收消息 {#receivermessage}
 
 ####  实现委托 
 
@@ -215,7 +215,7 @@ loginInfo包含账号，密码等信息;
 
 ##聊天消息历史记录管理：查询，删除
 
-### 获取聊天记录 
+### 获取聊天记录 {#historymessage}
 
 根据username可以得到一个conversation;
 
@@ -278,7 +278,7 @@ loginInfo包含账号，密码等信息;
 
 </code></pre>
 
-##未读消息数变化回调（单一聊天人，所有聊天人）。消息已读设定
+##未读消息数变化回调（单一聊天人，所有聊天人）。消息已读设定 {#unreadmessage}
 
 ###  设置消息状态 
 
@@ -329,63 +329,7 @@ EMConversation中，提供了设置该EMConversation对象中所有message状态
 </code></pre>
 
 
-## 获取好友列表:
-
-获取好友列表分几个步骤
-
-1. 登录成功后, 使用 [[EaseMob sharedInstance].chatManager buddyList] 获取BuddyList
-2. 通过BuddyList获取username
-3. 通过username去自己的服务器上获取用户信息
-
-<pre class="hll"><code class="language-objective_c">
-		//获取好友列表
-		NSArray *buddys = [[EaseMob sharedInstance].chatManager buddyList];
-	    NSMutableArray *usernames = [NSMutableArray array];
-	    //循环取得 EMBuddy 对象
-	    for (EMBuddy *buddy in buddys) {
-	    	//屏蔽发送了好友申请, 但未通过对方接受的用户
-	        if (!buddy.isPendingApproval) {
-	            [usernames addObject:buddy.username];
-	        }
-	    }
-</code></pre>	
-    
-EMBuddy类包含以下属性
-
-<pre class="hll"><code class="language-objective_c">
-	@property (copy, nonatomic, readonly)NSString *username; //用户名 
-	@property (nonatomic) BOOL isOnline; //是否在线
-	@property (nonatomic) BOOL isPendingApproval;  //是否是发送了好友申请待接受的用户
-
-</code></pre>
-	
-BuddyList中, 不返回其它信息, 只返回username, 所以, 如果需要用户的其它信息, 需要调用开发者自己的后台服务器接口, 来获取用户的全部信息
-
-## 监听好友列表变化
-
-为了监听好友列表变化, 需要将监听的对应添加到监听列表中, 代码如下:
-
-<pre class="hll"><code class="language-objective_c">
-	[[[EaseMob sharedInstance] chatManager] addDelegate:self delegateQueue:nil]
-
-</code></pre>
-
-当好友列表变化时, 会调用如下方法:
-
-<pre class="hll"><code class="language-objective_c">
-	/*!
-	 @method
-	 @abstract 通讯录信息发生变化时的通知
-	 @discussion
-	 @param buddyList 好友信息列表
-	 @param changedBuddies 修改了的用户列表
-	 @param isAdd (YES为新添加好友, NO为删除好友)
-	 */
-	- (void)didUpdateBuddyList:(NSArray *)buddyList changedBuddies:(NSArray *)changedBuddies isAdd:(BOOL)isAdd
-
-</code></pre>
-
-## 获取好友列表:
+## 获取好友列表: {#friendslist}
 
 获取好友列表分几个步骤
 
@@ -417,7 +361,7 @@ EMBuddy类包含以下属性
 	
 BuddyList中, 不返回其它信息, 只返回username, 所以, 如果需要用户的其它信息, 需要调用开发者自己的后台服务器接口, 来获取用户的全部信息
 
-## 监听好友列表变化
+## 监听好友列表变化 {#friendslistener}
 
 为了监听好友列表变化, 需要将监听的对应添加到监听列表中, 代码如下:
 
@@ -441,13 +385,13 @@ BuddyList中, 不返回其它信息, 只返回username, 所以, 如果需要用�
 </code></pre>		
 
 
-## 查找好友
+## 查找好友  {#findfriend}
 
 SDK不提供好友查找的服务, 如需要查找好友, 需要调用开发者自己服务器的用户查询接口
 
 为了保证查找到的好友可以添加, 需要将用户自己服务器的用户数据库, 通过SDK的后台接口导入到SDK服务器中
 	
-## 添加好友
+## 添加好友  {#addfriend}
 
 使用以下方法发送一个好友申请
 
@@ -473,7 +417,7 @@ SDK不提供好友查找的服务, 如需要查找好友, 需要调用开发者�
 
 如果开发者需要在自己的服务器上维护一套好友体系, 则需要同时调用自己服务器的添加好友请求接口
 
-## 监听好友请求
+## 监听好友请求 {#friendrequest}
 
 若工监听是否有好友申请, 需要添加如下代码:
 
@@ -492,7 +436,7 @@ SDK不提供好友查找的服务, 如需要查找好友, 需要调用开发者�
 message为对方发送好友请求时附带的消息, 比如:"我是xxx"
 每收到一次好友请求, 都会调用一次该回调, 登录的时候, 离线的好友请求, 会依次调用该方法
 
-## 接受好友请求
+## 接受好友请求 {#acceptfriend}
 
 显示好友申请列表后, 需要接受或拒绝好友请求, 接受好友请求的方法如下:
 
@@ -508,7 +452,7 @@ message为对方发送好友请求时附带的消息, 比如:"我是xxx"
 
 </code></pre>
 
-## 移除好友
+## 移除好友 {#removefriend}
 
 将好友从好友列表中移除, 需要调用以下方法:
 
@@ -539,7 +483,7 @@ message为对方发送好友请求时附带的消息, 比如:"我是xxx"
 ## 高级话题
 
 
-### 自定义消息类型
+### 自定义消息类型 {#custommessage}
 
 EMMessage支持用户自定义扩展
 
@@ -593,7 +537,7 @@ EMMessage支持用户自定义扩展
 
 </code></pre>
 
-## 黑名单
+## 黑名单 {#blacklist}
 
 ### 获取黑名单列表
 
@@ -667,7 +611,7 @@ EMMessage支持用户自定义扩展
 
 </code></pre>
 
-## 新消息提示 
+## 新消息提示 {#notification}
 SDK中提供了方便的新消息提醒功能。可以在收到消息时调用，提醒用户有新消息。
 
 
@@ -687,7 +631,7 @@ SDK中提供了方便的新消息提醒功能。可以在收到消息时调用�
 
 </code></pre>
 
-## 设备调用
+## 设备调用  {#invokedevice}
 
 ###  录音时获取音量大小 
 
