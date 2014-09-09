@@ -230,10 +230,10 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
         <li style="float:left; padding-left:55px;"><a href="http://www.xzhichang.com/xapp/index" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/jiashengmi.jpg"></a></li>
         <li style="float:left; padding-left:55px;"><a href="#" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/mxd.png"></a></li>
         <li style="float:left; padding-left:55px;"><a href="http://m.taoshij.com:8000/download.html"  target="_black" style="color:#828187; font-size:15px; font-family:'宋体'; padding-left:3px;"><img src="../img/taoshijie.jpg"></a></li>
-        <li style="float:left; padding-left:54px;"><a href="www.bskcare.com" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/tang.png"></a></li>
+        <li style="float:left; padding-left:54px;"><a href="http://www.bskcare.com" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/tang.png"></a></li>
         <li style="float:left; padding-left:54px;"><a href="http://www.ymaiban.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/yangmaiban.jpg"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="www.4axx.com" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';" ><img src="../img/yidongqida.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="www.hptn.cn" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/zhinengkouqu.jpg"></a></li>
+        <li style="float:left; padding-left:55px;"><a href="http://www.4axx.com" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';" ><img src="../img/yidongqida.png"></a></li>
+        <li style="float:left; padding-left:55px;"><a href="http://www.hptn.cn" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/zhinengkouqu.jpg"></a></li>
         
     </ul>
     <dl style="width:990px; float:left; font-size:15px; a:hover:#039; padding-left:16px;">
@@ -242,10 +242,10 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
         <dd style=" float:left; margin-right:68px;"><a href="https://itunes.apple.com/cn/app/id705778436?mt=8" target="_black" >甲生米</a></dd>
         <dd style=" float:left; margin-right:62px;"><a href="#" target="_black">毛小豆</a></dd>
         <dd style="padding-left: 14px; margin-right: 62px; float: left;"><a href="http://m.taoshij.com:8000/download.html" target="_black">淘世界</a></dd>
-        <dd style=" float:left; margin-right:60px;"><a href="www.bskcare.com" target="_black">血糖高管</a></dd>
+        <dd style=" float:left; margin-right:60px;"><a href="http://www.bskcare.com" target="_black">血糖高管</a></dd>
         <dd style=" float:left; margin-right:62px;"><a href="http://www.ymaiban.com/" target="_black">洋买办</a></dd>
-        <dd style=" float:left; margin-right:56px;"><a href="www.4axx.com" target="_black">移动企大</a></dd>
-        <dd style=" float:left;"><a href="www.hptn.cn" target="_black">智能口语</a></dd>
+        <dd style=" float:left; margin-right:56px;"><a href="http://www.4axx.com" target="_black">移动企大</a></dd>
+        <dd style=" float:left;"><a href="http://www.hptn.cn" target="_black">智能口语</a></dd>
     </dl>
 
 
