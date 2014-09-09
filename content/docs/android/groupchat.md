@@ -6,13 +6,13 @@ secondnavandroid: true
 
 #群聊:
 
-##发文字，语音，图片，位置
+##发文字，语音，图片，位置 {#group-sendmessage}
 
 ### 收发消息及聊天记录相关等
 
 这部分与单聊是一样的，详情见[单聊](http://developer.easemob.com/docs/android/singlechat)
 
-## 新建群聊
+## 新建群聊 {#group-new}
 
 ####创建私有群
 私有群，不能被搜索到，只能通过群主加人进群，或者设置了allowInvite为true，即允许群成员邀
@@ -35,7 +35,7 @@ secondnavandroid: true
 	EMGroupManager.getInstance().createPublicGroup(groupName, desc, members, needApprovalRequired);
 </code></pre>	
 
-## 群聊加人
+## 群聊加人 {#group-joincontact}
 <pre class="hll"><code class="language-java">
 	//群主加人调用此方法
 	EMGroupManager.getInstance().addUsersToGroup(groupId, newmembers);
@@ -43,13 +43,13 @@ secondnavandroid: true
 	EMGroupManager.getInstance().inviteUser(groupId, newmembers, null);
 </code></pre>
 
-## 群聊减人
+## 群聊减人 {#group-subcontact}
 <pre class="hll"><code class="language-java">
 	//把username从群聊里删除
 	EMGroupManager.getInstance().removeUserFromGroup(groupId, username);
 </code></pre>
 
-## 加入某个群聊
+## 加入某个群聊 {#group-joinone}
 只能用于加入公开群
 
 <pre class="hll"><code class="language-java">
@@ -59,17 +59,17 @@ secondnavandroid: true
 	EMGroupManager.getInstance().applyJoinToGroup(groupid, "求加入");
 </code></pre>
 
-## 退出群聊
+## 退出群聊 {#group-exit}
 <pre class="hll"><code class="language-java">
 	EMGroupManager.getInstance().exitFromGroup(groupId);
 </code></pre>
 
-## 解散群聊
+## 解散群聊 {#group-dismiss}
 <pre class="hll"><code class="language-java">
 	EMGroupManager.getInstance().exitAndDeleteGroup(groupId);
 </code></pre>
 
-## 获取群聊列表 ##
+## 获取群聊列表 ## {#group-getlist}
 
 <pre class="hll"><code class="language-java">
 	//从服务器获取自己加入的和创建的群聊列表
@@ -85,7 +85,7 @@ secondnavandroid: true
 
 ## 高级话题 ##
 
-## 自定义扩展消息 ##
+## 自定义扩展消息 ## {#group-custommessage}
 当sdk提供的消息类型不满足需求时，开发者可以通过扩展自sdk提供的文本、语音、图片、位置等消息类型，从而生成自己需要的消息类型。
 
 <pre class="hll"><code class="language-java">
@@ -119,7 +119,7 @@ secondnavandroid: true
 	}
 </code></pre>
 
-### 群聊事件监听 ###
+### 群聊事件监听 ### {#group-listener}
 
  <pre class="hll"><code class="language-java">
 	EMGroupManager.getInstance().addGroupChangeListener(new GroupChangeListener() {
@@ -158,7 +158,7 @@ secondnavandroid: true
 	});
  </code></pre>
 
-### 获取群组信息 ###
+### 获取群组信息 ### {#group-getdetail}
 
  <pre class="hll"><code class="language-java">
 	//根据群组ID从本地获取群组信息
