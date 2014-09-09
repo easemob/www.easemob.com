@@ -37,7 +37,86 @@ sidebar: restsidebar
 
 强烈建议保护好org管理员及app管理员的用户名和密码,尽量只在APP的服务器后台对环信用户做增删改查的管理，包括新用户注册。为了您的信息安全,请一定不要将org管理员或app管理员的用户名和密码写死在手机客户端中,因为手机app很容易被反编译,从而导致别人获取到您的管理员账号和密码,导致数据泄露 .
 
+## 获取APP管理员Token {#getadmintoken}
+环信提供的REST API需要权限才能访问,权限通过发送HTTP请求时发送token来体现,下面描述获取token的方式。小说明：api描述的时候使用到的{app的client_id}或者{app管理员密码}之类的这中参数需要替换成具体的
+
+### 使用app的client_id和client_secret获取授权token
+
+client_id 和 client_secret可以在环信管理后台的app详情页面看到
+
+- Path : /{org_name}/{app_name}/token
+- HTTP Method : POST
+- URL Params ： 无
+- Request Headers : {"Content-Type":"application/json"}
+- Request Body ： {"grant_type": "client_credentials","client_id": "{app的client_id}","client_secret": "{app的client_secret}"}
+- Response Body ：
+
+    |      key     |     value   |
+    |--------------|-------------|
+    | access_token |   token值  |
+    | expires_in   |  有效时间,秒为单位, 默认是七天,在有效期内是不需要重复获取的 |
+    | application  |  当前app的UUID值   | 
+
+#### curl示例：
+
+<pre class="hll"><code class="language-java">
+curl -X POST "https://a1.easemob.com/easemob-demo/chatdemo/token" -d '{"grant_type":"client_credentials","client_id":"YXA6wDs-MARqEeSO0VcBzaqg11","client_secret":"YXA6JOMWlLap_YbI_ucz77j-4-mI0dd"}'
+</code></pre>
+
+#### Response:
+
+<pre class="hll"><code class="language-java">
+{
+  "access_token":"YWMtWY779DgJEeS2h9OR7fw4QgAAAUmO4Qukwd9cfJSpkWHiOa7MCSk0MrkVIco",
+  "expires_in":5184000,
+  "application":"c03b3e30-046a-11e4-8ed1-5701cdaaa0e4"
+}
+</code></pre>
+
+
+### 使用app管理员的username和password获取授权token
+
+- Path : /{org_name}/{app_name}/token
+- HTTP Method : POST
+- URL Params ： 无
+- Request Headers : {"Content-Type":"application/json"}
+- Request Body ： {"grant_type": "password","username":"${app管理员用户名}","password":"${app管理员密码}"}
+- Response Body ：
+
+    |      key     |     value   |
+    |--------------|-------------|
+    | access_token |   token值   |
+    | expires_in   |  有效时间,秒为单位, 默认是七天,在有效期内是不需要重复获取的 |
+    | uuid         |  当前app的UUID值   |
+    | username     |  app管理员的用户名  |
+
+#### curl示例：
+
+<pre class="hll"><code class="language-java">
+curl -X POST "https://a1.easemob.com/easemob-demo/chatdemoui/token" -d '{"grant_type":"password","username":"adminadmin","password":"111111111"}'
+</code></pre>
+
+#### Response:
+
+<pre class="hll"><code class="language-java">
+{
+  "access_token":"YWMt8W4uIDgLEeStLdkfu6SmkwAAAUmO8gpkmrJbNIZrx-M-dooWysnOQxcDR7o",
+  "expires_in":5184000,
+  "user":{
+    "uuid":"119b92ea-e0ce-11e3-a8d6-c1794764e6ae",
+    "type":"user",
+    "created":1400666141454,
+    "modified":1409490010296,
+    "username":"adminadmin",
+    "activated":true,
+    "nickname":"adminadmin"
+  }
+}
+</code></pre>
+
+
 ## 注册IM用户[单个] {#im}
+
 在url指定的org和app中创建一个新的用户,分两种模式：开放注册 和 授权注册
 - "开放注册"模式：注册环信账号时不用携带管理员身份认证信息；
 - "授权注册"模式：注册环信账号必须携带管理员身份认证信息。推荐使用"授权注册"，这样可以防止某些已经获取了注册url和知晓注册流程的人恶意向服务器大量注册垃圾用户。
