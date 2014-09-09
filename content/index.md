@@ -224,10 +224,9 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
 
 
         <ul style=" width:990px;">
-      
         <li style="float:left;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/jd.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/gswtk.jpg" style="padding-left:3px;"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://www.xzhichang.com/xapp/index" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/jiashengmi.jpg"></a></li>
+        <li style="float:left; padding-left:55px;"><img src="../img/gswtk.jpg" style="padding-left:3px;"></li>
+        <li style="float:left; padding-left:55px;"><a href="https://itunes.apple.com/cn/app/id705778436?mt=8" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/jiashengmi.jpg"></a></li>
         <li style="float:left; padding-left:55px;"><a href="#" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/mxd.png"></a></li>
         <li style="float:left; padding-left:55px;"><a href="http://m.taoshij.com:8000/download.html"  target="_black" style="color:#828187; font-size:15px; font-family:'宋体'; padding-left:3px;"><img src="../img/taoshijie.jpg"></a></li>
         <li style="float:left; padding-left:54px;"><a href="http://www.bskcare.com" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/tang.png"></a></li>
@@ -238,7 +237,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
     </ul>
     <dl style="width:990px; float:left; font-size:15px; a:hover:#039; padding-left:16px;">
         <dd style=" float:left; margin-right:64px;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" target="_black">点近</a></dd>
-        <dd style=" float:left; margin-right:56px;"><a href="#" target="_black">规士问题控</a></dd>
+        <dd style=" float:left; margin-right:56px;">规士问题控</dd>
         <dd style=" float:left; margin-right:68px;"><a href="https://itunes.apple.com/cn/app/id705778436?mt=8" target="_black" >甲生米</a></dd>
         <dd style=" float:left; margin-right:62px;"><a href="#" target="_black">毛小豆</a></dd>
         <dd style="padding-left: 14px; margin-right: 62px; float: left;"><a href="http://m.taoshij.com:8000/download.html" target="_black">淘世界</a></dd>
