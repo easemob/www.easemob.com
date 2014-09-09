@@ -38,7 +38,7 @@ sidebar: restsidebar
 强烈建议保护好org管理员及app管理员的用户名和密码,尽量只在APP的服务器后台对环信用户做增删改查的管理，包括新用户注册。为了您的信息安全,请一定不要将org管理员或app管理员的用户名和密码写死在手机客户端中,因为手机app很容易被反编译,从而导致别人获取到您的管理员账号和密码,导致数据泄露 .
 
 ## 获取APP管理员Token {#getadmintoken}
-环信提供的REST API需要权限才能访问,权限通过发送HTTP请求时发送token来体现,下面描述获取token的方式。小说明：api描述的时候使用到的{app的client_id}或者{app管理员密码}之类的这中参数需要替换成具体的
+环信提供的REST API需要权限才能访问,权限通过发送HTTP请求时携带token来体现,下面描述获取token的方式。小说明：api描述的时候使用到的{app的client_id}或者{app管理员密码}之类的这种参数需要替换成具体的值 .
 
 ### 使用app的client_id和client_secret获取授权token
 
