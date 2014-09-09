@@ -87,7 +87,7 @@ curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"usern
 - Path : /{org_name}/{app_name}/users
 - HTTP Method : POST
 - URL Params ： 无
-- Request Headers : {"Content-Type":"applicatioin/json","Authorization":"Bearer ${token}"}
+- Request Headers : {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Request Body ： {"username":"${用户名}","password":"${密码}"}
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
@@ -128,7 +128,7 @@ curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4V
 - Path : /{org_name}/{app_name}/users
 - HTTP Method : POST
 - URL Params ： 无
-- Request Headers : {"Content-Type":"applicatioin/json","Authorization":"Bearer ${token}"}
+- Request Headers : {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Request Body ： [{"username":"${用户名1}","password":"${密码}"},...,{"username":"${用户名2}","password":"${密码}"}]
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 

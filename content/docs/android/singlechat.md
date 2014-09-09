@@ -6,7 +6,7 @@ secondnavandroid: true
 
 #单聊:
 
-##初始化
+##初始化  {#init}
 
 ### 初始化环信聊天SDK
 
@@ -15,7 +15,7 @@ secondnavandroid: true
 EMChat.getInstance().init(getApplicationContext());
 </code></pre>
 
-## 登录鉴权
+## 登录鉴权 {#login}
 
 ### 登陆聊天服务器
 
@@ -43,7 +43,7 @@ EMChatManager.getInstance().login(userName,password,
 	});
 </code></pre>
 
-### 退出聊天登陆
+### 退出聊天登陆  {#logout}
 
 <pre class="hll"><code class="language-java">
 
@@ -51,7 +51,7 @@ EMChatManager.getInstance().logout();
 	
 </code></pre>
 
-## 发文字，语音，图片，位置
+## 发文字，语音，图片，位置  {#sendmessage}
 
 ### 发送消息(单聊/群聊)
 
@@ -138,7 +138,7 @@ conversation.addMessage(message);
 EMChatManager.getInstance().sendMessage(message, new EMCallBack());
 </code></pre>
 
-## 接收消息
+## 接收消息 {#receivermessage}
 
 注册一个相应broadcast，用来接收消息
 
@@ -169,7 +169,7 @@ private class NewMessageBroadcastReceiver extends BroadcastReceiver {
 }
 </code></pre>
 
-### 获取聊天记录
+### 获取聊天记录 {#historymessage}
 
 <pre class="hll"><code class="language-java">
 EMConversation conversation = EMChatManager.getInstance().getConversation(username);
@@ -182,7 +182,7 @@ List&lt;EMMessage&gt; messages = conversation.loadMoreMsgFromDB(startMsgId, page
 List&lt;EMMessage&gt; messages = conversation.loadMoreGroupMsgFromDB(startMsgId, pagesize);
 </code></pre>
 	
-## 未读消息数变化回调（单一聊天人，所有聊天人）。消息已读设定
+## 未读消息数变化回调（单一聊天人，所有聊天人）。消息已读设定  {#unreadmessage}
 
 ### 获取未读消息数量
 
@@ -218,7 +218,7 @@ conversation.removeMessage(deleteMsg.msgId);
 	
 </code></pre>
 
-### 设置自定义的消息提示
+### 设置自定义的消息提示 {#setnotification}
 
 
 app在后台时，新消息会通过notification的方式，在手机状态栏提示新消息，可以把提示的内容换成自定义的内容(在application的oncreate()里设置)。
@@ -270,7 +270,7 @@ options.setOnNotificationClickListener(new OnNotificationClickListener() {
 });
 </code></pre>
 
-## 新消息提示
+## 新消息提示 {#notification}
 SDK中提供了方便的新消息提醒功能。可以在收到消息时调用，提醒用户有新消息
 
 首先获取EMChatOptions  
@@ -317,7 +317,7 @@ chatOptions.setAcceptInvitationAlways(false);
     
 </code></pre> 
 
-## 好友列表管理
+## 好友列表管理 {#friendslist}
 
 ### 获取好友列表
 
@@ -421,9 +421,9 @@ EMContactManager.getInstance().setContactListener(new EMContactListener() {
 });
 </code></pre>
 
-## 高级话题
+## 高级话题 
 
-## 自定义扩展消息
+## 自定义扩展消息 {#custommessage}
 当sdk提供的消息类型不满足需求时，开发者可以通过扩展自sdk提供的文本、语音、图片、位置等消息类型，从而生成自己需要的消息类型。
 
 <pre class="hll"><code class="language-java">
@@ -457,16 +457,16 @@ private class NewMessageBroadcastReceiver extends BroadcastReceiver {
 }
 </code></pre>
 
-## 黑名单
+## 黑名单 {#blacklist}
 
-### 获取黑民单列表
+### 获取黑名单列表
 
 <pre class="hll"><code class="language-java">
 //获取黑名单用户的usernames
 EMContactManager.getInstance().getBlackListUsernames();
 </code></pre>
 
-### 把用户加入到黑民单
+### 把用户加入到黑名单
 
 <pre class="hll"><code class="language-java">	
 //第二个参数如果为true，则把用户加入到黑名单后双方发消息时对方都收不到；false,则
@@ -482,7 +482,7 @@ EMContactManager.getInstance().deleteUserFromBlackList(username);
     
 </code></pre>
 
-##网络异常监听:
+##网络异常监听: {#networklisten}
 
 1.在聊天过程中难免会遇到网络问题，在此SDK为您提供了网络监听接口，实时监听
 
