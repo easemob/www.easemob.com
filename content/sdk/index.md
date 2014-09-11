@@ -34,7 +34,7 @@ var _hmt = _hmt || [];
 						<span class="webIm_icon"></span>
 						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/WEB-IM-20140901.zip">下载webIM版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/webim/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/webim/quickstartinapp/" target="_blank">Android SDK 集成指南</a></em>V 2.0.7　下载次数：12115</span>
+						<span><em><a href="/docs/webim/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/webim/quickstartinapp/" target="_blank">webIM SDK 集成指南</a></em>V 2.0.7　下载次数：12115</span>
 					</li>
 				</ul>
 			</div>
