@@ -53,10 +53,12 @@ REST client就是调用REST API的程序端，可以使调用方式有多种：L
 | Accept       | application/json | 服务器端返回给客户端的数据类型  |
 | Content-Type | application/json | 客户端发到服务器端的是数据类型  |
 
-> Java
+Java
+
 在Java中, REST Client实现方式有多种，比如JBOss RestEasy、 Sun Jersey、Dropwizard、Apache HTTPClient.我们推荐使用[Jersey](https://jersey.java.net)来调用环信的REST服务, Jersy 2.x实现了JAX-RS 2.0的规范, 并且提供了异步的支持, 但是Jersey 2.x需要JDK 1.7的支持, 所以如果你的服务器端程序还没有办法使用JDK 1.7, 那么需要使用 Jersey 1.x的版本.也有很多人直接使用[Apache Http Client](http://hc.apache.org), 我们并不推荐直接使用这个库, 主要是因为这个库相对比较底层, 需要自己处理的东西很多, API也相对繁琐.
 
-> Python
+Python
+
 对于python程序, 我们推荐使用[request](http://docs.python-requests.org/en/latest/)这个类库来调用环信的REST服务.
 
 ## 环信服务器基本架构 {#arch}
@@ -139,7 +141,7 @@ Request Headers : {
 
 在调用环信的后台服务之前, 需要先登陆获取token, 而根据请求发起人的角色不同, 获取token的方式也不同
 
-> 关于OAuth 2.0, 可以参考这篇[理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
+关于OAuth 2.0, 可以参考这篇[理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
 
 ## 示例代码
 
