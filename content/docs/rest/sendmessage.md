@@ -9,10 +9,10 @@ sidebar: restsidebar
 ### 查看用户在线状态 {#status}
 > 查看一个用户的在线状态
 
-- Path : /{org}/{app}/users/{username}/status
+- Path : /{org_name}/{app_name}/users/{user_primary_key}/status
 - HTTP Method : GET
 - URL Params ： 无
-- Request Headers : {"Content-Type":"applicatioin/json"}
+- Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
@@ -43,16 +43,14 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
         
 ### 发送消息 {#sendmsg}
 
-
-
 > 给一个或者多个用户, 或者一个或者多个群组发送消息, 并且通过可选的_from_字段让接收方看到发送方是不同的人,同时, 支持扩展字段, 通过_ext_属性, app可以发送自己专属的消息结构.
 
-- Path : /{org}/{app}/messages
+- Path : /{org_name}/{app_name}/messages
 - Request Method : POST
 - URL Params ： 无
-- Request Headers : {"Content-Type":"applicatioin/json"}
+- Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-- Request Body ：
+- Request Body ： 
 
 <pre class="hll"><code class="language-java">
 {

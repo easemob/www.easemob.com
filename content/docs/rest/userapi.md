@@ -690,7 +690,7 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 
 > 条件查询通过ql类实现 类似RDB的sql语句。比如说查询username为ywuxvxuir6的用户，查询语句就是：ql=select * where username='ywuxvxuir6',查询语句需要做urlencode成：select%20%2A%20where%20username%3D%27ywuxvxuir6%27
 
-- Path : /{org_name}/{app_name}/users/{username}
+- Path : /{org_name}/{app_name}/users
 - HTTP Method : GET
 - URL Params ：ql=select * where username='ywuxvxuir6'
 - Request Headers : {"Authorization":"Bearer ${token}"}

@@ -112,7 +112,7 @@ sidebar: restsidebar
 - Path : /{org_name}/{app_name}/chatmessages
 - HTTP Method : GET
 - URL Params ： 无
-- Request Headers : {"Content-Type":"applicatioin/json"}
+- Request Headers :  {“Content-Type”:”application/json”,”Authorization”:”Bearer ${token}”}
 - Response Body ： 聊天记录(json),默认返回10条记录
 
 <pre class="hll"><code class="language-java">

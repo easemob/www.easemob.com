@@ -11,7 +11,7 @@ sidebar: restsidebar
 ## 获取app中所有的群组ID {#getallgroups}
 
 <pre class="hll"><code class="language-java">
-GET /{org}/{app}/chatgroups
+GET /{org_name}/{app_name}/chatgroups
 </code></pre>
 
 ##### Response
@@ -45,13 +45,13 @@ GET /{org}/{app}/chatgroups
 ## 获取一个或者多个群组的详情 {#getgroups}         
 
 <pre class="hll"><code class="language-java">
-GET /{org}/{app}/chatgroups/{group_id1},{group_id2}
+GET /{org_name}/{app_name}/chatgroups/{group_id1},{group_id2}
 </code></pre>
 
 ## 创建一个群组 {#create}
 
 <pre class="hll"><code class="language-java">
-POST /chatgroups {}
+POST /{org_name}/{app_name}/chatgroups
 </code></pre>
 
 参数
@@ -76,7 +76,7 @@ POST /chatgroups {}
 ## 删除群组 {#delete}
 
 <pre class="hll"><code class="language-java">
-DELETE /chatgroups/{group_id}
+DELETE /{org_name}/{app_name}/chatgroups/{group_id}
 </code></pre>
 
 返回值:
@@ -102,17 +102,17 @@ DELETE /chatgroups/{group_id}
 ## 获取群组中的所有成员 {#users}
 
 <pre class="hll"><code class="language-java">
-GET /chatgroups/{group_id}/users
+GET /{org_name}/{app_name}/chatgroups/{group_id}/users
 </code></pre>
 
 ## 在群组中添加一个人 {#addmember}
 
 <pre class="hll"><code class="language-java">
-POST /chatgroups/{group_id}/users/{username}
+POST /{org_name}/{app_name}/chatgroups/{group_id}/users/{user_primary_key}
 </code></pre>
 
 ## 在群组中减少一个人 {#deletemember}
 
 <pre class="hll"><code class="language-java">
-DELETE /chatgroups/{group_id}/users/{username}
+DELETE /{org_name}/{app_name}/chatgroups/{group_id}/users/{user_primary_key}
 </code></pre>
