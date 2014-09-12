@@ -323,7 +323,7 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP
 }
 </code></pre>
 
-## 获取IM用户[条件查询]  {#im-3}
+## 获取IM用户[批量查询]  {#im-3}
 
 > 该接口默认返回最近创建的10个用户，如果需要指定获取数量，需加上参数limit=N，N为数量值.
 关于分页：如果DB中的数量大于N，返回json会携带一个字段“cursor”,我们把它叫做"游标"，该游标可理解为结果集的指针，值是变化的。往下取数据的时候带着游标，就可以获取到下一页的值。如果还有下一页，返回值里依然还有这个字段，直到没有这个字段，说明已经到最后一页。cursor的意义在于数据(真)分页。
@@ -686,9 +686,9 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 }
 </code></pre>
 
-## 获取IM用户[批量查询]  {#im-4}
+## 获取IM用户[条件查询]  {#im-4}
 
-> 查询通过ql类实现 类似RDB的sql语句。比如说查询username为ywuxvxuir6的用户，查询语句就是：ql=select * where username='ywuxvxuir6',查询语句需要做urlencode成：select%20%2A%20where%20username%3D%27ywuxvxuir6%27
+> 条件查询通过ql类实现 类似RDB的sql语句。比如说查询username为ywuxvxuir6的用户，查询语句就是：ql=select * where username='ywuxvxuir6',查询语句需要做urlencode成：select%20%2A%20where%20username%3D%27ywuxvxuir6%27
 
 - Path : /{org_name}/{app_name}/users/{username}
 - HTTP Method : GET
