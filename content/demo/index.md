@@ -26,7 +26,7 @@ layout: overview
 				</dl>
 			</div>
 		</div>
-		<div class="demo_bd_bg"></div>
+		
 		<div class="demo_bd">
 			<div class="info_content">
 				<h2>简介:</h2>
