@@ -26,9 +26,9 @@ var _hmt = _hmt || [];
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/androidsdk.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.0.9.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.0.8　下载次数：14327</span>
+						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.0.9　下载次数：14327</span>
 					</li>
 					<li class="li_away">
 						<span class="webIm_icon"></span>
@@ -260,8 +260,24 @@ var _hmt = _hmt || [];
 
 			    <ul class="history_right">
 				<h2 class="first">Andriod SDK 更新日志</h2>
-					<li>
-		              <h3><em></em><span>版本：V2.0.8 2014-08-30</span></h3>
+              <li>
+                    <h3><em></em><span>版本：V2.0.9 2014-09-15</span></h3>
+                      <dl>
+                        <dt>
+                          <span>新功能/改进：<br/>
+                            1、新增实时语音（BETA版,现支持wifi和wifi之间的通话，手机3G/2G/4G间通话暂时不支持，下一版本会支持）<br/>
+                            2、新增消息送达通知<br/>
+                            3、新增屏蔽群消息功能<br/>			
+                             Bug Fix：<br/>
+                            1、修复群组多次连着加人踢人收不到消息的bug<br/>		
+                            2、修复并发取未读消息时并发异常错误<br/>
+                            3、修复logger null pointer 异常错误<br/>
+                          </span>
+                        </dt>
+                      </dl>
+                  </li>      
+                <li>
+		            <h3><em></em><span>版本：V2.0.8 2014-08-30</span></h3>
 		                <dl>
 		                  <dt>
 		                    <span>新功能/改进：<br/>
