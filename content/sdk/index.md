@@ -272,6 +272,11 @@ var _hmt = _hmt || [];
                             1、修复群组多次连着加人踢人收不到消息的bug<br/>		
                             2、修复并发取未读消息时并发异常错误<br/>
                             3、修复logger null pointer 异常错误<br/>
+							 注意：<br/>
+							1、新版本对db做了一点改动，覆盖安装时需要app把清单文件的version加大<br/>
+							2、增加一个语音通话所需要的so库文件，如需使用语音通话功能引用下载的压缩包里libs底下的文件，不需要此功能则引入libs.without.audio里面的jar文件即可<br/>
+							
+							
                           </span>
                         </dt>
                       </dl>
