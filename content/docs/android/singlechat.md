@@ -280,10 +280,10 @@ chatOptions = EMChatManager.getInstance().getChatOptions();
     
 </code></pre>
 
-设置是否启用新消息提醒 
+设置是否启用新消息提醒(打开或者关闭消息声音和震动提示)
 
 <pre class="hll"><code class="language-java">
-chatOptions.setNotificationEnable(true|false); //默认为true 开启新消息提醒
+chatOptions.setNotifyBySoundAndVibrate(true|false); //默认为true 开启新消息提醒
     
 </code></pre>
 
@@ -307,6 +307,14 @@ chatOptions.setNoticedByVibrate(true|false); //默认为true 开启震动提醒
 chatOptions.setUseSpeaker(true|false); //默认为true 开启扬声器播放
     
 </code></pre>
+
+设置后台接收新消息时是否通过通知栏提示
+
+<pre class="hll"><code class="language-java"> 
+chatOptions.setShowNotificationInBackgroud(true|false) //默认为true
+    
+</code></pre>
+
 
 附：
 

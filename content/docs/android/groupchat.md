@@ -24,6 +24,9 @@ secondnavandroid: true
 	//members：群聊成员,为空时这个创建的群组只包含自己
 	//allowInvite:是否允许群成员邀请人进群
 	EMGroupManager.getInstance().createPrivateGroup(groupName, desc, members,allowInvite);
+
+	//前一种方法创建的群聊默认最大群聊用户数为200，传入maxUsers后设置自定义的最大用户数，最大为2000
+	EMGroupManager.getInstance().createPrivateGroup(groupName, desc, members,allowInvite,maxUsers);
 </code></pre>
 
 ####创建公开群 
@@ -33,6 +36,9 @@ secondnavandroid: true
 	//前面三个参数和创建私有群一致
 	//needApprovalRequired:如果创建的公开群用需要户自由加入，就传false。否则需要申请，等群主批准后才能加入，传true
 	EMGroupManager.getInstance().createPublicGroup(groupName, desc, members, needApprovalRequired);
+	
+	//前一种方法创建的群聊默认最大群聊用户数为200，传入maxUsers后设置自定义的最大用户数，最大可以设为2000
+	EMGroupManager.getInstance().createPublicGroup(groupName, desc, members, needApprovalRequired,maxUsers);
 </code></pre>	
 
 ## 群聊加人 {#group-joincontact}
@@ -72,16 +78,33 @@ secondnavandroid: true
 ## 获取群聊列表 ## {#group-getlist}
 
 <pre class="hll"><code class="language-java">
-	//从服务器获取自己加入的和创建的群聊列表
-	List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getGroupsFromServer();
+	//从服务器获取自己加入的和创建的群聊列表，此api获取的群组sdk会自动保存到内存和db。
+	//注意，获取到的列表里的群聊只有groupname和groupid等简单配置信息
+	List<EMGroup> grouplist = EMGroupManager.getInstance().getGroupsFromServer();
 
-	//从本地加载群聊列表，节省了每次从服务器加载数据的时间
-	List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getAllGroups();
+	//从本地加载群聊列表
+	List<EMGroup> grouplist = EMGroupManager.getInstance().getAllGroups();
 
 	//获取所有公开群列表
-	List&lt;EMGroupInfo&gt; groupsList = EMGroupManager.getInstanc().getAllPublicGroupsFromServer();
+	List<EMGroupInfo> groupsList = EMGroupManager.getInstanc().getAllPublicGroupsFromServer();
 	
 </code></pre>
+
+### 获取群组信息 ### {#group-getdetail}
+
+ <pre class="hll"><code class="language-java">
+	//根据群聊ID从本地获取群聊信息
+	EMGroup group = EMGroupManager.getInstance().getGroup(groupId);
+	//根据群聊ID从服务器获取群聊信息
+	EMGroup group =EMGroupManager.getInstance().getGroupFromServer(groupId);
+	
+	//保存获取下来的群聊信息
+	EMGroupManager.getInstance().createOrUpdateLocalGroup(returnGroup);
+	group.getMembers();//获取群成员
+	group.getOwner();//获取群主
+    ...
+	其它方法详见环信接口文档
+ </code></pre>
 
 ## 高级话题 ##
 
@@ -158,18 +181,7 @@ secondnavandroid: true
 	});
  </code></pre>
 
-### 获取群组信息 ### {#group-getdetail}
 
- <pre class="hll"><code class="language-java">
-	//根据群组ID从本地获取群组信息
-	EMGroup group = EMGroupManager.getInstance().getGroup(groupId);
-	//根据群组ID从服务器获取群组信息
-	EMGroup group =EMGroupManager.getInstance().getGroupFromServer(groupId);
-	group.getMembers();//获取群成员
-	group.getOwner();//获取群主
-    ...
-	其它方法详见环信接口文档
- </code></pre>
 
 ##Java Doc##
 [Java Doc](http://developer.easemob.com/apidoc/chat/)
