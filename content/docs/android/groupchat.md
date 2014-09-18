@@ -90,7 +90,7 @@ secondnavandroid: true
 	
 </code></pre>
 
-## 获取群聊信息## {#group-getdetail}
+## 获取群聊信息 ## {#group-getdetail}
 
  <pre class="hll"><code class="language-java">
 	//根据群聊ID从本地获取群聊信息
