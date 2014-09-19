@@ -62,6 +62,9 @@ SmileUtils,注意前面的包名，
 -keep class org.ice4j.** {*;}
 -keep class net.java.sip.** {*;}
 -keep class org.webrtc.voiceengine.** {*;}
+-keep class org.bitlet.** {*;}
+-keep class org.slf4j.** {*;}
+-keep class ch.imvs.** {*;}
 
 </code></pre>
 	
