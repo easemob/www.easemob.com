@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK-20140920.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.0.8　下载次数：13074</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.0.9　下载次数：15074</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -44,6 +44,21 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+			      	<li>
+						<h3><em></em><span>版本：V2.0.9 2014-09-20</span></h3>
+						<dl>
+							<dt>
+							    <span>新功能/改进：<br/>
+							    
+									1、屏蔽/取消屏蔽 群消息(服务器不发送消息)。<br/>
+									2、添加消息送达回执。<br>
+									3、本地缩略图显示模糊。<br>
+                                    Bug Fix：<br/>
+									1、消息附件下载状态修复。<br/>
+                                </span>
+							</dt>
+						</dl>
+					</li>
 			      	<li>
 						<h3><em></em><span>版本：V2.0.8 2014-08-28</span></h3>
 						<dl>
