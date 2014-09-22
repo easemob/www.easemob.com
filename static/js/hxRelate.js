@@ -40,6 +40,9 @@ $(document).ready(function() {
 	    		selectFlag = 5;
 	    	} else if (listTag[1] == '404') {
 	    		return ;
+	    	} else if (listTag[1] == 'changes') {
+	    		// 博客
+	    		selectFlag = 6;
 	    	}
 
 	    	// 给选中的导航加class

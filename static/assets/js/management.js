@@ -2174,7 +2174,8 @@ function sendUserImgMessage(){
 			  "type" : "img",
 			  },
 		"filename":str[0],
-		"secret": str[1]
+		"secret": str[1],
+		"url":$('#imgUuid').val()
 		 }
 		 var layerNum = layer.load('正在发送...');
 		 $.ajax({
@@ -2387,7 +2388,7 @@ function sendUserImgMessages(){
 			  "type" : "img",
 			  },
 		"filename":str[0],
-		"secret": str[1]
+		"secret": str[1],"url":$('#imgUuid').val()
 		 }
 		 var layerNum = layer.load('正在发送...');
 		 $.ajax({
@@ -2455,7 +2456,7 @@ function getAppChatrooms(appUuid,pageAction){
 		if(typeof(pageAction)!='undefined' && pageAction != ''){	
 			tmp = '&cursor=' + cursors[pageNo];
 		}
-		var loading = '<tr id="tr_loading"><td class="text-center" colspan="3"><img src ="/assets/img/loading.gif">&nbsp;&nbsp;&nbsp;<span>正在读取数据...</span></td></tr>';
+		var loading = '<tr id="tr_loading"><td class="text-center" colspan="4"><img src ="/assets/img/loading.gif">&nbsp;&nbsp;&nbsp;<span>正在读取数据...</span></td></tr>';
 		$('#appChatroomBody').empty();
 		$('#appChatroomBody').append(loading);
 		$.ajax({
