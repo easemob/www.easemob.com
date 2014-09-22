@@ -170,7 +170,6 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
         <p><span class="colon_up"></span><i><strong>“如果你的APP没有用户之间的互动和社交，你的APP就始终只是一个工具，你只是在为微博、微信导流而已”。</strong></i>作为国内最大的图片分享社交APP，拥有百万用户的<a class="info_details" href="http://www.appmagics.cn/" target="_blank">哈图</a>非常重视社交建设。哈图搭载了基于环信开发的实时私信系统。不仅有对电量流量消耗的深度优化，还能保证消息实时到达，能发送语音图片位置等多种富媒体消息，各项用户体验完全接近微信。<i><strong>“感谢环信，我们只用了2天就完成了私信系统的集成，从而能把节约下来的资源投入到为哈图的用户提供更好的用户体验上”</strong></i><span class="colon_down"></span></p>
       </div>
     </div>
-  </div>
 <div class="anli">
    <div class="anli1">
     <h2>他们都在使用环信</h2>
@@ -334,6 +333,8 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
 
     </div>
     </div>
+  </div>
+
 <div class="clearfix"></div>
 
 </div>
