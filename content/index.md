@@ -223,7 +223,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
     </dl>
 
 
-        <ul style=" width:990px;">
+    <ul style=" width:990px;">
         <li style="float:left;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/jd.png"></a></li>
         <li style="float:left; padding-left:55px;"><img src="../img/gswtk.jpg" style="padding-left:3px;"></li>
         <li style="float:left; padding-left:55px;"><a href="https://itunes.apple.com/cn/app/id705778436?mt=8" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/jiashengmi.jpg"></a></li>
@@ -247,6 +247,89 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
         <dd style=" float:left;"><a href="http://www.hptn.cn" target="_black">智能口语</a></dd>
     </dl>
 
+
+ <ul style="width:990px;font-size:15px; a:hover:#039;">
+        <li style="float:left;">
+			<a href="http://kaola.joysedu.com" style="color:#828187; font-size:15px;" target="_black">
+				<img src="./img/kaola.png">
+			   <div style="text-align:center;">
+			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">考啦</span>
+			</div>
+			</a>
+		</li>
+		
+		<li style="float:left;margin-left:60px;">
+			<a href="https://itunes.apple.com/cn/app/lu-bu/id907760859?mt=8" style="color:#828187; font-size:15px;" target="_black">
+				<img src="./img/qinglvtubiao.png">
+			   <div style="text-align:center;">
+			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">侣步</span>
+			</div>
+			</a>
+		</li>
+		
+		<li style="float:left;margin-left:60px;">
+			<a href="http://www.mele.tv/" style="color:#828187; font-size:15px;" target="_black">
+				<img src="./img/milue.png">
+			   <div style="text-align:center;">
+			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">蜜乐</span>
+			</div>
+			</a>
+		</li>
+		
+		<li style="float:left;margin-left:60px;">
+			<a href="http://www.7keyun.com/" style="color:#828187; font-size:15px;" target="_black">
+				<img src="./img/qikeyun.jpg">
+			   <div style="text-align:center;">
+			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">企客云</span>
+			</div>
+			</a>
+		</li>
+		
+		<li style="float:left;margin-left:60px;">
+			<a href="http://www.ruyizi.com/" style="color:#828187; font-size:15px;" target="_black">
+				<img src="./img/ruyizi.png">
+			   <div style="text-align:center;">
+			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">如意子</span>
+			</div>
+			</a>
+		</li>
+		
+		<li style="float:left;margin-left:60px;">
+			<a href="http://www.shiyuehehu.com/" style="color:#828187; font-size:15px;" target="_black">
+				<img src="./img/shiyuehehu.png">
+			   <div style="text-align:center;">
+			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">十月呵护</span>
+			</div>
+			</a>
+		</li>
+		
+		<li style="float:left;margin-left:60px;">
+			<a href="http://www.suicheji.com/" style="color:#828187; font-size:15px;" target="_black">
+				<img src="./img/suicheji.jpg">
+			   <div style="text-align:center;">
+			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">随车记</span>
+			</div>
+			</a>
+		</li>
+		
+		<li style="float:left;margin-left:60px;">
+			<a href="http://www.yohelper.com/" style="color:#828187; font-size:15px;" target="_black">
+				<img src="./img/youzai.png">
+			   <div style="text-align:center;">
+			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">优载</span>
+			</div>
+			</a>
+		</li>
+		
+		<li style="float:left;margin-left:60px;">
+			<a href="http://www.medicool.cn/zhenlipai.aspx?Aid=2" style="color:#828187; font-size:15px;" target="_black">
+				<img src="./img/zhenlipai.png">
+			   <div style="text-align:center;">
+			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">珍立拍</span>
+			</div>
+			</a>
+		</li>
+    </ul>
 
 
     </div>
