@@ -6,7 +6,7 @@ layout: overview
 <style>
 .anli1 dl dd a { color:#51ADED; border-bottom:2px solid #EAEAEA;}
 .anli1 dl dd a:hover { border-bottom:2px solid #7c7c7c;}
-.anli {color:#666; font-size:36px; height:512px;  width:100%; background:#FFF; font-weight:normal; margin:0 auto; background:none repeat scroll 0 0 #fff;}
+.anli {color:#666; font-size:36px; height:612px;  width:100%; background:#FFF; font-weight:normal; margin:0 auto; background:none repeat scroll 0 0 #fff;}
 .anli1 { margin: 0px auto; width:990px;}
 .anli1 h2 {font-weight:normal;}
 .anli1 img { margin-top:25px;}
