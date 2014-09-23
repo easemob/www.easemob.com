@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK-20140920.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK-20140923.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.0.9　下载次数：15074</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.0.9.1　下载次数：15574</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -44,6 +44,16 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+			      	<li>
+						<h3><em></em><span>版本：V2.0.9.1 2014-09-23</span></h3>
+						<dl>
+							<dt>
+							    <span>紧急Bug Fix：<br/>
+									紧急修复wifi 和 3G 切换时, 重连失败的bug
+                                </span>
+							</dt>
+						</dl>
+					</li>
 			      	<li>
 						<h3><em></em><span>版本：V2.0.9 2014-09-20</span></h3>
 						<dl>
