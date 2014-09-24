@@ -80,13 +80,13 @@ secondnavandroid: true
 <pre class="hll"><code class="language-java">
 	//从服务器获取自己加入的和创建的群聊列表，此api获取的群组sdk会自动保存到内存和db。
 	//注意，获取到的列表里的群聊只有groupname和groupid等简单配置信息
-	List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getGroupsFromServer();
+	List<EMGroup> grouplist = EMGroupManager.getInstance().getGroupsFromServer();
 
 	//从本地加载群聊列表
-	List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getAllGroups();
+	List<EMGroup> grouplist = EMGroupManager.getInstance().getAllGroups();
 
 	//获取所有公开群列表
-	List&lt;EMGroupInfo&gt; groupsList = EMGroupManager.getInstanc().getAllPublicGroupsFromServer();	
+	List<EMGroupInfo> groupsList = EMGroupManager.getInstanc().getAllPublicGroupsFromServer();	
 </code></pre>
 
 ## 获取群聊信息 ## {#group-getdetail}
@@ -96,6 +96,7 @@ secondnavandroid: true
 	EMGroup group = EMGroupManager.getInstance().getGroup(groupId);
 	//根据群聊ID从服务器获取群聊信息
 	EMGroup group =EMGroupManager.getInstance().getGroupFromServer(groupId);
+	
 	//保存获取下来的群聊信息
 	EMGroupManager.getInstance().createOrUpdateLocalGroup(returnGroup);
 	group.getMembers();//获取群成员

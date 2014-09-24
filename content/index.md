@@ -3,15 +3,6 @@ title: 环信即时通讯云 - 五分钟为你的App加入移动IM功能
 layout: overview
 ---
 
-<style>
-.anli1 dl dd a { color:#51ADED; border-bottom:2px solid #EAEAEA;}
-.anli1 dl dd a:hover { border-bottom:2px solid #7c7c7c;}
-.anli {color:#666; font-size:36px; height:612px;  width:100%; background:#FFF; font-weight:normal; margin:0 auto; background:none repeat scroll 0 0 #fff;}
-.anli1 { margin: 0px auto; width:990px;}
-.anli1 h2 {font-weight:normal;}
-.anli1 img { margin-top:25px;}
-</style>
-
 <div class="wrap_bd">
   <div class="wrap_switch im_wrap">
     <div class="w990">
@@ -167,175 +158,84 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
         </span>
       </div>
       <div class="txt">
-        <p><span class="colon_up"></span><i><strong>“如果你的APP没有用户之间的互动和社交，你的APP就始终只是一个工具，你只是在为微博、微信导流而已”。</strong></i>作为国内最大的图片分享社交APP，拥有百万用户的<a class="info_details" href="http://www.appmagics.cn/" target="_blank">哈图</a>非常重视社交建设。哈图搭载了基于环信开发的实时私信系统。不仅有对电量流量消耗的深度优化，还能保证消息实时到达，能发送语音图片位置等多种富媒体消息，各项用户体验完全接近微信。<i><strong>“感谢环信，我们只用了2天就完成了私信系统的集成，从而能把节约下来的资源投入到为哈图的用户提供更好的用户体验上”</strong></i><span class="colon_down"></span></p>
+        <p><span class="colon_up"></span>“如果你的APP没有用户之间的互动和社交，你的APP就始终只是一个工具，你只是在为微博、微信导流而已”。作为国内最大的图片分享社交APP，拥有百万用户的<a class="info_details" href="http://www.appmagics.cn/" target="_blank">哈图</a>非常重视社交建设。哈图搭载了基于环信开发的实时私信系统。不仅有对电量流量消耗的深度优化，还能保证消息实时到达，能发送语音图片位置等多种富媒体消息，各项用户体验完全接近微信。“感谢环信，我们只用了2天就完成了私信系统的集成，从而能把节约下来的资源投入到为哈图的用户提供更好的用户体验上”<span class="colon_down"></span></p>
       </div>
     </div>
-<div class="anli">
-   <div class="anli1">
-    <h2>他们都在使用环信</h2>
-    <img src="../img/xian.png" style=" margin-top:20px;">
-    <ul style=" width:990px;">
-      <li style="float:left;"><a href="http://www.qingting.fm/#/recommend"  target="_black" style="color:#828187; font-size:15px; font-family:'宋体'; padding-left:3px;"><img src="../img/qt.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://cn.dolphin.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/hte.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="https://itunes.apple.com/cn/app/ce-ce-ce-shi-shen-qi!-xing/id756771906?mt=8" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/cc.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://m.qiuying.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/qy.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://ibeiliao.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/bl.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://www.appmagics.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';" ><img src="../img/ht.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://www.xiaoneimimi.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/xn.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="https://itunes.apple.com/cn/app/shi-shang-mao-re-men-fa-xing./id673935108?l=zh&ls=1&mt=8" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/ssm.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://www.tuotuo.im" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/tt.png" style="padding-left:3px;"></a></li>
-    </ul>
-    <dl style="width:990px;; float:left; font-size:15px; a:hover:#039; padding-left:7px;">
-      <dd style=" float:left; margin-right:55px;"><a href="http://www.qingting.fm/#/recommend" target="_black">蜻蜓fm</a></dd>
-        <dd style=" float:left; margin-right:63px;"><a href="http://cn.dolphin.com/" target="_black" >海豚浏览器</a></dd>
-        <dd style=" float:left; margin-right:83px;"><a href="https://itunes.apple.com/cn/app/ce-ce-ce-shi-shen-qi!-xing/id756771906?mt=8" target="_black">测测</a></dd>
-        <dd style=" float:left; margin-right:85px;"><a href="http://m.qiuying.com/" target="_black">求应</a></dd>
-        <dd style=" float:left; margin-right:87px;"><a href="http://ibeiliao.com/" target="_black">贝聊</a></dd>
-        <dd style=" float:left; margin-right:72px;"><a href="http://www.appmagics.com/" target="_black">哈图</a></dd>
-        <dd style=" float:left; margin-right:65px;"><a href="http://www.xiaoneimimi.com/" target="_black">校内秘密</a></dd>
-        <dd style=" float:left; margin-right:78px;"><a href="https://itunes.apple.com/cn/app/shi-shang-mao-re-men-fa-xing./id673935108?l=zh&ls=1&mt=8" target="_black">时尚猫</a></dd>
-        <dd style=" float:left;"><a href="http://www.tuotuo.im" target="_black">拓拓</a></dd>
-    </dl>
-    <ul style=" width:990px;">
-      
-        <li style="float:left;"><a href="http://www.pandabus.cn" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/xm.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://www.pgyer.com/nh0N" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/hm.png" style="padding-left:3px;"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://www.xzhichang.com/xapp/index" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/zc.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://paopao.fm/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/pp.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://yeba.im/"  target="_black" style="color:#828187; font-size:15px; font-family:'宋体'; padding-left:3px;"><img src="../img/yb.png"></a></li>
-        <li style="float:left; padding-left:54px;"><a href="https://itunes.apple.com/cn/app/wei-xing-zuo-xing-zuo-jiao/id696468083?mt=8" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/wxz.png"></a></li>
-        <li style="float:left; padding-left:54px;"><a href="http://www.imlxs.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/lxs.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://www.iyuanquan.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';" ><img src="../img/yq.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://www.ifanmi.cn/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/fm.png"></a></li>
-        
-    </ul>
-    <dl style="width:990px;; float:left; font-size:15px; a:hover:#039; padding-left:3px;">
-        <dd style=" float:left; margin-right:62px;"><a href="http://www.pandabus.cn" target="_black">熊猫公交</a></dd>
-        <dd style=" float:left; margin-right:73px;"><a href="http://www.pgyer.com/nh0N" target="_black">小黑马</a></dd>
-        <dd style=" float:left; margin-right:82px;"><a href="http://www.xzhichang.com/xapp/index" target="_black" >X职场</a></dd>
-        <dd style=" float:left; margin-right:75px;"><a href="http://paopao.fm/" target="_black">跑跑</a></dd>
-        <dd style=" float:left; margin-right:77px; padding-left:14px;"><a href="http://yeba.im/" target="_black">夜吧</a></dd>
-        <dd style=" float:left; margin-right:68px;"><a href="https://itunes.apple.com/cn/app/wei-xing-zuo-xing-zuo-jiao/id696468083?mt=8" target="_black">微星座</a></dd>
-        <dd style=" float:left; margin-right:78px;"><a href="http://www.imlxs.com/" target="_black">留学僧</a></dd>
-        <dd style=" float:left; margin-right:85px;"><a href="http://www.iyuanquan.com/" target="_black">i园圈</a></dd>
-        <dd style=" float:left;"><a href="http://www.ifanmi.cn/" target="_black">番迷</a></dd>
-    </dl>
-
-
-    <ul style=" width:990px;">
-        <li style="float:left;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" style="color:#828187; font-size:15px; font-family:'宋体';" target="_black"><img src="../img/jd.png"></a></li>
-        <li style="float:left; padding-left:55px;"><img src="../img/gswtk.jpg" style="padding-left:3px;"></li>
-        <li style="float:left; padding-left:55px;"><a href="https://itunes.apple.com/cn/app/id705778436?mt=8" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/jiashengmi.jpg"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="#" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/mxd.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://m.taoshij.com:8000/download.html"  target="_black" style="color:#828187; font-size:15px; font-family:'宋体'; padding-left:3px;"><img src="../img/taoshijie.jpg"></a></li>
-        <li style="float:left; padding-left:54px;"><a href="http://www.bskcare.com" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/tang.png"></a></li>
-        <li style="float:left; padding-left:54px;"><a href="http://www.ymaiban.com/" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/yangmaiban.jpg"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://www.4axx.com" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';" ><img src="../img/yidongqida.png"></a></li>
-        <li style="float:left; padding-left:55px;"><a href="http://www.hptn.cn" target="_black" style="color:#828187; font-size:15px; font-family:'宋体';"><img src="../img/zhinengkouqu.jpg"></a></li>
-        
-    </ul>
-    <dl style="width:990px; float:left; font-size:15px; a:hover:#039; padding-left:16px;">
-        <dd style=" float:left; margin-right:64px;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" target="_black">点近</a></dd>
-        <dd style=" float:left; margin-right:56px;">规士问题控</dd>
-        <dd style=" float:left; margin-right:68px;"><a href="https://itunes.apple.com/cn/app/id705778436?mt=8" target="_black" >甲生米</a></dd>
-        <dd style=" float:left; margin-right:62px;"><a href="#" target="_black">毛小豆</a></dd>
-        <dd style="padding-left: 14px; margin-right: 62px; float: left;"><a href="http://m.taoshij.com:8000/download.html" target="_black">淘世界</a></dd>
-        <dd style=" float:left; margin-right:60px;"><a href="http://www.bskcare.com" target="_black">血糖高管</a></dd>
-        <dd style=" float:left; margin-right:62px;"><a href="http://www.ymaiban.com/" target="_black">洋买办</a></dd>
-        <dd style=" float:left; margin-right:56px;"><a href="http://www.4axx.com" target="_black">移动企大</a></dd>
-        <dd style=" float:left;"><a href="http://www.hptn.cn" target="_black">智能口语</a></dd>
-    </dl>
-
-
-    <ul style="width:990px;font-size:15px; a:hover:#039;">
-        <li style="float:left;">
-			<a href="http://kaola.joysedu.com" style="color:#828187; font-size:15px;" target="_black">
-				<img src="http://www.easemob.com/img/kaola.png">
-			   <div style="text-align:center;">
-			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">考啦</span>
-			</div>
-			</a>
-		</li>
-		
-		<li style="float:left;margin-left:55px;">
-			<a href="https://itunes.apple.com/cn/app/lu-bu/id907760859?mt=8" style="color:#828187; font-size:15px;" target="_black">
-				<img src="http://www.easemob.com/img/qinglvtubiao.png">
-			   <div style="text-align:center;">
-			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">侣步</span>
-			</div>
-			</a>
-		</li>
-		
-		<li style="float:left;margin-left:56px;">
-			<a href="http://www.mele.tv/" style="color:#828187; font-size:15px;" target="_black">
-				<img src="http://www.easemob.com/img/milue.png">
-			   <div style="text-align:center;">
-			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">蜜乐</span>
-			</div>
-			</a>
-		</li>
-		
-		<li style="float:left;margin-left:56px;">
-			<a href="http://www.7keyun.com/" style="color:#828187; font-size:15px;" target="_black">
-				<img src="http://www.easemob.com/img/qikeyun.jpg">
-			   <div style="text-align:center;">
-			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">企客云</span>
-			</div>
-			</a>
-		</li>
-		
-		<li style="float:left;margin-left:56px;">
-			<a href="http://www.ruyizi.com/" style="color:#828187; font-size:15px;" target="_black">
-				<img src="http://www.easemob.com/img/ruyizi.png">
-			   <div style="text-align:center;">
-			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">如意子</span>
-			</div>
-			</a>
-		</li>
-		
-		<li style="float:left;margin-left:55px;">
-			<a href="http://www.shiyuehehu.com/" style="color:#828187; font-size:15px;" target="_black">
-				<img src="http://www.easemob.com/img/shiyuehehu.png">
-			   <div style="text-align:center;">
-			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">十月呵护</span>
-			</div>
-			</a>
-		</li>
-		
-		<li style="float:left;margin-left:56px;">
-			<a href="http://www.suicheji.com/" style="color:#828187; font-size:15px;" target="_black">
-				<img src="http://www.easemob.com/img/suicheji.jpg">
-			   <div style="text-align:center;">
-			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">随车记</span>
-			</div>
-			</a>
-		</li>
-		
-		<li style="float:left;margin-left:56px;">
-			<a href="http://www.yohelper.com/" style="color:#828187; font-size:15px;" target="_black">
-				<img src="http://www.easemob.com/img/youzai.png">
-			   <div style="text-align:center;">
-			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">优载</span>
-			</div>
-			</a>
-		</li>
-		
-		<li style="float:left;margin-left:55px;">
-			<a href="http://www.medicool.cn/zhenlipai.aspx?Aid=2" style="color:#828187; font-size:15px;" target="_black">
-				<img src="http://www.easemob.com/img/zhenlipai.png">
-			   <div style="text-align:center;">
-			 	<span style=" color:#51ADED; border-bottom:2px solid #EAEAEA;font-weight:normal;">珍立拍</span>
-			</div>
-			</a>
-		</li>
-    </ul>
-
-
-    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="anli">
+    <div class="anli1">
+      <h2>他们都在使用环信</h2>
+      <ul>
+          <li><a href="http://www.qingting.fm/#/recommend" target="_blank"><img src="img/qt.png"></a></li>
+          <li><a href="http://cn.dolphin.com/" target="_blank"><img src="img/hte.png"></a></li>
+          <li><a href="https://itunes.apple.com/cn/app/ce-ce-ce-shi-shen-qi!-xing/id756771906?mt=8" target="_blank"><img src="img/cc.png"></a></li>
+          <li><a href="http://m.qiuying.com/" target="_blank"><img src="img/qy.png"></a></li>
+          <li><a href="http://ibeiliao.com/" target="_blank"><img src="img/bl.png"></a></li>
+          <li><a href="http://www.appmagics.com/" target="_blank"><img src="img/ht.png"></a></li>
+          <li><a href="http://www.xiaoneimimi.com/" target="_blank"><img src="img/xn.png"></a></li>
+          <li><a href="https://itunes.apple.com/cn/app/shi-shang-mao-re-men-fa-xing./id673935108?l=zh&ls=1&mt=8" target="_blank"><img src="img/ssm.png"></a></li>
+          <li><a href="http://www.tuotuo.im" target="_blank"><img src="img/tt.png" style="padding-left:3px;"></a></li>
+      </ul>
+      <dl>
+          <dd style="margin-right:55px;"><a href="http://www.qingting.fm/#/recommend" target="_blank">蜻蜓fm</a></dd>
+          <dd style="margin-right:63px;"><a href="http://cn.dolphin.com/" target="_blank">海豚浏览器</a></dd>
+          <dd style="margin-right:83px;"><a href="https://itunes.apple.com/cn/app/ce-ce-ce-shi-shen-qi!-xing/id756771906?mt=8" target="_blank">测测</a></dd>
+          <dd style="margin-right:85px;"><a href="http://m.qiuying.com/" target="_blank">求应</a></dd>
+          <dd style="margin-right:87px;"><a href="http://ibeiliao.com/" target="_blank">贝聊</a></dd>
+          <dd style="margin-right:72px;"><a href="http://www.appmagics.com/" target="_blank">哈图</a></dd>
+          <dd style="margin-right:65px;"><a href="http://www.xiaoneimimi.com/" target="_blank">校内秘密</a></dd>
+          <dd style="margin-right:78px;"><a href="https://itunes.apple.com/cn/app/shi-shang-mao-re-men-fa-xing./id673935108?l=zh&ls=1&mt=8" target="_blank">时尚猫</a></dd>
+          <dd><a href="http://www.tuotuo.im" target="_blank">拓拓</a></dd>
+      </dl>
+      <ul>
+          <li><a href="http://www.pandabus.cn" target="_blank"><img src="img/xm.png"></a></li>
+          <li><a href="http://www.pgyer.com/nh0N" target="_blank"><img src="img/hm.png" style="padding-left:3px;"></a></li>
+          <li><a href="http://www.xzhichang.com/xapp/index" target="_blank"><img src="img/zc.png"></a></li>
+          <li><a href="http://paopao.fm/" target="_blank"><img src="img/pp.png"></a></li>
+          <li><a href="http://yeba.im/"  target="_blank"><img src="img/yb.png"></a></li>
+          <li><a href="https://itunes.apple.com/cn/app/wei-xing-zuo-xing-zuo-jiao/id696468083?mt=8" target="_blank"><img src="img/wxz.png"></a></li>
+          <li><a href="http://www.imlxs.com/" target="_blank"><img src="img/lxs.png"></a></li>
+          <li><a href="http://www.iyuanquan.com/" target="_blank"><img src="img/yq.png"></a></li>
+          <li><a href="http://www.ifanmi.cn/" target="_blank"><img src="img/fm.png"></a></li>
+          
+      </ul>
+      <dl>
+          <dd style="margin-right:62px;"><a href="http://www.pandabus.cn" target="_blank">熊猫公交</a></dd>
+          <dd style="margin-right:73px;"><a href="http://www.pgyer.com/nh0N" target="_blank">小黑马</a></dd>
+          <dd style="margin-right:82px;"><a href="http://www.xzhichang.com/xapp/index" target="_blank" >X职场</a></dd>
+          <dd style="margin-right:75px;"><a href="http://paopao.fm/" target="_blank">跑跑</a></dd>
+          <dd style="margin-right:77px;padding-left:10px;"><a href="http://yeba.im/" target="_blank">夜吧</a></dd>
+          <dd style="margin-right:68px;"><a href="https://itunes.apple.com/cn/app/wei-xing-zuo-xing-zuo-jiao/id696468083?mt=8" target="_blank">微星座</a></dd>
+          <dd style="margin-right:78px;"><a href="http://www.imlxs.com/" target="_blank">留学僧</a></dd>
+          <dd style="margin-right:85px;"><a href="http://www.iyuanquan.com/" target="_blank">i园圈</a></dd>
+          <dd><a href="http://www.ifanmi.cn/" target="_blank">番迷</a></dd>
+      </dl>
+      <ul>
+          <li><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" target="_blank"><img src="img/jd.png"></a></li>
+          <li><img src="img/gswtk.jpg" style="padding-left:3px;"></li>
+          <li><a href="https://itunes.apple.com/cn/app/id705778436?mt=8" target="_blank"><img src="img/jiashengmi.jpg"></a></li>
+          <li><a href="#" target="_blank"><img src="img/mxd.png"></a></li>
+          <li><a href="http://m.taoshij.com:8000/download.html" target="_blank"><img src="img/taoshijie.jpg"></a></li>
+          <li><a href="http://www.bskcare.com" target="_blank"><img src="img/tang.png"></a></li>
+          <li><a href="http://www.ymaiban.com/" target="_blank"><img src="img/yangmaiban.jpg"></a></li>
+          <li><a href="http://www.4axx.com" target="_blank"><img src="img/yidongqida.png"></a></li>
+          <li><a href="http://www.hptn.cn" target="_blank"><img src="img/zhinengkouqu.jpg"></a></li>
+      </ul>
+      <dl style="padding-left:16px">
+          <dd style="margin-right:64px;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" target="_blank">点近</a></dd>
+          <dd style="margin-right:56px;">规士问题控</dd>
+          <dd style="margin-right:68px;"><a href="https://itunes.apple.com/cn/app/id705778436?mt=8" target="_blank" >甲生米</a></dd>
+          <dd style="margin-right:62px;"><a href="#" target="_blank">毛小豆</a></dd>
+          <dd style="padding-left:14px;margin-right:62px;"><a href="http://m.taoshij.com:8000/download.html" target="_blank">淘世界</a></dd>
+          <dd style="margin-right:60px;"><a href="http://www.bskcare.com" target="_blank">血糖高管</a></dd>
+          <dd style="margin-right:62px;"><a href="http://www.ymaiban.com/" target="_blank">洋买办</a></dd>
+          <dd style="margin-right:56px;"><a href="http://www.4axx.com" target="_blank">移动企大</a></dd>
+          <dd><a href="http://www.hptn.cn" target="_blank">智能口语</a></dd>
+      </dl>
     </div>
   </div>
-
-<div class="clearfix"></div>
+  <div class="clearfix"></div>
 
 </div>
 

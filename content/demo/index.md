@@ -26,12 +26,12 @@ layout: overview
 				</dl>
 			</div>
 		</div>
-		
+		<div class="demo_bd_bg"></div>
 		<div class="demo_bd">
 			<div class="info_content">
-				<h2>简介:</h2>
+				<!-- <h2>简介:</h2> -->
 				<section class="info_readmore">
-					<p>环信demo是环信SDK的展示demo。包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。更多关于环信demo的介绍请查看<a href="/docs/android/">环信Android Demo快速入门</a>和<a href="/docs/ios/">环信iOS Demo快速入门</a>。</p>
+					<p>简介：环信demo是环信SDK的展示demo。包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。更多关于环信demo的介绍请查看<a href="/docs/android/">环信Android Demo快速入门</a>和<a href="/docs/ios/">环信iOS Demo快速入门</a>。</p>
 				</section>
 				<section class="info_readmore_show">
 					<p>环信demo是环信SDK的展示demo。包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。更多关于环信demo的介绍请查看<a href="/docs/android/">环信Android Demo快速入门</a>和<a href="/docs/ios/">环信iOS Demo快速入门</a>。<a class="info_hide" href="javascript:void(0);">收起</a></p>
@@ -67,7 +67,7 @@ layout: overview
 	//水平滚动条滚动图片
 	$(".container2").hScrollPane({
 		mover:"ul",
-		moverW:function(){return $(".container2 li").length*275-24;}(),
+		moverW:function(){return $(".container2 li").length*275-10;}(),
 		showArrow:true,
 		handleCssAlter:"draghandlealter",
 		mousewheel:{moveLength:275}
