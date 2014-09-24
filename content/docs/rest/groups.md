@@ -118,6 +118,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 - URL Params ： 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ：
+
 <pre class="hll"><code class="language-java">
 {
     "groupname":"testrestgrp12", //群组名称, 此属性为必须的
@@ -128,6 +129,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
     "members":["jma2","jma3"] //群组成员,此属性为可选的,但是如果加了此项,数组元素至少一个
 }
 </code></pre>
+
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
 ##### curl示例：
