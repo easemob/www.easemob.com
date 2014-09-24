@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK-20140923.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.0.8　下载次数：13074</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.0.9.1　下载次数：15574</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -45,6 +45,31 @@ var _hmt = _hmt || [];
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
 			      	<li>
+						<h3><em></em><span>版本：V2.0.9.1 2014-09-23</span></h3>
+						<dl>
+							<dt>
+							    <span>紧急Bug Fix：<br/>
+									紧急修复wifi 和 3G 切换时, 重连失败的bug
+                                </span>
+							</dt>
+						</dl>
+					</li>
+			      	<li>
+						<h3><em></em><span>版本：V2.0.9 2014-09-20</span></h3>
+						<dl>
+							<dt>
+							    <span>新功能/改进：<br/>
+							    
+									1、屏蔽/取消屏蔽 群消息(服务器不发送消息)。<br/>
+									2、添加消息送达回执。<br>
+									3、本地缩略图显示模糊。<br>
+                                    Bug Fix：<br/>
+									1、消息附件下载状态修复。<br/>
+                                </span>
+							</dt>
+						</dl>
+					</li>
+			      	<li>
 						<h3><em></em>版本：V2.0.8 2014-08-28</h3>
 						<dl>
 							<dt>
@@ -60,27 +85,27 @@ var _hmt = _hmt || [];
 							</dt>
 						</dl>
 					</li>
-			      	<li>
-						<h3><em></em>版本：V2.0.7 2014-08-14</h3>
-						<dl>
-							<dt>
-							    <span>新功能/改进：<br/>
-							    
-									1、创建群组时，支持传最大成员数 EMGroupStyleSetting.groupMaxUsersCount，3 ~ 2000，ios默认是200；<br/>
-									2、已创建的群组，获取详情时增加属性： 群组实际总人数和群组;<br/>
-									3、添加 获取群组详情相关信息的接口;<br/>
-									4、添加图片压缩比率开关 IChatImageOptions;<br/>
-									5、后台发送纯文字信息（暂不支持发送图片），客户端正常显示。<br>
-                                    Bug Fix：<br/>
-									1、创建群组时，invitees中去除创建者自己的username。<br/>
-									 性能优化<br/>
-									1、优化聊天记录搜索功能；<br/>
-									2、优化聊天记录获取。<br/>
-                                </span>
-							</dt>
-						</dl>
-					</li>
 					<div class="ios_ul">
+						<li>
+							<h3><em></em>版本：V2.0.7 2014-08-14</h3>
+							<dl>
+								<dt>
+								    <span>新功能/改进：<br/>
+								    
+										1、创建群组时，支持传最大成员数 EMGroupStyleSetting.groupMaxUsersCount，3 ~ 2000，ios默认是200；<br/>
+										2、已创建的群组，获取详情时增加属性： 群组实际总人数和群组;<br/>
+										3、添加 获取群组详情相关信息的接口;<br/>
+										4、添加图片压缩比率开关 IChatImageOptions;<br/>
+										5、后台发送纯文字信息（暂不支持发送图片），客户端正常显示。<br>
+	                                    Bug Fix：<br/>
+										1、创建群组时，invitees中去除创建者自己的username。<br/>
+										 性能优化<br/>
+										1、优化聊天记录搜索功能；<br/>
+										2、优化聊天记录获取。<br/>
+	                                </span>
+								</dt>
+							</dl>
+						</li>
 						<li>
 							<h3><em></em>版本：V2.0.6 2014-07-31</h3>
 							<dl>
