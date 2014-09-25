@@ -258,5 +258,4 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
     </div>
   </div>
   <div class="clearfix"></div>
-
 </div>
