@@ -233,7 +233,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
           <dd style="margin-right:56px;"><a href="http://www.iyuanquan.com/" target="_blank">i园圈</a></dd>
          <dd style="padding-left:14px;margin-right:12px;"><a href="http://www.hptn.cn" target="_blank">智能口语</a></dd>
       </dl>
-<ul>
+      <ul>
           <li><a href="http://kaola.joysedu.com" target="_blank"><img src="img/kaola.png"></a></li>
           <li><a href="https://itunes.apple.com/cn/app/lu-bu/id907760859?mt=8" target="_blank"><img src="img/qinglvtubiao.png" style="padding-left:3px;"></li>
           <li><a href="http://www.yohelper.com" target="_blank"><img src="img/youzai.png"></a></li>
@@ -258,4 +258,6 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
     </div>
   </div>
   <div class="clearfix"></div>
+
 </div>
+
