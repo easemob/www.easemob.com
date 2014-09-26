@@ -8,7 +8,7 @@ layout: overview
     <div id="content">
       <div class="padded">
         <div class="entry-content">
-          <h5><em>*</em> 以下计费周期以自然月计量，即从每月1日到月末最后一天。</h5>
+          <h5><em>*</em> 以下计费周期以自然月计量，即从每月1日到月末最后一天。 </h5>
           <table id="pricing-chart">
             <tr>
               <th class="col1 col-main"></th>
