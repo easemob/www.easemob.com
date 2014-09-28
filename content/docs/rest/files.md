@@ -22,7 +22,7 @@ sidebar: restsidebar
 - HTTP Method : POST
 - Request Headers : {"restrict-access":true,"Authorization":"Bearer ${token}"}
 - URL Params ： 无
-- Request Body ： 文件
+- Request Body ：文件表单项    [参考](http://www.w3school.com.cn/tags/tag_input.asp)
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
 #### curl示例:
