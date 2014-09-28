@@ -4,7 +4,7 @@ sidebar: androidsidebar
 secondnavandroid: true
 ---
 
-## 好友列表管理 
+# 好友管理: 
 
 ### 获取好友列表 {#friendslist}
 
