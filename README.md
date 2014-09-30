@@ -67,7 +67,7 @@ like this:
 <%= json :issue %>
 ```
 
-This looks up `GitHub::Resources::ISSUE` in `lib/resources.rb`.
+This looks up `Easemob::Resources::ISSUE` in `lib/resources.rb`.
 
 Some actions return arrays.  You can modify the JSON by passing a block:
 
