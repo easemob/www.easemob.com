@@ -1,6 +1,6 @@
-# developer.github.com
+# www.easemob.com
 
-This is a GitHub API resource built with [nanoc][nanoc].
+This is a Easemob API resource built with [nanoc][nanoc].
 
 All submissions are welcome. To submit a change, fork this repo, commit your changes, and send us a [pull request](http://help.github.com/send-pull-requests/).
 
@@ -67,7 +67,7 @@ like this:
 <%= json :issue %>
 ```
 
-This looks up `GitHub::Resources::ISSUE` in `lib/resources.rb`.
+This looks up `Easemob::Resources::ISSUE` in `lib/resources.rb`.
 
 Some actions return arrays.  You can modify the JSON by passing a block:
 
