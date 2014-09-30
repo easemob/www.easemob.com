@@ -60,7 +60,7 @@ var _hmt = _hmt || [];
 							<dt>
 							    <span>新功能/改进：<br/>
 							    
-									1、屏蔽/取消屏蔽 群消息(服务器不发送消息)。<br/>
+									1、屏蔽/取消屏蔽 群消息(服务器不发送消息)。<br/>
 									2、添加消息送达回执。<br>
 									3、本地缩略图显示模糊。<br>
                                     Bug Fix：<br/>
@@ -92,7 +92,7 @@ var _hmt = _hmt || [];
 								<dt>
 								    <span>新功能/改进：<br/>
 								    
-										1、创建群组时，支持传最大成员数 EMGroupStyleSetting.groupMaxUsersCount，3 ~ 2000，ios默认是200；<br/>
+										1、创建群组时，支持传最大成员数 EMGroupStyleSetting.groupMaxUsersCount，3 ~ 2000，ios默认是200；<br/>
 										2、已创建的群组，获取详情时增加属性： 群组实际总人数和群组;<br/>
 										3、添加 获取群组详情相关信息的接口;<br/>
 										4、添加图片压缩比率开关 IChatImageOptions;<br/>
@@ -285,6 +285,25 @@ var _hmt = _hmt || [];
 
 			    <ul class="history_right">
 				    <h2 class="first">Andriod SDK 更新日志</h2>
+				     <li>
+	                    <h3><em></em><span>版本：V2.1.0 2014-09-30</span></h3>
+						<dl>
+						  <dt>
+						      <span>新功能/改进：<br/>
+						        1、断网发图片增加等待时间，不会立即停止发送<br/>
+						        2、优化取离线消息,多次通知改一次通知<br/>
+						        3、添加接收语音文件名可以显示扩展名的配置<br/>
+						        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如：chatOptions.setAudioFileWithExt(true)<br/>
+						         Bug Fix：<br/>
+						        1、修复下载图片偶尔失败的问题<br/>		
+						        2、修复自动重连失败的问题<br/>
+						        3、修复账号在其他地方登陆问题<br/>
+						        4、修复偶尔发不出去消息的问题<br/>
+								 
+						      </span>
+						  </dt>
+						</dl>
+	                </li>      
 	                <li>
 	                    <h3><em></em><span>版本：V2.0.9 2014-09-15</span></h3>
 						<dl>
