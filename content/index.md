@@ -186,7 +186,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
           <dd style="margin-right:72px;"><a href="http://www.appmagics.com/" target="_blank">哈图</a></dd>
           <dd style="margin-right:68px;margin-right:58px;"><a href="http://www.xiaoneimimi.com/" target="_blank">校内秘密</a></dd>
           <dd style="padding-left:1px;margin-right:40px;"><a href="http://www.jiecao.fm/" target="_blank">节操精选</a></dd>
-          <dd style="padding-left:21px;margin-right:14px;"><a href="http://www.haomee.net/" target="_blank">看动漫</a></dd>
+          <dd style="padding-left:21px;margin-right:9px;"><a href="http://www.haomee.net/" target="_blank">看动漫</a></dd>
       </dl>
       <ul>
           <li><a href="http://www.pandabus.cn" target="_blank"><img src="img/xm.png"></a></li>
