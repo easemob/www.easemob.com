@@ -52,7 +52,10 @@ layout: overview
           <dt>你们支持pc端吗？ 可以在网页使用你们的即时通讯工具？</dt>
           <dd>
             <span></span>
-            <p>环信支持WebIM。即基于浏览器的IM，类似微信网页版。并且环信的WebIM是完全开源的，非常方便开发者把WebIM集成到自己的web页面中，完全替换成自己的风格。测试环信WebIM请访问 http://webim.easemob.com。 登录可以使用环信UIDemo的账号和密码（见[http://www.easemob.com/demo/](http://www.easemob.com/demo/)), 环信WebIM快速入门文档请见：[https://github.com/easemob/web-im/blob/master/quickstart.md](https://github.com/easemob/web-im/blob/master/quickstart.md) 文档和源码在[http://github.com/easemob/web-im](http://github.com/easemob/web-im)</p>
+            <p>环信支持WebIM。即基于浏览器的IM，类似微信网页版。并且环信的WebIM是完全开源的，非常方便开发者把WebIM集成到自己的web页面中，完全替换成自己的风格。
+</p>
+<p>
+测试环信WebIM请访问 <a href="http://webim.easemob.com" target="_blank">http://webim.easemob.com</a>。 登录可以使用环信UIDemo的账号和密码（见<a href="http://www.easemob.com/demo/" target="_blank">http://www.easemob.com/demo/</a>), 环信WebIM快速入门文档请见<a href="https://github.com/easemob/web-im/blob/master/quickstart.md" target="_blank">hhttps://github.com/easemob/web-im/blob/master/quickstart.md</a> 文档和源码在<a href="http://github.com/easemob/web-im" target="_blank">http://github.com/easemob/web-im</a></p>
 
           </dd>
           <dt>使用环信安全吗？使用环信是否会泄露我的用户数据？在环信平台上保存的有我们APP的什么数据？我们的数据在环信上是否安全？</dt>
@@ -85,7 +88,8 @@ layout: overview
 </p>
 
 <p>请参考以下文档，提供了从注册账号到集成的一步一步操作方法指导：
-    [http://www.easemob.com/docs/gettingstart/](http://www.easemob.com/docs/gettingstart/)
+<a href="http://www.easemob.com/docs/gettingstart" target="_blank">http://www.easemob.com/docs/gettingstart</a>
+
 </p>
           </dd>
           <dt>我看你们的UIDemo里没有好友昵称，头像及其他个人资料。是不是你们的功能还不够完善？ </dt>
