@@ -180,10 +180,6 @@ secondnavandroid: true
  </code></pre>
 
 
-
-##Java Doc##
-[Java Doc](http://developer.easemob.com/apidoc/chat/)
-
 ##Demo及SDK下载
 [Demo及SDK下载](http://www.easemob.com/sdk/)
 
