@@ -1035,7 +1035,7 @@ curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk
 </code></pre>
 
 
-### 往IM用户的黑名单中加人{#addblocksusers}
+### 往IM用户的黑名单中加人 {#addblocksusers}
 > 往一个IM用户的黑名单中加人
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/blocks/users
@@ -1067,7 +1067,7 @@ curl -X POST -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBU
 }
 </code></pre>
 
-### 从IM用户的黑名单中减人{#delblocksusers}
+### 从IM用户的黑名单中减人 {#delblocksusers}
 > 从一个IM用户的黑名单中减人
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/blocks/users/{blocked_username}
