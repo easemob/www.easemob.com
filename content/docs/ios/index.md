@@ -4,154 +4,85 @@ sidebar: iossidebar
 secondnavios: true
 ---
 
-# 快速入门（五分钟运行环信demo)  
+# EaseMob集成示例操作流程
 
+## 有聊天页面的Demo
 
-## 下载环信demo (iOS) 
+### Demo说明
 
-### 什么是环信demo 
+#### 提供测试的AppKey(easemob-demo#chatdemoui)
 
-环信demo展示了怎样使用环信SDK快速创建一个完整的类微信聊天APP。展示的功能包括：环信SDK初始化，登录，登出，注册消息接收listener, 发送消息。
+#### 需要至少2个账号，互加好友，互发消息
 
-环信demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。
+### Demo演示流程
 
-### 下载环信demo 
+#### 下载环信Demo及SDK
 
-1. 下载环信Demo及SDK： [下载](http://www.easemob.com/sdk/)
+请到[这里下载](http://www.easemob.com/sdk/)环信Demo及SDK
 
-2. 解压缩iOSSDK.zip后会得到以下目录结构：
+**SDK压缩包下载后, 有20M左右, 解压后, SDK的静态库 libEaseMobClientSDKLite.a 会有42M左右, 静态库这么大的原因是因为静态库包含了三个Architectures:i386、ARMV7、ARMV7S。**
+
+**应用集成SDK后build的iPA安装包，会在原有的基础上变大1.5-2M，对安装包的大小不会有很大的影响的**
+
+  ![alt text](/example_layout_IOS.png "Demo")
+  
+#### 运行程序
+
+账号不支持中文
+
+ ![alt text](/chatUIDemoLogin.png "Demo")
  
- ![alt text](/example_layout_IOS.png "Title")
+#### 登录成功进入首页
 
+会话：聊天的会话列表
 
-## 运行环信demo (iOS) 
+通讯录：申请通知，群组，好友列表
 
-在模拟器中运行chatdemo-nonui工程。
+设置：退出登录
 
-或者使用手机上的Safari浏览器访问 [www.easemob.com/downloads/chatdemo.html](http://www.easemob.com/downloads/chatdemo.html)直接安装
-
+ ![alt text](/chatUIDemoHome.png "Demo")
  
-运行chatdemo-nonui: 
+#### 添加好友
 
-点击“发送文本消息”，会发送消息给测试机器人（其账号为"bot"）。该测试机器人接收到消息后会把接收的消息原封不动的自动发送回来，显示如下图。
+运行程序并登录账号2。点击“通讯录”页面的“+”
 
-![alt text](/demoIOS.png "demo")
-
-## 快速集成 
-
-### 下载EaseMobSDK: 
-
-下载EaseMobSDK [下载链接](http://www.easemob.com/downloads/iOSSDK.zip)
-
-### 将EaseMobSDK拖入到项目中 
-
-![alt text](/import.png "Title")
+ ![alt text](/chatUIDemoOther.png "Demo")
  
-### SDK依赖库 
-
-![alt text](/addLib.png "Lib")
-
-### UIDemo依赖库 
-![alt text](/addUIDemoLib.png "UIDemoLib")
+输入好友用户名（账号1），进行搜索添加
  
-### 设置Linker 
+ ![alt text](/chatUIDemoAddFriend.png "Demo")
+ 
+在账号1接收账号2的好友申请
+ 
+ ![alt text](/chatUIDemoApplyList.png "Demo")
+ 
+#### 账号1和账号2互发消息
 
-![alt text](/link.png "link")
+ ![alt text](/chatUIDemoChatList.png "Demo") 
+ 
+### 其他说明
+#### 监测网络状态
 
-向Other Linker Flags 中添加 -ObjC。(如果已有，则不需要再添加)
-
-### 设置Architectures 
-
-![alt text](/Active.png "Active")
-
-### 初始化EaseMobSDK 
-
-在AppDelegate中注册SDK
-
-<pre class="hll"><code class="language-objective_c">
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary 	*)launchOptions
-{
-	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	self.window.backgroundColor = [UIColor whiteColor];
-
-	// 真机的情况下,notification提醒设置
-	UIRemoteNotificationType notificationTypes = UIRemoteNotificationTypeBadge |
-	UIRemoteNotificationTypeSound |
-	UIRemoteNotificationTypeAlert;
-	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:notificationTypes];
-
-	//注册 APNS文件的名字, 需要与后台上传证书时的名字一一对应
-	NSString *apnsCertName = @"chatdemo";
-	[[EaseMob sharedInstance] registerSDKWithAppKey:@"easemob-demo#chatdemo" apnsCertName:apnsCertName];
-	[[EaseMob sharedInstance] enableBackgroundReceiveMessage];
-	[[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-
-	[self.window makeKeyAndVisible];
-	return YES;
-}
-</code></pre>
-
-关于EASEMOB_APPKEY，请登录或注册[环信开发者后台(https://console.easemob.com),申请APPKEY后，进行相关配置。
-
-## 从源代码级别深入了解环信demo (iOS) 
-
-
-### 深入理解环信demo背后的代码 
-
-#### 注册listener,以接收聊天消息:RootViewController.m 
+在MainViewController类中有体现，监测以下方法
 
 <pre class="hll"><code class="language-objective_c">
-    [[EaseMob sharedInstance].chatManager addDelegate:self
-                                        delegateQueue:nil];
-</code></pre>
+	#pragma mark - IChatManagerDelegate 登录状态变化
 
-#### 登录：见RandViewController+Login
-
-<pre class="hll"><code class="language-objective_c">
-    [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:username
-                                                        password:@"123456"
-                                                      completion:
-     ^(NSDictionary *loginInfo, EMError *error) {
-         if (!error) {
-             NSLog(@"登录成功");         
-         }
-     } onQueue:nil];
-</code></pre>
-
-#### 退出登录：见RandViewController+Login.m 
-
-<pre class="hll"><code class="language-objective_c">
-	[[EaseMob sharedInstance].chatManager asyncLogoff];
-	
-</code></pre>
-
-#### 发送消息：见RootViewController+sendChat.m 
-
-<pre class="hll"><code class="language-objective_c">
-	EMChatText *text = [[EMChatText alloc] initWithText:message];
-    EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithChatObject:text];
-    
-    EMMessage *msg = [[EMMessage alloc]
-                      initWithReceiver:@"bot"
-                      bodies:[NSArray arrayWithObject:body]];
-    
-    [[EaseMob sharedInstance].chatManager sendMessage:msg
-                                             progress:nil
-                                                error:nil];
-	
-</code></pre>
-
-
-#### 接收聊天消息并显示：见RootViewController.m 
-
-<pre class="hll"><code class="language-objective_c">
-	-(void)didReceiveMessage:(EMMessage *)message {
-    	id<IEMMessageBody> body = [message.messageBodies firstObject];
-		if (body.messageBodyType == eMessageBodyType_Text) {
-			NSString *msg = ((EMTextMessageBody *)body).text;
-			NSLog(@"收到的消息---%@",msg);
-	    }
+	- (void)didConnectionStateChanged:(EMConnectionState)connectionState
+	{
+    	
 	}
 </code></pre>
+	
+![alt text](/chatUIDemoNetwork.png "Demo") 
 
+#### 账号在其它设备登录
 
+账号在其它设备登录时, 当前设备会自动断开连接(收到该回调时, 当前客户端已不能收发消息了, 当前客户端必须处理该回调, 退出到登录页面, )
+
+<pre class="hll"><code class="language-objective_c">
+	- (void)didLoginFromOtherDevice
+	{
+	    //退出到登录页面代码
+	}
+</code></pre>
