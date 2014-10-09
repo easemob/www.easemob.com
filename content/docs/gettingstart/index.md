@@ -61,4 +61,4 @@ sidebar: gettingstartsidebar
 
 ####  4.1 [5分钟快速入门-android](/docs/android/quickstartUI)
 
-####  4.2 [5分钟快速入门-iOS](/docs/ios/quickstart)
+####  4.2 [5分钟快速入门-iOS](/docs/ios/ChatDemo_UI)
