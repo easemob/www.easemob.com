@@ -171,5 +171,35 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
 </code></pre>
 
 
+### 获取未读消息数 {#msgcount}
+> 获取一个IM用户的未读消息数
+
+- Path : /{org_name}/{app_name}/users/{owner_username}/offline_msg_count
+- HTTP Method : GET
+- URL Params : 无
+- Request Headers : {"Authorization":"Bearer ${token}"}
+- Request Body ： 无
+- Response Body ： "data" : {"v3y0kf9arx" : 0 }      ----  用户名：v3y0kf9arx ，未读消息数：0条
+    
+#### curl示例
+
+<pre class="hll"><code class="language-java">
+curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk6Vg2xm8DZdVjxbhwm7XWY" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/offline_msg_count"
+</code></pre>
+
+#### Response
+
+<pre class="hll"><code class="language-java">
+{
+  "action" : "get",
+  "uri" : "http://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/offline_msg_count",
+  "entities" : [ ],
+  "data" : {
+    "v3y0kf9arx" : 0
+  },
+  "timestamp" : 1412823831894,
+  "duration" : 57
+}
+</code></pre>
 
 

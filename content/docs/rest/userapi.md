@@ -884,7 +884,7 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 
 ## 好友管理  {#contacts}
 
-### 添加好友
+### 给IM用户的添加好友  {#contactsfriend}
 > 给一个用户添加好友, 好友必须是和自己在一个app下的IM用户.{owner_username} 是要添加好友的用户名, {friend_username} 是被添加的用户名
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/contacts/users/{friend_username}
@@ -924,7 +924,8 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 }
 </code></pre>
 
-### 解除好友关系
+### 解除IM用户的好友关系 {#delfriend}
+> 从IM用户的好友列表中移除一个用户
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/contacts/users/{friend_username}
 - HTTP Method : DELETE
@@ -970,7 +971,7 @@ curl -X DELETE -i -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10I
 }
 </code></pre>
 
-### 查看好友
+### 查看好友  {#queryfriend}
 > 查看某个IM用户的好友信息
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/contacts/users
@@ -1002,3 +1003,106 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
   "applicationName" : "chatdemoui"
 }
 </code></pre>
+
+
+### 获取IM用户的黑名单 {#blocksusers}
+> 获取一个IM用户的黑名单
+
+- Path : /{org_name}/{app_name}/users/{owner_username}/blocks/users
+- HTTP Method : GET
+- URL Params : 无
+- Request Headers : {"Authorization":"Bearer ${token}"}
+- Request Body ： 无
+- Response Body ： "data" : [ "stliu2" ]  ---  黑名单中的用户的用户名：stliu2 
+    
+#### curl示例
+
+<pre class="hll"><code class="language-java">
+curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk6Vg2xm8DZdVjxbhwm7XWY" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/blocks/users"
+</code></pre>
+
+#### Response
+
+<pre class="hll"><code class="language-java">
+{
+  "action" : "get",
+  "uri" : "http://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/blocks/users",
+  "entities" : [ ],
+  "data" : [ "stliu2" ],
+  "timestamp" : 1412824409803,
+  "duration" : 36
+}
+</code></pre>
+
+
+### 往IM用户的黑名单中加人{#addblocksusers}
+> 往一个IM用户的黑名单中加人
+
+- Path : /{org_name}/{app_name}/users/{owner_username}/blocks/users
+- HTTP Method : POST
+- URL Params : 无
+- Request Headers : {"Authorization":"Bearer ${token}"}
+- Request Body ： {"usernames":["5cxhactgdj", "mh2kbjyop1"]}      ----  需要加入到黑名单中的用户名以数组方式提交，usernames为关键字不变，
+- Response Body ： "data" : [ "5cxhactgdj", "mh2kbjyop1" ]  ---  已经加到黑名单中的用户名：5cxhactgdj, mh2kbjyop1
+    
+#### curl示例
+
+<pre class="hll"><code class="language-java">
+curl -X POST -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk6Vg2xm8DZdVjxbhwm7XWY' -i  'https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/blocks/users' -d '{"usernames":["5cxhactgdj", "mh2kbjyop1"]}'
+</code></pre>
+
+#### Response
+
+<pre class="hll"><code class="language-java">
+{
+  "action" : "post",
+  "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui",
+  "entities" : [ ],
+  "data" : [ "5cxhactgdj", "mh2kbjyop1" ],
+  "timestamp" : 1412825162092,
+  "duration" : 15,
+  "organization" : "easemob-demo",
+  "applicationName" : "chatdemoui"
+}
+</code></pre>
+
+### 从IM用户的黑名单中减人{#delblocksusers}
+> 从一个IM用户的黑名单中减人
+
+- Path : /{org_name}/{app_name}/users/{owner_username}/blocks/users/{blocked_username}
+- HTTP Method : DELETE
+- URL Params : 无
+- Request Headers : {"Authorization":"Bearer ${token}"}
+- Request Body ：无
+- Response Body ： entities 中包含了刚刚从黑名单中移除的IM用户的详细信息
+   
+#### curl示例
+
+<pre class="hll"><code class="language-java">
+curl -X DELETE -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk6Vg2xm8DZdVjxbhwm7XWY' -i  'https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/blocks/users/5cxhactgdj'
+</code></pre>
+
+#### Response
+
+<pre class="hll"><code class="language-java">
+{
+  "action" : "delete",
+  "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
+  "path" : "/users/72bb4f9a-fce7-11e3-98f4-adc39e9f4363/blocks",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/blocks",
+  "entities" : [ {
+    "uuid" : "7cc785ea-dfcc-11e3-b24a-d5b4112501a1",
+    "type" : "user",
+    "created" : 1400555511102,
+    "modified" : 1400555511102,
+    "username" : "5cxhactgdj",
+    "activated" : true
+  } ],
+  "timestamp" : 1412825354550,
+  "duration" : 164,
+  "organization" : "easemob-demo",
+  "applicationName" : "chatdemoui"
+}
+</code></pre>
+
