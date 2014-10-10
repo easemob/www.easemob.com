@@ -8,6 +8,13 @@ secondnavios: true
 
 ## SDK 集成
 
+### 特别说明
+**username：环信IM用户唯一标识符**
+
+**SDK的username不能是中文**
+
+**只要知道对方username，不需要互为好友即可聊天**
+
 ### 下载环信Demo及SDK
 
 1. 下载环信Demo及SDK： [下载](http://www.easemob.com/sdk/)
