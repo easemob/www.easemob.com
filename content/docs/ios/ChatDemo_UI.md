@@ -17,10 +17,7 @@ secondnavios: true
 ![alt text](/example_layout_IOS.png "Title")
 
 **SDK压缩包下载后, 有20M左右, 解压后, SDK的静态库 libEaseMobClientSDKLite.a 会有42M左右, 静态库这么大的原因是因为静态库包含了三个Architectures:i386、ARMV7、ARMV7S。**
-
 **应用集成SDK后build的iPA安装包，会在原有的基础上变大1.5-2M，对安装包的大小不会有很大的影响的**
-
-  ![alt text](/example_layout_IOS.png "Demo")
 
 ### 将EaseMobSDK拖入到项目中 
 
@@ -139,14 +136,10 @@ secondnavios: true
 ### 如果某个类想监听SDK的回调方法，该类需要符合协议<IChatManagerDelegate>，并且需要注册为listener ,如 MainViewController
 
 <pre class="hll"><code class="language-objective_c">
-@interface MainViewController () <IChatManagerDelegate>
-{
-
-}
-
 [[EaseMob sharedInstance].chatManager addDelegate:self
 delegateQueue:nil];
 </code></pre>
+
 
 ### 登录 ，见 LoginViewController
 
@@ -161,11 +154,13 @@ completion:
 } onQueue:nil];
 </code></pre>
 
+
 #### 退出登录：见SettingsViewController 
 
 <pre class="hll"><code class="language-objective_c">
 [[EaseMob sharedInstance].chatManager asyncLogoff];
 </code></pre>
+
 
 #### 发送消息：工具类 ChatSendHelper 
 
