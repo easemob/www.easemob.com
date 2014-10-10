@@ -160,14 +160,14 @@ completion:
 </code></pre>
 
 
-### 退出登录：见SettingsViewController 
+## 退出登录：见SettingsViewController 
 
 <pre class="hll"><code class="language-objective_c">
 [[EaseMob sharedInstance].chatManager asyncLogoff];
 </code></pre>
 
 
-### 发送消息：工具类 ChatSendHelper 
+## 发送消息：工具类 ChatSendHelper 
 
 <pre class="hll"><code class="language-objective_c">
 EMChatText *text = [[EMChatText alloc] initWithText:message];
@@ -184,7 +184,7 @@ error:nil];
 </code></pre>
 
 
-### 接收聊天消息并显示：见ChatViewController 
+## 接收聊天消息并显示：见ChatViewController 
 
 <pre class="hll"><code class="language-objective_c">
  -(void)didReceiveMessage:(EMMessage *)message 
@@ -198,6 +198,7 @@ error:nil];
 
 
 ## 其他说明
+
 ### 回调方法：监测网络状态
 
 在MainViewController类中有体现，监测以下方法
