@@ -182,14 +182,15 @@ error:nil];
 #### 接收聊天消息并显示：见ChatViewController 
 
 <pre class="hll"><code class="language-objective_c">
--(void)didReceiveMessage:(EMMessage *)message 
-{
-    id<IEMMessageBody> body = [message.messageBodies firstObject];
-    if (body.messageBodyType == eMessageBodyType_Text) {
-    NSString *msg = ((EMTextMessageBody *)body).text;
-    NSLog(@"收到的消息---%@",msg);
-}
+    -(void)didReceiveMessage:(EMMessage *)message 
+    {
+        id<IEMMessageBody> body = [message.messageBodies firstObject];
+        if (body.messageBodyType == eMessageBodyType_Text) {
+        NSString *msg = ((EMTextMessageBody *)body).text;
+        NSLog(@"收到的消息---%@",msg);
+    }
 </code></pre>
+
 
 ### 其他说明
 #### 回调方法：监测网络状态
