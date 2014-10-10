@@ -107,9 +107,8 @@ final String appkey = EMChatConfig.getInstance().APPKEY;
 new Thread(new Runnable() {
     public void run() {
       try {
-          //调用sdk注册方法
-          EMChatManager.getInstance().createAccountOnServer(appkey + "_" + username, pwd);
-        	
+         // 调用sdk注册方法
+         EMChatManager.getInstance().createAccountOnServer(username, pwd);
       } catch (final Exception e) {
       }
    }
