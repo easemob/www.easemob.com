@@ -189,7 +189,6 @@ error:nil];
     NSString *msg = ((EMTextMessageBody *)body).text;
     NSLog(@"收到的消息---%@",msg);
 }
-}
 </code></pre>
 
 ### 其他说明
@@ -198,8 +197,7 @@ error:nil];
 在MainViewController类中有体现，监测以下方法
 
 <pre class="hll"><code class="language-objective_c">
-#pragma mark - IChatManagerDelegate 登录状态变化
-
+//IChatManagerDelegate 登录状态变化
 - (void)didConnectionStateChanged:(EMConnectionState)connectionState
 {
 
