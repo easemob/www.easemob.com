@@ -103,13 +103,11 @@ public class DemoApplication extends Application {
 见RegisterActivity，注意用户名不能有大写字母
 	
 <pre class="hll"><code class="language-java">
-final String appkey = EMChatConfig.getInstance().APPKEY;
 new Thread(new Runnable() {
     public void run() {
       try {
-          //调用sdk注册方法
-          EMChatManager.getInstance().createAccountOnServer(appkey + "_" + username, pwd);
-        	
+         // 调用sdk注册方法
+         EMChatManager.getInstance().createAccountOnServer(username, pwd);
       } catch (final Exception e) {
       }
    }
