@@ -6,16 +6,14 @@ secondnavios: true
 
 # EaseMob SDK 集成
 
-## SDK 集成
-
-### 特别说明
+## 特别说明
 **username：环信IM用户唯一标识符**
 
 **SDK的username不能是中文**
 
 **只要知道对方username，不需要互为好友即可聊天**
 
-### 下载环信Demo及SDK
+## 下载环信Demo及SDK
 
 1. 下载环信Demo及SDK： [下载](http://www.easemob.com/sdk/)
 
@@ -26,32 +24,32 @@ secondnavios: true
 **SDK压缩包下载后, 有20M左右, 解压后, SDK的静态库 libEaseMobClientSDKLite.a 会有42M左右, 静态库这么大的原因是因为静态库包含了三个Architectures:i386、ARMV7、ARMV7S。**
 **应用集成SDK后build的iPA安装包，会在原有的基础上变大1.5-2M，对安装包的大小不会有很大的影响的**
 
-### 将EaseMobSDK拖入到项目中 
+## 将EaseMobSDK拖入到项目中 
 
 ![alt text](/import.png "Title")
 
-### 添加SDK依赖库 
+## 添加SDK依赖库 
 
 ![alt text](/addLib.png "Lib")
 
-### 设置Linker 
+## 设置Linker 
 
 ![alt text](/link.png "link")
 
 向Other Linker Flags 中添加 -ObjC。(如果已有，则不需要再添加)
 
-### 设置Architectures 
+## 设置Architectures 
 
 ![alt text](/Active.png "Active")
 
-## SDK的使用，以demo源码为示例
+# SDK的使用，以demo源码为示例
 
-### UIDemo依赖库 
+## UIDemo依赖库 
 ![alt text](/addUIDemoLib.png "UIDemoLib")
 
-### 初始化EaseMobSDK ，见AppDelegate
+## 初始化EaseMobSDK ，见AppDelegate
 
-####在AppDelegate中注册SDK
+###在AppDelegate中注册SDK
 
 <pre class="hll"><code class="language-objective_c">
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary 	*)launchOptions
@@ -79,7 +77,7 @@ secondnavios: true
 
 关于EASEMOB_APPKEY，请登录或注册[环信开发者后台(https://console.easemob.com),申请APPKEY后，进行相关配置。
 
-#### 配置apns相关函数（需要在真机上运行）
+### 配置apns相关函数（需要在真机上运行）
 
 <pre class="hll"><code class="language-objective_c">
 //自定义方法
@@ -140,7 +138,7 @@ secondnavios: true
 </code></pre>
 
 
-### 如果某个类想监听SDK的回调方法，该类需要符合协议<IChatManagerDelegate>，并且需要注册为listener ,如 MainViewController
+## 如果某个类想监听SDK的回调方法，该类需要符合协议<IChatManagerDelegate>，并且需要注册为listener ,如 MainViewController
 
 <pre class="hll"><code class="language-objective_c">
 [[EaseMob sharedInstance].chatManager addDelegate:self
@@ -148,7 +146,7 @@ delegateQueue:nil];
 </code></pre>
 
 
-### 登录 ，见 LoginViewController
+## 登录 ，见 LoginViewController
 
 <pre class="hll"><code class="language-objective_c">
 [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:username
@@ -162,14 +160,14 @@ completion:
 </code></pre>
 
 
-#### 退出登录：见SettingsViewController 
+### 退出登录：见SettingsViewController 
 
 <pre class="hll"><code class="language-objective_c">
 [[EaseMob sharedInstance].chatManager asyncLogoff];
 </code></pre>
 
 
-#### 发送消息：工具类 ChatSendHelper 
+### 发送消息：工具类 ChatSendHelper 
 
 <pre class="hll"><code class="language-objective_c">
 EMChatText *text = [[EMChatText alloc] initWithText:message];
@@ -186,7 +184,7 @@ error:nil];
 </code></pre>
 
 
-#### 接收聊天消息并显示：见ChatViewController 
+### 接收聊天消息并显示：见ChatViewController 
 
 <pre class="hll"><code class="language-objective_c">
  -(void)didReceiveMessage:(EMMessage *)message 
@@ -199,8 +197,8 @@ error:nil];
 </code></pre>
 
 
-### 其他说明
-#### 回调方法：监测网络状态
+## 其他说明
+### 回调方法：监测网络状态
 
 在MainViewController类中有体现，监测以下方法
 
@@ -214,7 +212,7 @@ error:nil];
 
 ![alt text](/chatUIDemoNetwork.png "Demo") 
 
-#### 回调方法：账号在其它设备登录
+### 回调方法：账号在其它设备登录
 
 账号在其它设备登录时, 当前设备会自动断开连接(收到该回调时, 当前客户端已不能收发消息了, 当前客户端必须处理该回调, 退出到登录页面, )
 
@@ -225,7 +223,7 @@ error:nil];
 }
 </code></pre>
 
-#### 回调方法：账号在后台被删除
+### 回调方法：账号在后台被删除
 
 <pre class="hll"><code class="language-objective_c">
 - (void)didRemovedFromServer
@@ -234,15 +232,15 @@ error:nil];
 }
 </code></pre>
 
-### Demo演示流程
+## Demo演示流程
   
-#### 运行demo
+### 运行demo
 
 账号不支持中文
 
  ![alt text](/chatUIDemoLogin.png "Demo")
  
-#### 登录成功进入首页
+### 登录成功进入首页
 
 会话：聊天的会话列表
 
@@ -252,7 +250,7 @@ error:nil];
 
  ![alt text](/chatUIDemoHome.png "Demo")
  
-#### 添加好友
+### 添加好友
 
 运行程序并登录账号2。点击“通讯录”页面的“+”
 
@@ -266,6 +264,6 @@ error:nil];
  
  ![alt text](/chatUIDemoApplyList.png "Demo")
  
-#### 账号1和账号2互发消息
+### 账号1和账号2互发消息
 
  ![alt text](/chatUIDemoChatList.png "Demo") 
