@@ -194,20 +194,112 @@ curl -X DELETE 'https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ff
 </code></pre>
 
 
-## 获取群组中的所有成员 {#users}
+## 获取群组中的所有成员  {#users}
+
+- Path : /{org_name}/{app_name}/chatgroups/{group_id}/users
+- HTTP Method : GET 
+- URL Params ： 无
+- Request Headers : {"Authorization":"Bearer ${token}"}
+- Request Body ：无
+- Response Body ：详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略
+
+##### curl示例：
 
 <pre class="hll"><code class="language-java">
-GET /{org_name}/{app_name}/chatgroups/{group_id}/users
+curl -X GET 'https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5/chatgroups/1411816013089/users' -H 'Authorization: Bearer YWMtgNIiTFAwEeSB9olyTIXFtwAAAUotKvWaUOaUuqeuhNMgOgozO4popVZe-Ls'
 </code></pre>
+
+##### Response
+
+<pre class="hll"><code class="language-java">
+{
+  "action" : "get",
+  "uri" : "http://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5/chatgroups/1411816013089/users",
+  "entities" : [ ],
+  "data" : [ {
+    "member" : "lidis"
+  }, {
+    "member" : "asdfgh"
+  }, {
+    "member" : "zhanglin"
+  }, {
+    "owner" : "ruson"
+  } ],
+  "timestamp" : 1413012431449,
+  "duration" : 24
+}
+</code></pre>
+
 
 ## 在群组中添加一个人 {#addmember}
 
+- Path : /{org_name}/{app_name}/chatgroups/{group_id}/users/{user_primary_key}
+- HTTP Method :  POST 
+- URL Params ： 无
+- Request Headers : {"Authorization":"Bearer ${token}"}
+- Request Body ：无
+- Response Body ：详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略
+
+##### curl示例：
+
 <pre class="hll"><code class="language-java">
-POST /{org_name}/{app_name}/chatgroups/{group_id}/users/{user_primary_key}
+curl -X POST 'https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5/chatgroups/1411816013089/users'/q4xpsfjfvf -H 'Authorization: Bearer YWMtgNIiTFAwEeSB9olyTIXFtwAAAUotKvWaUOaUuqeuhNMgOgozO4popVZe-Ls'
 </code></pre>
+
+##### Response
+
+<pre class="hll"><code class="language-java">
+{
+  "action" : "post",
+  "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui",
+  "entities" : [ ],
+  "data" : {
+    "action" : "add_member",
+    "result" : true,
+    "groupid" : "1411816013089",
+    "user" : "q4xpsfjfvf"
+  },
+  "timestamp" : 1413012512005,
+  "duration" : 29,
+  "organization" : "easemob-demo",
+  "applicationName" : "chatdemoui"
+}
+</code></pre>
+
 
 ## 在群组中减少一个人 {#deletemember}
 
+- Path : /{org_name}/{app_name}/chatgroups/{group_id}/users/{user_primary_key}
+- HTTP Method : DELETE 
+- URL Params ： 无
+- Request Headers : {"Authorization":"Bearer ${token}"}
+- Request Body ：无
+- Response Body ：详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略
+
+##### curl示例：
+
 <pre class="hll"><code class="language-java">
-DELETE /{org_name}/{app_name}/chatgroups/{group_id}/users/{user_primary_key}
+curl -X DELETE 'https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5/chatgroups/1411816013089/users'/q4xpsfjfvf -H 'Authorization: Bearer YWMtgNIiTFAwEeSB9olyTIXFtwAAAUotKvWaUOaUuqeuhNMgOgozO4popVZe-Ls'
+</code></pre>
+
+##### Response
+
+<pre class="hll"><code class="language-java">
+{
+  "action" : "delete",
+  "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui",
+  "entities" : [ ],
+  "data" : {
+    "action" : "remove_member",
+    "result" : true,
+    "groupid" : "1411816013089",
+    "user" : "q4xpsfjfvf"
+  },
+  "timestamp" : 1413012566573,
+  "duration" : 56,
+  "organization" : "easemob-demo",
+  "applicationName" : "chatdemoui"
+}
 </code></pre>
