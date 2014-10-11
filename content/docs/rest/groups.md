@@ -124,6 +124,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
     "groupname":"testrestgrp12", //群组名称, 此属性为必须的
     "desc":"server create group", //群组描述, 此属性为必须的
     "public":true, //是否是公开群, 此属性为必须的
+    "maxusers":300, //群组成员最大数(包括群主), 值为数值类型,默认值200,此属性为可选的
     "approval":true, //加入公开群是否需要批准, 没有这个属性的话默认是true, 此属性为可选的
     "owner":"jma1", //群组的管理员, 此属性为必须的
     "members":["jma2","jma3"] //群组成员,此属性为可选的,但是如果加了此项,数组元素至少一个
@@ -135,7 +136,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 ##### curl示例：
 
 <pre class="hll"><code class="language-java">
-curl -X POST 'https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5/chatgroups' -H 'Authorization: Bearer YWMtG4T5wkOTEeST5V-9lp7f-wAAAUnafsqrQFnCU4gI0-rQImw45TXUWSIrXI8' -d '{"groupname":"testrestgrp12","desc":"server create group","public":true,"approval":true,"owner":"2ewcgkhhxf","members":["zh9w1hc49q"]}'
+curl -X POST 'https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5/chatgroups' -H 'Authorization: Bearer YWMtG4T5wkOTEeST5V-9lp7f-wAAAUnafsqrQFnCU4gI0-rQImw45TXUWSIrXI8' -d '{"groupname":"testrestgrp12","desc":"server create group","public":true,"approval":true,"owner":"2ewcgkhhxf","maxusers":300,"members":["zh9w1hc49q"]}'
 </code></pre>
 
 ##### Response
