@@ -46,7 +46,7 @@ REST client就是调用REST API的程序端，可以使调用方式有多种：L
 而动词所操作的对象, 在REST中, 被称之为_资源_, 也就是_URL_, 而这些也都是标准的HTTP协议的内容.
 实际上, 当我们在浏览器中打开一个网站的时候, 例如, 打开[www.easemob.com](www.easemob.com), 浏览器实际上发送给网站服务器的, 就是一个HTTP GET的请求.
 
-需要注意的是, 环信的REST API都是基于json的, 所以在构造_HTTP_ 请求的时候, 需要在_HTTP HEADER_中指明:
+需要注意的是, **_环信的REST API都是基于json的_**, 所以在构造_HTTP_ 请求的时候, 需要在_HTTP HEADER_中指明:
 
 | header_name  | header_value     | description               |
 |--------------|:----------------:|-------------------------- |
