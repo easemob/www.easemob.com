@@ -5,11 +5,11 @@ try{
 
 		var tasks = {
 			1 : ["qq-guangzhou-1k", "http://203.195.202.39/s/1k.html"],
-			2 : ["ali-guangzhou-1k", "http://182.92.159.193/1k.html"],
+			2 : ["ali-beijing-1k", "http://182.92.159.193/1k.html"],
 			3 : ["qq-guangzhou-10k", "http://203.195.202.39/s/10k.html"],
-			4 : ["ali-guangzhou-10k", "http://182.92.159.193/10k.html"]
+			4 : ["ali-beijing-10k", "http://182.92.159.193/10k.html"]
 		};
-		var _count = 2; // length of tasks[]
+		var _count = 4; // length of tasks[]
 		var _submited = false;
 
 		var _count_success = 0;
