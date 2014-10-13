@@ -170,26 +170,26 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
           <li><a href="http://www.qingting.fm/#/recommend" target="_blank"><img src="img/qt.png"></a></li>
           <li><a href="http://cn.dolphin.com/" target="_blank"><img src="img/hte.png"></a></li>
           <li><a href="http://app.autohome.com.cn/apps/club/" target="_blank"><img src="img/cheyouhui.png" height="63" width="63"></a></li>
+<li><a href="http://www.jiecao.fm/" target="_blank"><img src="img/jiecao.png"  height="63" width="63"></a></li>
+          <li><a href="http://www.haomee.net/" target="_blank"><img src="img/kandongman.png" height="63" width="63"></a></li>
           <li><a href="http://m.qiuying.com/" target="_blank"><img src="img/qy.png"></a></li>
           <li><a href="http://ibeiliao.com/" target="_blank"><img src="img/bl.png"></a></li>
           <li><a href="http://www.appmagics.com/" target="_blank"><img src="img/ht.png"></a></li>
           <li><a href="http://www.xiaoneimimi.com/" target="_blank"><img src="img/xn.png"></a></li>
-          <li><a href="http://www.jiecao.fm/" target="_blank"><img src="img/jiecao.png"  height="63" width="63"></a></li>
-          <li><a href="http://www.haomee.net/" target="_blank"><img src="img/kandongman.png" height="63" width="63"></a></li>
       </ul>
       <dl>
           <dd style="margin-right:55px;"><a href="http://www.qingting.fm/#/recommend" target="_blank">蜻蜓fm</a></dd>
-          <dd style="margin-right:55px;"><a href="http://cn.dolphin.com/" target="_blank">海豚浏览器</a></dd>
-          <dd style="margin-right:80px;"><a href="http://app.autohome.com.cn/apps/club/" target="_blank">车友会</a></dd>
-          <dd style="margin-right:85px;"><a href="http://m.qiuying.com/" target="_blank">求应</a></dd>
-          <dd style="margin-right:85px;"><a href="http://ibeiliao.com/" target="_blank">贝聊</a></dd>
-          <dd style="margin-right:72px;"><a href="http://www.appmagics.com/" target="_blank">哈图</a></dd>
-          <dd style="margin-right:68px;margin-right:58px;"><a href="http://www.xiaoneimimi.com/" target="_blank">校内秘密</a></dd>
-          <dd style="padding-left:1px;margin-right:40px;"><a href="http://www.jiecao.fm/" target="_blank">节操精选</a></dd>
-          <dd style="padding-left:21px;margin-right:9px;"><a href="http://www.haomee.net/" target="_blank">看动漫</a></dd>
+          <dd style="margin-right:57px;"><a href="http://cn.dolphin.com/" target="_blank">海豚浏览器</a></dd>
+          <dd style="margin-right:66px;"><a href="http://app.autohome.com.cn/apps/club/" target="_blank">车友会</a></dd>
+<dd style="padding-left:1px;margin-right:43px;"><a href="http://www.jiecao.fm/" target="_blank">节操精选</a></dd>
+          <dd style="padding-left:21px;margin-right:39px;"><a href="http://www.haomee.net/" target="_blank">看动漫</a></dd>
+          <dd style="padding-left:41px;margin-right:80px;"><a href="http://m.qiuying.com/" target="_blank">求应</a></dd>
+          <dd style="margin-right:88px;"><a href="http://ibeiliao.com/" target="_blank">贝聊</a></dd>
+          <dd style="margin-right:68px;"><a href="http://www.appmagics.com/" target="_blank">哈图</a></dd>
+          <dd style="margin-right:8px;margin-right:8px;"><a href="http://www.xiaoneimimi.com/" target="_blank">校内秘密</a></dd>
       </dl>
       <ul>
-          <li><a href="http://www.pandabus.cn" target="_blank"><img src="img/xm.png"></a></li>
+          <li><a href="http://www.vvpinche.com/download.html?id=7" target="_blank"><img src="img/vvpingche.png" height="63" width="63"></a></li>
           <li><a href="http://www.pgyer.com/nh0N" target="_blank"><img src="img/hm.png" style="padding-left:3px;"></a></li>
           <li><a href="http://www.xzhichang.com/xapp/index" target="_blank"><img src="img/zc.png"></a></li>
           <li><a href="http://www.tenmini.com" target="_blank"><img src="img/pp.png"></a></li>
@@ -200,7 +200,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
           <li><a href="http://www.tuotuo.im" target="_blank"><img src="img/tt.png" style="padding-left:3px;"></a></li>
       </ul>
       <dl>
-          <dd style="margin-right:62px;"><a href="http://www.pandabus.cn" target="_blank">熊猫公交</a></dd>
+          <dd style="margin-right:62px;"><a href="http://www.vvpinche.com/download.html?id=7" target="_blank">微微拼车</a></dd>
           <dd style="margin-right:73px;"><a href="http://www.pgyer.com/nh0N" target="_blank">小黑马</a></dd>
           <dd style="margin-right:82px;"><a href="http://www.xzhichang.com/xapp/index" target="_blank" >X职场</a></dd>
           <dd style="margin-right:75px;"><a href="http://www.tenmini.com" target="_blank">跑跑</a></dd>
@@ -214,7 +214,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
       <ul>
           <li><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" target="_blank"><img src="img/jd.png"></a></li>
           <li><a href="http://www.guishitech.com/_d1479.htm" target="_blank"><img src="img/gswtk.jpg" style="padding-left:3px;"></a></li>
-          <li><a href="https://itunes.apple.com/cn/app/id705778436?mt=8" target="_blank"><img src="img/jiashengmi.jpg"></a></li>
+          <li><a href="http://qng.im/" target="_blank"><img src="img/qingguo.jpg" height="63" width="63"></a></li>
           <li><a href="https://appmeimei.com/app/download" target="_blank"><img src="img/mxd.png"></a></li>
           <li><a href="http://m.taoshij.com:8000/download.html" target="_blank"><img src="img/taoshijie.jpg"></a></li>
           <li><a href="http://www.bskcare.com" target="_blank"><img src="img/tang.png"></a></li>
@@ -225,8 +225,8 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
       </ul>
       <dl style="padding-left:15px">
           <dd style="margin-right:64px;"><a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" target="_blank">点近</a></dd>
-          <dd style="margin-right:56px;"><a href="http://www.guishitech.com/_d1479.htm" target="_blank" >规士问题控</a></dd>
-          <dd style="margin-right:75px;"><a href="https://itunes.apple.com/cn/app/id705778436?mt=8" target="_blank" >甲生米</a></dd>
+          <dd style="margin-right:63px;"><a href="http://www.guishitech.com/_d1479.htm" target="_blank" >规士问题控</a></dd>
+          <dd style="margin-right:85px;"><a href="http://qng.im/" target="_blank" >青果</a></dd>
           <dd style="margin-right:72px;"><a href="https://appmeimei.com/app/download" target="_blank">美美</a></dd>
           <dd style="padding-left:10px;margin-right:52px;"><a href="http://m.taoshij.com:8000/download.html" target="_blank">淘世界</a></dd>
           <dd style="padding-left:10px;margin-right:60px;"><a href="http://www.bskcare.com" target="_blank">血糖高管</a></dd>
@@ -244,18 +244,19 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
           <li><a href="http://www.ruyizi.com/" target="_blank"><img src="img/ruyizi.png"></a></li>
           <li><a href="http://www.shiyuehehu.com/" target="_blank"><img src="img/shiyuehehu.png"></a></li>
           <li><a href="http://www.iyuanquan.com/" target="_blank"><img src="img/yq.png"></a></li>
-          <li><a href="http://www.hptn.cn" target="_blank"><img src="img/zhinengkouqu.jpg"></a></li>
+          <li><a href="http://bm.apeman.cn/" target="_blank"><img src="img/bangmang.png" height="63" width="63"></a></li>
       </ul>
-      <dl style="padding-left:16px">
-          <dd style="margin-right:64px;"><a href="http://kaola.joysedu.com" target="_blank">考啦</a></dd>
+      <dl>
+          <dd style="padding-left:10px;margin-right:64px;"><a href="http://kaola.joysedu.com" target="_blank">考啦</a></dd>
           <dd style="padding-left:21px;margin-right:64px;"><a href="https://itunes.apple.com/cn/app/lu-bu/id907760859?mt=8" target="_blank">侣步</a></dd>
-          <dd style="padding-left:21px;margin-right:68px;"><a href="http://www.yohelper.com" target="_blank" >优载</a></dd>
-          <dd style="padding-left:12px;margin-right:62px;"><a href="http://www.7keyun.com" target="_blank">企客云</a></dd>
+          <dd style="padding-left:10px;margin-right:63px;"><a href="http://www.yohelper.com" target="_blank" >外语帮手</a></dd>
+          <dd style="padding-left:2px;margin-right:62px;"><a href="http://www.7keyun.com" target="_blank">企客云</a></dd>
           <dd style="padding-left:13px;margin-right:62px;"><a href="http://www.mele.tv" target="_blank">蜜乐</a></dd>
           <dd style="padding-left:17px;margin-right:60px;"><a href="http://www.ruyizi.com/" target="_blank">如意子</a></dd>
           <dd style="padding-left:1px;margin-right:68px;"><a href="http://www.shiyuehehu.com/" target="_blank">十月呵护</a></dd>
-          <dd style="margin-right:60px;"><a href="http://www.iyuanquan.com/" target="_blank">i园圈</a></dd>
-         <dd style="padding-left:8px;margin-right:12px;"><a href="http://www.hptn.cn" target="_blank">智能口语</a></dd>
+          <dd style="margin-right:80px;"><a href="http://www.iyuanquan.com/" target="_blank">i园圈</a></dd>
+         <dd style="padding-left:8px;margin-right:12px;"><a href="http://bm.apeman.cn/" target="_blank">帮忙
+</a></dd>
       </dl>
 
 	  <ul>
