@@ -4,8 +4,10 @@ try{
 		var report_url = "http://s.easemob.com/s/net";
 
 		var tasks = {
-			1 : ["aliyun-beijing","http://ebs-ali-beijing-web1.easemob.com/favicon.ico"],
-			2 : ["qingcloud","http://www.qingcloud.com/static/images/favicon.ico?v=1"]
+			1 : ["qq-guangzhou-1k", "http://203.195.202.39/s/1k.html"],
+			2 : ["ali-guangzhou-1k", "http://182.92.159.193/1k.html"],
+			3 : ["qq-guangzhou-10k", "http://203.195.202.39/s/10k.html"],
+			4 : ["ali-guangzhou-10k", "http://182.92.159.193/10k.html"]
 		};
 		var _count = 2; // length of tasks[]
 		var _submited = false;
