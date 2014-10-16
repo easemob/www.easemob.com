@@ -15,7 +15,7 @@ secondnavandroid: true
 EMChat.getInstance().init(getApplicationContext());
 </code></pre>
 
->####见DemoApplication  (加粗地方，特别注意)
+>####见DemoApplication  
  
 
 <pre class="hll"><code class="language-java">
@@ -29,7 +29,7 @@ public class DemoApplication extends Application {
        
        int pid = android.os.Process.myPid();
         String processAppName = getAppName(pid);
-        <strong>
+        
         // 如果使用到百度地图或者类似启动remote service的第三方库，这个if判断不能少
         if (processAppName == null || processAppName.equals("")) {
             // workaround for baidu location sdk
