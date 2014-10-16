@@ -22,19 +22,19 @@ var _hmt = _hmt || [];
 						<span class="ios_icon"></span>
 						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK-20140923.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.0.9.1　下载次数：15574</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em> V 2.0.9.1</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
 						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.0.build2.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.0　下载次数：19315</span>
+						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em> V 2.1.0</span>
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
 						<a  id="androidHref" class="ios_btn web_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/WEB-IM-20141008.zip">下载webIM版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/webim/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/webim/quickstartinapp/" target="_blank">webIM SDK 集成指南</a></em>V 2.0.7　下载次数：12115</span>
+						<span><em><a href="/docs/webim/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/webim/quickstartinapp/" target="_blank">webIM SDK 集成指南</a></em> V 2.0.7</span>
 					</li>
 				</ul>
 			</div>
