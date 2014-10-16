@@ -141,9 +141,8 @@ EMChatManager.getInstance().sendMessage(message, new EMCallBack());
 ## 接收消息 {#receivermessage}
 
 **注意事项**：为了防止新消息来时，因为没有注册广播接收者，导致漏接消息的情况，
-注册完接受者已经好友监听等事件后，需要调用<code class="language-java">EMChat.getInstance().setAppInited()</code>,sdk才会发送新消息的广播，只需调用一次即可，可参考demo的mainactivity；
-另外当app在后台时，sdk默认已notification的形式通知有新消息，不会走广播，
-可以调用<code class="language-java">EMChatManager.getInstance().getChatOptions().setShowNotificationInBackgroud(false)</code>,关闭notification通知，这样新消息还是走发送广播的形式。
+注册完接受者以及好友监听等事件后，需要调用<code class="language-java">EMChat.getInstance().setAppInited()</code>,sdk才会发送新消息的广播，只需调用一次即可，可参考demo的mainactivity；
+另外当app在后台时，sdk默认已notification的形式通知有新消息，不会走广播，可以调用<code class="language-java">EMChatManager.getInstance().getChatOptions().setShowNotificationInBackgroud(false)</code>,关闭notification通知，这样新消息还是走发送广播的形式。
 
 
 注册一个相应broadcast，用来接收消息
