@@ -40,6 +40,9 @@ sidebar: restsidebar
 ## 获取APP管理员Token {#getadmintoken}
 环信提供的REST API需要权限才能访问,权限通过发送HTTP请求时携带token来体现,下面描述获取token的方式。小说明：api描述的时候使用到的{app的client_id}或者{app管理员密码}之类的这种参数需要替换成具体的值 .
 
+**_重要提醒：token在有效期内都是可用的，有效期具体值请看接口返回值中的expires_in字段，所以，请不要频繁向服务器发送获取token的请求，同一账号发送此请求超过一定频率会被服务器封号，切记，切记！！_**
+
+
 ### 使用app的client_id和client_secret获取授权token
 
 client_id 和 client_secret可以在环信管理后台的app详情页面看到
