@@ -192,7 +192,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
           <li><a href="http://www.vvpinche.com/download.html?id=7" target="_blank"><img src="img/vvpingche.png" height="63" width="63"></a></li>
           <li><a href="http://www.pgyer.com/nh0N" target="_blank"><img src="img/hm.png" style="padding-left:3px;"></a></li>
           <li><a href="http://www.xzhichang.com/xapp/index" target="_blank"><img src="img/zc.png"></a></li>
-          <li><a href="http://www.tenmini.com" target="_blank"><img src="img/pp.png"></a></li>
+          <li><a href="http://www.tenmini.com" target="_blank"><img src="img/pp.png" height="63" width="63"></a></li>
           <li><a href="http://yeba.im/"  target="_blank"><img src="img/yb.png"></a></li>
           <li><a href="https://itunes.apple.com/cn/app/wei-xing-zuo-xing-zuo-jiao/id696468083?mt=8" target="_blank"><img src="img/wxz.png"></a></li>
           <li><a href="http://www.imlxs.com/" target="_blank"><img src="img/lxs.png"></a></li>
