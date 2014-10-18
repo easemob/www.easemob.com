@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK-20140923.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK-20141018.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.0.9.1　下载次数：15574</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.0　下载次数：16734</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -44,6 +44,23 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+			      	<li>
+						<h3><em></em><span>版本：V2.1.0 2014-10-18</span></h3>
+						<dl>
+							<dt>
+							    <span>新功能/改进：<br/>
+							    
+									1、取消自动获取好友操作, 添加是否自动获取好友开关, 并添加手动获取好友列表API。<br/>
+									2、透传功能：cmd类型的message。<br>
+                                    Bug Fix：<br/>
+									1、修复"自动登录过程中, 发送消息直接失败"的bug。<br>
+									2、修复"断线重连过程中, 发送消息直接失败"的bug。<br>
+									3、修复"APP被kill或者退出登录时, 正在发送的消息, 未标记为发送失败"的bug。<br>
+									4、修复"APP被kill或者退出登录时, 正在获取的大图 download 状态, 未标记为 failed"的bug。<br/>
+                                </span>
+							</dt>
+						</dl>
+					</li>
 			      	<li>
 						<h3><em></em><span>版本：V2.0.9.1 2014-09-23</span></h3>
 						<dl>
