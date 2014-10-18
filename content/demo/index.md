@@ -14,7 +14,7 @@ layout: overview
 				<h2>环信Demo下载</h2>
 				<dl>
 					<dt>
-						<a class="demo_android" id="Android_DEMO_Href" onclick="_hmt.push(['_trackEvent', 'IMDEMO', 'click', 'AndroidSDK_DEMO'])" href="http://www.easemob.com/downloads/chatdemo-ui-2.1.0.apk"></a>
+						<a class="demo_android" id="Android_DEMO_Href" onclick="_hmt.push(['_trackEvent', 'IMDEMO', 'click', 'AndroidSDK_DEMO'])" href="http://www.easemob.com/downloads/chatdemo-ui-2.1.1.apk"></a>
 						<p>支持Android2.1及以上版本</p>
 						<a class="demo_iphone" id="iOS_DEMO_Href" onclick="_hmt.push(['_trackEvent', 'IMDEMO', 'click', 'iOSSDK_DEMO'])" href="http://www.easemob.com/downloads/ChatDemo-UI.ipa"></a>
 						<p>支持iPhone4、iTouch2及以上设备<br />

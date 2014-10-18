@@ -22,19 +22,19 @@ var _hmt = _hmt || [];
 						<span class="ios_icon"></span>
 						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK-20141018.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.0　下载次数：16734</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.0　</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.0.build2.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.1.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.0.9　下载次数：14327</span>
+						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.1　</span>
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
 						<a  id="androidHref" class="ios_btn web_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/WEB-IM-20141008.zip">下载webIM版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/webim/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/webim/quickstartinapp/" target="_blank">webIM SDK 集成指南</a></em>V 2.0.7　下载次数：12115</span>
+						<span><em><a href="/docs/webim/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/webim/quickstartinapp/" target="_blank">webIM SDK 集成指南</a></em>V 2.0.7　</span>
 					</li>
 				</ul>
 			</div>
@@ -302,6 +302,22 @@ var _hmt = _hmt || [];
 
 			    <ul class="history_right">
 				    <h2 class="first">Andriod SDK 更新日志</h2>
+				     <li>
+	                    <h3><em></em><span>版本：V2.1.1 2014-10-18</span></h3>
+						<dl>
+						  <dt>
+						      <span>新功能/改进：<br/>
+						        1、增加透传功能<br/>
+						        2、优化重连<br/>
+						        3、提供具体error code 码，可以参考EMCallBack<br/>
+						        4、增强稳定性</br>
+						        5、登录取消取环信好友列表（注意* 如果app还想用环信好友列表可以在初始化环信时调用此方法options.setUseRoster(true);）</br>
+						        过时的类通知：<br/>
+						        &nbsp;&nbsp;EMChatDB ： 此类将在后续版本中去掉，请注意<br/>
+						      </span>
+						  </dt>
+						</dl>
+	                </li>      
 				     <li>
 	                    <h3><em></em><span>版本：V2.1.0 2014-09-30</span></h3>
 						<dl>
