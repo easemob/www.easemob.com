@@ -310,10 +310,10 @@ var _hmt = _hmt || [];
 						        1、增加透传功能<br/>
 						        2、优化重连<br/>
 						        3、提供具体error code 码，可以参考EMCallBack<br/>
-						        4、增强稳定性</br>
-						        5、登录取消取环信好友列表（注意* 如果app还想用环信好友列表可以在初始化环信时调用此方法options.setUseRoster(true);）</br>
+						        4、增强稳定性<br/>
+						        5、登录取消取环信好友列表(<strong>注意* 如果app还想用环信好友列表可以在初始化环信时调用此方法options.setUseRoster(true);</strong>)<br/>
 						        过时的类通知：<br/>
-						        &nbsp;&nbsp;EMChatDB ： 此类将在后续版本中去掉，请注意<br/>
+						        &nbsp;&nbsp;<strong>EMChatDB ： 此类将在后续版本中去掉，请注意</strong><br/>
 						      </span>
 						  </dt>
 						</dl>

@@ -33,9 +33,9 @@ secondnavandroid: true
  }
  //import single chat
   EMMessage msg1 = createSentTextMsg("jma1");
-  EMChatDB.getInstance().importMessage(msg1);
+  EMChatManager.getInstance().importMessage(msg1, false);
   EMMessage msg2 = createReceivedTextMsg(getRadomUserName());
-  EMChatDB.getInstance().importMessage(msg2);
+  EMChatManager.getInstance().importMessage(msg2, false);
  //import group chat 
  
  //导入群聊消息和单聊消息类似，按照如下修改即可，
