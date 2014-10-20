@@ -23,6 +23,7 @@ EMChatManager.getInstance().sendMessage(message, new EMCallBack());
 </code></pre>
 
 CMD消息广播监听
+
 <pre class="hll"><code class="language-java">
     // 注册一个cmd消息的BroadcastReceiver
 	IntentFilter cmdIntentFilter = new IntentFilter(EMChatManager.getInstance().getCmdMessageBroadcastAction());
@@ -43,15 +44,9 @@ CMD消息广播监听
 			String aciton = cmdMsgBody.action;//获取自定义action
 			//获取扩展属性
 			String attr=message.getStringAttribute("a");
-			 
 		}
 	};
-
-
-
-
-					
-
+	
 </code></pre>
 
 
