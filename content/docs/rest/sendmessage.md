@@ -95,3 +95,26 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
     "applicationName": "chatdemoui"
 }
 </code></pre>
+
+
+####发送语音消息 {#sendvoicemsg}
+
+>发送语音文件，需要先上传语音文件，然后再发送此消息。（url中的uuid和secret可以从上传后的response获取）
+
+<pre class="hll"><code class="language-java">
+    curl -X POST -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/messages" -d '{"target_type" : "users","target" : ["testd", "testb", "testc"],"msg" : {"type": "audio","url": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/1dfc7f50-55c6-11e4-8a07-7d75b8fb3d42","filename": "messages.amr","length": 10,"secret": "Hfx_WlXGEeSdDW-SuX2EaZcXDC7ZEig3OgKZye9IzKOwoCjM"},"from" : "testa" }'
+
+</code></pre>
+
+####发送透传消息 {#sendpayloadmsg}
+
+>透传消息：不会在客户端提示（铃声，震动，通知栏等），但可以在客户端监听到的消息推送，具体功能可以根据自身自定义
+
+<pre class="hll"><code class="language-java">
+    curl -X POST -H "Authorization:Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-           GwPsKwj_TruuxZfFSC2eIQ" -i "https://a1.easemob.com/easemob-demo/chatdemoui/me
+	ssages" -d '{"target_type":"users","target":["testb","testc"],"msg":{"type":"c
+	md","action":"action1"},"from":"testa","ext":{"attr1":"v1","attr2":"v2"}}'
+	
+    //ext扩展类型，可以没有，可以有多个
+    
+</code></pre>
