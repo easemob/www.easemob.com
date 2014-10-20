@@ -26,16 +26,16 @@ error:nil];
 CMD消息监听
 
 <pre class="hll"><code class="language-java">
-    // 注册为接收消息的监听者（delegate）
-	[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+// 注册为接收消息的监听者（delegate）
+[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
 	
-    /**
-	 * 接收消息
-	 */
-	-(void)didReceiveMessage:(EMMessage *)message
-	{
-	    //消息处理代码
-	}
+/**
+ * 接收消息
+ */
+-(void)didReceiveMessage:(EMMessage *)message
+{
+    //消息处理代码
+}
 	
 </code></pre>
 
