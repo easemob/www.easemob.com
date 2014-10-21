@@ -172,7 +172,7 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
         <li>
           <a href="http://www.jiecao.fm/" target="_blank">
             <i class="share_avatar avatar_04"></i>
-            <span>节操</span>
+            <span>节操精选</span>
           </a>
         </li>
         <li>
@@ -225,12 +225,12 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
             <a href="http://www.haomee.net/" target="_blank"><strong>看动漫</strong></a>
           </li>
           <li>
-            <a href="http://m.qiuying.com/" target="_blank"><img src="img/qy.png" /><span class="mask"></span></a>
-            <a href="http://m.qiuying.com/" target="_blank"><strong>求应</strong></a>
-          </li>
-          <li>
             <a href="http://ibeiliao.com/" target="_blank"><img src="img/bl.png" /><span class="mask"></span></a>
             <a href="http://ibeiliao.com/" target="_blank"><strong>贝聊</strong></a>
+          </li>
+          <li>
+            <a href="http://m.qiuying.com/" target="_blank"><img src="img/qy.png" /><span class="mask"></span></a>
+            <a href="http://m.qiuying.com/" target="_blank"><strong>求应</strong></a>
           </li>
           <li>
             <a href="http://www.appmagics.com/" target="_blank"><img src="img/ht.png" /><span class="mask"></span></a>
