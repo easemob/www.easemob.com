@@ -61,7 +61,7 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
         "msg" : "hello from rest" //消息内容，参考[聊天记录](http://developer.easemob.com/docs/emchat/rest/chatmessage.html)里的bodies内容
         },
     "from" : "jma2", //表示这个消息是谁发出来的, 可以没有这个属性, 那么就会显示是admin, 如果有的话, 则会显示是这个用户发出的    
-    "ext" : { //扩展属性, 由app自己定义
+    "ext" : { //扩展属性, 由app自己定义.可以没有这个字段，但是如果有，值不能是“ext:null“这种形式，否则出错
         "attr1" : "v1",
         "attr2" : "v2"
     }    
@@ -115,6 +115,6 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
     curl -X POST -H "Authorization:Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" -i "https://a1.easemob.com/easemob-demo/chatdemoui/messages" -d '{"target_type":"users","target":["testb","testc"],"msg":{"type":"c
 	md","action":"action1"},"from":"testa","ext":{"attr1":"v1","attr2":"v2"}}'
 	
-    //ext扩展类型，可以没有，可以有多个
+    //ext扩展类型，可以没有，可以有多个。但是如果有，值不能是“ext:null“这种形式，否则出错
     
 </code></pre>
