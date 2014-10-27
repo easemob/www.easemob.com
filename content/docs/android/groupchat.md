@@ -103,6 +103,24 @@ secondnavandroid: true
     ...
 	其它方法详见环信接口文档
  </code></pre>
+ 
+## 屏蔽群消息 ## {#group-block}
+
+ <pre class="hll"><code class="language-java">
+    //屏蔽群消息后，就不能接收到此群的消息 （群创建者不能屏蔽群消息）
+    //根据groupid屏蔽此群所有发来的消息
+     EMGroupManager.getInstance().blockGroupMessage(groupId);
+ </code></pre>
+
+
+## 解除屏蔽群 ## {#group-unblock}
+
+ <pre class="hll"><code class="language-java">
+     //解除屏蔽群后，就可以正常收到群的所有消息
+    EMGroupManager.getInstance().unblockGroupMessage(groupId);
+ </code></pre>
+
+
 
 ## 高级话题 ##
 
