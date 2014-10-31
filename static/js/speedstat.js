@@ -13,9 +13,11 @@ try{
 			7 : ["qing-beijing2-1k", "http://119.254.108.53/1k.html"],
 			8 : ["qing-beijing2-10k", "http://119.254.108.53/10k.html"],
 			9 : ["aws-cn-1k", "http://54.223.147.200:8090/1k.html"],
-			10 : ["aws-cn-10k", "http://54.223.147.200:8090/10k.html"]
+			10 : ["aws-cn-10k", "http://54.223.147.200:8090/10k.html"],
+			11 : ["ali-hangzhou-1k", "http://121.41.37.18/1k.html"],
+			12 : ["ali-hangzhou-10k", "http://121.41.37.18/10k.html"]
 		};
-		var _count = 10; // length of tasks[]
+		var _count = 12; // length of tasks[]
 		var _submited = false;
 
 		var _count_success = 0;
