@@ -153,10 +153,11 @@ curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"usern
     "uri" : "https://a1.easemob.com/easemob-demo/chatdemo/users",
     "entities" : [ {
     	"uuid" : "7f90f7ca-bb24-11e2-b2d0-6d8e359945e4",
-    	"name" : "jliu0003",
+    	"type" : "user",
     	"created" : 1368377620796,
     	"modified" : 1368377620796,
     	"username" : "jliu",
+	"activated" : true
     } ],
     "timestamp" : 1368377620793,
     "duration" : 125,
@@ -191,10 +192,11 @@ curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4V
 	"uri" : "https://a1.easemob.com/easemob-demo/chatdemo/users",
 	"entities" : [ {
 		"uuid" : "7f90f7ca-bb24-11e2-b2d0-6d8e359945e4",
-		"name" : "jliu0003",
+		"type" : "user",
 		"created" : 1368377620796,
 		"modified" : 1368377620796,
 		"username" : "jliu",
+		"activated" : true
 		}
   	} ],
   	"timestamp" : 1368377620793,
@@ -780,11 +782,11 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 > * 按照创建时间来排序(降序) 
    + DELETE /{org_name}/{app_name}/users?ql=order+by+created+desc&limit=300
 
-> * 按照创建时间来排序(升序)            
-   + DELETE /{org_name}/{app_name}/users?ql=order+by+created+asc&limit=300        
+> * 按照创建时间来排序(升序)
+   + DELETE /{org_name}/{app_name}/users?ql=order+by+created+asc&limit=300
 
 > * 按时间段来删除
->    使用ql=created> {起始时间戳} and created < {结束时间戳} 的查询语句, 时间戳是timestamp类型的, 并且需要对ql进行http url encode    
+>    使用ql=created> {起始时间戳} and created < {结束时间戳} 的查询语句, 时间戳是timestamp类型的, 并且需要对ql进行http url encode
    + DELETE /{org_name}/{app_name}/users?ql=created > 1409506121910 and created < 1409576121910
 
 - Path : /{org_name}/{app_name}/users
