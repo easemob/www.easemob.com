@@ -132,7 +132,7 @@ sidebar: restsidebar
 
 #### 使用示例1：获取最新的20条记录
 
-在url后面加上参数`ql=order by timestamp desc，limit=20`,实际使用时需要对"="后边的内容进行utf8 encode转义
+在url后面加上参数`ql=order by timestamp desc&limit=20`,实际使用时需要对"="后边的内容进行utf8 encode转义
 		
 ###### curl示例
 
