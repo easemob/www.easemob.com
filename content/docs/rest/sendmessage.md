@@ -219,7 +219,7 @@ curl -X POST -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-
 
 <pre class="hll"><code class="language-java">
 {
-	"target_type":"users",    //users 给用户发消息, chatgroups 给群发消息
+	"target_type":"users",    //users 给用户发消息,透传消息只能给用户发
 	"target":["testb","testc"],  //注意这里需要用数组, 即使只有一个用户u1或者群组, 也要用数组形式 ['u1']
 	"msg":{  //消息内容
 		"type":"cmd",  // 消息类型
