@@ -12,7 +12,10 @@ secondnavandroid: true
 
 <pre class="hll"><code class="language-java">
 EMMessage cmdMsg = EMMessage.createSendMessage(EMMessage.Type.CMD);
-//目前只支持单聊
+
+//支持单聊和群聊，默认单聊，如果是群聊添加下面这行
+cmdMsg.setChatType(ChatType.GroupChat)
+
 String action="action1";//action可以自定义，在广播接收时可以收到
 CmdMessageBody cmdBody=new CmdMessageBody(action);
 String toUsername="test1";//发送给某个人
