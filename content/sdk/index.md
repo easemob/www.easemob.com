@@ -26,9 +26,9 @@ var _hmt = _hmt || [];
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.1.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.2.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.1　</span>
+						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.2　</span>
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
@@ -307,7 +307,8 @@ var _hmt = _hmt || [];
 						<dl>
 						  <dt>
 						      <span>新功能/改进：<br/>
-						        1、增加error code EMError类，方便开发者查询返回值[见javadoc](http://www.easemob.com/apidoc/android/chat/)<br/>
+						        1、增加error code EMError类，方便开发者查询返回值
+[见javadoc](http://www.easemob.com/apidoc/android/chat/)<br/>
 						        2、增加EMChatManager.loadAllConversations() 和EMGroupManager.loadAllGroups 去主动加载会话列表和群组 <br/>
 						        **请注意，请在app初始化界面调用此api一次即可，可参考demo**<br/>
 						        3、通讯录中过滤黑名单<br/>
@@ -315,6 +316,7 @@ var _hmt = _hmt || [];
 						        5、录音添加权限检测(UIDemo)<br/>
 						        6、新增监听接口EMConnectionListener 用来替换ConnectionListener<br/>        
 						        7、新增更新消息内容接口EMChatManager.getInstance().updateMessageBody({emmessage})<br/>
+						        8、新增透传消息（cmd）支持群聊<br/>
 						         Bug Fix：<br/>
 						        &nbsp;1、送达通知无法显示<br/>
 						        &nbsp;2、消息界面无法显示接收消息，只能听到声音，UIDemo问题<br/>
