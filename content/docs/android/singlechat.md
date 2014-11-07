@@ -231,13 +231,9 @@ private class NewMessageBroadcastReceiver extends BroadcastReceiver {
         //消息类型，文本，图片，语音消息等,这里返回的值为msg.type.ordinal()。
         //所以消息type实际为是enum类型
         int msgType = intent.getIntExtra("type", 0);
-        //消息body，为一个json字符串
-        String msgBody = intent.getStringExtra("body");
-        Log.d("main", "new message id:" + msgId + " from:" + msgFrom + " type:" + msgType + " body:" + msgBody);
-      
+        Log.d("main", "new message id:" + msgId + " from:" + msgFrom + " type:" + msgType);
         //更方便的方法是通过msgId直接获取整个message
         EMMessage message = EMChatManager.getInstance().getMessage(msgId);
-                
         }
 }
 </code></pre>
