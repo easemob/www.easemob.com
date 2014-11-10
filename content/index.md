@@ -176,9 +176,9 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
           </a>
         </li>
         <li>
-          <a href="http://www.haomee.net/" target="_blank">
+          <a href="http://www.genshuixue.com/static/app" target="_blank">
             <i class="share_avatar avatar_05"></i>
-            <span>看动漫</span>
+            <span>跟谁学</span>
           </a>
         </li>
         <li>
