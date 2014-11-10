@@ -152,33 +152,33 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
       <h2>典型案例</h2>
       <ul class="share_loop">
         <li>
-          <a href="http://cn.dolphin.com" target="_blank">
+          <a href="http://www.genshuixue.com/static/app" target="_blank">
             <i class="share_avatar avatar_01"></i>
+            <span>跟谁学</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://cn.dolphin.com" target="_blank">
+            <i class="share_avatar avatar_02"></i>
             <span>海豚浏览器</span>
           </a>
         </li>
         <li>
           <a href="http://www.qingting.fm/#/recommend" target="_blank">
-            <i class="share_avatar avatar_02"></i>
+            <i class="share_avatar avatar_03"></i>
             <span>蜻蜓fm</span>
           </a>
         </li>
         <li>
           <a href="http://app.autohome.com.cn/apps/club/" target="_blank">
-            <i class="share_avatar avatar_03"></i>
+            <i class="share_avatar avatar_04"></i>
             <span>车友会</span>
           </a>
         </li>
         <li>
           <a href="http://www.jiecao.fm/" target="_blank">
-            <i class="share_avatar avatar_04"></i>
-            <span>节操精选</span>
-          </a>
-        </li>
-        <li>
-          <a href="http://www.genshuixue.com/static/app" target="_blank">
             <i class="share_avatar avatar_05"></i>
-            <span>跟谁学</span>
+            <span>节操精选</span>
           </a>
         </li>
         <li>
