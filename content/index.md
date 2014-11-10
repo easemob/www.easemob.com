@@ -209,12 +209,12 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
             <a href="http://www.genshuixue.com/static/app" target="_blank"><strong>跟谁学</strong></a>
           </li>
           <li>
-            <a href="http://www.qingting.fm/#/recommend" target="_blank"><img src="img/qt.png" /><span class="mask"></span></a>
-            <a href="http://www.qingting.fm/#/recommend" target="_blank"><strong>蜻蜓fm</strong></a>
-          </li>
-          <li>
             <a href="http://cn.dolphin.com/" target="_blank"><img src="img/hte.png" /><span class="mask"></span></a>
             <a href="http://cn.dolphin.com/" target="_blank"><strong>海豚浏览器</strong></a>
+          </li>
+          <li>
+            <a href="http://www.qingting.fm/#/recommend" target="_blank"><img src="img/qt.png" /><span class="mask"></span></a>
+            <a href="http://www.qingting.fm/#/recommend" target="_blank"><strong>蜻蜓fm</strong></a>
           </li>
           <li>
             <a href="http://app.autohome.com.cn/apps/club/" target="_blank"><img src="img/cheyouhui.png" height="60" width="60" /><span class="mask"></span></a>
