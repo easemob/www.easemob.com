@@ -205,6 +205,10 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
       <h2>他们都在使用环信</h2>
       <ul>
           <li>
+            <a href="http://www.genshuixue.com/static/app" target="_blank"><img src="img/genshuixue.png" /><span class="mask"></span></a>
+            <a href="http://www.genshuixue.com/static/app" target="_blank"><strong>跟谁学</strong></a>
+          </li>
+          <li>
             <a href="http://www.qingting.fm/#/recommend" target="_blank"><img src="img/qt.png" /><span class="mask"></span></a>
             <a href="http://www.qingting.fm/#/recommend" target="_blank"><strong>蜻蜓fm</strong></a>
           </li>
@@ -221,24 +225,20 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
             <a href="http://www.jiecao.fm/" target="_blank"><strong>节操精选</strong></a>
           </li>
           <li>
-            <a href="http://www.haomee.net/" target="_blank"><img src="img/kandongman.png" height="60" width="60" /><span class="mask"></span></a>
-            <a href="http://www.haomee.net/" target="_blank"><strong>看动漫</strong></a>
-          </li>
-          <li>
             <a href="http://ibeiliao.com/" target="_blank"><img src="img/bl.png" /><span class="mask"></span></a>
             <a href="http://ibeiliao.com/" target="_blank"><strong>贝聊</strong></a>
           </li>
           <li>
+            <a href="http://act.baihe.com/2014/bhxq/index.html" target="_blank"><img src="img/baihexiangqin.png" height="60" width="60" /><span class="mask"></span></a>
+            <a href="http://act.baihe.com/2014/bhxq/index.html" target="_blank"><strong>百合相亲</strong></a>
+          </li>
+          <li>
+            <a href="http://www.haomee.net/" target="_blank"><img src="img/kandongman.png" height="60" width="60" /><span class="mask"></span></a>
+            <a href="http://www.haomee.net/" target="_blank"><strong>看动漫</strong></a>
+          </li>
+          <li>
             <a href="http://m.qiuying.com/" target="_blank"><img src="img/qy.png" /><span class="mask"></span></a>
             <a href="http://m.qiuying.com/" target="_blank"><strong>求应</strong></a>
-          </li>
-          <li>
-            <a href="http://www.appmagics.com/" target="_blank"><img src="img/ht.png" /><span class="mask"></span></a>
-            <a href="http://www.appmagics.com/" target="_blank"><strong>哈图</strong></a>
-          </li>
-          <li>
-            <a href="http://www.xiaoneimimi.com/" target="_blank"><img src="img/xn.png" /><span class="mask"></span></a>
-            <a href="http://www.xiaoneimimi.com/" target="_blank"><strong>校内秘密</strong></a>
           </li>
       </ul>
       <ul>
@@ -263,12 +263,12 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
             <a href="http://yeba.im/" target="_blank"><strong>夜吧</strong></a>
           </li>
           <li>
-            <a href="https://itunes.apple.com/cn/app/wei-xing-zuo-xing-zuo-jiao/id696468083?mt=8" target="_blank"><img src="img/wxz.png" /><span class="mask"></span></a>
-            <a href="https://itunes.apple.com/cn/app/wei-xing-zuo-xing-zuo-jiao/id696468083?mt=8" target="_blank"><strong>微星座</strong></a>
+            <a href="http://www.appmagics.com/" target="_blank"><img src="img/ht.png" /><span class="mask"></span></a>
+            <a href="http://www.appmagics.com/" target="_blank"><strong>哈图</strong></a>
           </li>
           <li>
-            <a href="http://www.imlxs.com/" target="_blank"><img src="img/lxs.png" /><span class="mask"></span></a>
-            <a href="http://www.imlxs.com/" target="_blank"><strong>留学僧</strong></a>
+            <a href="http://www.xiaoneimimi.com/" target="_blank"><img src="img/xn.png" /><span class="mask"></span></a>
+            <a href="http://www.xiaoneimimi.com/" target="_blank"><strong>校内秘密</strong></a>
           </li>
           <li>
             <a href="https://itunes.apple.com/cn/app/shi-shang-mao-re-men-fa-xing./id673935108?l=zh&ls=1&mt=8" target="_blank"><img src="img/ssm.png" /><span class="mask"></span></a>
@@ -285,8 +285,8 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
             <a href="https://itunes.apple.com/us/app/dian-jin/id893445726?l=zh&ls=1&mt=8" target="_blank"><strong>点近</strong></a>
           </li>
           <li>
-            <a href="http://www.guishitech.com/_d1479.htm" target="_blank"><img src="img/gswtk.png" /><span class="mask"></span></a>
-            <a href="http://www.guishitech.com/_d1479.htm" target="_blank"><strong>规士问题控</strong></a>
+            <a href="http://www.imlxs.com/" target="_blank"><img src="img/lxs.png" /><span class="mask"></span></a>
+            <a href="http://www.imlxs.com/" target="_blank"><strong>留学僧</strong></a>
           </li>
           <li>
             <a href="http://qng.im/" target="_blank"><img src="img/qingguo.png" /><span class="mask"></span></a>
@@ -393,8 +393,45 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
             <a href="http://www.suicheji.com/" target="_blank"><strong>随车记</strong></a>
           </li>
       </ul>
+      <ul>
+          <li>
+            <a href="http://www.chexiaopang.com/" target="_blank"><img src="img/chexiaopang.png" /><span class="mask"></span></a>
+            <a href="http://www.chexiaopang.com/" target="_blank"><strong>车小胖</strong></a>
+          </li>
+          <li>
+            <a href="https://itunes.apple.com/cn/app/wei-xing-zuo-xing-zuo-jiao/id696468083?mt=8" target="_blank"><img src="img/wxz.png" /><span class="mask"></span></a>
+            <a href="https://itunes.apple.com/cn/app/wei-xing-zuo-xing-zuo-jiao/id696468083?mt=8" target="_blank"><strong>微星座</strong></a>
+          </li>
+          <li>
+            <a href="http://www.guishitech.com/_d1479.htm" target="_blank"><img src="img/gswtk.png" /><span class="mask"></span></a>
+            <a href="http://www.guishitech.com/_d1479.htm" target="_blank"><strong>规士问题控</strong></a>
+          </li>
+          <li>
+            <a href="http://seven.dobigthing.com" target="_blank"><img src="img/seven.png" /><span class="mask"></span></a>
+            <a href="http://seven.dobigthing.com" target="_blank"><strong>Seven</strong></a>
+          </li>
+          <li>
+            <a href="http://www.dldq.org/" target="_blank"><img src="img/dailaidaiqu.png" /><span class="mask"></span></a>
+            <a href="http://www.dldq.org/" target="_blank"><strong>代来代去</strong></a>
+          </li>
+          <li>
+            <a href="http://www.hkhuoli.cn" target="_blank"><img src="img/xizaibao.png" /><span class="mask"></span></a>
+            <a href="http://www.hkhuoli.cn" target="_blank"><strong>喜仔宝</strong></a>
+          </li>
+          <li>
+            <a href="http://t.xy189.cn/" target="_blank"><img src="img/xiaoyuanyun.png" /><span class="mask"></span></a>
+            <a href="http://t.xy189.cn/" target="_blank"><strong>校园云</strong></a>
+          </li>
+          <li>
+            <a href="http://lol.xiushuang.com/iphone/" target="_blank"><img src="img/xiushuang.png" /><span class="mask"></span></a>
+            <a href="http://lol.xiushuang.com/iphone/" target="_blank"><strong>秀爽</strong></a>
+          </li>
+          <li>
+            <a href="http://www.zhaojiumei.com" target="_blank"><img src="img/yuejiu.png" /><span class="mask"></span></a>
+            <a href="http://www.zhaojiumei.com" target="_blank"><strong>约酒</strong></a>
+          </li>
+      </ul>
     </div>
   </div>
   <div class="clearfix"></div>
 </div>
-
