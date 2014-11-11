@@ -19,7 +19,7 @@ try{
 			10 : ["ali-beijing-10k", "http://182.92.159.193/10k.html"],
 			12 : ["qing-guangzhou-10k", "http://121.201.15.126/10k.html"],
 			14 : ["qing-beijing2-10k", "http://119.254.108.53/10k.html"],
-			16 : ["sjhl-beijing-1k", "http://59.151.45.42/10k.html"]
+			16 : ["sjhl-beijing-10k", "http://59.151.45.42/10k.html"]
 		};
 		var _count = 14; // length of tasks[]
 		var _submited = false;
