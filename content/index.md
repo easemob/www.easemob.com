@@ -247,8 +247,8 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
             <a href="http://www.vvpinche.com/download.html?id=7" target="_blank"><strong>微微拼车</strong></a>
           </li>
           <li>
-            <a href="http://www.pgyer.com/nh0N" target="_blank"><img src="img/hm.png" /><span class="mask"></span></a>
-            <a href="http://www.pgyer.com/nh0N" target="_blank"><strong>小黑马</strong></a>
+            <a href="http://www.iheima.com/app/" target="_blank"><img src="img/hm.png" /><span class="mask"></span></a>
+            <a href="http://www.iheima.com/app/" target="_blank"><strong>小黑马</strong></a>
           </li>
           <li>
             <a href="http://www.xzhichang.com/xapp/index" target="_blank"><img src="img/zc.png" /><span class="mask"></span></a>
