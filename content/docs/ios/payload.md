@@ -11,6 +11,7 @@ secondnavios: true
 
 <pre class="hll"><code class="language-objective_c">
 EMChatCommand *cmd = [[EMChatCommand alloc] init];
+cmd.cmd = @"action";
 EMCommandMessageBody *body = [[EMCommandMessageBody alloc] initWithChatObject:cmd];
 
 EMMessage *msg = [[EMMessage alloc]
