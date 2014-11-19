@@ -324,7 +324,7 @@ var _hmt = _hmt || [];
 						      <span>新功能/改进：<br/>
 						        1、增加error code EMError类，方便开发者查询返回值<br/>
 						        2、增加EMChatManager.loadAllConversations() 和EMGroupManager.loadAllGroups 去主动加载会话列表和群组 <br/>
-						        **请注意，请在app初始化界面调用此api一次即可，可参考demo**<br/>
+						        **请注意，请在app初始化界面调用此api一次即可，可参考demo（login and splash activity）<br/>
 						        3、通讯录中过滤黑名单<br/>
 						        4、优化录制视频清晰度、调整录制方向，添加录制视频时间、视频前后摄像头切换(UIDemo)<br/>
 						        5、录音添加权限检测(UIDemo)<br/>
