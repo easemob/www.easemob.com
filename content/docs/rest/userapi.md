@@ -133,7 +133,8 @@ curl -X POST "https://a1.easemob.com/easemob-demo/chatdemoui/token" -d '{"grant_
 - HTTP Method : POST
 - URL Params ： 无
 - Request Headers : {"Content-Type":"application/json"}
-- Request Body ： {"username":"${用户名}","password":"${密码}"}
+- Request Body ： {"username":"${用户名}","password":"${密码}", "nickname":"${昵称值}"}  
+	 **// 创建用户时候username 和password是必须的, nickname是可选的. 如果要在创建用户时设置nickname, 请求body是: {"username":"jliu","password":"123456", "nickname":"建国"} 这种形式, 下面的示例不包含nickname .** 批量注册时同此理.
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
 #### curl示例：
@@ -862,7 +863,7 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 }
 </code></pre>
 
-## 重置IM用户密码  {#im-7}
+## 重置IM用户密码  {#resetpassword}
 
 - Path : /{org_name}/{app_name}/users/{user_primary_key}/password
 - HTTP Method : PUT
@@ -884,6 +885,46 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
   "action" : "set user password",
   "timestamp" : 1409575962124,
   "duration" : 326
+}
+</code></pre>
+
+## 修改用户昵称  {#nickname}
+
+- Path : /{org_name}/{app_name}/users/{user_primary_key}
+- HTTP Method : PUT
+- URL Params : 无
+- Request Headers : {"Authorization":"Bearer ${token}"}
+- Request Body ： {"nickname" : "${昵称值}"}
+- Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+ 
+#### curl示例：
+
+<pre class="hll"><code class="language-java">
+curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2xNh8GhUCdKViBFDSEF2E" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/jianguo" -d '{"nickname" : "张建国"}'
+</code></pre>
+
+#### Response
+
+<pre class="hll"><code class="language-java">
+{
+  "action" : "put",
+  "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
+  "path" : "/users",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users",
+  "entities" : [ {
+    "uuid" : "c3b56d5a-7135-11e4-92d2-edab82ae2302",
+    "type" : "user",
+    "created" : 1416543645861,
+    "modified" : 1416550240537,
+    "username" : "jianguo",
+    "activated" : true,
+    "device_token" : "61491f49f3e69cd1d62c5b390e42f4b1cd15bf1a876a487268cfaef9960188ee",
+    "nickname" : "张建国"
+  } ],
+  "timestamp" : 1416550240285,
+  "duration" : 278,
+  "organization" : "easemob-demo",
+  "applicationName" : "chatdemoui"
 }
 </code></pre>
 
