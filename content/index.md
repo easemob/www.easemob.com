@@ -431,6 +431,45 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
             <a href="http://www.zhaojiumei.com" target="_blank"><strong>约酒</strong></a>
           </li>
       </ul>
+
+	  <ul>
+          <li>
+            <a href="http://www.app4g.com/winke/app4g/taodianwan.html" target="_blank"><img src="img/taodianwan.png" /><span class="mask"></span></a>
+            <a href="http://www.app4g.com/winke/app4g/taodianwan.html" target="_blank"><strong>淘电玩</strong></a>
+          </li>
+          <li>
+            <a href="http://juju.la/" target="_blank"><img src="img/JUJU.png" /><span class="mask"></span></a>
+            <a href="http://juju.la/" target="_blank"><strong>JUJU</strong></a>
+          </li>
+          <li>
+            <a href="http://www.haojiemi.com/" target="_blank"><img src="img/jiemi.png" /><span class="mask"></span></a>
+            <a href="http://www.haojiemi.com/" target="_blank"><strong>街蜜</strong></a>
+          </li>
+          <li>
+            <a href="http://app.9ye.com" target="_blank"><img src="img/jiuyejiayuan.png" /><span class="mask"></span></a>
+            <a href="http://app.9ye.com" target="_blank"><strong>九叶家园</strong></a>
+          </li>
+          <li>
+            <a href="http://cggs.tzmaibo.com/" target="_blank"><img src="img/bafeite.png" /><span class="mask"></span></a>
+            <a href="http://cggs.tzmaibo.com/" target="_blank"><strong>草根股神</strong></a>
+          </li>
+          <li>
+            <a href="http://www.timemart.com.cn/" target="_blank"><img src="img/shijianchaoshi.png" /><span class="mask"></span></a>
+            <a href="http://www.timemart.com.cn/" target="_blank"><strong>时间超市</strong></a>
+          </li>
+          <li>
+            <a href="http://tr.8000ad.com/" target="_blank"><img src="img/xunkeOA.png" /><span class="mask"></span></a>
+            <a href="http://tr.8000ad.com/" target="_blank"><strong>讯科OA</strong></a>
+          </li>
+          <li>
+            <a href="http://m.ayi800.com/android" target="_blank"><img src="img/qiangdan.png" /><span class="mask"></span></a>
+            <a href="http://m.ayi800.com/android" target="_blank"><strong>月嫂抢单</strong></a>
+          </li>
+          <li>
+            <a href="http://app.bmob.cn/app/appdetail/62" target="_blank"><img src="img/yonge.png" /><span class="mask"></span></a>
+            <a href="http://app.bmob.cn/app/appdetail/62" target="_blank"><strong>咏鹅</strong></a>
+          </li>
+      </ul>
     </div>
   </div>
   <div class="clearfix"></div>
