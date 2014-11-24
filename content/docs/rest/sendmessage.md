@@ -55,7 +55,9 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
 <pre class="hll"><code class="language-java">
 {
     "target_type" : "users", // users 给用户发消息, chatgroups 给群发消息
-    "target" : ["u1", "u2", "u3"], //注意这里需要用数组,数组长度建议不大于20, 即使只有一个用户, 也要用数组 ['u1']
+    "target" : ["u1", "u2", "u3"], // 注意这里需要用数组,数组长度建议不大于20, 即使只有一个用户,   
+                                   // 也要用数组 ['u1'], 给用户发送时数组元素是用户名,给群组发送时  
+                                   // 数组元素是groupid
     "msg" : {
         "type" : "txt",
         "msg" : "hello from rest" //消息内容，参考[聊天记录](http://developer.easemob.com/docs/emchat/rest/chatmessage.html)里的bodies内容
@@ -111,7 +113,9 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
 <pre class="hll"><code class="language-java">
 {
     "target_type" : "users",   //users 给用户发消息, chatgroups 给群发消息
-    "target" : ["u1", "u2", "u3"], //注意这里需要用数组,数组长度建议不大于20, 即使只有一个用户, 也要用数组 ['u1']
+    "target" : ["u1", "u2", "u3"],// 注意这里需要用数组,数组长度建议不大于20, 即使只有一个用户,   
+                                  // 也要用数组 ['u1'], 给用户发送时数组元素是用户名,给群组发送时  
+                                  // 数组元素是groupid
     "msg" : {  //消息内容
         "type" : "img",   // 消息类型
 	    "url": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/55f12940-64af-11e4-8a5b-ff2336f03252",  //成功上传文件返回的uuid
@@ -165,7 +169,9 @@ curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H '
 <pre class="hll"><code class="language-java">
 {
 	"target_type" : "users",  //users 给用户发消息, chatgroups 给群发消息
-	"target" : ["testd", "testb", "testc"],   //注意这里需要用数组,数组长度建议不大于20, 即使只有一个用户或者群组, 也要用数组形式 ['u1']
+	"target" : ["testd", "testb", "testc"],// 注意这里需要用数组,数组长度建议不大于20, 即使只有一个  
+                                           // 用户或者群组, 也要用数组形式 ['u1'], 给用户发送  
+                                           // 时数组元素是用户名,给群组发送时数组元素是groupid
 	"msg" : {   //消息内容
 		"type": "audio",  // 消息类型
 		"url": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/1dfc7f50-55c6-11e4-8a07-7d75b8fb3d42",  //成功上传文件返回的uuid
@@ -221,8 +227,10 @@ curl -X POST -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-
 
 <pre class="hll"><code class="language-java">
 {
-	"target_type":"users",    //users 给用户发消息,透传消息只能给用户发
-	"target":["testb","testc"],  //注意这里需要用数组,数组长度建议不大于20, 即使只有一个用户u1或者群组, 也要用数组形式 ['u1']
+	"target_type":"users",     // users 给用户发消息,  chatgroups 给群发消息
+	"target":["testb","testc"], // 注意这里需要用数组,数组长度建议不大于20, 即使只有  
+                                // 一个用户u1或者群组, 也要用数组形式 ['u1'], 给用户发  
+                                // 送时数组元素是用户名,给群组发送时数组元素是groupid
 	"msg":{  //消息内容
 		"type":"cmd",  // 消息类型
 		"action":"action1"
