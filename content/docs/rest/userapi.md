@@ -35,15 +35,15 @@ sidebar: restsidebar
 而使用 _md5_ 函数对App用户名进行转换， 则很好的解决了这一问题， 即保证了， 无论App中的用户名规则是什么样子的， 中文， email等等的值， 经过md5函数之后， 都可以得到一个环信中的合法的用户名， 同时， 也保证了App的*真实*用户名信息并没有暴露给环信。
 以下所有API均需要org管理员或app管理员权限才能访问。
 
-强烈建议保护好org管理员及app管理员的用户名和密码,尽量只在APP的服务器后台对环信用户做增删改查的管理，包括新用户注册。为了您的信息安全,请一定不要将org管理员或app管理员的用户名和密码写死在手机客户端中,因为手机app很容易被反编译,从而导致别人获取到您的管理员账号和密码,导致数据泄露 .
+强烈建议保护好org管理员,app管理员的用户名和密码以及app的client_id和client_secret,尽量只在APP的服务器后台对环信用户做增删改查的管理，包括新用户注册。为了您的信息安全,请一定不要将org管理员或app管理员的用户名和密码写死在手机客户端中,因为手机app很容易被反编译,从而导致别人获取到您的管理员账号和密码,导致数据泄露 .
 
 ## 获取APP管理员Token {#getadmintoken}
-环信提供的REST API需要权限才能访问,权限通过发送HTTP请求时携带token来体现,下面描述获取token的方式。小说明：api描述的时候使用到的{app的client_id}或者{app管理员密码}之类的这种参数需要替换成具体的值 .
+环信提供的REST API需要权限才能访问,权限通过发送HTTP请求时携带token来体现,下面描述获取token的方式。小说明：api描述的时候使用到的{app的client_id}之类的这种参数需要替换成具体的值 .
 
 **_重要提醒：token在有效期内都是可用的，有效期具体值请看接口返回值中的expires_in字段，所以，请不要频繁向服务器发送获取token的请求，同一账号发送此请求超过一定频率会被服务器封号，切记，切记！！_**
 
 
-### 使用app的client_id和client_secret获取授权token
+### 使用app的client_id和client_secret获取授权管理员token
 
 client_id 和 client_secret可以在环信管理后台的app详情页面看到
 
@@ -73,47 +73,6 @@ curl -X POST "https://a1.easemob.com/easemob-demo/chatdemo/token" -d '{"grant_ty
   "access_token":"YWMtWY779DgJEeS2h9OR7fw4QgAAAUmO4Qukwd9cfJSpkWHiOa7MCSk0MrkVIco",
   "expires_in":5184000,
   "application":"c03b3e30-046a-11e4-8ed1-5701cdaaa0e4"
-}
-</code></pre>
-
-
-### 使用app管理员的username和password获取授权token
-
-- Path : /{org_name}/{app_name}/token
-- HTTP Method : POST
-- URL Params ： 无
-- Request Headers : {"Content-Type":"application/json"}
-- Request Body ： {"grant_type": "password","username":"${app管理员用户名}","password":"${app管理员密码}"}
-- Response Body ：
-
-    |      key     |     value   |
-    |--------------|-------------|
-    | access_token |   token值   |
-    | expires_in   |  有效时间,秒为单位, 默认是七天,在有效期内是不需要重复获取的 |
-    | uuid         |  当前app的UUID值   |
-    | username     |  app管理员的用户名  |
-
-#### curl示例：
-
-<pre class="hll"><code class="language-java">
-curl -X POST "https://a1.easemob.com/easemob-demo/chatdemoui/token" -d '{"grant_type":"password","username":"adminadmin","password":"111111111"}'
-</code></pre>
-
-#### Response:
-
-<pre class="hll"><code class="language-java">
-{
-  "access_token":"YWMt8W4uIDgLEeStLdkfu6SmkwAAAUmO8gpkmrJbNIZrx-M-dooWysnOQxcDR7o",
-  "expires_in":5184000,
-  "user":{
-    "uuid":"119b92ea-e0ce-11e3-a8d6-c1794764e6ae",
-    "type":"user",
-    "created":1400666141454,
-    "modified":1409490010296,
-    "username":"adminadmin",
-    "activated":true,
-    "nickname":"adminadmin"
-  }
 }
 </code></pre>
 
