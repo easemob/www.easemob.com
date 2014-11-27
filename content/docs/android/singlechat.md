@@ -87,10 +87,12 @@ public class DemoApplication extends Application {
 
 ### 登陆聊天服务器
 
-<b>需要注意：<b/>登陆成功后需要调用
-                EMGroupManager.getInstance().loadAllGroups();
-				EMChatManager.getInstance().loadAllConversations();
+<strong>需要注意：</strong>
+登陆成功后需要调用<br/>
+EMGroupManager.getInstance().loadAllGroups();<br/>
+EMChatManager.getInstance().loadAllConversations();<br/>
 保证进入主页面后本地会话和群组都load完毕。另外如果登陆过，app长期在后台再进的时候也可能会导致加载到内存的群组和会话为空，可以在主页面的oncreate里也加上这两句代码，当然，更好的办法应该是放在程序的开屏页，可参考demo的SplashActivity。
+
 <pre class="hll"><code class="language-java">
 
 EMChatManager.getInstance().login(userName,password,
@@ -119,8 +121,9 @@ EMChatManager.getInstance().login(userName,password,
 ### 退出聊天登陆  {#logout}
 
 <pre class="hll"><code class="language-java">
-
 EMChatManager.getInstance().logout();
+或者
+EMChatManager.getInstance().logout(new EMCallBack(){})
 	
 </code></pre>
 
