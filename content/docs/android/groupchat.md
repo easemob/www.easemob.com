@@ -120,6 +120,20 @@ secondnavandroid: true
     EMGroupManager.getInstance().unblockGroupMessage(groupId);
  </code></pre>
 
+## 修改群组名称 ## {#group-changename}
+
+<pre class="hll"><code class="language-java">
+    EMGroupManager.getInstance().changeGroupName({groupId}, {changedGroupName});
+    
+</code></pre>
+
+## 群聊不提醒只显示数目 ## {#group-notnotify}
+
+<pre class="hll"><code class="language-java">
+//如果群聊只是想提示数目，不响铃。可以通过此属性设置，<strong>此属性是本地属性</strong>
+EMChatManager.getInstance().getChatOptions().setReceiveNotNoifyGroup({List&lt;String&gt;})
+
+</code></pre>
 
 
 ## 高级话题 ##
