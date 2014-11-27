@@ -113,16 +113,18 @@ easemob webim sdk已支持如下功能：
 <tr><td>IE9</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
 <tr><td>IE10</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 <tr><td>IE11</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-<tr><td>FireFox</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-<tr><td>Chrome</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-<tr><td>Safari5X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-<tr><td>Safari6X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>FireFox10+</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Chrome15+</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Safari5X</td><td>●</td><td>●</td><td>○</td><td>○</td></tr>
+<tr><td>Safari6X</td><td>●</td><td>●</td><td>○</td><td>○</td></tr>
+<tr><td>Safari7X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Safari8X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 </table>
 
 
 备注：
 
 1. 已知Picture Message格式支持：png、jpg、bmp；
-2. 已知Audio Message格式支持：MP3（amr不支持）。
+2. 已知Audio Message格式支持：MP3、amr不支持；
 
 
