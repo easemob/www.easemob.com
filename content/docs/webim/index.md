@@ -125,6 +125,6 @@ easemob webim sdk已支持如下功能：
 备注：
 
 1. 已知Picture Message格式支持：png、jpg、bmp；
-2. 已知Audio Message格式支持：MP3、amr不支持；
+2. 已知Audio Message格式支持：amr；
 
 
