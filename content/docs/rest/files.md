@@ -71,9 +71,9 @@ curl -O -H "share-secret: DRGM8OZrEeO1vafuJSo2IjHBeKlIhDp0GCnFu54xOF3M6KLr" --he
 
 ### 下载缩略图 {#thumbinal}  
 
-环信支持在服务器短自动的创建图片的缩略图, 可以先下载缩略图, 当用户有需求的时候, 再下载大图
+环信支持在服务器端自动的创建图片的缩略图, 可以先下载缩略图, 当用户有需求的时候, 再下载大图
 
-这里和下载大图唯一不同的就是heaer中多了一个"thumbnail: true", 当服务器看到过来的请求的header中包括这个的时候, 就会返回缩略图, 否则返回原始大图
+这里和下载大图唯一不同的就是header中多了一个"thumbnail: true", 当服务器看到过来的请求的header中包括这个的时候, 就会返回缩略图, 否则返回原始大图
 
 <pre class="hll"><code class="language-java">
 curl -O -H "thumbnail: true" -H "share-secret: DRGM8OZrEeO1vafuJSo2IjHBeKlIhDp0GCnFu54xOF3M6KLr" -H "Authorization: Bearer YWMtz1hFWOZpEeOPpcmw1FB0RwAAAUZnAv0D7y9-i4c9_c4rcx1qJDduwylRe7Y" -H "Accept: application/octet-stream" http://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/0c0f5f3a-e66b-11e3-8863-f1c202c2b3ae

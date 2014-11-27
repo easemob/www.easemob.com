@@ -168,7 +168,7 @@ curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4V
 
 ## 注册IM用户[批量] {#im-1}
 
-> 建议批量不要过多, 在20-60之间
+> 建议批量发送的数量不要过多, 建议在20-60之间
 
 - Path : /{org_name}/{app_name}/users
 - HTTP Method : POST
@@ -224,8 +224,6 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
-1) username as user_primary_key
-
 #### curl示例：
 
 <pre class="hll"><code class="language-java">	
@@ -256,37 +254,6 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP
 }
 </code></pre>
 
-2) uuid as user_primary_key
-
-#### curl示例：
-
-<pre class="hll"><code class="language-java">
-curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP2xNh8GhUCdKViBFgtox3M" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/628a88ba-dfce-11e3-8cac-51d3cb69b303"
-</code></pre>
-
-#### Response 
-
-<pre class="hll"><code class="language-java">
-{
-  "action" : "get",
-  "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
-  "params" : { },
-  "path" : "/users",
-  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users/628a88ba-dfce-11e3-8cac-51d3cb69b303",
-  "entities" : [ {
-    "uuid" : "628a88ba-dfce-11e3-8cac-51d3cb69b303",
-    "type" : "user",
-    "created" : 1400556326075,
-    "modified" : 1400556326075,
-    "username" : "ywuxvxuir6",
-    "activated" : true
-  } ],
-  "timestamp" : 1409574753086,
-  "duration" : 156,
-  "organization" : "easemob-demo",
-  "applicationName" : "chatdemoui"
-}
-</code></pre>
 
 ## 获取IM用户[批量查询]  {#im-3}
 
@@ -648,50 +615,6 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
   "applicationName" : "chatdemoui",
   "cursor" : "LTU2ODc0MzQzOllvcUl1dF9PRWVPTXJGSFR5Mm16QXc",
   "count" : 20
-}
-</code></pre>
-
-## 获取IM用户[条件查询]  {#im-4}
-
-> 条件查询通过ql类实现 类似RDB的sql语句。比如说查询username为ywuxvxuir6的用户，查询语句就是：ql=select * where username='ywuxvxuir6',查询语句需要做urlencode成：select%20%2A%20where%20username%3D%27ywuxvxuir6%27
-
-- Path : /{org_name}/{app_name}/users
-- HTTP Method : GET
-- URL Params ：ql=select * where username='ywuxvxuir6'
-- Request Headers : {"Authorization":"Bearer ${token}"}
-- Request Body ： 无
-- Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-
-#### curl示例：
-		
-<pre class="hll"><code class="language-java">
-curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2xNh8GhUCdKViBFgtox3M" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users?ql=select%20%2A%20where%20username%3D%27ywuxvxuir6%27"
-</code></pre>
-
-#### Response
-
-<pre class="hll"><code class="language-java">
-{
-  "action" : "get",
-  "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
-  "params" : {
-    "ql" : [ "select * where username='ywuxvxuir6'" ]
-  },
-  "path" : "/users",
-  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users?ql=select+*+where+username%3D%27ywuxvxuir6%27",
-  "entities" : [ {
-    "uuid" : "628a88ba-dfce-11e3-8cac-51d3cb69b303",
-    "type" : "user",
-    "created" : 1400556326075,
-    "modified" : 1400556326075,
-    "username" : "ywuxvxuir6",
-    "activated" : true
-  } ],
-  "timestamp" : 1409575290057,
-  "duration" : 1121,
-  "organization" : "easemob-demo",
-  "applicationName" : "chatdemoui",
-  "count" : 1
 }
 </code></pre>
 
