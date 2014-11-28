@@ -121,9 +121,11 @@ EMChatManager.getInstance().login(userName,password,
 ### 退出聊天登陆  {#logout}
 
 <pre class="hll"><code class="language-java">
-EMChatManager.getInstance().logout();
+EMChatManager.getInstance().logout();//此方法为同步方法
 或者
-EMChatManager.getInstance().logout(new EMCallBack(){})
+EMChatManager.getInstance().logout(new EMCallBack(){})//此方法为异步方法<br/>
+//后文中，如遇到new EMCallBack()即为new EMCallBack(){}
+
 	
 </code></pre>
 
@@ -148,7 +150,7 @@ message.setReceipt(username);
 //把消息加入到此会话对象中
 conversation.addMessage(message);
 //发送消息
-EMChatManager.getInstance().sendMessage(message, new EMCallBack());
+EMChatManager.getInstance().sendMessage(message, new EMCallBack(){});
 </code></pre>
 
 #### 发送语音消息
@@ -162,7 +164,7 @@ VoiceMessageBody body = new VoiceMessageBody(new File(filePath), len);
 message.addBody(body);
 message.setReceipt(username);
 conversation.addMessage(message);
-EMChatManager.getInstance().sendMessage(message, new EMCallBack());
+EMChatManager.getInstance().sendMessage(message, new EMCallBack(){});
 </code></pre>
 
 #### 发送图片消息
@@ -179,7 +181,7 @@ ImageMessageBody body = new ImageMessageBody(new File(filePath));
 message.addBody(body);
 message.setReceipt(username);
 conversation.addMessage(message);
-EMChatManager.getInstance().sendMessage(message, new EMCallBack());
+EMChatManager.getInstance().sendMessage(message, new EMCallBack(){});
 </code></pre>
 
 #### 发送地理位置消息
@@ -193,7 +195,7 @@ LocationMessageBody locBody = new LocationMessageBody(locationAddress, latitude,
 message.addBody(locBody);
 message.setReceipt(username);
 conversation.addMessage(message);
-EMChatManager.getInstance().sendMessage(message, new EMCallBack());
+EMChatManager.getInstance().sendMessage(message, new EMCallBack(){});
 </code></pre>
 
 ### 发送文件消息
@@ -211,7 +213,7 @@ message.setReceipt(username);
 NormalFileMessageBody body = new NormalFileMessageBody(new File(filePath));
 message.addBody(body);
 conversation.addMessage(message);
-EMChatManager.getInstance().sendMessage(message, new EMCallBack());
+EMChatManager.getInstance().sendMessage(message, new EMCallBack(){});
 </code></pre>
 
 ## 接收消息 {#receivermessage}

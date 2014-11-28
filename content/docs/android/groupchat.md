@@ -154,7 +154,7 @@ EMChatManager.getInstance().getChatOptions().setReceiveNotNoifyGroup({List&lt;St
 	message.setReceipt(username);
 	conversation.addMessage(message);
 	//发送消息
-	EMChatManager.getInstance().sendMessage(message, new EMCallBack());
+	EMChatManager.getInstance().sendMessage(message, new EMCallBack(){});
 
 	//在接收消息的BroadcastReceive中，通过自己设置的key即可取到这些value
 	private class NewMessageBroadcastReceiver extends BroadcastReceiver {
