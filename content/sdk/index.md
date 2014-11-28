@@ -26,9 +26,9 @@ var _hmt = _hmt || [];
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.2.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.3.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.2　</span>
+						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.3　</span>
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
@@ -317,6 +317,28 @@ var _hmt = _hmt || [];
 
 			    <ul class="history_right">
 				    <h2 class="first">Andriod SDK 更新日志</h2>
+				    	<li>
+	                    <h3><em></em><span>版本：V2.1.3 2014-11-28</span></h3>
+						<dl>
+						  <dt>
+						      <span>新功能/改进：<br/>
+						        新加API：<br/>&nbsp;EMChatManager.deleteAllConversation()<br/>
+						        &nbsp;EMChatManager.resetAllUnreadMsgCount()<br/>
+						        &nbsp;EMGroupManager.asyncGetGroupsFromServer<br/>
+						        &nbsp;EMGroupManager.asyncGetAllPublicGroupsFromServer
+<br/>
+						        &nbsp;增加异步logout(EMCallBack callback) 调用<br/>
+						        demo app 更新<br/>
+                                &nbsp;在其他页面，增加消息通知显示<br/>
+                                &nbsp;封装一些和环信初始化相关的类(HXSDKHelper)<br/>
+                                &nbsp;减小图像压缩比率使接收图像更清晰<br/>
+						         Bug Fix：<br/>
+						        &nbsp;1、在某些情况下，直接调用logout 导致异常<br/>
+						        &nbsp;2、多次login，回调不返回<br/>
+						      </span>
+						  </dt>
+						</dl>
+	                 </li> 
 				      <li>
 	                    <h3><em></em><span>版本：V2.1.2 2014-11-07</span></h3>
 						<dl>
