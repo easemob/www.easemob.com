@@ -136,6 +136,32 @@ EMChatManager.getInstance().getChatOptions().setReceiveNotNoifyGroup({List&lt;St
 </code></pre>
 
 
+## 将用户加到群组的黑名单 ## {#group-block}
+
+<pre class="hll"><code class="language-java">
+//将用户加到群组的黑名单，被加入黑名单的用户无法加入群，无法收发此群的消息 （只有群主才能设置群的黑名单）
+EMGroupManager.getInstance().blockUser({groupid}, {username})
+
+</code></pre>
+
+## 将用户从群组的黑名单移除 ## {#group-unblock}
+
+<pre class="hll"><code class="language-java">
+//将用户从群组的黑名单移除 （只有群主才能调用此函数）
+EMGroupManager.getInstance().unblockUser({groupid}, {username})
+
+</code></pre>
+
+## 获取群组的黑名单用户列表 ## {#group-blockedusers}
+
+<pre class="hll"><code class="language-java">
+//获取群组的黑名单用户列表 （只有群主才能调用此函数）
+EMGroupManager.getInstance().getBlockedUsers({groupid})
+
+</code></pre>
+
+
+
 ## 高级话题 ##
 
 ## 自定义扩展消息 ## {#group-custommessage}
