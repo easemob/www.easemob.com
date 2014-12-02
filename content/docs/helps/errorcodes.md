@@ -21,6 +21,7 @@ sidebar: helpssidebar
 | 401       | "registration is not open, please contact the app admin" |  app的用户注册模式为授权注册,但是注册用户时请求头没带token |
 | 401       | "Unable to authenticate due to corrupt access token" | 发送请求时使用的token错误, 注意:不是token过期 |
 | 401       | "Unable to authenticate" | 无效token, 符合token的格式,但是该token不是接受请求的系统生成的,系统无法识别该token  |
+| 401       | "Unable to authenticate due to expired access token" | token过期  |
 | 404       | "Service resource not found" | URL指定的资源不存在 |
 | 500       | "Entity 'user' with property named 'username' is not full text indexed.  You cannot use the 'contains' operand on this field" | username不支持全文索引,不可以对该字段进行contains操作 |
  | 500      | "Service operation not supported" | 请求方式不被发送请求的URL支持 | 
