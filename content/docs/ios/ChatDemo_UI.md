@@ -9,9 +9,15 @@ secondnavios: true
 ## 特别说明
 **username：环信IM用户唯一标识符**
 
-**SDK的username不能是中文**
+**SDK的username不能是中文,且不区分大小写（[用户名规则](http://www.easemob.com/docs/rest/userapi/#eid)）**
 
 **只要知道对方username，不需要互为好友即可聊天**
+
+**SDK支持arm64位**
+
+**SDK需要使用xcode6以上编译**
+
+**因为iOS静态库问题，SDK较大，但不影响打包ipa后大小，打包ipa后仅增加2MB左右**
 
 ## 下载环信Demo及SDK
 
@@ -21,8 +27,6 @@ secondnavios: true
 
 ![alt text](/example_layout_IOS.png "Title")
 
-**SDK压缩包下载后, 有20M左右, 解压后, SDK的静态库 libEaseMobClientSDKLite.a 会有42M左右, 静态库这么大的原因是因为静态库包含了三个Architectures:i386、ARMV7、ARMV7S。**
-**应用集成SDK后build的iPA安装包，会在原有的基础上变大1.5-2M，对安装包的大小不会有很大的影响的**
 
 ## 将EaseMobSDK拖入到项目中 
 
@@ -36,11 +40,7 @@ secondnavios: true
 
 ![alt text](/link.png "link")
 
-向Other Linker Flags 中添加 -ObjC。(如果已有，则不需要再添加)
-
-## 设置Architectures 
-
-![alt text](/Active.png "Active")
+向Other Linker Flags 中添加 -ObjC(如果已有，则不需要再添加)`注意O,C大写`
 
 # SDK的使用，以demo源码为示例
 
