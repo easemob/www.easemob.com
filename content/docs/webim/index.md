@@ -103,7 +103,7 @@ easemob webim sdk已支持如下功能：
 
 6.提供demo，方便大家参考，已实现聊天添加/删除好友/群组功能。
 
-7.目前各浏览器均已支持直接播放mp3，而amr格式则需要安装插件才能播放。另外，有的浏览器能够提供base64的下载，有的则不能。因此demo中音频这块的处理比较复杂：FF、Chrome收到后音频提供下载功能，IE浏览器只做提示。
+7.目前各浏览器均已支持直接播放mp3，amr格式。
 
 ## 浏览器支持列表
 
@@ -113,16 +113,18 @@ easemob webim sdk已支持如下功能：
 <tr><td>IE9</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
 <tr><td>IE10</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 <tr><td>IE11</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-<tr><td>FireFox</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-<tr><td>Chrome</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>FireFox10+</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Chrome15+</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 <tr><td>Safari5X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 <tr><td>Safari6X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Safari7X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Safari8X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 </table>
 
 
 备注：
 
 1. 已知Picture Message格式支持：png、jpg、bmp；
-2. 已知Audio Message格式支持：MP3（amr不支持）。
+2. 已知Audio Message格式支持：mp3、amr；
 
 
