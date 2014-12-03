@@ -29,6 +29,7 @@ secondnavwebim: true
 	</div>
 
 编写注册按钮调用js函数。
+
 <pre class="hll"><code class="language-javascript">
   $("#regist").on('click', function() {
 	var options = {
@@ -57,6 +58,7 @@ secondnavwebim: true
 	</div>
 
 编写登录按钮调用js函数。
+
 <pre class="hll"><code class="language-javascript">
 $('login').on('click', function() {
 	//预留空现实
@@ -65,18 +67,21 @@ $('login').on('click', function() {
 
 
 首先获取用户名/密码input框中的输入值。
+
 <pre class="hll"><code class="language-javascript">
 var username = $("#usename").val();
 var pass = $("#password").val();
 </code></pre>
 
 创建一个新的连接。
+
 <pre class="hll"><code class="language-javascript">
 var conn = null;
 conn = new Easemob.im.Connection();
 </code></pre>
 
 初始化连接。
+
 <pre class="hll"><code class="language-javascript">
  conn.init({
      //预留空现实
@@ -84,6 +89,7 @@ conn = new Easemob.im.Connection();
 </code></pre>
 
 在init方法中添加onOpened回调函数，处理登录信息。
+
 <pre class="hll"><code class="language-javascript">
 //当连接成功时的回调方法
 onOpened : function() {
@@ -93,6 +99,7 @@ onOpened : function() {
 </code></pre>
 
 登录完整JS调用代码如下。
+
 <pre class="hll"><code class="language-javascipt">
 	$(function() {
 		var conn = null;
@@ -126,6 +133,7 @@ onOpened : function() {
 
 
 编写发送文本消息js函数。
+
 <pre class="hll"><code class="language-javascript">
 $("#send").on('click',function(){
 	sendText();
@@ -144,6 +152,7 @@ var sendText = function() {
 </code></pre>
 
 登录成功后发送文本消息完整JS调用代码如下。
+
 <pre class="hll"><code class="language-javascript">
 	$(function(){
 		var conn = null;
@@ -186,6 +195,7 @@ var sendText = function() {
 ## 获取好友列表 {#getRoster}
 在onOpened : function(){};中添加getRoster回调方法
 添加获取当前登录人好友列表。
+
 <pre class="hll"><code class="language-javascript">
 conn.init({
 	onOpened : function(){
@@ -203,10 +213,12 @@ conn.init({
 	}
 });
 </code></pre>
+
 将数组中的好友名称放入对应的html相应元素显示即可。
 
 ## 处理文本消息 {#onTextMessage}
 登录成功后收到文本消息的处理方法需要在con.init方法中调用onTextMessage回调函数。
+
 <pre class="hll"><code class="language-javascript">
 conn.init({
   //收到文本消息时的回调方法
@@ -228,11 +240,14 @@ conn.init({
 ##添加好友 {#subscribe}
 * 邀请发起方   
 添加发起方，获取要添加好友名称，例如addfridentId为要添加的好友的id。
+
 <pre class="hll"><code class="language-javascript">
 //addfridentId为页面上要添加好友的输入框html元素id值。
 var user = $('#addfridentId').val();
 </code></pre>
+
 添加好友按钮点击时调用startAddFriend函数。
+
 <pre class="hll"><code class="language-javascript">
 var startAddFriend = function() {
   var user = $('#addfridentId').val();
@@ -246,6 +261,7 @@ var startAddFriend = function() {
 
 * 邀请接受方   
 被添加方，在con.init方法中调用handlePresence回调方法
+
 <pre class="hll"><code class="language-javascript">
 conn.init({
 	//收到联系人订阅请求的回调方法
@@ -298,6 +314,7 @@ var delFriend = function() {
 
 ## 关闭连接 {#onClosed}
 当用户退出登录时需要调用con.onClosed回调函数。
+
 <pre class="hll"><code class="language-javascript">
 conn.init({
 	//当连接关闭时的回调方法
@@ -326,6 +343,7 @@ conn.init({
 
 6.WEB－IM目前支持的浏览器类型及版本。  
 
+<pre class="hll"><code class="language-javascript">
 <table>
 <tr><td>Browser\Func</td><td>Text Message</td><td>Emotion Message</td><td>Picture Message</td><td>Audio Message</td><td>Add Friend</td><td>Delete Friend</td></tr>
 <tr><td>IE8</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
@@ -339,6 +357,7 @@ conn.init({
 <tr><td>Safari7X</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 <tr><td>Safari8X</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 </table>
+<code></pre>
 
 5.目前支持的Picture Message格式有那些。   
 已知Picture Message格式支持：png、jpg、bmp。
