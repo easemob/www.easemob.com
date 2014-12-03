@@ -105,7 +105,7 @@ easemob webim sdk已支持如下功能：
 
 7.目前各浏览器均已支持直接播放mp3，amr格式。
 
-## 浏览器支持列表
+## 浏览器支持列表  {#browsersupport}
 
 <pre class="hll"><code class="language-javascript">
 	<table>
@@ -121,7 +121,7 @@ easemob webim sdk已支持如下功能：
 	<tr><td>Safari7X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 	<tr><td>Safari8X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 	</table>
-<code></pre>
+</code></pre>
 
 备注：
 

@@ -393,7 +393,7 @@ function sendAudio () {
 };
 </code></pre>
 
-### 接收消息
+### 接收消息 {#handlemessage}
 
 #### 注册接收消息 {#onmessage}
 

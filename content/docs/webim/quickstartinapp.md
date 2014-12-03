@@ -293,11 +293,12 @@ var handlePresence = function(e) {
 
 
 ## 删除好友 {#removeRoster}
+
 删除好友，首先获取好友名称,调用removeRoster方法。例如删除按钮触发时调用delFriend函数。
 
 <pre class="hll"><code class="language-javascript">
 var delFriend = function() {
-
+	var user = $('#delfridentId').val();//获取要删除好友的名称
 	conn.removeRoster({
 		to : user,
 		success : function() {
@@ -310,9 +311,10 @@ var delFriend = function() {
 		}
     });
 }
-<code></pre>
+</code></pre>
 
 ## 关闭连接 {#onClosed}
+
 当用户退出登录时需要调用con.onClosed回调函数。
 
 <pre class="hll"><code class="language-javascript">
@@ -323,9 +325,10 @@ conn.init({
 		conn.onClosed();
 	}
 });
-<code></pre>
+</code></pre>
 
 ## 常见问题列表 {#faq}
+
 1.WEB-IM-SDK调用无效   
 请检查easemob.im-1.0.3.js等相关文件引入的路径是否正确。
 
@@ -358,10 +361,10 @@ conn.init({
 <tr><td>Safari8X</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 </table>
 
-5.目前支持的Picture Message格式有那些。   
+7.目前支持的Picture Message格式有那些。   
 已知Picture Message格式支持：png、jpg、bmp。
 
-6.目前支持的Audio Message格式有那些。   
+8.目前支持的Audio Message格式有那些。   
 已知Audio Message格式支持：MP3、amr。 
 
 
