@@ -101,25 +101,25 @@ onOpened : function() {
 登录完整JS调用代码如下。
 
 <pre class="hll"><code class="language-javascipt">
-	$(function() {
-		var conn = null;
-		conn = new Easemob.im.Connection();
-		$('body').on('click', '#login', function() {
-			var username = $("#usename").val();
-			var pass = $("#password").val();
-			conn.open({
-				user : username,
-				pwd : pass,
-				appKey : 'easemob-demo#chatdemoui'
-			});
-		})
-		conn.init({
-			onOpened : function() {
-				alert("成功登录");
-				conn.setPresence();
-			}
-		})；
-	});
+$(function() {
+	var conn = null;
+	conn = new Easemob.im.Connection();
+	$('body').on('click', '#login', function() {
+		var username = $("#usename").val();
+		var pass = $("#password").val();
+		conn.open({
+			user : username,
+			pwd : pass,
+			appKey : 'easemob-demo#chatdemoui'
+		});
+	})
+	conn.init({
+		onOpened : function() {
+			alert("成功登录");
+			conn.setPresence();
+		}
+	})；
+});
 </code></pre>
 
 ## 发送文本消息 {#sendTextMessage}
@@ -297,7 +297,7 @@ var handlePresence = function(e) {
 
 <pre class="hll"><code class="language-javascript">
 var delFriend = function() {
-	var user = $('#delfridentId').val();//获取要删除好友的名称
+
 	conn.removeRoster({
 		to : user,
 		success : function() {
@@ -343,7 +343,7 @@ conn.init({
 
 6.WEB－IM目前支持的浏览器类型及版本。  
 
-<pre class="hll"><code class="language-javascript">
+@@ -113,16 +113,18 @@ easemob webim sdk已支持如下功能：
 <table>
 <tr><td>Browser\Func</td><td>Text Message</td><td>Emotion Message</td><td>Picture Message</td><td>Audio Message</td><td>Add Friend</td><td>Delete Friend</td></tr>
 <tr><td>IE8</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
@@ -357,7 +357,6 @@ conn.init({
 <tr><td>Safari7X</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 <tr><td>Safari8X</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
 </table>
-<code></pre>
 
 5.目前支持的Picture Message格式有那些。   
 已知Picture Message格式支持：png、jpg、bmp。
