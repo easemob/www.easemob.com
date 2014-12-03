@@ -346,7 +346,6 @@ conn.init({
 
 6.WEB－IM目前支持的浏览器类型及版本。  
 
-@@ -113,16 +113,18 @@ easemob webim sdk已支持如下功能：
 <table>
 <tr><td>Browser\Func</td><td>Text Message</td><td>Emotion Message</td><td>Picture Message</td><td>Audio Message</td><td>Add Friend</td><td>Delete Friend</td></tr>
 <tr><td>IE8</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>

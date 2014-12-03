@@ -107,21 +107,19 @@ easemob webim sdk已支持如下功能：
 
 ## 浏览器支持列表  {#browsersupport}
 
-<pre class="hll"><code class="language-javascript">
-	<table>
-	<tr><td>Browser\Func</td><td>Text Message</td><td>Emotion Message</td><td>Picture Message</td><td>Audio Message</td></tr>
-	<tr><td>IE8</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
-	<tr><td>IE9</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
-	<tr><td>IE10</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-	<tr><td>IE11</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-	<tr><td>FireFox10+</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-	<tr><td>Chrome15+</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-	<tr><td>Safari5X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-	<tr><td>Safari6X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-	<tr><td>Safari7X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-	<tr><td>Safari8X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
-	</table>
-</code></pre>
+<table>
+<tr><td>Browser\Func</td><td>Text Message</td><td>Emotion Message</td><td>Picture Message</td><td>Audio Message</td></tr>
+<tr><td>IE8</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+<tr><td>IE9</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+<tr><td>IE10</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>IE11</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>FireFox10+</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Chrome15+</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Safari5X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Safari6X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Safari7X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Safari8X</td><td>●</td><td>●</td><td>●</td><td>●</td></tr>
+</table>
 
 备注：
 

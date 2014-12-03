@@ -621,7 +621,9 @@ var sendAudio = function() {
     alert("不支持此音频类型" + filetype);
 };
 </code></pre>
+
 ### 接收及处理消息 {#messageType}
+
 群聊接收及处理消息同单聊，消息体与单聊消息根据message的type进行区分，单聊为：“chat”，群聊为：“groupchat”。根据消息的类型进行不同处理即可。
 
 ## 退出 {#quit}
