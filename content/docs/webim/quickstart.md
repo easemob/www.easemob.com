@@ -8,12 +8,12 @@ secondnavwebim: true
 
 ## 初始化
 
-### 创建连接{#conn_new}
+### 创建连接 {#conn_new}
 <pre class="hll"><code class="language-javascript">
 var conn = new Easemob.im.Connection();
 </code></pre>
 
-### 初始化连接{#conn_init}
+### 初始化连接 {#conn_init}
 <pre class="hll"><code class="language-javascript">
 conn.init({
     https : true,//非必填，url值未设置时有效，优先采用url配置的参数。默认采用http连接，地址为‘http://im-api.easemob.com/http-bind/’，启用https时传递此值，地址为：‘https://im-api.easemob.com/http-bind/’
@@ -125,7 +125,7 @@ conn.init({
 });
 </code></pre>
 
-### 打开连接{#conn_open}
+### 打开连接 {#conn_open}
 
 支持username/password和username/token登录两种方式，sdk中会根据传入的参数进行自动选择是否登录usergrid，获取登录成功的token后再进行登录聊天，如果使用token的打开连接将跳过登录usergird，直接登录IM服务器。
 
@@ -146,9 +146,9 @@ conn.open({
 });
 </code></pre>
 
-## 单聊{#single_chat}
+## 单聊 {#single_chat}
 
-### 查询好友列表{#getRoster}
+### 查询好友列表 {#getRoster}
 
 查询好友列表时，要注意susciption（both，to,from）为不同值得处理,此处默认both和to的为好友，开发者自定义处理，保持跟APP端处理一致即可。
 
@@ -187,7 +187,7 @@ conn.getRoster({
 });
 </code></pre>
 
-### 添加好友{#subscribe}
+### 添加好友 {#subscribe}
 通过sdk的subscribe和unsubcribe进行添加或者删除好友操作，登录用户通过注册onPresence，监听对方的添加或者删除好友请求，并做相应的处理。
 <pre class="hll"><code class="language-javascript">   
 //easemobwebim-sdk中收到联系人订阅请求的处理方法，具体的type值所对应的值请参考xmpp协议规范
@@ -212,7 +212,7 @@ var handlePresence = function (e){
 };
 </code></pre>
 
-#### 申请添加对方为好友{#addFriend}
+#### 申请添加对方为好友 {#addFriend}
 <pre class="hll"><code class="language-javascript">   
 //主动申请添加对方为好友
 var startAddFriend = function startAddFriend(){
@@ -233,7 +233,7 @@ var getLoacalTimeString = function getLoacalTimeString() {
 	}
 </code></pre>
 
-#### 对方收到请求，同意或者拒绝{#agreed_reject}
+#### 对方收到请求，同意或者拒绝 {#agreed_reject}
 
 <pre class="hll"><code class="language-javascript">  
 //对方收到请求加为好友，接受请求
@@ -269,7 +269,7 @@ var rejectAddFriend = function(user) {
 
 对于好友的分组，添加好友时在addroster可以指定group属性（默认为：default组），添加好友成功后，好友列表渲染时，根据好友的group属性进行分组渲染，实现类似其他聊天工具的自定义好友分组管理的功能。
 
-#### 删除好友{#delfriend}
+#### 删除好友 {#delfriend}
 
 取消订阅，同时将对方从自己的好友列表上删除掉。
 
@@ -287,7 +287,7 @@ var delFriend = function(user) {
 };
 </code></pre>
 
-### 发送文本（表情）聊天消息{#sendTextMessage}
+### 发送文本（表情）聊天消息 {#sendTextMessage}
 
 <pre class="hll"><code class="language-javascript">
 //发送文本消息
@@ -303,7 +303,7 @@ conn.sendTextMessage({
 });
 </code></pre>
 
-### 发送图片消息{#sendPic}
+### 发送图片消息 {#sendPic}
 
 发送图片消息sdk自动分两步完成：<br>
 1）上传图片文件到服务器，并得到服务返回的图片信息等<br>
@@ -348,7 +348,7 @@ function sendPic() {
 };
 </code></pre>
 
-### 发送音频消息{#sendAudio}
+### 发送音频消息 {#sendAudio}
 
 sdk处理同发送图片消息，分两步：
 
@@ -407,7 +407,7 @@ conn.init({
 });
 </code></pre>
 
-#### 处理消息{#options}
+#### 处理消息 {#options}
 
 conn.init()中注册不同消息接收handler之后，可自行解析消息体，定位聊天好友，并追加到与其聊天窗口。具体参考webim.easemob.com效果，消息体格式参见前章节：初始化连接。<br>
 注：对于图片、语音消息需要先进行下载，然后进行显示或者播放处理。如下(下载图片，音频同)：
@@ -454,17 +454,17 @@ Easemob.im.Helper.download(options);
 
 </code></pre>
 
-#### 历史消息{#history_message}
+#### 历史消息 {#history_message}
 
 sdk暂不具有缓存历史消息功能，demo中聊天窗口只能显示，当前登录后会话实时在聊天信息，不能查看历史消息，可以对登录后的聊天信息进行清除操作。
 
-#### 新消息提示{#new_message}
+#### 新消息提示 {#new_message}
 
 sdk在收到新消息是会直接转发给登录用户，接收到消息后，demo中会在好友或者群组的后面显示红色消息数，具体样式开发者可自行处理。
 
-## 群聊{#group_chat}
+## 群聊 {#group_chat}
 
-### 查询群组成员{#queryOccupants}
+### 查询群组成员 {#queryOccupants}
 
 <pre class="hll"><code class="language-javascript">
 //根据roomId查询room成员列表
@@ -495,7 +495,7 @@ var queryOccupants = function queryOccupants(roomId) {
 };
 </code></pre>
 
-### 发送文本（表情）聊天消息{#group_sendTextMessage}
+### 发送文本（表情）聊天消息 {#group_sendTextMessage}
 
 <pre class="hll"><code class="language-javascript">
 //发送文本消息
@@ -513,7 +513,7 @@ conn.sendTextMessage({
 });
 </code></pre>
 
-### 发送图片消息{#group_sendPic}
+### 发送图片消息 {#group_sendPic}
 
 发送图片消息sdk自动分两步完成
 
@@ -573,7 +573,7 @@ var sendPic = function() {
 };
 </code></pre>
 
-### 发送音频消息{#group_sendAudio}
+### 发送音频消息 {#group_sendAudio}
 
 sdk处理同群发送图片消息，分两步
 
@@ -621,20 +621,20 @@ var sendAudio = function() {
     alert("不支持此音频类型" + filetype);
 };
 </code></pre>
-### 接收及处理消息{#messageType}
+### 接收及处理消息 {#messageType}
 群聊接收及处理消息同单聊，消息体与单聊消息根据message的type进行区分，单聊为：“chat”，群聊为：“groupchat”。根据消息的类型进行不同处理即可。
 
-## 退出{#quit}
+## 退出 {#quit}
 
-### 关闭连接{#conn_close}
+### 关闭连接 {#conn_close}
 //sdk关闭连接并处理连接状态为CLOSED
 <pre class="hll"><code class="language-javascript">
 conn.close();
 </code></pre>
 
-## 工具类说明{#sdk_tools}
+## 工具类说明 {#sdk_tools}
 
-### 表情工具类{#emotion}
+### 表情工具类 {#emotion}
 
 <pre class="hll"><code class="language-javascript">
 //返回表情JSON object，格式为：
@@ -646,7 +646,7 @@ conn.close();
 var emotion_json = Easemob.im.Helper.EmotionPicData;
 </code></pre>
 
-### Base64工具类{#base64}
+### Base64工具类 {#base64}
 
 <pre class="hll"><code class="language-javascript">
 var base64  = Easemob.im.Helper.Base64;
@@ -655,7 +655,7 @@ var base64str = base64.encode(srcstr);
 var orgstr = base64.decode(srcstr);
 </code></pre>
 
-### 文件上传工具类{#fileupload}
+### 文件上传工具类 {#fileupload}
 
 <pre class="hll"><code class="language-javascript">
 //是否能上传file
@@ -668,7 +668,7 @@ var hasheader = Easemob.im.Helper.hasSetRequestHeader;
 var hasmimetype = Easemob.im.Helper.hasOverrideMimeType;
 </code></pre>
 
-### 表情解析工具类{#handleMotion}
+### 表情解析工具类 {#handleMotion}
 
 <pre class="hll"><code class="language-javascript">
 //返回表情JSON，格式为：
@@ -687,7 +687,7 @@ var hasmimetype = Easemob.im.Helper.hasOverrideMimeType;
 var emotionMsg = Easemob.im.Helper.parseTextMessage(message);
 </code></pre>
 
-### 文件上传工具类{#fileupdate}
+### 文件上传工具类 {#fileupdate}
 
 <pre class="hll"><code class="language-javascript">
 //返回fileinfo对象，格式为：
@@ -727,7 +727,7 @@ var options={
 var fileSize = getFileSize(options.fileInputId);;
 </code></pre>
 
-### 发送Ajax请求{#ajaxresquest}
+### 发送Ajax请求 {#ajaxresquest}
 
 <pre class="hll"><code class="language-javascript">
 var options = {
@@ -742,7 +742,7 @@ var options = {
 Easemob.im.Helper.xhr(options);
 </code></pre>
 
-### 登录{#sdk_login}
+### 登录 {#sdk_login}
 
 <pre class="hll"><code class="language-javascript">
 var options = {
@@ -755,7 +755,7 @@ var options = {
 Easemob.im.Helper.login2UserGrid(options);
 </code></pre>
 
-### 注册{#sdk_regist}
+### 注册 {#sdk_regist}
 
 <pre class="hll"><code class="language-javascript">
 vvar options = {
@@ -772,7 +772,7 @@ vvar options = {
 Easemob.im.Helper.registerUser(options);
 </code></pre>
 
-### 内置空函数{#null_function}
+### 内置空函数 {#null_function}
 
 当所有需要回调的地方接受到函数时，默认采用此函数
 

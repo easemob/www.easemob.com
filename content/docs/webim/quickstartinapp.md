@@ -4,7 +4,7 @@ sidebar: webimsidebar
 secondnavwebim: true
 ---
 
-##集成方式{#quickstartinapp}
+##集成方式 {#quickstartinapp}
 1.下载WEB-IM-SDK.zip加压后需将easymob-webim-SDK1.0目录下相关js文件拷贝到系统相应的目录下。
 
 2.新建html文件并引入相关js脚本。
@@ -205,7 +205,7 @@ conn.init({
 </code></pre>
 将数组中的好友名称放入对应的html相应元素显示即可。
 
-## 收到文本消息处理方法 {#onTextMessage}
+## 处理文本消息 {#onTextMessage}
 登录成功后收到文本消息的处理方法需要在con.init方法中调用onTextMessage回调函数。
 <pre class="hll"><code class="language-javascript">
 conn.init({
@@ -225,7 +225,7 @@ conn.init({
 });
 </code></pre>
 
-##添加好友{#subscribe}
+##添加好友 {#subscribe}
 * 邀请发起方   
 添加发起方，获取要添加好友名称，例如addfridentId为要添加的好友的id。
 <pre class="hll"><code class="language-javascript">
@@ -276,7 +276,7 @@ var handlePresence = function(e) {
 </code></pre>
 
 
-## 删除好友{#removeRoster}
+## 删除好友 {#removeRoster}
 删除好友，首先获取好友名称,调用removeRoster方法。例如删除按钮触发时调用delFriend函数。
 
 <pre class="hll"><code class="language-javascript">
