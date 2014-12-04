@@ -189,6 +189,7 @@ conn.getRoster({
 
 ### 添加好友 {#subscribe}
 通过sdk的subscribe和unsubcribe进行添加或者删除好友操作，登录用户通过注册onPresence，监听对方的添加或者删除好友请求，并做相应的处理。
+
 <pre class="hll"><code class="language-javascript">   
 //easemobwebim-sdk中收到联系人订阅请求的处理方法，具体的type值所对应的值请参考xmpp协议规范
 var handlePresence = function (e){
@@ -210,10 +211,13 @@ var handlePresence = function (e){
 		.......
 	}
 };
+
 </code></pre>
 
 #### 申请添加对方为好友 {#addFriend}
-<pre class="hll"><code class="language-javascript">   
+
+<pre class="hll"><code class="language-javascript">  
+ 
 //主动申请添加对方为好友
 var startAddFriend = function startAddFriend(){
     //对方用户账号
@@ -236,6 +240,7 @@ var getLoacalTimeString = function getLoacalTimeString() {
 #### 对方收到请求，同意或者拒绝 {#agreed_reject}
 
 <pre class="hll"><code class="language-javascript">  
+
 //对方收到请求加为好友，接受请求
 $('#confirm-block-footer-confirmButton').click(function() {
 	//同意好友请求
@@ -265,6 +270,7 @@ var rejectAddFriend = function(user) {
 		message : getLoacalTimeString()
 	});
 };
+
 </code></pre>
 
 对于好友的分组，添加好友时在addroster可以指定group属性（默认为：default组），添加好友成功后，好友列表渲染时，根据好友的group属性进行分组渲染，实现类似其他聊天工具的自定义好友分组管理的功能。
@@ -411,7 +417,9 @@ conn.init({
 
 conn.init()中注册不同消息接收handler之后，可自行解析消息体，定位聊天好友，并追加到与其聊天窗口。具体参考webim.easemob.com效果，消息体格式参见前章节：初始化连接。<br>
 注：对于图片、语音消息需要先进行下载，然后进行显示或者播放处理。如下(下载图片，音频同)：
+
 <pre class="hll"><code class="language-javascript">
+
 var handlePictureMessage = function(message) {
 var filename = message.filename;//文件名称，带文件扩展名
 var from = message.from;//文件的发送者
@@ -467,6 +475,7 @@ sdk在收到新消息是会直接转发给登录用户，接收到消息后，de
 ### 查询群组成员 {#queryOccupants}
 
 <pre class="hll"><code class="language-javascript">
+
 //根据roomId查询room成员列表
 var queryOccupants = function queryOccupants(roomId) {
     var occupants = [];//存放成员容器
@@ -493,6 +502,7 @@ var queryOccupants = function queryOccupants(roomId) {
         }
     });
 };
+
 </code></pre>
 
 ### 发送文本（表情）聊天消息 {#group_sendTextMessage}
@@ -630,8 +640,11 @@ var sendAudio = function() {
 
 ### 关闭连接 {#conn_close}
 //sdk关闭连接并处理连接状态为CLOSED
+
 <pre class="hll"><code class="language-javascript">
+
 conn.close();
+
 </code></pre>
 
 ## 工具类说明 {#sdk_tools}
