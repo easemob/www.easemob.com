@@ -21,7 +21,7 @@ secondnavandroid: true
 
 1. 到[环信官网](http://www.easemob.com/sdk/)下载
 
-2. 解压缩easemob-sdk-2.0.0.zip后会得到以下目录结构：
+2. 解压缩easemob-sdk-2.1.3.zip后会得到以下目录结构：
  
  ![alt text](/demo_dirs1.jpg "Title")
 
@@ -207,14 +207,12 @@ private class NewMessageBroadcastReceiver extends BroadcastReceiver {
 #### 退出登陆：见MainActivity.java
 
 <pre class="hll"><code class="language-java">
-@Override
-protected void onPause() {
-    super.onPause();
-    
-    //登出聊天服务器
-    EMChatManager.getInstance().logout();
-}
-</code></pre>
+EMChatManager.getInstance().logout();//此方法为同步方法
+或者
+EMChatManager.getInstance().logout(new EMCallBack(){})//此方法为异步方法<br/>
+//后文中，如遇到new EMCallBack()即为new EMCallBack(){}
 
+	
+</code></pre>
 
 
