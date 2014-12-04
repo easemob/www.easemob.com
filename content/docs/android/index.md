@@ -134,16 +134,14 @@ public class DemoApplication extends Application {
 
 #### 注册
 
-见RegisterActivity，注意用户名不能有大写字母
+见RegisterActivity，注意用户名会自动转为小写字母
 	
 <pre class="hll"><code class="language-java">
-final String appkey = EMChatConfig.getInstance().APPKEY;
 new Thread(new Runnable() {
     public void run() {
       try {
-          //调用sdk注册方法
-          EMChatManager.getInstance().createAccountOnServer(appkey + "_" + username, pwd);
-        	
+         // 调用sdk注册方法
+         EMChatManager.getInstance().createAccountOnServer(username, pwd);
       } catch (final Exception e) {
       }
    }
@@ -286,41 +284,38 @@ private class MyContactListener implements EMContactListener{
 #### 监听连接状态和账号多处登录被迫下线：见MainActivity.java ####
  
 <pre class="hll"><code class="language-java">
-private class MyConnectionListener implements ConnectionListener{
-    @Override
-    public void onConnected() {
+    private class MyConnectionListener implements EMConnectionListener {
+        @Override
+		public void onConnected() {
+		}
+		@Override
+		public void onDisconnected(final int error) {
+			runOnUiThread(new Runnable() {
+
+				@Override
+				public void run() {
+					if(error == EMError.USER_REMOVED){
+						// 显示帐号已经被移除
+					}else if (error == EMError.CONNECTION_CONFLICT) {
+						// 显示帐号在其他设备登陆
+					} else {
+		                 //"连接不到聊天服务器"
+					}
+				}
+			});
+		}
     }
-    @Override
-    public void onDisConnected(String errorString) {
-      if(errorString!=null&&errorString.contains("conflict"))
-      {
-        //收到帐号在其他手机登录
-        // TODO 
-      }else{
-        //"连接不到聊天服务器"
-      }
-    }
-    @Override
-    public void onReConnected() {
-    }
-    @Override
-    public void onReConnecting() {
-    }
-    @Override
-    public void onConnecting(String progress) {
-    }
-}
 </code></pre>
 
-#### 退出登陆:见MainActivity.java ####
+#### 退出登陆: ####
 
 <pre class="hll"><code class="language-java">
-@Override
-protected void onPause() {
-    super.onPause();
-    //登出聊天服务器
-    EMChatManager.getInstance().logout();
-}
+EMChatManager.getInstance().logout();//此方法为同步方法
+或者
+EMChatManager.getInstance().logout(new EMCallBack(){})//此方法为异步方法<br/>
+//后文中，如遇到new EMCallBack()即为new EMCallBack(){}
+
+	
 </code></pre>
 
 
