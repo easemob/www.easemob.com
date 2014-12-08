@@ -307,7 +307,7 @@ curl -X DELETE 'https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ff
 
 ##  获取一个用户参与的所有群组  {#joinedchatgroups}
 
-- Path : /users/{username}/joined_chatgroups
+- Path : /{org_name}/{app_name}/users/{username}/joined_chatgroups
 - HTTP Method : GET
 - URL Params ： 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
@@ -354,7 +354,7 @@ curl -X DELETE 'https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ff
 
 ##  群组批量添加成员  {#addmemberbatch}
 
-- Path : /chatgroups/{chatgroupid}/users
+- Path : /{org_name}/{app_name}/chatgroups/{chatgroupid}/users
 - HTTP Method : POST
 - URL Params ： 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
