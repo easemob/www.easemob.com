@@ -9,7 +9,7 @@ sidebar: restsidebar
 ### 查看用户在线状态 {#status}
 > 查看一个用户的在线状态
 
-- Path : /{org_name}/{app_name}/users/{user_primary_key}/status
+- Path : /{org_name}/{app_name}/users/{username}/status
 - HTTP Method : GET
 - URL Params ： 无
 - Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}

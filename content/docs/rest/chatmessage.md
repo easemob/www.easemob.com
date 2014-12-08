@@ -130,34 +130,23 @@ sidebar: restsidebar
 }	
 </code></pre>
 
-#### 使用示例1：获取最新的20条记录
+#### 使用示例1：获取某个时间段内的消息
 
-在url后面加上参数`ql=order by timestamp desc&limit=20`,实际使用时需要对"="后边的内容进行utf8 encode转义
-		
-###### curl示例
-
-<pre class="hll"><code class="language-java">
-curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemo/chatmessages?ql=order+by+timestamp+desc&limit=20"
-</code></pre>
-
-#### 使用示例2：获取某个时间段内的消息
-
-在url后面加上参数`ql=select * where timestamp<1403164734226 and timestamp>1403166586000 order by timestamp desc`, 同上"="后的参数需要转义
+在url后面加上参数`ql=select * where timestamp<1403164734226 and timestamp>1403166586000`, 同上"="后的参数需要转义
 
 ###### curl示例
 
 <pre class="hll"><code class="language-java">
-curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/chatmessages?ql=select+*+where+timestamp%3C1403164734226+and+timestamp%3E1403163586000+order+by+timestamp+desc"
+curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/chatmessages?ql=select+*+where+timestamp%3C1403164734226+and+timestamp%3E1403163586000"
 </code></pre>
 
-#### 使用示例3：分页获取数据
+#### 使用示例2：分页获取数据
 
 使用limit参数获取数据完毕后，如果后边还有数据，会返回一个不为空的cursor回来，使用这个cursor就能进行分页获取了。
 
 分页示例：根据之前获取数据返回的cursor继续获取后面的20条数据。在url后面加上参数
 
 <pre class="hll"><code class="language-java">
-ql=order by timestamp desc
 limit=20
 cursor=MTYxOTcyOTYyNDpnR2tBQVFNQWdHa0FCZ0ZHczBKN0F3Q0FkUUFRYUdpdkt2ZU1FZU9vNU4zVllyT2pqUUNBZFFBUWFHaXZJUGVNRWVPMjdMRWo5b0w4dEFB
 </code></pre>
@@ -167,7 +156,7 @@ cursor=MTYxOTcyOTYyNDpnR2tBQVFNQWdHa0FCZ0ZHczBKN0F3Q0FkUUFRYUdpdkt2ZU1FZU9vNU4zV
 ###### curl示例
 
 <pre class="hll"><code class="language-java">
-curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/chatmessages?ql=select+*+order+by+timestamp+desc&limit=10&cursor=MTYxOTcyOTYyNDpnR2tBQVFNQWdHa0FCZ0ZHczFuSG93Q0FkUUFROW94S0lQZVBFZU9mTEQxQWVMdHEyQUNBZFFBUTlvd2pFUGVQRWVPaHFWa1l0ZjA2dEFB"
+curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/chatmessages?limit=10&cursor=MTYxOTcyOTYyNDpnR2tBQVFNQWdHa0FCZ0ZHczFuSG93Q0FkUUFROW94S0lQZVBFZU9mTEQxQWVMdHEyQUNBZFFBUTlvd2pFUGVQRWVPaHFWa1l0ZjA2dEFB"
 </code></pre>
 
 

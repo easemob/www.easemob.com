@@ -214,10 +214,9 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 }
 </code></pre>
 
-## 获取IM用户[主键查询]  {#im-2}
-> 对users来说，有两个primary key: username 和 uuid,通过他们都可以获取到一个用户
+## 获取IM用户[单个]  {#im-2}
 
-- Path : /{org_name}/{app_name}/users/{user_primary_key}
+- Path : /{org_name}/{app_name}/users/{username}
 - HTTP Method : GET
 - URL Params ：无
 - Request Headers : {"Authorization":"Bearer ${token}"}
@@ -255,7 +254,7 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP
 </code></pre>
 
 
-## 获取IM用户[批量查询]  {#im-3}
+## 获取IM用户[批量]  {#im-3}
 
 > 该接口默认返回最近创建的10个用户，如果需要指定获取数量，需加上参数limit=N，N为数量值.
 关于分页：如果DB中的数量大于N，返回json会携带一个字段“cursor”,我们把它叫做"游标"，该游标可理解为结果集的指针，值是变化的。往下取数据的时候带着游标，就可以获取到下一页的值。如果还有下一页，返回值里依然还有这个字段，直到没有这个字段，说明已经到最后一页。cursor的意义在于数据(真)分页。
@@ -620,7 +619,7 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 
 ## 删除IM用户[单个]  {#im-5}
 
-- Path : /{org_name}/{app_name}/users/{user_primary_key}
+- Path : /{org_name}/{app_name}/users/{username}
 - HTTP Method : DELETE
 - URL 参数 : 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
@@ -661,12 +660,6 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 > 删除某个app下指定数量的环信账号。可一次删除N个用户,数值可以修改.建议这个数值在100-500之间，不要过大. 需要注意的是, 这里只是批量的一次性删除掉N个用户, 具体删除哪些并没有指定, 可以在返回值中查看到哪些用户被删除掉了。
 
 > 可以通过增加查询条件来做到精确的删除, 例如:
-
-> * 按照创建时间来排序(降序) 
-   + DELETE /{org_name}/{app_name}/users?ql=order+by+created+desc&limit=300
-
-> * 按照创建时间来排序(升序)
-   + DELETE /{org_name}/{app_name}/users?ql=order+by+created+asc&limit=300
 
 > * 按时间段来删除
 >    使用ql=created> {起始时间戳} and created < {结束时间戳} 的查询语句, 时间戳是timestamp类型的, 并且需要对ql进行http url encode
@@ -747,7 +740,7 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 
 ## 重置IM用户密码  {#resetpassword}
 
-- Path : /{org_name}/{app_name}/users/{user_primary_key}/password
+- Path : /{org_name}/{app_name}/users/{username}/password
 - HTTP Method : PUT
 - URL Params : 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
@@ -772,7 +765,7 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 
 ## 修改用户昵称  {#nickname}
 
-- Path : /{org_name}/{app_name}/users/{user_primary_key}
+- Path : /{org_name}/{app_name}/users/{username}
 - HTTP Method : PUT
 - URL Params : 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
