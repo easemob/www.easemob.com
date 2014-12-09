@@ -36,7 +36,7 @@ secondnavios: true
   
 #### 运行程序
 
-账号不支持中文
+  [环信用户名规则](http://www.easemob.com/docs/rest/userapi/#eid)
 
  ![alt text](/chatUIDemoLogin.png "Demo")
  
@@ -57,6 +57,10 @@ secondnavios: true
  ![alt text](/chatUIDemoOther.png "Demo")
  
 输入好友用户名（账号1），进行搜索添加
+
+**搜索应该是搜索您的用户，而不是搜索环信的用户，演示Demo中搜索任何信息都可以搜到**
+
+**环信不验证好友关系，只要知道对方环信用户名就可以发消息**
  
  ![alt text](/chatUIDemoAddFriend.png "Demo")
  
