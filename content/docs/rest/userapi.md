@@ -96,6 +96,8 @@ curl -X POST "https://a1.easemob.com/easemob-demo/chatdemo/token" -d '{"grant_ty
 	 **// 创建用户时候username 和password是必须的, nickname是可选的. 如果要在创建用户时设置nickname, 请求body是: {"username":"jliu","password":"123456", "nickname":"建国"} 这种形式, 下面的示例不包含nickname .** 批量注册时同此理.
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
+- 可能的错误码（400,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+
 #### curl示例：
 
 <pre class="hll"><code class="language-java">
@@ -134,6 +136,8 @@ curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"usern
 - Request Headers : {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Request Body ： {"username":"${用户名}","password":"${密码}"}
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+
+- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -176,6 +180,7 @@ curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4V
 - Request Headers : {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Request Body ： [{"username":"${用户名1}","password":"${密码}"},...,{"username":"${用户名2}","password":"${密码}"}]
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -222,6 +227,7 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -267,6 +273,7 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码（404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -625,6 +632,7 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -671,6 +679,7 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 		
@@ -746,7 +755,8 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： {"newpassword" : "${新密码指定的字符串}"}
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
- 
+- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+
 #### curl示例：
 
 <pre class="hll"><code class="language-java">
