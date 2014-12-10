@@ -86,7 +86,7 @@ secondnavandroid: true
 	List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getAllGroups();
 
 	//获取所有公开群列表
-	List&lt;EMGroupInfo&gt; groupsList = EMGroupManager.getInstanc().getAllPublicGroupsFromServer();	
+	List&lt;EMGroupInfo&gt; groupsList = EMGroupManager.getInstance().getAllPublicGroupsFromServer();	
 </code></pre>
 
 ## 获取群聊信息 ## {#group-getdetail}
