@@ -25,6 +25,7 @@ sidebar: restsidebar
 * 环信ID不能使用email地址
 * 环信ID不能使用UUID
 * 环信ID中间不能有空格或者井号（#）等特殊字符
+* <b>允许的用户名正则  "[a-zA-Z0-9_\\-./ ]*" (a~z大小写字母和数字和下划线和斜杠和横杠和英文点和反斜杠) 其他都不允许</b>
 
 另: 本文档中可能会交错使用"环信ID"和"环信用户名"两个术语, 但是请注意, 这里两个的意思是一样的
 
@@ -96,7 +97,7 @@ curl -X POST "https://a1.easemob.com/easemob-demo/chatdemo/token" -d '{"grant_ty
 	 **// 创建用户时候username 和password是必须的, nickname是可选的. 如果要在创建用户时设置nickname, 请求body是: {"username":"jliu","password":"123456", "nickname":"建国"} 这种形式, 下面的示例不包含nickname .** 批量注册时同此理.
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
-- 可能的错误码（400,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+- 可能的错误码 400 （用户已存在、用户名或密码为空、用户名不合法([用户名规则](http://www.easemob.com/docs/rest/userapi/#eid))）  、500  详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -137,7 +138,7 @@ curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"usern
 - Request Body ： {"username":"${用户名}","password":"${密码}"}
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
-- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+- 可能的错误码 400 （用户已存在、用户名或密码为空、用户名不合法([用户名规则](http://www.easemob.com/docs/rest/userapi/#eid))）、401（未授权）  、500  详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -180,7 +181,7 @@ curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4V
 - Request Headers : {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Request Body ： [{"username":"${用户名1}","password":"${密码}"},...,{"username":"${用户名2}","password":"${密码}"}]
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+- 可能的错误码 400 （用户已存在、用户名或密码为空、用户名不合法([用户名规则](http://www.easemob.com/docs/rest/userapi/#eid))）、401（未授权）  、500  详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -227,7 +228,7 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+
 
 #### curl示例：
 
@@ -273,7 +274,6 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-- 可能的错误码（404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -284,15 +284,15 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 ### Response :
 
 <pre class="hll"><code class="language-java">
-{
-  "action" : "get",
-  "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
-  "params" : {
+  {
+    "action" : "get",
+    "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
+    "params" : {
     "limit" : [ "20" ]
-  },
-  "path" : "/users",
-  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users?ql=select+*+from+null&limit=20",
-  "entities" : [ {
+    },
+    "path" : "/users",
+    "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users?ql=select+*+from+null&limit=20",
+    "entities" : [ {
     "uuid" : "fff15c10-df37-11e3-843f-e5b88d483c56",
     "type" : "user",
     "created" : 1400491736144,
@@ -438,13 +438,13 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
     "username" : "0vwy72min6",
     "activated" : true
   } ],
-  "timestamp" : 1409571908388,
-  "duration" : 747,
-  "organization" : "easemob-demo",
-  "applicationName" : "chatdemoui",
-  "cursor" : "LTU2ODc0MzQzOnNmdTlxdF9LRWVPaVFvMWlBZmc4S3c",
-  "count" : 20
-}
+    "timestamp" : 1409571908388,
+    "duration" : 747,
+    "organization" : "easemob-demo",
+    "applicationName" : "chatdemoui",
+    "cursor" : "LTU2ODc0MzQzOnNmdTlxdF9LRWVPaVFvMWlBZmc4S3c",
+    "count" : 20
+   }
 </code></pre>
 
 2) 分页
@@ -465,163 +465,163 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 ### Response :
 
 <pre class="hll"><code class="language-java">
-{
-  "action" : "get",
-  "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
-  "params" : {
+  {
+    "action" : "get",
+    "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
+    "params" : {
     "limit" : [ "20" ],
     "cursor" : [ "LTU2ODc0MzQzOnNmdTlxdF9LRWVPaVFvMWlBZmc4S3c" ]
-  },
-  "path" : "/users",
-  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users?ql=select+*+from+null&limit=20",
-  "entities" : [ {
+   },
+    "path" : "/users",
+    "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users?ql=select+*+from+null&limit=20",
+    "entities" : [ {
     "uuid" : "db8b63aa-dfca-11e3-b938-0337d3f77124",
     "type" : "user",
     "created" : 1400554811098,
     "modified" : 1400554811098,
     "username" : "an9hmj9js2",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "e4fab3fa-dfca-11e3-a4ce-59804f43b0c8",
     "type" : "user",
     "created" : 1400554826927,
     "modified" : 1400554826927,
     "username" : "3qwepp6xkg",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "f844e7aa-dfca-11e3-9eb4-3d526f9ecfeb",
     "type" : "user",
     "created" : 1400554859290,
     "modified" : 1400554859290,
     "username" : "ce41dtafer",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "fc4f4c5a-dfca-11e3-aaf8-239a98c53960",
     "type" : "user",
     "created" : 1400554866069,
     "modified" : 1400554866069,
     "username" : "2ewcgkhhxf",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "0005ebba-dfcb-11e3-9704-f734eb21dbc4",
     "type" : "user",
     "created" : 1400554872299,
     "modified" : 1400554872299,
     "username" : "zh9w1hc49q",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "7f8e638a-dfcb-11e3-971e-fdc9e466fac1",
     "type" : "user",
     "created" : 1400555086264,
     "modified" : 1400555086264,
     "username" : "lxrpebngsl",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "2d7fa7ba-dfcc-11e3-8b04-5f7a1794920c",
     "type" : "user",
     "created" : 1400555378091,
     "modified" : 1400555378091,
     "username" : "yeimn3szbh",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "3cc89e7a-dfcc-11e3-9a11-f1c6519f66af",
     "type" : "user",
     "created" : 1400555403735,
     "modified" : 1400555403735,
     "username" : "7s5e3jtieh",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "7cc785ea-dfcc-11e3-b24a-d5b4112501a1",
     "type" : "user",
     "created" : 1400555511102,
     "modified" : 1400555511102,
     "username" : "5cxhactgdj",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "ba8b717a-dfcc-11e3-85ca-3db38b18c75d",
     "type" : "user",
     "created" : 1400555614727,
     "modified" : 1400555614727,
     "username" : "qjf8b3r6q8",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "d5ad176a-dfcc-11e3-9e67-d933f3e27add",
     "type" : "user",
     "created" : 1400555660246,
     "modified" : 1400555660246,
     "username" : "mh2kbjyop1",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "2d4bf81a-dfcd-11e3-9e57-eb0fac2d4582",
     "type" : "user",
     "created" : 1400555807249,
     "modified" : 1400555807249,
     "username" : "q4xpsfjfvf",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "65368b5a-dfcd-11e3-8a1a-b9f751cf717c",
     "type" : "user",
     "created" : 1400555901061,
     "modified" : 1400555901061,
     "username" : "r1xnbh79us",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "6a9423fa-dfcd-11e3-8841-c1c4a8c96d7d",
     "type" : "user",
     "created" : 1400555910063,
     "modified" : 1400555910063,
     "username" : "sofa8kyoca",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "1698653a-dfce-11e3-8524-89dd680b7ce4",
     "type" : "user",
     "created" : 1400556198659,
     "modified" : 1400556198659,
     "username" : "4lo3srucvl",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "236b79fa-dfce-11e3-a9a3-250f2047b4bc",
     "type" : "user",
     "created" : 1400556220175,
     "modified" : 1400556220175,
     "username" : "w2k0etnjjj",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "54eb716a-dfce-11e3-9781-ab12107b7351",
     "type" : "user",
     "created" : 1400556303222,
     "modified" : 1400556303222,
     "username" : "ir4ad2dqri",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "5bb51d2a-dfce-11e3-be10-4ff224c17422",
     "type" : "user",
     "created" : 1400556314610,
     "modified" : 1400556314610,
     "username" : "0fktzcr36b",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "60cf6b3a-dfce-11e3-b8bf-ed78a8f851f8",
     "type" : "user",
     "created" : 1400556323171,
     "modified" : 1400556323171,
     "username" : "ytbdzt3w9e",
     "activated" : true
-  }, {
+   }, {
     "uuid" : "628a88ba-dfce-11e3-8cac-51d3cb69b303",
     "type" : "user",
     "created" : 1400556326075,
     "modified" : 1400556326075,
     "username" : "ywuxvxuir6",
     "activated" : true
-  } ],
-  "timestamp" : 1409574113435,
-  "duration" : 2812,
-  "organization" : "easemob-demo",
-  "applicationName" : "chatdemoui",
-  "cursor" : "LTU2ODc0MzQzOllvcUl1dF9PRWVPTXJGSFR5Mm16QXc",
-  "count" : 20
-}
+   } ],
+    "timestamp" : 1409574113435,
+    "duration" : 2812,
+    "organization" : "easemob-demo",
+    "applicationName" : "chatdemoui",
+    "cursor" : "LTU2ODc0MzQzOllvcUl1dF9PRWVPTXJGSFR5Mm16QXc",
+    "count" : 20
+  }
 </code></pre>
 
 ## 删除IM用户[单个]  {#im-5}
@@ -632,7 +632,6 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -679,7 +678,6 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 		
@@ -755,7 +753,6 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： {"newpassword" : "${新密码指定的字符串}"}
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-- 可能的错误码（400,401,404,500）[错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
