@@ -652,19 +652,19 @@ var _hmt = _hmt || [];
                                     3、支持https访问模式<br/>
 									4、支持token登录<br/>
 									5、支持语音消息<br/>
-									6、消息体支持自定义扩展添加ext属性<br/>
-									7、支持app端添加在线用户群组功能<br>
-                                    8、demo示例支持未读消息提醒<br/>
+									6、消息体支持自定义扩展,添加ext属性<br/>
+                                    7、demo示例支持未读消息提醒<br/>
                                 </span>
 								<br>
 	
 								<span>功能改进：<br/>
 							    
-									1、修改了demo联系人过多时的样式问题<br/>
-									2、修复	bugconn = new Easemob.im.Connection();变量名不为conn或者conn不是全局变量时接受不到消息<br>
-                                    3、修复	bug群组离线消息当作陌生人消息处理<br/>
-									4、修改	bugIE浏览器接受文本消息以换行符开始时会遮挡联系人名称<br/>
-									5、丰富相关文档内容<br/>
+									1、修复bug <br/>demo联系人过多时的样式问题<br/>
+									2、修复bug <br/>conn = new Easemob.im.Connection();变量名不为conn或者conn不是全局变量时接受不到消息<br>
+                                    3、修复bug <br/>群组离线消息当作陌生人消息处理<br/>
+									4、修复bug <br/>IE浏览器接受文本消息以换行符开始时会遮挡联系人名称<br/>
+									5、修复bug <br/>在线用户被邀请加入群组不能实时显示，必须重新登录<br/>
+									6、丰富相关文档内容<br/>
                                 </span>
 							</dt>
 						</dl>
