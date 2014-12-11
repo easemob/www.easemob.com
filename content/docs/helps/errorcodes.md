@@ -6,8 +6,12 @@ sidebar: helpssidebar
 
 ## 环信服务器端REST API常见错误
 
-
 >rest接口，调用成功返回响应码为200，返回数据结果为标准Json格式，如执行错误会返回其他响应码，并返回详情结果（也为标准Json格式），可根据error 字段判断具体错误。
+
+例如： ![alt text](/response_icon.jpg "Response icon")
+
+另：
+建议对APP自己的服务器端调用的环信REST API做容错处理。比如要catch接口调用返回的异常，对于timeout这样的错误应该做重试。对于系统级别错误或重试后仍旧出错，应该记录到系统日志，并及时报警提示运维人员做补救措施，如人工补发。
 
 | HTTP statuscode  | 接口返回error  | 接口返回值 error_description   |   可能原因 |
 |--------------|-----|----------------|--------------------------|
