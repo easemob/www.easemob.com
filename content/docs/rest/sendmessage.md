@@ -181,7 +181,7 @@ curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H '
 	"target_type" : "users",  //users 给用户发消息, chatgroups 给群发消息
 	"target" : ["testd", "testb", "testc"],// 注意这里需要用数组,数组长度建议不大于20, 即使只有一个  
                                            // 用户或者群组, 也要用数组形式 ['u1'], 给用户发送  
-                                           // 时数组元素是用户名,给群组发送时数组元素是groupid
+                                           // 此数组元素是用户名,给群组发送时数组元素是groupid
 	"msg" : {   //消息内容
 		"type": "audio",  // 消息类型
 		"url": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/1dfc7f50-55c6-11e4-8a07-7d75b8fb3d42",  //成功上传文件返回的uuid
@@ -223,6 +223,67 @@ curl -X POST -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-
 }
 </code></pre>
 
+####发送视频消息  {#sendvideomsg}
+
+>发送视频消息，需要先上传视频文件和视频缩略图文件，然后再发送此消息。（url中的uuid和secret可以从上传后的response获取）
+
+- Path : /{org_name}/{app_name}/messages
+- Request Method : POST
+- URL Params ： 无
+- Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
+- Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码：<br/>
+404 （此用户或groupid不存在）<br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+
+- Request Body ：
+
+<pre class="hll"><code class="language-java">
+{
+    "target_type": "users", //users 给用户发消息, chatgroups 给群发消息
+    "target": [
+        "ceshib"// 注意这里需要用数组,数组长度建议不大于20, 即使只有一个，// 用户或者群组, 也要用数组形式 ['u1'], 给用户发送
+    ], // 此数组元素是用户名,给群组发送时数组元素是groupid
+    "from": "ceshia",
+    "msg": { //消息内容
+        "type": "video",// 消息类型
+        "filename": "1418105136313.mp4",// 视频文件名称
+        "thumb": "http://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/67279b20-7f69-11e4-8eee-21d3334b3a97",//成功上传视频缩略图返回的uuid
+        "length": 10,//视频播放长度
+        "secret": "VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_",// 成功上传视频文件后返回的secret
+        "file_length": 58103,//视频文件大小
+        "thumb_secret": "ZyebKn9pEeSSfY03ROk7ND24zUf74s7HpPN1oMV-1JxN2O2I",// 成功上传视频缩略图后返回的secret
+        "url": "http://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/671dfe30-7f69-11e4-ba67-8fef0d502f46"//成功上传视频文件返回的uuid
+    }
+}
+
+</code></pre>
+
+#### curl示例
+
+<pre class="hll"><code class="language-java">
+
+curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages' -H 'Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ'  -d '{"target_type":"users","target":["testd","testb","testc"],"from":"testa","msg":{"type":"video","filename" : "1418105136313.mp4","thumb" : "http://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/67279b20-7f69-11e4-8eee-21d3334b3a97","length" : 0,"secret":"VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_","file_length" : 58103,"thumb_secret" : "ZyebKn9pEeSSfY03ROk7ND24zUf74s7HpPN1oMV-1JxN2O2I","url" : "http://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/671dfe30-7f69-11e4-ba67-8fef0d502f46"}}'
+</code></pre>
+
+#### Response 示例：
+
+<pre class="hll"><code class="language-java">
+{
+  "action" : "post",
+  "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui",
+  "entities" : [ ],
+  "data" : {
+    "testd" : "success",
+    "testb" : "success",
+    "testc" : "success"
+  },
+  "timestamp" : 1415166234863,
+  "duration" : 5,
+  "organization" : "easemob-demo",
+  "applicationName" : "chatdemoui"
+}
+</code></pre>
 
 ####发送透传消息  {#sendpayloadmsg}
 
