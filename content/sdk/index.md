@@ -641,22 +641,34 @@ var _hmt = _hmt || [];
 		        </ul>
 			    <ul class="history_left history_margin_right">
 			      	<h2 class="first">webIM SDK 更新日志</h2>
-			      	<!--<li>
-						<h3><em></em><span>版本：V2.0.8 2014-08-28</span></h3>
+			      	<li>
+						<h3><em></em><span>版本：V1.0.3 2014-12-11</span></h3>
 						<dl>
 							<dt>
-							    <span>新功能/改进：<br/>
+							    <span>新功能：<br/>
 							    
-									1、EMMessage中新添加了isOfflineMessage属性，在didReceiveMessage的时候， 可以根据是否为离线消息而决定是否重绘界面。
-同时在offline message在接收过程中， 会有willReceiveOfflineMessages和didFinishedReceiveOfflineMessages：发出，用户可以根据此事件决定是否需要重绘UI。<br/>
-									2、屏蔽群消息：接收并提醒 && 只接收不提醒。<br>
-                                    Bug Fix：<br/>
-									1、消息中的图片缩略图，在某些情况下，size.height为0。<br/>
-									2、修正断线重连方面：切到后台，3分钟后，切回前台，有时会掉线的问题。<br/>
+									1、增加陌生人聊天功能<br/>
+									2、添加新用户注册功能<br>
+                                    3、支持https访问模式<br/>
+									4、支持token登录<br/>
+									5、支持语音消息<br/>
+									6、消息体支持自定义扩展添加ext属性<br/>
+									7、消息体支持自定义扩展添加ext属性<br/>	
+									8、支持app端添加在线用户群组功能<br>
+                                    9、demo示例支持未读消息提醒<br/>
+                                </span>
+	
+								<span>功能改进：<br/>
+							    
+									1、修改了demo联系人过多时的样式问题<br/>
+									2、修复	bugconn = new Easemob.im.Connection();变量名不为conn或者conn不是全局变量时接受不到消息<br>
+                                    3、修复	bug群组离线消息当作陌生人消息处理<br/>
+									4、修改	bugIE浏览器接受文本消息以换行符开始时会遮挡联系人名称<br/>
+									5、丰富相关文档内容<br/>
                                 </span>
 							</dt>
 						</dl>
-					</li>-->
+					</li>
 					<div class="web_ul">
 						<!--<li>
 							<h3><em></em><span>版本：V2.0.8 2014-08-28</span></h3>
