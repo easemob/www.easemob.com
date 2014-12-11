@@ -4,14 +4,14 @@ secondnavhelps: true
 sidebar: helpssidebar
 ---
 
-## 环信服务器端REST API常见错误
+## 环信服务器端REST API常见错误码
 
->rest接口，调用成功返回响应码为200，返回数据结果为标准Json格式，如执行错误会返回其他响应码，并返回详情结果（也为标准Json格式），可根据error 字段判断具体错误。
+REST接口调用成功时返回HTTP状态码为200，返回数据结果为标准Json格式。如调用错误会返回除200之外的其他HTTP状态码，返回数据结果也为标准Json格式，可根据返回数据中的error字段判断具体错误。
 
 例如： ![alt text](/response_icon.jpg "Response icon")
 
-另：
-建议对APP自己的服务器端调用的环信REST API做容错处理。比如要catch接口调用返回的异常，对于timeout这样的错误应该做重试。对于系统级别错误或重试后仍旧出错，应该记录到系统日志，并及时报警提示运维人员做补救措施，如人工补发。
+
+建议对APP自己的服务器端调用的环信REST API结果做容错处理。比如要catch接口调用返回的异常，对于timeout这样的错误应该做重试。对于系统级别错误或重试后仍旧出错，应该记录到系统日志，并及时报警提示运维人员做补救措施，如人工补发。
 
 
 http状态返回代码 4xx（请求错误）这些状态代码表示请求可能出错，妨碍了服务器的处理。
@@ -34,7 +34,7 @@ http状态返回代码 5xx（服务器错误）这些状态代码表示服务器
 
 <br/>
 
-| HTTP statuscode  | 接口返回error  | 接口返回值 error_description   |   可能原因 |
+| HTTP statuscode  | error  | error_description   |   可能原因 |
 |--------------|-----|----------------|--------------------------|
 | 400      | invalid_grant| invalid username or password | 用户名或者密码输入错误|
 | 400        | organization_application_not_found | "Could not find application for easemob-demo/aachatdemoui from URI: easemob-demo/aachatdemoui/users" | 找不到aachatdemoui对应的app, 可能是URL写错了 |

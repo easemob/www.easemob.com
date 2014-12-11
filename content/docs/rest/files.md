@@ -24,6 +24,7 @@ sidebar: restsidebar
 - URL Params ： 无
 - Request Body ：文件表单项    [参考](http://www.w3school.com.cn/tags/tag_input.asp)
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码：  <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例:
 
@@ -33,7 +34,7 @@ curl --verbose --header "Authorization: Bearer YWMtz1hFWOZpEeOPpcmw1FB0RwAAAUZnA
 
 或者查看我们的[示例代码](https://github.com/easemob/emchat-server-examples)
 
-#### Response
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {

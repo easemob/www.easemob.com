@@ -9,10 +9,11 @@ sidebar: restsidebar
 ## 数据结构 {#schema}
  > 环信作为一个聊天通道，只需要提供环信ID和密码就够了.
  
- |  属性     |  字段名    | 数据类型  |  描述  |
- |-----------|------------|----------|--------|
- |  环信ID   |  username  | String   | username是用户的primarykey,在appkey的范围内唯一 |
- |  用户密码 | password   | String   |  用户登录环信使用的密码       |
+
+|  属性     |  字段名    | 数据类型  |  描述  |
+|----------|------------|----------|--------|
+|  环信ID   |  username  | String   | username是用户的primarykey,在appkey的范围内唯一 |
+|  用户密码 | password   | String   |  用户登录环信使用的密码       |
 
 ## 环信ID规则 {#eid}
 
@@ -60,14 +61,19 @@ client_id 和 client_secret可以在环信管理后台的app详情页面看到
     | access_token |   token值  |
     | expires_in   |  有效时间,秒为单位, 默认是七天,在有效期内是不需要重复获取的 |
     | application  |  当前app的UUID值   | 
+- 可能的错误码： <br/>
+    400 （client_id或client_secret错误） <br/>5xx <br/> 详见：[REST接口错误码]        (http://www.easemob.com/docs/helps/errorcodes/) 
+
 
 #### curl示例：
 
 <pre class="hll"><code class="language-java">
-curl -X POST "https://a1.easemob.com/easemob-demo/chatdemo/token" -d '{"grant_type":"client_credentials","client_id":"YXA6wDs-MARqEeSO0VcBzaqg11","client_secret":"YXA6JOMWlLap_YbI_ucz77j-4-mI0dd"}'
+
+    curl -X POST "https://a1.easemob.com/easemob-demo/chatdemo/token" -d '{"grant_type":"client_credentials","client_id":"YXA6wDs-MARqEeSO0VcBzaqg11","client_secret":"YXA6JOMWlLap_YbI_ucz77j-4-mI0dd"}'
+
 </code></pre>
 
-#### Response:
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -97,7 +103,8 @@ curl -X POST "https://a1.easemob.com/easemob-demo/chatdemo/token" -d '{"grant_ty
 	 **// 创建用户时候username 和password是必须的, nickname是可选的. 如果要在创建用户时设置nickname, 请求body是: {"username":"jliu","password":"123456", "nickname":"建国"} 这种形式, 下面的示例不包含nickname .** 批量注册时同此理.
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
-- 可能的错误码 400 （用户已存在、用户名或密码为空、用户名不合法([用户名规则](http://www.easemob.com/docs/rest/userapi/#eid))）  、500  详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+- 可能的错误码： <br/>
+400 （用户已存在、用户名或密码为空、用户名不合法([见用户名规则](http://www.easemob.com/docs/rest/userapi/#eid))） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -105,7 +112,7 @@ curl -X POST "https://a1.easemob.com/easemob-demo/chatdemo/token" -d '{"grant_ty
 curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"username":"jliu","password":"123456"}'
 </code></pre>
 
-#### Response:
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -137,8 +144,8 @@ curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"usern
 - Request Headers : {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Request Body ： {"username":"${用户名}","password":"${密码}"}
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-
-- 可能的错误码 400 （用户已存在、用户名或密码为空、用户名不合法([用户名规则](http://www.easemob.com/docs/rest/userapi/#eid))）、401（未授权）  、500  详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+- 可能的错误码： <br/>
+400 （用户已存在、用户名或密码为空、用户名不合法([见用户名规则](http://www.easemob.com/docs/rest/userapi/#eid))） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -146,7 +153,7 @@ curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"usern
 curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4VUIC2AwZGzUjVbPp_4qRD5k" -i  "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"username":"jliu","password":"123456"}'
 </code></pre>
 
-#### Response :
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">	
 {
@@ -181,7 +188,8 @@ curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4V
 - Request Headers : {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Request Body ： [{"username":"${用户名1}","password":"${密码}"},...,{"username":"${用户名2}","password":"${密码}"}]
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-- 可能的错误码 400 （用户已存在、用户名或密码为空、用户名不合法([用户名规则](http://www.easemob.com/docs/rest/userapi/#eid))）、401（未授权）  、500  详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+- 可能的错误码： <br/>
+400 （用户已存在、用户名或密码为空、用户名不合法([见用户名规则](http://www.easemob.com/docs/rest/userapi/#eid))） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -189,7 +197,7 @@ curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4V
 curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdRxUTjA9CNiZMnQIgk0LEUE" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users" -d '[{"username":"u1", "password":"p1"}, {"username":"u2", "password":"p2"}]'
 </code></pre>
 
-### Response :
+### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -228,7 +236,8 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-
+- 可能的错误码： <br/>
+404 （用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -236,7 +245,7 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP2xNh8GhUCdKViBFgtox3M" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/ywuxvxuir6"
 </code></pre>
 
-#### Response 
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -274,6 +283,8 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -281,7 +292,7 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP
 curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdRxUTjA9CNiZMnQIgk0LEUE" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users?limit=20"
 </code></pre>
 
-### Response :
+### Response 示例：
 
 <pre class="hll"><code class="language-java">
   {
@@ -462,7 +473,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2xNh8GhUCdKViBFgtox3M" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users?limit=20&cursor=LTU2ODc0MzQzOnNmdTlxdF9LRWVPaVFvMWlBZmc4S3c"
 </code></pre>
 
-### Response :
+### Response 示例：
 
 <pre class="hll"><code class="language-java">
   {
@@ -632,6 +643,8 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -639,7 +652,7 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP2xNh8GhUCdKViBFgtox3M" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/ywuxvxuir6"
 </code></pre>
 
-#### Response
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -664,20 +677,24 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 </code></pre>
 
 ## 删除IM用户[批量]  {#im-6}
-> 删除某个app下指定数量的环信账号。可一次删除N个用户,数值可以修改.建议这个数值在100-500之间，不要过大. 需要注意的是, 这里只是批量的一次性删除掉N个用户, 具体删除哪些并没有指定, 可以在返回值中查看到哪些用户被删除掉了。
 
-> 可以通过增加查询条件来做到精确的删除, 例如:
+  删除某个app下指定数量的环信账号。可一次删除N个用户,数值可以修改.建议这个数值在100-500之间，不要过大. 需要注意的是, 这里只是批量的一次性删除掉N个用户, 具体删除哪些并没有指定, 可以在返回值中查看到哪些用户被删除掉了。
 
-> * 按时间段来删除
->    使用ql=created> {起始时间戳} and created < {结束时间戳} 的查询语句, 时间戳是timestamp类型的, 并且需要对ql进行http url encode
-   + DELETE /{org_name}/{app_name}/users?ql=created > 1409506121910 and created < 1409576121910
 
+可以通过增加查询条件来做到精确的删除, 例如:
+
+ 按时间段来删除:
+ 使用ql=created> {起始时间戳} and created < {结束时间戳} 的查询语句, 时间戳是timestamp类型的, 并且需要对ql进行http url encode
+
+- DELETE /{org_name}/{app_name}/users?ql=created > 1409506121910 and created < 1409576121910
 - Path : /{org_name}/{app_name}/users
 - HTTP Method : DELETE
 - URL Params : limit=30
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 		
@@ -685,7 +702,7 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP2xNh8GhUCdKViBFgtox3M" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users?limit=5"
 </code></pre>
 
-#### Response 
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -753,6 +770,8 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： {"newpassword" : "${新密码指定的字符串}"}
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 
@@ -760,7 +779,7 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2xNh8GhUCdKViBFgtox3M" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/ywuxvxuir6/password" -d '{"newpassword" : "123456"}'
 </code></pre>
 
-#### Response
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -778,6 +797,9 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： {"nickname" : "${昵称值}"}
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+
  
 #### curl示例：
 
@@ -785,7 +807,7 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2xNh8GhUCdKViBFDSEF2E" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/jianguo" -d '{"nickname" : "张建国"}'
 </code></pre>
 
-#### Response
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -821,6 +843,8 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （此IM用户或被添加的好友不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 		
@@ -828,7 +852,7 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdRxUTjA9CNiZMnQIgk0LEU2" -i  "https://a1.easemob.com/easemob-demo/chatdemo/users/jliu/contacts/users/yantao"
 </code></pre>
 
-#### Respone
+#### Respone 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -861,6 +885,8 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （此IM用户或被解除的好友不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 		
@@ -868,7 +894,7 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 curl -X DELETE -i -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdRxUTjA9CNiZMnQIgk0LEU2" "https://a1.easemob.com/easemob-demo/chatdemo/users/stliu/contacts/users/yantao"
 </code></pre>
 
-#### Respone
+#### Respone 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -908,6 +934,8 @@ curl -X DELETE -i -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10I
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （此IM用户或要查看的好友不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
     
 #### curl示例
 
@@ -915,7 +943,7 @@ curl -X DELETE -i -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10I
 curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdRxUTjA9CNiZMnQIgk0LEU2" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/contacts/users"
 </code></pre>
 
-#### Response
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -942,6 +970,8 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ： "data" : [ "stliu2" ]  ---  黑名单中的用户的用户名：stliu2 
+- 可能的错误码： <br/>
+404 （此IM用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
     
 #### curl示例
 
@@ -949,7 +979,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk6Vg2xm8DZdVjxbhwm7XWY" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/blocks/users"
 </code></pre>
 
-#### Response
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -972,6 +1002,9 @@ curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： {"usernames":["5cxhactgdj", "mh2kbjyop1"]}      ----  需要加入到黑名单中的用户名以数组方式提交，usernames为关键字不变，
 - Response Body ： "data" : [ "5cxhactgdj", "mh2kbjyop1" ]  ---  已经加到黑名单中的用户名：5cxhactgdj, mh2kbjyop1
+- 可能的错误码： <br/>
+404 （此IM用户或被添加的用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+
     
 #### curl示例
 
@@ -979,7 +1012,7 @@ curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk
 curl -X POST -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk6Vg2xm8DZdVjxbhwm7XWY' -i  'https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/blocks/users' -d '{"usernames":["5cxhactgdj", "mh2kbjyop1"]}'
 </code></pre>
 
-#### Response
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -1004,6 +1037,8 @@ curl -X POST -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBU
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ：无
 - Response Body ： entities 中包含了刚刚从黑名单中移除的IM用户的详细信息
+- 可能的错误码： <br/>
+404 （此IM用户或被减的用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
    
 #### curl示例
 
@@ -1011,7 +1046,7 @@ curl -X POST -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBU
 curl -X DELETE -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk6Vg2xm8DZdVjxbhwm7XWY' -i  'https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/blocks/users/5cxhactgdj'
 </code></pre>
 
-#### Response
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {

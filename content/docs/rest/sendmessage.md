@@ -15,6 +15,8 @@ sidebar: restsidebar
 - Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （此用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
 	
@@ -22,7 +24,7 @@ sidebar: restsidebar
 curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/users/zw123/status"
 </code></pre>
 
-#### Response： 
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -50,6 +52,8 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
 - URL Params ： 无
 - Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （此用户或groupid不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 - Request Body ： 
 
 <pre class="hll"><code class="language-java">
@@ -76,7 +80,7 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
 curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/messages" -d '{"target_type" : "users","target" : ["stliu1", "jma3", "stliu", "jma4"],"msg" : {"type" : "txt","msg" : "hello from rest"},"from" : "jma2", "ext" : {"attr1" : "v1","attr2" : "v2"} }'
 </code></pre>
 
-#### Response：
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -108,6 +112,8 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
 - URL Params ： 无
 - Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码：<br/>
+404 （此用户或groupid不存在）  <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 - Request Body ： 
 
 <pre class="hll"><code class="language-java">
@@ -136,7 +142,7 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
 curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H 'Authorization: Bearer YWMtsFVigGSuEeSTc7k5183Z5QAAAUqzeFx_9IjRch-ZxNbIlBIvx_4GWvzheSU'  -d '{"target_type":"users","target":["l1k4vpllxp"],"from","jma2","msg":{"type":"img","filename":"24849.jpg","secret":"VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_","url":"https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/55f12940-64af-11e4-8a5b-ff2336f03252"}}'
 </code></pre>
 
-#### Response：
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -164,7 +170,11 @@ curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H '
 - URL Params ： 无
 - Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码：<br/>
+404 （此用户或groupid不存在）<br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+
 - Request Body ：
+
 
 <pre class="hll"><code class="language-java">
 {
@@ -193,7 +203,7 @@ curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H '
 curl -X POST -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/messages" -d '{"target_type" : "users","target" : ["testd", "testb", "testc"],"msg" : {"type": "audio","url": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/1dfc7f50-55c6-11e4-8a07-7d75b8fb3d42","filename": "messages.amr","length": 10,"secret": "Hfx_WlXGEeSdDW-SuX2EaZcXDC7ZEig3OgKZye9IzKOwoCjM"},"from" : "testa" }'
 </code></pre>
 
-#### Response：
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
@@ -223,6 +233,8 @@ curl -X POST -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-
 - URL Params ： 无
 - Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码：<br/>
+404 （此用户或groupid不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 - Request Body ：
 
 <pre class="hll"><code class="language-java">
@@ -249,7 +261,7 @@ curl -X POST -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-
 curl -X POST -H "Authorization:Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" -i "https://a1.easemob.com/easemob-demo/chatdemoui/messages" -d '{"target_type":"users","target":["testb","testc"],"msg":{"type":"cmd","action":"action1"},"from":"testa","ext":{"attr1":"v1","attr2":"v2"}}'
 </code></pre>
 
-#### Response：
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {

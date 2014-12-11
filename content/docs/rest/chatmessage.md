@@ -114,6 +114,7 @@ sidebar: restsidebar
 - URL Params ： 无
 - Request Headers :  {“Content-Type”:”application/json”,”Authorization”:”Bearer ${token}”}
 - Response Body ： 聊天记录(json),默认返回10条记录
+- 可能的错误码： <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 <pre class="hll"><code class="language-java">
 {
@@ -134,7 +135,7 @@ sidebar: restsidebar
 
 在url后面加上参数`ql=select * where timestamp<1403164734226 and timestamp>1403166586000`, 同上"="后的参数需要转义
 
-###### curl示例
+###### curl 示例：
 
 <pre class="hll"><code class="language-java">
 curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/chatmessages?ql=select+*+where+timestamp%3C1403164734226+and+timestamp%3E1403163586000"
@@ -153,7 +154,7 @@ cursor=MTYxOTcyOTYyNDpnR2tBQVFNQWdHa0FCZ0ZHczBKN0F3Q0FkUUFRYUdpdkt2ZU1FZU9vNU4zV
 
 同上参数需要转义
 
-###### curl示例
+###### curl 示例：
 
 <pre class="hll"><code class="language-java">
 curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/chatmessages?limit=10&cursor=MTYxOTcyOTYyNDpnR2tBQVFNQWdHa0FCZ0ZHczFuSG93Q0FkUUFROW94S0lQZVBFZU9mTEQxQWVMdHEyQUNBZFFBUTlvd2pFUGVQRWVPaHFWa1l0ZjA2dEFB"
@@ -169,14 +170,16 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ： "data" : {"v3y0kf9arx" : 0 }      ----  用户名：v3y0kf9arx ，未读消息数：0条
+- 可能的错误码： <br/>
+404 （此用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
     
-#### curl示例
+#### curl 示例：
 
 <pre class="hll"><code class="language-java">
 curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk6Vg2xm8DZdVjxbhwm7XWY" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/offline_msg_count"
 </code></pre>
 
-#### Response
+#### Response 示例：
 
 <pre class="hll"><code class="language-java">
 {
