@@ -297,6 +297,7 @@ var handlePresence = function(e) {
 删除好友，首先获取好友名称,调用removeRoster方法。例如删除按钮触发时调用delFriend函数。
 
 <pre class="hll"><code class="language-javascript">
+
 var delFriend = function() {
 	var user = $('#delfridentId').val();//获取要删除好友的名称
 	conn.removeRoster({
@@ -311,6 +312,7 @@ var delFriend = function() {
 		}
     });
 }
+
 </code></pre>
 
 ## 关闭连接 {#onClosed}
@@ -318,6 +320,7 @@ var delFriend = function() {
 当用户退出登录时需要调用con.onClosed回调函数。
 
 <pre class="hll"><code class="language-javascript">
+
 conn.init({
 	//当连接关闭时的回调方法
 	onClosed : function() {
@@ -325,6 +328,7 @@ conn.init({
 		conn.onClosed();
 	}
 });
+
 </code></pre>
 
 ## 常见问题列表 {#faq}
