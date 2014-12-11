@@ -122,7 +122,6 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 - URL Params ： 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ：
-- 可能的错误码：  <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 <pre class="hll"><code class="language-java">
 {
@@ -137,6 +136,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 </code></pre>
 
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码：  <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 ##### curl示例：
 
