@@ -6,9 +6,9 @@ secondnavwebim: true
 
 ## Web-IM 介绍 
 
-### 什么是环信WebIM demo 
+### 什么是环信Web-IM Demo 
 
-环信Web-IM demo展示了怎样使用环信WEB-IM-SDK快速创建一个完整的类微信网页聊天示例。展示的功能包括：登录，登出，操作好友、收发个人消息，群组消息。
+环信Web-IM Demo展示了怎样使用环信WEB-IM-SDK快速创建一个完整的类微信网页聊天示例。展示的功能包括：登录，登出，操作好友、收发个人消息，群组消息。
 
 环信Web-IM源代码已在github上开源供开发者下载[https://github.com/easemob/web-im](https://github.com/easemob/web-im)，以帮助开发者更好的学习了解环信SDK。
 
