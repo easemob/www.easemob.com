@@ -4,29 +4,32 @@ sidebar: webimsidebar
 secondnavwebim: true
 ---
 
-## 下载环信demo (webIM) 
+## Web-IM 介绍 
 
-### 什么是环信WEB-IM demo 
+### 什么是环信WebIM demo 
 
-环信WEB-IM demo展示了怎样使用环信WEB-IM-SDK快速创建一个完整的类微信网页聊天示例。展示的功能包括：登录，登出，操作好友、收发个人消息，群组消息。
+环信Web-IM demo展示了怎样使用环信WEB-IM-SDK快速创建一个完整的类微信网页聊天示例。展示的功能包括：登录，登出，操作好友、收发个人消息，群组消息。
 
-环信WEB-IM源代码已在github上开源供开发者下载(https://github.com/easemob/web-im)，以帮助开发者更好的学习了解环信SDK。
+环信Web-IM源代码已在github上开源供开发者下载[https://github.com/easemob/web-im](https://github.com/easemob/web-im)，以帮助开发者更好的学习了解环信SDK。
 
-### 下载环信WEB-IM-DEMO 
+也可登录[webim.easemob.com](https://webim.easemob.com)对WebIM进行体验，账号为环信Demo的账号(与安卓、IOS的Demo账号相通)。
 
-1. 下载环信WEB-IM及SDK： [下载](http://www.easemob.com/sdk/)
+### 下载环信Web-IM-Demo 
+
+1. 下载环信Web-IM及SDK： [下载](http://www.easemob.com/sdk/)
 
 2. 解压缩WEB-IM.zip后会得到以下目录结构：
  
  ![alt text](/webIM_zip.png "Title")
 
 
-## 运行环信WEB-IM 
+## 运行环信Web-IM 
 
 运行之前，需要调整appkey，打开easymob-webim1.0目录中的index.html，找到
 
 <pre class="hll"><code class="language-javascript">
-appKey : 'easemob-demo#chatdemoui'
+    appKey : 'easemob-demo#chatdemoui'
+
 </code></pre>
 
 将这里的值做相应调整。
@@ -37,7 +40,7 @@ appKey : 'easemob-demo#chatdemoui'
 
 2、将easymob-webim1.0目录部署到web服务器通过url访问index.html。
 
-## WEB-IM功能演示
+## Web-IM功能演示
 
 功能操作页面如下：
 
@@ -79,7 +82,7 @@ appKey : 'easemob-demo#chatdemoui'
 
 ![alt text](/webIM_del.png "Title")
 
-## WEB-IM功能说明
+## Web-IM 功能说明
 
 easemob webim sdk已支持如下功能：
 

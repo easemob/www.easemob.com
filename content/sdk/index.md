@@ -640,7 +640,7 @@ var _hmt = _hmt || [];
 					</li>
 		        </ul>
 			    <ul class="history_left history_margin_right">
-			      	<h2 class="first">webIM SDK 更新日志</h2>
+			      	<h2 class="first">WebIM SDK 更新日志</h2>
 			      	<li>
 						<h3><em></em><span>版本：V1.0.3 2014-12-11</span></h3>
 						<dl>
