@@ -54,22 +54,13 @@ secondnavios: true
 <pre class="hll"><code class="language-objective_c">
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary 	*)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-
-    // 真机的情况下,notification提醒设置
-    UIRemoteNotificationType notificationTypes = UIRemoteNotificationTypeBadge |
-    UIRemoteNotificationTypeSound |
-    UIRemoteNotificationTypeAlert;
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:notificationTypes];
 
     //注册 APNS文件的名字, 需要与后台上传证书时的名字一一对应
     NSString *apnsCertName = @"chatdemo";
     [[EaseMob sharedInstance] registerSDKWithAppKey:@"easemob-demo#chatdemo" apnsCertName:apnsCertName];
-    [[EaseMob sharedInstance] enableBackgroundReceiveMessage];
+    // 需要在注册sdk后写上该方法
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 
-    [self.window makeKeyAndVisible];
     return YES;
 }
 </code></pre>
@@ -136,6 +127,37 @@ secondnavios: true
     [[EaseMob sharedInstance] application:application didReceiveLocalNotification:notification];
 }
 </code></pre>
+
+
+### 实现其他方法
+
+<pre class="hll"><code class="language-objective_c">
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    [[EaseMob sharedInstance] applicationWillResignActive:application];
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    [[EaseMob sharedInstance] applicationDidEnterBackground:application];
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    [[EaseMob sharedInstance] applicationWillEnterForeground:application];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [[EaseMob sharedInstance] applicationDidBecomeActive:application];
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    [[EaseMob sharedInstance] applicationWillTerminate:application];
+}
+</code></pre>
+
 
 
 ## 如果某个类想监听SDK的回调方法，该类需要符合协议<IChatManagerDelegate>，并且需要注册为listener ,如 MainViewController
