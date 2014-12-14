@@ -61,7 +61,38 @@ A:	一般是由本类多次注册了回调导致，请确定以下方法只执�
 	}
 
 ##		无法收到加好友请求 {#addBuddy}
+
+Q:	无法收到好友请求
+
+A: 请确定您接受好友请求的类是否初始化，并声明了IChatManagerDelegate，实现了注册回调和回调方法。
+
 ## 	无法收到推送	{#notification}
+
+Q:	APP后台时无法收到推送。
+
+A:	环信将notification分为两种，一种是本地通知，一种是apns。当您后台时，长连接还存在，会走didReceiveMessage方法，需要您自己维护本地通知（即LocalNotification）。
+
+Q:  APP彻底关闭，无法收到推送。
+
+A:	您可以通过以下几步检验您的推送
+
+1.	首先需要您[上传APNS推送证书到环信管理后台](http://www.easemob.com/docs/ios/push/certificate/")。
+2.	在环信iOSSDK初始化时填写您的证书名称。
+3.	[注册推送](http://www.easemob.com/docs/ios/ChatDemo_UI/#apns)。
+4.	真机登录环信im账号。
+5.	查看管理后台中，对应im账户下是否有您刚刚写的证书名。（如果没有，请检查您是否得到了deviceToken）
+6.	确定您当前证书是否和您的项目匹配。（开发证书与生产证书需要一一对应）	
+		
+
 ##	 	无法自动登录 {#autoLogin}
+
+Q:	无法自动登录
+
+A:	[iOS设置自动登录](http://www.easemob.com/docs/ios/#section-7)。
+
 ## 	App启动时无法获取历史会话	{#getConversationList}
+
+Q:	APP再次启动，登录成功前无法获取会话列表。
+
+A:	您需要设置[自动登录](http://www.easemob.com/docs/ios/#section-7)。
 

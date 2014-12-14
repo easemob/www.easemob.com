@@ -68,7 +68,7 @@ secondnavios: true
 
 关于EASEMOB_APPKEY，请登录或注册[环信开发者后台(https://console.easemob.com),申请APPKEY后，进行相关配置。
 
-### 配置apns相关函数（需要在真机上运行）
+### 配置apns相关函数（需要在真机上运行）{#apns}
 
 <pre class="hll"><code class="language-objective_c">
 //自定义方法
