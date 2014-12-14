@@ -76,7 +76,7 @@ Q:  APP彻底关闭，无法收到推送。
 
 A:	您可以通过以下几步检验您的推送
 
-1.	首先需要您[上传APNS推送证书到环信管理后台](http://www.easemob.com/docs/ios/push/certificate/")。
+1.	首先需要您[上传APNS推送证书到环信管理后台](http://www.easemob.com/docs/ios/push/certificate/)。
 2.	在环信iOSSDK初始化时填写您的证书名称。
 3.	[注册推送](http://www.easemob.com/docs/ios/ChatDemo_UI/#apns)。
 4.	真机登录环信im账号。
