@@ -15,7 +15,7 @@ Q: 	framework not found Metal for architecture armv7s
 
 A: 	需要升级到xcode6。
 
-Q:![xcode6Need icon](xcode6Need.png)
+Q:![xcode6Need icon](/xcode6Need.png)
 
 A:	升级xcode6。
 
