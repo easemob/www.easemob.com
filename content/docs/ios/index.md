@@ -105,6 +105,7 @@ secondnavios: true
 当App重新启动时，如果设置了自动登录，并且首次登录成功，SDK可以知道您当前的用户名，替您完成登录的操作，并且可以在登录完成前，得到会话列表等信息。自动登录需要设置以下地方
 
 1、
+
 <pre class="hll"><code class="language-objective_c">
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// 初始化SDK
@@ -116,7 +117,9 @@ secondnavios: true
     return YES;
 }
 </code></pre>
+
 2、
+
 <pre class="hll"><code class="language-objective_c">
 // 判断当前是否设置了自动登录
 BOOL isAutoLogin = [self.chatManager isAutoLoginEnabled];
