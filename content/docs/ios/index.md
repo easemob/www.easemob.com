@@ -98,3 +98,55 @@ secondnavios: true
 	    //退出到登录页面代码
 	}
 </code></pre>
+
+
+#### 自动登录
+
+当App重新启动时，如果设置了自动登录，并且首次登录成功，SDK可以知道您当前的用户名，替您完成登录的操作，并且可以在登录完成前，得到会话列表等信息。自动登录需要设置以下地方
+
+1、
+<pre class="hll"><code class="language-objective_c">
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	// 初始化SDK
+    [[EaseMob sharedInstance] registerSDKWithAppKey:EaseMobSDK
+                                       apnsCertName:apnsCerName];
+    // 实现SDK方法
+    [[EaseMob sharedInstance] application:application
+            didFinishLaunchingWithOptions:launchOptions];
+    return YES;
+}
+</code></pre>
+2、
+<pre class="hll"><code class="language-objective_c">
+// 判断当前是否设置了自动登录
+BOOL isAutoLogin = [self.chatManager isAutoLoginEnabled];
+if (!isAutoLogin) {
+	[self.chatManager asyncLoginWithUsername:loginAccount
+									password:pwd
+								  completion:^(NSDictionary *loginInfo, EMError *error) {
+                                          if (!error) {
+                                              // 当登录成功后，设置自动登录
+                                              [self.chatManager setIsAutoLoginEnabled:YES];
+                                          }else {
+                                              NSLog(@"error--%@",error);
+                                          }
+                                      } onQueue:nil];
+}
+</code></pre>
+
+监听自动登录回调
+
+<pre class="hll"><code class="language-objective_c">
+#pragma mark - IChatManagerDelegate
+// 自动登录，或者调用- (void)asyncLoginWithUsername:(NSString *)username
+//                  password:(NSString *)password;
+// 方法，会走该回调
+-(void)didLoginWithInfo:(NSDictionary *)loginInfo
+                  error:(EMError *)error{
+    if (!error) {
+        NSLog(@"登录成功");
+    }else {
+        NSLog(@"登录失败");
+    }
+}
+</code></pre>
