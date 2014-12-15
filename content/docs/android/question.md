@@ -5,7 +5,7 @@ secondnavandroid: true
 ---
 # android QA
 
-##前期SDK初始化工作{#init}
+##前期SDK初始化工作 {#init}
 
 Q:环信的appkey可以写到代码里面吗？
 
@@ -15,7 +15,7 @@ Q：SDK的初始化可以不写在application里面吗？
 
 A：不允许，要写在application的oncreate方法里面，以保证初始化成功
 
-##登陆{#login}
+##登陆 {#login}
 
 Q:SDK默认是自动登录，我想手动登陆，可以取消吗？
 
@@ -24,7 +24,7 @@ A：可以，只要调用EMChat.getInstance().setAutoLogin(false)放在SDK初始
 注：如果要实现每次手动登陆，一定要关掉自动登录
 
 
-##被踢下线{#offline}
+##被踢下线 {#offline}
 
    ![alt text](/conflict.jpg "Title")
    
@@ -74,23 +74,23 @@ A：可以，只要调用EMChat.getInstance().setAutoLogin(false)放在SDK初始
 	}
 	
 
-##群组{#group}
+##群组 {#group}
 
-    未登录情况下群组是获取不到的，本地数据库中如果没有存储群组列表会从服务器获取，就调EMGroupManager.getInstance().getGroupsFromServer()，如果本地已经存储了群组列表就要先调EMGroupManager.getInstance().loadAllGroups()从本地db获取群组放到内存中,在内存中获取群组列表调EMGroupManager.getInstance().getAllGroups()
+   未登录情况下群组是获取不到的，本地数据库中如果没有存储群组列表会从服务器获取，就调EMGroupManager.getInstance().getGroupsFromServer()，如果本地已经存储了群组列表就要先调EMGroupManager.getInstance().loadAllGroups()从本地db获取群组放到内存中,在内存中获取群组列表调EMGroupManager.getInstance().getAllGroups()
 	
 
-##聊天记录存储{#chathistory}
+##聊天记录存储 {#chathistory}
 
-    未登录情况下聊天记录是获取不到的， 登陆后先调用            EMChatManager.getInstance().loadAllConversations()放到内存中，从内存中在调用EMChatManager.getInstance().getAllConversations()去获取所有会话
+   未登录情况下聊天记录是获取不到的， 登陆后先调用            EMChatManager.getInstance().loadAllConversations()放到内存中，从内存中在调用EMChatManager.getInstance().getAllConversations()去获取所有会话,
     获取单个会话EMChatManager.getInstance().getConversation(username)
 
-###注册用户失败{#register}
+###注册用户失败 {#register}
 ![alt text](/registererror.jpg "Title")
 createAccountOnServer这个是注册用户的方法，如果出现了not-allowed(405)错误，那就让他去http://console.easemob.com/ 找，把那个用户注册模式切换成开放模式，如下图：
 
 ![alt text](/1.jpg "Title")
 
 
-##打包混淆{#pack}
+##打包混淆 {#pack}
      如果apk要打包混淆的话，debug模式要关闭，否则会报错
 
