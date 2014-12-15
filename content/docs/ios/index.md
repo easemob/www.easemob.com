@@ -122,19 +122,19 @@ secondnavios: true
 
 <pre class="hll"><code class="language-objective_c">
 // 判断当前是否设置了自动登录
-BOOL isAutoLogin = [self.chatManager isAutoLoginEnabled];
-if (!isAutoLogin) {
-	[self.chatManager asyncLoginWithUsername:loginAccount
-									password:pwd
-								  completion:^(NSDictionary *loginInfo, EMError *error) {
-                                          if (!error) {
-                                              // 当登录成功后，设置自动登录
-                                              [self.chatManager setIsAutoLoginEnabled:YES];
-                                          }else {
-                                              NSLog(@"error--%@",error);
-                                          }
-                                      } onQueue:nil];
-}
+BOOL isAutoLogin = [[EaseMob sharedInstance].chatManager isAutoLoginEnabled];
+    if (!isAutoLogin) {
+        [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:loginAccount
+                                                            password:pwd
+                                                          completion:^(NSDictionary *loginInfo, EMError *error) {
+                                                              if (!error) {
+                                                                  // 当登录成功后，设置自动登录
+                                                                  [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
+                                                              }else {
+                                                                  NSLog(@"error--%@",error);
+                                                              }
+                                                          } onQueue:nil];
+    }
 </code></pre>
 
 监听自动登录回调
