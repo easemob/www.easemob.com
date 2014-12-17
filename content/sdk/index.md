@@ -670,22 +670,18 @@ var _hmt = _hmt || [];
 						</dl>
 					</li>
 					<div class="web_ul">
-						<!--<li>
-							<h3><em></em><span>版本：V2.0.8 2014-08-28</span></h3>
+						<li>
+							<h3><em></em><span>版本：V1.0.4 2014-12-17</span></h3>
 							<dl>
 								<dt>
-								    <span>新功能/改进：<br/>
-								    
-										1、EMMessage中新添加了isOfflineMessage属性，在didReceiveMessage的时候， 可以根据是否为离线消息而决定是否重绘界面。
-	同时在offline message在接收过程中， 会有willReceiveOfflineMessages和didFinishedReceiveOfflineMessages：发出，用户可以根据此事件决定是否需要重绘UI。<br/>
-										2、屏蔽群消息：接收并提醒 && 只接收不提醒。<br>
-	                                    Bug Fix：<br/>
-										1、消息中的图片缩略图，在某些情况下，size.height为0。<br/>
-										2、修正断线重连方面：切到后台，3分钟后，切回前台，有时会掉线的问题。<br/>
+								    <span>                         Bug Fix：<br/>1、修复bug <br/>
+		群聊位置消息作为单聊消息处理<br/>
+			  2、修改bug <br/>
+		好友列表为空时陌生人消息不显示<br/>
 	                                </span>
 								</dt>
 							</dl>
-						</li>-->
+						</li>
 					</div>
 					<!-- <li>
 						<h3><em></em><a href="javascript:void(0);" class="web_more" onclick="webToggle()"><span>更多……</span></a></h3>
