@@ -32,7 +32,7 @@ var _hmt = _hmt || [];
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
-						<a  id="androidHref" class="ios_btn web_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/WEB-IM-20141210.zip">下载WebIM版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn web_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/WEB-IM-20141217.zip">下载WebIM版开发包（SDK+文档+Demo)</a>
  						
 						<span><em><a href="/docs/webim/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/webim/quickstartinapp/" target="_blank">WebIM SDK 集成指南</a></em>V 1.0.3　</span>
 					</li>
