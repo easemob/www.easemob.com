@@ -94,7 +94,7 @@ createAccountOnServer这个是注册用户的方法，如果出现了not-allowed
 
 ![alt text](/1.jpg "Title")
 
-###消息透传 (#payload)
+###消息透传 {#payload}
 
 Q：注册了接收透传消息的广播，对方发送透传消息成功了，为什么收不到透传消息？
 
