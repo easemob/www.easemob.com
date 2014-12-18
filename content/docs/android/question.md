@@ -77,6 +77,10 @@ A：可以，只要调用EMChat.getInstance().setAutoLogin(false)放在SDK初始
 ##群组 {#group}
 
    未登录情况下群组是获取不到的，本地数据库中如果没有存储群组列表会从服务器获取，就调EMGroupManager.getInstance().getGroupsFromServer()，如果本地已经存储了群组列表就要先调EMGroupManager.getInstance().loadAllGroups()从本地db获取群组放到内存中,在内存中获取群组列表调EMGroupManager.getInstance().getAllGroups()
+   
+Q：屏蔽群组出现forbidden(403) Owner privileges required是什么原因？
+
+A:检查你是否已经对该群组做了屏蔽，再次调用屏蔽的方法则会返回上述问题
 	
 
 ##聊天记录存储 {#chathistory}
@@ -90,6 +94,11 @@ createAccountOnServer这个是注册用户的方法，如果出现了not-allowed
 
 ![alt text](/1.jpg "Title")
 
+###消息透传 (#payload)
+
+Q：注册了接收透传消息的广播，对方发送透传消息成功了，为什么收不到透传消息？
+
+A：检查一下是否在注册完广播以后加上EMChat.getInstance().setAppInited()
 
 ##打包混淆 {#pack}
      如果apk要打包混淆的话，debug模式要关闭，否则会报错
