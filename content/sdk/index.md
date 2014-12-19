@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK-20141107.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://www.easemob.com/downloads/iOSSDK-20141219.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.1　</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.2　</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -44,6 +44,33 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+			      	<li>
+						<h3><em></em><span>版本：V2.1.2 2014-12-19</span></h3>
+						<dl>
+							<dt>
+							    <span>功能改进：<br/>
+							    
+									1、需要新引入libsqlite3.dylib；<br/>
+2、在登陆成功之后调用[importDataToNewDatabase]将数据导入新的数据库，使用示例:<br/>
+		EMError *error = [[EaseMob sharedInstance].chatManager importDataToNewDatabase];
+       if (!error) {
+          error = [[EaseMob sharedInstance].chatManager loadDataFromDatabase];
+       }；<br/>
+3、检测工程中编译产生的所有error和warning，接口的更改会造成编译的失败或警告。<br/>
+4、离线消息需要监听[didFinishedReceiveOfflineMessages:]回调方法，不会在[didReceiveMessage:]返回；<br/>
+5、cmd类型的消息监听[didReceiveCmdMessage:]，不会在[didReceiveMessage:]返回<br/>
+									
+									替换快捷方法: <br/>
+setp1、将旧的sdk从工程中删除，导入新的sdk；<br/>
+setp2、编译工程，会出现一系列的warning;<br/>
+setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br/>
+                                    Bug Fix：<br/>
+									1、修复：附件默认下载状态。<br/>
+									2、修复：设置自动登录，没网情况下启动app，再连网会自动进行重新登录。<br>
+                                </span>
+							</dt>
+						</dl>
+					</li>
 			      	<li>
 						<h3><em></em><span>版本：V2.1.1 2014-11-07</span></h3>
 						<dl>
