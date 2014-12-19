@@ -15,17 +15,11 @@ secondnavios: true
 	{
 		self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 		self.window.backgroundColor = [UIColor whiteColor];
-   
-		// 真机的情况下,notification提醒设置
-		UIRemoteNotificationType notificationTypes = UIRemoteNotificationTypeBadge |
-		UIRemoteNotificationTypeSound |
-		UIRemoteNotificationTypeAlert;
-		[[UIApplication sharedApplication] registerForRemoteNotificationTypes:notificationTypes];
 
 		//注册 APNS文件的名字, 需要与后台上传证书时的名字一一对应
 		NSString *apnsCertName = @"chatdemoui";
 		[[EaseMob sharedInstance] registerSDKWithAppKey:@"easemob-demo#chatdemoui" apnsCertName:apnsCertName];
-		[[EaseMob sharedInstance] enableBackgroundReceiveMessage];
+		
 		[[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     
 		[self.window makeKeyAndVisible];
