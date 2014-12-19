@@ -44,7 +44,7 @@ http状态返回代码 5xx（服务器错误）这些状态代码表示服务器
 | 400        | illegal_argument | "password or pin must provided" | 注册用户时json中提供了password但是值未空字符 |
 | 400       |duplicate_unique_property_exists | "Application 4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5Entity user requires that property named username be unique, value of dddd exists" |  用户名已存在, dddd这个用户名在该app下已经存在 |
 | 400        | illegal_argument | "newpassword is required" |  修改用户密码的请求体没提供newpassword属性 |
- 400        |illegal_argument | "group member username1 doesn't exist" |  批量添加群组时预加入群组的新成员username不存在 |
+| 400        |illegal_argument | "group member username1 doesn't exist" |  批量添加群组时预加入群组的新成员username不存在 |
 | 401        |unauthorized | "registration is not open, please contact the app admin" |  app的用户注册模式为授权注册,但是注册用户时请求头没带token |
 | 401        |auth_bad_access_token | "Unable to authenticate due to corrupt access token" | 发送请求时使用的token错误, 注意:不是token过期 |
 | 401        |auth_bad_access_token| "Unable to authenticate" | 无效token, 符合token的格式,但是该token不是接受请求的系统生成的,系统无法识别该token  |
