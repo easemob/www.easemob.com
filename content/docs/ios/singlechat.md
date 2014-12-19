@@ -435,7 +435,7 @@ SDK中提供了方便的新消息提醒功能。可以在收到消息时调用�
     	voiceSound = [[EaseMob sharedInstance].chatManager peekRecorderVoiceMeter];
 	
 		// 得到音量大小，之后用户自定义操作
-		if (0 < voiceSound <= 0.05) {
+		if (0 < voiceSound && voiceSound <= 0.05) {
 	
 		}else if (0.05<voiceSound && voiceSound<=0.10) {
         
