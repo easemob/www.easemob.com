@@ -641,6 +641,18 @@ var _hmt = _hmt || [];
 		        </ul>
 			    <ul class="history_left history_margin_right">
 			      	<h2 class="first">WebIM SDK 更新日志</h2>
+			      		<li>
+							<h3><em></em><span>版本：V1.0.4 2014-12-17</span></h3>
+							<dl>
+								<dt>
+								    <span>                         Bug Fix：<br/>1、修复bug <br/>
+		群聊位置消息作为单聊消息处理<br/>
+			  2、修改bug <br/>
+		好友列表为空时陌生人消息不显示<br/>
+	                                </span>
+								</dt>
+							</dl>
+						</li>
 			      	<li>
 						<h3><em></em><span>版本：V1.0.3 2014-12-11</span></h3>
 						<dl>
@@ -669,20 +681,6 @@ var _hmt = _hmt || [];
 							</dt>
 						</dl>
 					</li>
-					<div class="web_ul">
-						<li>
-							<h3><em></em><span>版本：V1.0.4 2014-12-17</span></h3>
-							<dl>
-								<dt>
-								    <span>                         Bug Fix：<br/>1、修复bug <br/>
-		群聊位置消息作为单聊消息处理<br/>
-			  2、修改bug <br/>
-		好友列表为空时陌生人消息不显示<br/>
-	                                </span>
-								</dt>
-							</dl>
-						</li>
-					</div>
 					<!-- <li>
 						<h3><em></em><a href="javascript:void(0);" class="web_more" onclick="webToggle()"><span>更多……</span></a></h3>
 					</li> -->
