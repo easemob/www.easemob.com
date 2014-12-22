@@ -300,12 +300,14 @@ var delFriend = function(user) {
 conn.sendTextMessage({
     to : to,//用户登录名，sd根据appkey和domain组织jid，如easemob-demo#chatdemoui_**TEST**@easemob.com，中"to:TEST",下同
     msg :'hello world！' //文本消息
+    //ext :{"extmsg":"extends messages"}//用户自扩展的消息内容（群聊用法相同）
 });
 
 //发送表情消息，调用接口同文本消息
 conn.sendTextMessage({
     to : to,
     msg :'hello world！[(*)][(#)]' //文本消息+表情
+    //ext:{"extmsg":"extends messages"}//用户自扩展的消息内容（群聊用法相同）
 });
 </code></pre>
 
@@ -346,6 +348,7 @@ function sendPic() {
             onFileUploadComplete : function(data) {
                 //处理图片上传成功，如本地消息显示
             }
+           // ext:{"extmsg":"extends messages"}//用户自扩展的消息内容（群聊用法相同）
         };
         conn.sendPicture(opt);
         return;
@@ -391,6 +394,7 @@ function sendAudio () {
             onFileUploadComplete : function(data) {
                 //处理上传音频成功，如本地消息提示发送成功
             }
+            //ext:{"extmsg":"extends messages"}//用户自扩展的消息内容（群聊用法相同）
         };
         conn.sendAudio(opt);
         return;
@@ -423,6 +427,7 @@ conn.init()中注册不同消息接收handler之后，可自行解析消息体�
 var handlePictureMessage = function(message) {
 var filename = message.filename;//文件名称，带文件扩展名
 var from = message.from;//文件的发送者
+var ext = message.ext;//获取用户的扩展信息（群聊用法相同）
 var mestype = message.type;//消息发送的类型是群组消息还是个人消息
 ......
 ...
@@ -513,6 +518,7 @@ conn.sendTextMessage({
     to : to,
     type : 'groupchat',
     msg :'hello world！' //文本消息
+	
 });
 
 //发送表情消息，调用接口同文本消息
