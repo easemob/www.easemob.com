@@ -25,7 +25,7 @@ secondnavandroid: true
 
 ###  环信UI demo
 
-UI demo，包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，位置，群聊，登录，注册，退出登录等。
+UI demo，包含了一个接近微信的完整的聊天app的所有功能, 包括发文字，表情，图片，语音，文件，视频，位置，群聊，登录，注册，退出登录等。
 
 环信UI demo源代码已在github上开源供开发者下载，以帮助开发者更好的学习了解环信SDK。
 
@@ -55,10 +55,10 @@ UI demo，包含了一个接近微信的完整的聊天app的所有功能, 包�
 ## 从源代码级别深入了解环信demo (Android)
 
  
-### 在Eclipse/IDEA中创建环信demo project 
+### 在Eclipse/IDEA中导入环信demo project 
 
 
-Eclipse IDE： 打开菜单“ File - New - Project“，选择”Android Project from Existing Code”， 选择解压后的"androidsdk/examples"目录下的chatdemo-nonui路径,点击“Finish”。
+Eclipse IDE： 打开菜单“ File - import“，选择”Existing Android Code Into Workspace”， 选择解压后的"androidsdk/examples"目录下的ChatDemoUI路径,点击“Finish”。
 
 ![alt text](/guide1.png "demo")
 
@@ -67,15 +67,11 @@ Eclipse IDE： 打开菜单“ File - New - Project“，选择”Android Projec
 
 #### 初始化
 
-见DemoApplication
+见HXSDKHelper
 
 <pre class="hll"><code class="language-java">
-public class DemoApplication extends Application {
+ public synchronized boolean onInit(Context context) {
 
-    public static Context appContext;
-    @Override
-    public void onCreate() { 
-       super.onCreate();
        appContext = this;
        int pid = android.os.Process.myPid();
         String processAppName = getAppName(pid);
@@ -106,6 +102,7 @@ public class DemoApplication extends Application {
        //设置语音消息播放是否设置为扬声器播放 默认为true
        options.setUseSpeaker(false);
     }
+    
     private String getAppName(int pID) {
 		String processName = null;
 		ActivityManager am = (ActivityManager) this
@@ -127,13 +124,12 @@ public class DemoApplication extends Application {
 			}
 		}
 		return processName;
-	}
 }
 </code></pre>
 
 #### 注册
 
-见RegisterActivity，注意用户名会自动转为小写字母
+见RegisterActivity，注意用户名会自动转为小写字母(强烈建议开发者通过后台调用rest接口去注册环信id，客户端注册方法不提倡使用)
 	
 <pre class="hll"><code class="language-java">
 new Thread(new Runnable() {
@@ -149,7 +145,7 @@ new Thread(new Runnable() {
 
 #### 登陆
 
-见LoginActivity
+见LoginActivity（必须在客户端调登陆方法）
 
 <pre class="hll"><code class="language-java">
 //调用sdk登陆方法登陆聊天服务器
@@ -174,7 +170,7 @@ EMChatManager.getInstance().login(username, password, new EMCallBack() {
 
 ####  注册listener
 
-接收聊天消息,回执消息，好友同意，好友请求等监听变化：见MainActivity.java
+接收聊天消息,回执消息，透传消息，好友同意，好友请求等监听变化：见MainActivity.java
 
 注册一个接收消息的BroadcastReceiver
 
@@ -191,6 +187,15 @@ registerReceiver(msgReceiver, intentFilter);
 IntentFilter ackMessageIntentFilter = new IntentFilter(EMChatManager.getInstance().getAckMessageBroadcastAction());
 ackMessageIntentFilter.setPriority(3);
 registerReceiver(ackMessageReceiver, ackMessageIntentFilter);
+</code></pre>
+
+
+注册一个透传消息的BroadcastReceiver（透传消息不会存入db，可以理解为一条不存db的，不显示在ui的普通消息，或者理解成就是发送的一条指令）
+
+<pre class="hll"><code class="language-java">
+IntentFilter cmdMessageIntentFilter = new IntentFilter(EMChatManager.getInstance().getCmdMessageBroadcastAction());
+cmdMessageIntentFilter.setPriority(3);
+registerReceiver(cmdMessageReceiver, cmdMessageIntentFilter);
 </code></pre>
 		
 注册一个好友请求同意好友请求等的BroadcastReceiver
@@ -225,7 +230,7 @@ TextMessageBody body = new TextMessageBody(tvMsg.getText().toString());
 msg.addBody(body);
 try {
    //发送消息
-   EMChatManager.getInstance().sendMessage(msg);
+   EMChatManager.getInstance().sendMessage(msg,callback);
 } catch (Exception e) {
    e.printStackTrace();
 }
@@ -253,6 +258,24 @@ private class NewMessageBroadcastReceiver extends BroadcastReceiver {
 
 <pre class="hll"><code class="language-java">
 private BroadcastReceiver ackMessageReceiver = new BroadcastReceiver() {
+	
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        //消息id
+        String msgId = intent.getStringExtra("msgid");
+        ......
+        ......
+        ......
+        abortBroadcast();
+	}
+};
+</code></pre>
+
+
+#### 透传消息BroadcastReceiver：见MainActivity.java #### 
+
+<pre class="hll"><code class="language-java">
+private BroadcastReceiver cmdMessageReceiver = new BroadcastReceiver() {
 	
     @Override
     public void onReceive(Context context, Intent intent) {
