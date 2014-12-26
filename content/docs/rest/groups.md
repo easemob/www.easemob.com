@@ -163,6 +163,54 @@ curl -X POST 'https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ffba
 }
 </code></pre>
 
+
+## 修改群组信息 {#update}
+修改成功的数据行会返回true,失败为false. 请求body只接收groupname，description，maxusers　三个属性，传其他字段会被忽略．
+
+- Path : /{org_name}/{app_name}/chatgroups/{group_id}
+- HTTP Method : PUT
+- URL Params ： 无
+- Request Headers : {"Authorization":"Bearer ${token}"}
+- Request Body ：
+
+<pre class="hll"><code class="language-java">
+{
+    "groupname":"testrestgrp12", //群组名称
+    "description":"update groupinfo", //群组描述
+    "maxusers":300, //群组成员最大数(包括群主), 值为数值类型
+}
+</code></pre>
+
+- Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码：  <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+
+##### curl示例：
+
+<pre class="hll"><code class="language-java">
+curl -X PUT 'https://a1.easemob.com/easemob-demo/chatdemoui/chatgroups/1412957434136' -H 'Authorization: Bearer YWMtG4T5wkOTEeST5V-9lp7f-wAAAUnafsqrQFnCU4gI0-rQImw4523fWqIrXI8' -d '{"groupname":"testrestgrp12","description":"update groupinfo","maxusers":400}'
+</code></pre>
+
+##### Response 示例：
+
+<pre class="hll"><code class="language-java">
+{
+  "action" : "put",
+  "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui",
+  "entities" : [ ],
+  "data" : {
+    "maxusers" : true,
+    "groupname" : true,
+    "description":true
+  },
+  "timestamp" : 1419565633183,
+  "duration" : 30,
+  "organization" : "easemob-demo",
+  "applicationName" : "chatdemoui"
+}
+</code></pre>
+
+
 ## 删除群组 {#delete}
 
 - Path : /{org_name}/{app_name}/chatgroups/{group_id}
