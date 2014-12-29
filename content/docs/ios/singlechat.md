@@ -368,7 +368,7 @@ EMMessage支持用户自定义扩展
 	-(void)didReceiveMessage:(EMMessage *)message
 	{
 		if(message.ext){
-			NSString *value = [message.ext objectForKe:@"key"];			
+			NSString *value = [message.ext objectForKey:@"key"];			
 		}			
 	}
 

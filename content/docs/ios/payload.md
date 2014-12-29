@@ -33,7 +33,7 @@ CMD消息监听
 /**
  * 接收消息
  */
--(void)didReceiveMessage:(EMMessage *)message
+- (void)didReceiveCmdMessage:(EMMessage *)cmdMessage
 {
     //消息处理代码
 }

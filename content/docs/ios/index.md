@@ -111,6 +111,9 @@ secondnavios: true
 	// 初始化SDK
     [[EaseMob sharedInstance] registerSDKWithAppKey:EaseMobSDK
                                        apnsCertName:apnsCerName];
+                                       
+	// 添加SDK监听
+	[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
     // 实现SDK方法
     [[EaseMob sharedInstance] application:application
             didFinishLaunchingWithOptions:launchOptions];
@@ -141,15 +144,20 @@ BOOL isAutoLogin = [[EaseMob sharedInstance].chatManager isAutoLoginEnabled];
 
 <pre class="hll"><code class="language-objective_c">
 #pragma mark - IChatManagerDelegate
-// 自动登录，或者调用- (void)asyncLoginWithUsername:(NSString *)username
-//                  password:(NSString *)password;
-// 方法，会走该回调
--(void)didLoginWithInfo:(NSDictionary *)loginInfo
-                  error:(EMError *)error{
-    if (!error) {
-        NSLog(@"登录成功");
-    }else {
-        NSLog(@"登录失败");
-    }
+// 将要开始自动登录
+-(void)willAutoLoginWithInfo:(NSDictionary *)loginInfo
+                       error:(EMError *)error{
+
 }
+// 自动登录结束
+-(void)didAutoLoginWithInfo:(NSDictionary *)loginInfo
+                      error:(EMError *)error{
+
+}
+</code></pre>
+
+
+#### 自动重连
+<pre class="hll"><code class="language-objective_c">
+
 </code></pre>
