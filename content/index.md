@@ -458,8 +458,8 @@ msg.addBody(new <span class="sb">TextMessageBody</span>(<span class="sr">"你好
             <a href="http://www.timemart.com.cn/" target="_blank"><strong>时间超市</strong></a>
           </li>
           <li>
-            <a href="http://tr.8000ad.com/" target="_blank"><img src="img/xunkeOA.png" /><span class="mask"></span></a>
-            <a href="http://tr.8000ad.com/" target="_blank"><strong>讯科OA</strong></a>
+            <a href="http://www.xk6666.com/" target="_blank"><img src="img/xunkeOA.png" /><span class="mask"></span></a>
+            <a href="http://www.xk6666.com/" target="_blank"><strong>讯科OA</strong></a>
           </li>
           <li>
             <a href="http://m.ayi800.com/android" target="_blank"><img src="img/qiangdan.png" /><span class="mask"></span></a>
