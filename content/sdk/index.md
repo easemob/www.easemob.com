@@ -26,9 +26,9 @@ var _hmt = _hmt || [];
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://downloads.easemob.com/downloads/easemob-sdk-2.1.3.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://downloads.easemob.com/downloads/easemob-sdk-2.1.4.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.3　</span>
+						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.4　</span>
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
@@ -344,6 +344,23 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 
 			    <ul class="history_right">
 				    <h2 class="first">Andriod SDK 更新日志</h2>
+				    <li>
+	                    <h3><em></em><span>版本：V2.1.4 2014-12-31</span></h3>
+						<dl>
+						  <dt>
+						      <span>sdk 更新：<br/>
+						       &nbsp;&nbsp;1.加快重连<br/>
+						       &nbsp;&nbsp;2.优化登录<br/>
+						       &nbsp;&nbsp;3.增加error EMError.USER_REMOVED,用来通知当前用户被移除<br/>
+						        demo app 更新：<br/>
+                                &nbsp;&nbsp;更新百度sdk最新版<br/>
+						         Bug Fix：<br/>
+						        &nbsp;&nbsp;修复小米手机来消息一直震动的问题
+<br/>
+						      </span>
+						  </dt>
+						</dl>
+	                 </li> 
 				    	<li>
 	                    <h3><em></em><span>版本：V2.1.3 2014-11-28</span></h3>
 						<dl>
