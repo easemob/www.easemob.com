@@ -40,7 +40,7 @@ android中错误码的类为<b>EMError</b>。<br/>如：注册时用户返回已
 |UNAUTHORIZED| -1021 |没有权限 （在注册授权模式下，手机端调用注册会有此问题）|
 |CONNECTION_INIT_FAILED| -1022 |由于登录失败导致的初始化连接失败|
 |USER_REMOVED| -1023 | 用户被删除|
-
+|ALREADY_LOGEDIN| -1024 |连接已经存在，如果之前已经存在个连接并且正在重连，如果再次调用login，会返回此error|
 
 <br/>
  
