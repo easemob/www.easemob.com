@@ -12,7 +12,7 @@ sidebar: restsidebar
 
 |  属性     |  字段名    | 数据类型  |  描述  |
 |----------|------------|----------|--------|
-|  环信ID   |  username  | String   | username是用户的primarykey,在appkey的范围内唯一 |
+|  环信ID   |  username  | String   | username是环信用户的唯一标识,在appkey的范围内唯一 |
 |  用户密码 | password   | String   |  用户登录环信使用的密码       |
 
 ## 环信ID规则 {#eid}
@@ -32,9 +32,6 @@ sidebar: restsidebar
 
 因为一个用户的环信ID和他的在App中的用户名并不需要一致， 只需要有一个明确的对应关系， 例如， 用户名是 _stliu@apache.org_, 当这个用户登陆到App的时候， 可以登陆成功之后， 再登陆环信的服务器， 所以这时候， 只需要能够从 _stliu@apache.org_ 推导出这个用户的环信ID即可
 
-我们推荐可以使用 _md5_ 函数， 对用户名进行加密， 因为很多app的用户名选择使用的是 _email_ 或者 _手机号_ 等注册的, 这时候, 用户名实际上也是用户的隐私信息， 如果直接使用这种用户名到环信注册， 相当于app把用户的隐私信息暴露给了环信的， 从环信的角度， 我们也不希望知道App用户的任何信息的
-
-而使用 _md5_ 函数对App用户名进行转换， 则很好的解决了这一问题， 即保证了， 无论App中的用户名规则是什么样子的， 中文， email等等的值， 经过md5函数之后， 都可以得到一个环信中的合法的用户名， 同时， 也保证了App的*真实*用户名信息并没有暴露给环信。
 以下所有API均需要org管理员或app管理员权限才能访问。
 
 强烈建议保护好org管理员,app管理员的用户名和密码以及app的client_id和client_secret,尽量只在APP的服务器后台对环信用户做增删改查的管理，包括新用户注册。为了您的信息安全,请一定不要将org管理员或app管理员的用户名和密码写死在手机客户端中,因为手机app很容易被反编译,从而导致别人获取到您的管理员账号和密码,导致数据泄露 .
@@ -69,7 +66,7 @@ client_id 和 client_secret可以在环信管理后台的app详情页面看到
 
 <pre class="hll"><code class="language-java">
 
-    curl -X POST "https://a1.easemob.com/easemob-demo/chatdemo/token" -d '{"grant_type":"client_credentials","client_id":"YXA6wDs-MARqEeSO0VcBzaqg11","client_secret":"YXA6JOMWlLap_YbI_ucz77j-4-mI0dd"}'
+    curl -X POST "https://a1.easemob.com/easemob-demo/chatdemoui/token" -d '{"grant_type":"client_credentials","client_id":"YXA6wDs-MARqEeSO0VcBzaqg11","client_secret":"YXA6JOMWlLap_YbI_ucz77j-4-mI0dd"}'
 
 </code></pre>
 
@@ -91,7 +88,7 @@ client_id 和 client_secret可以在环信管理后台的app详情页面看到
 - "开放注册"模式：注册环信账号时不用携带管理员身份认证信息；
 - "授权注册"模式：注册环信账号必须携带管理员身份认证信息。<b>推荐使用"授权注册"</b>，这样可以防止某些已经获取了注册url和知晓注册流程的人恶意向服务器大量注册垃圾用户。
 
-注意：以下api中提到的${token}是用户的具体token值，企业管理员和app管理员的token均可。
+注意：以下api中提到的${token}是个变量，使用时需要替换成通过app的client_id和client_secret获取到的token。
 
 ### 开放注册
 
@@ -100,7 +97,7 @@ client_id 和 client_secret可以在环信管理后台的app详情页面看到
 - URL Params ： 无
 - Request Headers : {"Content-Type":"application/json"}
 - Request Body ： {"username":"${用户名}","password":"${密码}", "nickname":"${昵称值}"}  
-	 **// 创建用户时候username 和password是必须的, nickname是可选的. 如果要在创建用户时设置nickname, 请求body是: {"username":"jliu","password":"123456", "nickname":"建国"} 这种形式, 下面的示例不包含nickname .** 批量注册时同此理.
+	 **// 创建用户时候username 和password是必须的, nickname是可选的，这个nickname用于IOS推送. 如果要在创建用户时设置nickname, 请求body是: {"username":"jliu","password":"123456", "nickname":"建国"} 这种形式, 下面的示例不包含nickname .** 批量注册时同此理.
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 
 - 可能的错误码： <br/>
@@ -109,7 +106,7 @@ client_id 和 client_secret可以在环信管理后台的app详情页面看到
 #### curl示例：
 
 <pre class="hll"><code class="language-java">
-curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"username":"jliu","password":"123456"}'
+curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemoui/users" -d '{"username":"jliu","password":"123456"}'
 </code></pre>
 
 #### Response 示例：
@@ -120,7 +117,7 @@ curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"usern
     "application" : "a2e433a0-ab1a-11e2-a134-85fca932f094",
     "params" : { },
     "path" : "/users",
-    "uri" : "https://a1.easemob.com/easemob-demo/chatdemo/users",
+    "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users",
     "entities" : [ {
     	"uuid" : "7f90f7ca-bb24-11e2-b2d0-6d8e359945e4",
     	"type" : "user",
@@ -150,7 +147,7 @@ curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"usern
 #### curl示例：
 
 <pre class="hll"><code class="language-java">
-curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4VUIC2AwZGzUjVbPp_4qRD5k" -i  "https://a1.easemob.com/easemob-demo/chatdemo/users" -d '{"username":"jliu","password":"123456"}'
+curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4VUIC2AwZGzUjVbPp_4qRD5k" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users" -d '{"username":"jliu","password":"123456"}'
 </code></pre>
 
 #### Response 示例：
@@ -161,7 +158,7 @@ curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4V
 	"application" : "a2e433a0-ab1a-11e2-a134-85fca932f094",
 	"params" : { },
 	"path" : "/users",
-	"uri" : "https://a1.easemob.com/easemob-demo/chatdemo/users",
+	"uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users",
 	"entities" : [ {
 		"uuid" : "7f90f7ca-bb24-11e2-b2d0-6d8e359945e4",
 		"type" : "user",
@@ -849,7 +846,7 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 #### curl示例：
 		
 <pre class="hll"><code class="language-java">
-curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdRxUTjA9CNiZMnQIgk0LEU2" -i  "https://a1.easemob.com/easemob-demo/chatdemo/users/jliu/contacts/users/yantao"
+curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdRxUTjA9CNiZMnQIgk0LEU2" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/jliu/contacts/users/yantao"
 </code></pre>
 
 #### Respone 示例：
@@ -891,7 +888,7 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 #### curl示例：
 		
 <pre class="hll"><code class="language-java">
-curl -X DELETE -i -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdRxUTjA9CNiZMnQIgk0LEU2" "https://a1.easemob.com/easemob-demo/chatdemo/users/stliu/contacts/users/yantao"
+curl -X DELETE -i -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdRxUTjA9CNiZMnQIgk0LEU2" "https://a1.easemob.com/easemob-demo/chatdemoui/users/stliu/contacts/users/yantao"
 </code></pre>
 
 #### Respone 示例：
@@ -902,7 +899,7 @@ curl -X DELETE -i -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10I
   "application" : "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
   "params" : { },
   "path" : "/users/stliu/contacts",
-  "uri" : "https://a1.easemob.com/easemob-demo/chatdemo/users/stliu/contacts/users/yantao",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users/stliu/contacts/users/yantao",
   "entities" : [ {
     "uuid" : "aa6160da-eb01-11e3-ab09-15edd986e7b7",
     "type" : "user",

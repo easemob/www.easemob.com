@@ -8,7 +8,7 @@ sidebar: restsidebar
 
 环信提供了REST API 来管理app中的群组
 
-## 获取app中所有的群组ID {#getallgroups}
+## 获取app中所有的群组 {#getallgroups}
 
 - Path : /{org_name}/{app_name}/chatgroups
 - HTTP Method : GET
@@ -36,14 +36,18 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
     "entities": [],
     "data": [
         {
-            "groupid": "1404705934830"
+            "groupid": "1417493378619",
+            "groupname": "im01",
+            "owner": "easemob-demo#chatdemoui_sh1202im01",
+            "affiliations": 3
         },
         {
-            "groupid": "1404114807341"
-        },
-        {
-            "groupid": "1404268812888"
-        }    ],
+            "groupid": "1417676628306676",
+            "groupname": "jianguoGR",
+            "owner": "easemob-demo#chatdemoui_jianguo",
+            "affiliations": 1
+        }
+     ],
     "timestamp": 1404932824158,
     "duration": 3551,
     "organization": "easemob-demo",
@@ -53,7 +57,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 </code></pre>
 
 
-## 获取一个或者多个群组的详情 {#getgroups}         
+## 获取一个或者多个群组的详情 {#getgroups}
 
 - Path : /{org_name}/{app_name}/chatgroups/{group_id1},{group_id2}
 - HTTP Method : GET
@@ -290,7 +294,7 @@ curl -X GET 'https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ffbaa
 
 ## 在群组中添加一个人 {#addmember}
 
-- Path : /{org_name}/{app_name}/chatgroups/{group_id}/users/{user_primary_key}
+- Path : /{org_name}/{app_name}/chatgroups/{group_id}/users/{username}
 - HTTP Method :  POST 
 - URL Params ： 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
@@ -329,7 +333,7 @@ curl -X POST 'https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ffba
 
 ## 在群组中减少一个人 {#deletemember}
 
-- Path : /{org_name}/{app_name}/chatgroups/{group_id}/users/{user_primary_key}
+- Path : /{org_name}/{app_name}/chatgroups/{group_id}/users/{username}
 - HTTP Method : DELETE 
 - URL Params ： 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
