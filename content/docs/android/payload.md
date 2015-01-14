@@ -21,7 +21,7 @@ CmdMessageBody cmdBody=new CmdMessageBody(action);
 String toUsername="test1";//发送给某个人
 cmdMsg.setReceipt(toUsername);
 cmdMsg.setAttribute("a", "a");//支持自定义扩展
-message.addBody(body); 
+cmdMsg.addBody(cmdBody); 
 EMChatManager.getInstance().sendMessage(message, new EMCallBack());
  
 </code></pre>
