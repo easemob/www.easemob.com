@@ -697,11 +697,26 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 		        </ul>
 			    <ul class="history_left history_margin_right">
 			      	<h2 class="first">WebIM SDK 更新日志</h2>
+						<li>
+							<h3><em></em><span>版本：V1.0.4.1 2015-1-15</span></h3>
+							<dl>
+								<dt>
+								 <span>新功能：<br/>
+			  1、收到文件消息通知，暂不支持下载<br/>
+			  2、收到视频消息通知，咱不支持下载<br/>
+								</dt>
+								<dt>
+								    <span>Bug Fix：<br/>修复bug <br/>
+		修复不点‘退出’按钮直接关闭浏览器下次登录消息丢失的bug<br/>
+			                        </span>
+								</dt>
+							</dl>
+						</li>
 			      		<li>
 							<h3><em></em><span>版本：V1.0.4 2014-12-17</span></h3>
 							<dl>
 								<dt>
-								    <span>                         Bug Fix：<br/>1、修复bug <br/>
+								    <span>Bug Fix：<br/>1、修复bug <br/>
 		群聊位置消息作为单聊消息处理<br/>
 			  2、修改bug <br/>
 		好友列表为空时陌生人消息不显示<br/>
