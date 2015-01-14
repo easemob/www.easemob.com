@@ -703,11 +703,11 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 								<dt>
 								 <span>新功能：<br/>
 			  1、收到文件消息通知，暂不支持下载<br/>
-			  2、收到视频消息通知，暂不支持下载<br/>
+			  2、收到视频消息通知，暂不支持下载<br/></span>
 								</dt>
 								<dt>
-								    <span>Bug Fix：<br/>修复bug <br/>
-		修复不点‘退出’按钮直接关闭浏览器下次登录消息丢失的bug<br/>
+								    <span>Bug Fix：<br/>1、修复bug <br/>
+		修复不点击‘退出’按钮直接关闭浏览器下次登录消息丢失的bug<br/>
 			                        </span>
 								</dt>
 							</dl>
