@@ -14,7 +14,9 @@ sidebar: restsidebar
 4. 如果选择不限制的话, 则只要是app的注册用户就能够下载
 	
 #### 上传语音图片 {#upload}
+
 > **注意，上传文件大小不能超过10M,超过会上传失败**
+
 > 所需要的 HTTP Header:
 * Authorization -- 获取到的token
 * restrict-access -- 是否限制访问权限, 注意, 这个API并没有考虑这个属性的值, 而是有这个属性即可 .最后, 需要使用http multipart/form-data 形式
