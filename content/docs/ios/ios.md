@@ -5,13 +5,13 @@ secondnavios: true
 ---
 
 
-# iOS 开发指南{#iOS}
+# iOS 开发指南 {#iOS}
 	在您阅读此文档时，我们假定您已经具备了基础的 iOS 应用开发经验，并能够理解相关基础概念。
 	
 ## 注册开发者账号
 请前往 [环信官方网站](http://www.easemob.com/ "环信官方网站") 注册开发者帐号。注册时，您需要提供真实的邮箱和手机号，以方便我们向您发送重要通知并在紧急时刻能够联系到您。如果您没有提供正确可用的邮箱和手机号，我们随时可能关闭您的应用。
 
-## 下载SDK{#downloadsdk}
+## 下载SDK {#downloadsdk}
 您可以到 [环信官方网站](http://www.easemob.com/sdk/ "环信iOSSDK下载链接")  下载环信 SDK。
 
 SDK 下载包中分为如下四部分：
@@ -25,7 +25,7 @@ SDK 下载包中分为如下四部分：
 
 	注: 由于iOS编译的特殊性，SDK中的静态库(.a文件)比较大，实际集成编译出ipa后，只会增加2MB左右。
 	
-## 创建应用{#createappkey}
+## 创建应用 {#createappkey}
 创建应用，请登录[环信开发者中心](https://console.easemob.com/index.html "环信开发者中心"),如果还没有账号，请先注册。
 
 ![createApp icon](/createApp.png)
@@ -45,21 +45,19 @@ SDK 下载包中分为如下四部分：
 _注意：在环信中，不同应用之间通过appKey隔离，不同appKey下的用户不能互通。所以登录用户前，请先确定appkey下是否存在这个用户。_
 
 
-##上传推送证书{#uploadp12}
+##上传推送证书 {#uploadp12}
 
 [制作与上传推送证书](http://www.easemob.com/docs/ios/push/certificate/ "制作与上传推送证书")
 
-##注意事项{#attention}
+##注意事项 {#attention}
 	SDK 最低支持到iOS6.0。
 	SDK 支持arm64 
 	由于机制问题，SDK 比较大，真正打包后，只会使ipa增加2MB左右。
 
 
+##集成演示 {#integrate}
 
-
-##集成演示{#integrate}
-
-### 1.创建项目{#createapp}
+### 1.创建项目 {#createapp}
 
 创建一个新工程Test。
 
@@ -70,7 +68,7 @@ _注意：在环信中，不同应用之间通过appKey隔离，不同appKey下�
 
 ![importSDK icon](/importSDK.png)
 
-### 2.集成SDK{#integratesdk}
+### 2.集成SDK {#integratesdk}
 
 向Build Phases -> Link Binary With Libraries 中添加依赖库
 	
@@ -104,7 +102,7 @@ _* UIDemo中的依赖库因为还多了一些其他UI上的功能，需要添加
 **格式为: -force_load[空格]EaseMobSDK/lib/libEaseMobClientSDKLite.a(静态库的路径)**
 
 1.先添加一个-force_load
-![force_load icon](/force_load1.png)
+![force_load icon](/images/force_load1.png)
 
 2.将静态库拖动到上一步添加的-force_load下面
 ![force_load icon](/force_load2.png)
@@ -112,7 +110,7 @@ _* UIDemo中的依赖库因为还多了一些其他UI上的功能，需要添加
 3.最终效果
 ![force_load icon](/force_load3.png)
 
-### 3.初始化SDK{#initsdk}
+### 3.初始化SDK {#initsdk}
 <span id="registerEaseMob">初始化环信SDK</span>
 需要导入头文件 EaseMob.h
 
@@ -186,7 +184,7 @@ _* UIDemo中的依赖库因为还多了一些其他UI上的功能，需要添加
 `apns注册失败，一般是由于使用了通用证书或者是模拟器调试导致，请检查证书并用真机调试。此处是iOS系统报的错，如仍不能确定，请从网上查找相关资料。`
 
 
-### 4.EaseMobSDK讲解{#analysissdk}
+### 4.EaseMobSDK讲解 {#analysissdk}
 
 EaseMobSDK主要分为两部分，**IChatManager**目录和**IDeviceManager**两部分。
 
@@ -253,7 +251,7 @@ __以上所有方法，都可以在IDeviceManager.h中找到__
 __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 
 
-## 5.EaseMobSDK 使用示例{#usesdk}
+## 5.EaseMobSDK 使用示例 {#usesdk}
 
 
 在EaseMobSDK中，大部分与**网络有关的操作**，都提供了3种调用方法
@@ -262,9 +260,9 @@ __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 * 通过delegate回调的异步方法(以注册用户中代码为例)
 * block异步方法
 
-### 5.1 注册登录{#registerandLogin}
+### 5.1 注册登录 {#registerandLogin}
 
-#### 5.1.1 注册{#register}
+#### 5.1.1 注册 {#register}
 
 客户端注册是为了测试使用，`正式环境中不推荐使用该方式注册环信账号`，注册的流程应该是您服务器通过环信提供的[rest api](http://www.easemob.com/docs/rest/userapi/#im)注册，之后保存到您的服务器或返回给客户端。
 
@@ -340,7 +338,7 @@ __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 
 	@end
 
-#### 5.1.2 登录{#login}
+#### 5.1.2 登录 集成SDK {#login}
 登录提供了三种方法。
 
 1、同步方法：
@@ -412,7 +410,7 @@ __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 	@end
 
 
-#### 5.1.3 自动登录{#autologin}
+#### 5.1.3 自动登录 {#autologin}
 
 自动登录：`即首次登录成功后，不需要再次调用登录方法，再下次app启动时，SDK会自动为您登录。并且如果您再自动登录时登录失败，也可以读取到之前的会话信息。
 
@@ -515,7 +513,7 @@ SDK中，如果发生自动登录，会有以下回调:
 
 	@end
 
-####  5.1.4 重连{#autoconnect}
+####  5.1.4 重连 {#autoconnect}
 
 目前iOS SDK的心跳频率是180秒一次，当您与环信的服务器断开后，以下几种情况会重连：
 
@@ -578,7 +576,7 @@ SDK中，如果发生自动登录，会有以下回调:
 	@end
 
 
-### 5.2 好友管理{#buddy}
+### 5.2 好友管理 {#buddy}
 
 当SDK初始化时，您可以设置是否由SDK主动帮您获取好友，如果未设置，需要您自己调用获取方法获取。
 
@@ -587,7 +585,7 @@ SDK中，如果发生自动登录，会有以下回调:
     // - (void)didFetchedBuddyList:(NSArray *)buddyList error:(EMError *)error方法。
     [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
 
-#### 5.2.1 获取好友列表{#getbuddylist}
+#### 5.2.1 获取好友列表 {#getbuddylist}
 
 虽然环信本身不需要加好友就可以聊天，但是环信中提供了好友关系。该部分不是必须使用的，如果你有自己的好友关系，则不需要使用环信的。
 
@@ -667,7 +665,7 @@ SDK中，如果发生自动登录，会有以下回调:
 	NSArray *buddyList = [[EaseMob sharedInstance].chatManager buddyList];
 
 
-#### 5.1.2 添加好友{#addbuddy}
+#### 5.1.2 添加好友 {#addbuddy}
 
 环信iOS SDK提供了添加好友的方法
 
@@ -679,7 +677,7 @@ SDK中，如果发生自动登录，会有以下回调:
     }
 
 
-#### 5.1.3 收到好友请求{#receiverbuddyrequest}
+#### 5.1.3 收到好友请求 {#receiverbuddyrequest}
 
 当您收到好友请求，如果您没有处理，则您每次登录的时候，服务器都会给你发该请求,所以，请保证您监听回调的类和您的app一直初始化，否则可能会监听不到您离线时别人给你发的好友请求。
 
@@ -731,7 +729,7 @@ SDK中，如果发生自动登录，会有以下回调:
 	@end
 
 
-#### 5.2.4 处理好友请求{#handlebuddyrequest}
+#### 5.2.4 处理好友请求 {#handlebuddyrequest}
 
 ##### 5.2.4.1 同意好友申请
 
@@ -749,7 +747,7 @@ SDK中，如果发生自动登录，会有以下回调:
         NSLog(@"发送拒绝成功");
     }
     
-####  5.2.5 好友申请处理结果回调{#handlebuddyresponse}
+####  5.2.5 好友申请处理结果回调 {#handlebuddyresponse}
 
 	//
 	//  ViewController.m
@@ -813,7 +811,7 @@ SDK中，如果发生自动登录，会有以下回调:
 
 	@end	
 
-####  5.2.6 删除好友{#removebuddy}
+####  5.2.6 删除好友 {#removebuddy}
 
     EMError *error = nil;
     // 删除好友
@@ -826,7 +824,7 @@ SDK中，如果发生自动登录，会有以下回调:
 *	removeFromRemote:是否将自己从对方好友列表中移除
 *	error:错误信息
 
-### 5.3 黑名单{#blocklist}
+### 5.3 黑名单 {#blocklist}
 
 环信的黑名单体系是独立的，与好友无任何关系。也就是说，您可以将任何人加入黑名单，不论他是否与您是好友关系。同时，如果您将好友好友加入黑名单，则他仍然是您的好友，只不过同时也在黑名单中。
 
@@ -839,7 +837,7 @@ SDK中，如果发生自动登录，会有以下回调:
 	}EMRelationship;
 
 
-#### 5.3.1 查询黑名单列表{#searchblocklist}
+#### 5.3.1 查询黑名单列表 {#searchblocklist}
 
 查询黑名单列表，环信提供了四种方法。
 
@@ -922,7 +920,7 @@ SDK中，如果发生自动登录，会有以下回调:
 
 	 NSArray *blockedList = [[EaseMob sharedInstance].chatManager blockedList];
 	 
-#### 5.3.2	添加黑名单{#addblock}
+#### 5.3.2	添加黑名单 {#addblock}
 
 当您执行添加黑名单时，该用户并不会从好友列表中移除。
 
@@ -978,7 +976,7 @@ SDK中，如果发生自动登录，会有以下回调:
 
 	@end
 
-#### 5.3.3	移出黑名单{#removeblock}
+#### 5.3.3	移出黑名单 {#removeblock}
 
 	//
 	//  ViewController.m
@@ -1033,7 +1031,7 @@ SDK中，如果发生自动登录，会有以下回调:
 	@end
 
 
-### 5.4 群组{#group}
+### 5.4 群组 {#group}
 
 群组分为两大类，四小类
 
@@ -1048,7 +1046,7 @@ SDK中，如果发生自动登录，会有以下回调:
 	}EMGroupStyle;
 
 
-#### 5.4.1	查看公开群{#searchpublicgroup}
+#### 5.4.1	查看公开群 {#searchpublicgroup}
 
 获取公开群，提供了三种方法
 
@@ -1121,7 +1119,7 @@ SDK中，如果发生自动登录，会有以下回调:
 	@end	
 
 
-#### 5.4.2	查看已加入群组{#fetchmygrouplist}
+#### 5.4.2	查看已加入群组  {#fetchmygrouplist}
 
 查看所有当前登录账号所在群组，提供了五种方法
 
@@ -1209,7 +1207,7 @@ SDK中，如果发生自动登录，会有以下回调:
 该方法比较特殊，只有在您之前获取过群组列表的情况下才会有值，且不能保证最新。
 
     NSArray *groupList = [[EaseMob sharedInstance].chatManager groupList];	
-#### 5.4.3	创建群组{#creategroup}
+#### 5.4.3	创建群组 {#creategroup}
 
 目前群组支持的属性有:
 
@@ -1298,7 +1296,7 @@ SDK中，如果发生自动登录，会有以下回调:
 	@end
 
 
-#### 5.4.4	申请加入群组（公开群）{#applypublicgroup}
+#### 5.4.4	申请加入群组（公开群） {#applypublicgroup}
 
 只有公开群才能申请加入
 
@@ -1452,7 +1450,7 @@ _公开群，既创建时，类型为eGroupStyle_PublicJoinNeedApproval,或者eG
 
 	@end
 
-#### 5.4.5	处理申请（公开群）{#handlepublicgrouprequest}
+#### 5.4.5	处理申请（公开群） {#handlepublicgrouprequest}
 
 ##### 5.4.5.1	收到申请回调
 
@@ -1600,7 +1598,7 @@ _公开群，既创建时，类型为eGroupStyle_PublicJoinNeedApproval,或者eG
 
 	[[EaseMob sharedInstance].chatManager rejectApplyJoinGroup:@"1410329312753" groupname:@"群组名称" toApplicant:@"8001" reason:@"拒绝原因"];
 
-#### 5.4.6	邀请加入群组（私有群）{#invitationprivategroup}
+#### 5.4.6	邀请加入群组（私有群） {#invitationprivategroup}
 
 私有群邀请，邀请后对方会直接进群。
 
@@ -1677,7 +1675,7 @@ _公开群，既创建时，类型为eGroupStyle_PublicJoinNeedApproval,或者eG
 	@end
 
 
-#### 5.4.7	群邀请回调（私有群/公有群）{#invitationrequest}
+#### 5.4.7	群邀请回调（私有群/公有群） {#invitationrequest}
 
 	//
 	//  ViewController.m
@@ -1731,7 +1729,7 @@ _公开群，既创建时，类型为eGroupStyle_PublicJoinNeedApproval,或者eG
 
 	@end
 
-#### 5.4.8	退出群组{#exitgroup}
+#### 5.4.8	退出群组 {#exitgroup}
 
 退出群组，如果是群成员调用，则为成员离开，如果是创建者离开，则视为群组解散
 
@@ -1805,7 +1803,7 @@ _公开群，既创建时，类型为eGroupStyle_PublicJoinNeedApproval,或者eG
 
 	@end
 	
-#### 5.4.9 解散群组（需要有群主权限）{#destroygroup}
+#### 5.4.9 解散群组（需要有群主权限） {#destroygroup}
 
 解散群组提供了三种方法
 
@@ -1878,7 +1876,7 @@ _公开群，既创建时，类型为eGroupStyle_PublicJoinNeedApproval,或者eG
 	@end
 
 
-#### 5.4.10	更改群属性{#changegroupinfo}
+#### 5.4.10	更改群属性 {#changegroupinfo}
 
 SDK中提供了修改群名称或者群描述的方法。只有创建者可以修改，修改后不会主动通知群成员。
 
@@ -2044,10 +2042,10 @@ SDK中提供了修改群名称或者群描述的方法。只有创建者可以�
 
 	@end
 
-### 5.5 IM{#im}
+### 5.5 IM {#im}
 
 
-#### 5.5.1	发消息{#sendmessage}
+#### 5.5.1	发消息 {#sendmessage}
 
 发消息时，目前可以传多body
 
@@ -2156,7 +2154,7 @@ SDK中提供了修改群名称或者群描述的方法。只有创建者可以�
     [[EaseMob sharedInstance].chatManager asyncSendMessage:message progress:nil];
 
 
-#### 5.5.2	收消息{#receivemessage}
+#### 5.5.2	收消息 {#receivemessage}
 
 收消息分为离线消息，在线消息。
 
@@ -2264,7 +2262,7 @@ SDK中提供了修改群名称或者群描述的方法。只有创建者可以�
 	@end
 
 
-#### 5.5.3	消息解析{#resolvemessage}
+#### 5.5.3	消息解析 {#resolvemessage}
 ##### 5.5.3.1 解析普通消息
 
 	//
@@ -2505,7 +2503,7 @@ SDK中提供了修改群名称或者群描述的方法。只有创建者可以�
 
 	@end
 
-#### 5.5.4 下载附件{#downloadmessage}
+#### 5.5.4 下载附件 {#downloadmessage}
 
 SDK中下载附件分为两种，一个是下载大图(或音视频)，一个是下载缩略图(缩略图在收到消息时会自动下载，提供该方法是为了在自动下载失败时可以主动调用)
 
@@ -2694,11 +2692,11 @@ SDK中提供了三种方法
 
 
 
-### 5.6 消息回执{#messageack}
+### 5.6 消息回执 {#messageack}
 
 环信支持消息回执，可以实现已送达/已读的效果
 
-#### 5.6.1 送达回执{#deliveryack}
+#### 5.6.1 送达回执 {#deliveryack}
 
 该回调缺省是关闭的，需要您调用打开方法（只需要在SDK初始化后调用一次即可）
 
@@ -2759,7 +2757,7 @@ SDK提供了已送达回执，当对方收到您的消息后，您会收到以�
 
 	@end
 
-#### 5.6.2 已读回执{#hasreadresponse}
+#### 5.6.2 已读回执 {#hasreadresponse}
 
 已读回执需要开发者主动调用的。当用户读取消息后，由开发者主动调用方法
 
@@ -2860,11 +2858,11 @@ SDK提供了已送达回执，当对方收到您的消息后，您会收到以�
 
 	@end
 	
-### 5.7 会话{#conversation}
+### 5.7 会话 {#conversation}
 
 会话是SDK中为了方便操作而提供的一种对象，通过它可以方便得操作消息。
 
-#### 5.7.1 创建回话{#createconversation}
+#### 5.7.1 创建回话 {#createconversation}
 
 根据chatter创建一个conversation。
 	
@@ -2873,7 +2871,7 @@ SDK提供了已送达回执，当对方收到您的消息后，您会收到以�
 *	conversationForChatter:获取或创建与8001的会话
 *	isGroup:是否是群聊（如果上面传入的Chatter是群id，则此处为YES）
 
-#### 5.7.2 删除会话{#removeconversation}
+#### 5.7.2 删除会话  {#removeconversation}
 
 
 删除单个会话
@@ -2896,7 +2894,7 @@ SDK提供了已送达回执，当对方收到您的消息后，您会收到以�
 	[[EaseMob sharedInstance].chatManager removeAllConversationsWithDeleteMessages:YES];
 
 
-#### 5.7.3 获取会话列表{#getconversations}
+#### 5.7.3 获取会话列表 {#getconversations}
 
 SDK中提供了三种获取会会话列表的方法
 
@@ -2919,7 +2917,7 @@ SDK中提供了三种获取会会话列表的方法
 
 	[conversation unreadMessagesCount];
 
-#### 5.7.4 操作消息{#managemessage}
+#### 5.7.4 操作消息 {#managemessage}
 
 ##### 5.7.5.1 插入消息到DB
 
@@ -2975,11 +2973,11 @@ SDK中提供了三种获取会会话列表的方法
 	[message updateMessageExtToDB];
 	
 	
-### 5.8 推送设置{#apns}
+### 5.8 推送设置 {#apns}
 	
 环信iOS设备支持离线消息推送。
 
-#### 5.8.1 流程介绍{#apnsprocess}
+#### 5.8.1 流程介绍 {#apnsprocess}
 
 SDK中认为，只有长连接断开了，才应该发送离线消息，也就是说当您APP没有连接到服务器或者彻底关闭后，才会收到APNS。
 
@@ -2993,7 +2991,7 @@ A 发消息msg给 B， B不在线。
 4.	B 用户上线，服务器检测 B 用户连接到服务器，将离线消息空间中的缓存消息发给 B。
 
 
-#### 5.8.2 推送使用方法{#registerapns}
+#### 5.8.2 推送使用方法 {#registerapns}
 
 ##### 5.8.2.1 制作并上传证书
 
