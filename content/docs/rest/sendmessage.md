@@ -7,10 +7,10 @@ sidebar: restsidebar
 # 聊天相关API
 
 
-######  为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。
-
 ### 查看用户在线状态 {#status}
 > 查看一个用户的在线状态
+
+> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{username}/status
 - HTTP Method : GET
@@ -49,6 +49,8 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
 ### 发送文本消息 {#sendmsg}
 
 > 给一个或者多个用户, 或者一个或者多个群组发送消息, 并且通过可选的 _from_ 字段让接收方看到发送方是不同的人,同时, 支持扩展字段, 通过 _ext_ 属性, app可以发送自己专属的消息结构.
+
+> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/messages
 - Request Method : POST
@@ -110,6 +112,8 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
 
 > 给一个或者多个用户, 或者一个或者多个群组发送消息, 并且通过可选的 _from_ 字段让接收方看到发送方是不同的人,同时, 支持扩展字段, 通过 _ext_ 属性, app可以发送自己专属的消息结构.
 
+> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
+
 - Path : /{org_name}/{app_name}/messages
 - Request Method : POST
 - URL Params ： 无
@@ -166,7 +170,9 @@ curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H '
 
 ####发送语音消息  {#sendvoicemsg}
 
->发送语音文件，需要先上传语音文件，然后再发送此消息。（url中的uuid和secret可以从上传后的response获取）
+> 发送语音文件，需要先上传语音文件，然后再发送此消息。（url中的uuid和secret可以从上传后的response获取）
+
+> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**。
 
 - Path : /{org_name}/{app_name}/messages
 - Request Method : POST
@@ -228,7 +234,9 @@ curl -X POST -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-
 
 ####发送视频消息  {#sendvideomsg}
 
->发送视频消息，需要先上传视频文件和视频缩略图文件，然后再发送此消息。（url中的uuid和secret可以从上传后的response获取）
+> 发送视频消息，需要先上传视频文件和视频缩略图文件，然后再发送此消息。（url中的uuid和secret可以从上传后的response获取）
+
+> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/messages
 - Request Method : POST
@@ -291,6 +299,8 @@ curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages' -H 'Au
 ####发送透传消息  {#sendpayloadmsg}
 
 >透传消息：不会在客户端提示（铃声，震动，通知栏等），但可以在客户端监听到的消息推送，具体功能可以根据自身自定义
+
+> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/messages
 - Request Method : POST
