@@ -21,12 +21,12 @@ SDK 下载包中分为如下四部分：
 ## 创建应用{#createappkey}
 创建应用，请登录[环信开发者中心](https://console.easemob.com/index.html "环信开发者中心"),如果还没有账号，请先注册。
 
-![createApp icon](createApp.png)
+![createApp icon](/createApp.png)
 
 * 开放注册:允许在该应用下自由注册新用户（如果是客户端执行注册，需要选择开放模式）
 * 授权注册:只有企业管理员或者应用管理员才能注册用户
 
-![appInfo icon](appInfo.png)
+![appInfo icon](/appInfo.png)
 
 * 应用名称(appKey):由org_name和app_name组成 (org_name#app_name)。各app之间appKey隔离，不同appkey下账号，消息不能互通。
 * 注册模式:用于切换注册模式。(开放注册或授权注册,如果使用客户端注册，需要使用开发注册模式，否则将提示405错误)
@@ -56,18 +56,18 @@ _注意：在环信中，不同应用之间通过appKey隔离，不同appKey下�
 
 创建一个新工程Test。
 
-![createProject icon](createProject.png)
+![createProject icon](/createProject.png)
 
 
 将下载好的SDK文件夹(EaseMobSDK)拖入到项目中，并勾选上Destination
 
-![importSDK icon](importSDK.png)
+![importSDK icon](/importSDK.png)
 
 ### 2.集成SDK{#integratesdk}
 
 向Build Phases -> Link Binary With Libraries 中添加依赖库
 	
-![addFramework icon](addFramework.png)
+![addFramework icon](/addFramework.png)
 
 必须添加的依赖库有
 
@@ -88,7 +88,7 @@ _* UIDemo中的依赖库因为还多了一些其他UI上的功能，需要添加
 
 向Build Settings -> Linking -> Other Linker Flags 中 添加-ObjC`(注意大小写)`
 
-![otherLinker icon](otherLinker.png)
+![otherLinker icon](/otherLinker.png)
 
 
 
@@ -97,13 +97,13 @@ _* UIDemo中的依赖库因为还多了一些其他UI上的功能，需要添加
 **格式为: -force_load[空格]EaseMobSDK/lib/libEaseMobClientSDKLite.a(静态库的路径)**
 
 1.先添加一个-force_load
-![force_load icon](force_load1.png)
+![force_load icon](/force_load1.png)
 
 2.将静态库拖动到上一步添加的-force_load下面
-![force_load icon](force_load2.png)
+![force_load icon](/force_load2.png)
 
 3.最终效果
-![force_load icon](force_load3.png)
+![force_load icon](/force_load3.png)
 
 ### 3.初始化SDK{#initsdk}
 <span id="registerEaseMob">初始化环信SDK</span>
