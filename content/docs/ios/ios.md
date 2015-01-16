@@ -2979,7 +2979,13 @@ SDK中提供了三种获取会会话列表的方法
 
 #### 5.8.1 流程介绍 {#apnsprocess}
 
-SDK中认为，只有长连接断开了，才应该发送离线消息，也就是说当您APP没有连接到服务器或者彻底关闭后，才会收到APNS。
+`SDK中认为，只有长连接断开了，才应该发送离线消息，也就是说当您APP没有连接到服务器或者彻底关闭后，才会收到APNS。如果你需要app在后台或者锁屏时也可以提示，需要自己实现LocalNotification`
+
+通知类型：
+
+*	localNotification:App在后台，或者锁屏，但长连接没断开时使用。
+*	Apns: 长连接断开后使用。
+
 
 以下是离线消息流程（以下为iOS流程）
 
@@ -3040,6 +3046,8 @@ A 发消息msg给 B， B不在线。
 	[[EaseMob sharedInstance].chatManager setApnsNickname:@"APNS昵称"];
 
 #### 5.8.5 免打扰设置  {#unrecive}
+
+该设置是全局设置，对群组也起作用。
 
     EMPushNotificationOptions *options = [[EaseMob sharedInstance].chatManager pushNotificationOptions];
     options.noDisturbing = YES;
@@ -3125,6 +3133,6 @@ A 发消息msg给 B， B不在线。
 	}
 	@end
 
-#### 5.8.2.6 获取免打扰群组id  {#getungroupsid}
+#### 5.8.7 获取免打扰群组id  {#getungroupsid}
 
 	[[EaseMob sharedInstance].chatManager ignoredGroupIds];
