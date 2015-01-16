@@ -1206,6 +1206,7 @@ SDK中，如果发生自动登录，会有以下回调:
 该方法比较特殊，只有在您之前获取过群组列表的情况下才会有值，且不能保证最新。
 
     NSArray *groupList = [[EaseMob sharedInstance].chatManager groupList];	
+    
 #### 5.4.3	创建群组 {#creategroup}
 
 目前群组支持的属性有:
@@ -2990,13 +2991,11 @@ A 发消息msg给 B， B不在线。
 4.	B 用户上线，服务器检测 B 用户连接到服务器，将离线消息空间中的缓存消息发给 B。
 
 
-#### 5.8.2 推送使用方法 {#registerapns}
-
-##### 5.8.2.1 制作并上传证书
+#### 5.8.2  制作并上传证书 {#updateapnscer}
 
 [制作与上传推送证书](http://www.easemob.com/docs/ios/push/certificate/ "制作与上传推送证书")
 
-##### 5.8.2.2 SDK设置
+#### 5.8.3 SDK设置 {#sdkapnssettings}
 
 1、初始化SDK时，设置使用的证书名称
 
@@ -3036,11 +3035,11 @@ A 发消息msg给 B， B不在线。
     	[[EaseMob sharedInstance] application:application didFailToRegisterForRemoteNotificationsWithError:error];
 	}
 
-##### 5.8.2.3 设置推送时Apns昵称显示（需要真机，并且得到deviceToken的情况下）
+#### 5.8.4 设置推送时Apns昵称显示（需要真机，并且得到deviceToken的情况下） {#setapnsnick}
 
 	[[EaseMob sharedInstance].chatManager setApnsNickname:@"APNS昵称"];
 
-##### 5.8.2.4 免打扰设置
+#### 5.8.5 免打扰设置  {#unrecive}
 
     EMPushNotificationOptions *options = [[EaseMob sharedInstance].chatManager pushNotificationOptions];
     options.noDisturbing = YES;
@@ -3054,7 +3053,7 @@ A 发消息msg给 B， B不在线。
 
 *	13点到15点之间不收推送
 
-##### 5.8.2.5 群组免打扰设置
+#### 5.8.6 群组免打扰设置 {#groupunrecive}
 
 设置群组免打扰，提供了三种方法
 
@@ -3126,6 +3125,6 @@ A 发消息msg给 B， B不在线。
 	}
 	@end
 
-##### 5.8.2.6 获取免打扰群组id
+#### 5.8.2.6 获取免打扰群组id  {#getungroupsid}
 
 	[[EaseMob sharedInstance].chatManager ignoredGroupIds];
