@@ -15,7 +15,7 @@ iOS中错误码的类为**EMError**。
 
 |EMError 常量|常量值|描述|
 |---------------|------------|-------------|
-|EMErrorNotFound | 404 |不存在|
+|EMErrorNotFound | 404 |不存在，需要结合Description看具体原因|
 |EMErrorServerMaxCountExceeded| 500 |发送失败，数量达到上限（每人最多100条离线消息，群组成员达到上线）|
 |EMErrorConfigInvalidAppKey| 1000 |无效的appKey|
 |EMErrorServerNotLogin| 1002 |未登录|
