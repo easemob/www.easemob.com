@@ -179,15 +179,15 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
 </code></pre>
 
 
-### 获取未读消息数 {#msgcount}
-> 获取一个IM用户的未读消息数
+### 获取离线消息数 {#msgcount}
+> 获取一个IM用户的离线消息数
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/offline_msg_count
 - HTTP Method : GET
 - URL Params : 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
-- Response Body ： "data" : {"v3y0kf9arx" : 0 }      ----  用户名：v3y0kf9arx ，未读消息数：0条
+- Response Body ： "data" : {"v3y0kf9arx" : 0 }      ----  用户名：v3y0kf9arx ，离线消息数：0条
 - 可能的错误码： <br/>
 404 （此用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
     
