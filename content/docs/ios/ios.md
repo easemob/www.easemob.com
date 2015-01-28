@@ -412,7 +412,7 @@ __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 
 #### 5.1.3 自动登录 {#autologin}
 
-自动登录：`即首次登录成功后，不需要再次调用登录方法，再下次app启动时，SDK会自动为您登录。并且如果您再自动登录时登录失败，也可以读取到之前的会话信息。
+自动登录：`即首次登录成功后，不需要再次调用登录方法，再下次app启动时，SDK会自动为您登录。并且如果您再自动登录时登录失败，也可以读取到之前的会话信息。`
 
 SDK中缺省自动登录是没有打开的，需要您在登录成功后设置，以便您在下次app启动时不需要再次调用环信登录，并且能在没有网的情况下得到会话列表。
 
@@ -2264,6 +2264,8 @@ SDK中提供了修改群名称或者群描述的方法。只有创建者可以�
 
 
 #### 5.5.3	消息解析 {#resolvemessage}
+
+
 ##### 5.5.3.1 解析普通消息
 
 	//
@@ -2863,7 +2865,7 @@ SDK提供了已送达回执，当对方收到您的消息后，您会收到以�
 
 会话是SDK中为了方便操作而提供的一种对象，通过它可以方便得操作消息。
 
-#### 5.7.1 创建回话 {#createconversation}
+#### 5.7.1 创建会话 {#createconversation}
 
 根据chatter创建一个conversation。
 	
@@ -3045,24 +3047,37 @@ A 发消息msg给 B， B不在线。
 #### 5.8.4 设置推送时Apns昵称显示（需要真机，并且得到deviceToken的情况下） {#setapnsnick}
 
 	[[EaseMob sharedInstance].chatManager setApnsNickname:@"APNS昵称"];
-
-#### 5.8.5 免打扰设置  {#unrecive}
-
-该设置是全局设置，对群组也起作用。
+	
+#### 5.8.5 显示推送详情
 
     EMPushNotificationOptions *options = [[EaseMob sharedInstance].chatManager pushNotificationOptions];
-    options.noDisturbing = YES;
-    options.noDisturbingStartH = 13;
-    options.noDisturbingEndH = 15;
+    options.displayStyle = ePushNotificationDisplayStyle_messageSummary;
     [[EaseMob sharedInstance].chatManager asyncUpdatePushOptions:options completion:^(EMPushNotificationOptions *options, EMError *error) {
         if (!error) {
             NSLog(@"设置成功");
         }
     } onQueue:nil];
+    
+*	ePushNotificationDisplayStyle_simpleBanner   简单显示一条"您有一条新消息"的文本
+*	ePushNotificationDisplayStyle_messageSummary 会显示一条具有消息内容的推送消息
+
+#### 5.8.6 免打扰设置  {#unrecive}
+
+该设置是全局设置，对群组也起作用。
+
+	EMPushNotificationOptions *options = [[EaseMob sharedInstance].chatManager pushNotificationOptions];
+	options.noDisturbing = YES;
+	options.noDisturbingStartH = 13;
+	options.noDisturbingEndH = 15;
+	[[EaseMob sharedInstance].chatManager asyncUpdatePushOptions:options completion:^(EMPushNotificationOptions *options, EMError *error) {
+		if (!error) {
+			NSLog(@"设置成功");
+		}
+	} onQueue:nil];
 
 *	13点到15点之间不收推送
 
-#### 5.8.6 群组免打扰设置 {#groupunrecive}
+#### 5.8.7 群组免打扰设置 {#groupunrecive}
 
 设置群组免打扰，提供了三种方法
 
@@ -3134,6 +3149,6 @@ A 发消息msg给 B， B不在线。
 	}
 	@end
 
-#### 5.8.7 获取免打扰群组id  {#getungroupsid}
+#### 5.8.8 获取免打扰群组id  {#getungroupsid}
 
 	[[EaseMob sharedInstance].chatManager ignoredGroupIds];
