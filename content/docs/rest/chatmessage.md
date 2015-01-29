@@ -20,19 +20,19 @@ sidebar: restsidebar
     "payload": {
         "bodies": [ //消息bodies
           {
-             "msg": "hhhhhh", //消息内容
-             "type": "txt" //消息类型。txt:文本消息, img:图片, loc：位置, audio：语音
-    		 "length": 3, //语音时长，单位为秒，这个属性只有语音消息有
-             "url": "", //图片语音等文件的网络url，图片和语音消息有这个属性
-             "filename": "22.png", //文件名字，图片和语音消息有这个属性
-             "secret": "pCY80PdfEeO4Jh9URCOfMQWU9QYsJytynu4n-yhtvAhmt1g9", //获取文件的secret，图片和语音消息有这个属性
-    		 "lat": 39.983805, //发送的位置的纬度，只有位置消息有这个属性
-             "lng": 116.307417, //位置经度，只有位置消息有这个属性
-             "addr": "北京市海淀区北四环西路66号" //位置消息详细地址，只有位置消息有这个属性
+            "msg": "hhhhhh", //消息内容
+            "type": "txt" //消息类型。txt:文本消息, img:图片, loc：位置, audio：语音
+            "length": 3, //语音时长，单位为秒，这个属性只有语音消息有
+            "url": "", //图片语音等文件的网络url，图片和语音消息有这个属性
+            "filename": "22.png", //文件名字，图片和语音消息有这个属性
+            "secret": "pCY80PdfEeO4Jh9URCOfMQWU9QYsJytynu4n-yhtvAhmt1g9", //获取文件的secret，图片和语音消息有这个属性
+            "lat": 39.983805, //发送的位置的纬度，只有位置消息有这个属性
+            "lng": 116.307417, //位置经度，只有位置消息有这个属性
+            "addr": "北京市海淀区北四环西路66号" //位置消息详细地址，只有位置消息有这个属性
           }
         ]
-    	   "ext": { //自定义扩展属性
-           "key1": "value1",   //你设置的key和value的值
+            "ext": { //自定义扩展属性
+            "key1": "value1",   //你设置的key和value的值
     		   ...
          },
     },
@@ -133,6 +133,8 @@ sidebar: restsidebar
 - Request Headers :  {“Content-Type”:”application/json”,”Authorization”:”Bearer ${token}”}
 - Response Body ： 聊天记录(json),默认返回10条记录
 - 可能的错误码： <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+- **此接口限流是最多每秒钟请求一次。如果被限流，会返回503**
+
 
 <pre class="hll"><code class="language-java">
 {
@@ -151,12 +153,12 @@ sidebar: restsidebar
 
 #### 使用示例1：获取某个时间段内的消息
 
-在url后面加上参数`ql=select * where timestamp<1403164734226 and timestamp>1403166586000`, 同上"="后的参数需要转义
+在url后面加上参数`ql=select * where timestamp<1403164734226 and timestamp>1403166586000`, 同上"="后的参数需要转义，如只取最近的消息可以只用timestamp>1403166586000 然后记录最后一条消息的timestamp作为下次获取。
 
 ###### curl 示例：
 
 <pre class="hll"><code class="language-java">
-curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/chatmessages?ql=select+*+where+timestamp%3C1403164734226+and+timestamp%3E1403163586000"
+curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/chatmessages?ql=select+*+where+timestamp>1403164734226"
 </code></pre>
 
 #### 使用示例2：分页获取数据
