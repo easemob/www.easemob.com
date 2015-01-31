@@ -54,7 +54,7 @@ var _hmt = _hmt || [];
 
                                         2、离线消息分为离线cmd消息和离线非cmd消息两种类型；<br/>
 
-                                        4、EMMessage：因为安卓SDK暂时不支持多body，为了统一，IOS SDK请暂时不要使用多body的EMMessage结构。<br>
+                                        3、因为安卓SDK暂时不支持多body，为了统一，IOS SDK请暂时不要使用多body的EMMessage结构。<br>
                                     <span>Bug Fix：<br/>
                                         1、修复：Database的数据存到了Document目录下，迁移到Library目录下；<br/>
 
