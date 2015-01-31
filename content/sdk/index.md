@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20141219.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150131.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.2　</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.3　</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -44,6 +44,34 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+                    <li>
+                        <h3><em></em><span>版本：V2.1.2 2014-12-19</span></h3>
+                        <dl>
+                            <dt>
+                                <span>功能改进：<br/>
+
+                                        1、登录，分为自动登录和手动登录。<br/>
+                                        a>、手动登录是调用sdk的login相关接口；<br/>
+                                        b>、登陆成功之后，(一定是在登录成功之后)设置【EMChatManager setIsAutoLoginEnabled:YES】即设置为自动登录，下次启动之后，判断【EMChatManager isAutoLoginEnabled】是否==YES，等于YES，就不要再去手动登录，sdk内部会自动进行登录，你只需监听【willAutoLoginWithInfo:error:】和【didAutoLoginWithInfo:error:】。sdk自动登录在sdk接口【application:didFinishLaunchingWithOptions:】中实现，所以确定该方法在你的工程代码的AppDelegate类中有调用。<br/>
+
+                                        2、离线消息<br/>
+                                        分为离线cmd消息和离线非cmd消息两种类型。开始监听的方法是同一个【willReceiveOfflineMessages】；在离线消息接收过程中，不会返回回调【didReceive(Cmd)Message：】和【didUnreadMessagesCountChanged】；结束后返回的回调有三个【didFinishedReceiveOfflineMessages：】、【didFinishedReceiveOfflineCmdMessages：】和【didUnreadMessagesCountChanged】（如果没有离线消息，不返回）。<br/>
+
+                                        3、群成员被踢<br/>
+                                        是这样的流程：踢在线的，对方会收到回调【group:didLeave:error:】；踢不在线的，对方上线后不会收到回调；但是两种情况群都会被移除。<br/>
+
+                                        4、EMMessage<br/>
+                                        因为安卓SDK暂时不支持多body，为了统一，IOS SDK请暂时不要使用多body的EMMessage结构。<br>
+                                    <span>Bug Fix：<br/>
+                                        1、修复：Database的数据存到了Document目录下，迁移到Library目录下；<br/>
+
+                                        2、修复：特殊情况下，会出现收到离线消息的时候SDK中的Database还没有open, 造成第一条离线消息无法存进去;<br/>
+                                    <span>新功能：<br/>
+                                        1、实时语音bate版。目前只支持wifi非relay情况下使用。如果想在黑屏状态下能继续通话，请选择VIOP。
+                                </span>
+                            </dt>
+                        </dl>
+                    </li>
 			      	<li>
 						<h3><em></em><span>版本：V2.1.2 2014-12-19</span></h3>
 						<dl>
