@@ -344,6 +344,26 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 
 			    <ul class="history_right">
 				    <h2 class="first">Andriod SDK 更新日志</h2>
+					 <li>
+	                    <h3><em></em><span>版本：V2.1.5 2015-01-31</span></h3>
+						<dl>
+						  <dt>
+						      <span>新功能/改进：<br/>
+						        1、增加实时视频通话(Beta)<br/>
+						        2、为了减少登录时间，SDK默认现在是不会去取黑名单，如果需要，请app自己去获取,可参考demo的LoginActivity<br/>
+						        3、由于增加视频电话的功能，so文件有些更改（之后也有可能会更改），请之前用到语音电话的app更改下<br/>						        
+						         Bug Fix：<br/>
+						        1、修复偶尔重连时，导致ANR的问题<br/>		
+						        2、修复成员数量超过最大成员数时，没有异常抛出的问题<br/>
+						        3、修复收到消息时，无法解析body里的Json数组的问题<br/>
+						        4、修复小米手机有时候收到消息时持续震动的问题<br/>
+								5、修复修复屏蔽群消息后，收不到被踢的通知的问题<br/>
+								6、修复屏蔽群后，无法退群的问题<br/>
+								 
+						      </span>
+						  </dt>
+						</dl>
+	                </li>     
 				    <li>
 	                    <h3><em></em><span>版本：V2.1.4 r2 2015-01-07</span></h3>
 						<dl>
