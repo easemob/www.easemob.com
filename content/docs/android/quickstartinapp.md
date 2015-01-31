@@ -8,8 +8,9 @@ secondnavandroid: true
 
 ### 添加环信的类库
 
-在自行开发的应用中，集成环信聊天需要把libs文件夹下的`easemobchat_2.1.3.jar`和`armeabi目录`拷贝到你的项目的libs文件夹底下，如果不需要语音通话功能，拷贝`libs.without.audio`的jar文件即可。jar名字的后面的2.1.3可能会跟你下载的不一致，这是版本号，以实际为准。如果集成过2.0.4之前sdk的开发者，集成此sdk时，需要把httpmime这个jar从libs底下移除。
+在自行开发的应用中，集成环信聊天需要把libs文件夹下的`easemobchat_2.1.5.jar`和`armeabi目录`拷贝到你的项目的libs文件夹底下，如果不需要语音通话功能，拷贝`libs.without.audio`的jar文件即可。jar名字的后面的2.1.5可能会跟你下载的不一致，这是版本号，以实际为准。如果集成过2.0.4之前sdk的开发者，集成此sdk时，需要把httpmime这个jar从libs底下移除。
 
+注：版本向下兼容
 
  ![alt text](/demo_dirs_new1.jpg "demo") 
 
@@ -59,7 +60,16 @@ secondnavandroid: true
      </application>
     </manifest>
 
-关于EASEMOB_APPKEY，请登录或注册[环信开发者后台](https://console.easemob.com),申请APPKEY后，进行相关配置。（测试demo中 APPKEY为*easemob-demo#chatdemo*）
+关于EASEMOB_APPKEY，请登录或注册[环信开发者后台](https://console.easemob.com),申请APPKEY后，进行相关配置。（测试demo中 APPKEY为*easemob-demo#chatdemo*）在开发者后台注册一个应用后得到如下信息:
+
+![alt text](1.jpg "Title")
+
+-
+	名词			解 释
+	org_name	企业的唯一标识,开发者在环信开发者管理后台注册账号时填写的企业ID
+	app_name	同一”企业”下”app”唯一标识,开发者在环信开发者管理后台创建应用时填写的”应用名称”
+	org_admin	开发者在环信开发者管理后台注册时填写的”用户名”.企业管理员拥有对该企业账号下所有资源的操作权限
+	appkey		一个app的唯一标识,规则是 ${org_name}#${app_name}
 
 ### app打包混淆
 

@@ -33,7 +33,7 @@ UI demo，包含了一个接近微信的完整的聊天app的所有功能, 包�
     
 下载环信sdk及demo：[下载链接](http://www.easemob.com/sdk/)
 
- 解压缩easemob-sdk-2.1.3.zip后会得到以下目录结构：
+ 解压缩easemob-sdk-2.1.5.zip后会得到以下目录结构：
  
  ![alt text](/demo_dirs1.jpg "Title")
 
