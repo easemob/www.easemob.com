@@ -50,24 +50,17 @@ var _hmt = _hmt || [];
                             <dt>
                                 <span>功能改进：<br/>
 
-                                        1、登录，分为自动登录和手动登录。<br/>
-                                        a>、手动登录是调用sdk的login相关接口；<br/>
-                                        b>、登陆成功之后，(一定是在登录成功之后)设置【EMChatManager setIsAutoLoginEnabled:YES】即设置为自动登录，下次启动之后，判断【EMChatManager isAutoLoginEnabled】是否==YES，等于YES，就不要再去手动登录，sdk内部会自动进行登录，你只需监听【willAutoLoginWithInfo:error:】和【didAutoLoginWithInfo:error:】。sdk自动登录在sdk接口【application:didFinishLaunchingWithOptions:】中实现，所以确定该方法在你的工程代码的AppDelegate类中有调用。<br/>
+                                        1、优化登录操作；<br/>
 
-                                        2、离线消息<br/>
-                                        分为离线cmd消息和离线非cmd消息两种类型。开始监听的方法是同一个【willReceiveOfflineMessages】；在离线消息接收过程中，不会返回回调【didReceive(Cmd)Message：】和【didUnreadMessagesCountChanged】；结束后返回的回调有三个【didFinishedReceiveOfflineMessages：】、【didFinishedReceiveOfflineCmdMessages：】和【didUnreadMessagesCountChanged】（如果没有离线消息，不返回）。<br/>
+                                        2、离线消息分为离线cmd消息和离线非cmd消息两种类型；<br/>
 
-                                        3、群成员被踢<br/>
-                                        是这样的流程：踢在线的，对方会收到回调【group:didLeave:error:】；踢不在线的，对方上线后不会收到回调；但是两种情况群都会被移除。<br/>
-
-                                        4、EMMessage<br/>
-                                        因为安卓SDK暂时不支持多body，为了统一，IOS SDK请暂时不要使用多body的EMMessage结构。<br>
+                                        4、EMMessage：因为安卓SDK暂时不支持多body，为了统一，IOS SDK请暂时不要使用多body的EMMessage结构。<br>
                                     <span>Bug Fix：<br/>
                                         1、修复：Database的数据存到了Document目录下，迁移到Library目录下；<br/>
 
                                         2、修复：特殊情况下，会出现收到离线消息的时候SDK中的Database还没有open, 造成第一条离线消息无法存进去;<br/>
                                     <span>新功能：<br/>
-                                        1、实时语音bate版。目前只支持wifi非relay情况下使用。如果想在黑屏状态下能继续通话，请选择VIOP。
+                                        1、实时语音bate版。目前只支持wifi非relay情况下使用。如果想在黑屏状态或后台下能继续通话，请在工程里选择上"Voice over IP"或者“Audio and AirPlay”。
                                 </span>
                             </dt>
                         </dl>
