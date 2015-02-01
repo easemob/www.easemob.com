@@ -45,7 +45,7 @@ var _hmt = _hmt || [];
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
                     <li>
-                        <h3><em></em><span>版本：V2.1.2 2014-12-19</span></h3>
+                        <h3><em></em><span>版本：V2.1.3 2015-01-31</span></h3>
                         <dl>
                             <dt>
                                 <span>功能改进：<br/>
@@ -59,8 +59,9 @@ var _hmt = _hmt || [];
                                         1、修复：Database的数据存到了Document目录下，迁移到Library目录下；<br/>
 
                                         2、修复：特殊情况下，会出现收到离线消息的时候SDK中的Database还没有open, 造成第一条离线消息无法存进去;<br/>
+                                    </span>
                                     <span>新功能：<br/>
-                                        1、实时语音bate版。目前只支持wifi非relay情况下使用。如果想在黑屏状态或后台下能继续通话，请在工程里选择上"Voice over IP"或者“Audio and AirPlay”。
+                                        1、实时语音bate版。目前只支持wifi非relay情况下使用。如果想在黑屏状态或后台下能继续通话，请在工程里选择上"Voice over IP"或者“Audio and AirPlay”。</span>
                                 </span>
                             </dt>
                         </dl>
