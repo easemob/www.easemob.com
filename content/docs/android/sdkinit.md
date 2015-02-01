@@ -7,6 +7,7 @@ secondnavandroid: true
 ## SDK初始化    {#init}
 
 要求在application中做初始化
+<pre class="hll"><code class="language-java">
 
     EMChat.getInstance().init(applicationContext);
     
@@ -16,8 +17,12 @@ secondnavandroid: true
          * 在做代码混淆的时候需要设置成false
          */
         EMChat.getInstance().setDebugMode(true);
+        
+</code></pre>
 
 #####注：如果你的app中有第三方的服务，请添加下边的代码并放在初始化SDK代码的上边（相应代码也可参考demo的application）
+
+<pre class="hll"><code class="language-java">
 
 	   appContext = this;
        int pid = android.os.Process.myPid();
@@ -57,6 +62,9 @@ secondnavandroid: true
 		}
 		return processName;
 	}
+	
+	
+</code></pre>
 
 
 ##登录鉴权    {#login}
@@ -65,8 +73,8 @@ secondnavandroid: true
 
 <strong>需要注意：</strong>
 登陆成功后需要调用<br/>
-EMGroupManager.getInstance().loadAllGroups();<br/>
-EMChatManager.getInstance().loadAllConversations();<br/>
+<code class="language-java">EMGroupManager.getInstance().loadAllGroups();</code><br/>
+<code class="language-java">EMChatManager.getInstance().loadAllConversations();</code><br/>
 保证进入主页面后本地会话和群组都load完毕。另外如果登陆过，app长期在后台再进的时候也可能会导致加载到内存的群组和会话为空，可以在主页面的oncreate里也加上这两句代码，当然，更好的办法应该是放在程序的开屏页，可参考demo的SplashActivity。
 
 <pre class="hll"><code class="language-java">
@@ -101,7 +109,6 @@ EMChatManager.getInstance().logout();//此方法为同步方法
 或者
 EMChatManager.getInstance().logout(new EMCallBack(){})//此方法为异步方法<br/>
 //后文中，如遇到new EMCallBack()即为new EMCallBack(){}
-
 	
 </code></pre>
 
