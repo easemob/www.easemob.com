@@ -1,36 +1,36 @@
 ---
-title: »·ĞÅ
+title: ç¯ä¿¡
 sidebar: androidsidebar
 secondnavandroid: true
 ---
 
-## SDK³õÊ¼»¯{#init}
+## SDKåˆå§‹åŒ–{#init}
 
-ÒªÇóÔÚapplicationÖĞ×ö³õÊ¼»¯
+è¦æ±‚åœ¨applicationä¸­åšåˆå§‹åŒ–
 
     EMChat.getInstance().init(applicationContext);
     
-    ¡¤    /**
-         * debugMode == true Ê±£¬sdk »áÔÚlogÀïÊäÈëµ÷ÊÔĞÅÏ¢
+    Â·    /**
+         * debugMode == true æ—¶ï¼Œsdk ä¼šåœ¨logé‡Œè¾“å…¥è°ƒè¯•ä¿¡æ¯
          * @param debugMode
-         * ÔÚ×ö´úÂë»ìÏıµÄÊ±ºòĞèÒªÉèÖÃ³Éfalse
+         * åœ¨åšä»£ç æ··æ·†çš„æ—¶å€™éœ€è¦è®¾ç½®æˆfalse
          */
         EMChat.getInstance().setDebugMode(true);
 
-#####×¢£ºÈç¹ûÄãµÄappÖĞÓĞµÚÈı·½µÄ·şÎñ£¬ÇëÌí¼ÓÏÂ±ßµÄ´úÂë²¢·ÅÔÚ³õÊ¼»¯SDK´úÂëµÄÉÏ±ß£¨ÏàÓ¦´úÂëÒ²¿É²Î¿¼demoµÄapplication£©
+#####æ³¨ï¼šå¦‚æœä½ çš„appä¸­æœ‰ç¬¬ä¸‰æ–¹çš„æœåŠ¡ï¼Œè¯·æ·»åŠ ä¸‹è¾¹çš„ä»£ç å¹¶æ”¾åœ¨åˆå§‹åŒ–SDKä»£ç çš„ä¸Šè¾¹ï¼ˆç›¸åº”ä»£ç ä¹Ÿå¯å‚è€ƒdemoçš„applicationï¼‰
 
 	   appContext = this;
        int pid = android.os.Process.myPid();
        String processAppName = getAppName(pid);
-       // Èç¹ûappÆôÓÃÁËÔ¶³ÌµÄservice£¬´Ëapplication:onCreate»á±»µ÷ÓÃ2´Î
-       // ÎªÁË·ÀÖ¹»·ĞÅSDK±»³õÊ¼»¯2´Î£¬¼Ó´ËÅĞ¶Ï»á±£Ö¤SDK±»³õÊ¼»¯1´Î
-       // Ä¬ÈÏµÄapp»áÔÚÒÔ°üÃûÎªÄ¬ÈÏµÄprocess nameÏÂÔËĞĞ£¬Èç¹û²éµ½µÄprocess name²»ÊÇappµÄprocess name¾ÍÁ¢¼´·µ»Ø
+       // å¦‚æœappå¯ç”¨äº†è¿œç¨‹çš„serviceï¼Œæ­¤application:onCreateä¼šè¢«è°ƒç”¨2æ¬¡
+       // ä¸ºäº†é˜²æ­¢ç¯ä¿¡SDKè¢«åˆå§‹åŒ–2æ¬¡ï¼ŒåŠ æ­¤åˆ¤æ–­ä¼šä¿è¯SDKè¢«åˆå§‹åŒ–1æ¬¡
+       // é»˜è®¤çš„appä¼šåœ¨ä»¥åŒ…åä¸ºé»˜è®¤çš„process nameä¸‹è¿è¡Œï¼Œå¦‚æœæŸ¥åˆ°çš„process nameä¸æ˜¯appçš„process nameå°±ç«‹å³è¿”å›
         
         if (processAppName == null ||!processAppName.equalsIgnoreCase("com.easemob.chatuidemo")) {
             Log.e(TAG, "enter the service process!");
-            //"com.easemob.chatuidemo"ÎªdemoµÄ°üÃû£¬»»µ½×Ô¼ºÏîÄ¿ÖĞÒª¸Ä³É×Ô¼º°üÃû
+            //"com.easemob.chatuidemo"ä¸ºdemoçš„åŒ…åï¼Œæ¢åˆ°è‡ªå·±é¡¹ç›®ä¸­è¦æ”¹æˆè‡ªå·±åŒ…å
             
-            // Ôò´Ëapplication::onCreate ÊÇ±»service µ÷ÓÃµÄ£¬Ö±½Ó·µ»Ø
+            // åˆ™æ­¤application::onCreate æ˜¯è¢«service è°ƒç”¨çš„ï¼Œç›´æ¥è¿”å›
             return;
         }
 
@@ -59,25 +59,25 @@ secondnavandroid: true
 	}
 
 
-##µÇÂ¼¼øÈ¨{#login}
+##ç™»å½•é‰´æƒ{#login}
 
-### µÇÂ½ÁÄÌì·şÎñÆ÷
+### ç™»é™†èŠå¤©æœåŠ¡å™¨
 
-<strong>ĞèÒª×¢Òâ£º</strong>
-µÇÂ½³É¹¦ºóĞèÒªµ÷ÓÃ<br/>
+<strong>éœ€è¦æ³¨æ„ï¼š</strong>
+ç™»é™†æˆåŠŸåéœ€è¦è°ƒç”¨<br/>
 EMGroupManager.getInstance().loadAllGroups();<br/>
 EMChatManager.getInstance().loadAllConversations();<br/>
-±£Ö¤½øÈëÖ÷Ò³Ãæºó±¾µØ»á»°ºÍÈº×é¶¼loadÍê±Ï¡£ÁíÍâÈç¹ûµÇÂ½¹ı£¬app³¤ÆÚÔÚºóÌ¨ÔÙ½øµÄÊ±ºòÒ²¿ÉÄÜ»áµ¼ÖÂ¼ÓÔØµ½ÄÚ´æµÄÈº×éºÍ»á»°Îª¿Õ£¬¿ÉÒÔÔÚÖ÷Ò³ÃæµÄoncreateÀïÒ²¼ÓÉÏÕâÁ½¾ä´úÂë£¬µ±È»£¬¸üºÃµÄ°ì·¨Ó¦¸ÃÊÇ·ÅÔÚ³ÌĞòµÄ¿ªÆÁÒ³£¬¿É²Î¿¼demoµÄSplashActivity¡£
+ä¿è¯è¿›å…¥ä¸»é¡µé¢åæœ¬åœ°ä¼šè¯å’Œç¾¤ç»„éƒ½loadå®Œæ¯•ã€‚å¦å¤–å¦‚æœç™»é™†è¿‡ï¼Œappé•¿æœŸåœ¨åå°å†è¿›çš„æ—¶å€™ä¹Ÿå¯èƒ½ä¼šå¯¼è‡´åŠ è½½åˆ°å†…å­˜çš„ç¾¤ç»„å’Œä¼šè¯ä¸ºç©ºï¼Œå¯ä»¥åœ¨ä¸»é¡µé¢çš„oncreateé‡Œä¹ŸåŠ ä¸Šè¿™ä¸¤å¥ä»£ç ï¼Œå½“ç„¶ï¼Œæ›´å¥½çš„åŠæ³•åº”è¯¥æ˜¯æ”¾åœ¨ç¨‹åºçš„å¼€å±é¡µï¼Œå¯å‚è€ƒdemoçš„SplashActivityã€‚
 
 <pre class="hll"><code class="language-java">
 
 EMChatManager.getInstance().login(userName,password,
-	new EMCallBack() {//»Øµ÷
+	new EMCallBack() {//å›è°ƒ
 		@Override
 		public void onSuccess() {
 			runOnUiThread(new Runnable() {
 				public void run() {
-					Log.d("main", "µÇÂ½ÁÄÌì·şÎñÆ÷³É¹¦£¡");		
+					Log.d("main", "ç™»é™†èŠå¤©æœåŠ¡å™¨æˆåŠŸï¼");		
 				}
 			});
 		}
@@ -89,50 +89,49 @@ EMChatManager.getInstance().login(userName,password,
 
 		@Override
 		public void onError(int code, String message) {
-			Log.d("main", "µÇÂ½ÁÄÌì·şÎñÆ÷Ê§°Ü£¡");
+			Log.d("main", "ç™»é™†èŠå¤©æœåŠ¡å™¨å¤±è´¥ï¼");
 		}
 	});
 </code></pre>
 
-### ÍË³öÁÄÌìµÇÂ½  {#logout}
+### é€€å‡ºèŠå¤©ç™»é™†  {#logout}
 
 <pre class="hll"><code class="language-java">
-EMChatManager.getInstance().logout();//´Ë·½·¨ÎªÍ¬²½·½·¨
-»òÕß
-EMChatManager.getInstance().logout(new EMCallBack(){})//´Ë·½·¨ÎªÒì²½·½·¨<br/>
-//ºóÎÄÖĞ£¬ÈçÓöµ½new EMCallBack()¼´Îªnew EMCallBack(){}
+EMChatManager.getInstance().logout();//æ­¤æ–¹æ³•ä¸ºåŒæ­¥æ–¹æ³•
+æˆ–è€…
+EMChatManager.getInstance().logout(new EMCallBack(){})//æ­¤æ–¹æ³•ä¸ºå¼‚æ­¥æ–¹æ³•<br/>
+//åæ–‡ä¸­ï¼Œå¦‚é‡åˆ°new EMCallBack()å³ä¸ºnew EMCallBack(){}
 
 	
 </code></pre>
 
-### ×¢²á  {#register}
+### æ³¨å†Œ  {#register}
 
-¼ûDemoµÄRegisterActivity£¬×¢ÒâÓÃ»§Ãû»á×Ô¶¯×ªÎªĞ¡Ğ´×ÖÄ¸£¬ËùÒÔ½¨ÒéÓÃ»§Ãû¾ùÒÔĞ¡Ğ´×¢²á(Ç¿ÁÒ½¨Òé¿ª·¢ÕßÍ¨¹ıºóÌ¨µ÷ÓÃrest½Ó¿ÚÈ¥×¢²á»·ĞÅid£¬¿Í»§¶Ë×¢²á·½·¨²»Ìá³«Ê¹ÓÃ)
+è§Demoçš„RegisterActivityï¼Œæ³¨æ„ç”¨æˆ·åä¼šè‡ªåŠ¨è½¬ä¸ºå°å†™å­—æ¯ï¼Œæ‰€ä»¥å»ºè®®ç”¨æˆ·åå‡ä»¥å°å†™æ³¨å†Œ(å¼ºçƒˆå»ºè®®å¼€å‘è€…é€šè¿‡åå°è°ƒç”¨restæ¥å£å»æ³¨å†Œç¯ä¿¡idï¼Œå®¢æˆ·ç«¯æ³¨å†Œæ–¹æ³•ä¸æå€¡ä½¿ç”¨)
 	
 <pre class="hll"><code class="language-java">
 new Thread(new Runnable() {
     public void run() {
       try {
-         // µ÷ÓÃsdk×¢²á·½·¨
+         // è°ƒç”¨sdkæ³¨å†Œæ–¹æ³•
          EMChatManager.getInstance().createAccountOnServer(username, pwd);
       } catch (final Exception e) {
-      //×¢²áÊ§°Ü
+      //æ³¨å†Œå¤±è´¥
 		String errorMsg = e.getMessage();
 		if(errorCode==EMError.NONETWORK_ERROR){
-		    Toast.makeText(getApplicationContext(), "ÍøÂçÒì³££¬Çë¼ì²éÍøÂç£¡", Toast.LENGTH_SHORT).show();
+		    Toast.makeText(getApplicationContext(), "ç½‘ç»œå¼‚å¸¸ï¼Œè¯·æ£€æŸ¥ç½‘ç»œï¼", Toast.LENGTH_SHORT).show();
 		}else if(errorCode==EMError.USER_ALREADY_EXISTS){
-		    Toast.makeText(getApplicationContext(), "ÓÃ»§ÒÑ´æÔÚ£¡", Toast.LENGTH_SHORT).show();
+		    Toast.makeText(getApplicationContext(), "ç”¨æˆ·å·²å­˜åœ¨ï¼", Toast.LENGTH_SHORT).show();
 		}else if(errorCode==EMError.UNAUTHORIZED){
-			Toast.makeText(getApplicationContext(), "×¢²áÊ§°Ü£¬ÎŞÈ¨ÏŞ£¡", Toast.LENGTH_SHORT).show();
+			Toast.makeText(getApplicationContext(), "æ³¨å†Œå¤±è´¥ï¼Œæ— æƒé™ï¼", Toast.LENGTH_SHORT).show();
 		}else{
-			Toast.makeText(getApplicationContext(), "×¢²áÊ§°Ü: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+			Toast.makeText(getApplicationContext(), "æ³¨å†Œå¤±è´¥: " + e.getMessage(), Toast.LENGTH_SHORT).show();
       }
    }
 }).start();
 </code></pre>
 
 									
-
 
 
 
