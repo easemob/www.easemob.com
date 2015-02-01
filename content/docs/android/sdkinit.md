@@ -4,7 +4,7 @@ sidebar: androidsidebar
 secondnavandroid: true
 ---
 
-## SDK初始化{#init}
+## SDK初始化    {#init}
 
 要求在application中做初始化
 
@@ -59,7 +59,7 @@ secondnavandroid: true
 	}
 
 
-##登录鉴权{#login}
+##登录鉴权    {#login}
 
 ### 登陆聊天服务器
 
