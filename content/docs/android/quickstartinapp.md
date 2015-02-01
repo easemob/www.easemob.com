@@ -62,9 +62,13 @@ secondnavandroid: true
 
 关于EASEMOB_APPKEY，请登录或注册[环信开发者后台](https://console.easemob.com),申请APPKEY后，进行相关配置。（测试demo中 APPKEY为*easemob-demo#chatdemo*）在开发者后台注册一个应用后得到如下信息:
 
-![alt text](1.jpg "Title")
+
+ ![alt text](/1.jpg "demo")
+
 
 -
+
+
 	名词			解 释
 	org_name	企业的唯一标识,开发者在环信开发者管理后台注册账号时填写的企业ID
 	app_name	同一”企业”下”app”唯一标识,开发者在环信开发者管理后台创建应用时填写的”应用名称”

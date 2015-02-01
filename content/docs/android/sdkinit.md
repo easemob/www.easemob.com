@@ -7,6 +7,7 @@ secondnavandroid: true
 ## SDK初始化    {#init}
 
 要求在application中做初始化
+
 <pre class="hll"><code class="language-java">
 
     EMChat.getInstance().init(applicationContext);
