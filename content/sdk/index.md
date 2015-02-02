@@ -22,7 +22,7 @@ var _hmt = _hmt || [];
 						<span class="ios_icon"></span>
 						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150131.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.3　</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.3r2　</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -44,11 +44,9 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
-<<<<<<< c6c53ef4ee275ef6934aa8e4a65401eb24322078
-                    <li>
-=======
+                    <li
                         <li>
-                            <h3><em></em><span>版本：V2.1.3.1 2015-02-02</span></h3>
+                            <h3><em></em><span>版本：V2.1.3r2 2015-02-02</span></h3>
                             <dl>
                             <dt>
                             <span>紧急修复：<br/>
@@ -62,7 +60,6 @@ var _hmt = _hmt || [];
                         </li>
 
                         <li>
->>>>>>> 24ee819793e5a92baed63ccfc581c4157c930ebf
                         <h3><em></em><span>版本：V2.1.3 2015-01-31</span></h3>
                         <dl>
                             <dt>
