@@ -44,7 +44,25 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+<<<<<<< c6c53ef4ee275ef6934aa8e4a65401eb24322078
                     <li>
+=======
+                        <li>
+                            <h3><em></em><span>版本：V2.1.3.1 2015-02-02</span></h3>
+                            <dl>
+                            <dt>
+                            <span>紧急修复：<br/>
+
+                            1、覆盖安装自动登录失效；<br/>
+
+                            2、只引用libEaseMobClientSDKLite.a会调用到libCallServer.a的方法，造成crash；<br/>
+                            </span>
+                            </dt>
+                            </dl>
+                        </li>
+
+                        <li>
+>>>>>>> 24ee819793e5a92baed63ccfc581c4157c930ebf
                         <h3><em></em><span>版本：V2.1.3 2015-01-31</span></h3>
                         <dl>
                             <dt>
