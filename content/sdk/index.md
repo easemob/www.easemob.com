@@ -44,7 +44,6 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
-                    <li
                         <li>
                             <h3><em></em><span>版本：V2.1.3r2 2015-02-02</span></h3>
                             <dl>
