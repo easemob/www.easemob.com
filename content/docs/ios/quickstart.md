@@ -21,7 +21,7 @@ secondnavios: true
 
 2. 解压缩iOSSDK.zip后会得到以下目录结构：
  
- ![alt text](/example_layout_IOS.png "Title")
+ ![alt text](/iOS_Example_layout_IOS.png "Title")
 
 
 ## 运行环信demo (iOS) 
@@ -35,7 +35,7 @@ secondnavios: true
 
 点击“发送文本消息”，会发送消息给测试机器人（其账号为"bot"）。该测试机器人接收到消息后会把接收的消息原封不动的自动发送回来，显示如下图。
 
-![alt text](/demoIOS.png "demo")
+![alt text](/iOS_DemoIOS.png "demo")
 
 ## 快速集成 
 
@@ -45,24 +45,24 @@ secondnavios: true
 
 ### 将EaseMobSDK拖入到项目中 
 
-![alt text](/import.png "Title")
+![alt text](/iOS_Import.png "Title")
  
 ### SDK依赖库 
 
-![alt text](/addLib.png "Lib")
+![alt text](/iOS_AddLib.png "Lib")
 
 ### UIDemo依赖库 
-![alt text](/addUIDemoLib.png "UIDemoLib")
+![alt text](/iOS_AddUIDemoLib.png "UIDemoLib")
  
 ### 设置Linker 
 
-![alt text](/link.png "link")
+![alt text](/iOS_Link.png "link")
 
 向Other Linker Flags 中添加 -ObjC。(如果已有，则不需要再添加)
 
 ### 设置Architectures 
 
-![alt text](/Active.png "Active")
+![alt text](/iOS_Active.png "Active")
 
 ### 初始化EaseMobSDK 
 

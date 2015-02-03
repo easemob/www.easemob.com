@@ -25,27 +25,27 @@ secondnavios: true
 
 2. 解压缩iOSSDK.zip后会得到以下目录结构：
 
-![alt text](/example_layout_IOS.png "Title")
+![alt text](/iOS_Example_layout_IOS.png "Title")
 
 
 ## 将EaseMobSDK拖入到项目中 
 
-![alt text](/import.png "Title")
+![alt text](/iOS_Import.png "Title")
 
 ## 添加SDK依赖库 
 
-![alt text](/addLib.png "Lib")
+![alt text](/iOS_AddLib.png "Lib")
 
 ## 设置Linker 
 
-![alt text](/link.png "link")
+![alt text](/iOS_Link.png "link")
 
 向Other Linker Flags 中添加 -ObjC(如果已有，则不需要再添加)`注意O,C大写`
 
 # SDK的使用，以demo源码为示例
 
 ## UIDemo依赖库 
-![alt text](/addUIDemoLib.png "UIDemoLib")
+![alt text](/iOS_AddUIDemoLib.png "UIDemoLib")
 
 ## 初始化EaseMobSDK ，见AppDelegate
 
@@ -233,7 +233,7 @@ error:nil];
 }
 </code></pre>
 
-![alt text](/chatUIDemoNetwork.png "Demo") 
+![alt text](/iOS_ChatUIDemoNetwork.png "Demo") 
 
 ### 回调方法：账号在其它设备登录
 
@@ -261,7 +261,7 @@ error:nil];
 
 账号不支持中文
 
- ![alt text](/chatUIDemoLogin.png "Demo")
+ ![alt text](/iOS_ChatUIDemoLogin.png "Demo")
  
 ### 登录成功进入首页
 
@@ -271,22 +271,22 @@ error:nil];
 
 设置：退出登录
 
- ![alt text](/chatUIDemoHome.png "Demo")
+ ![alt text](/iOS_ChatUIDemoHome.png "Demo")
  
 ### 添加好友
 
 运行程序并登录账号2。点击“通讯录”页面的“+”
 
- ![alt text](/chatUIDemoOther.png "Demo")
+ ![alt text](/iOS_ChatUIDemoOther.png "Demo")
  
 输入好友用户名（账号1），进行搜索添加
  
- ![alt text](/chatUIDemoAddFriend.png "Demo")
+ ![alt text](/iOS_ChatUIDemoAddFriend.png "Demo")
  
 在账号1接收账号2的好友申请
  
- ![alt text](/chatUIDemoApplyList.png "Demo")
+ ![alt text](/iOS_ChatUIDemoApplyList.png "Demo")
  
 ### 账号1和账号2互发消息
 
- ![alt text](/chatUIDemoChatList.png "Demo") 
+ ![alt text](/iOS_ChatUIDemoChatList.png "Demo") 

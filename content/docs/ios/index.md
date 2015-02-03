@@ -32,13 +32,13 @@ secondnavios: true
 
 **因为iOS静态库问题，SDK较大，但不影响打包ipa后大小，打包ipa后仅增加2MB左右**
 
-  ![alt text](/example_layout_IOS.png "Demo")
+  ![alt text](/iOS_Example_layout_IOS.png "Demo")
   
 #### 运行程序
 
   [环信用户名规则](http://www.easemob.com/docs/rest/userapi/#eid)
 
- ![alt text](/chatUIDemoLogin.png "Demo")
+ ![alt text](/iOS_ChatUIDemoLogin.png "Demo")
  
 #### 登录成功进入首页
 
@@ -48,13 +48,13 @@ secondnavios: true
 
 设置：退出登录
 
- ![alt text](/chatUIDemoHome.png "Demo")
+ ![alt text](/iOS_ChatUIDemoHome.png "Demo")
  
 #### 添加好友
 
 运行程序并登录账号2。点击“通讯录”页面的“+”
 
- ![alt text](/chatUIDemoOther.png "Demo")
+ ![alt text](/iOS_ChatUIDemoOther.png "Demo")
  
 输入好友用户名（账号1），进行搜索添加
 
@@ -62,15 +62,15 @@ secondnavios: true
 
 **环信不验证好友关系，只要知道对方环信用户名就可以发消息**
  
- ![alt text](/chatUIDemoAddFriend.png "Demo")
+ ![alt text](/iOS_ChatUIDemoAddFriend.png "Demo")
  
 在账号1接收账号2的好友申请
  
- ![alt text](/chatUIDemoApplyList.png "Demo")
+ ![alt text](/iOS_ChatUIDemoApplyList.png "Demo")
  
 #### 账号1和账号2互发消息
 
- ![alt text](/chatUIDemoChatList.png "Demo") 
+ ![alt text](/iOS_chatUIDemoChatList.png "Demo") 
  
 ### 其他说明
 #### 监测网络状态
@@ -86,7 +86,7 @@ secondnavios: true
 	}
 </code></pre>
 	
-![alt text](/chatUIDemoNetwork.png "Demo") 
+![alt text](/iOS_ChatUIDemoNetwork.png "Demo") 
 
 #### 账号在其它设备登录
 
