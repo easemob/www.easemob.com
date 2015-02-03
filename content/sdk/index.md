@@ -75,7 +75,7 @@ var _hmt = _hmt || [];
                                         2、修复：特殊情况下，会出现收到离线消息的时候SDK中的Database还没有open, 造成第一条离线消息无法存进去;<br/>
                                     </span>
                                     <span>新功能：<br/>
-                                        1、实时语音bate版。目前只支持wifi非relay情况下使用。如果想在黑屏状态或后台下能继续通话，请在工程里选择上"Voice over IP"或者“Audio and AirPlay”。</span>
+                                        1、实时语音beta版。目前只支持wifi非relay情况下使用。如果想在黑屏状态或后台下能继续通话，请在工程里选择上"Voice over IP"或者“Audio and AirPlay”。</span>
                                 </span>
                             </dt>
                         </dl>
