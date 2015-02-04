@@ -144,4 +144,7 @@ new Thread(new Runnable() {
 ###相关错误码参考(亦可参考java doc相关文档)
  http://www.easemob.com/docs/helps/androiderrorcode/
  
-##详细文档请参考 [java doc](http://www.easemob.com/apidoc/android/chat/)
+###Demo及SDK下载
+http://www.easemob.com/sdk/
+ 
+###详细文档请参考 [java doc](http://www.easemob.com/apidoc/android/chat/)

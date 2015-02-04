@@ -18,7 +18,7 @@ secondnavandroid: true
  
 ####2.1.5之前的jar包和.so文件
  
- ![alt text](/project_libs2.jpg "demo")
+ ![alt text](/project_libs2.png "demo")
  
 ####2.1.5之后的jar包和.so文件（里面包含了语音和视频通过功能）
 
