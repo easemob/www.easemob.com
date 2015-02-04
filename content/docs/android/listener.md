@@ -1,15 +1,15 @@
 ---
-title: »·ĞÅ
+title: ç¯ä¿¡
 sidebar: androidsidebar
 secondnavandroid: true
 ---
 
-##¼àÌıÊÂ¼ş×¢²á£¨½¨Òé×ö³ÉÈ«¾Ö¼àÌı£©
+##ç›‘å¬äº‹ä»¶æ³¨å†Œï¼ˆå»ºè®®åšæˆå…¨å±€ç›‘å¬ï¼‰
 
-####1.×¢²á½ÓÊÕĞÂÏûÏ¢µÄ¼àÌı¹ã²¥    {#newmessage}
+####1.æ³¨å†Œæ¥æ”¶æ–°æ¶ˆæ¯çš„ç›‘å¬å¹¿æ’­ {#newmessage}
 
 <pre class="hll"><code class="language-java">
-//Ö»ÓĞ×¢²áÁË¹ã²¥²ÅÄÜ½ÓÊÕµ½ĞÂÏûÏ¢£¬Ä¿Ç°ÀëÏßÏûÏ¢£¬ÔÚÏßÏûÏ¢¶¼ÊÇ×ß½ÓÊÕÏûÏ¢µÄ¹ã²¥£¨ÀëÏßÏûÏ¢Ä¿Ç°ÎŞ·¨¼àÌı£¬ÔÚµÇÂ¼ÒÔºó£¬½ÓÊÕÏûÏ¢¹ã²¥»áÖ´ĞĞÒ»´ÎÄÃµ½ËùÓĞµÄÀëÏßÏûÏ¢£©
+//åªæœ‰æ³¨å†Œäº†å¹¿æ’­æ‰èƒ½æ¥æ”¶åˆ°æ–°æ¶ˆæ¯ï¼Œç›®å‰ç¦»çº¿æ¶ˆæ¯ï¼Œåœ¨çº¿æ¶ˆæ¯éƒ½æ˜¯èµ°æ¥æ”¶æ¶ˆæ¯çš„å¹¿æ’­ï¼ˆç¦»çº¿æ¶ˆæ¯ç›®å‰æ— æ³•ç›‘å¬ï¼Œåœ¨ç™»å½•ä»¥åï¼Œæ¥æ”¶æ¶ˆæ¯å¹¿æ’­ä¼šæ‰§è¡Œä¸€æ¬¡æ‹¿åˆ°æ‰€æœ‰çš„ç¦»çº¿æ¶ˆæ¯ï¼‰
     NewMessageBroadcastReceiver msgReceiver = new NewMessageBroadcastReceiver();
 	IntentFilter intentFilter = new IntentFilter(EMChatManager.getInstance().getNewMessageBroadcastAction());
 	intentFilter.setPriority(3);
@@ -18,22 +18,22 @@ secondnavandroid: true
 	private class NewMessageBroadcastReceiver extends BroadcastReceiver {
 		@Override
 		public void onReceive(Context context, Intent intent) {
-		    // ×¢Ïú¹ã²¥
+		    // æ³¨é”€å¹¿æ’­
 			abortBroadcast();
 
-			// ÏûÏ¢id£¨Ã¿ÌõÏûÏ¢¶¼»áÉú³ÉÎ¨Ò»µÄÒ»¸öid£¬Ä¿Ç°ÊÇSDKÉú³É£©
+			// æ¶ˆæ¯idï¼ˆæ¯æ¡æ¶ˆæ¯éƒ½ä¼šç”Ÿæˆå”¯ä¸€çš„ä¸€ä¸ªidï¼Œç›®å‰æ˜¯SDKç”Ÿæˆï¼‰
 			String msgId = intent.getStringExtra("msgid");
-			//·¢ËÍ·½
+			//å‘é€æ–¹
 			String username = intent.getStringExtra("from");
-			// ÊÕµ½Õâ¸ö¹ã²¥µÄÊ±ºò£¬messageÒÑ¾­ÔÚdbºÍÄÚ´æÀïÁË£¬¿ÉÒÔÍ¨¹ıid»ñÈ¡mesage¶ÔÏó
+			// æ”¶åˆ°è¿™ä¸ªå¹¿æ’­çš„æ—¶å€™ï¼Œmessageå·²ç»åœ¨dbå’Œå†…å­˜é‡Œäº†ï¼Œå¯ä»¥é€šè¿‡idè·å–mesageå¯¹è±¡
 			 EMMessage message = EMChatManager.getInstance().getMessage(msgId);
 			 EMConversation	conversation = EMChatManager.getInstance().getConversation(username);
-			 // Èç¹ûÊÇÈºÁÄÏûÏ¢£¬»ñÈ¡µ½group id
+			 // å¦‚æœæ˜¯ç¾¤èŠæ¶ˆæ¯ï¼Œè·å–åˆ°group id
 			if (message.getChatType() == ChatType.GroupChat) {
 				username = message.getTo();
 			}
 			if (!username.equals(username)) {
-				// ÏûÏ¢²»ÊÇ·¢¸øµ±Ç°»á»°£¬return
+				// æ¶ˆæ¯ä¸æ˜¯å‘ç»™å½“å‰ä¼šè¯ï¼Œreturn
 				return;
 			}
 		}
@@ -41,11 +41,11 @@ secondnavandroid: true
 	
 </code></pre>
 
-####2.×¢²á½ÓÊÕack»ØÖ´ÏûÏ¢µÄBroadcastReceiver    {#ackmessage}
+####2.æ³¨å†Œæ¥æ”¶ackå›æ‰§æ¶ˆæ¯çš„BroadcastReceiver {#ackmessage}
 
 <pre class="hll"><code class="language-java">
 EMChatManager.getInstance().getChatOptions().setRequireAck(flag)
-//Èç¹ûÓÃµ½ÒÑ¶ÁµÄ»ØÖ´ĞèÒª°ÑÕâ¸öflagÉèÖÃ³Étrue
+//å¦‚æœç”¨åˆ°å·²è¯»çš„å›æ‰§éœ€è¦æŠŠè¿™ä¸ªflagè®¾ç½®æˆtrue
 
     IntentFilter ackMessageIntentFilter = new IntentFilter(EMChatManager.getInstance().getAckMessageBroadcastAction());
 	ackMessageIntentFilter.setPriority(3);
@@ -60,7 +60,7 @@ EMChatManager.getInstance().getChatOptions().setRequireAck(flag)
 			String from = intent.getStringExtra("from");
 			EMConversation conversation = EMChatManager.getInstance().getConversation(from);
 			if (conversation != null) {
-				// °ÑmessageÉèÎªÒÑ¶Á
+				// æŠŠmessageè®¾ä¸ºå·²è¯»
 				EMMessage msg = conversation.getMessage(msgid);
 				if (msg != null) {
 					msg.isAcked = true;
@@ -72,18 +72,18 @@ EMChatManager.getInstance().getChatOptions().setRequireAck(flag)
 	
 </code></pre>
 		
-####3.×¢²áÒ»¸öÏûÏ¢ËÍ´ïµÄBroadcastReceiver£¨ÔÚÁÄÌì½çÃæ×¢²á£©    {#deliveryackmessage}
+####3.æ³¨å†Œä¸€ä¸ªæ¶ˆæ¯é€è¾¾çš„BroadcastReceiverï¼ˆåœ¨èŠå¤©ç•Œé¢æ³¨å†Œï¼‰ {#deliveryackmessage}
 
 <pre class="hll"><code class="language-java">
 EMChatManager.getInstance().getChatOptions().setRequireDeliveryAck(flag)
-//Èç¹ûÓÃµ½ÒÑ·¢ËÍµÄ»ØÖ´ĞèÒª°ÑÕâ¸öflagÉèÖÃ³Étrue
+//å¦‚æœç”¨åˆ°å·²å‘é€çš„å›æ‰§éœ€è¦æŠŠè¿™ä¸ªflagè®¾ç½®æˆtrue
      
 IntentFilter deliveryAckMessageIntentFilter = new IntentFilter(EMChatManager.getInstance().getDeliveryAckMessageBroadcastAction());
 deliveryAckMessageIntentFilter.setPriority(5);
 registerReceiver(deliveryAckMessageReceiver, deliveryAckMessageIntentFilter);
 		
 /**
-* ÏûÏ¢ËÍ´ïBroadcastReceiver
+* æ¶ˆæ¯é€è¾¾BroadcastReceiver
 * */
 private BroadcastReceiver deliveryAckMessageReceiver = new BroadcastReceiver() {
     @Override
@@ -94,7 +94,7 @@ private BroadcastReceiver deliveryAckMessageReceiver = new BroadcastReceiver() {
 		String from = intent.getStringExtra("from");
 		EMConversation conversation = EMChatManager.getInstance().getConversation(from);
 		if (conversation != null) {
-			// °ÑmessageÉèÎªÒÑ¶Á
+			// æŠŠmessageè®¾ä¸ºå·²è¯»
 			EMMessage msg = conversation.getMessage(msgid);
 			if (msg != null) {
 				msg.isDelivered = true;
@@ -106,7 +106,7 @@ private BroadcastReceiver deliveryAckMessageReceiver = new BroadcastReceiver() {
 </code></pre>
 
 
-####4.¼àÌıÁªÏµÈËµÄ±ä»¯µÈ    {#contactlistener}
+####4.ç›‘å¬è”ç³»äººçš„å˜åŒ–ç­‰ {#contactlistener}
 
 <pre class="hll"><code class="language-java">
 EMContactManager.getInstance().setContactListener(new MyContactListener());
@@ -115,30 +115,30 @@ private class MyContactListener implements EMContactListener {
 
 	@Override
 	public void onContactAdded(List<String> usernameList) {
-		// ±£´æÔö¼ÓµÄÁªÏµÈË
+		// ä¿å­˜å¢åŠ çš„è”ç³»äºº
 			
 	}
 
 	@Override
 	public void onContactDeleted(final List<String> usernameList) {
-		// ±»É¾³ı
+		// è¢«åˆ é™¤
 
 	}
 
 	@Override
 	public void onContactInvited(String username, String reason) {
-		// ½Óµ½ÑûÇëµÄÏûÏ¢£¬Èç¹û²»´¦Àí(Í¬Òâ»ò¾Ü¾ø)£¬µôÏßºó£¬·şÎñÆ÷»á×Ô¶¯ÔÙ·¢¹ıÀ´£¬ËùÒÔ¿Í»§¶Ë²»ÒªÖØ¸´ÌáĞÑ
+		// æ¥åˆ°é‚€è¯·çš„æ¶ˆæ¯ï¼Œå¦‚æœä¸å¤„ç†(åŒæ„æˆ–æ‹’ç»)ï¼Œæ‰çº¿åï¼ŒæœåŠ¡å™¨ä¼šè‡ªåŠ¨å†å‘è¿‡æ¥ï¼Œæ‰€ä»¥å®¢æˆ·ç«¯ä¸è¦é‡å¤æé†’
 			
 	}
 
 	@Override
 	public void onContactAgreed(String username) {
-		//Í¬ÒâºÃÓÑÇëÇó
+		//åŒæ„å¥½å‹è¯·æ±‚
 	}
 
 	@Override
 	public void onContactRefused(String username) {
-		// ¾Ü¾øºÃÓÑÇëÇó
+		// æ‹’ç»å¥½å‹è¯·æ±‚
 
 	}
 
@@ -146,17 +146,17 @@ private class MyContactListener implements EMContactListener {
 	
 </code></pre>
 
-####5.×¢²áÒ»¸ö¼àÌıÁ¬½Ó×´Ì¬µÄlistener    {#connectionlistener}
+####5.æ³¨å†Œä¸€ä¸ªç›‘å¬è¿æ¥çŠ¶æ€çš„listener {#connectionlistener}
 
-1.ÔÚÁÄÌì¹ı³ÌÖĞÄÑÃâ»áÓöµ½ÍøÂçÎÊÌâ£¬ÔÚ´ËSDKÎªÄúÌá¹©ÁËÍøÂç¼àÌı½Ó¿Ú£¬ÊµÊ±¼àÌı
+1.åœ¨èŠå¤©è¿‡ç¨‹ä¸­éš¾å…ä¼šé‡åˆ°ç½‘ç»œé—®é¢˜ï¼Œåœ¨æ­¤SDKä¸ºæ‚¨æä¾›äº†ç½‘ç»œç›‘å¬æ¥å£ï¼Œå®æ—¶ç›‘å¬
 
-2.¶ÔÓÚÍ¬Ò»¸öÕËºÅÔÚ¶à´¦µÇÂ¼£¬Ôò¸ù¾İ±¾¼àÌıÊÂ¼şÖĞµÄ_onDisConnected_·½·¨´«µİµÄintÀàĞÍ²ÎÊıerrorÀ´½øĞĞÅĞ¶ÏÊÇ·ñÍ¬Ò»¸öÕËºÅÔÚÆäËüµØ·½½øĞĞÁËµÇÂ¼ºÍÕËºÅÊÇ·ñ±»É¾³ı£¬Èô·şÎñÆ÷·µ»ØµÄ²ÎÊıÖµÎª`EMError.CONNECTION_CONFLICT`£¬ÔòÈÏÎªÊÇÓĞÍ¬Ò»¸öÕËºÅÒìµØµÇÂ¼£¬Èô·şÎñÆ÷·µ»ØµÄ²ÎÊıÖµÎª`EMError.USER_REMOVED`£¬ÔòÊÇÕËºÅÔÚºóÌ¨±»É¾³ı
+2.å¯¹äºåŒä¸€ä¸ªè´¦å·åœ¨å¤šå¤„ç™»å½•ï¼Œåˆ™æ ¹æ®æœ¬ç›‘å¬äº‹ä»¶ä¸­çš„_onDisConnected_æ–¹æ³•ä¼ é€’çš„intç±»å‹å‚æ•°erroræ¥è¿›è¡Œåˆ¤æ–­æ˜¯å¦åŒä¸€ä¸ªè´¦å·åœ¨å…¶å®ƒåœ°æ–¹è¿›è¡Œäº†ç™»å½•å’Œè´¦å·æ˜¯å¦è¢«åˆ é™¤ï¼Œè‹¥æœåŠ¡å™¨è¿”å›çš„å‚æ•°å€¼ä¸º`EMError.CONNECTION_CONFLICT`ï¼Œåˆ™è®¤ä¸ºæ˜¯æœ‰åŒä¸€ä¸ªè´¦å·å¼‚åœ°ç™»å½•ï¼Œè‹¥æœåŠ¡å™¨è¿”å›çš„å‚æ•°å€¼ä¸º`EMError.USER_REMOVED`ï¼Œåˆ™æ˜¯è´¦å·åœ¨åå°è¢«åˆ é™¤
 
 <pre class="hll"><code class="language-java">
-    //×¢²áÒ»¸ö¼àÌıÁ¬½Ó×´Ì¬µÄlistener
+    //æ³¨å†Œä¸€ä¸ªç›‘å¬è¿æ¥çŠ¶æ€çš„listener
     EMChatManager.getInstance().addConnectionListener(new MyConnectionListener());
 
-    //ÊµÏÖConnectionListener½Ó¿Ú
+    //å®ç°ConnectionListeneræ¥å£
     private class MyConnectionListener implements EMConnectionListener {
         @Override
 		public void onConnected() {
@@ -168,14 +168,14 @@ private class MyContactListener implements EMContactListener {
 				@Override
 				public void run() {
 					if(error == EMError.USER_REMOVED){
-						// ÏÔÊ¾ÕÊºÅÒÑ¾­±»ÒÆ³ı
+						// æ˜¾ç¤ºå¸å·å·²ç»è¢«ç§»é™¤
 					}else if (error == EMError.CONNECTION_CONFLICT) {
-						// ÏÔÊ¾ÕÊºÅÔÚÆäËûÉè±¸µÇÂ½
+						// æ˜¾ç¤ºå¸å·åœ¨å…¶ä»–è®¾å¤‡ç™»é™†
 					} else {
 					if (NetUtils.hasNetwork(MainActivity.this))
-						//Á¬½Ó²»µ½ÁÄÌì·şÎñÆ÷
+						//è¿æ¥ä¸åˆ°èŠå¤©æœåŠ¡å™¨
 					else
-						//µ±Ç°ÍøÂç²»¿ÉÓÃ£¬Çë¼ì²éÍøÂçÉèÖÃ
+						//å½“å‰ç½‘ç»œä¸å¯ç”¨ï¼Œè¯·æ£€æŸ¥ç½‘ç»œè®¾ç½®
 					}
 				}
 			});
@@ -184,7 +184,7 @@ private class MyContactListener implements EMContactListener {
     
 </code></pre>
 
-####6.×¢²áÈºÁÄÏà¹ØµÄlistener    {#groupchangelistener}
+####6.æ³¨å†Œç¾¤èŠç›¸å…³çš„listener {#groupchangelistener}
 
 <pre class="hll"><code class="language-java">
 EMGroupManager.getInstance().addGroupChangeListener(new MyGroupChangeListener());
@@ -194,7 +194,7 @@ private class MyGroupChangeListener implements GroupChangeListener {
 	@Override
 	public void onInvitationReceived(String groupId, String groupName,String inviter, String reason) {
 
-		//ÊÕµ½¼ÓÈëÈºÁÄµÄÑûÇë
+		//æ”¶åˆ°åŠ å…¥ç¾¤èŠçš„é‚€è¯·
 
 		boolean hasGroup = false;
 		for (EMGroup group : EMGroupManager.getInstance().getAllGroups()) {
@@ -206,16 +206,16 @@ private class MyGroupChangeListener implements GroupChangeListener {
 		if (!hasGroup)
 			return;
 
-		// ±»ÑûÇë
+		// è¢«é‚€è¯·
 		EMMessage msg = EMMessage.createReceiveMessage(Type.TXT);
 		msg.setChatType(ChatType.GroupChat);
 		msg.setFrom(inviter);
 		msg.setTo(groupId);
 		msg.setMsgId(UUID.randomUUID().toString());
-		msg.addBody(new TextMessageBody(inviter + "ÑûÇëÄã¼ÓÈëÁËÈºÁÄ"));
-		// ±£´æÑûÇëÏûÏ¢
+		msg.addBody(new TextMessageBody(inviter + "é‚€è¯·ä½ åŠ å…¥äº†ç¾¤èŠ"));
+		// ä¿å­˜é‚€è¯·æ¶ˆæ¯
 		EMChatManager.getInstance().saveMessage(msg);
-		// ÌáĞÑĞÂÏûÏ¢
+		// æé†’æ–°æ¶ˆæ¯
 		EMNotifier.getInstance(getApplicationContext()).notifyOnNewMsg();
 
 	}
@@ -223,58 +223,58 @@ private class MyGroupChangeListener implements GroupChangeListener {
 	@Override
 	public void onInvitationAccpted(String groupId, String inviter,
 				String reason) {
-			//ÈºÁÄÑûÇë±»½ÓÊÜ
+			//ç¾¤èŠé‚€è¯·è¢«æ¥å—
 	}
 
 	@Override
 	public void onInvitationDeclined(String groupId, String invitee,
 				String reason) {
-		//ÈºÁÄÑûÇë±»¾Ü¾ø
+		//ç¾¤èŠé‚€è¯·è¢«æ‹’ç»
 	}
 
 	@Override
 	public void onUserRemoved(String groupId, String groupName) {
-		//µ±Ç°ÓÃ»§±»¹ÜÀíÔ±ÒÆ³ı³öÈºÁÄ
+		//å½“å‰ç”¨æˆ·è¢«ç®¡ç†å‘˜ç§»é™¤å‡ºç¾¤èŠ
 			
 	}
 
 	@Override
 	public void onGroupDestroy(String groupId, String groupName) {
-		//ÈºÁÄ±»´´½¨Õß½âÉ¢
-		// ÌáÊ¾ÓÃ»§Èº±»½âÉ¢
+		//ç¾¤èŠè¢«åˆ›å»ºè€…è§£æ•£
+		// æç¤ºç”¨æˆ·ç¾¤è¢«è§£æ•£
 
 	}
 
 	@Override
 	public void onApplicationReceived(String groupId, String groupName,String applyer, String reason) {
-		// ÓÃ»§ÉêÇë¼ÓÈëÈºÁÄ£¬ÊÕµ½¼ÓÈºÉêÇë
+		// ç”¨æˆ·ç”³è¯·åŠ å…¥ç¾¤èŠï¼Œæ”¶åˆ°åŠ ç¾¤ç”³è¯·
 	}
 
 	@Override
 	public void onApplicationAccept(String groupId, String groupName,String accepter) {
-		// ¼ÓÈºÉêÇë±»Í¬Òâ
+		// åŠ ç¾¤ç”³è¯·è¢«åŒæ„
 		EMMessage msg = EMMessage.createReceiveMessage(Type.TXT);
 		msg.setChatType(ChatType.GroupChat);
 		msg.setFrom(accepter);
 		msg.setTo(groupId);
 		msg.setMsgId(UUID.randomUUID().toString());
-		msg.addBody(new TextMessageBody(accepter + "Í¬ÒâÁËÄãµÄÈºÁÄÉêÇë"));
-		// ±£´æÍ¬ÒâÏûÏ¢
+		msg.addBody(new TextMessageBody(accepter + "åŒæ„äº†ä½ çš„ç¾¤èŠç”³è¯·"));
+		// ä¿å­˜åŒæ„æ¶ˆæ¯
 		EMChatManager.getInstance().saveMessage(msg);
-		// ÌáĞÑĞÂÏûÏ¢
+		// æé†’æ–°æ¶ˆæ¯
 		EMNotifier.getInstance(getApplicationContext()).notifyOnNewMsg();
 	}
 
 	@Override
 	public void onApplicationDeclined(String groupId, String groupName,String decliner, String reason) {
-		// ¼ÓÈºÉêÇë±»¾Ü¾ø
+		// åŠ ç¾¤ç”³è¯·è¢«æ‹’ç»
 	}
 
 }
 	
 </code></pre>
 
-###×¢£º×îºóÒªÍ¨Öªsdk£¬UI ÒÑ¾­³õÊ¼»¯Íê±Ï£¬×¢²áÁËÏàÓ¦µÄreceiverºÍlistener, ¿ÉÒÔ½ÓÊÜbroadcastÁË    {#setappinit}
+###æ³¨ï¼šæœ€åè¦é€šçŸ¥sdkï¼ŒUI å·²ç»åˆå§‹åŒ–å®Œæ¯•ï¼Œæ³¨å†Œäº†ç›¸åº”çš„receiverå’Œlistener, å¯ä»¥æ¥å—broadcastäº†    {#setappinit}
 
 <pre class="hll"><code class="language-java">
 EMChat.getInstance().setAppInited();
