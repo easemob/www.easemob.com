@@ -34,18 +34,18 @@ secondnavios: true
 
 ## 添加SDK依赖库 
 
-![alt text](/iOS_AddLib.png "Lib")
+![alt text](/iOS_AddLibs.png "Lib")
 
 ## 设置Linker 
 
-![alt text](/iOS_Link.png "link")
+![alt text](/iOS_OtherLinker.png "link")
 
 向Other Linker Flags 中添加 -ObjC(如果已有，则不需要再添加)`注意O,C大写`
 
 # SDK的使用，以demo源码为示例
 
 ## UIDemo依赖库 
-![alt text](/iOS_AddUIDemoLib.png "UIDemoLib")
+![alt text](/iOS_AddUIDemoLibs.png "UIDemoLib")
 
 ## 初始化EaseMobSDK ，见AppDelegate
 
