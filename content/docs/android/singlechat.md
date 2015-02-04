@@ -128,7 +128,7 @@ private class NewMessageBroadcastReceiver extends BroadcastReceiver {
 ### 获取聊天记录 {#historymessage}
 
 <pre class="hll"><code class="language-java">
-EMConversation conversation = EMChatManager.getInstance().getConversation(username);
+EMConversation conversation = EMChatManager.getInstance().getConversation(username|groupid);
 //获取此会话的所有消息
 List&lt;EMMessage&gt; messages = conversation.getAllMessages();
 //sdk初始化加载的聊天记录为20条，到顶时需要去db里获取更多
@@ -143,35 +143,57 @@ List&lt;EMMessage&gt; messages = conversation.loadMoreGroupMsgFromDB(startMsgId,
 ### 获取未读消息数量
 
 <pre class="hll"><code class="language-java">
-EMConversation conversation = EMChatManager.getInstance().getConversation(username);
+EMConversation conversation = EMChatManager.getInstance().getConversation(username|groupid);
 conversation.getUnreadMsgCount();
 </code></pre>
 
 ### 未读消息数清零(指定会话消息未读数清零) 
 
 <pre class="hll"><code class="language-java">
-EMConversation conversation = EMChatManager.getInstance().getConversation(username);
-conversation.resetUnsetMsgCount();
+EMConversation conversation = EMChatManager.getInstance().getConversation(username|groupid);
+conversation.resetUnreadMsgCount();
 	
+</code></pre>
+
+###所有未读消息数清零
+    
+<pre class="hll"><code class="language-java">
+EMChatManager.getInstance().resetAllUnreadMsgCount();
+    
+</code></pre>
+
+###获取消息总数
+
+<pre class="hll"><code class="language-java">
+EMConversation conversation = EMChatManager.getInstance().getConversation(username|groupid);
+    conversation.getMsgCount();
+    	
 </code></pre>
 
 ### 清空会话聊天记录
 
 <pre class="hll"><code class="language-java">
-//清空和某个user的聊天记录，不删除整个会话
-EMChatManager.getInstance().clearConversation(username);
+//清空和某个user的聊天记录(包括本地)，不删除conversation这个会话对象
+EMChatManager.getInstance().clearConversation(username|groupid);
 	
 </code></pre>
 
-### 删除聊天记录
+### 删除单个聊天记录
 
 <pre class="hll"><code class="language-java">
-//删除和某个user的整个的聊天记录
-EMChatManager.getInstance().deleteConversation(username);
+//删除和某个user的整个的聊天记录(包括本地)
+EMChatManager.getInstance().deleteConversation(username|groupid);
 //删除当前会话的某条聊天记录
-EMConversation conversation = EMChatManager.getInstance().getConversation(username);
+EMConversation conversation = EMChatManager.getInstance().getConversation(username|groupid);
 conversation.removeMessage(deleteMsg.msgId);
 	
+</code></pre>
+
+###删除所有聊天记录
+<pre class="hll"><code class="language-java">
+ //删除所有会话记录(包括本地)
+EMChatManager.getInstance().deleteAllConversation();
+    
 </code></pre>
 
 ### 设置自定义的消息提示 {#setnotification}
@@ -282,84 +304,4 @@ chatOptions.setAcceptInvitationAlways(false);
 </code></pre> 
 
 
-
-## 高级话题 
-
-## 自定义扩展消息 {#custommessage}
-当sdk提供的消息类型不满足需求时，开发者可以通过扩展自sdk提供的文本、语音、图片、位置等消息类型，从而生成自己需要的消息类型。
-
-<pre class="hll"><code class="language-java">
-//这里是扩展自文本消息，如果这个自定义的消息需要用到语音或者图片等，可以扩展自语音、图片消息，亦或是位置消息。
-EMMessage message = EMMessage.createSendMessage(EMMessage.Type.TXT);
-TextMessageBody txtBody = new TextMessageBody(content);
-message.addBody(txtBody);
-
-// 增加自己特定的属性,目前sdk支持int,boolean,String这三种属性，可以设置多个扩展属性
-message.setAttribute("attribute1", "value");
-message.setAttribute("attribute2", true);
-
-message.setReceipt(username);
-conversation.addMessage(message);
-//发送消息
-EMChatManager.getInstance().sendMessage(message, new EMCallBack());
-
-//在接收消息的BroadcastReceive中，通过自己设置的key即可取到这些value
-private class NewMessageBroadcastReceiver extends BroadcastReceiver {
-	@Override
-	public void onReceive(Context context, Intent intent) {
-		// 消息id
-		String msgId = intent.getStringExtra("msgid"); 
-		//根据消息id获取message
-		EMMessage message = EMChatManager.getInstance().getMessage(msgId);
-		//获取自定义的属性，第2个参数为返回的默认值
-		message.getStringAttribute("attribute1",null);
-		message.getBooleanAttribute("attribute2", false);
-		abortBroadcast();
-	}
-}
-</code></pre>
-
-
-
-##网络异常监听: {#networklisten}
-
-1.在聊天过程中难免会遇到网络问题，在此SDK为您提供了网络监听接口，实时监听
-
-2.对于同一个账号在多处登录，则根据本监听事件中的_onDisConnected_方法传递的int类型参数errorCode来进行判断是否同一个账号在其它地方进行了登录和账号是否被删除，若服务器返回的参数值为`EMError.CONNECTION_CONFLICT`，则认为是有同一个账号异地登录
-
-<pre class="hll"><code class="language-java">
-    //注册一个监听连接状态的listener
-    EMChatManager.getInstance().addConnectionListener(new MyConnectionListener());
-
-    //实现ConnectionListener接口
-    private class MyConnectionListener implements EMConnectionListener {
-        @Override
-		public void onConnected() {
-		}
-		@Override
-		public void onDisconnected(final int error) {
-			runOnUiThread(new Runnable() {
-
-				@Override
-				public void run() {
-					if(error == EMError.USER_REMOVED){
-						// 显示帐号已经被移除
-					}else if (error == EMError.CONNECTION_CONFLICT) {
-						// 显示帐号在其他设备登陆
-					} else {
-		                 //"连接不到聊天服务器"
-					}
-				}
-			});
-		}
-    }
-    
-</code></pre>
-
-
-
-
-
-	
-
-	
+##详细文档请参考 [java doc](http://www.easemob.com/apidoc/android/chat/)

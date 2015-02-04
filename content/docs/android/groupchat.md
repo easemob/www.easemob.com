@@ -39,20 +39,20 @@ secondnavandroid: true
 	
 	//前一种方法创建的群聊默认最大群聊用户数为200，传入maxUsers后设置自定义的最大用户数，最大可以设为2000
 	EMGroupManager.getInstance().createPublicGroup(groupName, desc, members, needApprovalRequired,maxUsers);
-</code></pre>	
+</code></pre>		
 
 ## 群聊加人 {#group-joincontact}
 <pre class="hll"><code class="language-java">
 	//群主加人调用此方法
-	EMGroupManager.getInstance().addUsersToGroup(groupId, newmembers);
+	EMGroupManager.getInstance().addUsersToGroup(groupId, newmembers);//异步执行
 	//私有群里，如果开放了群成员邀请，群成员邀请调用下面方法
-	EMGroupManager.getInstance().inviteUser(groupId, newmembers, null);
+	EMGroupManager.getInstance().inviteUser(groupId, newmembers, null);//异步执行
 </code></pre>
 
 ## 群聊减人 {#group-subcontact}
 <pre class="hll"><code class="language-java">
 	//把username从群聊里删除
-	EMGroupManager.getInstance().removeUserFromGroup(groupId, username);
+	EMGroupManager.getInstance().removeUserFromGroup(groupId, username);//异步执行
 </code></pre>
 
 ## 加入某个群聊 {#group-joinone}
@@ -60,36 +60,66 @@ secondnavandroid: true
 
 <pre class="hll"><code class="language-java">
 	//如果群开群是自由加入的，即group.isMembersOnly()为false，直接join
-	EMGroupManager.getInstance().joinGroup(groupid);
+	EMGroupManager.getInstance().joinGroup(groupid);//异步执行
 	//需要申请和验证才能加入的，即group.isMembersOnly()为true，调用下面方法
-	EMGroupManager.getInstance().applyJoinToGroup(groupid, "求加入");
+	EMGroupManager.getInstance().applyJoinToGroup(groupid, "求加入");//异步执行
 </code></pre>
 
 ## 退出群聊 {#group-exit}
 <pre class="hll"><code class="language-java">
-	EMGroupManager.getInstance().exitFromGroup(groupId);
+	EMGroupManager.getInstance().exitFromGroup(groupId);//异步执行
 </code></pre>
 
 ## 解散群聊 {#group-dismiss}
 <pre class="hll"><code class="language-java">
-	EMGroupManager.getInstance().exitAndDeleteGroup(groupId);
+	EMGroupManager.getInstance().exitAndDeleteGroup(groupId);//异步执行
 </code></pre>
 
 ## 获取群聊列表 ## {#group-getlist}
 
 <pre class="hll"><code class="language-java">
-	//从服务器获取自己加入的和创建的群聊列表，此api获取的群组sdk会自动保存到内存和db。
+	//从服务器获取自己加入的和创建的群聊列表（两种方式），此api获取的群组sdk会自动保存到内存和db。
 	//注意，获取到的列表里的群聊只有groupname和groupid等简单配置信息
-	List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getGroupsFromServer();
+	 1.List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getGroupsFromServer();//异步执行
+	
+     2.EMGroupManager.getInstance().asyncGetGroupsFromServer(newEMValueCallBack<List<EMGroup>>() {
+			
+		@Override
+		public void onSuccess(List<EMGroup> value) {
+			// TODO Auto-generated method stub
+				
+		}
+			
+		@Override
+		public void onError(int error, String errorMsg) {
+			// TODO Auto-generated method stub
+				
+		}
+	});
 
 	//从本地加载群聊列表
 	List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getAllGroups();
 
-	//获取所有公开群列表
-	List&lt;EMGroupInfo&gt; groupsList = EMGroupManager.getInstance().getAllPublicGroupsFromServer();	
+	//获取所有公开群列表（两种方式）
+	1.List&lt;EMGroupInfo&gt; groupsList = EMGroupManager.getInstance().getAllPublicGroupsFromServer();//异步执行
+	
+    2.EMGroupManager.getInstance().asyncGetAllPublicGroupsFromServer(new EMValueCallBack<List<EMGroupInfo>>() {
+			
+			@Override
+			public void onSuccess(List<EMGroupInfo> value) {
+				// TODO Auto-generated method stub
+			}
+			
+			@Override
+			public void onError(int error, String errorMsg) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+	
 </code></pre>
 
-## 获取群聊信息 ## {#group-getdetail}
+## 获取单个群聊信息 ## {#group-getdetail}
 
  <pre class="hll"><code class="language-java">
 	//根据群聊ID从本地获取群聊信息
@@ -101,29 +131,38 @@ secondnavandroid: true
 	group.getMembers();//获取群成员
 	group.getOwner();//获取群主
     ...
-	其它方法详见环信接口文档
+	其它方法详见环信接口文档(http://www.easemob.com/apidoc/android/chat/)
  </code></pre>
  
 ## 屏蔽群消息 ## {#group-block}
 
- <pre class="hll"><code class="language-java">
-    //屏蔽群消息后，就不能接收到此群的消息 （群创建者不能屏蔽群消息）
-    //根据groupid屏蔽此群所有发来的消息
-     EMGroupManager.getInstance().blockGroupMessage(groupId);
+<pre class="hll"><code class="language-java">
+/**
+* 屏蔽群消息后，就不能接收到此群的消息 （群创建者不能屏蔽群消息）（还是群里面的成员，但不再接收群消息）  
+* @param groupId， 群id
+* @throws EasemobException
+*/
+	EMGroupManager.getInstance().blockGroupMessage(groupId);//异步执行
  </code></pre>
 
 
 ## 解除屏蔽群 ## {#group-unblock}
 
- <pre class="hll"><code class="language-java">
-     //解除屏蔽群后，就可以正常收到群的所有消息
-    EMGroupManager.getInstance().unblockGroupMessage(groupId);
+<pre class="hll"><code class="language-java">
+    /**
+	 * 取消屏蔽群消息,就可以正常收到群的所有消息
+	 * @param groupId
+	 * @throws EaseMobException
+	 */
+	EMGroupManager.getInstance().unblockGroupMessage(groupId);//异步执行
  </code></pre>
 
 ## 修改群组名称 ## {#group-changename}
 
 <pre class="hll"><code class="language-java">
-    EMGroupManager.getInstance().changeGroupName({groupId}, {changedGroupName});
+ //groupId 需要改变名称的群组的id
+ //changedGroupName 改变后的群组名称
+ EMGroupManager.getInstance().changeGroupName(groupId,changedGroupName);//异步执行
     
 </code></pre>
 
@@ -136,67 +175,45 @@ EMChatManager.getInstance().getChatOptions().setReceiveNotNoifyGroup({List&lt;St
 </code></pre>
 
 
-## 将用户加到群组的黑名单 ## {#group-blockuser}
+## 将群成员拉入群组的黑名单 ## {#group-blockuser}
 
 <pre class="hll"><code class="language-java">
-//将用户加到群组的黑名单，被加入黑名单的用户无法加入群，无法收发此群的消息 （只有群主才能设置群的黑名单）
-EMGroupManager.getInstance().blockUser({groupid}, {username})
+    /**
+	 * 将用户加到群组的黑名单，被加入黑名单的用户无法加入群，无法收发此群的消息
+	 * （只有群主才能设置群的黑名单）
+	 * @param groupId, 群组的id
+	 * @param username, 待屏蔽的用户名
+	 * @exception EaseMobException 出错会抛出
+	 */
+    EMGroupManager.getInstance().blockUser(groupId, username);//异步执行
 
 </code></pre>
 
-## 将用户从群组的黑名单移除 ## {#group-unblockuser}
+## 将拉入黑名单的群成员移除 ## {#group-unblockuser}
 
 <pre class="hll"><code class="language-java">
-//将用户从群组的黑名单移除 （只有群主才能调用此函数）
-EMGroupManager.getInstance().unblockUser({groupid}, {username})
+    /**
+	 * 将用户从群组的黑名单移除（只有群主才能调用此函数）
+	 * @param groupId, 群组的id
+	 * @param username, 待解除屏蔽的 用户名
+	 */
+    EMGroupManager.getInstance().unblockUser(groupId, username);
 
 </code></pre>
 
 ## 获取群组的黑名单用户列表 ## {#group-blockedusers}
 
 <pre class="hll"><code class="language-java">
-//获取群组的黑名单用户列表 （只有群主才能调用此函数）
-EMGroupManager.getInstance().getBlockedUsers({groupid})
+    /**
+	 * 获取群组的黑名单用户列表
+	 * （只有群主才能调用此函数）
+	 * @return List<String> 
+	 * @throws EaseMobException 获取失败
+	 */
+    EMGroupManager.getInstance().getBlockedUsers(groupId);//异步执行
 
 </code></pre>
 
-
-
-## 高级话题 ##
-
-## 自定义扩展消息 ## {#group-custommessage}
-当sdk提供的消息类型不满足需求时，开发者可以通过扩展自sdk提供的文本、语音、图片、位置等消息类型，从而生成自己需要的消息类型。
-
-<pre class="hll"><code class="language-java">
-	//这里是扩展自文本消息，如果这个自定义的消息需要用到语音或者图片等，可以扩展自语音、图片消息，亦或是位置消息。
-	EMMessage message = EMMessage.createSendMessage(EMMessage.Type.TXT);
-	TextMessageBody txtBody = new TextMessageBody(content);
-	message.addBody(txtBody);
-	
-	// 增加自己特定的属性,目前sdk支持int,boolean,String这三种属性，可以设置多个扩展属性
-	message.setAttribute("attribute1", "value");
-	message.setAttribute("attribute2", true);
-	
-	message.setReceipt(username);
-	conversation.addMessage(message);
-	//发送消息
-	EMChatManager.getInstance().sendMessage(message, new EMCallBack(){});
-
-	//在接收消息的BroadcastReceive中，通过自己设置的key即可取到这些value
-	private class NewMessageBroadcastReceiver extends BroadcastReceiver {
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			// 消息id
-			String msgId = intent.getStringExtra("msgid"); 
-			//根据消息id获取message
-			EMMessage message = EMChatManager.getInstance().getMessage(msgId);
-			//获取自定义的属性，第2个参数为返回的默认值
-			message.getStringAttribute("attribute1",null);
-			message.getBooleanAttribute("attribute2", false);
-			abortBroadcast();
-		}
-	}
-</code></pre>
 
 ### 群聊事件监听 ### {#group-listener}
 
@@ -240,4 +257,6 @@ EMGroupManager.getInstance().getBlockedUsers({groupid})
 
 ##Demo及SDK下载
 [Demo及SDK下载](http://www.easemob.com/sdk/)
+
+##详细文档请参考 [java doc](http://www.easemob.com/apidoc/android/chat/)
 

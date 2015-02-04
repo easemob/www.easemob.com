@@ -8,13 +8,19 @@ secondnavandroid: true
 
 ### 添加环信的类库
 
-在自行开发的应用中，集成环信聊天需要把libs文件夹下的`easemobchat_2.1.5.jar`和`armeabi目录`拷贝到你的项目的libs文件夹底下，如果不需要语音通话功能，拷贝`libs.without.audio`的jar文件即可。jar名字的后面的2.1.5可能会跟你下载的不一致，这是版本号，以实际为准。如果集成过2.0.4之前sdk的开发者，集成此sdk时，需要把httpmime这个jar从libs底下移除。
+在自行开发的应用中，集成环信聊天需要把libs文件夹下的`easemobchat_2.1.5.jar`和`armeabi目录`拷贝到你的项目的libs文件夹底下，如果不需要语音和视频通话功能，拷贝`libs.without.audio`的jar文件即可。jar名字的后面的2.1.5可能会跟你下载的不一致，这是版本号，以实际为准。如果集成过2.0.4之前sdk的开发者，集成此sdk时，需要把httpmime这个jar从libs底下移除。
 
 注：版本向下兼容
 
  ![alt text](/demo_dirs_new1.jpg "demo") 
 
  ![alt text](/project_libs1.jpg "demo")
+ 
+####2.1.5之前的jar包和.so文件
+ 
+ ![alt text](/project_libs2.jpg "demo")
+ 
+####2.1.5之后的jar包和.so文件（里面包含了语音和视频通过功能）
 
 ### 添加环信的配置信息
 
