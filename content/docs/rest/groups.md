@@ -8,6 +8,24 @@ sidebar: restsidebar
 
 环信提供了REST API 来管理app中的群组
 
+
+## 群组数据结构 {#datastruct}
+
+| 名称              |     类型        |       描述             |
+|------------------|:----------------:|--------------------- |
+| id / groupid     |  String       |  群组ID, 群组唯一标识符  |
+| name / groupname |  String       | 群组名称  |
+| descscription    |  String | 群组描述  |
+| public           |  Boolean | 群组类型： true 公开群，false 私有群  |
+| membersonly      |  Boolean | 是否只有群成员可以进来发言，true 是 ， false 否 |
+| allowinvites     |  Boolean | 是否允许群成员邀请别人加入此群。 true 允许群成员邀请人加入此群， false 只有群主才可以往群里加人  |
+| maxusers         |  Integer  | 群成员上限  |
+| affiliations_count | Integer | 现有成员总数  |
+| affiliations     |  Array | 现有成员列表, 包含了owner和member  |
+| owner            |  String | 群主的username |
+| member           |  String | 群成员的username  |
+
+
 ## 获取app中所有的群组 {#getallgroups}
 
 - Path : /{org_name}/{app_name}/chatgroups
