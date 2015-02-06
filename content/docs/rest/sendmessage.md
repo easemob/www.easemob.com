@@ -6,45 +6,6 @@ sidebar: restsidebar
 
 # 聊天相关API
 
-
-### 查看用户在线状态 {#status}
-> 查看一个用户的在线状态
-
-> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
-
-- Path : /{org_name}/{app_name}/users/{username}/status
-- HTTP Method : GET
-- URL Params ： 无
-- Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
-- Request Body ： 无
-- Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-- 可能的错误码： <br/>
-404 （此用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
-
-#### curl示例：
-	
-<pre class="hll"><code class="language-java">
-curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/users/zw123/status"
-</code></pre>
-
-#### Response 示例：
-
-<pre class="hll"><code class="language-java">
-{
-    "action": "get",
-    "application": "4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5",
-    "params": {},
-    "uri": "https://a1.easemob.com/easemob-demo/chatdemoui",
-    "entities": [],
-    "data": {
-        "stliu": "online"  //注意, 这里返回的是用户名和在线状态的键值对, 值为 online 或者 offline
-    },
-    "timestamp": 1404932199220,
-    "duration": 743,
-    "organization": "easemob-demo",
-    "applicationName": "chatdemoui"
-}
-</code></pre>
         
 ### 发送文本消息 {#sendmsg}
 
