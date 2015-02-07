@@ -8,6 +8,8 @@ secondnavandroid: true
 
 ### 获取好友列表 {#friendslist}
 
+如果使用环信的好友体系需要先设置 EMChatManager.getInstance().getChatOptions().setUseRoster(true)
+
 获取好友的username list，开发者需要根据username去自己服务器获取好友的详情
 
 <pre class="hll"><code class="language-java">
@@ -142,5 +144,6 @@ EMContactManager.getInstance().deleteUserFromBlackList(username);//异步执行
 </code></pre>
 
 ###Demo及SDK下载
-http://www.easemob.com/sdk/
+[http://www.easemob.com/sdk/](http://www.easemob.com/sdk/)
+
 ###详细文档请参考 [java doc](http://www.easemob.com/apidoc/android/chat/)

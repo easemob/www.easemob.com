@@ -75,7 +75,7 @@ EMGroupManager.getInstance().exitFromGroup(groupId);//异步执行
 EMGroupManager.getInstance().exitAndDeleteGroup(groupId);//异步执行
 </code></pre>
 
-## 获取群聊列表 ## {#group-getlist}
+## 获取群聊列表	{#group-getlist}
 
 <pre class="hll"><code class="language-java">
 //从服务器获取自己加入的和创建的群聊列表（两种方式），此api获取的群组sdk会自动保存到内存和db。
@@ -256,7 +256,7 @@ EMGroupManager.getInstance().addGroupChangeListener(new GroupChangeListener() {
 
 
 ###Demo及SDK下载
-http://www.easemob.com/sdk/
+[http://www.easemob.com/sdk/](http://www.easemob.com/sdk/)
 
 ###详细文档请参考 [java doc](http://www.easemob.com/apidoc/android/chat/)
 
