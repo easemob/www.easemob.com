@@ -114,13 +114,13 @@ EMContactManager.getInstance().setContactListener(new MyContactListener());
 private class MyContactListener implements EMContactListener {
 
 	@Override
-	public void onContactAdded(List&#60String&#62 usernameList) {
+	public void onContactAdded(List&lt;String&gt; usernameList) {
 		// 保存增加的联系人
 			
 	}
 
 	@Override
-	public void onContactDeleted(final List&#60String&#62 usernameList) {
+	public void onContactDeleted(final List&lt;String&gt; usernameList) {
 		// 被删除
 
 	}
