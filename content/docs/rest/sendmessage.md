@@ -6,8 +6,12 @@ sidebar: restsidebar
 
 # 聊天相关API
 
+## 发送消息的流程说明
+1. 发送 ** 文字 ** / **透传** 消息直接编辑内容发送
+2. 发送 **图片** / **语音** / **视频** 消息需要先上传这三类文件，从接口返回值中获取到相应的参数，按照API要求编辑到消息体中然后的发送。
 
-### 发送文本消息 {#sendmsg}
+
+## 发送文本消息 {#sendmsg}
 
 > 给一个或者多个用户, 或者一个或者多个群组发送消息, 并且通过可选的 _from_ 字段让接收方看到发送方是不同的人,同时, 支持扩展字段, 通过 _ext_ 属性, app可以发送自己专属的消息结构.
 
@@ -69,7 +73,7 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
 </code></pre>
 
 
-### 发送图片消息 {#sendimgmsg}
+## 发送图片消息 {#sendimgmsg}
 
 > 给一个或者多个用户, 或者一个或者多个群组发送消息, 并且通过可选的 _from_ 字段让接收方看到发送方是不同的人,同时, 支持扩展字段, 通过 _ext_ 属性, app可以发送自己专属的消息结构.
 
@@ -129,7 +133,7 @@ curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H '
 </code></pre>
 
 
-####发送语音消息  {#sendvoicemsg}
+##  发送语音消息  {#sendvoicemsg}
 
 > 发送语音文件，需要先上传语音文件，然后再发送此消息。（url中的uuid和secret可以从上传后的response获取）
 
@@ -193,7 +197,7 @@ curl -X POST -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-
 }
 </code></pre>
 
-####发送视频消息  {#sendvideomsg}
+## 发送视频消息  {#sendvideomsg}
 
 > 发送视频消息，需要先上传视频文件和视频缩略图文件，然后再发送此消息。（url中的uuid和secret可以从上传后的response获取）
 
@@ -257,7 +261,7 @@ curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages' -H 'Au
 }
 </code></pre>
 
-####发送透传消息  {#sendpayloadmsg}
+## 发送透传消息  {#sendpayloadmsg}
 
 >透传消息：不会在客户端提示（铃声，震动，通知栏等），但可以在客户端监听到的消息推送，具体功能可以根据自身自定义
 

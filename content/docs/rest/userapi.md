@@ -829,9 +829,9 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 }
 </code></pre>
 
-## 好友管理  {#contacts}
 
-### 给IM用户的添加好友  {#contactsfriend}
+
+## 给IM用户的添加好友  {#contactsfriend}
 > 给一个用户添加好友, 好友必须是和自己在一个app下的IM用户.{owner_username} 是要添加好友的用户名, {friend_username} 是被添加的用户名
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/contacts/users/{friend_username}
@@ -873,7 +873,7 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 }
 </code></pre>
 
-### 解除IM用户的好友关系 {#delfriend}
+## 解除IM用户的好友关系 {#delfriend}
 > 从IM用户的好友列表中移除一个用户
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/contacts/users/{friend_username}
@@ -922,7 +922,7 @@ curl -X DELETE -i -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10I
 }
 </code></pre>
 
-### 查看好友  {#queryfriend}
+## 查看好友  {#queryfriend}
 > 查看某个IM用户的好友信息
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/contacts/users
@@ -958,7 +958,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 </code></pre>
 
 
-### 获取IM用户的黑名单 {#blocksusers}
+## 获取IM用户的黑名单 {#blocksusers}
 > 获取一个IM用户的黑名单
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/blocks/users
@@ -990,7 +990,7 @@ curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk
 </code></pre>
 
 
-### 往IM用户的黑名单中加人 {#addblocksusers}
+## 往IM用户的黑名单中加人 {#addblocksusers}
 > 往一个IM用户的黑名单中加人
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/blocks/users
@@ -1025,7 +1025,7 @@ curl -X POST -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBU
 }
 </code></pre>
 
-### 从IM用户的黑名单中减人 {#delblocksusers}
+## 从IM用户的黑名单中减人 {#delblocksusers}
 > 从一个IM用户的黑名单中减人
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/blocks/users/{blocked_username}
@@ -1067,7 +1067,7 @@ curl -X DELETE -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBo
 </code></pre>
 
 
-### 查看用户在线状态 {#status}
+## 查看用户在线状态 {#status}
 > 查看一个用户的在线状态
 
 > **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
@@ -1103,5 +1103,74 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
     "duration": 743,
     "organization": "easemob-demo",
     "applicationName": "chatdemoui"
+}
+</code></pre>
+
+
+## 查询离线消息数 {#msgcount}
+> 获取一个IM用户的离线消息数
+
+- Path : /{org_name}/{app_name}/users/{owner_username}/offline_msg_count
+- HTTP Method : GET
+- URL Params : 无
+- Request Headers : {"Authorization":"Bearer ${token}"}
+- Request Body ： 无
+- Response Body ： "data" : {"v3y0kf9arx" : 0 }      ----  用户名：v3y0kf9arx ，离线消息数：0条
+- 可能的错误码： <br/>
+404 （此用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+    
+#### curl 示例：
+
+<pre class="hll"><code class="language-java">
+curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk6Vg2xm8DZdVjxbhwm7XWY" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/offline_msg_count"
+</code></pre>
+
+#### Response 示例：
+
+<pre class="hll"><code class="language-java">
+{
+  "action" : "get",
+  "uri" : "http://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/offline_msg_count",
+  "entities" : [ ],
+  "data" : {
+    "v3y0kf9arx" : 0
+  },
+  "timestamp" : 1412823831894,
+  "duration" : 57
+}
+</code></pre>
+
+
+
+## 查询某条离线消息状态 {#offlineMsgStatus}
+> 通过离线消息的id查看用户的该条离线消息状态
+
+- Path : /{org_name}/{app_name}/users/{username}/offline_msg_status/{msg_id}
+- HTTP Method : GET
+- URL Params ： 无
+- Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
+- Request Body ： 无
+- Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （此用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+
+#### curl示例：
+	
+<pre class="hll"><code class="language-java">
+curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/users/zw123/offline_msg_status/1121212"
+</code></pre>
+
+#### Response 示例：
+
+<pre class="hll"><code class="language-java">
+{
+    "action": "get",
+    "uri": "http://a2.easemob.com/easemob-demo/chatdemoui/users/jianxin/offline_msg_status/12",
+    "entities": [],
+    "data": {
+        "12": "delivered"      // 格式："{消息id}":"{状态}", 状态的值有两个: deliverd 表示此用户的该条离线消息已经收到过了，undelivered 表示此用户的该条离线消息未还未收到
+    },
+    "timestamp": 1423573644082,
+    "duration": 644
 }
 </code></pre>

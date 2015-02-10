@@ -179,39 +179,3 @@ cursor=MTYxOTcyOTYyNDpnR2tBQVFNQWdHa0FCZ0ZHczBKN0F3Q0FkUUFRYUdpdkt2ZU1FZU9vNU4zV
 <pre class="hll"><code class="language-java">
 curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/chatmessages?limit=10&cursor=MTYxOTcyOTYyNDpnR2tBQVFNQWdHa0FCZ0ZHczFuSG93Q0FkUUFROW94S0lQZVBFZU9mTEQxQWVMdHEyQUNBZFFBUTlvd2pFUGVQRWVPaHFWa1l0ZjA2dEFB"
 </code></pre>
-
-
-### 获取离线消息数 {#msgcount}
-> 获取一个IM用户的离线消息数
-
-- Path : /{org_name}/{app_name}/users/{owner_username}/offline_msg_count
-- HTTP Method : GET
-- URL Params : 无
-- Request Headers : {"Authorization":"Bearer ${token}"}
-- Request Body ： 无
-- Response Body ： "data" : {"v3y0kf9arx" : 0 }      ----  用户名：v3y0kf9arx ，离线消息数：0条
-- 可能的错误码： <br/>
-404 （此用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
-    
-#### curl 示例：
-
-<pre class="hll"><code class="language-java">
-curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk6Vg2xm8DZdVjxbhwm7XWY" -i  "https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/offline_msg_count"
-</code></pre>
-
-#### Response 示例：
-
-<pre class="hll"><code class="language-java">
-{
-  "action" : "get",
-  "uri" : "http://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/offline_msg_count",
-  "entities" : [ ],
-  "data" : {
-    "v3y0kf9arx" : 0
-  },
-  "timestamp" : 1412823831894,
-  "duration" : 57
-}
-</code></pre>
-
-
