@@ -72,7 +72,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
     "duration": 3551,
     "organization": "easemob-demo",
     "applicationName": "chatdemoui",
-    "count": 0
+    "count": 2
 }
 </code></pre>
 
