@@ -4,7 +4,7 @@ sidebar: androidsidebar
 secondnavandroid: true
 ---
 
-# 自主开发集成聊天配置指导(Android)
+## 集成环信配置指导(Android)
 
 ### 添加环信的类库
 
