@@ -1,7 +1,7 @@
 ---
 title: 环信
 sidebar: gettingstartsidebar
-secondnavandroid: true
+secondnavgettingstart: true
 ---
 
 # 环信通信过程及聊天记录保存
