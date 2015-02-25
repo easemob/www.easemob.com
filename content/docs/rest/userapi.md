@@ -1141,7 +1141,6 @@ curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk
 </code></pre>
 
 
-
 ## 查询某条离线消息状态 {#offlineMsgStatus}
 > 通过离线消息的id查看用户的该条离线消息状态
 
@@ -1155,7 +1154,7 @@ curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk
 404 （此用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
-	
+
 <pre class="hll"><code class="language-java">
 curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/users/zw123/offline_msg_status/1121212"
 </code></pre>
@@ -1172,5 +1171,74 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
     },
     "timestamp": 1423573644082,
     "duration": 644
+}
+</code></pre>
+
+
+## 用户账号禁用 {#deactivate}
+> 禁用某个IM用户的账号，禁用后该用户不可登录，下次解禁后该账户恢复正常使用。
+
+- Path : /{org_name}/{app_name}/users/{username}/deactivate
+- HTTP Method : POST
+- URL Params ： 无
+- Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
+- Request Body ： 无
+- Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （此用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/)
+
+#### curl示例：
+
+<pre class="hll"><code class="language-java">
+curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/users/zw123/deactivate"
+</code></pre>
+
+#### Response 示例：
+
+<pre class="hll"><code class="language-java">
+{
+    "action": "Deactivate user",
+    "entities": [
+        {
+            "uuid": "3861665a-07e5-11e4-b1d3-b70cde5a834c",
+            "type": "user",
+            "created": 1404964180277,
+            "modified": 1424781662293,
+            "username": "zw123",
+            "activated": false,
+            "nickname": "zw123"
+        }
+    ],
+    "timestamp": 1424846198409,
+    "duration": 244
+}
+</code></pre>
+
+
+## 用户账号解禁 {#activate}
+> 解除对某个IM用户账号的禁用，解禁后用户恢复正常使用。
+
+- Path : /{org_name}/{app_name}/users/{username}/activate
+- HTTP Method : POST
+- URL Params ： 无
+- Request Headers :  {"Content-Type":"application/json","Authorization":"Bearer ${token}"}
+- Request Body ： 无
+- Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
+- 可能的错误码： <br/>
+404 （此用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
+
+#### curl示例：
+	
+<pre class="hll"><code class="language-java">
+curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/users/zw123/activate"
+</code></pre>
+
+#### Response 示例：
+
+<pre class="hll"><code class="language-java">
+{
+    "action": "activate user",
+    "timestamp": 1424845777195,
+    "duration": 2
 }
 </code></pre>
