@@ -151,17 +151,7 @@ sidebar: restsidebar
 }	
 </code></pre>
 
-#### 使用示例1：获取某个时间段内的消息
-
-在url后面加上参数`ql=select * where timestamp<1403164734226 and timestamp>1403166586000`, 同上"="后的参数需要转义，如只取最近的消息可以只用timestamp>1403166586000 然后记录最后一条消息的timestamp作为下次获取。
-
-###### curl 示例：
-
-<pre class="hll"><code class="language-java">
-curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/chatmessages?ql=select+*+where+timestamp>1403164734226"
-</code></pre>
-
-#### 使用示例2：分页获取数据
+#### 使用示例1：分页获取数据
 
 使用limit参数获取数据完毕后，如果后边还有数据，会返回一个不为空的cursor回来，使用这个cursor就能进行分页获取了。
 
