@@ -34,7 +34,7 @@ layout: overview
             环信的目标是任何一个普通的开发者，通过环信提供的文档，demo，社区支持都能够自助式搞定环信集成。环信针对大客户是有一些VIP服务，但同时环信也会保证每一个普通的开发者都能得到最有力的支持。这些支持是通过尽可能详尽的文档，尽可能贴近真实需求的demo，尽可能开放的源码，尽可能友好的社区来实现的。</p>
             <br>
             <p>
-            环信在商务上的接洽就更简单了。我们的价格体系很简单也完全透明，见：<a href="http://www.easemob.com/price" target="_blank">http://www.easemob.com/price</a>。因为是300万以下注册用户完全免费，所以对绝大多数APP来说，你就直接用就可以了，完全不用去找商务。</p>
+            环信在商务上的接洽就更简单了。我们的价格体系很简单也完全透明，见：<a href="http://www.easemob.com/hx/price.html" target="_blank">http://www.easemob.com/price</a>。因为是300万以下注册用户完全免费，所以对绝大多数APP来说，你就直接用就可以了，完全不用去找商务。</p>
           </dd>
           <dt id="section-4"><a href="#section-4">开源的IM框架也有不少，为什么我不可以自己搭建一个IM服务器，自行开发呢？</a></dt>
           <dd>
