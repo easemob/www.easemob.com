@@ -103,10 +103,10 @@ List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getAllGroups();
 //获取所有公开群列表（两种方式）
 1.List&lt;EMGroupInfo&gt; groupsList = EMGroupManager.getInstance().getAllPublicGroupsFromServer();//异步执行
 	
-2.EMGroupManager.getInstance().asyncGetAllPublicGroupsFromServer(new EMValueCallBack<List<EMGroupInfo>>() {
+2.EMGroupManager.getInstance().asyncGetAllPublicGroupsFromServer(new EMValueCallBack&lt;List&lt;EMGroupInfo&gt;&gt;() {
 			
     @Override
-	public void onSuccess(List<EMGroupInfo> value) {
+	public void onSuccess(List&lt;EMGroupInfo&gt; value) {
 		// TODO Auto-generated method stub
 	}
 			
