@@ -82,10 +82,10 @@ EMGroupManager.getInstance().exitAndDeleteGroup(groupId);//异步执行
 //注意，获取到的列表里的群聊只有groupname和groupid等简单配置信息
 1.List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getGroupsFromServer();//异步执行
 	
-2.EMGroupManager.getInstance().asyncGetGroupsFromServer(newEMValueCallBack<List<EMGroup>>() {
+2.EMGroupManager.getInstance().asyncGetGroupsFromServer(newEMValueCallBack&lt;List&lt;EMGroup&gt;&gt;() {
 			
     @Override
-	public void onSuccess(List<EMGroup> value) {
+	public void onSuccess(List&lt;EMGroup&gt; value) {
 		// TODO Auto-generated method stub
 				
 	}
