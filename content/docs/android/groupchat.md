@@ -119,7 +119,7 @@ List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getAllGroups();
 	
 </code></pre>
 
-## 获取单个群聊信息 ## {#group-getdetail}
+## 获取单个群聊信息  {#group-getdetail}
 
 <pre class="hll"><code class="language-java">
 //根据群聊ID从本地获取群聊信息
@@ -134,7 +134,7 @@ group.getOwner();//获取群主
 其它方法详见环信接口文档(http://www.easemob.com/apidoc/android/chat/)
 </code></pre>
  
-## 屏蔽群消息 ## {#group-block}
+## 屏蔽群消息  {#group-block}
 
 <pre class="hll"><code class="language-java">
 /**
@@ -146,7 +146,7 @@ EMGroupManager.getInstance().blockGroupMessage(groupId);//异步执行
 </code></pre>
 
 
-## 解除屏蔽群 ## {#group-unblock}
+## 解除屏蔽群  {#group-unblock}
 
 <pre class="hll"><code class="language-java">
 /**
@@ -157,7 +157,7 @@ EMGroupManager.getInstance().blockGroupMessage(groupId);//异步执行
 EMGroupManager.getInstance().unblockGroupMessage(groupId);//异步执行
 </code></pre>
 
-## 修改群组名称 ## {#group-changename}
+## 修改群组名称  {#group-changename}
 
 <pre class="hll"><code class="language-java">
 //groupId 需要改变名称的群组的id
