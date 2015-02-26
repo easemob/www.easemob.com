@@ -207,7 +207,7 @@ EMGroupManager.getInstance().unblockUser(groupId, username);
 /**
 * 获取群组的黑名单用户列表
 * （只有群主才能调用此函数）
-* @return List<String> 
+* @return List&lt;String&gt; 
 * @throws EaseMobException 获取失败
 */
 EMGroupManager.getInstance().getBlockedUsers(groupId);//异步执行
