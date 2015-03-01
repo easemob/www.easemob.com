@@ -12,6 +12,12 @@ secondnavios: true
 请前往 [环信官方网站](http://www.easemob.com/ "环信官方网站") 注册开发者帐号。注册时，您需要提供真实的邮箱和手机号，以方便我们向您发送重要通知并在紧急时刻能够联系到您。如果您没有提供正确可用的邮箱和手机号，我们随时可能关闭您的应用。
 
 ## 下载SDK {#downloadsdk}
+
+### 通过Cocoapods下载地址
+
+	https://github.com/easemob/sdk-ios-cocoapods
+
+### 直接下载
 您可以到 [环信官方网站](http://www.easemob.com/sdk/ "环信iOSSDK下载链接")  下载环信 SDK。
 
 SDK 下载包中分为如下四部分：
