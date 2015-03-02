@@ -151,7 +151,22 @@ sidebar: restsidebar
 }	
 </code></pre>
 
-#### 使用示例1：分页获取数据
+#### 使用示例1：根据timestamp查询聊天记录
+> 在URL后面加上参数`ql=select * where timestamp>1403164734226` 或者 `ql=select * where timestamp<1403164734226`, 同上"="后的参数需要转义. 
+> 
+> 1. 如只取最近的消息可以只用timestamp>1403166586000,然后记录获取到的最后一条消息的timestamp,作为下次获取时使用的timestamp,按此方法往下查询. 
+> 
+> 2. 需要导出聊天记录的,可以结合cursor分页来查询出所需要的聊天记录. 聊天记录查询接口返回数据已经按照timestamp字段做了升序排序.
+> 
+> 3. **不能使用and,or等操作符来组成这种查询`ql=select * where timestamp<1403164734226 and timestamp>1403166586000`**.
+
+###### curl 示例：
+
+<pre class="hll"><code class="language-java">
+curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/chatmessages?ql=select+*+where+timestamp>1403164734226"
+</code></pre>
+
+#### 使用示例2：分页获取数据
 
 使用limit参数获取数据完毕后，如果后边还有数据，会返回一个不为空的cursor回来，使用这个cursor就能进行分页获取了。
 
