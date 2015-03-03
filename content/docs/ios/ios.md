@@ -280,7 +280,7 @@ __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 
 	EMError *error = nil;
     BOOL isSuccess = [[EaseMob sharedInstance].chatManager registerNewAccount:@"8001" password:@"111111" error:&error];
-    if (isSuccess && !isSuccess) {
+    if (!isSuccess) {
         NSLog(@"注册成功");
     }
     
