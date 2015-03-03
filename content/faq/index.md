@@ -1,6 +1,6 @@
 ---
 title: 环信即时通讯云
-layout: overview
+layout: overview2
 ---
 
 <script type="text/javascript" src="/js/analyticsCount.js"></script>
