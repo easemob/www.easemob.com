@@ -185,7 +185,7 @@ completion:
 ## 退出登录：见SettingsViewController 
 
 <pre class="hll"><code class="language-objective_c">
-[[EaseMob sharedInstance].chatManager asyncLogoff];
+[[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES];
 </code></pre>
 
 

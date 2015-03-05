@@ -1206,7 +1206,7 @@ SDK中，如果发生自动登录，会有以下回调:
 
 4、取db中的值，该方法取到的不一定是最新的。
 
-	    NSArray *groupList = [[EaseMob sharedInstance].chatManager loadAllMyGroupsFromDatabase];
+NSArray *groupList = [[EaseMob sharedInstance].chatManager loadAllMyGroupsFromDatabaseWithAppend2Chat:YES];
 	    
 5、取内存中的值
 
@@ -1738,7 +1738,7 @@ _公开群，既创建时，类型为eGroupStyle_PublicJoinNeedApproval,或者eG
 
 #### 5.4.8	退出群组 {#exitgroup}
 
-退出群组，如果是群成员调用，则为成员离开，如果是创建者离开，则视为群组解散
+退出群组，必须是群成员调用
 
 退出群组，提供了三种调用方法
 
@@ -2885,22 +2885,24 @@ SDK提供了已送达回执，当对方收到您的消息后，您会收到以�
 
 删除单个会话
 
-	[[EaseMob sharedInstance].chatManager removeConversationByChatter:@"8001" deleteMessages:YES];
+	[[EaseMob sharedInstance].chatManager removeConversationByChatter:@"8001" deleteMessages:YES append2Chat:YES];
 	
 *	removeConversationByChatter:删除与8001的会话
 *	deleteMessages:删除会话中的消息
+*   append2Chat:是否更新内存中内容
 
 根据chatter批量删除会话
 
-	[[EaseMob sharedInstance].chatManager removeConversationsByChatters:chatters deleteMessages:YES];
+	[[EaseMob sharedInstance].chatManager removeConversationsByChatters:chatters deleteMessages:YES append2Chat:YES];
 	
 *	removeConversationsByChatters:要删除的chatters
 *	deleteMessages:删除会话中的消息
+*   append2Chat:是否更新内存中内容
 
 删除所有会话
 
 	// deleteMessage,是否删除会话中的message，YES为删除
-	[[EaseMob sharedInstance].chatManager removeAllConversationsWithDeleteMessages:YES];
+	[[EaseMob sharedInstance].chatManager removeAllConversationsWithDeleteMessages:YES append2Chat:YES];
 
 
 #### 5.7.3 获取会话列表 {#getconversations}
@@ -2920,7 +2922,7 @@ SDK中提供了三种获取会会话列表的方法
 	
 3、获取DB中的所有会话
 
-	NSArray *conversations = [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabase];
+NSArray *conversations = [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabaseWithAppend2Chat:YES];
 
 ##### 5.7.3.1 获取会话中未读消息数
 
@@ -3050,7 +3052,7 @@ A 发消息msg给 B， B不在线。
     	[[EaseMob sharedInstance] application:application didFailToRegisterForRemoteNotificationsWithError:error];
 	}
 
-#### 5.8.4 设置推送时Apns昵称显示（需要真机，并且得到deviceToken的情况下） {#setapnsnick}
+#### 5.8.4 设置推送时Apns昵称显示（需要真机, 登录成功之后并且得到deviceToken的情况下） {#setapnsnick}
 
 	[[EaseMob sharedInstance].chatManager setApnsNickname:@"APNS昵称"];
 	
