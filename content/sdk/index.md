@@ -403,7 +403,7 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 						        1、修复DNS解析错误<br/>		
 						        2、修复实时音视频电话遇到的状态出错的问题<br/>
 						        3、修复一个群消息被错误删除的问题<br/>
-						        4、修复点击文件消息头像出现的null pointer问题</br>
+						        4、修复点击文件消息头像出现的null pointer问题<br/>
 								5、修复demo录像时有时候出现闪退的问题</br>
 						      </span>
 						  </dt>
