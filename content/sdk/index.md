@@ -32,7 +32,7 @@ var _hmt = _hmt || [];
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
-						<a  id="androidHref" class="ios_btn web_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://downloads.easemob.com/downloads/WEB-IM-20150115.zip">下载WebIM版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn web_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://downloads.easemob.com/downloads/WEB-IM-20150311.zip">下载WebIM版开发包（SDK+文档+Demo)</a>
  						
 						<span><em><a href="/docs/webim/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/webim/quickstartinapp/" target="_blank">WebIM SDK 集成指南</a></em>V 1.0.4.1　</span>
 					</li>
@@ -782,6 +782,20 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 		        </ul>
 			    <ul class="history_left history_margin_right">
 			      	<h2 class="first">WebIM SDK 更新日志</h2>
+					<li>
+							<h3><em></em><span>版本：V1.0.5 2015-3-11</span></h3>
+							<dl>
+								<dt>
+								 <span>新功能：<br/>
+			  1、优化底层连接，减少系统登录耗时<br/>
+			  2、添加透传消息支持（注册onCmdMessage事件，以监听服务器端推送的透传消息）<br/>
+			  3、添加收到消息后，自动发送回复消息给服务器<br/>
+			  4、当图片下载失败时默认再一次下载<br/></span>
+								</dt>
+								<dt>
+								</dt>
+							</dl>
+						</li>
 						<li>
 							<h3><em></em><span>版本：V1.0.4.1 2015-1-15</span></h3>
 							<dl>
