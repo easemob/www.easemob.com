@@ -21,6 +21,7 @@ secondnavios: true
 step1、需要新引入**libsqlite3.dylib**；
 
 step2、在登陆成功之后调用[importDataToNewDatabase]将数据导入新的数据库，使用示例
+
 <pre class="hll"><code class="language-java">
 EMError *error = [[EaseMob sharedInstance].chatManager importDataToNewDatabase];
 if (!error) {

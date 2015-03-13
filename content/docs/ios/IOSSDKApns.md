@@ -13,12 +13,15 @@ secondnavios: true
 2、代码配置app使用的推送证书
 
 <pre class="hll"><code class="language-java">
+
 [[EaseMob sharedInstance] registerSDKWithAppKey:@"appkey" apnsCertName:apnsCertName];
+
 </code></pre>
 
 3、代码注册离线推送
 
 <pre class="hll"><code class="language-java">
+
 //iOS8 注册APNS
 if ([application respondsToSelector:@selector(registerForRemoteNotifications)]) {
     [application registerForRemoteNotifications];
@@ -34,12 +37,14 @@ else{
     UIRemoteNotificationTypeAlert;
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:notificationTypes];
 }
+
 </code></pre>
 
 
 您注册了推送功能，iOS 会自动回调以下方法，得到deviceToken，您需要将deviceToken传给SDK
 
 <pre class="hll"><code class="language-java">
+
 // 将得到的deviceToken传给SDK
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
     [[EaseMob sharedInstance] application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
@@ -50,9 +55,11 @@ else{
     [[EaseMob sharedInstance] application:application didFailToRegisterForRemoteNotificationsWithError:error];
     NSLog(@"error -- %@",error);
 }
+
 </code></pre>
 
-`apns注册失败，一般是由于使用了通用证书或者是模拟器调试导致，请检查证书并用真机调试。此处是iOS系统报的错，如仍不能确定，请从网上查找相关资料。`
+** apns注册失败，一般是由于使用了通用证书或者是模拟器调试导致，请检查证书并用真机调试。
+此处是iOS系统报的错，如仍不能确定，请从网上查找相关资料**
 
 
 ##全局apns操作 {#apnsGlobal}
@@ -62,13 +69,17 @@ else{
 登录成功之后，sdk会自返回apns属性，获取代码如下
 
 <pre class="hll"><code class="language-java">
+
 EMPushNotificationOptions *options = [[EaseMob sharedInstance].chatManager pushNotificationOptions];
+
 </code></pre>
 
 ### 设置apns昵称
 
 登陆成功之后，按照以下代码设置当前登录用户的apns昵称
+
 <pre class="hll"><code class="language-java">
+
 [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:username
 password:password completion:^(NSDictionary *loginInfo, EMError *error) {
     [self hideHud];
@@ -78,6 +89,7 @@ password:password completion:^(NSDictionary *loginInfo, EMError *error) {
         [[EaseMob sharedInstance].chatManager setApnsNickname:@"推送昵称"];
     }
 } onQueue:nil];
+
 </code></pre>
 
 ### apns全局设置
@@ -87,6 +99,7 @@ password:password completion:^(NSDictionary *loginInfo, EMError *error) {
 1、 同步方法
 
 <pre class="hll"><code class="language-java">
+
 /*!
 @method
 @brief 更新消息推送相关属性配置（同步方法）
@@ -96,11 +109,13 @@ password:password completion:^(NSDictionary *loginInfo, EMError *error) {
 */
 - (EMPushNotificationOptions *)updatePushOptions:(EMPushNotificationOptions *)options
 error:(EMError **)pError;
+
 </code></pre>
 
 2、 block异步方法
 
 <pre class="hll"><code class="language-java">
+
 /*!
 @method
 @brief 更新消息推送相关属性配置(异步方法)
@@ -112,11 +127,13 @@ error:(EMError **)pError;
 - (void)asyncUpdatePushOptions:(EMPushNotificationOptions *)options
 completion:(void (^)(EMPushNotificationOptions *options, EMError *error))completion
 onQueue:(dispatch_queue_t)aQueue;
+
 </code></pre>
 
 3、 EMChatManagerPushNotificationDelegate回调方法
 
 <pre class="hll"><code class="language-java">
+
 /*!
 @method
 @brief 更新消息推送相关属性配置（异步方法）
@@ -125,6 +142,7 @@ onQueue:(dispatch_queue_t)aQueue;
 方法执行完之后，调用[didUpdatePushOptions:error:];
 */
 - (void)asyncUpdatePushOptions:(EMPushNotificationOptions *)options;
+- 
 </code></pre>
 
 
@@ -135,6 +153,7 @@ onQueue:(dispatch_queue_t)aQueue;
 1、 同步方法
 
 <pre class="hll"><code class="language-java">
+
 /*!
 @method
 @brief 屏蔽接收群的推送消息
@@ -146,11 +165,13 @@ onQueue:(dispatch_queue_t)aQueue;
 全局的屏蔽推送消息属性优先于此设置
 */
 - (NSArray *)ignoreGroupPushNotification:(NSString *)groupId ignore:(BOOL)ignore error:(EMError **)pError;
+- 
 </code></pre>
 
 2、 block异步方法
 
 <pre class="hll"><code class="language-java">
+
 /*!
 @method
 @brief 屏蔽接收群的推送消息, 异步方法
@@ -162,11 +183,13 @@ onQueue:(dispatch_queue_t)aQueue;
 全局的屏蔽推送消息属性优先于此设置;
 */
 - (void)asyncIgnoreGroupPushNotification:(NSString *)groupId isIgnore:(BOOL)isIgnore completion:(void (^)(NSArray *ignoreGroupsList, EMError *error))completion onQueue:(dispatch_queue_t)aQueue;
+- 
 </code></pre>
 
 3、 EMChatManagerPushNotificationDelegate回调方法
 
 <pre class="hll"><code class="language-java">
+
 /*!
 @method
 @brief 屏蔽接收群的推送消息, 异步方法
@@ -177,12 +200,16 @@ onQueue:(dispatch_queue_t)aQueue;
 方法执行完之后，调用[didIgnoreGroupPushNotification:error:].
 */
 - (void)asyncIgnoreGroupPushNotification:(NSString *)groupId isIgnore:(BOOL)isIgnore;
+- 
 </code></pre>
 
 ### 获取不接收apns的群组id
+
 登录成功之后，sdk会自动返回不接收apns的群组id，获取代码如下
 
 <pre class="hll"><code class="language-java">
+
 NSArray *ignoredGroupIds = [[EaseMob sharedInstance].chatManager ignoredGroupIds];
+
 </code></pre>
 
