@@ -187,7 +187,7 @@ if (isSuccess) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt IChatManagerDelegate &lt
 
 @end
 
