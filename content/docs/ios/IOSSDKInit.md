@@ -187,7 +187,7 @@ if (isSuccess) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt IChatManagerDelegate &lt
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -241,11 +241,13 @@ if (isSuccess) {
 1.1. 同步方法：
  
 <pre class="hll"><code class="language-java">
+
 EMError *error = nil;
 NSDictionary *loginInfo = [[EaseMob sharedInstance].chatManager loginWithUsername:@"8001" password:@"111111" error:&error];
 if (!error && loginInfo) {
     NSLog(@"登陆成功");
 }
+
 </code></pre>
 
 1.2. block异步方法
@@ -260,55 +262,59 @@ if (!error && loginInfo) {
 
 1.3. IChatManagerDelegate回调方法
 
-    //
-    //  ViewController.m
-    //  Test
-    //
-    //  Created by dujiepeng on 12/29/14.
-    //  Copyright (c) 2014 dujiepeng. All rights reserved.
-    //
+<pre class="hll"><code class="language-java">
 
-    #import "ViewController.h"
-    #import "EaseMob.h"
+//
+//  ViewController.m
+//  Test
+//
+//  Created by dujiepeng on 12/29/14.
+//  Copyright (c) 2014 dujiepeng. All rights reserved.
+//
 
-    @interface ViewController ()<IChatManagerDelegate>
+#import "ViewController.h"
+#import "EaseMob.h"
 
-    @end
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
-    @implementation ViewController
+@end
 
-    - (void)viewDidLoad {
-        [super viewDidLoad];
-        [self registerEaseMobDelegate];
-        // 登录
-        [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"8001" password:@"111111"];
-    }
+@implementation ViewController
+
+- (void)viewDidLoad {
+   [super viewDidLoad];
+   [self registerEaseMobDelegate];
+   // 登录
+   [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"8001" password:@"111111"];
+}
 
 
-    -(void)dealloc{
-        [self unRegisterEaseMobDelegate];
-    }
+-(void)dealloc{
+   [self unRegisterEaseMobDelegate];
+}
 
-    #pragma mark - IChatManagerDelegate
-    -(void)didLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
-        if (!error && loginInfo) {
-            NSLog(@"登录成功");
-        }
-    }
+#pragma mark - IChatManagerDelegate
+-(void)didLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
+   if (!error && loginInfo) {
+       NSLog(@"登录成功");
+   }
+}
 
-    // 向SDK中注册回调
-    -(void)registerEaseMobDelegate{
-        // 此处先取消一次，是为了保证只将self注册过一次回调。
-        [self unRegisterEaseMobDelegate];
-        [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-    }
+// 向SDK中注册回调
+-(void)registerEaseMobDelegate{
+   // 此处先取消一次，是为了保证只将self注册过一次回调。
+   [self unRegisterEaseMobDelegate];
+   [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+}
 
-    // 取消SDK中注册的回调
-    -(void)unRegisterEaseMobDelegate{
-        [[EaseMob sharedInstance].chatManager removeDelegate:self];
-    }
+// 取消SDK中注册的回调
+-(void)unRegisterEaseMobDelegate{
+   [[EaseMob sharedInstance].chatManager removeDelegate:self];
+}
 
-    @end
+@end
+
+</code></pre>
 
 
 ### 2. 自动登录 {#autologin}
@@ -349,76 +355,77 @@ if (!isAutoLogin) {
 
 SDK中，如果发生自动登录，会有以下回调:
 
+<pre class="hll"><code class="language-java">
 
-    //
-    //  ViewController.m
-    //  Test
-    //
-    //  Created by dujiepeng on 12/29/14.
-    //  Copyright (c) 2014 dujiepeng. All rights reserved.
-    //
+//
+//  ViewController.m
+//  Test
+//
+//  Created by dujiepeng on 12/29/14.
+//  Copyright (c) 2014 dujiepeng. All rights reserved.
+//
 
-    #import "ViewController.h"
-    #import "EaseMob.h"
+#import "ViewController.h"
+#import "EaseMob.h"
 
-    @interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
-    @end
+@end
 
-    @implementation ViewController
+@implementation ViewController
 
-    - (void)viewDidLoad {
-        [super viewDidLoad];
-        [self registerEaseMobDelegate];
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self registerEaseMobDelegate];
 
-        BOOL isAutoLogin = [[EaseMob sharedInstance].chatManager isAutoLoginEnabled];
-        if (!isAutoLogin) {
-            [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"8001" password:@"111111" completion:^(NSDictionary *loginInfo, EMError *error) {
-                if (!error) {
-                    // 设置自动登录
-                    /*
-                     此属性如果被设置为YES, 会在以下几种情况下被重置为NO:
-                     1. 用户发起的登出动作;
-                     2. 用户在别的设备上更改了密码, 导致此设备上自动登陆失败;
-                     3. 用户的账号被从服务器端删除;
-                     4. 用户从另一个设备把当前设备上登陆的用户踢出.
-                     */
-                    [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
-                }
-            } onQueue:nil];
-        }
+    BOOL isAutoLogin = [[EaseMob sharedInstance].chatManager isAutoLoginEnabled];
+    if (!isAutoLogin) {
+        [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"8001" password:@"111111" completion:^(NSDictionary *loginInfo, EMError *error) {
+            if (!error) {
+                // 设置自动登录
+                /*
+                 此属性如果被设置为YES, 会在以下几种情况下被重置为NO:
+                 1. 用户发起的登出动作;
+                 2. 用户在别的设备上更改了密码, 导致此设备上自动登陆失败;
+                 3. 用户的账号被从服务器端删除;
+                 4. 用户从另一个设备把当前设备上登陆的用户踢出.
+                 */
+                [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
+            }
+        } onQueue:nil];
     }
+}
 
-    - (void)dealloc{
-        [self unRegisterEaseMobDelegate];
+- (void)dealloc{
+    [self unRegisterEaseMobDelegate];
+}
+
+#pragma mark - IChatManagerDelegate
+// 将要开始自动登录
+- (void)willAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
+
+}
+
+// 自动登录结束
+- (void)didAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
+    if (!error) {
+        NSLog(@"登录成功");
     }
+}
 
-    #pragma mark - IChatManagerDelegate
-    // 将要开始自动登录
-    - (void)willAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
+// 向sdk中注册回调
+- (void)registerEaseMobDelegate{
+    // 此处先取消一次，是为了保证只将self注册过一次回调。
+    [self unRegisterEaseMobDelegate];
+    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+}
 
-    }
+// 取消sdk中注册的回调
+- (void)unRegisterEaseMobDelegate{
+    [[EaseMob sharedInstance].chatManager removeDelegate:self];
+}
 
-    // 自动登录结束
-    - (void)didAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
-        if (!error) {
-            NSLog(@"登录成功");
-        }
-    }
-
-    // 向sdk中注册回调
-    - (void)registerEaseMobDelegate{
-        // 此处先取消一次，是为了保证只将self注册过一次回调。
-        [self unRegisterEaseMobDelegate];
-        [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-    }
-
-    // 取消sdk中注册的回调
-    - (void)unRegisterEaseMobDelegate{
-        [[EaseMob sharedInstance].chatManager removeDelegate:self];
-    }
-
-    @end
+@end
 
 
 ## 重连 {#reconnect}
@@ -430,59 +437,61 @@ SDK中，如果发生自动登录，会有以下回调:
 
 自动重连，有以下回调
 
+<pre class="hll"><code class="language-java">
+//
+//  ViewController.m
+//  Test
+//
+//  Created by dujiepeng on 12/29/14.
+//  Copyright (c) 2014 dujiepeng. All rights reserved.
+//
 
-    //
-    //  ViewController.m
-    //  Test
-    //
-    //  Created by dujiepeng on 12/29/14.
-    //  Copyright (c) 2014 dujiepeng. All rights reserved.
-    //
+#import "ViewController.h"
+#import "EaseMob.h"
 
-    #import "ViewController.h"
-    #import "EaseMob.h"
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
-    @interface ViewController ()<IChatManagerDelegate>
+@end
 
-    @end
+@implementation ViewController
 
-    @implementation ViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self registerEaseMobDelegate];
+}
 
-    - (void)viewDidLoad {
-        [super viewDidLoad];
-        [self registerEaseMobDelegate];
+- (void)dealloc{
+    [self unRegisterEaseMobDelegate];
+}
+
+#pragma mark - IChatManagerDelegate
+// 将要开始自动重连
+-(void)willAutoReconnect{
+
+}	
+
+// 自动重连结束
+-(void)didAutoReconnectFinishedWithError:(NSError *)error{
+    if (!error) {
+        NSLog(@"重连成功");
     }
+}
 
-    - (void)dealloc{
-        [self unRegisterEaseMobDelegate];
-    }
+// 向SDK中注册回调
+- (void)registerEaseMobDelegate{
+    // 此处先取消一次，是为了保证只将self注册过一次回调。
+    [self unRegisterEaseMobDelegate];
+    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+}
 
-    #pragma mark - IChatManagerDelegate
-    // 将要开始自动重连
-    -(void)willAutoReconnect{
+// 取消SDK中注册的回调
+- (void)unRegisterEaseMobDelegate{
+    [[EaseMob sharedInstance].chatManager removeDelegate:self];
+}
 
-    }	
+@end
 
-    // 自动重连结束
-    -(void)didAutoReconnectFinishedWithError:(NSError *)error{
-        if (!error) {
-            NSLog(@"重连成功");
-        }
-    }
-
-    // 向SDK中注册回调
-    - (void)registerEaseMobDelegate{
-        // 此处先取消一次，是为了保证只将self注册过一次回调。
-        [self unRegisterEaseMobDelegate];
-        [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-    }
-
-    // 取消SDK中注册的回调
-    - (void)unRegisterEaseMobDelegate{
-        [[EaseMob sharedInstance].chatManager removeDelegate:self];
-    }
-
-    @end
+</code></pre>
 
 
 ## 退出 {#logout}
@@ -528,55 +537,59 @@ if (!error && info) {
 3、 IChatManagerDelegate回调方法
 
 
-    //
-    //  ViewController.m
-    //  Test
-    //
-    //  Created by dujiepeng on 12/29/14.
-    //  Copyright (c) 2014 dujiepeng. All rights reserved.
-    //
+<pre class="hll"><code class="language-java">
 
-    #import "ViewController.h"
-    #import "EaseMob.h"
+//
+//  ViewController.m
+//  Test
+//
+//  Created by dujiepeng on 12/29/14.
+//  Copyright (c) 2014 dujiepeng. All rights reserved.
+//
 
-    @interface ViewController ()<IChatManagerDelegate>
+#import "ViewController.h"
+#import "EaseMob.h"
 
-    @end
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
-    @implementation ViewController
+@end
 
-    - (void)viewDidLoad {
-        [super viewDidLoad];
-        [self registerEaseMobDelegate];
-        // 退出
-        [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES/NO];
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self registerEaseMobDelegate];
+    // 退出
+    [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES/NO];
+}
+
+
+-(void)dealloc{
+    [self unRegisterEaseMobDelegate];
+}
+
+#pragma mark - IChatManagerDelegate
+- (void)didLogoffWithError:(EMError *)error{
+    if (!error) {
+    NSLog(@"退出成功");
     }
+}
 
+// 向SDK中注册回调
+-(void)registerEaseMobDelegate{
+    // 此处先取消一次，是为了保证只将self注册过一次回调。
+    [self unRegisterEaseMobDelegate];
+    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+}
 
-    -(void)dealloc{
-        [self unRegisterEaseMobDelegate];
-    }
+// 取消SDK中注册的回调
+-(void)unRegisterEaseMobDelegate{
+    [[EaseMob sharedInstance].chatManager removeDelegate:self];
+}
 
-    #pragma mark - IChatManagerDelegate
-    - (void)didLogoffWithError:(EMError *)error{
-        if (!error) {
-        NSLog(@"退出成功");
-        }
-    }
+@end
 
-    // 向SDK中注册回调
-    -(void)registerEaseMobDelegate{
-        // 此处先取消一次，是为了保证只将self注册过一次回调。
-        [self unRegisterEaseMobDelegate];
-        [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-    }
-
-    // 取消SDK中注册的回调
-    -(void)unRegisterEaseMobDelegate{
-        [[EaseMob sharedInstance].chatManager removeDelegate:self];
-    }
-
-    @end
+</code></pre>
 
 
 

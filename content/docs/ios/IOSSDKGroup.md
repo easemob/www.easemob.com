@@ -75,7 +75,7 @@ groupStyleSetting.groupStyle = eGroupStyle_PublicOpenJoin; // 创建不同类型
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -189,7 +189,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -266,7 +266,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -416,7 +416,7 @@ EMError *error = nil;
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -500,7 +500,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -587,9 +587,9 @@ if (!error) {
 #import "TestViewController.h"
 #import "EaseMob.h"
 
-@interface TestViewController ()<IChatManagerDelegate>
+@interface TestViewController ()&gt;IChatManagerDelegate&lt;
 {
-EMGroup *group;
+    EMGroup *group;
 }
 @property (nonatomic) id<IChatManager> chatManager;
 @property (nonatomic, strong) EMGroup *currentGroup;
@@ -816,7 +816,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -904,7 +904,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -1061,7 +1061,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -1157,7 +1157,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 

@@ -61,7 +61,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -145,7 +145,7 @@ if (isSuccess && !error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -225,7 +225,7 @@ if (isSuccess && !error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -357,7 +357,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -430,7 +430,7 @@ NSArray *blockedList = [[EaseMob sharedInstance].chatManager blockedList];
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
@@ -488,7 +488,7 @@ NSArray *blockedList = [[EaseMob sharedInstance].chatManager blockedList];
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()<IChatManagerDelegate>
+@interface ViewController ()&gt;IChatManagerDelegate&lt;
 
 @end
 
