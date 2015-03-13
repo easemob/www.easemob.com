@@ -8,7 +8,7 @@ secondnavios: true
 
 ## 消息 {#message}
 
-> 消息：IM交互实体，在SDK中对应的类型是 **EMMessage**，EMMessage可以由多个符合<IEMMessageBody>协议的body组成，但是**推荐使用一个body，多个body有bug，正在优化**。
+消息：IM交互实体，在SDK中对应的类型是 **EMMessage**，EMMessage可以由多个符合<IEMMessageBody>协议的body组成，但是 **推荐使用一个body，多个body有bug，正在优化** 。
 
 以下的讲解以一个body为例：
 
@@ -61,6 +61,7 @@ message.isGroup = NO; // 设置是否是群聊
 </code></pre>
 
 2、取消录音
+
 <pre class="hll"><code class="language-java">
 /*!
 @method
@@ -83,6 +84,7 @@ message.isGroup = NO; // 设置是否是群聊
 </code></pre>
 
 3、停止录音
+
 <pre class="hll"><code class="language-java">
 /*!
 @method
@@ -147,9 +149,9 @@ message.isGroup = NO; // 设置是否是群聊
 </code></pre>
 
 > * 添加扩展字段
-
+>
 > 有时候需要在消息中携带一些扩展内容，用来实现特殊需求，比如阅后即焚等。EMMessage提供了ext属性，撰文用来存放扩展内容。**ext属性是NSDictionary类型，key和value必须是基本类型，且不能是json。**
-
+>
 > 可以这样使用：EMMessage.ext = @{@"key":@"value"};
 
 

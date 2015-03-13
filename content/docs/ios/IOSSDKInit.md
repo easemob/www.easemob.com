@@ -25,10 +25,10 @@ sdk文件夹中有三个子文件夹:include、lib、resources，请不要擅自
 * **ChatService** 包含聊天相关的接口，比如注册、登录、退出、单聊、群聊、群组等
 * **Utility** 包含DeviceManager和ErrorManager。DeviceManager硬件相关接口，ErrorManager错误码定义
 
->注：
-
+> 注：
+> 
 >1. include包含5个子文件夹：CallService、ChatService、EaseMobClientSDK、EaseMobClientSDKLite、Utility。如果无需实时语音功能，将CallService和EaseMobClientSDK删掉即可。
-
+>
 >2. 类似EM@Manager命名格式的文件夹的内部结构都是相似的。delegates文件夹包含各种代理接口，internal文件夹包含各种协议的声明，types文件夹包含各种实例的声明。
 
 #### IChatManager internal 
@@ -127,16 +127,16 @@ __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 * **AppKey**: 区别app的标识，对应上图中的 douser#istore
 * **APNSCertName**: iOS中推送证书名称。[制作与上传推送证书](http://www.easemob.com/docs/ios/IOSSDKPrepare/#apnsCertificate "制作与上传推送证书")
 
->环信为im部分提供了apns推送功能，如果您要使用，请跳转到[apns离线推送]模块(http://www.easemob.com/docs/ios/IOSSDKApns)
+环信为im部分提供了apns推送功能，如果您要使用，请跳转到[apns离线推送]模块(http://www.easemob.com/docs/ios/IOSSDKApns)
 
 
->SDK中，大部分与**网络有关的操作**，都提供了3种调用方法
-
->* 同步方法
-
->* 通过delegate回调的异步方法。要想能收到回调，必须要注册为delegate（[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];）
-
->* block异步方法(推荐使用)
+> SDK中，大部分与**网络有关的操作**，都提供了3种调用方法
+>
+> * 同步方法
+>
+> * 通过delegate回调的异步方法。要想能收到回调，必须要注册为delegate（[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];）
+>
+> * block异步方法(推荐使用)
 
 
 ## 注册 {#register}
@@ -166,60 +166,63 @@ if (isSuccess) {
     }
 } onQueue:nil];
 </code></pre>
+
     
-3. IChatManagerDelegate回调方法
+3.  IChatManagerDelegate回调方法
 
+<pre class="hll"><code class="language-java">
 
-	//
-	//  ViewController.m
-	//  Test
-	//
-	//  Created by dujiepeng on 12/29/14.
-	//  Copyright (c) 2014 dujiepeng. All rights reserved.
-	//
-	
-	#import "ViewController.h"
-	#import "EaseMob.h"
-	
-	@interface ViewController ()<IChatManagerDelegate>
-	
-	@end
-	
-	@implementation ViewController
-	
-	- (void)viewDidLoad {
-	    [super viewDidLoad];
-	    [self registerEaseMobDelegate];
-	    // 注册8001到douser#istore这个appkey下。
-	    [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:@"8001" password:@"111111"];
-	
-	}
-	
-	-(void)dealloc{
-	    [self unRegisterEaseMobDelegate];
-	}
-	
-	#pragma mark - IChatManagerDelegate
-	-(void)didRegisterNewAccount:(NSString *)username password:(NSString *)password error:(EMError *)error{
-	    if (!error) {
-	        NSLog(@"注册成功");
-	    }
-	}
-	
-	// 向SDK中注册回调
-	-(void)registerEaseMobDelegate{
-	    // 此处先取消一次，是为了保证只将self注册过一次回调。
-	    [self unRegisterEaseMobDelegate];
-	    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-	}
-	
-	// 取消SDK中注册的回调
-	-(void)unRegisterEaseMobDelegate{
-	    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-	}
-	
-	@end
+//
+//  ViewController.m
+//  Test
+//
+//  Created by dujiepeng on 12/29/14.
+//  Copyright (c) 2014 dujiepeng. All rights reserved.
+//
 
+#import "ViewController.h"
+#import "EaseMob.h"
+
+@interface ViewController ()<IChatManagerDelegate>
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self registerEaseMobDelegate];
+    // 注册8001到douser#istore这个appkey下。
+    [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:@"8001" password:@"111111"];
+
+}
+
+-(void)dealloc{
+    [self unRegisterEaseMobDelegate];
+}
+
+#pragma mark - IChatManagerDelegate
+-(void)didRegisterNewAccount:(NSString *)username password:(NSString *)password error:(EMError *)error{
+    if (!error) {
+        NSLog(@"注册成功");
+    }
+}
+
+// 向SDK中注册回调
+-(void)registerEaseMobDelegate{
+    // 此处先取消一次，是为了保证只将self注册过一次回调。
+    [self unRegisterEaseMobDelegate];
+    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+}
+
+// 取消SDK中注册的回调
+-(void)unRegisterEaseMobDelegate{
+    [[EaseMob sharedInstance].chatManager removeDelegate:self];
+}
+
+@end
+
+</code></pre>
 
 
 ## 登录 {#login}
@@ -306,7 +309,7 @@ if (!error && loginInfo) {
 
 ### 2. 自动登录 {#autologin}
 
-自动登录：`即首次登录成功后，不需要再次调用登录方法，再下次app启动时，SDK会自动为您登录。并且如果您再自动登录时登录失败，也可以读取到之前的会话信息。`
+**自动登录**：即首次登录成功后，不需要再次调用登录方法，再下次app启动时，SDK会自动为您登录。并且如果您再自动登录时登录失败，也可以读取到之前的会话信息。
 
 SDK中缺省自动登录是没有打开的，需要您在登录成功后设置，以便您在下次app启动时不需要再次调用环信登录，并且能在没有网的情况下得到会话列表。
 
@@ -502,7 +505,8 @@ if (!error && info) {
 }
 </code></pre>
 
-2. block异步方法
+
+2. block异步方法 
 
 <pre class="hll"><code class="language-java">
 [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES/NO completion:^(NSDictionary *info, EMError *error) {
@@ -511,6 +515,7 @@ if (!error && info) {
     }
 } onQueue:nil];
 </code></pre>
+
 
 3. IChatManagerDelegate回调方法
 

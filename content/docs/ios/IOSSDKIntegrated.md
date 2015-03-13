@@ -1,4 +1,4 @@
----
+ ---
 title: iOS 开发指南
 sidebar: iossidebar
 secondnavios: true
@@ -27,8 +27,7 @@ SDK 下载包中分为如下四部分：
 
 到此您已经下载好了SDK，下面开始学习SDK的集成使用吧！
 
-	注: 由于iOS编译的特殊性，为了方便开发者使用，我们将i386 x86_64 armv7 armv7s arm64几个平台都合并到了一起，所以SDK的静态库(.a文件)比较大。
-	实际集成编译出ipa后，根据调用功能的多少，实际只会增加2MB左右。	
+> 注: 由于iOS编译的特殊性，为了方便开发者使用，我们将i386 x86_64 armv7 armv7s arm64几个平台都合并到了一起，所以SDK的静态库(.a文件)比较大。实际集成编译出ipa后，根据调用功能的多少，实际只会增加2MB左右。	
 	
 
 ## 配置工程 {#projectSetting}
@@ -68,15 +67,15 @@ SDK依赖库有
 
 格式为: **-force_load[空格]EaseMobSDK/lib/libEaseMobClientSDKLite.a(静态库的路径)**
 
-*step1. 先添加一个-force_load
+* step1. 先添加一个-force_load
 
 ![iOS_Force_load icon](/iOS_Force_load1.png)
 
-*step2. 将静态库拖动到上一步添加的-force_load下面
+* step2. 将静态库拖动到上一步添加的-force_load下面
 
 ![iOS_Force_load icon](/iOS_Force_load2.png)
 
-*step3. 最终效果
+* step3. 最终效果
 
 ![iOS_Force_load icon](/iOS_Force_load3.png)
 
