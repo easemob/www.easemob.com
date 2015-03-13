@@ -403,7 +403,7 @@ SDK中还提供了很多操作EMConversation的接口，比如往conversation中
 #pragma mark - IChatManagerDelegate
 // 收到消息的回调，带有附件类型的消息可以用SDK提供的下载附件方法下载（后面会讲到）
 -(void)didReceiveMessage:(EMMessage *)message{
-    id<IEMMessageBody> msgBody = message.messageBodies.firstObject;
+    id&lt;IEMMessageBody&gt; msgBody = message.messageBodies.firstObject;
     switch (msgBody.messageBodyType) {
         case eMessageBodyType_Text:
         {
@@ -681,7 +681,7 @@ if (!error) {
 #pragma mark - IChatManagerDelegate
 // 收到消息回调
 -(void)didReceiveMessage:(EMMessage *)message{
-    id<IEMMessageBody> body = message.messageBodies.firstObject;
+    id&lt;IEMMessageBody&gt; body = message.messageBodies.firstObject;
     switch (body.messageBodyType) {
         case eMessageBodyType_Image:
         case eMessageBodyType_Video:
@@ -780,7 +780,7 @@ if (!error) {
 #pragma mark - IChatManagerDelegate
 // 收到消息回调
 -(void)didReceiveMessage:(EMMessage *)message{
-    id<IEMMessageBody> body = message.messageBodies.firstObject;
+    id&lt;IEMMessageBody&gt; body = message.messageBodies.firstObject;
     switch (body.messageBodyType) {
         case eMessageBodyType_Image:
         case eMessageBodyType_Video:
