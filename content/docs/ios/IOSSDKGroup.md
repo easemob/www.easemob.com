@@ -75,7 +75,7 @@ groupStyleSetting.groupStyle = eGroupStyle_PublicOpenJoin; // 创建不同类型
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -189,7 +189,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -266,7 +266,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -416,7 +416,7 @@ EMError *error = nil;
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -500,7 +500,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -587,7 +587,7 @@ if (!error) {
 #import "TestViewController.h"
 #import "EaseMob.h"
 
-@interface TestViewController ()&gt;IChatManagerDelegate&lt;
+@interface TestViewController ()&lt;IChatManagerDelegate&gt;
 {
     EMGroup *group;
 }
@@ -816,7 +816,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -904,7 +904,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -1061,7 +1061,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -1157,7 +1157,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 

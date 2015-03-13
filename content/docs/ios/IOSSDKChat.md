@@ -384,7 +384,7 @@ SDK中还提供了很多操作EMConversation的接口，比如往conversation中
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -516,7 +516,7 @@ SDK中还提供了很多操作EMConversation的接口，比如往conversation中
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -569,7 +569,7 @@ SDK中还提供了很多操作EMConversation的接口，比如往conversation中
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -661,7 +661,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -760,7 +760,7 @@ if (!error) {
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -850,7 +850,7 @@ SDK提供了已送达回执，当对方收到您的消息后，您会收到以�
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -905,7 +905,7 @@ SDK提供了已送达回执，当对方收到您的消息后，您会收到以�
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
@@ -956,7 +956,7 @@ SDK提供了已送达回执，当对方收到您的消息后，您会收到以�
 #import "ViewController.h"
 #import "EaseMob.h"
 
-@interface ViewController ()&gt;IChatManagerDelegate&lt;
+@interface ViewController ()&lt;IChatManagerDelegate&gt;
 
 @end
 
