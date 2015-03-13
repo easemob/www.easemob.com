@@ -122,9 +122,9 @@ __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 </code></pre>
 
 * **AppKey**: 区别app的标识，对应上图中的 douser#istore
-* **APNSCertName**: iOS中推送证书名称。[制作与上传推送证书](http://www.easemob.com/docs/ios/xyj/prepare/#apnsCertificate "制作与上传推送证书")
+* **APNSCertName**: iOS中推送证书名称。[制作与上传推送证书](http://www.easemob.com/docs/ios/IOSSDKPrepare/#apnsCertificate "制作与上传推送证书")
 
->环信为im部分提供了apns推送功能，如果您要使用，请跳转到[apns离线推送]模块(http://www.easemob.com/docs/ios/xyj/useSdk/#apns)
+>环信为im部分提供了apns推送功能，如果您要使用，请跳转到[apns离线推送]模块(http://www.easemob.com/docs/ios/IOSSDKApns)
 
 ***
 >SDK中，大部分与**网络有关的操作**，都提供了3种调用方法

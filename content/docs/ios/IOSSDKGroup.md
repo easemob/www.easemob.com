@@ -1018,7 +1018,7 @@ if (!error) {
 
 ### * 不接收群组的apns离线推送
 
-见 [apns离线推送](http://www.easemob.com/docs/ios/xyj/IOSSDKApns) 之 [群组apns操作](http://www.easemob.com/docs/ios/xyj/IOSSDKApns/#apnsGroup)
+见 [apns离线推送](http://www.easemob.com/docs/ios/IOSSDKApns) 之 [群组apns操作](http://www.easemob.com/docs/ios/IOSSDKApns/#apnsGroup)
 
 ***
 ## 获取群组列表 {#fetchGroupList}

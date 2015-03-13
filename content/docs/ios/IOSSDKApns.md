@@ -8,7 +8,7 @@ secondnavios: true
 
 ##必备条件 {#apnsCondition}
 
-1、后台上传了推送证书，具体步骤见 [集成SDK前的准备工作](http://www.easemob.com/docs/ios/xyj/IOSSDKPrepare) 之 [制作并上传推送证书](http://www.easemob.com/docs/ios/xyj/IOSSDKPrepare/#apnsCertificate)
+1、后台上传了推送证书，具体步骤见 [集成SDK前的准备工作](http://www.easemob.com/docs/ios/IOSSDKPrepare) 之 [制作并上传推送证书](http://www.easemob.com/docs/ios/IOSSDKPrepare/#apnsCertificate)
 
 2、代码配置app使用的推送证书
 

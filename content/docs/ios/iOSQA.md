@@ -27,6 +27,7 @@ Q: SDK是否支持64位？
 
 A: 支持
 
+***
 ## 	无法收到消息 {#chat}
 
 Q:  无法收到聊天消息
@@ -35,37 +36,49 @@ A:	接收聊天等回调，要注意以下几步骤：
 
 1、声明实现IChatManagerDelegate，如：
 	
-	@interface EaseMobSDKAccountManager ()<IChatManagerDelegate>
+<pre class="hll"><code class="language-java">
+@interface EaseMobSDKAccountManager ()<IChatManagerDelegate>
+</code></pre>
 	
 2、注册当前类接收回调
 
-	[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+<pre class="hll"><code class="language-java">
+[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+</code></pre>
 	
 3、实现对应回调方法，如：
 
-	// 收消息的回调
-	-(void)didReceiveMessage:(EMMessage *)message{
+<pre class="hll"><code class="language-java">
+// 收消息的回调
+-(void)didReceiveMessage:(EMMessage *)message{
 
-	}
+}
+</code></pre>
 	
 Q:  一条消息收到多次
 
 A:	一般是由本类多次注册了回调导致，请确定以下方法只执行了一次
 
-	[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+<pre class="hll"><code class="language-java">
+[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+</code></pre>
 	
 并且在类析构时注销回调
 
-	-(void)dealloc{
-    	[[EaseMob sharedInstance].chatManager removeDelegate:self];
-	}
+<pre class="hll"><code class="language-java">
+-(void)dealloc{
+    [[EaseMob sharedInstance].chatManager removeDelegate:self];
+}
+</code></pre>
 
-##		无法收到加好友请求 {#addBuddy}
+***
+## 无法收到加好友请求 {#addBuddy}
 
 Q:	无法收到好友请求
 
 A: 请确定您接受好友请求的类是否初始化，并声明了IChatManagerDelegate，实现了注册回调和回调方法。
 
+***
 ## 	无法收到推送	{#notification}
 
 Q:	APP后台时无法收到推送。
@@ -76,9 +89,9 @@ Q:  APP彻底关闭，无法收到推送。
 
 A:	您可以通过以下几步检验您的推送
 
-1.	首先需要您[上传APNS推送证书到环信管理后台](http://www.easemob.com/docs/ios/push/certificate/)。
+1.	首先需要您[制作并上传推送证书](http://www.easemob.com/docs/ios/IOSSDKPrepare/#apnsCertificate)。
 2.	在环信iOSSDK初始化时填写您的证书名称。
-3.	[注册推送](http://www.easemob.com/docs/ios/ChatDemo_UI/#apns)。
+3.	[注册推送](http://www.easemob.com/docs/ios/IOSSDKApns/#apnsCondition)。
 4.	真机登录环信im账号。
 5.	查看管理后台中，对应im账户下是否有您刚刚写的证书名。（如果没有，请检查您是否得到了deviceToken）
 6.	确定您当前证书是否和您的项目匹配。（开发证书与生产证书需要一一对应）	
@@ -88,11 +101,11 @@ A:	您可以通过以下几步检验您的推送
 
 Q:	无法自动登录
 
-A:	[iOS设置自动登录](http://www.easemob.com/docs/ios/#section-7)。
+A:	[iOS设置自动登录](http://www.easemob.com/docs/ios/IOSSDKInit/#login)。
 
 ## 	App启动时无法获取历史会话	{#getConversationList}
 
 Q:	APP再次启动，登录成功前无法获取会话列表。
 
-A:	您需要设置[自动登录](http://www.easemob.com/docs/ios/#section-7)。
+A:	您需要设置[自动登录](http://www.easemob.com/docs/ios/IOSSDKInit/#login)。
 
