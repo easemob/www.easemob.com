@@ -152,7 +152,7 @@ message.isGroup = NO; // 设置是否是群聊
 
 > 可以这样使用：EMMessage.ext = @{@"key":@"value"};
 
-***
+
 ## 会话 {#conversation}
 会话：操作聊天内容的容器，在SDK中对应的类型是**EMConversation**
 
@@ -231,7 +231,7 @@ NSArray *conversations = [[EaseMob sharedInstance].chatManager loadAllConversati
 
 SDK中还提供了很多操作EMConversation的接口，比如往conversation中插入一条消息，更新conversation中的某条消息等等，详情请查看 **IChatManagerConversation.h**和**EMConversation.h**。
 
-***
+
 ## 单聊/群聊 {#chat}
 
 ### * 发送消息 {#sendmessage}
@@ -816,7 +816,7 @@ if (!error) {
 @end
 </code></pre>
 
-***
+
 ## 聊天扩展功能 {#chat2}
 
 SDK提供了一系列的聊天扩展功能，比如已送达回执、已读回执

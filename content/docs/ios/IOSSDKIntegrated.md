@@ -28,7 +28,7 @@ SDK 下载包中分为如下四部分：
 
 >注: 由于iOS编译的特殊性，为了方便开发者使用，我们将i386 x86_64 armv7 armv7s arm64几个平台都合并到了一起，所以SDK的静态库(.a文件)比较大，实际集成编译出ipa后，根据调用功能的多少，实际只会增加2MB左右。	
 	
-***
+
 ##配置工程 {#projectSetting}
 
 ### 1.导入SDK {#importSdk}
@@ -75,6 +75,6 @@ SDK 下载包中分为如下四部分：
 >3.最终效果
 ![iOS_Force_load icon](/iOS_Force_load3.png)
 
-***
+
 ##编译工程 {#projectBuild}
 以上步骤进行完后，编译工程，如果没有报错，恭喜你，集成sdk成功，可以进行下一步了。

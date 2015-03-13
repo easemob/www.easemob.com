@@ -35,7 +35,7 @@ sdk文件夹中有三个子文件夹:include、lib、resources，请不要擅自
 
 >2、 类似EM@Manager命名格式的文件夹的内部结构都是相似的。delegates文件夹包含各种代理接口，internal文件夹包含各种协议的声明，types文件夹包含各种实例的声明。
 
-***
+
 ## 注意事项
 
 1、发送一个含多个附件的EMMessage, 附件包括图片/语音/视频/文件，正在优化；
@@ -44,7 +44,7 @@ sdk文件夹中有三个子文件夹:include、lib、resources，请不要擅自
 
 3、多附件下载或上传的进度回调，进度会不准；
 
-***
+
 ## bug fix
 
 1、会话conversation数量很多的时候，偶尔会出现两条一样的;
@@ -53,21 +53,21 @@ sdk文件夹中有三个子文件夹:include、lib、resources，请不要擅自
 
 3、EMConversation.latestMessage.deliveryState值有时不对；
 
-***
+
 ## SDK内部细节调整
 
 1、发送附件类消息，如果附件发送失败，这条消息将设置为失败状态；
 
 2、拨打实时语音，如果对方不在线，回调返回不在线的error;
 
-***
+
 ## SDK性能优化
 
 1、实时语音通话接通概率；
 
 2、从数据库load conversation的速度；
 
-***
+
 ## 新功能大放送
 
 1、自定义是否关闭打印的log，不能关闭log写入文件，目前我们需要log文件定位问题，望见谅。
@@ -108,7 +108,7 @@ sdk中相关接口
 @property (nonatomic) BOOL isUseIp;
 </code></pre>
 
-***
+
 ## new api
 
 ### EaseMob

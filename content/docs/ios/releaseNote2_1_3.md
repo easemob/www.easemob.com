@@ -36,7 +36,7 @@ sdk文件夹中有三个子文件夹:include、lib、resources，请不要擅自
 
 >2、 类似EM@Manager命名格式的文件夹的内部结构都是相似的。delegates文件夹包含各种代理接口，internal文件夹包含各种协议的声明，types文件夹包含各种实例的声明。
 
-***
+
 
 ## 注意事项
 
@@ -46,7 +46,7 @@ sdk文件夹中有三个子文件夹:include、lib、resources，请不要擅自
 
 3、多附件下载或上传的进度回调，进度会不准；
 
-***
+
 ## 使用技巧
 
 ** 1、不支持修改数据库中已存在的EMMessage的from属性，to属性，conversationChatter属性；
@@ -65,7 +65,7 @@ sdk文件夹中有三个子文件夹:include、lib、resources，请不要擅自
 
 ***** 8、ios SDK中的接口，以async开头的是异步方法，其余为同步方法。
 
-***
+
 ## bug fix
 
 1、发送消息回执失败，即客户端A调用方法【sendHasReadResponseForMessage：】，客户端B不会收到【didReceiveHasReadResponse：】回调。
@@ -82,7 +82,7 @@ EMMessage *tmpMessage = [[EMMessage alloc] initMessageWithID:message.messageId s
 
 4、特殊情况下，会出现收到离线消息的时候SDK中的Database还没有open, 造成第一条离线消息无法存进去;
 
-***
+
 ## SDK内部细节调整
 
 1、登录
@@ -105,17 +105,17 @@ b>、登陆成功之后，(一定是在登录成功之后)设置【EMChatManager
 
 因为安卓SDK暂时不支持多body，为了统一，IOS SDK请暂时不要使用多body的EMMessage结构。
 
-***
+
 ## SDK性能优化
 
 1、网络状态不好时，会导致频繁掉线、重连，在这个过程中，程序会卡；
 
-***
+
 ## 新功能大放送
 
 1、点对点语音通话bate版，目前只支持wifi非relay情况下使用。如果想在黑屏状态下能继续通话，请选择VIOP。
 
-***
+
 ## new api
 
 ### EMReceipt
@@ -130,7 +130,7 @@ b>、登陆成功之后，(一定是在登录成功之后)设置【EMChatManager
 添加理由：便于判断收到的回执是哪个conversation的。
 </code></pre>
 
-***
+
 ## change api
 
 ### IChatManagerLogin

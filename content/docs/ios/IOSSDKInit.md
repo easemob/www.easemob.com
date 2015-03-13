@@ -81,7 +81,7 @@ __以上所有方法，都可以在IDeviceManager.h中找到__
 
 __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 
-***
+
 ## 初始化SDK {#initSdk} 
 
 <span id="registerEaseMob">初始化环信SDK</span>
@@ -126,7 +126,7 @@ __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 
 >环信为im部分提供了apns推送功能，如果您要使用，请跳转到[apns离线推送]模块(http://www.easemob.com/docs/ios/IOSSDKApns)
 
-***
+
 >SDK中，大部分与**网络有关的操作**，都提供了3种调用方法
 
 >* 同步方法
@@ -135,7 +135,7 @@ __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 
 >* block异步方法(推荐使用)
 
-***
+
 ## 注册 {#register}
 
 客户端注册是为了测试使用，`正式环境中不推荐使用该方式注册环信账号`，注册的流程应该是您服务器通过环信提供的[rest api](http://www.easemob.com/docs/rest/userapi/#im)注册，之后保存到您的服务器或返回给客户端。
@@ -218,7 +218,7 @@ if (isSuccess) {
 @end
 </code></pre>
 
-***
+
 ## 登录 {#login}
 登录分两种类型：手动登录和自动登录
 
@@ -408,7 +408,7 @@ SDK中，如果发生自动登录，会有以下回调:
 @end
 </code></pre>
 
-***
+
 ## 重连 {#reconnect}
 
 目前iOS SDK的心跳频率是180秒一次，当您与环信的服务器断开后，以下几种情况会重连：
@@ -473,7 +473,7 @@ SDK中，如果发生自动登录，会有以下回调:
 @end
 </code></pre>
 
-***
+
 ## 退出 {#logout}
 退出分两种类型：主动退出和被动退出。
 
@@ -561,7 +561,7 @@ if (!error && info) {
 @end
 </code></pre>
 
-***
+
 
 进行完上边的步骤之后，编译并运行一下工程，如果能成功运行起工程，恭喜你，你已经能成功调用SDK的方法了。
 

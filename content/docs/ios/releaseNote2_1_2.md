@@ -40,7 +40,7 @@ b> cmd类型的消息监听[didReceiveCmdMessage:]，不会在[didReceiveMessage
 
 a> 需要设置message.conversationChatter，此项无值会插入失败；
 
-***
+
 ## new api
 
 ### IChatManagerLogin
@@ -182,7 +182,7 @@ a> 需要设置message.conversationChatter，此项无值会插入失败；
 - (void)didFinishedReceiveOfflineCmdMessages:(NSArray *)offlineCmdMessages;
 </code></pre>
 
-***
+
 ## change api
 
 ### IChatManagerSettingOptions
@@ -356,7 +356,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong, readonly) NSArray *ignoredGroupIds;
 </code></pre>
 
-***
+
 ## Delete api
 
 ### EMConversation

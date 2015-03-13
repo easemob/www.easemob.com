@@ -118,7 +118,7 @@ groupStyleSetting.groupStyle = eGroupStyle_PublicOpenJoin; // 创建不同类型
 @end
 </code></pre>
 
-***
+
 ## 加入群组 {#joinGroup}
 
 群组分4种类型，目前SDK不支持自主选择是否进群。我们将针对每种类型讲解加入群组要进行的操作。
@@ -456,7 +456,7 @@ EMError *error = nil;
 @end
 </code></pre>
 
-***
+
 ## 退出群组 {#exitGroup}
 
 群主（owner）不支持退群操作，只能解散群。
@@ -548,7 +548,7 @@ if (!error) {
 - (void)group:(EMGroup *)group didLeaveWithReason:(EMGroupLeaveReason)leaveReason;
 </code></pre>
 
-***
+
 ## 解散群组 {#destroyGroup}
 
 解散群组需要owner权限
@@ -626,7 +626,7 @@ EMGroup *group;
 @end
 </code></pre>
 
-***
+
 ## 移除群成员 {#removeMember}
 
 只有owner权限才能调用
@@ -674,7 +674,7 @@ EMGroup *group;
                      onQueue:(dispatch_queue_t)aQueue;
 </code></pre>
 
-***
+
 ## 加入/移出群黑名单 {#blockMember}
 
     只有owner权限才能调用该接口，并且只有owner权限的才能查看群黑名单。
@@ -773,7 +773,7 @@ EMGroup *group;
 
 </code></pre>
 
-***
+
 ## 修改群组属性 {#editGroup}
 
 ### *修改群名称
@@ -952,7 +952,7 @@ if (!error) {
 @end
 </code></pre>
 
-***
+
 ## 修改群组附属属性 {#editGroup2}
 
 ### * 屏蔽群消息
@@ -1020,7 +1020,7 @@ if (!error) {
 
 见 [apns离线推送](http://www.easemob.com/docs/ios/IOSSDKApns) 之 [群组apns操作](http://www.easemob.com/docs/ios/IOSSDKApns/#apnsGroup)
 
-***
+
 ## 获取群组列表 {#fetchGroupList}
 
 ### * 获取与登录者相关的群组（创建的和加入的）

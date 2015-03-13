@@ -100,7 +100,7 @@ if (!error) {
 NSArray *buddyList = [[EaseMob sharedInstance].chatManager buddyList];
 </code></pre>
 
-***
+
 ## 添加好友 {#addbuddy}
 
 环信iOS SDK提供了添加好友的方法
@@ -257,7 +257,7 @@ if (isSuccess && !error) {
 @end
 </code></pre>
 
-***
+
 ## 删除好友 {#removebuddy}
 
 <pre class="hll"><code class="language-java">
@@ -273,7 +273,7 @@ if (isSuccess && !error) {
 *	removeFromRemote:是否将自己从对方好友列表中移除
 *	error:错误信息
 
-***
+
 ## 好友黑名单 {#blocklist}
 
 环信的黑名单体系是独立的，与好友无任何关系。也就是说，您可以将任何人加入黑名单，不论他是否与您是好友关系。同时，如果您将好友好友加入黑名单，则他仍然是您的好友，只不过同时也在黑名单中。

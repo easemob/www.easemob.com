@@ -54,7 +54,7 @@ else{
 
 `apns注册失败，一般是由于使用了通用证书或者是模拟器调试导致，请检查证书并用真机调试。此处是iOS系统报的错，如仍不能确定，请从网上查找相关资料。`
 
-***
+
 ##全局apns操作 {#apnsGlobal}
 
 ###获取全局apns配置
@@ -127,7 +127,7 @@ onQueue:(dispatch_queue_t)aQueue;
 - (void)asyncUpdatePushOptions:(EMPushNotificationOptions *)options;
 </code></pre>
 
-***
+
 ##群组apns操作 {#apnsGroup}
 
 ### 设置指定群组是否接收apns
