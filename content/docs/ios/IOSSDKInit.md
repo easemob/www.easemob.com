@@ -132,11 +132,11 @@ __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 
 > SDK中，大部分与**网络有关的操作**，都提供了3种调用方法
 >
-> * 同步方法
+> 1. 同步方法
 >
-> * 通过delegate回调的异步方法。要想能收到回调，必须要注册为delegate（[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];）
+> 2. 通过delegate回调的异步方法。要想能收到回调，必须要注册为delegate（[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];）
 >
-> * block异步方法(推荐使用)
+> 3. block异步方法(推荐使用)
 
 
 ## 注册 {#register}
@@ -147,28 +147,32 @@ __以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 
 注册提供了三种方法。
 
-1. 同步方法
+1、 同步方法
 
 <pre class="hll"><code class="language-java">
+
 EMError *error = nil;
 BOOL isSuccess = [[EaseMob sharedInstance].chatManager registerNewAccount:@"8001" password:@"111111" error:&error];
 if (isSuccess) {
     NSLog(@"注册成功");
 }
+
 </code></pre>
     
-2. block异步方法
+2、 block异步方法
 
 <pre class="hll"><code class="language-java">
+
 [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:@"8001" password:@"111111" withCompletion:^(NSString *username, NSString *password, EMError *error) {
     if (!error) {
         NSLog(@"注册成功");
     }
 } onQueue:nil];
+
 </code></pre>
 
     
-3.  IChatManagerDelegate回调方法
+3、 IChatManagerDelegate回调方法
 
 <pre class="hll"><code class="language-java">
 
@@ -488,36 +492,40 @@ SDK中，如果发生自动登录，会有以下回调:
 * 主动退出：结束账号A在设备DA上的登录状态
 
 * 被动退出：
-1. 账号A在设备DA上登录，在线的情况下，账号A又在设备DB上登录。这种情况下，设备DA会收到被踢的回调；
-2. 账号A在设备DA上登录，在线的情况下，账号A被从后台删除。这种情况下，设备A会收到被删除的回调。
+1、 账号A在设备DA上登录，在线的情况下，账号A又在设备DB上登录。这种情况下，设备DA会收到被踢的回调；
+2、 账号A在设备DA上登录，在线的情况下，账号A被从后台删除。这种情况下，设备A会收到被删除的回调。
 
 退出 提供了三种方法。
 
 **WithUnbindDeviceToken**在被动退出时传NO，在主动退出时传YES.
 
-1. 同步方法：
+1、 同步方法：
 
 <pre class="hll"><code class="language-java">
+
 EMError *error = nil;
 NSDictionary *info = [[EaseMob sharedInstance].chatManager logoffWithUnbindDeviceToken:YES/NO error:&error];
 if (!error && info) {
     NSLog(@"退出成功");
 }
+
 </code></pre>
 
 
-2. block异步方法 
+2、 block异步方法 
 
 <pre class="hll"><code class="language-java">
+
 [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES/NO completion:^(NSDictionary *info, EMError *error) {
     if (!error && info) {
         NSLog(@"退出成功");
     }
 } onQueue:nil];
+
 </code></pre>
 
 
-3. IChatManagerDelegate回调方法
+3、 IChatManagerDelegate回调方法
 
 
     //
