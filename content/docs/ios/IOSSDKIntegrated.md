@@ -27,7 +27,7 @@ SDK 下载包中分为如下四部分：
 到此您已经下载好了SDK，下面开始学习SDK的集成使用吧！
 
 	注: 由于iOS编译的特殊性，为了方便开发者使用，我们将i386 x86_64 armv7 armv7s arm64几个平台都合并到了一起，所以SDK的静态库(.a文件)比较大。
-		实际集成编译出ipa后，根据调用功能的多少，实际只会增加2MB左右。	
+	实际集成编译出ipa后，根据调用功能的多少，实际只会增加2MB左右。	
 	
 
 ##配置工程 {#projectSetting}
@@ -40,11 +40,11 @@ SDK 下载包中分为如下四部分：
 
 ### 2.设置工程属性 {#project}
 
-1、向Build Phases -> Link Binary With Libraries 中添加依赖库
+2.1、向Build Phases -> Link Binary With Libraries 中添加依赖库
 	
 ![iOS_AddFramework icon](/iOS_AddFramework.png)
 
-必须添加的依赖库有
+SDK依赖库有
 
 * MobileCoreServices.framework
 * CFNetwork.framework
@@ -56,15 +56,14 @@ SDK 下载包中分为如下四部分：
 * libresolv.dylib
 * libxml2.dylib
 
-** UIDemo中的依赖库因为还多了一些其他UI上的功能，需要添加的依赖库更多，具体请参考UIDemo。**
 	
 
-2、向Build Settings -> Linking -> Other Linker Flags 中 添加-ObjC`(注意大小写)`
+2.2、向Build Settings -> Linking -> Other Linker Flags 中 添加-ObjC`(注意大小写)`
 
 ![iOS_OtherLinker icon](/iOS_OtherLinker.png)
 
 
-3、如果项目中使用-ObjC有冲突,可以添加-force_load来解决。
+2.3、如果项目中使用-ObjC有冲突,可以添加-force_load来解决。
 
 格式为: **-force_load[空格]EaseMobSDK/lib/libEaseMobClientSDKLite.a(静态库的路径)**
 
