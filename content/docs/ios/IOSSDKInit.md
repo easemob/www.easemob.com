@@ -427,6 +427,8 @@ SDK中，如果发生自动登录，会有以下回调:
 
 @end
 
+</code></pre>
+
 
 ## 重连 {#reconnect}
 
