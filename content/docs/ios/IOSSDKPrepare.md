@@ -29,7 +29,8 @@ secondnavios: true
 )
 - **缩略图大小**:聊天时，发送图片时生成缩略图的分辨率，该值设置越大，服务器生成的缩略图越清晰。
 
-	注：在环信中，不同应用之间通过appKey隔离，不同appKey下的用户不能互通。所以登录用户前，请先确定appkey下是否存在这个用户。
+	
+注：在环信中，不同应用之间通过appKey隔离，不同appKey下的用户不能互通。所以登录用户前，请先确定appkey下是否存在这个用户。
 
 
 
@@ -38,15 +39,15 @@ secondnavios: true
 
 ###制作推送证书
 
-#### step1、 打开[苹果开发者网站](http://developer.apple.com/)
+* step1、 打开[苹果开发者网站](http://developer.apple.com/)
 
 ![developer.apple.com](./1.png "developer.apple.com")
 
-#### step2、从Member Center进入*Certificates, Identifiers & Profiles*
+* step2、从Member Center进入*Certificates, Identifiers & Profiles*
 
 ![developer.apple.com](./2.png "developer.apple.com")
 
-#### step3、选择要制作的推送证书
+* step3、选择要制作的推送证书
 
 ![developer.apple.com](./3.png "developer.apple.com")
 
@@ -54,48 +55,48 @@ secondnavios: true
 
 对于生产环境(production)的推送证书, 请选择 *Apple Push Notification service SSL (Production)*
 
-#### step4、 选择对应的APP ID (环信示例使用ChatDemoUI， 所以此处选择*com.easemob.enterprise.demo.ui*)
+* step4、 选择对应的APP ID (环信示例使用ChatDemoUI， 所以此处选择*com.easemob.enterprise.demo.ui*)
 
 ![developer.apple.com](./4.png "developer.apple.com")
 
-#### step5、 根据Certificate Assistant的提示, 创建Certificate Request
+* step5、 根据Certificate Assistant的提示, 创建Certificate Request
 
 ![developer.apple.com](./5.png "developer.apple.com")
 
-#### step6、 上传上一步中创建的Certificate Request文件
+* step6、 上传上一步中创建的Certificate Request文件
 
 ![developer.apple.com](./6.png "developer.apple.com")
 
-#### step7、 上传完毕后, 推送证书就被正确生成了, 之后我们下载下来这个证书, 并双击导入系统
+* step7、 上传完毕后, 推送证书就被正确生成了, 之后我们下载下来这个证书, 并双击导入系统
 
 ![developer.apple.com](./7.png "developer.apple.com")
 
 
 ###上传推送证书
 
-#### step1、 打开Application --> Utilities --> Keychain Access应用, 我们会看到有刚刚我们制作好的推送证书
+* step1、 打开Application --> Utilities --> Keychain Access应用, 我们会看到有刚刚我们制作好的推送证书
 
 ![developer.apple.com](./8.jpg "developer.apple.com")
 
-#### step2、 选中证书对应的私钥(或者展开后选中证书), 点右键, 选择导出, 并设定密码
+* step2、 选中证书对应的私钥(或者展开后选中证书), 点右键, 选择导出, 并设定密码
 
 ![developer.apple.com](./9.png "developer.apple.com")
 
-#### step3、 登陆[环信管理后台](http://console.easemob.com/)
+* step3、 登陆[环信管理后台](http://console.easemob.com/)
 
 ![developer.apple.com](./10.png "developer.apple.com")
 
-#### step4、 输入了正确的账号后, 选择对应的APP（环信示例为ChatDemoUI, 点击ChatDemoUI)
+* step4、 输入了正确的账号后, 选择对应的APP（环信示例为ChatDemoUI, 点击ChatDemoUI)
 
 ![developer.apple.com](./11.png "developer.apple.com")
 
-#### step5、 填写的证书名称
+* step5、 填写的证书名称
 
 这个名称是个有意义的名字, 对推送直接相关, 稍后会在源码的修改里继续用到这个名字. 上传之前导出的P12文件, 密码则为此P12文件的密码, 证书类型请根据具体情况选择
 
 (创建的是Apple Push Notification service SSL Sandbox请选择*开发环境*; Apple Push Notification service SSL Production请选择*生产环境*), 
 
-#### step6、 上传
+* step6、 上传
 
 ![developer.apple.com](./12.png "developer.apple.com")
 
