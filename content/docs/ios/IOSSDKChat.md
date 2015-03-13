@@ -8,7 +8,7 @@ secondnavios: true
 
 ## 消息 {#message}
 
-消息：IM交互实体，在SDK中对应的类型是 **EMMessage**，EMMessage可以由多个符合<IEMMessageBody>协议的body组成，但是 **推荐使用一个body，多个body有bug，正在优化** 。
+消息：IM交互实体，在SDK中对应的类型是 **EMMessage**，EMMessage可以由多个符合<IEMMessageBody>协议的body组成，但是 推荐使用一个body，多个body有bug，正在优化。
 
 以下的讲解以一个body为例：
 
@@ -989,6 +989,7 @@ SDK提供了已送达回执，当对方收到您的消息后，您会收到以�
 - (void)unRegisterEaseMobDelegate{
     [[EaseMob sharedInstance].chatManager removeDelegate:self];
 }
-</code></pre>
 
 @end
+
+</code></pre>
