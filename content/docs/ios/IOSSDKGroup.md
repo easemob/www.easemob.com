@@ -591,7 +591,7 @@ if (!error) {
 {
     EMGroup *group;
 }
-@property (nonatomic) id<IChatManager> chatManager;
+@property (nonatomic) id&lt;IChatManager&gt; chatManager;
 @property (nonatomic, strong) EMGroup *currentGroup;
 @end
 

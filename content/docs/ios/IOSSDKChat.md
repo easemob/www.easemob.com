@@ -241,6 +241,7 @@ SDK中还提供了很多操作EMConversation的接口，比如往conversation中
 登陆成功之后才能调用该组接口。发消息时，单聊和群聊调用的是统一接口，区别只是要设置下message.isGroup属性。坚决不推荐多body。
 
 <pre class="hll"><code class="language-java">
+
 /*!
 @method
 @brief 发送一条消息
@@ -251,7 +252,7 @@ SDK中还提供了很多操作EMConversation的接口，比如往conversation中
 @result 发送完成后的消息对象
 */
 - (EMMessage *)sendMessage:(EMMessage *)message
-                  progress:(id<IEMChatProgressDelegate>)progress
+                  progress:(id&lt;IEMChatProgressDelegate&gt;)progress
                      error:(EMError **)pError;
 
 /*!
@@ -263,7 +264,7 @@ SDK中还提供了很多操作EMConversation的接口，比如往conversation中
 @result 发送的消息对象(因为是异步方法, 不能作为发送完成或发送成功失败与否的判断)
 */
 - (EMMessage *)asyncSendMessage:(EMMessage *)message
-                       progress:(id<IEMChatProgressDelegate>)progress;
+                       progress:(id&lt;IEMChatProgressDelegate&gt;)progress;
 
 /*!
 @method
@@ -278,7 +279,7 @@ SDK中还提供了很多操作EMConversation的接口，比如往conversation中
 @result 发送的消息对象(因为是异步方法, 不能作为发送完成或发送成功失败与否的判断)
 */
 - (EMMessage *)asyncSendMessage:(EMMessage *)message
-                       progress:(id<IEMChatProgressDelegate>)progress
+                       progress:(id&lt;IEMChatProgressDelegate&gt;)progress
                         prepare:(void (^)(EMMessage *message, EMError *error))prepare
                         onQueue:(dispatch_queue_t)aPrepareQueue
                      completion:(void (^)(EMMessage *message, EMError *error))completion
