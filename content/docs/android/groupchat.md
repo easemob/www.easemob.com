@@ -197,7 +197,7 @@ EMGroupManager.getInstance().blockUser(groupId, username);//需异步处理
 * @param groupId, 群组的id
 * @param username, 待解除屏蔽的 用户名
 */
-EMGroupManager.getInstance().unblockUser(groupId, username);
+EMGroupManager.getInstance().unblockUser(groupId, username);//需异步处理
 
 </code></pre>
 
