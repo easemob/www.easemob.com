@@ -28,14 +28,14 @@ SDK不提供好友查找的服务, 如需要查找好友, 需要调用开发者�
 
 <pre class="hll"><code class="language-java">
 //参数为要添加的好友的username和添加理由
-EMContactManager.getInstance().addContact(toAddUsername, reason);//异步执行
+EMContactManager.getInstance().addContact(toAddUsername, reason);//需异步处理
     
 </code></pre>
 	
 ### 删除好友 {#removefriend}
 
 <pre class="hll"><code class="language-java">
-EMContactManager.getInstance().deleteContact(username);//异步执行
+EMContactManager.getInstance().deleteContact(username);//需异步处理
     
 </code></pre>
 
@@ -43,14 +43,14 @@ EMContactManager.getInstance().deleteContact(username);//异步执行
 
 <pre class="hll"><code class="language-java">
 //同意username的好友请求
-EMChatManager.getInstance().acceptInvitation(username);//异步执行
+EMChatManager.getInstance().acceptInvitation(username);//需异步处理
     
 </code></pre>
 
 ### 拒绝好友请求 {#rejectfriend}
 
 <pre class="hll"><code class="language-java">
-EMChatManager.getInstance().refuseInvitation(username);//异步执行
+EMChatManager.getInstance().refuseInvitation(username);//需异步处理
     
 </code></pre>
 
@@ -132,14 +132,14 @@ EMContactManager.getInstance().getBlackListUsernames();
 <pre class="hll"><code class="language-java">	
 //第二个参数如果为true，则把用户加入到黑名单后双方发消息时对方都收不到；false,则
 //我能给黑名单的中用户发消息，但是对方发给我时我是收不到的
-EMContactManager.getInstance().addUserToBlackList(username,true);//异步执行
+EMContactManager.getInstance().addUserToBlackList(username,true);//需异步处理
     
 </code></pre>
 
 ### 把用户从黑名单中移除
 
 <pre class="hll"><code class="language-java">
-EMContactManager.getInstance().deleteUserFromBlackList(username);//异步执行
+EMContactManager.getInstance().deleteUserFromBlackList(username);//需异步处理
     
 </code></pre>
 

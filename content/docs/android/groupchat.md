@@ -23,10 +23,10 @@ secondnavandroid: true
 //desc：群聊简介
 //members：群聊成员,为空时这个创建的群组只包含自己
 //allowInvite:是否允许群成员邀请人进群
-EMGroupManager.getInstance().createPrivateGroup(groupName, desc, members,allowInvite);
+EMGroupManager.getInstance().createPrivateGroup(groupName, desc, members,allowInvite);//需异步处理
 
 //前一种方法创建的群聊默认最大群聊用户数为200，传入maxUsers后设置自定义的最大用户数，最大为2000
-EMGroupManager.getInstance().createPrivateGroup(groupName, desc, members,allowInvite,maxUsers);
+EMGroupManager.getInstance().createPrivateGroup(groupName, desc, members,allowInvite,maxUsers);//需异步处理
 </code></pre>
 
 ####创建公开群 
@@ -35,24 +35,24 @@ EMGroupManager.getInstance().createPrivateGroup(groupName, desc, members,allowIn
 <pre class="hll"><code class="language-java">
 //前面三个参数和创建私有群一致
 //needApprovalRequired:如果创建的公开群用需要户自由加入，就传false。否则需要申请，等群主批准后才能加入，传true
-EMGroupManager.getInstance().createPublicGroup(groupName, desc, members, needApprovalRequired);
+EMGroupManager.getInstance().createPublicGroup(groupName, desc, members, needApprovalRequired);//需异步处理
 	
 //前一种方法创建的群聊默认最大群聊用户数为200，传入maxUsers后设置自定义的最大用户数，最大可以设为2000
-EMGroupManager.getInstance().createPublicGroup(groupName, desc, members, needApprovalRequired,maxUsers);
+EMGroupManager.getInstance().createPublicGroup(groupName, desc, members, needApprovalRequired,maxUsers);//需异步处理
 </code></pre>		
 
 ## 群聊加人 {#group-joincontact}
 <pre class="hll"><code class="language-java">
 //群主加人调用此方法
-EMGroupManager.getInstance().addUsersToGroup(groupId, newmembers);//异步执行
+EMGroupManager.getInstance().addUsersToGroup(groupId, newmembers);//需异步处理
 //私有群里，如果开放了群成员邀请，群成员邀请调用下面方法
-EMGroupManager.getInstance().inviteUser(groupId, newmembers, null);//异步执行
+EMGroupManager.getInstance().inviteUser(groupId, newmembers, null);//需异步处理
 </code></pre>
 
 ## 群聊减人 {#group-subcontact}
 <pre class="hll"><code class="language-java">
 //把username从群聊里删除
-EMGroupManager.getInstance().removeUserFromGroup(groupId, username);//异步执行
+EMGroupManager.getInstance().removeUserFromGroup(groupId, username);//需异步处理
 </code></pre>
 
 ## 加入某个群聊 {#group-joinone}
@@ -60,19 +60,19 @@ EMGroupManager.getInstance().removeUserFromGroup(groupId, username);//异步执�
 
 <pre class="hll"><code class="language-java">
 //如果群开群是自由加入的，即group.isMembersOnly()为false，直接join
-EMGroupManager.getInstance().joinGroup(groupid);//异步执行
+EMGroupManager.getInstance().joinGroup(groupid);//需异步处理
 //需要申请和验证才能加入的，即group.isMembersOnly()为true，调用下面方法
-EMGroupManager.getInstance().applyJoinToGroup(groupid, "求加入");//异步执行
+EMGroupManager.getInstance().applyJoinToGroup(groupid, "求加入");//需异步处理
 </code></pre>
 
 ## 退出群聊 {#group-exit}
 <pre class="hll"><code class="language-java">
-EMGroupManager.getInstance().exitFromGroup(groupId);//异步执行
+EMGroupManager.getInstance().exitFromGroup(groupId);//需异步处理
 </code></pre>
 
 ## 解散群聊 {#group-dismiss}
 <pre class="hll"><code class="language-java">
-EMGroupManager.getInstance().exitAndDeleteGroup(groupId);//异步执行
+EMGroupManager.getInstance().exitAndDeleteGroup(groupId);//需异步处理
 </code></pre>
 
 ## 获取群聊列表	{#group-getlist}
@@ -80,7 +80,7 @@ EMGroupManager.getInstance().exitAndDeleteGroup(groupId);//异步执行
 <pre class="hll"><code class="language-java">
 //从服务器获取自己加入的和创建的群聊列表（两种方式），此api获取的群组sdk会自动保存到内存和db。
 //注意，获取到的列表里的群聊只有groupname和groupid等简单配置信息
-1.List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getGroupsFromServer();//异步执行
+1.List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getGroupsFromServer();//需异步处理
 	
 2.EMGroupManager.getInstance().asyncGetGroupsFromServer(newEMValueCallBack&lt;List&lt;EMGroup&gt;&gt;() {
 			
@@ -101,7 +101,7 @@ EMGroupManager.getInstance().exitAndDeleteGroup(groupId);//异步执行
 List&lt;EMGroup&gt; grouplist = EMGroupManager.getInstance().getAllGroups();
 
 //获取所有公开群列表（两种方式）
-1.List&lt;EMGroupInfo&gt; groupsList = EMGroupManager.getInstance().getAllPublicGroupsFromServer();//异步执行
+1.List&lt;EMGroupInfo&gt; groupsList = EMGroupManager.getInstance().getAllPublicGroupsFromServer();//需异步处理
 	
 2.EMGroupManager.getInstance().asyncGetAllPublicGroupsFromServer(new EMValueCallBack&lt;List&lt;EMGroupInfo&gt;&gt;() {
 			
@@ -142,7 +142,7 @@ group.getOwner();//获取群主
 * @param groupId， 群id
 * @throws EasemobException
 */
-EMGroupManager.getInstance().blockGroupMessage(groupId);//异步执行
+EMGroupManager.getInstance().blockGroupMessage(groupId);//需异步处理
 </code></pre>
 
 
@@ -154,7 +154,7 @@ EMGroupManager.getInstance().blockGroupMessage(groupId);//异步执行
 * @param groupId
 * @throws EaseMobException
 */
-EMGroupManager.getInstance().unblockGroupMessage(groupId);//异步执行
+EMGroupManager.getInstance().unblockGroupMessage(groupId);//需异步处理
 </code></pre>
 
 ## 修改群组名称  {#group-changename}
@@ -162,7 +162,7 @@ EMGroupManager.getInstance().unblockGroupMessage(groupId);//异步执行
 <pre class="hll"><code class="language-java">
 //groupId 需要改变名称的群组的id
 //changedGroupName 改变后的群组名称
-EMGroupManager.getInstance().changeGroupName(groupId,changedGroupName);//异步执行
+EMGroupManager.getInstance().changeGroupName(groupId,changedGroupName);//需异步处理
     
 </code></pre>
 
@@ -170,7 +170,7 @@ EMGroupManager.getInstance().changeGroupName(groupId,changedGroupName);//异步�
 
 <pre class="hll"><code class="language-java">
 //如果群聊只是想提示数目，不响铃。可以通过此属性设置，<strong>此属性是本地属性</strong>
-EMChatManager.getInstance().getChatOptions().setReceiveNotNoifyGroup({List&lt;String&gt;})
+EMChatManager.getInstance().getChatOptions().setReceiveNotNoifyGroup(List&lt;String&gt;)
 
 </code></pre>
 
@@ -185,7 +185,7 @@ EMChatManager.getInstance().getChatOptions().setReceiveNotNoifyGroup({List&lt;St
 * @param username, 待屏蔽的用户名
 * @exception EaseMobException 出错会抛出
 */
-EMGroupManager.getInstance().blockUser(groupId, username);//异步执行
+EMGroupManager.getInstance().blockUser(groupId, username);//需异步处理
 
 </code></pre>
 
@@ -210,7 +210,7 @@ EMGroupManager.getInstance().unblockUser(groupId, username);
 * @return List&lt;String&gt; 
 * @throws EaseMobException 获取失败
 */
-EMGroupManager.getInstance().getBlockedUsers(groupId);//异步执行
+EMGroupManager.getInstance().getBlockedUsers(groupId);//需异步处理
 
 </code></pre>
 

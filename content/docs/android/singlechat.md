@@ -305,4 +305,5 @@ chatOptions.setAcceptInvitationAlways(false);
 
 ###Demo及SDK下载
 [http://www.easemob.com/sdk/](http://www.easemob.com/sdk/)
+
 ###详细文档请参考 [java doc](http://www.easemob.com/apidoc/android/chat/)

@@ -78,7 +78,7 @@ private String getAppName(int pID) {
 
 ##群组 {#group}
 
-   未登录情况下群组是获取不到的，本地数据库中如果没有存储群组列表会从服务器获取，就调EMGroupManager.getInstance().getGroupsFromServer()，如果本地已经存储了群组列表就要先调EMGroupManager.getInstance().loadAllGroups()从本地db获取群组放到内存中,在内存中获取群组列表调EMGroupManager.getInstance().getAllGroups()
+   未登录情况下群组是获取不到的，本地数据库中如果没有存储群组列表会从服务器获取，就调`EMGroupManager.getInstance().getGroupsFromServer()`，如果本地已经存储了群组列表就要先调`EMGroupManager.getInstance().loadAllGroups()`从本地db获取群组放到内存中,在内存中获取群组列表调`EMGroupManager.getInstance().getAllGroups()`
    
 Q：屏蔽群组出现forbidden(403) Owner privileges required是什么原因？
 
@@ -87,8 +87,8 @@ A:检查你是否已经对该群组做了屏蔽，再次调用屏蔽的方法则
 
 ##聊天记录存储 {#chathistory}
 
-   未登录情况下聊天记录是获取不到的， 登陆后先调用            EMChatManager.getInstance().loadAllConversations()放到内存中，从内存中在调用EMChatManager.getInstance().getAllConversations()去获取所有会话,
-    获取单个会话EMChatManager.getInstance().getConversation(username)
+   未登录情况下聊天记录是获取不到的， 登陆后先调用            `EMChatManager.getInstance().loadAllConversations()`放到内存中，从内存中在调用`EMChatManager.getInstance().getAllConversations()`去获取所有会话,
+    获取单个会话`EMChatManager.getInstance().getConversation(username)`
 
 ###注册用户失败 {#register}
 ![alt text](/registererror.jpg "Title")
