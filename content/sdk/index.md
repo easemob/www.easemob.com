@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150204.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150314.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.3r2　</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.4　</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -44,6 +44,28 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+			      		<li>
+                            <h3><em></em><span>版本：V2.1.4 2015-03-14</span></h3>
+                            <dl>
+                            <dt>
+                                <span>bug fix：<br/>
+                                1、会话conversation数量很多的时候，偶尔会出现两条一样的;<br/>
+                                2、群名称中包含“（”或者“）”，会造成crash;<br />
+                                3、EMConversation.latestMessage.deliveryState值有时不对.<br/>
+                                </span>	
+
+                                <span>性能优化：<br/>
+                                1、实时语音通话接通概率；<br/>
+                                2、从数据库load conversation的速度.<br/>
+                                </span>
+
+                                <span>新功能：<br/>
+                                1、自定义是否关闭打印的log，不能关闭log写入文件，目前我们需要log文件定位问题，望见谅；<br/>
+                                2、添加DNS解析功能.<br/>
+                                </span>
+                            </dt>
+                            </dl>
+                        </li>
                         <li>
                             <h3><em></em><span>版本：V2.1.3r3 2015-02-04</span></h3>
                             <dl>
