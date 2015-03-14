@@ -129,3 +129,18 @@ sdk中相关接口
                       apnsCertName:(NSString *)anAPNSCertName
                        otherConfig:(NSDictionary *)anOtherConfig;
 </code></pre>
+
+### EMChatManagerChatDelegate
+
+<pre class="hll"><code class="language-java">
+/*!
+ @method
+ @brief 收到发送消错误的回调
+ @param messageId           消息Id
+ @param conversationChatter 会话的username/groupId
+ @param error               错误信息
+ */
+- (void)didReceiveMessageId:(NSString *)messageId
+                    chatter:(NSString *)conversationChatter
+                      error:(EMError *)error;
+</code></pre>
