@@ -6,11 +6,14 @@ secondnavios: true
 
 ## 实时语音
 
-### 配置工程
+
+## 配置工程 {#configProject}
+
 
 使用libEaseMobClientSDK.a, 包含头文件#import"EMSDKFull.h"
 
-### 接口
+
+## 接口 {#callAudioApi}
 
 关于实时语音的接口如下：
 
