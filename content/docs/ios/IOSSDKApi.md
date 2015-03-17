@@ -47,6 +47,16 @@ sdk文件夹中有三个子文件夹:include、lib、resources，请不要擅自
 
 </code></pre>
 
+## EMPushManager
+
+离线推送相关接口的集合。可以通过调用EaseMob类获得此接口的实例，示例代码如下：
+
+<pre class="hll"><code class="language-java">
+
+[EaseMob sharedInstance] pushManager]
+
+</code></pre>
+
 ## EMCallManager
 
 实时语音的集合。可以通过调用EMSDKFull类获得此接口的实例，示例代码如下：
