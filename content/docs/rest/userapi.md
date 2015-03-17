@@ -39,10 +39,13 @@ sidebar: restsidebar
 ## 获取APP管理员Token {#getadmintoken}
 环信提供的REST API需要权限才能访问,权限通过发送HTTP请求时携带token来体现,下面描述获取token的方式。小说明：api描述的时候使用到的{app的client_id}之类的这种参数需要替换成具体的值 .
 
-**_重要提醒：token在有效期内都是可用的，有效期具体值请看接口返回值中的expires_in字段，所以，请不要频繁向服务器发送获取token的请求，同一账号发送此请求超过一定频率会被服务器封号，切记，切记！！_**
+**_重要提醒：
+token在有效期内都是可用的，有效期具体值请看接口返回值中的expires_in字段，所以，请不要频繁向服务器发送获取token的请求，同一账号发送此请求超过一定频率会被服务器封号，切记，切记！！_**
+
 
 
 ### 使用app的client_id和client_secret获取授权管理员token
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 client_id 和 client_secret可以在环信管理后台的app详情页面看到
 
@@ -91,6 +94,7 @@ client_id 和 client_secret可以在环信管理后台的app详情页面看到
 注意：以下api中提到的${token}是个变量，使用时需要替换成通过app的client_id和client_secret获取到的token。
 
 ### 开放注册
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users
 - HTTP Method : POST
@@ -99,7 +103,6 @@ client_id 和 client_secret可以在环信管理后台的app详情页面看到
 - Request Body ： {"username":"${用户名}","password":"${密码}", "nickname":"${昵称值}"}  
 	 **// 创建用户时候username 和password是必须的, nickname是可选的，这个nickname用于IOS推送. 如果要在创建用户时设置nickname, 请求body是: {"username":"jliu","password":"123456", "nickname":"建国"} 这种形式, 下面的示例不包含nickname .** 批量注册时同此理.
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
-
 - 可能的错误码： <br/>
 400 （用户已存在、用户名或密码为空、用户名不合法([见用户名规则](http://www.easemob.com/docs/rest/userapi/#eid))） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
@@ -133,7 +136,8 @@ curl -X POST -i "https://a1.easemob.com/easemob-demo/chatdemoui/users" -d '{"use
 }
 </code></pre>
 
-### <b>授权注册</b>
+### 授权注册
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users
 - HTTP Method : POST
@@ -177,7 +181,9 @@ curl -X POST -H "Authorization: Bearer YWMt39RfMMOqEeKYE_GW7tu81AAAAT71lGijyjG4V
 
 ## 注册IM用户[批量] {#im-1}
 
-> 建议批量发送的数量不要过多, 建议在20-60之间
+> 批量注册的用户数量不要过多, 建议在20-60之间
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users
 - HTTP Method : POST
@@ -226,6 +232,7 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 </code></pre>
 
 ## 获取IM用户[单个]  {#im-2}
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{username}
 - HTTP Method : GET
@@ -271,6 +278,8 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr-GP
 
 > 该接口默认返回最近创建的10个用户，如果需要指定获取数量，需加上参数limit=N，N为数量值.
 关于分页：如果DB中的数量大于N，返回json会携带一个字段“cursor”,我们把它叫做"游标"，该游标可理解为结果集的指针，值是变化的。往下取数据的时候带着游标，就可以获取到下一页的值。如果还有下一页，返回值里依然还有这个字段，直到没有这个字段，说明已经到最后一页。cursor的意义在于数据(真)分页。
+
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 1) 不分页
 
@@ -633,6 +642,7 @@ curl -X GET -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 </code></pre>
 
 ## 删除IM用户[单个]  {#im-5}
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{username}
 - HTTP Method : DELETE
@@ -675,8 +685,9 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 
 ## 删除IM用户[批量]  {#im-6}
 
-  删除某个app下指定数量的环信账号。可一次删除N个用户,数值可以修改.建议这个数值在100-500之间，不要过大. 需要注意的是, 这里只是批量的一次性删除掉N个用户, 具体删除哪些并没有指定, 可以在返回值中查看到哪些用户被删除掉了。
+> 删除某个app下指定数量的环信账号。可一次删除N个用户,数值可以修改.建议这个数值在100-500之间，不要过大. 需要注意的是, 这里只是批量的一次性删除掉N个用户, 具体删除哪些并没有指定, 可以在返回值中查看到哪些用户被删除掉了。
 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 可以通过增加查询条件来做到精确的删除, 例如:
 
@@ -760,6 +771,7 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 </code></pre>
 
 ## 重置IM用户密码  {#resetpassword}
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{username}/password
 - HTTP Method : PUT
@@ -787,6 +799,7 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 </code></pre>
 
 ## 修改用户昵称  {#nickname}
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{username}
 - HTTP Method : PUT
@@ -833,6 +846,8 @@ curl -X PUT -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EKeAQAAAUlmBR2bTGr-GP2
 
 ## 给IM用户的添加好友  {#contactsfriend}
 > 给一个用户添加好友, 好友必须是和自己在一个app下的IM用户.{owner_username} 是要添加好友的用户名, {friend_username} 是被添加的用户名
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/contacts/users/{friend_username}
 - HTTP Method : POST
@@ -875,6 +890,8 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 
 ## 解除IM用户的好友关系 {#delfriend}
 > 从IM用户的好友列表中移除一个用户
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/contacts/users/{friend_username}
 - HTTP Method : DELETE
@@ -924,6 +941,8 @@ curl -X DELETE -i -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10I
 
 ## 查看好友  {#queryfriend}
 > 查看某个IM用户的好友信息
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/contacts/users
 - HTTP Method : GET
@@ -960,6 +979,8 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 
 ## 获取IM用户的黑名单 {#blocksusers}
 > 获取一个IM用户的黑名单
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/blocks/users
 - HTTP Method : GET
@@ -992,6 +1013,8 @@ curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk
 
 ## 往IM用户的黑名单中加人 {#addblocksusers}
 > 往一个IM用户的黑名单中加人
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/blocks/users
 - HTTP Method : POST
@@ -1027,6 +1050,8 @@ curl -X POST -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBU
 
 ## 从IM用户的黑名单中减人 {#delblocksusers}
 > 从一个IM用户的黑名单中减人
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/blocks/users/{blocked_username}
 - HTTP Method : DELETE
@@ -1069,8 +1094,8 @@ curl -X DELETE -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBo
 
 ## 查看用户在线状态 {#status}
 > 查看一个用户的在线状态
-
-> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{username}/status
 - HTTP Method : GET
@@ -1082,7 +1107,7 @@ curl -X DELETE -H 'Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBo
 404 （此用户不存在） <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
 
 #### curl示例：
-	
+
 <pre class="hll"><code class="language-java">
 curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-GwPsKwj_TruuxZfFSC2eIQ" "https://a1.easemob.com/easemob-demo/chatdemoui/users/zw123/status"
 </code></pre>
@@ -1109,6 +1134,8 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
 
 ## 查询离线消息数 {#msgcount}
 > 获取一个IM用户的离线消息数
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{owner_username}/offline_msg_count
 - HTTP Method : GET
@@ -1143,6 +1170,8 @@ curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk
 
 ## 查询某条离线消息状态 {#offlineMsgStatus}
 > 通过离线消息的id查看用户的该条离线消息状态
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{username}/offline_msg_status/{msg_id}
 - HTTP Method : GET
@@ -1177,6 +1206,8 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
 
 ## 用户账号禁用 {#deactivate}
 > 禁用某个IM用户的账号，禁用后该用户不可登录，下次解禁后该账户恢复正常使用。
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{username}/deactivate
 - HTTP Method : POST
@@ -1217,6 +1248,8 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
 
 ## 用户账号解禁 {#activate}
 > 解除对某个IM用户账号的禁用，解禁后用户恢复正常使用。
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{username}/activate
 - HTTP Method : POST

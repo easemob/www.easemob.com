@@ -15,7 +15,7 @@ sidebar: restsidebar
 
 > 给一个或者多个用户, 或者一个或者多个群组发送消息, 并且通过可选的 _from_ 字段让接收方看到发送方是不同的人,同时, 支持扩展字段, 通过 _ext_ 属性, app可以发送自己专属的消息结构.
 
-> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/messages
 - Request Method : POST
@@ -34,7 +34,7 @@ sidebar: restsidebar
                                    // 数组元素是groupid
     "msg" : {
         "type" : "txt",
-        "msg" : "hello from rest" //消息内容，参考[聊天记录](http://developer.easemob.com/docs/emchat/rest/chatmessage.html)里的bodies内容
+        "msg" : "hello from rest" //消息内容，参考[聊天记录](http://www.easemob.com/docs/rest/chatmessage/)里的bodies内容
         },
     "from" : "jma2", //表示这个消息是谁发出来的, 可以没有这个属性, 那么就会显示是admin, 如果有的话, 则会显示是这个用户发出的    
     "ext" : { //扩展属性, 由app自己定义.可以没有这个字段，但是如果有，值不能是“ext:null“这种形式，否则出错
@@ -76,8 +76,8 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
 ## 发送图片消息 {#sendimgmsg}
 
 > 给一个或者多个用户, 或者一个或者多个群组发送消息, 并且通过可选的 _from_ 字段让接收方看到发送方是不同的人,同时, 支持扩展字段, 通过 _ext_ 属性, app可以发送自己专属的消息结构.
-
-> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/messages
 - Request Method : POST
@@ -136,8 +136,8 @@ curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H '
 ##  发送语音消息  {#sendvoicemsg}
 
 > 发送语音文件，需要先上传语音文件，然后再发送此消息。（url中的uuid和secret可以从上传后的response获取）
-
-> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**。
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/messages
 - Request Method : POST
@@ -200,8 +200,8 @@ curl -X POST -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcNq-
 ## 发送视频消息  {#sendvideomsg}
 
 > 发送视频消息，需要先上传视频文件和视频缩略图文件，然后再发送此消息。（url中的uuid和secret可以从上传后的response获取）
-
-> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/messages
 - Request Method : POST
@@ -265,7 +265,7 @@ curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages' -H 'Au
 
 >透传消息：不会在客户端提示（铃声，震动，通知栏等），但可以在客户端监听到的消息推送，具体功能可以根据自身自定义
 
-> **为保证接口调用安全性，该接口有限流控制。同一个IP地址每秒钟最多可以调用30次。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/messages
 - Request Method : POST

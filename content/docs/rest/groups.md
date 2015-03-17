@@ -29,6 +29,7 @@ sidebar: restsidebar
 
 
 ## 获取app中所有的群组 {#getallgroups}
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/chatgroups
 - HTTP Method : GET
@@ -78,6 +79,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 
 
 ## 获取一个或者多个群组的详情 {#getgroups}
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/chatgroups/{group_id1},{group_id2}
 - HTTP Method : GET
@@ -140,6 +142,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 </code></pre>
 
 ## 创建一个群组 {#create}
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/chatgroups
 - HTTP Method : POST
@@ -153,7 +156,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
     "desc":"server create group", //群组描述, 此属性为必须的
     "public":true, //是否是公开群, 此属性为必须的
     "maxusers":300, //群组成员最大数(包括群主), 值为数值类型,默认值200,此属性为可选的
-    "approval":true, //加入公开群是否需要批准, 没有这个属性的话默认是true（不需要群主批准，直接加入）, 此属性为可选的
+    "approval":true, //加入公开群是否需要批准, 默认值是true（加群需要群主批准）, 此属性为可选的
     "owner":"jma1", //群组的管理员, 此属性为必须的
     "members":["jma2","jma3"] //群组成员,此属性为可选的,但是如果加了此项,数组元素至少一个（注：群主jma1不需要写入到members里面）
 }
@@ -189,7 +192,9 @@ curl -X POST 'https://a1.easemob.com/easemob-demo/chatdemoui/chatgroups' -H 'Aut
 
 
 ## 修改群组信息 {#update}
-修改成功的数据行会返回true,失败为false. 请求body只接收groupname，description，maxusers　三个属性，传其他字段会被忽略．
+> 修改成功的数据行会返回true,失败为false. 请求body只接收groupname，description，maxusers　三个属性，传其他字段会被忽略．
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/chatgroups/{group_id}
 - HTTP Method : PUT
@@ -236,6 +241,7 @@ curl -X PUT 'https://a1.easemob.com/easemob-demo/chatdemoui/chatgroups/141295743
 
 
 ## 删除群组 {#delete}
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/chatgroups/{group_id}
 - HTTP Method : DELETE
@@ -274,6 +280,7 @@ curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatgroups/141152
 
 
 ## 获取群组中的所有成员  {#users}
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/chatgroups/{group_id}/users
 - HTTP Method : GET 
@@ -314,6 +321,8 @@ curl -X GET 'https://a1.easemob.com/easemob-demo/chatdemoui/chatgroups/141181601
 
 ## 群组加人[单个] {#addmember}
 > 一次给群添加一个成员
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/chatgroups/{group_id}/users/{username}
 - HTTP Method :  POST 
@@ -354,6 +363,8 @@ curl -X POST 'https://a1.easemob.com/easemob-demo/chatdemoui/chatgroups/14118160
 
 ##  群组加人[批量]  {#addmemberbatch}
 > 一次添加给群添加一个及以上数量的成员。
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/chatgroups/{chatgroupid}/users
 - HTTP Method : POST
@@ -393,6 +404,8 @@ curl -X  POST -H 'Authorization: Bearer YWMtF4ZxXlLmEeS7kWnCMObSnQAAAUo-7HZU-bP7
 
 ## 群组减人 {#deletemember}
 > 从群中移除某个成员。
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/chatgroups/{group_id}/users/{username}
 - HTTP Method : DELETE 
@@ -433,6 +446,7 @@ curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatgroups/141181
 
 
 ##  获取一个用户参与的所有群组  {#joinedchatgroups}
+> **接口限流说明: 同一个IP每秒钟最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/users/{username}/joined_chatgroups
 - HTTP Method : GET

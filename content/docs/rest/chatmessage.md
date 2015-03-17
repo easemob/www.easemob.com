@@ -126,6 +126,7 @@ sidebar: restsidebar
 > 以下所有API均需要企业管理员或app管理员权限才能访问。
 
 ### 取聊天记录
+> **接口限流说明: 同一个IP每秒最多可调用1次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 - Path : /{org_name}/{app_name}/chatmessages
 - HTTP Method : GET
@@ -133,7 +134,6 @@ sidebar: restsidebar
 - Request Headers :  {“Content-Type”:”application/json”,”Authorization”:”Bearer ${token}”}
 - Response Body ： 聊天记录(json),默认返回10条记录
 - 可能的错误码： <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
-- **此接口限流是最多每秒钟请求一次。如果被限流，会返回503**
 
 
 <pre class="hll"><code class="language-java">

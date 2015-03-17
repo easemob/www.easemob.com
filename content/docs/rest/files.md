@@ -16,6 +16,8 @@ sidebar: restsidebar
 #### 上传语音图片 {#upload}
 
 > **注意，上传文件大小不能超过10M,超过会上传失败**
+> 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 > 所需要的 HTTP Header:
 * Authorization -- 获取到的token
@@ -69,11 +71,14 @@ curl --verbose --header "Authorization: Bearer YWMtz1hFWOZpEeOPpcmw1FB0RwAAAUZnA
 
 这里需要注意的就是, 需要在http header中带上上面返回的 share-secret 和当前登陆用户的token才能够下载, 同时注意header中执行的accept的值需要设置成 **application/octet-stream**
 
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
+
 <pre class="hll"><code class="language-java">
 curl -O -H "share-secret: DRGM8OZrEeO1vafuJSo2IjHBeKlIhDp0GCnFu54xOF3M6KLr" --header "Authorization: Bearer YWMtz1hFWOZpEeOPpcmw1FB0RwAAAUZnAv0D7y9-i4c9_c4rcx1qJDduwylRe7Y" -H "Accept: application/octet-stream" http://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/0c0f5f3a-e66b-11e3-8863-f1c202c2b3ae
 </code></pre>
 
 ### 下载缩略图 {#thumbinal}  
+> **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
 环信支持在服务器端自动的创建图片的缩略图, 可以先下载缩略图, 当用户有需求的时候, 再下载大图
 
