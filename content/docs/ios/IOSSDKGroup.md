@@ -4,7 +4,7 @@ sidebar: iossidebar
 secondnavios: true
 ---
 
-# 群组操作
+# 群组管理
 
 群组分为两大类，四小类
 
