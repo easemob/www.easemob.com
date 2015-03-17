@@ -49,7 +49,7 @@ SDK中对应头文件 EMErrorDefs.h
 |:------------------------------------- | --------------------------:|
 | EMErrorCallChatterOffline             | 对方不在线                            |
 | EMErrorCallInvalidSessionId           | 无效的通话Id                          |
-| EMErrorIsExist                        | 已存在                               |
+| EMErrorExisted                        | 已存在                               |
 | EMErrorInitFailure                    | 初始化失败                            |
 | EMErrorNetworkNotConnected            | 网络未连接                            |
 | EMErrorFailure                        | 失败                                 |
