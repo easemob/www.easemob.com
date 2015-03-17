@@ -9,7 +9,7 @@ secondnavios: true
 SDK中对应头文件 EMErrorDefs.h
 
 |               定义                     |           描述            |
-|:------------------------------------- | -------------------------:|
+|:------------------------------------- | -------------------------|
 | EMErrorNotFound                       | 不存在                     |
 | EMErrorServerMaxCountExceeded         | 数量达到上限                |
 | EMErrorConfigInvalidAppKey            | 无效的appKey               |
@@ -22,7 +22,6 @@ SDK中对应头文件 EMErrorDefs.h
 | EMErrorServerInsufficientPrivilege    | 所执行操作的权限不够          |
 | EMErrorServerOccupantNotExist         | 操作群组时, 人员不在此群组     |
 | EMErrorServerTooManyOperations        | 短时间内多次发起同一请求       |
-|:------------------------------------- | --------------------------:|
 | EMErrorAttachmentNotFound             | 本地未找着附件               |
 | EMErrorAttachmentDamaged              | 文件被损坏或被修改了          |
 | EMErrorAttachmentUploadFailure        | 文件上传失败                 |
@@ -46,7 +45,6 @@ SDK中对应头文件 EMErrorDefs.h
 | EMErrorRemoveBuddyFromRosterFailure   | 删除好友失败                          |
 | EMErrorAddBuddyToRosterFailure        | 添加好友失败                          |
 | EMErrorHasFetchedBuddyList            | 获取好友列表成功后, 再次发起好友列表      |
-|:------------------------------------- | --------------------------:|
 | EMErrorCallChatterOffline             | 对方不在线                            |
 | EMErrorCallInvalidSessionId           | 无效的通话Id                          |
 | EMErrorExisted                        | 已存在                               |
