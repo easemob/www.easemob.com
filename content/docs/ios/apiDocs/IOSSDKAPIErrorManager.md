@@ -54,5 +54,4 @@ SDK中对应头文件 EMErrorDefs.h
 | EMErrorNetworkNotConnected            | 网络未连接                            |
 | EMErrorFailure                        | 失败                                 |
 | EMErrorFeatureNotImplemented          | 还未实现的功能                         |
-| EMErrorReachLimit                     | 达到上限                              |
 | EMErrorRequestRefused                 | 申请失效                              |
