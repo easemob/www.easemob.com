@@ -1020,10 +1020,7 @@ if (!error) {
 
 见 [apns离线推送](http://www.easemob.com/docs/ios/IOSSDKApns) 之 [群组apns操作](http://www.easemob.com/docs/ios/IOSSDKApns/#apnsGroup)
 
-
-## 获取群组列表 {#fetchGroupList}
-
-### * 获取与登录者相关的群组（创建的和加入的）
+## 获取与登录者相关的群组（创建的和加入的） {#fetchMyGroupList}
 
 查看所有当前登录账号所在群组，提供了五种方法
 
@@ -1119,7 +1116,7 @@ NSArray *groupList = [[EaseMob sharedInstance].chatManager loadAllMyGroupsFromDa
 NSArray *groupList = [[EaseMob sharedInstance].chatManager groupList];
 </code></pre>
 
-### * 获取公开群组
+## 获取公开群组 {#fetchPublicGroupList}
 
     此操作不推荐使用，公开群太多，我们正在优化方法。
 
