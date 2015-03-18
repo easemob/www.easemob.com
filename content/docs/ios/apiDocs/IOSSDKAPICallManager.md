@@ -8,28 +8,20 @@ secondnavios: true
 
 ## call manager {#manager}
 
-### ICallManager.h
+* ICallManager.h: EMCallManager实现的接口类的集合。不同模块提供了不同的接口，不同模块的接口在[internal](http://www.easemob.com/docs/ios/apiDocs/IOSSDKAPICallManager/#internal)中有详细介绍；
 
-EMCallManager需要实现的协议的集合。不同模块需要实现不同的协议，不同模块的协议在[internal](http://www.easemob.com/docs/ios/apiDocs/IOSSDKAPICallManager/#internal)中有详细介绍，
+* EMCallServiceDefs.h: 关于call manager的枚举类型的定义。
 
 ## delagates {#delegates}
 
-### EMCallManagerDelegate.h:
+* [EMCallManagerDelegate.h](): CallManager的所有delegate的集合，不同模块有不同的回调接口类；
 
-CallManager的所有delegate的集合，不同模块有不同的回调接口类；
-
-### EMCallManagerCallDelegate.h
-
-实时语音模块的回调接口类
+* [EMCallManagerCallDelegate.h](): 实时语音模块的回调接口类。
 
 ## internal {#internal}
 
-### ICallManagerCall.h
-
-实时语音模块的接口
+* [ICallManagerCall.h](): 实时语音模块的接口。
 
 ## type {#type}
 
-### EMCallSession.h
-
-实时语音实例的模型类。
+* [EMCallSession.h](): 实时语音实例的模型类。
