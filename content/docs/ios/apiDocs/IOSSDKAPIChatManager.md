@@ -20,9 +20,9 @@ secondnavios: true
 
 * [EMChatManagerEncryptionDelegate.h](): 加密相关的回调类；
 
-* [EMChatManagerGroupDelegate.h](): 群组管理相关的额回调类；
+* [EMChatManagerGroupDelegate.h](): 群组管理相关的回调类；
 
-* [EMChatManagerLoginDelegate.h](): 登录、退出、注册相关的额回调类；
+* [EMChatManagerLoginDelegate.h](): 登录、退出、注册相关的回调类；
 
 * [EMChatManagerMediaDelegate.h](): 多媒体相关的回调类；
 
