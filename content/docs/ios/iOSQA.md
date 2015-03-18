@@ -28,7 +28,7 @@ Q: SDK是否支持64位？
 A: 支持
 
 
-## 	无法收到消息 {#chat}
+##		无法收到消息 {#chat}
 
 Q:  无法收到聊天消息
 
@@ -36,50 +36,45 @@ A:	接收聊天等回调，要注意以下几步骤：
 
 1、声明实现IChatManagerDelegate，如：
 	
-<pre class="hll"><code class="language-java">
-@interface EaseMobSDKAccountManager ()<IChatManagerDelegate>
-</code></pre>
+	@interface EaseMobSDKAccountManager ()<IChatManagerDelegate>
 	
 2、注册当前类接收回调
 
-<pre class="hll"><code class="language-java">
-[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-</code></pre>
+
+	[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+	
 	
 3、实现对应回调方法，如：
 
-<pre class="hll"><code class="language-java">
-// 收消息的回调
--(void)didReceiveMessage:(EMMessage *)message{
-
-}
-</code></pre>
+	// 收消息的回调
+	-(void)didReceiveMessage:(EMMessage *)message{
+	
+	}
+	
 	
 Q:  一条消息收到多次
 
 A:	一般是由本类多次注册了回调导致，请确定以下方法只执行了一次
 
-<pre class="hll"><code class="language-java">
-[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-</code></pre>
+	[[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
 	
 并且在类析构时注销回调
 
-<pre class="hll"><code class="language-java">
--(void)dealloc{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-</code></pre>
+
+	-(void)dealloc{
+    	[[EaseMob sharedInstance].chatManager removeDelegate:self];
+	}
 
 
-## 无法收到加好友请求 {#addBuddy}
+##		无法收到加好友请求 {#addBuddy}
 
 Q:	无法收到好友请求
 
 A: 请确定您接受好友请求的类是否初始化，并声明了IChatManagerDelegate，实现了注册回调和回调方法。
 
 
-## 	无法收到推送	{#notification}
+##		无法收到推送	{#notification}
+
 
 Q:	APP后台时无法收到推送。
 
@@ -103,7 +98,9 @@ Q:	无法自动登录
 
 A:	[iOS设置自动登录](http://www.easemob.com/docs/ios/IOSSDKInit/#login)。
 
-## 	App启动时无法获取历史会话	{#getConversationList}
+
+
+##		App启动时无法获取历史会话	{#getConversationList}
 
 Q:	APP再次启动，登录成功前无法获取会话列表。
 
