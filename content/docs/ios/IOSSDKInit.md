@@ -5,7 +5,7 @@ secondnavios: true
 ---
 
 
-# SDK基础功能集成 {#iOS}
+# 集成SDK基础功能 {#iOS}
 	在您阅读此文档时，我们假定您已经具备了基础的 iOS 应用开发经验，并能够理解相关基础概念。
 	
 ## SDK目录讲解 {#explainSdk}
