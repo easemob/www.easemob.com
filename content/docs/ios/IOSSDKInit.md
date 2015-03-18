@@ -25,63 +25,14 @@ sdk文件夹中有三个子文件夹:include、lib、resources，请不要擅自
 * **ChatService** 包含聊天相关的接口，比如注册、登录、退出、单聊、群聊、群组等
 * **Utility** 包含DeviceManager和ErrorManager。DeviceManager硬件相关接口，ErrorManager错误码定义
 
+具体接口讲解请转到[接口说明](http://www.easemob.com/docs/ios/apiDocs/IOSSDKAPIChatManager/)
+
+
 > 注：
 > 
 >1. include包含5个子文件夹：CallService、ChatService、EaseMobClientSDK、EaseMobClientSDKLite、Utility。如果无需实时语音功能，将CallService和EaseMobClientSDK删掉即可。
 >
 >2. 类似EM@Manager命名格式的文件夹的内部结构都是相似的。delegates文件夹包含各种代理接口，internal文件夹包含各种协议的声明，types文件夹包含各种实例的声明。
-
-#### IChatManager internal 
-* IChatManager.h 包含了SDK中**所有ChatManager相关的方法**
-* IChatManagerBase.h IChatManager中所有internal的Base类（不需要关注）
-* IChatManagerBuddy.h  提供了**好友管理**的所有方法
-* IChatManagerChat.h   提供了**消息处理**的所有方法
-* IChatManagerConversation.h  提供了**会话管理**的所有方法
-* IChatManagerEncryption.h   提供了**消息加密相关**所有属性
-* IChatManagerGroup.h   提供了**群组管理**的所有方法
-* IChatManagerLogin.h   提供了**登录注册**的所有方法
-* IChatManagerMedia.h   提供了**媒体消息**的所有方法
-* IChatManagerPushNotification.h   提供了**推送管理**的所有方法
-* IChatManagerSettingOptions.h   提供了**设置**的所有方法
-* IChatManagerUtil.h SDK的工具类，  提供了SDK中**附件下载**等方法
-
-__以上所有方法，都可以在IChatManager.h中找到__
-
-#### IChatManager delegates
-* IChatManagerDelegate.h	实现后可获得**所有IChatManager回调**
-* EMChatManagerDelegate.h	实现后可获得**所有IChatManager回调**
-* EMChatManagerDelegateBase.h  所有IChatManager回调的BaseDelegate(不需要关注)
-* EMChatManagerBuddyDelegate.h	实现后可获得所有**好友相关回调**
-* EMChatManagerChatDelegate.h	实现后可获得所有**聊天相关回调**
-* EMChatManagerEncryptionDelegate.h 实现后可获得所有**加密回调**
-* EMChatManagerGroupDelegate.h 实现后可获得所有**群组相关回调**
-* EMChatManagerLoginDelegate.h 实现后可获得所有**注册登录相关回调**
-* EMChatManagerMediaDelegate.h 实现后可获得所有**媒体相关回调**
-* EMChatManagerPushNotificationDelegate.h 实现后可获得所有**推送相关回调**
-* EMChatManagerUtilDelegate.h 实现后可获的所有**附件下载相关回调**
-
-__以上所有回调都可以通过IChatManagerDelegate.h找到__
-
-#### IDeviceManager internal
-* IDeviceManager.h 包含了Device相关的**所有方法**
-* IDeviceManagerBase.h EMDeviceManager中，所有internal的Base类（不需要关注）
-* IDeviceManagerCamera.h 包含了**检测相机**等方法
-* IDeviceManagerDevice.h 包含了**device**的方法
-* IDeviceManagerMedia.h 包含了**媒体管理**等方法
-* IDeviceManagerProximitySensor.h 包含了**传感器管理**等方法
-
-__以上所有方法，都可以在IDeviceManager.h中找到__
-
-#### IDeviceManager delegates
-
-*	IDeviceManagerDelegate.h	实现后可以收到**所有IDeviceManager回调**
-* 	EMDeviceManagerDelegate.h 	实现后可以收到**所有IDeviceManager回调**
-* 	EMDeviceManagerDelegateBase.h 		所有EMDeviceManager回调的BaseDelegate(不需要关注)
-* 	EMDeviceManagerMediaDelegate.h 		实现后可以收到**媒体相关**回调
-* 	EMDeviceManagerNetworkDelegate.h 	实现后可以收到**网络变化**回调
-* 	EMDeviceManagerProximitySensorDelegate.h 实现后可以收到**传感器变化**回调
-
-__以上所有回调，都可以通过实现IDeviceManagerDelegate.h找到__
 
 
 ## 初始化SDK {#initSdk} 
