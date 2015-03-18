@@ -238,7 +238,7 @@ secondnavios: true
 </code></pre>
 
 
-## 解析消息自定义属性 {#resolveext}
+## 解析消息扩展属性 {#resolveext}
 
 <pre class="hll"><code class="language-java">
 
