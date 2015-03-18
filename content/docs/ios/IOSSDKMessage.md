@@ -146,7 +146,7 @@ EMMessage *message = [[EMMessage alloc] initWithReceiver:@"6001" bodies:@[body]]
 message.isGroup = NO; // 设置是否是群聊
 </code></pre>
 
-## 自定义扩展消息 {#ext}
+## 自定义消息扩展 {#ext}
 
 > 有时候需要在消息中携带一些扩展内容，用来实现特殊需求，比如阅后即焚等。EMMessage提供了ext属性，撰文用来存放扩展内容。**ext属性是NSDictionary类型，key和value必须是基本类型，且不能是json。**
 >
