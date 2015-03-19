@@ -260,7 +260,7 @@ secondnavios: true
 
     SDK接收到消息后，会默认下载：图片消息的缩略图，语音消息的语音，视频消息的视频第一帧。
 
-**请先判断你要下载附件没有下载成功之后，在调用以下下载方法，否则SDK下载方法会再次从服务器上获取附件。**
+** 请先判断你要下载附件没有下载成功之后，在调用以下下载方法，否则SDK下载方法会再次从服务器上获取附件。**
 
 SDK中提供了三种方法
 
@@ -287,52 +287,18 @@ if (!error) {
 
 3、IChatManagerDelegate异步方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
+// 当收到消息时，SDK会自动调用下载缩略图。此处在这里调用只是为了演示用。
+[[EaseMob sharedInstance].chatManager asyncFetchMessageThumbnail:message progress:nil];
+            
+</code></pre>
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+回调监听
 
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-}
-
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
-// 收到消息回调
--(void)didReceiveMessage:(EMMessage *)message
-{
-    id&lt;IEMMessageBody&gt; body = message.messageBodies.firstObject;
-    switch (body.messageBodyType) {
-        case eMessageBodyType_Image:
-        case eMessageBodyType_Video:
-        {
-            // 当收到消息时，SDK会自动调用下载缩略图。此处在这里调用只是为了演示用。
-            [[EaseMob sharedInstance].chatManager asyncFetchMessageThumbnail:message progress:nil];
-        }
-        break;
-
-        default:
-        break;
-    }
-}
+<pre class="hll"><code class="language-java">
 
 // 当收到图片或视频时，SDK会自动下载缩略图，并回调该方法，如果下载失败，可以通过
 // asyncFetchMessageThumbnail:progress 方法主动获取
@@ -342,20 +308,6 @@ if (!error) {
     }
 }
 
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
 </code></pre>
 
 ## 下载消息中的原始附件 {#downloadmessage}
@@ -384,74 +336,28 @@ if (!error) {
 
 3、IChatManagerDelegate异步方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
+// 当message中带有附件的时候执行下载(如图片、音频、视频、文件)
+[[EaseMob sharedInstance].chatManager asyncFetchMessage:message progress:nil];
+            
+</code></pre>
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+回调监听
 
-@end
+<pre class="hll"><code class="language-java">
 
-@implementation ViewController
+/*!
+ @method
+ @brief 收取消息体对象后的回调
+ @discussion 当获取完消息体对象后,此回调会被触发;如果此消息体所在的消息对象在服务器端已被加密,那么下载完成后会自动进行解压
+ @param aMessage 要获取的消息对象
+ @param error        错误信息
+ */
+- (void)didFetchMessage:(EMMessage *)aMessage error:(EMError *)error;
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-}
-
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
-// 收到消息回调
--(void)didReceiveMessage:(EMMessage *)message{
-    id&lt;IEMMessageBody&gt; body = message.messageBodies.firstObject;
-    switch (body.messageBodyType) {
-        case eMessageBodyType_Image:
-        case eMessageBodyType_Video:
-        case eMessageBodyType_Voice:
-        case eMessageBodyType_File:
-        {
-            // 当message中带有附件的时候执行下载(如图片、音频、视频、文件)
-            [[EaseMob sharedInstance].chatManager asyncFetchMessage:message progress:nil];
-        }
-        break;
-
-        default:
-        break;
-    }
-}
-
-// 附件下载结束回调
--(void)didFetchMessage:(EMMessage *)aMessage error:(EMError *)error{
-    if (!error) {
-        NSLog(@"下载成功，下载后的message是 -- %@",aMessage);
-    }
-}
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
 </code></pre>
 
 ## 消息已送达回执 {#deliveryack}
@@ -470,52 +376,16 @@ if (!error) {
 SDK提供了已送达回执，当对方收到您的消息后，您会收到以下回调
 
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
+/*!
+ @method
+ @brief 收到"已送达回执"时的回调方法
+ @discussion 发送方收到接收方发送的一个收到消息的回执, 但不意味着接收方已阅读了该消息
+ @param resp 收到的"已送达回执"对象, 包括 from, to, chatId等
+ @result
+ */
+- (void)didReceiveHasDeliveredResponse:(EMReceipt *)resp;
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-}
-
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
-//  已送达回执
--(void)didReceiveHasDeliveredResponse:(EMReceipt *)resp{
-    NSLog(@"收到消息送达回执，消息接收人是 -- %@,消息id是 -- %@",resp.from,resp.chatId);
-}
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
 </code></pre>
 
 ## 消息已读回执 {#hasreadresponse}
@@ -525,101 +395,23 @@ SDK提供了已送达回执，当对方收到您的消息后，您会收到以�
 ### * 发送已读回执
 
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
-
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-}
-
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
--(void)didReceiveMessage:(EMMessage *)message{
-    // 发送已读回执.在这里写只是为了演示发送，在app中具体在哪里发送需要开发者自己决定。
-    [[EaseMob sharedInstance].chatManager sendHasReadResponseForMessage:message];
-}
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+// 发送已读回执.在这里写只是为了演示发送，在app中具体在哪里发送需要开发者自己决定。
+[[EaseMob sharedInstance].chatManager sendHasReadResponseForMessage:message];
+    
 </code></pre>
 
 ### * 接收已读回执
 
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
-
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-}
-
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
--(void)didReceiveHasReadResponse:(EMReceipt *)resp{
-    NSLog(@"收到已读回执，回执发送方是 -- %@, messageid是 -- %@",resp.from,resp.chatId);
-}
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+/*!
+ @method
+ @brief 收到"已读回执"时的回调方法
+ @discussion 发送方收到接收方发送的一个收到消息的回执, 意味着接收方已阅读了该消息
+ @param resp 收到的"已读回执"对象, 包括 from, to, chatId等
+ @result
+ */
+- (void)didReceiveHasReadResponse:(EMReceipt *)resp;
 
 </code></pre>
