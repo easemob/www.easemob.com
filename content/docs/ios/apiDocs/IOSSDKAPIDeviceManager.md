@@ -14,20 +14,20 @@ secondnavios: true
 
 ## delagates {#delegates}
 
-* [EMDeviceManagerDelegate.h](): DeviceManager的所有delegate的集合，不同模块有不同的回调接口类；
+* [EMDeviceManagerDelegate.h]((http://www.easemob.com/apidoc/ios/chat/EMDeviceManagerDelegate_h/index.html): DeviceManager的所有delegate的集合，不同模块有不同的回调接口类；
 
-* [EMDeviceManagerMediaDelegate.h](): 录制和播放音频相关的回调类；
+* [EMDeviceManagerMediaDelegate.h]((http://www.easemob.com/apidoc/ios/chat/EMDeviceManagerMediaDelegate_h/index.html): 录制和播放音频相关的回调类；
 
-* [EMDeviceManagerNetworkDelegate.h](): 网络相关的回调类；
+* [EMDeviceManagerNetworkDelegate.h]((http://www.easemob.com/apidoc/ios/chat/EMDeviceManagerNetworkDelegate_h/index.html): 网络相关的回调类；
 
-* [EMDeviceManagerProximitySensorDelegate.h](): 距离传感器相关的回调类。
+* [EMDeviceManagerProximitySensorDelegate.h]((http://www.easemob.com/apidoc/ios/chat/EMDeviceManagerProximitySensorDelegate_h/index.html): 距离传感器相关的回调类。
 
 ## internal {#internal}
 
-* [IDeviceManagerCamera.h](): 摄像头相关的接口类；
+* [IDeviceManagerCamera.h]((http://www.easemob.com/apidoc/ios/chat/IDeviceManagerCamera_h/index.html): 摄像头相关的接口类；
 
-* [IDeviceManagerDevice.h](): 设备信息相关的接口类；
+* [IDeviceManagerDevice.h]((http://www.easemob.com/apidoc/ios/chat/IDeviceManagerDevice_h/index.html): 设备信息相关的接口类；
 
-* [IDeviceManagerMedia.h](): 录制和播放音频相关的接口类；
+* [IDeviceManagerMedia.h]((http://www.easemob.com/apidoc/ios/chat/IDeviceManagerMedia_h/index.html): 录制和播放音频相关的接口类；
 
-* [IDeviceManagerProximitySensor.h](): 距离传感器相关的接口类
+* [IDeviceManagerProximitySensor.h]((http://www.easemob.com/apidoc/ios/chat/IDeviceManagerProximitySensor_h/index.html): 距离传感器相关的接口类
