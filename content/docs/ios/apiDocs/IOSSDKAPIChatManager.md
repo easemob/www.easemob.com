@@ -16,19 +16,19 @@ secondnavios: true
 
 * [EMChatManagerBuddyDelegate.h](http://www.easemob.com/apidoc/ios/chat/EMChatManagerBuddyDelegate_h/index.html): 好友相关的回调类；
 
-* [EMChatManagerChatDelegate.h](): 发送和接受消息相关的回调类；
+* [EMChatManagerChatDelegate.h](http://www.easemob.com/apidoc/ios/chat/EMChatManagerChatDelegate_h/index.html): 发送和接受消息相关的回调类；
 
-* [EMChatManagerEncryptionDelegate.h](): 加密相关的回调类；
+* [EMChatManagerEncryptionDelegate.h](http://www.easemob.com/apidoc/ios/chat/EMChatManagerEncryptionDelegate_h/index.html): 加密相关的回调类；
 
-* [EMChatManagerGroupDelegate.h](): 群组管理相关的回调类；
+* [EMChatManagerGroupDelegate.h](http://www.easemob.com/apidoc/ios/chat/EMChatManagerGroupDelegate_h/index.html): 群组管理相关的回调类；
 
-* [EMChatManagerLoginDelegate.h](): 登录、退出、注册相关的回调类；
+* [EMChatManagerLoginDelegate.h](http://www.easemob.com/apidoc/ios/chat/EMChatManagerLoginDelegate_h/index.html): 登录、退出、注册相关的回调类；
 
-* [EMChatManagerMediaDelegate.h](): 多媒体相关的回调类；
+* [EMChatManagerMediaDelegate.h](http://www.easemob.com/apidoc/ios/chat/EMChatManagerMediaDelegate_h/index.html): 多媒体相关的回调类；
 
-* [EMChatManagerPushNotificationDelegate.h](): 离线推送相关的回调类；
+* [EMChatManagerPushNotificationDelegate.h](http://www.easemob.com/apidoc/ios/chat/EMChatManagerPushNotificationDelegate_h/index.html): 离线推送相关的回调类；
 
-* [EMChatManagerUtilDelegate.h](): 管理消息中中附件相关的回调类。
+* [EMChatManagerUtilDelegate.h](http://www.easemob.com/apidoc/ios/chat/EMChatManagerUtilDelegate_h/index.html): 管理消息中中附件相关的回调类。
 
 ## internal {#internal}
 
