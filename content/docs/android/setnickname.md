@@ -4,7 +4,7 @@ sidebar: androidsidebar
 secondnavandroid: true
 ---
 
-# 设置当前登录用户的昵称
+# 设置当前登录用户的推送昵称
 
 更新当前用户的昵称(nickname)
 

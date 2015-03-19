@@ -6,26 +6,51 @@ secondnavandroid: true
 
 ## 集成环信配置指导(Android)
 
-### 添加环信的类库
+###下载SDK {#downloadSdk}
 
-在自行开发的应用中，集成环信聊天需要把libs文件夹下的`easemobchat_2.1.5.jar`和`armeabi目录`拷贝到你的项目的libs文件夹底下，如果不需要语音和视频通话功能，拷贝`libs.without.audio`的jar文件即可。jar名字的后面的2.1.5可能会跟你下载的不一致，这是版本号，以实际为准。如果集成过2.0.4之前sdk的开发者，集成此sdk时，需要把httpmime这个jar从libs底下移除。
+到[环信官网](http://www.easemob.com/sdk/)下载环信SDK.
 
-注：版本向下兼容
+到此您已经下载好了SDK，下面开始学习SDK的集成使用吧！
+
+
+###SDK目录讲解 {#explainSdk}
+
+从官网上下载下来的包，解压后内容如下：
+
+ ![alt text](/demo_dirs_new1.jpg "demo") 
+
+在这里主要介绍后面四个文件夹内容：
+
+doc文件夹：SDK相关API文档
+
+examples文件夹：ChatDemoUI(为开发者能够更深入理解SDK而提供的一个demo)
+
+libs文件夹：拥有实时语音，实时视频功能的SDK（大小在1.34M左右）包和.so文件
+
+libs.without.audio文件夹：无实时语音，实时视频功能的SDK包（大小在900多K）
+
+
+### 配置工程	{#projectSetting}
+
+####1.导入SDK
+
+在自行开发的应用中，集成环信聊天需要把libs文件夹下的`easemobchat_2.1.6.jar`和`armeabi目录`导入到你的项目的libs文件夹底下，如果不需要语音和视频通话功能，导入`libs.without.audio`下的jar文件即可。jar名字的后面的2.1.6可能会跟你下载的不一致，这是版本号，以实际为准。如果集成过2.0.4之前sdk的开发者，集成此sdk时，需要把httpmime这个jar从libs底下移除。
+
+<b><font color="#b22222" size="4">注：SDK版本向下兼容</font></b>
 
  ![alt text](/demo_dirs_new1.jpg "demo") 
 
  ![alt text](/project_libs1.jpg "demo")
  
-####2.1.5之前的jar包和.so文件
+<b><font color="#b22222" size="4">2.1.5之前的jar包和.so文件</font></b>
  
  ![alt text](/project_libs2.png "demo")
- 
-####2.1.5之后的jar包和.so文件（里面包含了语音和视频通过功能）
 
-### 添加环信的配置信息
+<b><font color="#b22222" size="4">2.1.5之后的jar包和.so文件（里面包含了语音和视频通话功能）</font></b>
+
+#### 2.配置信息
 
 在清单文件AndroidManifest.xml里加入以下权限，以及写上你注册的appkey
-
 
 权限配置：
 
@@ -33,10 +58,9 @@ secondnavandroid: true
     <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="Your Package"
         android:versionCode="100"
-        android:versionName="1.0.0"
-        >
+        android:versionName="1.0.0">
   
-        <!-- Required -->
+		<!-- Required -->
         <uses-permission android:name="android.permission.VIBRATE" />
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -53,35 +77,22 @@ secondnavandroid: true
         <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
         <uses-permission android:name="android.permission.READ_PHONE_STATE" />
      
-    应用包名及appkey替换：
-     <application
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:name="Your Application">
+    	应用包名及appkey替换：
+     	<application
+	        android:icon="@drawable/ic_launcher"
+	        android:label="@string/app_name"
+	        android:name="Your Application">
       
-       <!-- Required. AppKey copied from Portal -->
-        <meta-data android:name="EASEMOB_APPKEY"  android:value="Your AppKey" />
-        <!-- Required SDK核心功能-->
-        <service android:name="com.easemob.chat.EMChatService" />
-     </application>
+       		<!-- Required. AppKey copied from Portal -->
+        	<meta-data android:name="EASEMOB_APPKEY"  android:value="Your AppKey" />
+        	<!-- Required SDK核心功能-->
+        	<service android:name="com.easemob.chat.EMChatService" />
+     	</application>
     </manifest>
 
-关于EASEMOB_APPKEY，请登录或注册[环信开发者后台](https://console.easemob.com),申请APPKEY后，进行相关配置。（测试demo中 APPKEY为*easemob-demo#chatdemo*）在开发者后台注册一个应用后得到如下信息:
+关于EASEMOB_APPKEY，详见[创建应用](http://www.easemob.com/docs/gettingstart/#section-1/createApp),申请APPKEY后，进行相关配置。（测试demo中 APPKEY为*easemob-demo#chatdemo*）
 
-
- ![alt text](/1.jpg "demo")
-
-
--
-
-
-	名词			解 释
-	org_name	企业的唯一标识,开发者在环信开发者管理后台注册账号时填写的企业ID
-	app_name	同一”企业”下”app”唯一标识,开发者在环信开发者管理后台创建应用时填写的”应用名称”
-	org_admin	开发者在环信开发者管理后台注册时填写的”用户名”.企业管理员拥有对该企业账号下所有资源的操作权限
-	appkey		一个app的唯一标识,规则是 ${org_name}#${app_name}
-
-### app打包混淆
+### app打包混淆 {#packageConfuse}
 
 在proguard文件中加入以下keep
 
@@ -94,7 +105,7 @@ secondnavandroid: true
 #-keep class org.xbill.DNS.** {*;}
 #另外，demo中发送表情的时候使用到反射，需要keep 
 SmileUtils,注意前面的包名，
-#不要SmileUtils复制到自己的项目下，keep的时候还是写的demo里的包名
+#不要SmileUtils复制到自己的项目下keep的时候还是写的demo里的包名
 -keep class com.easemob.chatuidemo.utils.SmileUtils {*;}
 
 #2.0.9后加入语音通话功能，如需使用此功能的api，加入以下keep

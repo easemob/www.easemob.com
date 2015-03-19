@@ -8,13 +8,13 @@ sidebar: gettingstartsidebar
 
 集成环信非常简单，通常只需要几小时到几天时间。集成环信所需要的步骤如下：
 
-1. 注册环信开发者账号
+1. 注册环信开发者账号并创建应用
 2. 将环信和现有APP的用户体系集成
 3. 将环信和现有APP的好友体系集成（可选）
 4. Android或iOS客户端集成
 
 
-##  注册环信开发者账号
+##  注册环信开发者账号 {#registerAccount}
 
 在环信官网上点击[注册](https://console.easemob.com/?comeFrom=easemobHome)，跳转到环信管理后台注册页面，如下图：
 
@@ -33,6 +33,8 @@ sidebar: gettingstartsidebar
 
 ![alt text](/email.png "Title")
 
+###创建应用 {#createApp}
+
 账号激活成功后，回到控制台登录页面登录到开发者后台,在我的应用中，点击创建应用按钮，如下图：
 
 ![alt text](/consolehome.png "Title")
@@ -46,6 +48,16 @@ sidebar: gettingstartsidebar
 填写好应用名称后，点确定，创建成功，系统会为你生成APPKEY以及相关配置信息，如下图：
 
 ![alt text](/appkey.png "Title")
+
+将此appkey配置到android，ios,webim上即可
+
+
+	名词			解 释
+	org_name	企业的唯一标识,开发者在环信开发者管理后台注册账号时填写的企业ID
+	app_name	同一”企业”下”app”唯一标识,开发者在环信开发者管理后台创建应用时填写的”应用名称”
+	org_admin	开发者在环信开发者管理后台注册时填写的”用户名”.企业管理员拥有对该企业账号下所有资源的操作权限
+	appkey		一个app的唯一标识,规则是 ${org_name}#${app_name}
+
 
 ###  2. 将环信和现有APP的用户体系集成
 
