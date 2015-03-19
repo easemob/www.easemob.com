@@ -3,7 +3,7 @@ title: 环信
 sidebar: iossidebar
 secondnavios: true
 ---
-# 好友关系 {#buddy}
+# 好友管理 {#buddy}
 
 > 注：环信不是好友也可以聊天，不推荐使用环信的好友机制。如果你有自己的服务器或好友关系，请自己维护好友关系。
 
@@ -48,56 +48,28 @@ if (!error) {
 
 3、IChatManagerDelegate回调方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
 
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
+// 获取好友列表
+[[EaseMob sharedInstance].chatManager asyncFetchBuddyList];
 
-#import "ViewController.h"
-#import "EaseMob.h"
+</code></pre>
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+回调监听
 
-@end
+<pre class="hll"><code class="language-java">
 
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-    // 获取好友列表
-    [[EaseMob sharedInstance].chatManager asyncFetchBuddyList];
-}
-
--(void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
--(void)didFetchedBuddyList:(NSArray *)buddyList error:(EMError *)error{
-    if (!error) {
-        NSLog(@"获取成功 -- %@",buddyList);
-    }
-}
-
-// 向SDK中注册回调
--(void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
--(void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+/*!
+ @method
+ @brief 获取好友列表成功时的回调
+ @discussion
+ @param buddyList 好友列表
+ @param error     错误信息
+ */
+- (void)didFetchedBuddyList:(NSArray *)buddyList
+                      error:(EMError *)error;
 
 </code></pre>
 
@@ -112,7 +84,7 @@ NSArray *buddyList = [[EaseMob sharedInstance].chatManager buddyList];
 </code></pre>
 
 
-## 添加好友 {#addbuddy}
+## 发送加好友申请 {#addbuddy}
 
 环信iOS SDK提供了添加好友的方法
 
@@ -128,65 +100,28 @@ if (isSuccess && !error) {
 </code></pre>
 
 
-### 1 收到好友请求 {#receiverbuddyrequest}
+## 收到加好友请求 {#receiverbuddyrequest}
 
-当您收到好友请求，如果您没有处理，则您每次登录的时候，服务器都会给你发该请求,所以，请保证您监听回调的类和您的app一直初始化，否则可能会监听不到您离线时别人给你发的好友请求。
+当您收到好友请求，如果您没有处理，则您每次登录的时候，服务器都会给你发该请求, 请确保你在登录成功之前已经注册了监听。
+
+监听回调
 
 <pre class="hll"><code class="language-java">
 
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
-
-#import "ViewController.h"
-#import "EaseMob.h"
-
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-}
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
-// 收到好友请求后回调
--(void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message{
-
-}
-
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+/*!
+ @method
+ @brief 接收到好友请求时的通知
+ @discussion
+ @param username 发起好友请求的用户username
+ @param message  收到好友请求时的say hello消息
+ */
+- (void)didReceiveBuddyRequest:(NSString *)username
+                       message:(NSString *)message;
 
 </code></pre>
 
 
-### 2 处理好友请求 {#handlebuddyrequest}
-
-#### 2.1 同意好友申请
+## 同意加好友申请 {#agreebuddyrequest} 
 
 <pre class="hll"><code class="language-java">
 
@@ -198,7 +133,7 @@ if (isSuccess && !error) {
 
 </code></pre>
 
-#### 2.2 拒绝好友申请
+##  拒绝加好友申请 {#rejectbuddyrequest} 
 
 <pre class="hll"><code class="language-java">
 
@@ -210,47 +145,19 @@ if (isSuccess && !error) {
 
 </code></pre>
 
-#### 2.3 好友申请处理结果回调 {#handlebuddyresponse}
+## 好友申请处理结果回调 {#handlebuddyresponse}
+
+监听回调
 
 <pre class="hll"><code class="language-java">
 
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
-
-#import "ViewController.h"
-#import "EaseMob.h"
-
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-}
-
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
 /*!
 @method
 @brief 好友请求被接受时的回调
 @discussion
 @param username 之前发出的好友请求被用户username接受了
 */
-- (void)didAcceptedByBuddy:(NSString *)username{
-    NSLog(@"%@同意了您的好友请求",username);
-}
+- (void)didAcceptedByBuddy:(NSString *)username;
 
 /*!
 @method
@@ -258,26 +165,9 @@ if (isSuccess && !error) {
 @discussion
 @param username 之前发出的好友请求被用户username拒绝了
 */
-- (void)didRejectedByBuddy:(NSString *)username{
-    NSLog(@"%@拒绝了您的好友请求",username);
-}
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+- (void)didRejectedByBuddy:(NSString *)username;
 
 </code></pre>
-
 
 ## 删除好友 {#removebuddy}
 
@@ -297,7 +187,7 @@ if (isSuccess && !error) {
 *	error:错误信息
 
 
-## 好友黑名单 {#blocklist}
+## 获取好友黑名单 {#blocklist}
 
 环信的黑名单体系是独立的，与好友无任何关系。也就是说，您可以将任何人加入黑名单，不论他是否与您是好友关系。同时，如果您将好友好友加入黑名单，则他仍然是您的好友，只不过同时也在黑名单中。
 
@@ -313,12 +203,9 @@ typedef enum{
 
 </code></pre>
 
-
-### 1 查询黑名单列表 {#searchblocklist}
-
 查询黑名单列表，环信提供了四种方法。
 
-1.1、同步方法
+1、同步方法
 
 <pre class="hll"><code class="language-java">
 
@@ -330,7 +217,7 @@ if (!error) {
 
 </code></pre>
 
-1.2、block回调方法
+2、block回调方法
 
 <pre class="hll"><code class="language-java">
 
@@ -342,64 +229,22 @@ if (!error) {
 
 </code></pre>
 
-1.3、IChatManagerDelegate回调方法
+3、IChatManagerDelegate回调方法
+
+接口调用
 
 <pre class="hll"><code class="language-java">
 
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
+// 获取黑名单
+[[EaseMob sharedInstance].chatManager asyncFetchBlockedList];
 
-#import "ViewController.h"
-#import "EaseMob.h"
+</code></pre>
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+回调监听
 
-@end
+<pre class="hll"><code class="language-java">
 
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-
-    // 获取黑名单
-    [[EaseMob sharedInstance].chatManager asyncFetchBlockedList];
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
--(void)didUpdateBlockedList:(NSArray *)blockedList{
-    NSLog(@"获取成功 -- %@",blockedList);
-}
-
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+- (void)didUpdateBlockedList:(NSArray *)blockedList;
 
 </code></pre>
 
@@ -413,121 +258,61 @@ NSArray *blockedList = [[EaseMob sharedInstance].chatManager blockedList];
 
 </code></pre>
 
-### 2	添加黑名单 {#addblock}
+##	加入黑名单 {#addblock}
 
-当您执行添加黑名单时，该用户并不会从好友列表中移除。
+接口调用
 
 <pre class="hll"><code class="language-java">
 
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
-
-#import "ViewController.h"
-#import "EaseMob.h"
-
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-    //	将6001加入黑名单
-    EMError *error = [[EaseMob sharedInstance].chatManager blockBuddy:@"6001" 	relationship:eRelationshipBoth];
-    if (!error) {
-        NSLog(@"发送成功");
-    }
+//	将6001加入黑名单
+EMError *error = [[EaseMob sharedInstance].chatManager blockBuddy:@"6001" 	relationship:eRelationshipBoth];
+if (!error) {
+	NSLog(@"发送成功");
 }
+    
+</code></pre>
 
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
+回调监听
 
-#pragma mark - IChatManagerDelegate
-- (void)didBlockBuddy:(EMBuddy *)buddy error:(EMError **)pError{
-    if (!pError) {
-        NSLog(@"添加成功");
-    }
-}
+<pre class="hll"><code class="language-java">
 
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+/*!
+ @method
+ @brief 将好友加到黑名单完成后的回调
+ @discussion
+ @param buddy    加入黑名单的好友
+ @param pError   错误信息
+ */
+- (void)didBlockBuddy:(EMBuddy *)buddy error:(EMError **)pError;
 
 </code></pre>
 
-### 3	移出黑名单 {#removeblock}
+##	移出黑名单 {#removeblock}
+
+接口调用
 
 <pre class="hll"><code class="language-java">
 
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
-
-#import "ViewController.h"
-#import "EaseMob.h"
-
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-    // 将6001移除黑名单
-    EMError *error = [[EaseMob sharedInstance].chatManager unblockBuddy:@"6001"];
-    if (!error) {
-        NSLog(@"发送成功");
-    }
+// 将6001移除黑名单
+EMError *error = [[EaseMob sharedInstance].chatManager unblockBuddy:@"6001"];
+if (!error) {
+	NSLog(@"发送成功");
 }
 
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
+</code></pre>
 
-#pragma mark - IChatManagerDelegate
-- (void)didUnblockBuddy:(EMBuddy *)buddy error:(EMError **)pError{
-    if (!pError) {
-        NSLog(@"移除成功");
-    }
-}
+回调监听
 
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
+<pre class="hll"><code class="language-java">
 
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+/*!
+ @method
+ @brief 将好友移出黑名单完成后的回调
+ @discussion
+ @param buddy    移出黑名单的好友
+ @param pError   错误信息
+ */
+- (void)didUnblockBuddy:(EMBuddy *)buddy error:(EMError **)pError;
 
 </code></pre>
 
