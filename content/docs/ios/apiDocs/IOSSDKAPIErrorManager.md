@@ -8,6 +8,10 @@ secondnavios: true
 
 SDK中对应头文件 EMErrorDefs.h
 
+iOS中错误码的类为**EMError**。
+
+如：注册时用户返回已存在的错误可以这样检测：error.errorCode
+
 |               定义                     |           描述            |
 |:------------------------------------- | -------------------------|
 | EMErrorNotFound                       | 不存在                     |
