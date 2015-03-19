@@ -5,7 +5,7 @@ secondnavios: true
 ---
 
 
-# 导入IOS SDK {#iOS}
+# 集成IOS SDK {#iOS}
 	在您阅读此文档时，我们假定您已经具备了基础的 iOS 应用开发经验，并能够理解相关基础概念。
 
 ## 下载SDK {#downloadSdk}
@@ -24,22 +24,20 @@ secondnavios: true
 	
 ## SDK目录讲解 {#explainSdk}
 
-从官网上下载下来的包中分为如下四部分：
+1、从官网上下载下来的包中分为如下四部分：
 
 * 环信 iOS SDK 开发使用
 * 环信 iOS release note 更新说明
 * 环信 iOS UIDemo 工程源码
 * 环信 iOS UIDemo.ipa 打包的ipa
 
-IOS SDK中有三个子文件夹:include、lib、resources，请不要擅自修改这些文件夹的任何东西，下面依次介绍这三个子文件夹。
+2、IOS SDK中有三个子文件夹:include、lib、resources，请不要擅自修改这些文件夹的任何东西，下面依次介绍这三个子文件夹。
 
 * **lib** 静态库，包含连个静态库libEaseMobClientSDK.a和libEaseMobClientSDKLite.a。libEaseMobClientSDKLite.a不包含实时语音功能，libEaseMobClientSDK.a包含所有功能。如果你的app中不需要实时语音功能，删掉libEaseMobClientSDK.a只使用libEaseMobClientSDKLite.a即可。
 * **resources** sdk的bundle，包含旧版sdk的数据库、消息提示音，sdk配置文件。其中sdk配置文件已加密，旧版sdk数据库几乎没什么实质作用。
 * **include** 包含sdk的头文件。
 
-主要介绍下**include**，所有的接口都在这个文件夹中。
-
-###include目录讲解 {#explainInclude}
+3、主要介绍下**include**，所有的接口都在这个文件夹中。
 
 * **EaseMobClientSDK/EaseMobClientSDKLite** 包含在项目中要引用的总头文件，即在代码中只需#import"EMSDKFull.h"或#import"EaseMob.h"即可调用所有对应的api。
 * **CallService** 包含实时语音相关的接口
