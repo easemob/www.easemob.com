@@ -8,13 +8,13 @@ secondnavios: true
 
 ## chat manager {#manager}
 
-* IChatManager.h: 登录、聊天、保存会话、加解密、多媒体支持等接口协议的集合。不同模块提供了不同的接口，不同模块的接口在[internal](http://www.easemob.com/docs/ios/apiDocs/IOSSDKAPIChatManager/#internal)中有详细介绍，
+* IChatManager.h: 登录、聊天、保存会话、加解密、多媒体支持等接口协议的集合。不同模块提供了不同的接口，不同模块的接口在[internal](http://www.easemob.com/docs/ios/apiDocs/IOSSDKAPIChatManager/#internal)中有详细介绍.
 
 ## delagates {#delegates}
 
 * [EMChatManagerDelegate.h](): ChatManager的所有delegate的集合，不同模块有不同的回调接口类；
 
-* [EMChatManagerBuddyDelegate.h](http://www.easemob.com/apidoc/ios/EMChatManager/delegates/EMChatManagerBuddyDelegate.html): 好友相关的回调类；
+* [EMChatManagerBuddyDelegate.h](http://www.easemob.com/apidoc/ios/chat/EMChatManagerBuddyDelegate_h/index.html): 好友相关的回调类；
 
 * [EMChatManagerChatDelegate.h](): 发送和接受消息相关的回调类；
 
