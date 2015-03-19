@@ -8,33 +8,15 @@ secondnavios: true
 # 集成前准备工作 {#iOS}
 	
 ## 注册环信开发者账号 {#registerDeveloper}
-请前往 [环信官方网站](http://www.easemob.com/ "环信官方网站") 注册开发者帐号。注册时，您需要提供真实的邮箱和手机号，以方便我们向您发送重要通知并在紧急时刻能够联系到您。如果您没有提供正确可用的邮箱和手机号，我们随时可能关闭您的应用。
 
-
+详细操作步骤见[入门指南](/docs/gettingstart/) 之 [注册环信开发者账号](/docs/gettingstart/#section-1)
 
 ## 创建应用 {#createApp}
-创建应用，请登录[环信开发者中心](https://console.easemob.com/index.html "环信开发者中心"),如果还没有账号，请先注册环信开发者账号。
 
-![ios_CreateApp icon](/iOS_CreateApp.png)
-
-- **开放注册**:允许在该应用下自由注册新用户（如果是客户端执行注册，需要选择开放模式）
-- **授权注册**:只有企业管理员或者应用管理员才能注册用户
-
-![iOS_AppInfo icon](/iOS_AppInfo.png)
-
-- **应用名称(appKey)**:由org_name和app_name组成 (org_name#app_name)。各app之间appKey隔离，不同appkey下账号，消息不能互通。
-- **注册模式**:用于切换注册模式。(开放注册或授权注册,如果使用客户端注册，需要使用开发注册模式，否则将提示405错误)
-- **client_id**: 提供给后台获取[token](http://www.easemob.com/docs/rest/userapi/#getadmintoken "获取token")使用。
-- **client_secret**: 提供给后台获取[token](http://www.easemob.com/docs/rest/userapi/#getadmintoken "获取token")使用。
-)
-- **缩略图大小**:聊天时，发送图片时生成缩略图的分辨率，该值设置越大，服务器生成的缩略图越清晰。
-
-	
-> 注：在环信中，不同应用之间通过appKey隔离，不同appKey下的用户不能互通。所以登录用户前，请先确定appkey下是否存在这个用户。
-
-
+详细操作步骤见[入门指南](/docs/gettingstart/) 之 [注册环信开发者账号](/docs/gettingstart/#section-1)
 
 ##制作并上传推送证书 {#apnsCertificate}
+
     如果不需要实现离线推送功能，请忽略这步
 
 ###制作推送证书
