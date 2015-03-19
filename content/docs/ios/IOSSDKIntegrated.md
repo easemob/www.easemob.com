@@ -26,8 +26,8 @@ secondnavios: true
 
 从官网上下载下来的包中分为如下四部分：
 
-* 环信 iOS SDK 开发使用这部分
-* 环信 iOS SDK release note 更新说明
+* 环信 iOS SDK 开发使用
+* 环信 iOS release note 更新说明
 * 环信 iOS UIDemo 工程源码
 * 环信 iOS UIDemo.ipa 打包的ipa
 

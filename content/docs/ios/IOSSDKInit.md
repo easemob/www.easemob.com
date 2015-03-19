@@ -180,119 +180,83 @@ if (!error && loginInfo) {
 
 ## 自动登录 {#autologin}
 	
-	自动登录：即首次登录成功后，不需要再次调用登录方法，再下次app启动时，SDK会自动为您登录。并且如果您再自动登录时登录失败，也可以读取到之前的会话信息。
-
-	SDK中缺省自动登录是没有打开的，需要您在登录成功后设置，以便您在下次app启动时不需要再次调用环信登录，并且能在没有网的情况下得到会话列表。
+	自动登录：即首次登录成功后，不需要再次调用登录方法，在下次app启动时，SDK会自动为您登录。并且如果您自动登录失败，也可以读取到之前的会话信息。
 
 ### 配置是否进行自动登录
+
+SDK中自动登录属性默认是关闭的，需要您在登录成功后设置，以便您在下次app启动时不需要再次调用环信登录，并且能在没有网的情况下得到会话列表。
 
 <pre class="hll"><code class="language-java">
 
 [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"8001" password:@"111111" completion:^(NSDictionary *loginInfo, EMError *error) {
         if (!error) {
             // 设置自动登录
-            /*
-             此属性如果被设置为YES, 会在以下几种情况下被重置为NO:
-             1. 用户发起的登出动作;
-             2. 用户在别的设备上更改了密码, 导致此设备上自动登陆失败;
-             3. 用户的账号被从服务器端删除;
-             4. 用户从另一个设备把当前设备上登陆的用户踢出.
-             */
             [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
         }
     } onQueue:nil];
 
 </code></pre>
 
-自动登录在以下几种情况下会被取消
+> 自动登录在以下几种情况下会被取消
+>
+> 1. 用户发起的登出动作;
+> 2. 用户在别的设备上更改了密码, 导致此设备上自动登陆失败;
+> 3. 用户的账号被从服务器端删除;
+> 4. 用户从另一个设备把当前设备上登陆的用户踢出.
 
-1. 用户发起的登出动作;
-2. 用户在别的设备上更改了密码, 导致此设备上自动登陆失败;
-3. 用户的账号被从服务器端删除;
-4. 用户从另一个设备把当前设备上登陆的用户踢出.
-
-所以，在您调用登录方法前，应该先判断是否设置了自动登录，如果设置了，则不需要您再调用。
-
-SDK中，如果发生自动登录，会有以下回调:
+### 所以，在您调用登录方法前，应该先判断是否设置了自动登录，如果设置了，则不需要您再调用。
 
 <pre class="hll"><code class="language-java">
 
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
-
-#import "ViewController.h"
-#import "EaseMob.h"
-
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-
-    BOOL isAutoLogin = [[EaseMob sharedInstance].chatManager isAutoLoginEnabled];
-    if (!isAutoLogin) {
-        [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"8001" password:@"111111" completion:^(NSDictionary *loginInfo, EMError *error) {
-            if (!error) {
-                // 设置自动登录
-                /*
-                 此属性如果被设置为YES, 会在以下几种情况下被重置为NO:
-                 1. 用户发起的登出动作;
-                 2. 用户在别的设备上更改了密码, 导致此设备上自动登陆失败;
-                 3. 用户的账号被从服务器端删除;
-                 4. 用户从另一个设备把当前设备上登陆的用户踢出.
-                 */
-                [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
-            }
-        } onQueue:nil];
-    }
+BOOL isAutoLogin = [[EaseMob sharedInstance].chatManager isAutoLoginEnabled];
+if (!isAutoLogin) {
+	[[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"8001" password:@"111111" completion:^(NSDictionary *loginInfo, EMError *error) {
+		if (!error) {
+			// 设置自动登录
+			/*
+			 此属性如果被设置为YES, 会在以下几种情况下被重置为NO:
+			 1. 用户发起的登出动作;
+			 2. 用户在别的设备上更改了密码, 导致此设备上自动登陆失败;
+			 3. 用户的账号被从服务器端删除;
+			 4. 用户从另一个设备把当前设备上登陆的用户踢出.
+			 */
+			[[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
+		}
+	} onQueue:nil];
 }
 
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
+</code></pre>
 
-#pragma mark - IChatManagerDelegate
-// 将要开始自动登录
-- (void)willAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
+### SDK中，如果发生自动登录，会有以下回调:
 
-}
+<pre class="hll"><code class="language-java">
 
-// 自动登录结束
-- (void)didAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
-    if (!error) {
-        NSLog(@"登录成功");
-    }
-}
+/*!
+ @method
+ @brief 用户将要进行自动登录操作的回调
+ @discussion
+ @param loginInfo 登录的用户信息
+ @param error     错误信息
+ @result
+ */
+- (void)willAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error;
 
-// 向sdk中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消sdk中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+/*!
+ @method
+ @brief 用户自动登录完成后的回调
+ @discussion
+ @param loginInfo 登录的用户信息
+ @param error     错误信息
+ @result
+ */
+- (void)didAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error;
 
 </code></pre>
 
 
 ## 重连 {#reconnect}
 
-当掉线时，IOS SDK会自动重连，只需要监听重连相关的回调，无需外部进行任何操作。
+当掉线时，IOS SDK会自动重连，只需要监听重连相关的回调，无需进行任何操作。
 
 <pre class="hll"><code class="language-java">
 
@@ -357,57 +321,25 @@ if (!error && info) {
 
 3、 IChatManagerDelegate回调方法
 
+接口调用
 
 <pre class="hll"><code class="language-java">
 
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
+// 退出，传入YES，会解除device token绑定，不再收到群消息；传NO，不解除device token
+[[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES/NO];
 
-#import "ViewController.h"
-#import "EaseMob.h"
+</code></pre>
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+回调方法监听
 
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-    // 退出
-    [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES/NO];
-}
-
-
--(void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
-- (void)didLogoffWithError:(EMError *)error{
-    if (!error) {
-    NSLog(@"退出成功");
-    }
-}
-
-// 向SDK中注册回调
--(void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
--(void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+<pre class="hll"><code class="language-java">
+/*!
+ @method
+ @brief 用户注销后的回调
+ @discussion
+ @param error        错误信息
+ @result
+ */
+- (void)didLogoffWithError:(EMError *)error;
 
 </code></pre>
