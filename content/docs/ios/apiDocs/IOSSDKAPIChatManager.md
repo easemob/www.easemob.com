@@ -14,7 +14,7 @@ secondnavios: true
 
 * [EMChatManagerDelegate.h](): ChatManager的所有delegate的集合，不同模块有不同的回调接口类；
 
-* [EMChatManagerBuddyDelegate.h](http://www.easemob.com/docs/ios/apiDocs/EMChatManager/delegates/EMChatManagerBuddyDelegate.html): 好友相关的回调类；
+* [EMChatManagerBuddyDelegate.h](http://www.easemob.com/apidoc/ios/EMChatManager/delegates/EMChatManagerBuddyDelegate.html): 好友相关的回调类；
 
 * [EMChatManagerChatDelegate.h](): 发送和接受消息相关的回调类；
 
