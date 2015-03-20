@@ -62,9 +62,7 @@ else{
 此处是iOS系统报的错，如仍不能确定，请从网上查找相关资料**
 
 
-##全局apns操作 {#apnsGlobal}
-
-###获取全局apns配置
+## 获取全局apns配置 {#apnsGlobalFetch}
 
 登录成功之后，sdk会自返回apns属性，获取代码如下
 
@@ -74,27 +72,11 @@ EMPushNotificationOptions *options = [[EaseMob sharedInstance].chatManager pushN
 
 </code></pre>
 
-### 设置apns昵称
-
-登陆成功之后，按照以下代码设置当前登录用户的apns昵称
-
-<pre class="hll"><code class="language-java">
-
-[[EaseMob sharedInstance].chatManager asyncLoginWithUsername:username
-password:password completion:^(NSDictionary *loginInfo, EMError *error) {
-    [self hideHud];
-    if (loginInfo && !error) 
-    {
-        //设置推送设置
-        [[EaseMob sharedInstance].chatManager setApnsNickname:@"推送昵称"];
-    }
-} onQueue:nil];
-
-</code></pre>
-
-### apns全局设置
+## 设置apns全局属性 {#apnsGlobalSet}
 
 提供三种方法。可以配置apns免打扰时间，apns昵称，推送样式，EMPushNotificationOptions中的属性传入你想设置的值，调用以下方法即可。
+
+以下方法会将options参数中的所有属性都更新到服务器上，请确保传入的options参数中的配置符合你的要求。
 
 1、 同步方法
 
@@ -145,10 +127,25 @@ onQueue:(dispatch_queue_t)aQueue;
 - 
 </code></pre>
 
+## 单独设置apns昵称 {#apnsGlobalNick}
 
-##群组apns操作 {#apnsGroup}
+登陆成功之后，按照以下代码设置当前登录用户的apns昵称
 
-### 设置指定群组是否接收apns
+<pre class="hll"><code class="language-java">
+
+[[EaseMob sharedInstance].chatManager asyncLoginWithUsername:username
+password:password completion:^(NSDictionary *loginInfo, EMError *error) {
+    [self hideHud];
+    if (loginInfo && !error) 
+    {
+        //设置推送设置
+        [[EaseMob sharedInstance].chatManager setApnsNickname:@"推送昵称"];
+    }
+} onQueue:nil];
+
+</code></pre>
+
+## 设置指定群组是否接收apns {#apnsGroupSet}
 
 1、 同步方法
 
@@ -203,7 +200,7 @@ onQueue:(dispatch_queue_t)aQueue;
 - 
 </code></pre>
 
-### 获取不接收apns的群组id
+## 获取不接收apns的群组id {#apnsGroupFetch}
 
 登录成功之后，sdk会自动返回不接收apns的群组id，获取代码如下
 
