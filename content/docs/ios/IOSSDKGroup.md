@@ -98,6 +98,120 @@ groupStyleSetting.groupStyle = eGroupStyle_PublicOpenJoin; // 创建不同类型
 
 </code></pre>
 
+## 获取群详情 {#fetchGroupInfo}
+
+分两种接口
+
+1、只获取群详情的接口
+
+<pre class="hll"><code class="language-java">
+
+/*!
+ @method
+ @brief 获取群组信息
+ @param groupId 群组ID
+ @param pError  错误信息
+ @result 所获取的群组对象
+ */
+- (EMGroup *)fetchGroupInfo:(NSString *)groupId error:(EMError **)pError;
+
+/*!
+ @method
+ @brief 异步方法, 获取群组信息
+ @param groupId 群组ID
+ @discussion
+        执行后, 回调didFetchGroupInfo:error会被触发
+ */
+- (void)asyncFetchGroupInfo:(NSString *)groupId;
+
+/*!
+ @method
+ @brief 异步方法, 获取群组信息
+ @param groupId 群组ID
+ @param completion 消息完成后的回调
+ @param aQueue     回调block时的线程
+ */
+- (void)asyncFetchGroupInfo:(NSString *)groupId
+                 completion:(void (^)(EMGroup *group,
+                                      EMError *error))completion
+                    onQueue:(dispatch_queue_t)aQueue;
+                    
+</code></pre>
+
+2、自主选择是否一起获取群成员
+
+<pre class="hll"><code class="language-java">
+
+/*!
+ @method
+ @brief 同步方法, 获取群组信息
+ @param groupId             群组ID
+ @param includesOccupantList 是否获取成员列表
+ @param pError              错误信息
+ @return 群组
+ */
+- (EMGroup *)fetchGroupInfo:(NSString *)groupId includesOccupantList:(BOOL)includesOccupantList error:(EMError **)pError;
+
+/*!
+ @method
+ @brief 异步方法, 获取群组信息
+ @param groupId             群组ID
+ @param includesOccupantList 是否获取成员列表
+ @discussion
+ 执行完成后，回调[didFetchGroupInfo:error:]
+ */
+- (void)asyncFetchGroupInfo:(NSString *)groupId includesOccupantList:(BOOL)includesOccupantList;
+
+/*!
+ @method
+ @brief 异步方法, 获取群组信息
+ @param groupId             群组ID
+ @param includesOccupantList 是否获取成员列表
+ @param completion          消息完成后的回调
+ @param aQueue              回调block时的线程
+ */
+- (void)asyncFetchGroupInfo:(NSString *)groupId
+        includesOccupantList:(BOOL)includesOccupantList
+                 completion:(void (^)(EMGroup *group,EMError *error))completion
+                    onQueue:(dispatch_queue_t)aQueue;
+
+
+</code></pre>
+
+## 获取群成员 {#fetchGroupMembers}
+
+<pre class="hll"><code class="language-java">
+
+/*!
+ @method
+ @brief 同步方法, 获取群组成员列表
+ @param groupId    群组ID
+ @param pError     错误信息
+ @return  群组的成员列表（包含创建者）
+ */
+- (NSArray *)fetchOccupantList:(NSString *)groupId error:(EMError **)pError;
+
+/*!
+ @method
+ @brief 异步方法, 获取群组成员列表
+ @param groupId    群组ID
+ @discussion
+ 执行完成后，回调[didFetchGroupOccupantsList:error:]
+ */
+- (void)asyncFetchOccupantList:(NSString *)groupId;
+
+/*!
+ @method
+ @brief 异步方法, 获取群组成员列表
+ @param groupId    群组ID
+ @param completion 消息完成后的回调
+ @param aQueue     回调block时的线程
+ */
+- (void)asyncFetchOccupantList:(NSString *)groupId
+                    completion:(void (^)(NSArray *occupantsList,EMError *error))completion
+                       onQueue:(dispatch_queue_t)aQueue;
+                       
+</code></pre>
 
 ## 加入群组 {#joinGroup}
 
