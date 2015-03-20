@@ -215,23 +215,19 @@ groupStyleSetting.groupStyle = eGroupStyle_PublicOpenJoin; // 创建不同类型
 
 ## 加入群组 {#joinGroup}
 
-> 群组分4种类型，目前SDK不支持自主选择是否进群。我们将针对每种类型讲解加入群组要进行的操作。
->
-> 1. eGroupStyle_PrivateOnlyOwnerInvite
-> 
-> 该类型的群组只允许群主（owner）添加人进群，其他人无法主动加入。
-> 
-> 2. eGroupStyle_PrivateMemberCanInvite (**推荐使用**)
-> 
-> 该类型的群组允许所有群成员添加人进群，其他人无法主动加入。
-> 
-> 3. eGroupStyle_PublicJoinNeedApproval (**推荐使用**)
-> 
-> 该类型的群组只允许群主（owner）添加人进群；其他人想进入群组的话，需要先发送申请，群主同意申请之后才能进群；其他人无法主动加入。
-> 
-> 4. eGroupStyle_PublicOpenJoin (**不推荐使用**)
-> 
-> 该类型的群组允许任何人主动加入群组。
+群组分4种类型，目前SDK不支持自主选择是否进群。我们将针对每种类型讲解加入群组要进行的操作。
+ 
+1. eGroupStyle_PrivateOnlyOwnerInvite 
+该类型的群组只允许群主（owner）添加人进群，其他人无法主动加入。
+
+2. eGroupStyle_PrivateMemberCanInvite (**推荐使用**) 
+该类型的群组允许所有群成员添加人进群，其他人无法主动加入。
+
+3. eGroupStyle_PublicJoinNeedApproval (**推荐使用**)  
+该类型的群组只允许群主（owner）添加人进群；其他人想进入群组的话，需要先发送申请，群主同意申请之后才能进群；其他人无法主动加入。
+
+4. eGroupStyle_PublicOpenJoin (**不推荐使用**)  
+该类型的群组允许任何人主动加入群组。
 
 ### * 添加人进群
 
