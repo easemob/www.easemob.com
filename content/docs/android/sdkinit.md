@@ -4,6 +4,15 @@ sidebar: androidsidebar
 secondnavandroid: true
 ---
 
+
+##SDK中相关异步处理，同步处理方法介绍
+
+<font size="4" color="#033FA1">同步方法：在调用SDK里面的方法时，如果方法对应的参数里面有callback回调，直接调用
+
+异步执行：调用SDK的方法里面没有对应callback参数，则需要开发者来异步操作
+
+具体是否异步还是同步，也可以参考相关文档介绍的方法，，每一个方法后边都有注释信息提示开发者，未注释的则认为同步执行</font>
+
 ## SDK初始化    {#init}
 
 要求在application中做初始化
@@ -21,7 +30,7 @@ EMChat.getInstance().setDebugMode(true);//在做打包混淆时，要关闭debug
         
 </code></pre>
 
-#####注：如果你的app中有第三方的服务启动，请在初始化SDK<code class="language-java">EMChat.getInstance().init(applicationContext)</code>方法的前面添加以下相关代码（相应代码也可参考demo的application）
+#####注：如果你的app中有第三方的服务启动，请在初始化SDK <code class="language-java">EMChat.getInstance().init(applicationContext)</code>方法的前面添加以下相关代码（相应代码也可参考demo的application）
 
 <pre class="hll"><code class="language-java">
 

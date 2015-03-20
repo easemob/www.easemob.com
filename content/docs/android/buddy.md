@@ -13,7 +13,7 @@ secondnavandroid: true
 获取好友的username list，开发者需要根据username去自己服务器获取好友的详情
 
 <pre class="hll"><code class="language-java">
-List&lt;String&gt; usernames = EMContactManager.getInstance().getContactUserNames();
+List&lt;String&gt; usernames = EMContactManager.getInstance().getContactUserNames();//需异步执行
     
 </code></pre>
  
@@ -123,7 +123,12 @@ EMContactManager.getInstance().setContactListener(new EMContactListener() {
 ### 获取黑名单列表
 
 <pre class="hll"><code class="language-java">
-//获取黑名单用户的usernames
+/**
+ * 从本地获取黑名单中的用户的usernames
+ * 
+ * @return
+ * @throws EaseMobException 
+ */
 EMContactManager.getInstance().getBlackListUsernames();
 </code></pre>
 
