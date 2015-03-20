@@ -7,13 +7,9 @@ secondnavios: true
 
 # 集成前准备工作 {#iOS}
 	
-## 注册环信开发者账号 {#registerDeveloper}
+## 注册环信开发者账号并创建后台应用 {#registerDeveloper}
 
-详细操作步骤见[入门指南](/docs/gettingstart/) 之 [注册环信开发者账号](/docs/gettingstart/#section-1)
-
-## 创建应用 {#createApp}
-
-详细操作步骤见[入门指南](/docs/gettingstart/) 之 [注册环信开发者账号](/docs/gettingstart/#section-1)
+详细操作步骤见[入门指南](/docs/gettingstart/) 之 [注册环信开发者账号并创建应用](/docs/gettingstart/#section-1)
 
 ##制作并上传推送证书 {#apnsCertificate}
 
