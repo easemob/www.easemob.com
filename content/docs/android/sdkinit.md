@@ -21,7 +21,7 @@ EMChat.getInstance().setDebugMode(true);//在做打包混淆时，要关闭debug
         
 </code></pre>
 
-#####注：如果你的app中有第三方的服务启动，请在初始化SDK`EMChat.getInstance().init(applicationContext)`方法的前面添加以下相关代码（相应代码也可参考demo的application）
+#####注：如果你的app中有第三方的服务启动，请在初始化SDK<code class="language-java">EMChat.getInstance().init(applicationContext)</code>方法的前面添加以下相关代码（相应代码也可参考demo的application）
 
 <pre class="hll"><code class="language-java">
 
@@ -74,35 +74,34 @@ private String getAppName(int pID) {
 
 <strong>需要注意：</strong>
 登陆成功后需要调用<br/>
-<code class="language-java">EMGroupManager.getInstance().loadAllGroups();</code>从本地数据库加载<strong>群组</strong>到内存的操作，如果你的应用中有群组，请加上这句话（要求在每次进入应用的时候调用）<br/>
-<code class="language-java">EMChatManager.getInstance().loadAllConversations();</code>从本地数据库加载<strong>聊天记录</strong>到内存的操作(强烈要求在每次进入应用的时候调用)<br/>
+<code class="language-java">EMGroupManager.getInstance().loadAllGroups();</code><i>从本地数据库加载<b><font color="#65CB31" size="4em">群组</font></b>到内存的操作，如果你的应用中有群组，请加上这句话（要求在每次进入应用的时候调用）</i><br/>
+<code class="language-java">EMChatManager.getInstance().loadAllConversations();</code><i>从本地数据库加载<b><font color="#65CB31" size="4em">聊天记录</font></b>到内存的操作(强烈要求在每次进入应用的时候调用)</i><br/>
 保证进入主页面后本地会话和群组都load完毕。另外如果登陆过，app长期在后台再进的时候也可能会导致加载到内存的群组和会话为空，可以在主页面的oncreate里也加上这两句代码，当然，更好的办法应该是放在程序的开屏页，可参考demo的SplashActivity。
 
 <pre class="hll"><code class="language-java">
 
-EMChatManager.getInstance().login(userName,password,
-	new EMCallBack() {//回调
-		@Override
-		public void onSuccess() {
-			runOnUiThread(new Runnable() {
-				public void run() {
-					EMGroupManager.getInstance().loadAllGroups()；
-					EMChatManager.getInstance().loadAllConversations();
-					Log.d("main", "登陆聊天服务器成功！");		
-				}
-			});
-		}
+EMChatManager.getInstance().login(userName,password,new EMCallBack() {//回调
+	@Override
+	public void onSuccess() {
+		runOnUiThread(new Runnable() {
+			public void run() {
+				EMGroupManager.getInstance().loadAllGroups()；
+				EMChatManager.getInstance().loadAllConversations();
+				Log.d("main", "登陆聊天服务器成功！");		
+			}
+		});
+	}
 
-		@Override
-		public void onProgress(int progress, String status) {
+	@Override
+	public void onProgress(int progress, String status) {
 
-		}
+	}
 
-		@Override
-		public void onError(int code, String message) {
-			Log.d("main", "登陆聊天服务器失败！");
-		}
-	});
+	@Override
+	public void onError(int code, String message) {
+		Log.d("main", "登陆聊天服务器失败！");
+	}
+});
 </code></pre>
 
 ### 退出聊天登陆  {#logout}
