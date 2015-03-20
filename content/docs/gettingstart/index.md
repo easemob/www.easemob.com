@@ -33,7 +33,7 @@ sidebar: gettingstartsidebar
 
 ![alt text](/email.png "Title")
 
-###创建应用 {#createApp}
+##创建应用 {#createApp}
 
 账号激活成功后，回到控制台登录页面登录到开发者后台,在我的应用中，点击创建应用按钮，如下图：
 
