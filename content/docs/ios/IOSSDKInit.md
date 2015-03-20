@@ -56,7 +56,7 @@ secondnavios: true
 
 </code></pre>
 
-在[application: didFinishLaunchingWithOptions:]方法中调用的SDK接口[registerSDKWithAppKey:apnsCertName:]参数解释如下：
+调用的SDK接口[registerSDKWithAppKey:apnsCertName:]参数解释如下：
 
 * **registerSDKWithAppKey**: 区别app的标识，[注册与生成appkey](http://www.easemob.com/docs/gettingstart/#section-1)
 * **apnsCertName**: iOS中推送证书名称。[制作与上传推送证书](http://www.easemob.com/docs/ios/IOSSDKPrepare/#apnsCertificate)
