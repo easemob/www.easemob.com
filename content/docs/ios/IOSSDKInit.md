@@ -29,8 +29,8 @@ secondnavios: true
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	//	registerSDKWithAppKey:注册的appKey，详细见下面注释。
-	//	apnsCertName:推送证书名(不需要加后缀)，详细见下面注释。
+	//registerSDKWithAppKey:注册的appKey，详细见下面注释。
+	//apnsCertName:推送证书名(不需要加后缀)，详细见下面注释。
     [[EaseMob sharedInstance] registerSDKWithAppKey:@"douser#istore" apnsCertName:@"istore_dev"];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
@@ -55,6 +55,8 @@ secondnavios: true
 }
 
 </code></pre>
+
+在[application: didFinishLaunchingWithOptions:]方法中调用的SDK接口[registerSDKWithAppKey:apnsCertName:]参数解释如下：
 
 * **registerSDKWithAppKey**: 区别app的标识，[注册与生成appkey](http://www.easemob.com/docs/gettingstart/#section-1)
 * **apnsCertName**: iOS中推送证书名称。[制作与上传推送证书](http://www.easemob.com/docs/ios/IOSSDKPrepare/#apnsCertificate)
