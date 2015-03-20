@@ -100,7 +100,7 @@ if (isSuccess && !error) {
 </code></pre>
 
 
-## 收到加好友请求 {#receiverbuddyrequest}
+## 监听加好友请求 {#receiverbuddyrequest}
 
 当您收到好友请求，如果您没有处理，则您每次登录的时候，服务器都会给你发该请求, 请确保你在登录成功之前已经注册了监听。
 

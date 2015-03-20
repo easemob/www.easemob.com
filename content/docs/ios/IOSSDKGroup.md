@@ -54,7 +54,12 @@ if(!error){
 EMGroupStyleSetting *groupStyleSetting = [[EMGroupStyleSetting alloc] init];
 groupStyleSetting.groupMaxUsersCount = 500; // 创建500人的群，如果不设置，默认是200人。
 groupStyleSetting.groupStyle = eGroupStyle_PublicOpenJoin; // 创建不同类型的群组，这里需要才传入不同的类型
-[[EaseMob sharedInstance].chatManager asyncCreateGroupWithSubject:@"群组名称" description:@"群组描述" invitees:@[@"6001",@"6002"] initialWelcomeMessage:@"邀请您加入群组" styleSetting:groupStyleSetting completion:^(EMGroup *group, EMError *error) {
+[[EaseMob sharedInstance].chatManager asyncCreateGroupWithSubject:@"群组名称" 
+													  description:@"群组描述" 
+													  invitees:@[@"6001",@"6002"] 
+													  initialWelcomeMessage:@"邀请您加入群组" 
+													  styleSetting:groupStyleSetting 
+													  completion:^(EMGroup *group, EMError *error) {
     if(!error){
         NSLog(@"创建成功 -- %@",group);
     }        
@@ -63,81 +68,56 @@ groupStyleSetting.groupStyle = eGroupStyle_PublicOpenJoin; // 创建不同类型
 
 3、IChatManagerDelegate 回调方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
+EMGroupStyleSetting *groupStyleSetting = [[EMGroupStyleSetting alloc] init];
+groupStyleSetting.groupMaxUsersCount = 500; // 创建500人的群，如果不设置，默认是200人。
+groupStyleSetting.groupStyle = eGroupStyle_PublicOpenJoin; // 创建不同类型的群组，这里需要才传入不同的类型
+[[EaseMob sharedInstance].chatManager asyncCreateGroupWithSubject:@"群组名称" 
+    												  description:@"群组描述" 
+    												  invitees:@[@"6001",@"6002"] 
+    												  initialWelcomeMessage:@"邀请您加入群组" 
+    												  styleSetting:groupStyleSetting];
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+</code></pre>
 
-@end
+回调监听
 
-@implementation ViewController
+<pre class="hll"><code class="language-java">
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
+/*!
+ @method
+ @brief 创建一个群组后的回调
+ @param group 所创建的群组对象
+ @param error 错误信息
+ @discussion
+ */
+- (void)group:(EMGroup *)group didCreateWithError:(EMError *)error;
 
-    EMGroupStyleSetting *groupStyleSetting = [[EMGroupStyleSetting alloc] init];
-    groupStyleSetting.groupMaxUsersCount = 500; // 创建500人的群，如果不设置，默认是200人。
-    groupStyleSetting.groupStyle = eGroupStyle_PublicOpenJoin; // 创建不同类型的群组，这里需要才传入不同的类型
-    [[EaseMob sharedInstance].chatManager asyncCreateGroupWithSubject:@"群组名称" description:@"群组描述" invitees:@[@"6001",@"6002"] initialWelcomeMessage:@"邀请您加入群组" styleSetting:groupStyleSetting];
-}
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
--(void)group:(EMGroup *)group didCreateWithError:(EMError *)error{
-    if (!error) {
-        NSLog(@"创建成功");
-    }
-}
-
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
 </code></pre>
 
 
 ## 加入群组 {#joinGroup}
 
-群组分4种类型，目前SDK不支持自主选择是否进群。我们将针对每种类型讲解加入群组要进行的操作。
-
-* eGroupStyle_PrivateOnlyOwnerInvite
-
-该类型的群组只允许群主（owner）添加人进群，其他人无法主动加入。
-
-* eGroupStyle_PrivateMemberCanInvite (**推荐使用**)
-
-该类型的群组允许所有群成员添加人进群，其他人无法主动加入。
-
-* eGroupStyle_PublicJoinNeedApproval (**推荐使用**)
-
-该类型的群组只允许群主（owner）添加人进群；其他人想进入群组的话，需要先发送申请，群主同意申请之后才能进群；其他人无法主动加入。
-
-* eGroupStyle_PublicOpenJoin (**不推荐使用**)
-
-该类型的群组允许任何人主动加入群组。
+> 群组分4种类型，目前SDK不支持自主选择是否进群。我们将针对每种类型讲解加入群组要进行的操作。
+>
+> 1. eGroupStyle_PrivateOnlyOwnerInvite
+> 
+> 该类型的群组只允许群主（owner）添加人进群，其他人无法主动加入。
+> 
+> 2. eGroupStyle_PrivateMemberCanInvite (**推荐使用**)
+> 
+> 该类型的群组允许所有群成员添加人进群，其他人无法主动加入。
+> 
+> 3. eGroupStyle_PublicJoinNeedApproval (**推荐使用**)
+> 
+> 该类型的群组只允许群主（owner）添加人进群；其他人想进入群组的话，需要先发送申请，群主同意申请之后才能进群；其他人无法主动加入。
+> 
+> 4. eGroupStyle_PublicOpenJoin (**不推荐使用**)
+> 
+> 该类型的群组允许任何人主动加入群组。
 
 ### * 添加人进群
 
@@ -177,56 +157,26 @@ if (!error) {
 
 3、IChatManagerDelegate异步方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
+[[EaseMob sharedInstance].chatManager asyncAddOccupants:@[@"6001",@"6002"] toGroup:@"1410329312753" welcomeMessage:@"邀请信息"];
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+</code></pre>
 
-@end
+监听回调
 
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-
-    [[EaseMob sharedInstance].chatManager asyncAddOccupants:@[@"6001",@"6002"] toGroup:@"1410329312753" welcomeMessage:@"邀请信息"];
-}
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
-
--(void)groupDidUpdateInfo:(EMGroup *)group error:(EMError *)error{
-    if (!error) {
-        NSLog(@"添加成功");
-    }
-}
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+<pre class="hll"><code class="language-java">
+/*!
+ @method
+ @brief 群组信息更新后的回调
+ @param group 发生更新的群组
+ @param error 错误信息
+ @discussion
+        当添加/移除/更改角色/更改主题/更改群组信息之后,都会触发此回调
+ */
+- (void)groupDidUpdateInfo:(EMGroup *)group error:(EMError *)error;
 </code></pre>
 
 ### * 发送进群申请
@@ -254,60 +204,30 @@ if (!error) {
 
 3、IChatManagerDelegate回调方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
+[[EaseMob sharedInstance].chatManager asyncApplyJoinPublicGroup:@"1410329312753" withGroupname:@"群组名称" message:@"申请信息"];
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+</code></pre>
 
-@end
+监听回调
 
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-}
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-
-    [[EaseMob sharedInstance].chatManager asyncApplyJoinPublicGroup:@"1410329312753" withGroupname:@"群组名称" message:@"申请信息"];
-}
-
-#pragma mark - IChatManagerDelegate
--(void)didApplyJoinPublicGroup:(EMGroup *)group error:(EMError *)error{
-    if (!error) {
-        NSLog(@"申请成功");
-    }
-}
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+<pre class="hll"><code class="language-java">
+/*!
+ @method
+ @brief 申请加入公开群组后的回调
+ @param group 群组对象
+ @param error 错误信息
+ */
+- (void)didApplyJoinPublicGroup:(EMGroup *)group
+                          error:(EMError *)error;
 </code></pre>
 
 ### * 处理进群申请
 
-只有owner有权限处理进群申请
+	只有owner有权限处理进群申请
 
 1、收到进群申请
 
@@ -404,64 +324,34 @@ EMError *error = nil;
 
 3、IChatManagerDelegate回调方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
+ // 加入群组
+[[EaseMob sharedInstance].chatManager asyncJoinPublicGroup:@"1410329312753"];
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+</code></pre>
 
-@end
+回调监听
 
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-    // 加入群组
-    [[EaseMob sharedInstance].chatManager asyncJoinPublicGroup:@"1410329312753"];
-}
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
--(void)didJoinPublicGroup:(EMGroup *)group error:(EMError *)error{
-    if (!error) {
-        NSLog(@"入群成功");
-    }
-}
-
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+<pre class="hll"><code class="language-java">
+/*!
+ @method
+ @brief 加入公开群组后的回调
+ @param group 群组对象
+ @param error 错误信息
+ */
+- (void)didJoinPublicGroup:(EMGroup *)group
+                     error:(EMError *)error;
 </code></pre>
 
 
 ## 退出群组 {#exitGroup}
 
-群主（owner）不支持退群操作，只能解散群。
+	群主（owner）不支持退群操作，只能解散群。
 
-退出群组分为主动退群和被动退群。被动退群即为被owner踢出群组。
+	退出群组分为主动退群和被动退群。被动退群即为被owner踢出群组。
 
 
 ### * 主动退群
@@ -488,56 +378,27 @@ if (!error) {
 
 3、IChatManagerDelegate异步方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
+ [[EaseMob sharedInstance].chatManager asyncLeaveGroup:@"1410329312753"];
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+</code></pre>
 
-@end
+回调监听
 
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-
-    [[EaseMob sharedInstance].chatManager asyncLeaveGroup:@"1410329312753"];
-}
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
--(void)group:(EMGroup *)group didLeave:(EMGroupLeaveReason)reason error:(EMError *)error{
-    if (!error) {
-        NSLog(@"退出成功");
-    }
-}
-
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+<pre class="hll"><code class="language-java">
+/*!
+ @method
+ @brief 离开一个群组后的回调
+ @param group  所要离开的群组对象
+ @param reason 离开的原因
+ @param error  错误信息
+ @discussion
+        离开的原因包含主动退出, 被别人请出, 和销毁群组三种情况
+ */
+- (void)group:(EMGroup *)group didLeave:(EMGroupLeaveReason)reason error:(EMError *)error;
 </code></pre>
 
 ### * 被动退群
@@ -551,7 +412,7 @@ if (!error) {
 
 ## 解散群组 {#destroyGroup}
 
-解散群组需要owner权限
+	解散群组需要owner权限
 
 1、同步方法
 
@@ -575,61 +436,32 @@ if (!error) {
 
 3、IChatManagerDelegate异步方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  TestViewController.m
-//  Test
-//
-//  Created by dujiepeng on 1/6/15.
-//  Copyright (c) 2015 dujiepeng. All rights reserved.
-//
 
-#import "TestViewController.h"
-#import "EaseMob.h"
+ [[EaseMob sharedInstance].chatManager asyncDestroyGroup:groupId];
 
-@interface TestViewController ()&lt;IChatManagerDelegate&gt;
-{
-    EMGroup *group;
-}
-@property (nonatomic) id&lt;IChatManager&gt; chatManager;
-@property (nonatomic, strong) EMGroup *currentGroup;
-@end
-
-@implementation TestViewController
-
--(void)viewDidLoad{
-    [self registerEaseMobDelegate];
-
-    [[EaseMob sharedInstance].chatManager asyncDestroyGroup:groupId];
-}
-
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [self.chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [self.chatManager removeDelegate:self];
-}
-
-
-#pragma mark - IChatManagerDelegate
--(void)group:(EMGroup *)group didLeave:(EMGroupLeaveReason)reason error:(EMError *)error{
-    if (!error && reason == eGroupLeaveReason_Destroyed) {
-        NSLog(@"解散成功");
-    }
-}
-@end
 </code></pre>
 
+回调监听
+
+<pre class="hll"><code class="language-java">
+/*!
+ @method
+ @brief 离开一个群组后的回调
+ @param group  所要离开的群组对象
+ @param reason 离开的原因
+ @param error  错误信息
+ @discussion
+        离开的原因包含主动退出, 被别人请出, 和销毁群组三种情况
+ */
+- (void)group:(EMGroup *)group didLeave:(EMGroupLeaveReason)reason error:(EMError *)error;
+</code></pre>
 
 ## 移除群成员 {#removeMember}
 
-只有owner权限才能调用
+	只有owner权限才能调用
 
 <pre class="hll"><code class="language-java">
 /*!
@@ -675,13 +507,11 @@ if (!error) {
 </code></pre>
 
 
-## 加入/移出群黑名单 {#blockMember}
+## 加入群黑名单 {#blockMember}
 
     只有owner权限才能调用该接口，并且只有owner权限的才能查看群黑名单。
 
-    可以将群成员和非群成员的人加入群黑名单，在群黑名单中的人实际已经不在该群中，并且不能加入群组；即使从群黑名单移除出去，也得重新加入群组。
-
-1、加入群黑名单
+    可以将群成员和非群成员的人加入群黑名单。
 
 <pre class="hll"><code class="language-java">
 /*!
@@ -727,7 +557,11 @@ if (!error) {
 </code></pre>
 
 
-2、移出群黑名单
+## 移出群黑名单 {#unblockMember}
+
+	只有owner权限才能调用该接口，并且只有owner权限的才能查看群黑名单。
+
+    从群黑名单移除出去，该用户已经不在群组里了，需要重新加入群组。
 
 <pre class="hll"><code class="language-java">
 /*!
@@ -773,12 +607,9 @@ if (!error) {
 
 </code></pre>
 
+## 修改群名称 {#editGroupSubject}
 
-## 修改群组属性 {#editGroup}
-
-### *修改群名称
-
-只有owner有权限修改
+	只有owner有权限修改
 
 1、同步方法
 
@@ -804,37 +635,18 @@ if (!error) {
 
 3、IChatManagerDelegate异步方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
+[[EaseMob sharedInstance].chatManager asyncChangeGroupSubject:@"要修改的群名称" 	forGroup:@"1410329312753"];
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+</code></pre>
 
-@end
+回调监听
 
-@implementation ViewController
+<pre class="hll"><code class="language-java">
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-
-    [[EaseMob sharedInstance].chatManager asyncChangeGroupSubject:@"要修改的群名称" 	forGroup:@"1410329312753"];
-}
-
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
 /*!
 @method
 @brief 群组信息更新后的回调
@@ -848,25 +660,11 @@ if (!error) {
         NSLog(@"修改成功");
     }
 }
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
 </code></pre>
 
-### *修改群描述
+## 修改群描述 {#editGroupDescription}
 
-**不推荐使用**，只有owner有权限操作
+	** 不推荐使用 **，只有owner有权限操作
 
 1、同步方法
 
@@ -892,37 +690,16 @@ if (!error) {
 
 3、IChatManagerDelegate异步方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
+// 修改群描述
+[[EaseMob sharedInstance].chatManager asyncChangeDescription:@"要修改的描述" forGroup:@"1410329312753"];
+</code></pre>
 
-#import "ViewController.h"
-#import "EaseMob.h"
+回调监听
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-    // 修改群描述
-    [[EaseMob sharedInstance].chatManager asyncChangeDescription:@"要修改的描述" forGroup:@"1410329312753"];
-}
-
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
+<pre class="hll"><code class="language-java">
 /*!
 @method
 @brief 群组信息更新后的回调
@@ -931,33 +708,12 @@ if (!error) {
 @discussion
 当添加/移除/更改角色/更改主题/更改群组信息之后,都会触发此回调
 */
--(void)groupDidUpdateInfo:(EMGroup *)group error:(EMError *)error{
-    if (!error) {
-        NSLog(@"修改成功");
-    }
-}
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+-(void)groupDidUpdateInfo:(EMGroup *)group error:(EMError *)error;
 </code></pre>
 
+## 屏蔽群消息 {#blockGroup}
 
-## 修改群组附属属性 {#editGroup2}
-
-### * 屏蔽群消息
-
-**不允许owner权限的调用**
+	不允许owner权限的调用
 
 <pre class="hll"><code class="language-java">
 /*!
@@ -986,9 +742,9 @@ if (!error) {
                 onQueue:(dispatch_queue_t)aQueue;
 </code></pre>
 
-### * 取消屏蔽群消息
+## 取消屏蔽群消息 {#unblockGroup}
 
-**不允许owner权限的调用**
+	不允许owner权限的调用
 
 <pre class="hll"><code class="language-java">
 /*!
@@ -1016,9 +772,9 @@ if (!error) {
 
 </code></pre>
 
-### * 不接收群组的apns离线推送
+## 管理群组的apns离线推送 {#groupApns}
 
-见 [apns离线推送](http://www.easemob.com/docs/ios/IOSSDKApns) 之 [群组apns操作](http://www.easemob.com/docs/ios/IOSSDKApns/#apnsGroup)
+见 [apns离线推送](http://www.easemob.com/docs/ios/IOSSDKApns) 之 [设置指定群组是否接收apns](http://www.easemob.com/docs/ios/IOSSDKApns/#apnsGroupSet)
 
 ## 获取与登录者相关的群组（创建的和加入的） {#fetchMyGroupList}
 
@@ -1046,60 +802,23 @@ if (!error) {
 
 3、IChatManagerDelegate回调方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
+[[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
+</code></pre>
 
-#import "ViewController.h"
-#import "EaseMob.h"
+回调监听
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-
-    [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
-}
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
+<pre class="hll"><code class="language-java">
 /*!
-@method
-@brief 群组列表变化后的回调
-@param groupList 新的群组列表
-@param error     错误信息
-*/
-- (void)didUpdateGroupList:(NSArray *)groupList error:(EMError *)error{
-    if (!error) {
-        NSLog(@"获取成功 -- %@",groupList);
-    }
-}
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end
+ @method
+ @brief 群组列表变化后的回调
+ @param groupList 新的群组列表
+ @param error     错误信息
+ */
+- (void)didUpdateGroupList:(NSArray *)groupList
+                     error:(EMError *)error;
 </code></pre>
 
 4、取db中的值，必须登录成功之后才能获取到数据，该方法取到的不一定是最新的。
@@ -1142,54 +861,24 @@ if (!error) {
 
 3、IChatManagerDelegate回调方法
 
+接口调用
+
 <pre class="hll"><code class="language-java">
-//
-//  ViewController.m
-//  Test
-//
-//  Created by dujiepeng on 12/29/14.
-//  Copyright (c) 2014 dujiepeng. All rights reserved.
-//
 
-#import "ViewController.h"
-#import "EaseMob.h"
+// 查看所有公开群组
+[[EaseMob sharedInstance].chatManager asyncFetchAllPublicGroups];
 
-@interface ViewController ()&lt;IChatManagerDelegate&gt;
+</code></pre>
 
-@end
+回调监听
 
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self registerEaseMobDelegate];
-
-    // 查看所有公开群组
-    [[EaseMob sharedInstance].chatManager asyncFetchAllPublicGroups];
-}
-
-- (void)dealloc{
-    [self unRegisterEaseMobDelegate];
-}
-
-#pragma mark - IChatManagerDelegate
--(void)didFetchAllPublicGroups:(NSArray *)groups error:(EMError *)error{
-    if (!error) {
-        NSLog(@"获取成功 -- %@",groups);
-    }
-}
-
-// 向SDK中注册回调
-- (void)registerEaseMobDelegate{
-    // 此处先取消一次，是为了保证只将self注册过一次回调。
-    [self unRegisterEaseMobDelegate];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-}
-
-// 取消SDK中注册的回调
-- (void)unRegisterEaseMobDelegate{
-    [[EaseMob sharedInstance].chatManager removeDelegate:self];
-}
-
-@end	
+<pre class="hll"><code class="language-java">
+/*!
+ @method
+ @brief 获取所有公开群组后的回调
+ @param groups 公开群组列表
+ @param error  错误信息
+ */
+- (void)didFetchAllPublicGroups:(NSArray *)groups
+                          error:(EMError *)error;	
 </code></pre>
