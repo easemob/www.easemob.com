@@ -15,7 +15,7 @@ secondnavios: true
 
     如果不需要实现离线推送功能，请忽略这步
 
-###制作推送证书
+### ** 制作推送证书 **
 
 * step1. 打开[苹果开发者网站](http://developer.apple.com/)
 
@@ -50,7 +50,7 @@ secondnavios: true
 ![developer.apple.com](/iOS_Apns_7.png "developer.apple.com")
 
 
-### 上传推送证书
+### ** 上传推送证书 **
 
 * step1. 打开Application --> Utilities --> Keychain Access应用, 我们会看到有刚刚我们制作好的推送证书
 
