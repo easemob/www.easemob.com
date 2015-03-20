@@ -62,9 +62,10 @@ secondnavios: true
 
 ## 注册 {#register}
 
-客户端注册是为了测试使用，`正式环境中不推荐使用该方式注册环信账号`，注册的流程应该是您服务器通过环信提供的[rest api](http://www.easemob.com/docs/rest/userapi/#im)注册，之后保存到您的服务器或返回给客户端。
-
 注册模式分两种，开放注册和授权注册。只有开放注册时，才可以客户端注册。
+
+开放注册是为了测试使用，`正式环境中不推荐使用该方式注册环信账号`，
+授权注册的流程应该是您服务器通过环信提供的[rest api](http://www.easemob.com/docs/rest/userapi/#im)注册，之后保存到您的服务器或返回给客户端。
 
 注册提供了三种方法。
 
@@ -109,7 +110,7 @@ if (isSuccess) {
 
  /*!
  @method
- @brief 成功注册新用户后的回调
+ @brief 注册新用户后的回调
  @discussion
  @result
  */
@@ -119,9 +120,9 @@ if (isSuccess) {
 
 </code></pre>
 
-## 手动登录 {#login}
+## 登录 {#login}
 
-	手动登录：调用SDK的登录接口进行的操作；
+	登录：调用SDK的登录接口进行的操作；
 	
 提供了三种方法。
 
@@ -194,10 +195,10 @@ SDK中自动登录属性默认是关闭的，需要您在登录成功后设置�
 
 > 自动登录在以下几种情况下会被取消
 >
-> 1. 用户发起的登出动作;
+> 1. 用户调用了SDK的登出动作;
 > 2. 用户在别的设备上更改了密码, 导致此设备上自动登陆失败;
 > 3. 用户的账号被从服务器端删除;
-> 4. 用户从另一个设备把当前设备上登陆的用户踢出.
+> 4. 用户从另一个设备登录，把当前设备上登陆的用户踢出.
 
 ### 所以，在您调用登录方法前，应该先判断是否设置了自动登录，如果设置了，则不需要您再调用。
 
@@ -205,18 +206,9 @@ SDK中自动登录属性默认是关闭的，需要您在登录成功后设置�
 
 BOOL isAutoLogin = [[EaseMob sharedInstance].chatManager isAutoLoginEnabled];
 if (!isAutoLogin) {
-	[[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"8001" password:@"111111" completion:^(NSDictionary *loginInfo, EMError *error) {
-		if (!error) {
-			// 设置自动登录
-			/*
-			 此属性如果被设置为YES, 会在以下几种情况下被重置为NO:
-			 1. 用户发起的登出动作;
-			 2. 用户在别的设备上更改了密码, 导致此设备上自动登陆失败;
-			 3. 用户的账号被从服务器端删除;
-			 4. 用户从另一个设备把当前设备上登陆的用户踢出.
-			 */
-			[[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
-		}
+	[[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"8001" 
+														password:@"111111" 
+													  completion:^(NSDictionary *loginInfo, EMError *error) {
 	} onQueue:nil];
 }
 
@@ -274,19 +266,19 @@ if (!isAutoLogin) {
 </code></pre>
 
 
-## 退出 {#logout}
+## 退出登录 {#logout}
 
-退出分两种类型：主动退出和被动退出。
+退出登录分两种类型：主动退出登录和被动退出登录。
 
-* 主动退出：主动点击app的退出按钮；
+* 主动退出登录：调用SDK的退出接口；
 
-* 被动退出：
+* 被动退出登录：
 1、 正在登陆的账号在另一台设备上登陆；
 2、 正在登陆的账号被从服务器端删除。
 
 退出 提供了三种方法。
 
-**WithUnbindDeviceToken**在被动退出时传NO，在主动退出时传YES.
+**logoffWithUnbindDeviceToken**：是否解除device token的绑定，在被动退出时传NO，在主动退出时传YES.
 
 1、 同步方法：
 

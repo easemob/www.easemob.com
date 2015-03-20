@@ -220,7 +220,7 @@ groupStyleSetting.groupStyle = eGroupStyle_PublicOpenJoin; // 创建不同类型
 1. eGroupStyle_PrivateOnlyOwnerInvite 
 该类型的群组只允许群主（owner）添加人进群，其他人无法主动加入。
 
-2. eGroupStyle_PrivateMemberCanInvite (**推荐使用**) 
+2. eGroupStyle_PrivateMemberCanInvite (**推荐使用**)   
 该类型的群组允许所有群成员添加人进群，其他人无法主动加入。
 
 3. eGroupStyle_PublicJoinNeedApproval (**推荐使用**)  
