@@ -27,31 +27,26 @@ secondnavios: true
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	//	registerSDKWithAppKey:注册的appKey，详细见下面注释。
+	//	apnsCertName:推送证书名(不需要加后缀)，详细见下面注释。
     [[EaseMob sharedInstance] registerSDKWithAppKey:@"douser#istore" apnsCertName:@"istore_dev"];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    [[EaseMob sharedInstance] applicationWillResignActive:application];
-}
-
+// App进入后台
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     [[EaseMob sharedInstance] applicationDidEnterBackground:application];
 }
 
+// App将要从后台返回
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     [[EaseMob sharedInstance] applicationWillEnterForeground:application];
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    [[EaseMob sharedInstance] applicationDidBecomeActive:application];
-}
-
+// 申请处理时间
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     [[EaseMob sharedInstance] applicationWillTerminate:application];
@@ -59,8 +54,8 @@ secondnavios: true
 
 </code></pre>
 
-* **AppKey**: 区别app的标识，对应上图中的 douser#istore
-* **APNSCertName**: iOS中推送证书名称。[制作与上传推送证书](http://www.easemob.com/docs/ios/IOSSDKPrepare/#apnsCertificate)
+* **registerSDKWithAppKey**: 区别app的标识，[注册与生成appkey](http://www.easemob.com/docs/gettingstart/#section-1)
+* **apnsCertName**: iOS中推送证书名称。[制作与上传推送证书](http://www.easemob.com/docs/ios/IOSSDKPrepare/#apnsCertificate)
 
 环信为im部分提供了apns推送功能，如果您要使用，请跳转到[apns离线推送](http://www.easemob.com/docs/ios/IOSSDKApns/)
 
