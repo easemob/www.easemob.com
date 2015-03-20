@@ -5,7 +5,7 @@ secondnavios: true
 ---
 
 
-# 集成前准备工作 {#iOS}
+# 集成IOS SDK前的准备工作 {#iOS}
 	
 ## 注册环信开发者账号并创建后台应用 {#registerDeveloper}
 
