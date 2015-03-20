@@ -13,15 +13,15 @@ secondnavandroid: true
 EMChat.getInstance().init(applicationContext);
 
 /**
- * debugMode == true 时，sdk 会在log里输入调试信息
+ * debugMode == true 时为打开，sdk 会在log里输入调试信息
  * @param debugMode
  * 在做代码混淆的时候需要设置成false
  */
-EMChat.getInstance().setDebugMode(true);
+EMChat.getInstance().setDebugMode(true);//在做打包混淆时，要关闭debug模式，如果未被关闭，则会出现程序无法运行问题
         
 </code></pre>
 
-#####注：如果你的app中有第三方的服务，请添加下边的代码并放在初始化SDK代码的上边（相应代码也可参考demo的application）
+#####注：如果你的app中有第三方的服务启动，请在初始化SDK`EMChat.getInstance().init(applicationContext)`方法的前面添加以下相关代码（相应代码也可参考demo的application）
 
 <pre class="hll"><code class="language-java">
 
@@ -74,8 +74,8 @@ private String getAppName(int pID) {
 
 <strong>需要注意：</strong>
 登陆成功后需要调用<br/>
-<code class="language-java">EMGroupManager.getInstance().loadAllGroups();</code><br/>
-<code class="language-java">EMChatManager.getInstance().loadAllConversations();</code><br/>
+<code class="language-java">EMGroupManager.getInstance().loadAllGroups();</code>从本地数据库加载<strong>群组</strong>到内存的操作，如果你的应用中有群组，请加上这句话（要求在每次进入应用的时候调用）<br/>
+<code class="language-java">EMChatManager.getInstance().loadAllConversations();</code>从本地数据库加载<strong>聊天记录</strong>到内存的操作(强烈要求在每次进入应用的时候调用)<br/>
 保证进入主页面后本地会话和群组都load完毕。另外如果登陆过，app长期在后台再进的时候也可能会导致加载到内存的群组和会话为空，可以在主页面的oncreate里也加上这两句代码，当然，更好的办法应该是放在程序的开屏页，可参考demo的SplashActivity。
 
 <pre class="hll"><code class="language-java">
@@ -86,6 +86,8 @@ EMChatManager.getInstance().login(userName,password,
 		public void onSuccess() {
 			runOnUiThread(new Runnable() {
 				public void run() {
+					EMGroupManager.getInstance().loadAllGroups()；
+					EMChatManager.getInstance().loadAllConversations();
 					Log.d("main", "登陆聊天服务器成功！");		
 				}
 			});
