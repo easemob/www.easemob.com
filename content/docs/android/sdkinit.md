@@ -8,12 +8,12 @@ secondnavandroid: true
 ##SDK中相关异步处理，同步处理方法介绍 {#asynch}
 
 <font size="4" color="#033FA1">
-同步方法：在调用SDK里面的方法时，如果方法对应的参数里面有callback回调，直接调用
+同步方法：在调用SDK里面的方法时，如果方法对应的参数里面有callback回调，直接调用<br>
 
 
-异步方法：调用SDK的方法里面没有对应callback参数，则需要开发者来异步操作
+异步方法：调用SDK的方法里面没有对应callback参数，则需要开发者来异步操作</br>
 
-具体是否异步还是同步，也可以参考相关文档介绍的方法，，每一个方法后边都有注释信息提示开发者，未注释的则认为同步执行
+具体是否异步还是同步，也可以参考相关文档介绍的方法，每一个方法后边都有注释信息提示开发者，未注释的则认为同步执行</br>
 
 注:对于没有回调的异步方法执行过程，是通过try catch来判断异步方法执行成功或者失败
 
@@ -58,6 +58,7 @@ if (processAppName == null ||!processAppName.equalsIgnoreCase("com.easemob.chatu
 </code></pre>
 
 如何获取processAppName请参考以下方法
+
 <pre class="hll"><code class="language-java">
 
 private String getAppName(int pID) {
@@ -157,11 +158,11 @@ EMChatManager.getInstance().login(userName,password,new EMCallBack() {//回调
 
 ##自动登录    {#autologin}
 
-<font size="4em" color="#033FA1">即首次登录成功后，不需要再次调用登录方法，在下次app启动时，SDK会自动为您登录。并且如果您自动登录失败，也可以读取到之前的会话信息（以上情况是在未调用登出的情况下实现的）。
+<font size="4em" color="#033FA1">即首次登录成功后，不需要再次调用登录方法，在下次app启动时，SDK会自动为您登录。并且如果您自动登录失败，也可以读取到之前的会话信息（以上情况是在未调用登出的情况下实现的）。</font>
 
 配置是否进行自动登录
 
-SDK中自动登录属性默认是true打开的，如果不需要自动登录，在初始化SDK之前，调用`EMChat.getInstance().setAutoLogin(false);`设置为false关闭</font>
+SDK中自动登录属性默认是true打开的，如果不需要自动登录，在初始化SDK之前，调用`EMChat.getInstance().setAutoLogin(false);`设置为false关闭
 
 自动登录
 
