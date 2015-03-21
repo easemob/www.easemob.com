@@ -14,7 +14,7 @@ secondnavandroid: true
 
 <font size="4em" color="2bbbbb">1.一个是libs下带实时语音功能和实时视频功能的jar包和三个.so文件（jar包大小约为1.34M,三个.so文件文件约为4.76M）</font>
 
-<font size="4em" color="2bbbbb">2.如果你不需要实时语音功能，实时视频功能，那就直接用libs.without.audio文件夹下的jar包（jar包大小约为900多K）</font></b>
+<font size="4em" color="2bbbbb">2.如果你不需要实时语音功能，实时视频功能，那就直接用libs.without.audio文件夹下的jar包（jar包大小约为900多K.）</font></b>
 
 到此您已经下载好了SDK，下面开始学习SDK的集成使用吧！
 
