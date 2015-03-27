@@ -6,7 +6,7 @@ secondnavios: true
 
 # 错误列表
 
-SDK中对应头文件 EMErrorDefs.h
+SDK中对应头文件 EMErrorDefs.h。请根据类型去判断错误，不要根据数字去判断
 
 iOS中错误码的类为**EMError**。
 
