@@ -10,7 +10,7 @@ layout: overview1
 		<div class="demo-wrap clearfix">
 			<div class="demo-icon"><img src="/img/demo_icon.png" alt="环信logo"></div>
 			<div class="demo-content">
-				<a href="http://downloads.easemob.com/downloads/chatdemo-ui-2.1.6.apk" onclick="_hmt.push(['_trackEvent', 'IMDEMO', 'click', 'AndroidSDK_DEMO'])" class="demo_android">Android 下载</a><p>支持Android2.3及以上版本</p>
+				<a href="http://downloads.easemob.com/downloads/chatdemo-ui-2.1.7.apk" onclick="_hmt.push(['_trackEvent', 'IMDEMO', 'click', 'AndroidSDK_DEMO'])" class="demo_android">Android 下载</a><p>支持Android2.3及以上版本</p>
 				<a href="http://downloads.easemob.com/downloads/ChatDemo-UI.ipa" onclick="_hmt.push(['_trackEvent', 'IMDEMO', 'click', 'iOSSDK_DEMO'])" class="demo_iphone">iPhone 下载</a><p>支持iPhone4、iTouch2及以上设备也可在手机的safari浏览器中打开链接安装：<a href="http://www.easemob.com/d.html">http://www.easemob.com/d.html</a></p>
 			</div>
 			<div class="demo-2d">

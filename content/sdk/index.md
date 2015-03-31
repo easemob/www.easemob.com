@@ -28,7 +28,7 @@ var _hmt = _hmt || [];
 						<span class="andriod_icon"></span>
 						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.6.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.6　</span>
+						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.7　</span>
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
@@ -414,6 +414,22 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 
 			    <ul class="history_right">
 				    <h2 class="first">Andriod SDK 更新日志</h2>
+					 <li>
+	                    <h3><em></em><span>版本：V2.1.7 2015-03-31</span></h3>
+						<dl>
+						  <dt>
+						      <span>新功能/改进：<br/>
+						        1、改进从数据库load conversation的速度，对于大量消息数据和大量会话的情况加速明显<br/>	
+								2、优化获取好友，获取速度更快及更省流量<br/>
+								3、删除会话时可以选择不删除消息<br/>
+						         Bug Fix：<br/>
+						        1、修复瞬时接收大量消息时app可能crash的问题<br/>		
+						        2、修复readAck & deliverAck丢包问题<br/>
+						        3、修复某些情况下不能删除好友以及获取的好友列表不对的问题<br/>
+						      </span>
+						  </dt>
+						</dl>
+	                </li>     
 					 <li>
 	                    <h3><em></em><span>版本：V2.1.6 2015-03-06</span></h3>
 						<dl>
