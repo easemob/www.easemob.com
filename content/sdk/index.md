@@ -436,7 +436,7 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 						  <dt>
 						      <span>新功能/改进：<br/>
 						        1、增加扩展属性支持JsonObject和JsonArray<br/>
-						        2、增加新API EMChat.isLoggedIn()用来查询是否登录<br/>					        
+						        2、增加新API EMChat:isLoggedIn()用来查询是否登录过<br/>					        
 						         Bug Fix：<br/>
 						        1、修复DNS解析错误<br/>		
 						        2、修复实时音视频电话遇到的状态出错的问题<br/>
