@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150314.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150408.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.4　</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.5　</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -44,6 +44,27 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+			      		<li>
+                            <h3><em></em><span>版本：V2.1.5 2015-04-08</span></h3>
+                            <dl>
+                            <dt>
+                                <span>bug fix：<br/>
+
+                                1、调用申请加入群组[applyJoinPublicGroup:]相关接口，有时会出现发送申请失败的情况；<br/>
+								 2、调用[asyncUpdatePushOptions:]接口时, 未赋值的属性会被同步成默认值。<br/>
+                                </span>
+                                
+                                <span>新功能：<br/>
+                                1、判断当前socket是否连接。<br/>
+                                
+                                <span>细节调整：<br/>
+                                1、Error列表整理，请使用Error的枚举声明进行判断，不要使用对应的数字编号；<br/>
+								 2、EMCallManager文件结构整理。需要监听call相关的回调，请引用协议<EMCallManagerDelegate>;<br/>
+								 3、登陆成功之后，sdk内部不再自动获取群组列表，请自行调用。<br/>
+                            </dt>
+                            </dl>
+                        </li>
+                        
 			      		<li>
                             <h3><em></em><span>版本：V2.1.4 2015-03-14</span></h3>
                             <dl>
