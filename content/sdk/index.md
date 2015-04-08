@@ -56,11 +56,13 @@ var _hmt = _hmt || [];
                                 
                                 <span>新功能：<br/>
                                 1、判断当前socket是否连接。<br/>
+                                </span>
                                 
                                 <span>细节调整：<br/>
                                 1、Error列表整理，请使用Error的枚举声明进行判断，不要使用对应的数字编号；<br/>
 								 2、EMCallManager文件结构整理。需要监听call相关的回调，请引用协议<EMCallManagerDelegate>;<br/>
 								 3、登陆成功之后，sdk内部不再自动获取群组列表，请自行调用。<br/>
+								 </span>
                             </dt>
                             </dl>
                         </li>
