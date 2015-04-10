@@ -151,3 +151,46 @@ message.isGroup = NO; // 设置是否是群聊
 > 有时候需要在消息中携带一些扩展内容，用来实现特殊需求，比如阅后即焚等。EMMessage提供了ext属性，撰文用来存放扩展内容。**ext属性是NSDictionary类型，key和value必须是基本类型，且不能是json。**
 >
 > 可以这样使用：EMMessage.ext = @{@"key":@"value"};
+
+## 插入消息 {#insertMessage}
+
+<pre class="hll"><code class="language-java">
+    EMChatText *txt = [[EMChatText alloc] initWithText:@"test1"];
+    EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithChatObject:txt];
+    EMMessage *msg = [[EMMessage alloc] initWithReceiver:_conversation.chatter bodies:@[body]];
+    msg.isGroup = _conversation.isGroup;
+    msg.deliveryState = eMessageDeliveryState_Delivered;
+    [[EaseMob sharedInstance].chatManager insertMessageToDB:msg];
+</code></pre>
+
+## 更新消息属性 {#updateMessage}
+
+<pre class="hll"><code class="language-java">
+/*!
+ @method
+ @brief  更新消息发送状态
+ @result 是否更新成功
+ */
+- (BOOL)updateMessageDeliveryStateToDB;
+
+/*!
+ @method
+ @brief  更新消息扩展属性
+ @result 是否更新成功
+ */
+- (BOOL)updateMessageExtToDB;
+
+/*!
+ @method
+ @brief  更新消息的消息体
+ @result 是否更新成功
+ */
+- (BOOL)updateMessageBodiesToDB;
+
+/*!
+ @method
+ @brief  修改当前 message 的发送状态, 下载状态为 failed (crash 时或者 terminate)
+ @return 是否更新成功
+ */
+- (BOOL)updateMessageStatusFailedToDB;
+</code></pre>
