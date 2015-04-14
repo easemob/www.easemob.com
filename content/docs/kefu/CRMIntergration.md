@@ -1,5 +1,5 @@
 #集成指南#
-## 集成环信即时通讯系统 ##
+## 集成环信即时通讯系统 
 集成环信移动客服系统之前首先要集成环信即时通讯系统（IM系统），集成的过程是注册开发者账号，下载环信的SDK，然后在app中集成该SDK，并添加一个客服的入口，实现客户可以通过对这个入口的访问和这个固定的环信ID进行会话。
 
 集成环信的SDK等操作可以参照环信官网的文档进行，网址如下：
@@ -37,7 +37,7 @@ IOS：[https://github.com/easemob/kefu-app-android](https://github.com/easemob/k
 
  打开应用的详细信息，如下图：
 
-![环信开发者中心](/img/kefu/6.png)
+![环信开发者中心](/img/kefu/6.jpg)
 <center>App注册信息</center>
 
 
@@ -45,7 +45,7 @@ IOS：[https://github.com/easemob/kefu-app-android](https://github.com/easemob/k
 
 同时打开环信客服系统（网址：[http://kefu.easemob.com/](http://kefu.easemob.com/)），用管理员权限登录，登录以后点击左侧菜单，进入“设置——关联”界面，点击“新增关联”
 
-![关联](/img/kefu/7.png)
+![关联](/img/kefu/7.jpg)
 <center>设置关联</center>
 
 在弹出的新增关联窗口中填写关联信息，具体填写方法如下：
