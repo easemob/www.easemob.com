@@ -86,12 +86,12 @@ sidebar: kefusidebar
 
 打开应用的详细信息，如下图：
 
-![详细信息](/img/kefu/6.png)
+![详细信息](/img/kefu/6.jpg)
 <center>详细信息</center>
 
 同时打开环信客服系统（网址：[http://kefu.easemob.com/](http://kefu.easemob.com/)），用管理员权限登录，登录以后点击左侧菜单，进入“设置——关联”界面，点击“新增关联”
 
-![关联](/img/kefu/7.png)
+![关联](/img/kefu/7.jpg)
 
 在弹出的新增关联窗口中填写关联信息，具体填写方法如下：
 
