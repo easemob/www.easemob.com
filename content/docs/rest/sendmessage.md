@@ -98,7 +98,11 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
         "type" : "img",   // 消息类型
 	    "url": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/55f12940-64af-11e4-8a5b-ff2336f03252",  //成功上传文件返回的uuid
 	    "filename": "24849.jpg", // 指定一个文件名
-	    "secret": "VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_" // 成功上传文件后返回的secret
+	    "secret": "VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_" // 成功上传文件后返回的secret,
+	    "size" : {
+          "width" : 480,
+          "height" : 720
+      }
      },
     "from" : "jma2", //表示这个消息是谁发出来的, 可以没有这个属性, 那么就会显示是admin, 如果有的话, 则会显示是这个用户发出的    
     "ext" : { //扩展属性, 由app自己定义.可以没有这个字段，但是如果有，值不能是“ext:null“这种形式，否则出错
@@ -111,7 +115,7 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
 #### curl示例
 
 <pre class="hll"><code class="language-java">
-curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H 'Authorization: Bearer YWMtsFVigGSuEeSTc7k5183Z5QAAAUqzeFx_9IjRch-ZxNbIlBIvx_4GWvzheSU'  -d '{"target_type":"users","target":["l1k4vpllxp"],"from":"jma2","msg":{"type":"img","filename":"24849.jpg","secret":"VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_","url":"https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/55f12940-64af-11e4-8a5b-ff2336f03252"}}'
+curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H 'Authorization: Bearer YWMtsFVigGSuEeSTc7k5183Z5QAAAUqzeFx_9IjRch-ZxNbIlBIvx_4GWvzheSU'  -d '{"target_type":"users","target":["l1k4vpllxp"],"from":"jma2","msg":{"type":"img","filename":"24849.jpg","secret":"VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_","url":"https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/55f12940-64af-11e4-8a5b-ff2336f03252"},size:{"width":480,"height":720}}
 </code></pre>
 
 #### Response 示例：
