@@ -19,7 +19,7 @@ sidebar: kefusidebar
 ## 1. 注册登录
 打开浏览器，输入[http://kefu.easemob.com/register](http://kefu.easemob.com/register) ，或者在环信官网的客服产品页面中点击申请体验，进入如下界面。
 
-<center>![注册界面](/img/kefu/1.bmp)</center>
+![注册界面](/img/kefu/1.bmp)
 <center>注册界面</center>
 
 在注册界面中，输入企业的名称、联系电话、注册的用户名（登录邮箱）、密码等信息，点击注册完成操作。
@@ -29,7 +29,7 @@ sidebar: kefusidebar
 
 客服系统的首页显示当前的一些管理人员常用的数据信息，具体的数据信息详解如下：
 
-<center>![数据信息详解](/img/kefu/2.png)</center>
+![数据信息详解](/img/kefu/2.png)
 
 ##### 2.1. 今日新会话数
 指从今日0时开始，新发起的会话数。
@@ -59,13 +59,13 @@ sidebar: kefusidebar
 客服列表提供客服代表账号的维护功能，可以通过客服列表新增、修改或删除客服代表信息，具体功能及用法如下。
 首先在左侧菜单中点击“客服列表”按钮，点击以后在右侧的界面中新增、修改及删除客服代表。
 
-<center>![客服列表](/img/kefu/3.png)</center>
+![客服列表](/img/kefu/3.png)
 <center>客服列表</center>
 
 点击“新增客服”按钮，在弹出的界面中输入客服信息，并保存，完成新增客服操作。
 
 
-<center>![新增客服](/img/kefu/4.png)</center>
+![新增客服](/img/kefu/4.png)
 <center>新增客服</center>
 
 ##### 修改客服
@@ -81,17 +81,17 @@ sidebar: kefusidebar
 
 配置关联之前需要先集成环信IM系统，设置时请进入环信开者中心（网址：[https://console.easemob.com](https://console.easemob.com)）如下图，点击需要集成到客服系统中的app应用名称。
 
-<center>![环信开发者中心](/img/kefu/5.png)</center>
+![环信开发者中心](/img/kefu/5.png)
 <center>环信开发者中心</center>
 
 打开应用的详细信息，如下图：
 
-<center>![详细信息](/img/kefu/6.png)</center>
+![详细信息](/img/kefu/6.png)
 <center>详细信息</center>
 
 同时打开环信客服系统（网址：[http://kefu.easemob.com/](http://kefu.easemob.com/)），用管理员权限登录，登录以后点击左侧菜单，进入“设置——关联”界面，点击“新增关联”
 
-<center>![关联](/img/kefu/7.png)</center>
+![关联](/img/kefu/7.png)
 
 在弹出的新增关联窗口中填写关联信息，具体填写方法如下：
 
@@ -109,10 +109,10 @@ sidebar: kefusidebar
 
 填写完毕以后，点击保存按钮，保存新增的关联，如果保存完毕以后显示为通过和启动状态，说明关联设置成功，否则就是存在问题，需要做修改，此处如果有问题请和环信联系。
 
-<center>![正确配置](/img/kefu/8.png)</center>
+![正确配置](/img/kefu/8.png)
 <center>正确配置</center>
 
-<center>![正确配置](/img/kefu/9.png)</center>
+![正确配置](/img/kefu/9.png)
 <center>错误配置</center>
 
 关联配置完成以后，客服系统集成完成，客户就可以通过app中的IM和客服进行会话了。
@@ -121,17 +121,17 @@ sidebar: kefusidebar
 
 进入系统后，点击菜单栏中 “设置——个人信息”，进入个人信息设置界面，该界面中可以修改个人的昵称、密码、姓名、联系方式、工号等信息。
 
-<center>![个人设置](/img/kefu/10.png)</center>
+![个人设置](/img/kefu/10.png)
 <center>个人设置</center>
 
 ## 6. 客户标签设置
 
 进入系统后，点击菜单栏中 “设置——访客分类标签设置”，进入访客分类标签设置界面，该界面中可以新增、修改、删除客户分类标签，在此处设置以后，可以在回话时使用该设置，为访客进行标记 。
 
-<center>![设置访客分类标签1](/img/kefu/11.png)</center>
+![设置访客分类标签1](/img/kefu/11.png)
 <center> 设置访客分类标签</center>
 
-<center>![设置访客分类标签2](/img/kefu/12.png)</center>
+![设置访客分类标签2](/img/kefu/12.png)
 <center> 使用访客分类标签</center>
 
 ## 7. 会话小结设置
@@ -139,16 +139,16 @@ sidebar: kefusidebar
 会话小结是指在一通会话结束以后，客服根据会话情况，为本次会话做一个标识性的总结，会话小结的内容会因业务场景不同而不同，因此需要在管理面板中设置会话小结的内容。
 设置方法：在管理面板中，点击菜单栏上的 “设置——会话小结” 菜单，进入会话小结管理界面，可以在界面中新增、修改、删除会话小结，操作完毕后，点击“保存”按钮提交操作 。
 
-<center>![设置会话小结](/img/kefu/13.png)</center>
+![设置会话小结](/img/kefu/13.png)
 <center> 设置会话小结</center>
 
 结束会话时，需要选择会话小结，来给本次会话做一个标记，方便日后统计分析及跟踪客户需求
 
-<center>![使用会话小结](/img/kefu/14.png)</center>
+![使用会话小结](/img/kefu/14.png)
 <center>使用会话小结</center>
 
 ## 8. 企业信息设置
 设置企业信息，在菜单栏中点击“设置——企业信息设置”，设置企业信息。
 
-<center>![企业信息](/img/kefu/15.png)<center>
+![企业信息](/img/kefu/15.png)<center>
 <center>企业信息</center>
