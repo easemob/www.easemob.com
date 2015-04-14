@@ -35,7 +35,7 @@ IOS：[https://github.com/easemob/kefu-app-android](https://github.com/easemob/k
   设置关联过程如下：
 
 获得IM信息
-配置关联之前需要先集成环信IM系统，设置时请进入环信开者中心（网址：[http://console.easemob.com](http://console.easemob.com)）如下图，点击需要集成到客服系统中的app应用名称。
+配置关联之前需要先集成环信IM系统，设置时请进入环信开发者中心（网址：[http://console.easemob.com](http://console.easemob.com)）如下图，点击需要集成到客服系统中的app应用名称。
 
 ![环信开发者中心](/img/kefu/5.png)
 <center>环信管理后台</center>
