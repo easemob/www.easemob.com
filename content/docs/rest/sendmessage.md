@@ -98,7 +98,7 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
         "type" : "img",   // 消息类型
 	    "url": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/55f12940-64af-11e4-8a5b-ff2336f03252",  //成功上传文件返回的uuid
 	    "filename": "24849.jpg", // 指定一个文件名
-	    "secret": "VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_" // 成功上传文件后返回的secret,
+	    "secret": "VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_", // 成功上传文件后返回的secret
 	    "size" : {
           "width" : 480,
           "height" : 720
