@@ -3,7 +3,7 @@ title: REST API 集成指南
 secondnavkefu: true
 sidebar: kefusidebar
 ---
-## 集成环信即时通讯系统 ##{#1120}
+## 集成环信即时通讯系统 {#1120}
 
 集成环信移动客服系统之前首先要集成环信即时通讯系统（IM系统），集成的过程是注册开发者账号，下载环信的SDK，然后在app中集成该SDK，并添加一个客服的入口，实现客户可以通过对这个入口的访问和这个固定的环信ID进行会话。
 
@@ -28,7 +28,7 @@ sidebar: kefusidebar
 
 IOS：[https://github.com/easemob/kefu-app-android](https://github.com/easemob/kefu-app-android)
 
-## 设置关联 ##{#1121}
+## 设置关联 {#1121}
 
   设置关联是在环信移动客服系统中设置该账号的客服系统和移动即时通讯系统之间的连接匹配，设置关联以后，通过已经集成在APP中的入口，客户就可以和客服代表进行会话交互。
 

@@ -158,6 +158,7 @@ sidebar: kefusidebar
 ![企业信息设置](/img/kefu/15.png)<center>
 <center>企业信息设置</center>
 在企业信息设置页面中，设置系统的欢迎词和系统近期活动信息，欢迎词设置以后在客户访问系统时会自动回复客户，提高客户的好感。
-![欢迎信息显示](/img/kefu/17.png)<center>
+
+![欢迎信息显示](/img/kefu/17.png)
 <center>欢迎信息显示</center>
 
