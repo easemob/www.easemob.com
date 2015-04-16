@@ -24,9 +24,9 @@ sidebar: kefusidebar
 
 注：集成时也可以参照商城demo的模式进行集成，商城demo的源码地址如下：
 
-安卓：[https://github.com/easemob/kefu-app-android](https://github.com/easemob/kefu-app-android)
+安卓：[https://github.com/easemob/helpdeskdemo-android](https://github.com/easemob/helpdeskdemo-android)
 
-IOS：[https://github.com/easemob/kefu-app-android](https://github.com/easemob/kefu-app-android)
+IOS：[https://github.com/easemob/helpdeskdemo-ios](https://github.com/easemob/helpdeskdemo-ios)
 
 ## 设置关联 {#1121}
 
