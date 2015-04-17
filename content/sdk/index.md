@@ -26,9 +26,9 @@ var _hmt = _hmt || [];
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.7_r2.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.8.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.7　</span>
+						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.8　</span>
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
@@ -437,6 +437,23 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 
 			    <ul class="history_right">
 				    <h2 class="first">Andriod SDK 更新日志</h2>
+					<li>
+	                    <h3><em></em><span>版本：V2.1.8 2015-04-17</span></h3>
+						<dl>
+						  <dt>
+						      <span>新功能/改进：<br/>	
+							    1、提供新API回调接口用来替换broadcast的通知回调，并且把消息震动、响铃、通知栏提醒等操作提出到demo中，这样app可以更灵活的定制收到消息时的处理，例如可以实现免打扰功能，定制个性化通知等等 **具体可以参考函数EMChatManager.registerEventListener, 和UIDemo里的代码实现**<br/>	
+								2、新增守护进程，提高app放在后台一段时间后不被杀死的概率，** APP 需要把libeasemobservice.so复制到相应的lib目录下**<br/>
+								3、增加批量导入的接口EMChatManager.importMessages<br/>
+						         Bug Fix：<br/>
+						        1、修复群主踢人，APP收不到被踢通知的问题<br/>		
+						        2、修复发送透传CMD消息时，在没有ext字段时，消息反序列化出错的问题，这样会导致APP收不到CMD消息<br/>
+						        3、修复发送透传CMD消息时，获取不到JSONObject 或者 JSONArray 对象的问题<br/>
+								4、修复上一个版本的demo可能无法拉取更多消息的问题
+						      </span>
+						  </dt>
+						</dl>
+	                </li>     
 					 <li>
 	                    <h3><em></em><span>版本：V2.1.7 2015-03-31</span></h3>
 						<dl>
