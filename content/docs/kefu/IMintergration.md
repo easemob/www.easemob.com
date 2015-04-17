@@ -22,7 +22,13 @@ sidebar: kefusidebar
 
 下载环信Demo，参照环信Demo的源码集成环信单聊功能。
 
-在app中提供访问客服系统的入口（例：新增一个按钮“联系客服”），入口中设置和一个已经创建的环信ID（服务号）进行会话，具体的操作步骤参照如下文档：
+在app中提供访问客服系统的入口（例：新增一个按钮“联系客服”）
+
+![增加客服入口](/img/kefu/16.png)
+<center>增加客服入口</center>
+
+
+入口中设置和一个已经创建的环信ID（服务号）进行会话，具体的操作步骤参照如下文档：
 
 [集成IM系统](http://www.easemob.com/docs/gettingstart/#section-2)
 
