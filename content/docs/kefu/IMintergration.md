@@ -24,7 +24,7 @@ sidebar: kefusidebar
 
 在app中提供访问客服系统的入口（例：新增一个按钮“联系客服”）
 
-![增加客服入口](/img/kefu/16.png)
+![增加客服入口](/img/kefu/18.png)
 <center>增加客服入口</center>
 
 
