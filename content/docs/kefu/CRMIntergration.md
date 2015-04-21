@@ -8,7 +8,7 @@ sidebar: kefusidebar
 环信移动客服集成过程分为4步进行：如下图所示：
 
 ![集成步骤](/img/kefu/16.png)
-<center>集成步骤</center> 
+<center>集成步骤</center>
 
 具体操作如下：
 
