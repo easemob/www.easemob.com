@@ -689,15 +689,10 @@ curl -X DELETE -H "Authorization: Bearer YWMtSozP9jHNEeSQegV9EK5eAQAAAUlmBR2bTGr
 
 > **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
-可以通过增加查询条件来做到精确的删除, 例如:
-
- 按时间段来删除:
- 使用ql=created> {起始时间戳} and created < {结束时间戳} 的查询语句, 时间戳是timestamp类型的, 并且需要对ql进行http url encode
-
-- DELETE /{org_name}/{app_name}/users?ql=created > 1409506121910 and created < 1409576121910
+- DELETE /{org_name}/{app_name}/users?limit=5
 - Path : /{org_name}/{app_name}/users
 - HTTP Method : DELETE
-- URL Params : limit=30
+- URL Params : limit=5
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 无
 - Response Body ：  详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
