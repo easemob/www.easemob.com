@@ -20,10 +20,19 @@ sidebar: kefusidebar
 
 2、	集成IM并增加App端的客服入口：
 
-下载环信Demo，参照环信Demo的源码集成环信单聊功能。
+下载环信SDK及环信DEMO，参照环信Demo的源码集成环信单聊功能。
 
     注：客服系统使用的SDK与环信IM系统的SDK相同
     
+环信SDK下载链接：
+
+[http://www.easemob.com/sdk/](http://www.easemob.com/sdk/) 
+
+Demo源码下载地址：
+
+安卓：[https://github.com/easemob/helpdeskdemo-android](https://github.com/easemob/helpdeskdemo-android)
+
+IOS：[https://github.com/easemob/helpdeskdemo-ios](https://github.com/easemob/helpdeskdemo-ios)
 
 在app中提供访问客服系统的入口（例：新增一个按钮“联系客服”）
 
