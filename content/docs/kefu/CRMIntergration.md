@@ -22,6 +22,9 @@ sidebar: kefusidebar
 
 下载环信Demo，参照环信Demo的源码集成环信单聊功能。
 
+    注：客服系统使用的SDK与环信IM系统的SDK相同
+    
+
 在app中提供访问客服系统的入口（例：新增一个按钮“联系客服”）
 
 ![增加客服入口](/img/kefu/18.png)
