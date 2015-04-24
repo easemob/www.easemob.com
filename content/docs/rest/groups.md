@@ -157,8 +157,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 	"public":true, //是否是公开群, 此属性为必须的,为false时为私有群
 	"maxusers":300, //群组成员最大数(包括群主), 值为数值类型,默认值200,此属性为可选的
 	"approval":true, //加入公开群是否需要批准, 默认值是true（加群需要群主批准）, 此属性为可选的,只作用于公开群
-	"allowinvites":false //私有群是否可以群成员邀请，默认值是false(只允许创建者邀请),此属性为可选的,只作用于私有群
-	"owner":"jma1", //群组的管理员, 此属性为必须的
+	<!--"allowinvites":false //私有群是否可以群成员邀请，默认值是false(只允许创建者邀请),此属性为可选的,只作用于私有群-->"owner":"jma1", //群组的管理员, 此属性为必须的
 	"members":["jma2","jma3"] //群组成员,此属性为可选的,但是如果加了此项,数组元素至少一个（注：群主jma1不需要写入到members里面）
 }
 </code></pre>
