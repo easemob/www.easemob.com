@@ -511,13 +511,6 @@ if (!error) {
 - (void)group:(EMGroup *)group didLeave:(EMGroupLeaveReason)reason error:(EMError *)error;
 </code></pre>
 
-### * 被动退群
-
-会通过以下回调通知被踢者
-
-<pre class="hll"><code class="language-java">
-- (void)group:(EMGroup *)group didLeaveWithReason:(EMGroupLeaveReason)leaveReason;
-</code></pre>
 
 
 ## 解散群组 {#destroyGroup}
