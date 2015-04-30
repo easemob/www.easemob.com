@@ -26,7 +26,7 @@ var _hmt = _hmt || [];
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.8.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.8r2.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
 						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.8　</span>
 					</li>
@@ -437,6 +437,16 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 
 			    <ul class="history_right">
 				    <h2 class="first">Andriod SDK 更新日志</h2>
+					<li>
+	                    <h3><em></em><span>版本：V2.1.8r2 2015-04-30</span></h3>
+						<dl>
+						  <dt>
+						      <span>	
+							    修复前一个版本在某些情况下会导致卡ui的问题
+						      </span>
+						  </dt>
+						</dl>
+	                </li>    
 					<li>
 	                    <h3><em></em><span>版本：V2.1.8 2015-04-17</span></h3>
 						<dl>
