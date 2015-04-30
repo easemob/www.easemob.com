@@ -3,7 +3,7 @@ title: REST API 移动客服环信IM集成指南
 secondnavkefu: true
 sidebar: kefusidebar
 ---
-## 移动客服环信IM集成指南 {#IMInt}
+## 集成环信即时通讯系统
 
 环信移动客服集成过程分为4步进行：如下图所示：
 
@@ -14,7 +14,7 @@ sidebar: kefusidebar
 
 1、	注册开发者账号：
 
-登录环信开发者后台，注册环信开发者账号，申请Appkey，并且建立一个环信ID作为移动客服接入的服务号，具体的操作步骤参照如下文档：
+注册环信开发者账号，进入环信开发者后台，申请Appkey，具体的操作步骤参照如下文档：
 
 [开发者入门](http://www.easemob.com/docs/gettingstart/#section-1/)
 
