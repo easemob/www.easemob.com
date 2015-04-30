@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150408.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150430.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.5　</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.6　</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -45,24 +45,22 @@ var _hmt = _hmt || [];
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
 			      		<li>
-                            <h3><em></em><span>版本：V2.1.5 2015-04-08</span></h3>
+                            <h3><em></em><span>版本：V2.1.6 2015-04-30</span></h3>
                             <dl>
                             <dt>
-                                <span>bug fix：<br/>
+                                <span> 性能优化<br/>
 
-                                1、调用申请加入群组[applyJoinPublicGroup:]相关接口，有时会出现发送申请失败的情况；<br/>
-								 2、调用[asyncUpdatePushOptions:]接口时, 未赋值的属性会被同步成默认值。<br/>
+                                1、优化wifi && 非rely环境下的实时语音接通率；<br/>
+								 2、减小实时语音的静态库大小；<br/>
                                 </span>
                                 
                                 <span>新功能：<br/>
-                                1、判断当前socket是否连接。<br/>
+								1、添加实时视频功能，beta版。需要在demo中添加依赖库libc++.dylib，实时视频不支持后台运行。 <br/>
+								2、添加接口：离开群时是否自动删除群会话(Default is YES)，该接口的设置不会进行存储，需要开发者每次启动sdk之前设置一下
+[[EaseMob sharedInstance].chatManager isAutoDeleteConversationWhenLeaveGroup];<br/>
+								3、接口修改，具体请参考2.1.6release note  http://www.easemob.com/docs/ios/releaseNote2_1_6/
                                 </span>
-                                
-                                <span>细节调整：<br/>
-                                1、Error列表整理，请使用Error的枚举声明进行判断，不要使用对应的数字编号；<br/>
-								 2、EMCallManager文件结构整理。需要监听call相关的回调，请引用协议 EMCallManagerDelegate;<br/>
-								 3、登陆成功之后，sdk内部不再自动获取群组列表，请自行调用。<br/>
-								 </span>
+ 
                             </dt>
                             </dl>
                         </li>
