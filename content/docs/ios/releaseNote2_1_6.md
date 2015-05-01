@@ -23,6 +23,8 @@ SDK提供了一系列的从数据库中获取数据的方法，IOS的接口以lo
 IOS SDK在2.1.1版本开始，使用了sqlite，废弃了旧版的数据库，所以开发者们在写从2.1.0版本升级功能时，需要调用接口【importDataToNewDatabase】，在该接口成功之后，再调用load相关方法进行获取数据。
 IOS SDK从2.1.6版本开始，不再在内部进行load相关方法，开发者可以根据自己的需求，自主定制调用load接口。比如，登录成功之后，你只想获取群组，那你就可以只调用[loadAllMyGroupsFromDatabaseWithAppend2Chat:]方法；如果你想获取所有数据，就要调用[loadDataFromDatabase] ，so easy。
 
+5.	messageID统一由服务器生成，如果您之前使用demo的code，请将MessageModel的实现也做相应修改。
+
 
 ## IOS SDK性能优化：
 
