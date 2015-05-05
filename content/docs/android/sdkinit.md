@@ -102,7 +102,7 @@ new Thread(new Runnable() {
          EMChatManager.getInstance().createAccountOnServer(username, pwd);
       } catch (final Exception e) {
       //注册失败
-		String errorMsg = e.getMessage();
+		String errorCode=e.getErrorCode();
 		if(errorCode==EMError.NONETWORK_ERROR){
 		    Toast.makeText(getApplicationContext(), "网络异常，请检查网络！", Toast.LENGTH_SHORT).show();
 		}else if(errorCode==EMError.USER_ALREADY_EXISTS){
