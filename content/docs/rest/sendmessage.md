@@ -115,7 +115,7 @@ curl -X POST -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9Oc
 #### curl示例
 
 <pre class="hll"><code class="language-java">
-curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H 'Authorization: Bearer YWMtsFVigGSuEeSTc7k5183Z5QAAAUqzeFx_9IjRch-ZxNbIlBIvx_4GWvzheSU'  -d '{"target_type":"users","target":["l1k4vpllxp"],"from":"jma2","msg":{"type":"img","filename":"24849.jpg","secret":"VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_","url":"https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/55f12940-64af-11e4-8a5b-ff2336f03252"},size:{"width":480,"height":720}}
+curl -X POST -i 'https://a1.easemob.com/easemob-demo/chatdemoui/messages'   -H 'Authorization: Bearer YWMtsFVigGSuEeSTc7k5183Z5QAAAUqzeFx_9IjRch-ZxNbIlBIvx_4GWvzheSU'  -d '{"target_type":"users","target":["l1k4vpllxp"],"from":"jma2","msg":{"type":"img","filename":"24849.jpg","secret":"VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_","url":"https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/55f12940-64af-11e4-8a5b-ff2336f03252"},"size":{"width":480,"height":720}}
 </code></pre>
 
 #### Response 示例：
