@@ -10,10 +10,11 @@ sidebar: gettingstartsidebar
 
 ###方法一 群成员信息保存在环信服务器
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;环信服务器维护：groupid,owner,memeber,maxUser。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP服务器保存除以上属性外的其他数据</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;环信服务器维护：groupid,owner,memeber,maxUser。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP服务器保存除以上属性外的其他数据
 	
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由手机端创建群：通过SDK提供的方法创建某群，创建成功后把所有数据（群ID，群头像，群名称，标签等信息）放到APP服务器留存，当用户通过条件（附近的群、条件筛选等）得到群列表，查看群信息时，通过groupid到自己服务器获取群的用户数据（群名称、类别、头像等信息），从环信服务器获取群的群成员信息。</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由手机端创建群：通过SDK提供的方法创建某群，创建成功后把所有数据（群ID，群头像，群名称，标签等信息）放到APP服务器留存，当用户通过条件（附近的群、条件筛选等）得到群列表，查看群信息时，通过groupid到自己服务器获取群的用户数据（群名称、类别、头像等信息），从环信服务器获取群的群成员信息。
 
 ![alt text](/creategroup_1.png "")
 
