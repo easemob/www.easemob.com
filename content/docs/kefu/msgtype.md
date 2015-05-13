@@ -61,6 +61,63 @@ sidebar: kefusidebar
 </code></pre>
 
 <img src="/img/kefu/msgtype/ordermsg.png" width="350" style="display:block; margin:0 auto;"/>
-<center>订单消息</center>
+
+
+
+## 移动端消息示例 (用户轨迹消息) {#example}
+
+IOS 示例
+
+<pre class="hll"><code class="language-objective_c highlight">
+NSString *title = [info objectForKey:@"title"];
+NSString *desc = [info objectForKey:@"desc"];
+NSString *price = [info objectForKey:@"price"];
+NSString *imageUrl = [info objectForKey:@"img_url"];
+NSString *itemUrl = [info objectForKey:@"item_url"];
+
+NSMutableDictionary *itemDic = [NSMutableDictionary dictionary];
+if (title) {
+  [itemDic setObject:title forKey:@"title"];
+}
+if (desc) {
+  [itemDic setObject:desc forKey:@"desc"];
+}
+if (price) {
+  [itemDic setObject:price forKey:@"price"];
+}
+if (imageUrl) {
+  [itemDic setObject:imageUrl forKey:@"img_url"];
+}
+if (itemUrl) {
+  [itemDic setObject:itemUrl forKey:@"item_url"];
+}
+NSDictionary *extDic = @{@"msgtype":@{type:itemDic}};
+EMChatText *text = [[EMChatText alloc] initWithText:@"客服图文混排消息"];
+EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithChatObject:text];
+EMMessage *message = [[EMMessage alloc] initWithReceiver:@"username" bodies:[NSArray arrayWithObject:body]];
+message.ext = extDic;
+[[EaseMob sharedInstance].chatManager asyncSendMessage:message progress:nil];
+</code></pre>
+
+ANDROID 示例
+
+<pre class="hll"><code class="language-java highlight">
+TextMessageBody txtBody = new TextMessageBody("客服图文混排消息");
+message.addBody(txtBody);
+JSONObject jsonMsgType = new JSONObject();
+JSONObject jsonTrack = new JSONObject();
+try{
+  jsonTrack.put("title", title_new);
+  jsonTrack.put("price", price_new);
+  jsonTrack.put("desc", desc_new);
+  jsonTrack.put("img_url", img_url_new);
+  jsonTrack.put("item_url", item_url_new);
+  jsonMsgType.put("track", jsonTrack);
+}
+catch(JSONException e){
+  e.printStackTrace();
+}
+message.setAttribute("msgtype", jsonMsgType);
+</code></pre>
 
 
