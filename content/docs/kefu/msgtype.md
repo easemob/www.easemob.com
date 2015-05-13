@@ -32,7 +32,7 @@ sidebar: kefusidebar
 }
 </code></pre>
 
-![用户轨迹消息](/img/kefu/msgtype/trackmsg.png)
+<img src="/img/kefu/msgtype/trackmsg.png" width="350" style="display:block; margin:0 auto;"/>
 <center>用户轨迹消息</center>
 
 ## 订单消息 {#ordermsg}
@@ -60,7 +60,7 @@ sidebar: kefusidebar
 }
 </code></pre>
 
-![订单消息](/img/kefu/msgtype/ordermsg.png)
+<img src="/img/kefu/msgtype/ordermsg.png" width="350" style="display:block; margin:0 auto;"/>
 <center>订单消息</center>
 
 
