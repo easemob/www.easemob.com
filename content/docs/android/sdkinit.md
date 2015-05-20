@@ -102,7 +102,7 @@ new Thread(new Runnable() {
          EMChatManager.getInstance().createAccountOnServer(username, pwd);
       } catch (final Exception e) {
       //注册失败
-		String errorCode=e.getErrorCode();
+		int errorCode=e.getErrorCode();
 		if(errorCode==EMError.NONETWORK_ERROR){
 		    Toast.makeText(getApplicationContext(), "网络异常，请检查网络！", Toast.LENGTH_SHORT).show();
 		}else if(errorCode==EMError.USER_ALREADY_EXISTS){
@@ -133,7 +133,7 @@ EMChatManager.getInstance().login(userName,password,new EMCallBack() {//回调
 	public void onSuccess() {
 		runOnUiThread(new Runnable() {
 			public void run() {
-				EMGroupManager.getInstance().loadAllGroups()；
+				EMGroupManager.getInstance().loadAllGroups();
 				EMChatManager.getInstance().loadAllConversations();
 				Log.d("main", "登陆聊天服务器成功！");		
 			}

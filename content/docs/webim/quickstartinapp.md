@@ -118,7 +118,7 @@ $(function() {
 			alert("成功登录");
 			conn.setPresence();
 		}
-	})；
+	});
 });
 </code></pre>
 

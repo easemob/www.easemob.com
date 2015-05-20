@@ -107,7 +107,7 @@ onQueue:(dispatch_queue_t)aQueue;
 通过以上操作获取到语音的EMChatVoice，然后进行下一步操作
 
 <pre class="hll"><code class="language-java">
-EMVideoMessageBody *body = [[EMVideoMessageBody alloc] initWithChatObject:videoChat];
+EMVoiceMessageBody *body = [[EMVoiceMessageBody alloc] initWithChatObject:voice];
 // 生成message
 EMMessage *message = [[EMMessage alloc] initWithReceiver:@"6001" bodies:@[body]];
 message.isGroup = NO; // 设置是否是群聊
