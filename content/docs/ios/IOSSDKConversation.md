@@ -13,11 +13,11 @@ secondnavios: true
 根据chatter创建一个conversation。
 
 <pre class="hll"><code class="language-java">
-EMConversation *conversation = [[EaseMob sharedInstance].chatManager conversationForChatter:@"8001" isGroup:NO];
+EMConversation *conversation = [[EaseMob sharedInstance].chatManager conversationForChatter:@"8001" conversationType:eConversationTypeChat];
 </code></pre>
 
 *	conversationForChatter:获取或创建与8001的会话
-*	isGroup:是否是群聊（如果上面传入的Chatter是群id，则此处为YES）
+*	conversationType:会话类型
 
 ## 删除会话  {#removeconversation}
 
@@ -55,11 +55,11 @@ SDK中提供了三种获取会会话列表的方法
 1、获取或创建
 
 <pre class="hll"><code class="language-java">
-EMConversation *conversation = [[EaseMob sharedInstance].chatManager conversationForChatter:@"8001" isGroup:NO];
+EMConversation *conversation = [[EaseMob sharedInstance].chatManager conversationForChatter:@"8001" conversationType:eConversationTypeChat];
 </code></pre>
 
 *	conversationForChatter:获取或创建与8001的会话
-*	isGroup:是否是群聊（如果上面传入的Chatter是群id，则此处为YES）
+*	isGroup:会话类型
 
 2、获取内存中所有会话
 
