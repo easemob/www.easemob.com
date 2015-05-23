@@ -444,11 +444,11 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 								2、增加分页获取公开群API<br/>
 								3、统一API访问，所有群和新加的聊天室API都通过EMChatManager访问优化音视频，提高接通率，和接通速度<br/>
 								4、改进收到离线消息时的震动提示以及UI刷新
+								5、其他内部优化
 						         Bug Fix：<br/>
 						        1、修复demo将联系人移入黑名单的时候程序可能crash的问题<br/>		
 						        2、修复demo进入群详情页面，应用可能crash的问题<br/>
 						        3、修复demo某些情况下主界面未读消息不刷新的问题<br/>
-								4、其他内部优化
 						      </span>
 						  </dt>
 						</dl>
