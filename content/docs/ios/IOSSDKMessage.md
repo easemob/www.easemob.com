@@ -18,7 +18,9 @@ EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithChatObject:txtChat]
 
 // 生成message
 EMMessage *message = [[EMMessage alloc] initWithReceiver:@"6001" bodies:@[body]];
-message.isGroup = NO; // 设置是否是群聊
+message.messageType = eMessageTypeChat; // 设置为单聊消息
+//message.messageType = eConversationTypeGroupChat;// 设置为群聊消息
+//message.messageType = eConversationTypeChatRoom;// 设置为聊天室消息
 </code></pre>
 
 ## 图片消息构造 {#imagealloc}
@@ -29,7 +31,9 @@ EMImageMessageBody *body = [[EMImageMessageBody alloc] initWithChatObject:imgCha
 
 // 生成message
 EMMessage *message = [[EMMessage alloc] initWithReceiver:@"6001" bodies:@[body]];
-message.isGroup = NO; // 设置是否是群聊
+message.messageType = eMessageTypeChat; // 设置为单聊消息
+//message.messageType = eConversationTypeGroupChat;// 设置为群聊消息
+//message.messageType = eConversationTypeChatRoom;// 设置为聊天室消息
 </code></pre>
 
 ## 位置消息构造 {#locationalloc}
@@ -40,77 +44,23 @@ EMLocationMessageBody *body = [[EMLocationMessageBody alloc] initWithChatObject:
 
 // 生成message
 EMMessage *message = [[EMMessage alloc] initWithReceiver:@"6001" bodies:@[body]];
-message.isGroup = NO; // 设置是否是群聊
+message.messageType = eMessageTypeChat; // 设置为单聊消息
+//message.messageType = eConversationTypeGroupChat;// 设置为群聊消息
+//message.messageType = eConversationTypeChatRoom;// 设置为聊天室消息
 </code></pre>
 
 ## 语音消息构造 {#audioalloc}
 
-1、开始录音
-
 <pre class="hll"><code class="language-java">
-/*!
-@method
-@brief 开始录制音频
-@discussion
-@param pError 错误信息
-@result
-*/
-- (void)startRecordingAudioWithError:(NSError **)pError;
-</code></pre>
-
-2、取消录音
-
-<pre class="hll"><code class="language-java">
-/*!
-@method
-@brief 异步方法, 取消录制音频
-@discussion 取消录制后, EMChatManagerDelegateMedia中的didCancelRecordAudio:error:回调会被触发
-@result
-*/
-- (void)asyncCancelRecordingAudio;
-
-/*!
-@method
-@brief 异步方法, 取消录制音频
-@discussion
-@param completion 回调
-@param aQueue     回调时的线程
-@result
-*/
-- (void)asyncCancelRecordingAudioWithCompletion:(void (^)(EMChatVoice *aChatVoice, EMError *error))completion
-onQueue:(dispatch_queue_t)aQueue;
-</code></pre>
-
-3、停止录音
-
-<pre class="hll"><code class="language-java">
-/*!
-@method
-@brief 异步方法, 停止录制音频
-@discussion 录制完成后, EMChatManagerDelegateMedia中的didRecordAudio:error:回调会被触发
-@result
-*/
-- (void)asyncStopRecordingAudio;
-
-/*!
-@method
-@brief 异步方法, 停止录制音频
-@discussion
-@param completion 回调
-@param aQueue     回调时的线程
-@result
-*/
-- (void)asyncStopRecordingAudioWithCompletion:(void (^)(EMChatVoice *aChatVoice, NSError *error))completion
-onQueue:(dispatch_queue_t)aQueue;
-</code></pre>
-
-通过以上操作获取到语音的EMChatVoice，然后进行下一步操作
-
-<pre class="hll"><code class="language-java">
+EMChatVoice *voice = [[EMChatVoice alloc] initWithFile:recordPath displayName:@"audio"];
+voice.duration = aDuration;
 EMVoiceMessageBody *body = [[EMVoiceMessageBody alloc] initWithChatObject:voice];
+
 // 生成message
 EMMessage *message = [[EMMessage alloc] initWithReceiver:@"6001" bodies:@[body]];
-message.isGroup = NO; // 设置是否是群聊
+message.messageType = eMessageTypeChat; // 设置为单聊消息
+//message.messageType = eConversationTypeGroupChat;// 设置为群聊消息
+//message.messageType = eConversationTypeChatRoom;// 设置为聊天室消息
 </code></pre>
 
 ## 视频消息构造 {#videoalloc}
@@ -120,7 +70,9 @@ EMChatVideo *videoChat = [[EMChatVideo alloc] initWithFile:localPath displayName
 EMVideoMessageBody *body = [[EMVideoMessageBody alloc] initWithChatObject:videoChat];
 // 生成message
 EMMessage *message = [[EMMessage alloc] initWithReceiver:@"6001" bodies:@[body]];
-message.isGroup = NO; // 设置是否是群聊
+message.messageType = eMessageTypeChat; // 设置为单聊消息
+//message.messageType = eConversationTypeGroupChat;// 设置为群聊消息
+//message.messageType = eConversationTypeChatRoom;// 设置为聊天室消息
 </code></pre>
 
 ## 文件消息构造 {#filealloc}
@@ -130,7 +82,9 @@ EMChatFile *fileChat = [[EMChatFile alloc] initWithFile:localPath displayName:@"
 EMFileMessageBody *body = [[EMFileMessageBody alloc] initWithChatObject:fileChat];
 // 生成message
 EMMessage *message = [[EMMessage alloc] initWithReceiver:@"6001" bodies:@[body]];
-message.isGroup = NO; // 设置是否是群聊
+message.messageType = eMessageTypeChat; // 设置为单聊消息
+//message.messageType = eConversationTypeGroupChat;// 设置为群聊消息
+//message.messageType = eConversationTypeChatRoom;// 设置为聊天室消息
 </code></pre>
 
 ## 透传消息构造 {#cmdalloc}
@@ -143,7 +97,9 @@ cmdChat.cmd = @"reason";
 EMCommandMessageBody *body = [[EMCommandMessageBody alloc] initWithChatObject:cmdChat];
 // 生成message
 EMMessage *message = [[EMMessage alloc] initWithReceiver:@"6001" bodies:@[body]];
-message.isGroup = NO; // 设置是否是群聊
+message.messageType = eMessageTypeChat; // 设置为单聊消息
+//message.messageType = eConversationTypeGroupChat;// 设置为群聊消息
+//message.messageType = eConversationTypeChatRoom;// 设置为聊天室消息
 </code></pre>
 
 ## 自定义消息扩展 {#ext}
@@ -157,10 +113,12 @@ message.isGroup = NO; // 设置是否是群聊
 <pre class="hll"><code class="language-java">
     EMChatText *txt = [[EMChatText alloc] initWithText:@"test1"];
     EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithChatObject:txt];
-    EMMessage *msg = [[EMMessage alloc] initWithReceiver:_conversation.chatter bodies:@[body]];
-    msg.isGroup = _conversation.isGroup;
-    msg.deliveryState = eMessageDeliveryState_Delivered;
-    [[EaseMob sharedInstance].chatManager insertMessageToDB:msg];
+    EMMessage *message = [[EMMessage alloc] initWithReceiver:_conversation.chatter bodies:@[body]];
+    message.messageType = eMessageTypeChat; // 设置为单聊消息
+    //message.messageType = eConversationTypeGroupChat;// 设置为群聊消息
+    //message.messageType = eConversationTypeChatRoom;// 设置为聊天室消息
+    message.deliveryState = eMessageDeliveryState_Delivered;
+    [[EaseMob sharedInstance].chatManager insertMessageToDB:message];
 </code></pre>
 
 ## 更新消息属性 {#updateMessage}
