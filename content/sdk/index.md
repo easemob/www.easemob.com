@@ -65,6 +65,30 @@ var _hmt = _hmt || [];
                             </dl>
                         </li>
                         
+                        	<li>
+                            <h3><em></em><span>版本：V2.1.5 2015-04-08</span></h3>
+                            <dl>
+                            <dt>
+                                <span>bug fix：<br/>
+
+                                1、调用申请加入群组[applyJoinPublicGroup:]相关接口，有时会出现发送申请失败的情况；<br/>
+								 2、调用[asyncUpdatePushOptions:]接口时, 未赋值的属性会被同步成默认值。<br/>
+                                </span>
+                                
+                                <span>新功能：<br/>
+                                1、判断当前socket是否连接。<br/>
+                                </span>
+                                
+                                <span>细节调整：<br/>
+                                1、Error列表整理，请使用Error的枚举声明进行判断，不要使用对应的数字编号；<br/>
+								 2、EMCallManager文件结构整理。需要监听call相关的回调，请引用协议 EMCallManagerDelegate;<br/>
+								 3、登陆成功之后，sdk内部不再自动获取群组列表，请自行调用。<br/>
+								 </span>
+                            </dt>
+                            </dl>
+                        </li>
+                        
+                        
 			      		<li>
                             <h3><em></em><span>版本：V2.1.4 2015-03-14</span></h3>
                             <dl>
