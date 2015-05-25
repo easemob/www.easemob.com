@@ -8,6 +8,23 @@ sidebar: restsidebar
 
 环信提供了REST API 来管理app中的聊天室
 
+
+## 聊天室数据结构 {#schema}
+
+| 名称              |     类型        |       描述             |
+|------------------|:----------------:|--------------------- |
+| id        |  String       |  聊天室D, 聊天室唯一标识符 ， 由环信服务器生成 。 |
+| name      |  String       | 聊天室名称 ，任意字符串 |
+| description    |  String | 聊天室描述 ，任意字符串 |
+| maxusers         |  Integer  | 聊天室成员上限，创建聊天室的时候设置，可修改  |
+| affiliations_count | Integer | 现有成员总数  |
+| affiliations     |  Array | 现有成员列表, 包含了owner和member, 例如 "affiliations":[{"owner": "13800138001"},{"member":"v3y0kf9arx"},{"member":"xc6xrnbzci"}]  |
+| owner            |  String | 聊天室创建者的username， 例如：{"owner": "13800138001"} |
+| member           |  String | 聊天室成员的username ， 例如： {"member":"xc6xrnbzci"} |
+
+
+
+
 ## 创建聊天室 {#createchatrooms}
 > **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
@@ -16,6 +33,7 @@ sidebar: restsidebar
 - URL Params ： 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ：<br>
+
 <pre class="hll"><code class="language-java">
 {
 	"name":"testchatroom", //聊天室名称, 此属性为必须的<br>
@@ -24,6 +42,7 @@ sidebar: restsidebar
 	"owner":"jma1", //聊天室的管理员, 此属性为必须的<br>
 	"members":["jma2","jma3"] //聊天室成员,此属性为可选的,但是如果加了此项,数组元素至少一个（注：群主jma1不需要写入到members里面）<br>
 }
+
 </code></pre>
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
 - 可能的错误码：  <br/>401（未授权[无token,token错误,token过期]） <br/>5xx <br/> 详见：[REST接口错误码](http://www.easemob.com/docs/helps/errorcodes/) 
@@ -66,12 +85,15 @@ curl -X POST 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms' -H 'Auth
 - URL Params ： 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
 - Request Body ： 
+
 <pre class="hll"><code class="language-java">
- {
+
+   {
     "name":"test chatroom", //聊天室名称 
     "description":"update chatroominfo", //聊天室描述 
     "maxusers":200, //聊天室成员最大数(包括群主), 值为数值类型
-    } 
+   } 
+    
 </code></pre>
 
 - Response Body ： 详情参见示例返回值, 返回的json数据中会包含除上述属性之外的一些其他信息，均可以忽略。
