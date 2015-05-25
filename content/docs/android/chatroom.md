@@ -6,7 +6,7 @@ secondnavandroid: true
 
 #聊天室功能集成
 
-环信聊天室模型支持最大成员数为5000，和群组不同，聊天室内成员离线后，服务器当监听到此成员不在现后不在会给此成员再发推送
+环信聊天室模型支持最大成员数为5000，和群组不同，聊天室内成员离线后，服务器当监听到此成员不在线后不在会给此成员再发推送
 
 * 支持最大成员5000
 * 环信的聊天室内仅有有owner和游客
@@ -19,19 +19,19 @@ secondnavandroid: true
 REST
 
 * 支持建群
-  * curl -X POST "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer YWMt66kHBOdfEeSdBzF8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOXDi8dU" -d '{"owner":"u1","members":["u1","u2"],"maxusers":5000,"groupname":"chatroom title","desc":"chatroom description"}'
+  * curl -X POST "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer 8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOX" -d '{"owner":"u1","members":["u1","u2"],"maxusers":5000,"groupname":"chatroom title","desc":"chatroom description"}'
 
 * 支持查询所有APP聊天室
-  * curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer YWMt66kHBOdfEeSdBzF8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOXDi8dU"
+  * curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer 8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOX"
 
 * 支持查询聊天室详情
-  * curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235" -H "Authorization: Bearer YWMt66kHBOdfEeSdBzF8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOXDi8dU"
+  * curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235" -H "Authorization: Bearer 8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOX"
 
 * 支持聊天室踢人
-  * curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235/users/u2' -H "Authorization: Bearer YWMt66kHBOdfEeSdBzF8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOXDi8dU"
+  * curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235/users/u2' -H "Authorization: Bearer 8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOX"
 
 * 支持删除聊天室
-  * curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/143228117786605' -H "Authorization: Bearer YWMtnPuprPVdEeScco_5w2CuJQAAAU5nqqgFhSxEHmn8f7sUiR9KxtN-XyXAxUo"
+  * curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/143228117786605' -H "Authorization: Bearer 8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOX"
 
 
 ###客户端
@@ -49,7 +49,8 @@ __加入聊天室__
 
 参数：
 
-roomId: 聊天室Id, 一般都会重自己APP的后台获取
+roomId: 聊天室Id, 一般都会从自己APP的后台获取
+
 callback: `EMValueCallBack<EMChatRoom>` 加入成功返回聊天室简要信息，加入失败返回error
 
 Example:
@@ -283,10 +284,7 @@ __聊天室回调监听__
         });
         
 
-`public void removeChatRoomChangeListener(EMChatRoomChangeListener listener){
-			EMMultiUserChatManager.getInstance().removeChatRoomChangeListener(listener);
-		}`
-
+`public void removeChatRoomChangeListener(EMChatRoomChangeListener listener)`
 移除聊天室监听
 
 
