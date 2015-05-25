@@ -19,19 +19,19 @@ secondnavandroid: true
 REST
 
 * 支持建群
-  * curl -X POST "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer 8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOX" -d '{"owner":"u1","members":["u1","u2"],"maxusers":5000,"groupname":"chatroom title","desc":"chatroom description"}'
+  * curl -X POST "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer ${token}" -d '{"owner":"u1","members":["u1","u2"],"maxusers":5000,"groupname":"chatroom title","desc":"chatroom description"}'
 
 * 支持查询所有APP聊天室
-  * curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer 8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOX"
+  * curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer ${token}"
 
 * 支持查询聊天室详情
-  * curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235" -H "Authorization: Bearer 8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOX"
+  * curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235" -H "Authorization: Bearer ${token}"
 
 * 支持聊天室踢人
-  * curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235/users/u2' -H "Authorization: Bearer 8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOX"
+  * curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235/users/u2' -H "Authorization: Bearer ${token}"
 
 * 支持删除聊天室
-  * curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/143228117786605' -H "Authorization: Bearer 8DBCdGAAAAU4L-azfuPA9RobgM8SXITeBtRnQOX"
+  * curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/143228117786605' -H "Authorization: Bearer ${token}"
 
 
 ###客户端
@@ -54,6 +54,8 @@ roomId: 聊天室Id, 一般都会从自己APP的后台获取
 callback: `EMValueCallBack<EMChatRoom>` 加入成功返回聊天室简要信息，加入失败返回error
 
 Example:
+
+<pre class="hll"><code class="language-java">
         
     public void onChatroomViewCreation{
     
@@ -113,11 +115,11 @@ Example:
 
         // 初始化db时，每个conversation加载数目是getChatOptions().getNumberOfMessagesLoaded
         // 这个数目如果比用户期望进入会话界面时显示的个数不一样，就多加载一些
-        final List<EMMessage> msgs = conversation.getAllMessages();
+        final List&lt;EMMessage&gt; msgs = conversation.getAllMessages();
         int msgCount = msgs != null ? msgs.size() : 0;
-        if (msgCount < conversation.getAllMsgCount() && msgCount < pagesize) {
+        if (msgCount &lt; conversation.getAllMsgCount() && msgCount &lt; pagesize) {
             String msgId = null;
-            if (msgs != null && msgs.size() > 0) {
+            if (msgs != null && msgs.size() &gt; 0) {
                 msgId = msgs.get(0).getMsgId();
             }
             if (chatType == CHATTYPE_SINGLE) {
@@ -166,12 +168,18 @@ Example:
             
         });
 	}
+</code></pre>	
+
 	
 **请注意对于聊天室模型，请一定要等到Join回调成功后再去初始化conversation**
 
 __离开聊天室__
 
-`public void leaveChatRoom(String roomId)`
+<pre class="hll"><code class="language-java">
+public void leaveChatRoom(String roomId)
+
+</code></pre>
+
 
 参数:
 
@@ -199,6 +207,7 @@ cursor : 后台需要的cursor id，根据此Id再次获取pageSize的条目，�
 
 __聊天室回调监听__
 
+<pre class="hll"><code class="language-java">
     public interface EMChatRoomChangeListener {
     /**
      * 聊天室被解散。
@@ -244,6 +253,9 @@ __聊天室回调监听__
      */
     void onMemberKicked(String roomId, String roomName, String participant);
     }
+</code></pre>
+
+
 
 应用可以通过注册聊天室监听，进行对UI的刷新
 
@@ -254,6 +266,7 @@ __聊天室回调监听__
 
 在会话页面注册监听，来监听成员被踢和聊天室被删除
 
+<pre class="hll"><code class="language-java">
     EMChatManager.getInstance().addChatRoomChangeListener(new EMChatRoomChangeListener(){
 
             @Override
@@ -282,10 +295,15 @@ __聊天室回调监听__
             }
             
         });
-        
+</code></pre>
 
-`public void removeChatRoomChangeListener(EMChatRoomChangeListener listener)`
 移除聊天室监听
+
+<pre class="hll"><code class="language-java">
+    public void removeChatRoomChangeListener(EMChatRoomChangeListener listener)
+    
+</code></pre>
+
 
 
 

@@ -39,14 +39,15 @@ IOS SDK从2.1.6版本开始，不再在内部进行load相关方法，开发者�
 
 2.	添加接口：离开群时是否自动删除群会话(Default is YES)，该接口的设置不会进行存储，需要开发者每次启动sdk之前设置一下
 
-<pre class="hll">
+<pre class="hll"><code class="language-java">
 [[EaseMob sharedInstance].chatManager isAutoDeleteConversationWhenLeaveGroup];
-</pre>
+</code></pre>
 
 ## new api
 
-A、IChatManagerSettingOptions
-<pre class="hll">
+### IChatManagerSettingOptions
+
+<pre class="hll"><code class="language-java">
 /*!
  @property
  @brief 离开群时是否自动删除群会话(Default is YES)
@@ -54,10 +55,10 @@ A、IChatManagerSettingOptions
  设置为YES时, 当离开该群时会自动删除该群对应的会话
  */
  @property (nonatomic) BOOL isAutoDeleteConversationWhenLeaveGroup;
-</pre>
+</code></pre>
 
-B、IChatManagerBuddy
-<pre class="hll">
+### IChatManagerBuddy
+<pre class="hll"><code class="language-java">
 /*!
  @method
  @brief 异步方法，将username的用户加到黑名单（该用户不会被从好友中删除，若想删除，请自行调用删除接口）
@@ -109,13 +110,13 @@ B、IChatManagerBuddy
 - (void)asyncUnblockBuddy:(NSString *)username
          withCompletion:(void (^)(NSString *username, EMError *error))completion
                 onQueue:(dispatch_queue_t)aQueue; 
-</pre>
+</code></pre>
  
  
 ##	change api
 
-A、EMChatManagerBuddyDelegate
-<pre class="hll">
+### EMChatManagerBuddyDelegate
+<pre class="hll"><code class="language-java">
 /*!
  @method
  @brief 将好友加到黑名单完成后的回调
@@ -133,4 +134,4 @@ A、EMChatManagerBuddyDelegate
  @param pError      错误信息
  */
 - (void)didUnblockBuddy:(NSString *)username error:(EMError *)pError;
-</pre>
+</code></pre>
