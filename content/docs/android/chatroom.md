@@ -62,7 +62,7 @@ Example:
         findViewById(R.id.container_to_group).setVisibility(View.GONE);
         
         final ProgressDialog pd = ProgressDialog.show(this, "", "Joining......");
-        EMChatManager.getInstance().joinChatRoom(toChatUsername, new EMValueCallBack<EMChatRoom>() {
+        EMChatManager.getInstance().joinChatRoom(toChatUsername, new EMValueCallBack&lt;EMChatRoom&gt;() {
         
         @Override
         public void onSuccess(EMChatRoom value) {
@@ -188,8 +188,12 @@ roomId: 要退出的聊天室的Id
 此方法是异步方法，不会阻塞当前线程。此方法没有回调，原因是在任何场景下退出聊天室，**SDK保证退出成功，无论有网出错，还是无网退出**。
 对于聊天室模型，一般退出会话页面，就会调用此leave方法。
 
-`public EMCursorResult<EMChatRoom> fetchPublicChatRoomsFromServer(int pageSize, String cursor) throws EaseMobException
-`
+<pre class="hll"><code class="language-java">
+
+public EMCursorResult&lt;EMChatRoom&gt; fetchPublicChatRoomsFromServer(int pageSize, String cursor) throws EaseMobException
+
+</code></pre>
+
 参数:
 pageSize : 此次获取的条目
 cursor : 后台需要的cursor id，根据此Id再次获取pageSize的条目，首次传null即可
@@ -201,8 +205,10 @@ cursor : 后台需要的cursor id，根据此Id再次获取pageSize的条目，�
 获取所有环信的聊天室信息，包括聊天室Id和名称
 
 
-`public EMChatRoom fetchChatRoomFromServer(String roomId) throws EaseMobException
-`
+<pre class="hll"><code class="language-java">
+public EMChatRoom fetchChatRoomFromServer(String roomId) throws EaseMobException
+
+</code></pre>
 获取聊天室详情
 
 __聊天室回调监听__
