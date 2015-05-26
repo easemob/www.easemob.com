@@ -26,6 +26,8 @@ EMChatManager.getInstance().sendMessage(message, new EMCallBack());
  
 </code></pre>
 
+#CMD消息监听
+
 CMD消息广播监听
 
 <pre class="hll"><code class="language-java">
@@ -53,4 +55,19 @@ CMD消息广播监听
 	
 </code></pre>
 
+CMD消息事件监听
 
+<pre class="hll"><code class="language-java">
+EMChatManager.getInstance().registerEventListener(new EMEventListener() {
+		
+	@Override
+	public void onEvent(EMNotifierEvent event) {
+		// TODO Auto-generated method stub
+		EMMessage message = (EMMessage) event.getData();
+	}
+	}, new EMNotifierEvent.Event[]{EMNotifierEvent.Event.EventNewCMDMessage}
+);
+	
+</code></pre>
+
+<font color='FF0000' size='5em'>注：广播和监听事件不可同时混用</font>
