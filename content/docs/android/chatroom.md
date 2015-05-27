@@ -33,6 +33,8 @@ REST
 * 支持删除聊天室
   * curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/143228117786605' -H "Authorization: Bearer ${token}"
 
+**更多REST操作请参考 [聊天室管理](http://www.easemob.com/docs/rest/chatrooms/)**
+
 
 ###客户端
 
