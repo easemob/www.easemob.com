@@ -15,8 +15,7 @@ secondnavios: true
 <!--pod
 环信iOSSDK有两个版本，一个是只有im功能，另一个是im功能加实时语音功能。以下源根据需要**引入一个**就可以了。-->
  
-	pod 'EaseMobSDK'			
-<!--pod 'EaseMobSDKFull'		#im功能+实时语音功能-->	
+	pod 'EaseMobSDK'				
 
 ### 直接下载
 

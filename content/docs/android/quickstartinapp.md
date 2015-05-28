@@ -16,6 +16,9 @@ secondnavandroid: true
 
 <b><font size="4em" color="2bbbbb">2.如果你不需要实时语音和实时视频功能，那就直接用libs.without.audio文件夹下的jar包（jar包大小约为800多K.）和libeasemobservice.so（约为14k）</font></b>
 
+<b><font size="4em" color="2bbbbb">3.libeasemobservice.so文件新添加了x86和x64来适配不同架构</font></b>
+
+
 到此您已经下载好了SDK，下面开始学习SDK的集成使用吧！
 
 
@@ -35,12 +38,16 @@ libs文件夹：拥有实时语音，实时视频功能的SDK（大小在1.27M�
 
 libs.without.audio文件夹：无实时语音，实时视频功能的SDK包（大小在800多K）和守护进程中用到的一个.so文件
 
+x86文件：libeasemobservice.so文件在移动端支持x86架构
+
+x86_64文件：libeasemobservice.so文件在移动端支持x64架构
+
 
 ### 配置工程	{#projectSetting}
 
 ####1.导入SDK
 
-在自行开发的应用中，集成环信聊天需要把libs文件夹下的`easemobchat_2.1.8.jar`和`armeabi目录`导入到你的项目的libs文件夹底下，如果不需要语音和视频通话功能，导入`libs.without.audio`下的文件即可。jar包名里面的数字可能会跟你下载的不一致，这是版本号，以实际为准。如果集成过2.0.4之前sdk的开发者，集成此sdk时，需要把httpmime这个jar从libs底下移除。
+在自行开发的应用中，集成环信聊天需要把libs文件夹下的`easemobchat_2.1.9.jar`和`armeabi目录`导入到你的项目的libs文件夹底下，如果不需要语音和视频通话功能，导入`libs.without.audio`下的文件即可。jar包名里面的数字可能会跟你下载的不一致，这是版本号，以实际为准。如果集成过2.0.4之前sdk的开发者，集成此sdk时，需要把httpmime这个jar从libs底下移除。
 
 <b><font color="#b22222" size="4">注：SDK版本是向下兼容的</font></b>
 
@@ -48,7 +55,7 @@ libs.without.audio文件夹：无实时语音，实时视频功能的SDK包（�
  
  ![alt text](/project_libs3.png "demo")
 
-<b><font color="#b22222" size="4">以上为2.1.8之后的jar包和.so文件</font></b>
+<b><font color="#b22222" size="4">以上为2.1.9之后的jar包和.so文件</font></b>
 
 #### 2.配置信息
 

@@ -95,6 +95,8 @@ EMChatManager.getInstance().sendMessage(message, new EMCallBack(){});
 
 ## 接收消息 {#receivermessage}
 
+###1.通过广播接收新消息
+
 **注意事项**：为了防止新消息来时，因为没有注册广播接收者，导致漏接消息的情况，
 注册完接受者以及好友监听等事件后，需要调用<code class="language-java">EMChat.getInstance().setAppInited()</code>,sdk才会发送新消息的广播，只需调用一次即可，可参考demo的mainactivity；
 另外当app在后台时，sdk默认以notification的形式通知有新消息，不会走广播，如果需要走广播，可以调用<code class="language-java">EMChatManager.getInstance().getChatOptions().setShowNotificationInBackgroud(false)</code>,关闭notification通知，这样新消息还是走发送广播的形式。
@@ -123,6 +125,64 @@ private class NewMessageBroadcastReceiver extends BroadcastReceiver {
         EMMessage message = EMChatManager.getInstance().getMessage(msgId);
         }
 }
+</code></pre>
+
+
+###2.通过监听事件来接收新消息
+
+**注意事项** 注册消息事件监听，此listener会收到所有类型的event事件，如果对某种或某些类型的事件感兴趣，可以用 registerEventListener(EMEventListener listener, EMNotifierEvent.EventType[] types)
+
+	EMNotifierEvent.Event.EventDeliveryAck;//已发送回执event注册
+	EMNotifierEvent.Event.EventNewCMDMessage;//接收透传event注册
+	EMNotifierEvent.Event.EventNewMessage;//接收新消息event注册
+	EMNotifierEvent.Event.EventOfflineMessage;//接收离线消息event注册
+	EMNotifierEvent.Event.EventReadAck;//已读回执event注册
+	EMNotifierEvent.Event.EventConversationListChanged;//通知会话列表通知event注册（在某些特殊情况，SDK去删除会话的时候会收到回调监听）
+
+
+
+<pre class="hll"><code class="language-java">
+
+接收所有的event事件
+EMChatManager.getInstance().registerEventListener(new EMEventListener() {
+			
+	@Override
+	public void onEvent(EMNotifierEvent event) {
+		// TODO Auto-generated method stub
+		EMMessage message = (EMMessage) event.getData();
+	}
+});
+</code></pre>
+
+<pre class="hll"><code class="language-java">
+
+有选择性的接收某些类型event事件
+EMChatManager.getInstance().registerEventListener(new EMEventListener() {
+			
+	@Override
+	public void onEvent(EMNotifierEvent event) {
+		// TODO Auto-generated method stub
+		EMMessage message = (EMMessage) event.getData();
+	}
+	}, new EMNotifierEvent.Event[]{EMNotifierEvent.Event.EventNewMessage,.......}
+);
+</code></pre>
+
+<font color='FF0000' size='5em'>注：广播和监听事件不可同时混用</font>
+
+###解除监听事件
+
+<pre class="hll"><code class="language-java">
+
+如果不想收到回调，则执行解除监听事件
+EMChatManager.getInstance().unregisterEventListener(new EMEventListener() {
+			
+	@Override
+	public void onEvent(EMNotifierEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+});
 </code></pre>
 
 ### 获取聊天记录 {#historymessage}
@@ -250,6 +310,8 @@ options.setOnNotificationClickListener(new OnNotificationClickListener() {
 
 ## 新消息提示 {#notification}
 SDK中提供了方便的新消息提醒功能。可以在收到消息时调用，提醒用户有新消息
+
+**注：**2.1.8之后的版本，SDK将消息通知提醒代码提取出来，demo中是放在了HXNotifier类下，以方便开发者可以灵活处理
 
 首先获取EMChatOptions  
 

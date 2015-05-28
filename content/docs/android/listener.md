@@ -4,7 +4,7 @@ sidebar: androidsidebar
 secondnavandroid: true
 ---
 
-##监听事件注册（建议做成全局监听）
+##广播监听事件注册（建议做成全局监听）
 
 ####1.注册接收新消息的监听广播		{#newmessage}
 
@@ -280,3 +280,53 @@ private class MyGroupChangeListener implements GroupChangeListener {
 EMChat.getInstance().setAppInited();
 	
 </code></pre>
+
+
+##回调监听事件注册
+
+<pre class="hll"><code class="language-java">
+EMChatManager.getInstance().registerEventListener(new EMEventListener() {
+			
+	@Override
+	public void onEvent(EMNotifierEvent event) {
+		EMMessage message = (EMMessage) event.getData();
+
+		switch (event.getEvent()) {	
+		case EventNewMessage: // 接收新消息
+		{
+			break;
+		}
+		case EventDeliveryAck:{//接收已发送回执
+			
+			break;
+		}
+		
+		case EventNewCMDMessage:{//接收透传消息
+			
+			break;
+		}
+		
+		case EventReadAck:{//接收已读回执
+			
+			break;
+		}
+
+		case EventOfflineMessage: {//接收离线消息
+			
+			break;
+		}
+
+		case EventConversationListChanged: {//通知会话列表通知event注册（在某些特殊情况，SDK去删除会话的时候会收到回调监听）
+		    
+		    break;
+		}
+		
+		default:
+			break;
+		}
+	}
+	}
+});
+</code></pre>
+
+<font color='FF0000' size='5em'>注：以上两种方式都可以执行相同的操作，但是广播和监听事件不可同时混用</font>
