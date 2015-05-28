@@ -6,12 +6,44 @@ secondnavios: true
 
 # 聊天室 
 
-“聊天室”设计理念：
+“聊天室”模型：
+
 1、进入聊天页面之前，进行[加入聊天室操作](http://www.easemob.com/docs/ios/IOSSDKChatRoom/#join)；
+
 2、成功进入聊天室之后，服务器会自动给推10条消息；
+
 3、离开聊天页面之后，进行[退出聊天室操作](http://www.easemob.com/docs/ios/IOSSDKChatRoom/#leave)；
+
 4、聊天室创建者owner可以进行[退出聊天室操作](http://www.easemob.com/docs/ios/IOSSDKChatRoom/#leave)；
 
+5、支持最大成员5000;
+
+6、环信的聊天室内仅有有owner和游客;
+
+7、不支持客户端建立聊天室;
+
+8、不支持客户端邀请;
+
+9、不支持REST邀请；
+
+10、聊天室内成员离线后，服务器当监听到此成员不在线后不在会给此成员再发推送。
+
+## REST {#rest}
+
+* 支持建群
+* curl -X POST "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer azfuPA9RobgM8SXITeBtRnQOXDi8dU" -d '{"owner":"u1","members":["u1","u2"],"maxusers":5000,"groupname":"chatroom title","desc":"chatroom description"}'
+
+* 支持查询所有APP聊天室
+* curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer azfuPA9RobgM8SXITeBtRnQOXDi8dU"
+
+* 支持查询聊天室详情
+* curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235" -H "Authorization: Bearer azfuPA9RobgM8SXITeBtRnQOXDi8dU"
+
+* 支持聊天室踢人
+* curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235/users/u2' -H "Authorization: Bearer azfuPA9RobgM8SXITeBtRnQOXDi8dU"
+
+* 支持删除聊天室
+* curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/143228117786605' -H "Authorization: Bearer azfuPA9RobgM8SXITeBtRnQOXDi8dU"
 
 ## 获取聊天室 {#fetch}
 
