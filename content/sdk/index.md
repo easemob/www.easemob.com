@@ -20,7 +20,7 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150523.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150528.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
 						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.7　</span>
 					</li>
@@ -59,7 +59,8 @@ var _hmt = _hmt || [];
                                     1、聊天室，大家期待已久的聊天室上线了。 <br/>
                                     2、将语音的录制和播放相关代码从SDK中开源出来了，SDK不再管理相关代码，请开发者自由定制;<br/>
                                     3、请使用EaseMob单实例引用callManager. 在从2.1.7版本开始不会提供EMSDKFull及其头文件. EMSDKFull的功能将整合进EaseMob中;<br/>
-                                    4、登录操作返回的错误码调整, 具体请参考2.1.7release note  http://www.easemob.com/docs/ios/releaseNote2_1_7/<br>
+                                    4、登录操作返回的错误码调整, 具体请参考2.1.7release note  http://www.easemob.com/docs/ios/releaseNote2_1_7/<br/>
+                                    5、支持分页获取公开群组。<br/>
                                     </span>
                                 </dt>
                             </dl>
