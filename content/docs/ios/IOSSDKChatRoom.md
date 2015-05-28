@@ -6,6 +6,13 @@ secondnavios: true
 
 # 聊天室 
 
+“聊天室”设计理念：
+1、进入聊天页面之前，进行[加入聊天室操作](http://www.easemob.com/docs/ios/IOSSDKChatRoom/#join)；
+2、成功进入聊天室之后，服务器会自动给推10条消息；
+3、离开聊天页面之后，进行[退出聊天室操作](http://www.easemob.com/docs/ios/IOSSDKChatRoom/#leave)；
+4、聊天室创建者owner可以进行[退出聊天室操作](http://www.easemob.com/docs/ios/IOSSDKChatRoom/#leave)；
+
+
 ## 获取聊天室 {#fetch}
 
 <pre class="hll"><code class="language-java">
@@ -18,7 +25,8 @@ secondnavios: true
 @discussion
 这是一个阻塞方法，用户应当在一个独立线程中执行此方法，执行后, range被更新，location指向下一个范围的起点(> 0)，用户可以连续调用此方法以获得所有的聊天室
 */
-- (NSArray *)fetchChatroomsInSliceRange:(NSRange *)range withError:(EMError **)pError;
+- (NSArray *)fetchChatroomsInSliceRange:(NSRange *)range 
+                              withError:(EMError **)pError;
 
 /*!
 @method
@@ -27,10 +35,9 @@ secondnavios: true
 @param completion  消息完成后的回调
 @param aQueue      调block时的线程
 */
-- (void)asyncFetchChatroomsInRange:(NSRange)range withCompletion:(void (^)(NSArray *chatrooms,
-NSRange nextSliceRange,
-EMError *error))completion
-onQueue:(dispatch_queue_t)aQueue;
+- (void)asyncFetchChatroomsInRange:(NSRange)range 
+                    withCompletion:(void (^)(NSArray *chatrooms, NSRange nextSliceRange, EMError *error))completion
+                           onQueue:(dispatch_queue_t)aQueue;
 </code></pre>
 
 ## 获取聊天室详情  {#fetchInfo}
@@ -43,7 +50,8 @@ onQueue:(dispatch_queue_t)aQueue;
 @param pError      错误信息
 @return 聊天室
 */
-- (EMChatroom *)fetchChatroomInfo:(NSString *)chatroomId error:(EMError **)pError;
+- (EMChatroom *)fetchChatroomInfo:(NSString *)chatroomId 
+                            error:(EMError **)pError;
 
 /*!
 @method
@@ -53,8 +61,8 @@ onQueue:(dispatch_queue_t)aQueue;
 @param aQueue      回调block时的线程
 */
 - (void)asyncFetchChatroomInfo:(NSString *)chatroomId
-completion:(void (^)(EMChatroom *group, EMError *error))completion
-onQueue:(dispatch_queue_t)aQueue;
+                    completion:(void (^)(EMChatroom *group, EMError *error))completion
+                       onQueue:(dispatch_queue_t)aQueue;
 </code></pre>
 
 ## 获取成员 {#fetchOccupants}
@@ -68,7 +76,9 @@ onQueue:(dispatch_queue_t)aQueue;
 @param pError      错误信息
 @return  聊天室的成员列表
 */
-- (NSArray *)fetchOccupantsForChatroom:(NSString *)chatroomId inSliceRange:(NSRange *)range error:(EMError **)pError;
+- (NSArray *)fetchOccupantsForChatroom:(NSString *)chatroomId 
+                          inSliceRange:(NSRange *)range 
+                                 error:(EMError **)pError;
 
 /*!
 @method
@@ -78,9 +88,9 @@ onQueue:(dispatch_queue_t)aQueue;
 @param aQueue     回调block时的线程
 */
 - (void)asyncFetchOccupantsForChatroom:(NSString *)chatroomId
-inSliceRange:(NSRange)range
-completion:(void (^)(NSArray *occupantsList, NSRange nextSliceRange, EMError *error))completion
-onQueue:(dispatch_queue_t)aQueue;
+                          inSliceRange:(NSRange)range
+                            completion:(void (^)(NSArray *occupantsList, NSRange nextSliceRange, EMError *error))completion
+                               onQueue:(dispatch_queue_t)aQueue;
 </code></pre>
 
 ## 加入聊天室 {#join}
@@ -96,7 +106,7 @@ onQueue:(dispatch_queue_t)aQueue;
 这是一个阻塞方法，用户应当在一个独立线程中执行此方法
 */
 - (EMChatroom *)joinChatroom:(NSString *)chatroomId
-error:(EMError **)pError;
+                       error:(EMError **)pError;
 
 /*!
 @method
@@ -106,8 +116,8 @@ error:(EMError **)pError;
 @param aQueue      回调block时的线程
 */
 - (void)asyncJoinChatroom:(NSString *)chatroomId
-completion:(void (^)(EMChatroom *chatroom, EMError *error))completion
-onQueue:(dispatch_queue_t)aQueue;
+               completion:(void (^)(EMChatroom *chatroom, EMError *error))completion
+                  onQueue:(dispatch_queue_t)aQueue;
 </code></pre>
 
 ## 离开聊天室 {#leave}
@@ -123,7 +133,7 @@ onQueue:(dispatch_queue_t)aQueue;
 这是一个阻塞方法，用户应当在一个独立线程中执行此方法
 */
 - (EMChatroom *)leaveChatroom:(NSString *)chatroomId
-error:(EMError **)pError;
+                        error:(EMError **)pError;
 
 /*!
 @method
@@ -133,8 +143,8 @@ error:(EMError **)pError;
 @param aQueue      回调block时的线程
 */
 - (void)asyncLeaveChatroom:(NSString *)chatroomId
-completion:(void (^)(EMChatroom *chatroom, EMError *error))completion
-onQueue:(dispatch_queue_t)aQueue;
+                completion:(void (^)(EMChatroom *chatroom, EMError *error))completion
+                   onQueue:(dispatch_queue_t)aQueue;
 </code></pre>
 
 ## 聊天室相关的回调 {#delegate}
@@ -172,6 +182,6 @@ onQueue:(dispatch_queue_t)aQueue;
 @discussion
 */
 - (void)didReceiveChatroomInvitationFrom:(NSString *)chatroomId
-inviter:(NSString *)username
-message:(NSString *)message;
+                                 inviter:(NSString *)username
+                                 message:(NSString *)message;
 </code></pre>
