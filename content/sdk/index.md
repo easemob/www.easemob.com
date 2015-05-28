@@ -59,7 +59,7 @@ var _hmt = _hmt || [];
                                     1、聊天室，大家期待已久的聊天室上线了。 <br/>
                                     2、将语音的录制和播放相关代码从SDK中开源出来了，SDK不再管理相关代码，请开发者自由定制;<br/>
                                     3、请使用EaseMob单实例引用callManager. 在从2.1.7版本开始不会提供EMSDKFull及其头文件. EMSDKFull的功能将整合进EaseMob中;<br/>
-                                    4、登录操作返回的错误码调整, 具体请参考[2.1.7release note](http://www.easemob.com/docs/ios/releaseNote2_1_7/)<br/>
+                                    4、登录操作返回的错误码调整, 具体请参考[2.1.7release note](http://www.easemob.com/docs/ios/releaseNote2_1_7)<br/>
                                     5、支持分页获取公开群组。<br/>
                                     </span>
                                 </dt>
@@ -79,7 +79,7 @@ var _hmt = _hmt || [];
 								1、添加实时视频功能，beta版。需要在demo中添加依赖库libc++.dylib，实时视频不支持后台运行。 <br/>
 								2、添加接口：离开群时是否自动删除群会话(Default is YES)，该接口的设置不会进行存储，需要开发者每次启动sdk之前设置一下
 [[EaseMob sharedInstance].chatManager isAutoDeleteConversationWhenLeaveGroup];<br/>
-								3、接口修改，具体请参考[2.1.6release note](http://www.easemob.com/docs/ios/releaseNote2_1_6/
+								3、接口修改，具体请参考[2.1.6release note](http://www.easemob.com/docs/ios/releaseNote2_1_6
                                 )</span>
  
                             </dt>
