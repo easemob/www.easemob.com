@@ -21,6 +21,7 @@ secondnavios: true
 2.	请使用EaseMob单实例引用callManager. 在从2.1.7版本开始不会提供EMSDKFull及其头文件. EMSDKFull的功能将整合进EaseMob中；
 
 3.	登录操作返回的错误码调整：
+EMErrorNotFound(用户不存在),
 EMErrorServerTooManyOperations(已经登录或者正在登录)，
 EMErrorNetworkNotConnected(未连网)，
 EMErrorInvalidUsername_NULL(用户名为空), 
@@ -40,8 +41,8 @@ MErrorServerTimeout(超时)
 
 ## new api
 
-A、EMConversation
-<pre class="hll">
+### EMConversation
+<pre class="hll"><code class="language-java">
 /*!
 @method
 @brief 根据消息id加载它之前的指定条数消息
@@ -52,18 +53,18 @@ A、EMConversation
 @result 加载的消息列表
 */
 - (NSArray *)loadNumbersOfMessages:(NSUInteger)aCount withMessageId:(NSString *)messageId;
-</pre>
+</code></pre>
 
-B、IChatManagerChatroom
+### IChatManagerChatroom
 
 该头文件中所有的接口都是新添加的
 
-C、EMChatManagerChatroomDelegate
+### EMChatManagerChatroomDelegate
 
 该头文件中所有的回调接口都是新添加的
 
-D、EMChatManagerDefs
-<pre class="hll">
+### EMChatManagerDefs
+<pre class="hll"><code class="language-java">
 /*
 @brief 会话类型
 @constant eConversationTypeChat            单聊会话
@@ -71,9 +72,9 @@ D、EMChatManagerDefs
 @constant eConversationTypeChatRoom        聊天室会话
 */
 typedef NS_ENUM(NSInteger, EMConversationType){
-eConversationTypeChat,
-eConversationTypeGroupChat,
-eConversationTypeChatRoom
+    eConversationTypeChat,
+    eConversationTypeGroupChat,
+    eConversationTypeChatRoom
 };
 
 /*
@@ -83,17 +84,54 @@ eConversationTypeChatRoom
 @constant eConversationTypeChatRoom        聊天室会话
 */
 typedef NS_ENUM(NSInteger, EMConversationType){
-eConversationTypeChat,
-eConversationTypeGroupChat,
-eConversationTypeChatRoom
+    eConversationTypeChat,
+    eConversationTypeGroupChat,
+    eConversationTypeChatRoom
 };
-</pre>
+</code></pre>
  
+### IChatManagerGroup
+<pre class="hll"><code class="language-java">
+/*!
+@method
+@brief 异步方法, 获取所有公开群组
+@param completion 消息完成后的回调
+@param aQueue     回调block时的线程
+*/
+- (void)asyncFetchAllPublicGroupsWithCompletion:(void (^)(NSArray *groups,
+EMError *error))completion
+                                        onQueue:(dispatch_queue_t)aQueue;
+
+/*!
+@method
+@brief 获取指定范围内的公开群
+@param cursor   获取公开群的cursor，首次调用传空即可
+@param pageSize 期望结果的数量, 如果 < 0 则一次返回所有结果
+@param pError   出错信息
+@return         获取的公开群结果
+@discussion
+这是一个阻塞方法，用户应当在一个独立线程中执行此方法，用户可以连续调用此方法以获得所有的公开群
+*/
+- (EMCursorResult *)fetchPublicGroupsFromServerWithCursor:(NSString *)cursor
+                                                 pageSize:(NSInteger)pageSize
+                                                 andError:(EMError **)pError;
+
+/*!
+@method
+@brief 异步方法, 获取指定范围的公开群
+@param cursor      获取公开群的cursor，首次调用传空即可
+@param pageSize    期望结果的数量, 如果 < 0 则一次返回所有结果
+@param completion  完成回调，回调会在主线程调用
+*/
+- (void)asyncFetchPublicGroupsFromServerWithCursor:(NSString *)cursor
+                                          pageSize:(NSInteger)pageSize
+                                     andCompletion:(void (^)(EMCursorResult *result, EMError *error))completion;
+</code></pre>
  
 ##	change api
 
-A、IChatManagerConversation
-<pre class="hll">
+### IChatManagerConversation
+<pre class="hll"><code class="language-java">
 /*!
 @method
 @brief 获取所有conversation的未读消息数量
@@ -114,7 +152,7 @@ A、IChatManagerConversation
 @result 会话对象
 */
 - (EMConversation *)conversationForChatter:(NSString *)chatter
-isGroup:(BOOL)isGroup EM_DEPRECATED_IOS(2_0_0, 2_1_6, "Use - conversationForChatter:conversationType");
+                                   isGroup:(BOOL)isGroup EM_DEPRECATED_IOS(2_0_0, 2_1_6, "Use - conversationForChatter:conversationType");
 
 /*!
 @method
@@ -128,11 +166,11 @@ isGroup:(BOOL)isGroup EM_DEPRECATED_IOS(2_0_0, 2_1_6, "Use - conversationForChat
 @result 会话对象
 */
 - (EMConversation *)conversationForChatter:(NSString *)chatter
-conversationType:(EMConversationType)type;
-</pre>
+                          conversationType:(EMConversationType)type;
+</code></pre>
 
-B、IChatManagerChat
-<pre class="hll">
+### IChatManagerChat
+<pre class="hll"><code class="language-java">
 /*!
 @method
 @brief 发送一个"已读消息"(在UI上显示了或者阅后即焚的销毁的时候发送)的回执到服务器
@@ -141,22 +179,22 @@ B、IChatManagerChat
 @result
 */
 - (void)sendHasReadResponseForMessage:(EMMessage *)message EM_DEPRECATED_IOS(2_0_0, 2_1_6, "Use - sendReadAckForMessage:");
-</pre>
+</code></pre>
 
-C、EMConversation
-<pre class="hll">
+### EMConversation
+<pre class="hll"><code class="language-java">
 /*!
 @property
 @brief 是否是群聊
 */
 @property (nonatomic, readonly) BOOL isGroup EM_DEPRECATED_IOS(2_0_0, 2_1_6, "Use - conversationType");
-</pre>
+</code></pre>
 
-D、EMMessage
-<pre class="hll">
+### EMMessage
+<pre class="hll"><code class="language-java">
 /*!
 @property
 @brief 此消息是否是群聊消息
 */
 @property (nonatomic) BOOL isGroup EM_DEPRECATED_IOS(2_0_0, 2_1_6, "Use - messageType");
-</pre>
+</code></pre>
