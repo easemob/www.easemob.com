@@ -21,15 +21,25 @@ secondnavios: true
 2.	请使用EaseMob单实例引用callManager. 在从2.1.7版本开始不会提供EMSDKFull及其头文件. EMSDKFull的功能将整合进EaseMob中；
 
 3.	登录操作返回的错误码调整：
+
 EMErrorNotFound(用户不存在),
+
 EMErrorServerTooManyOperations(已经登录或者正在登录)，
+
 EMErrorNetworkNotConnected(未连网)，
+
 EMErrorInvalidUsername_NULL(用户名为空), 
+
 EMErrorInvalidUsername_Chinese(用户名是中文), 
+
 EMErrorServerAuthenticationFailure(用户名或密码错误),
+
 EMErrorServerNotReachable(未连接到服务器)，
+
 EMErrorConfigInvalidAppKey(appkey不可用), 
+
 MErrorServerTimeout(超时)
+
 其他的error类型统称登录失败
 
 ## 新功能大放送
