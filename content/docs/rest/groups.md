@@ -156,7 +156,7 @@ curl -X GET -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKdR
 	"desc":"server create group", //群组描述, 此属性为必须的
 	"public":true, //是否是公开群, 此属性为必须的,为false时为私有群
 	"maxusers":300, //群组成员最大数(包括群主), 值为数值类型,默认值200,此属性为可选的
-	"approval":true, //加入公开群是否需要批准, 默认值是true（加群需要群主批准）, 此属性为可选的,只作用于公开群
+	"approval":true, //加入公开群是否需要批准, 默认值是false（加群不需要群主批准）, 此属性为可选的,只作用于公开群
 	<!--"allowinvites":false //私有群是否可以群成员邀请，默认值是false(只允许创建者邀请),此属性为可选的,只作用于私有群-->"owner":"jma1", //群组的管理员, 此属性为必须的
 	"members":["jma2","jma3"] //群组成员,此属性为可选的,但是如果加了此项,数组元素至少一个（注：群主jma1不需要写入到members里面）
 }
@@ -366,7 +366,7 @@ curl -X POST 'https://a1.easemob.com/easemob-demo/chatdemoui/chatgroups/14118160
 > 
 > **接口限流说明: 同一个IP每秒最多可调用30次, 超过的部分会返回503错误, 所以在调用程序中, 如果碰到了这样的错误, 需要稍微暂停一下并且重试。如果该限流控制不满足需求，请联系商务经理开放更高的权限。**
 
-- Path : /{org_name}/{app_name}/chatgroups/{chatgroupid}/users
+- Path : /{org_name}/{app_name}/chatgroups/{group_id}/users
 - HTTP Method : POST
 - URL Params ： 无
 - Request Headers : {"Authorization":"Bearer ${token}"}
