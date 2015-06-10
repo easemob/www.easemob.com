@@ -289,11 +289,11 @@ EMChatManager.getInstance().registerEventListener(new EMEventListener() {
 			
 	@Override
 	public void onEvent(EMNotifierEvent event) {
-		EMMessage message = (EMMessage) event.getData();
 
 		switch (event.getEvent()) {	
 		case EventNewMessage: // 接收新消息
 		{
+		EMMessage message = (EMMessage) event.getData();
 			break;
 		}
 		case EventDeliveryAck:{//接收已发送回执
@@ -312,7 +312,7 @@ EMChatManager.getInstance().registerEventListener(new EMEventListener() {
 		}
 
 		case EventOfflineMessage: {//接收离线消息
-			
+			List&lt;EMMessage&gt; messages = (List&lt;EMMessage&gt;) event.getData();
 			break;
 		}
 
