@@ -19,4 +19,4 @@ secondnavgettingstart: true
 ![alt text](/move1.png "Title")
 
 
-##如需了解数据迁移的详细过程，请联系环信
+##<font color='red'>如需了解数据迁移的详细过程，请联系环信</font>
