@@ -26,9 +26,9 @@ var _hmt = _hmt || [];
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.1.9.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.2.0.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.1.9　</span>
+						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.2.0　</span>
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
@@ -480,6 +480,21 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 
 			    <ul class="history_right">
 				    <h2 class="first">Andriod SDK 更新日志</h2>
+					<li>
+	                    <h3><em></em><span>版本：V2.2.0 2015-06-15</span></h3>
+						<dl>
+						  <dt>
+						      <span>新功能/改进：<br/>	
+							    1、支持不同网络类型间的实时音视频的互通(wifi/2G/3G/4G，beta版)<br/>	
+								2、优化群同步时间，速度提升5倍<br/>
+								3、新加API: EMConversation.getMessage(int position, boolean markAsRead)用来选择是否可以设置消息已读<br/>
+								4、新加API: EMChat.setAppkey(String appkey)用来在代码里可以设置appkey<br/>
+								5、优化demo登录体验，进到主页面加载群同步和联系人同步，用户体验大大提升<br/>
+						        6、优化demo国际化
+						      </span>
+						  </dt>
+						</dl>
+	                </li>     
 					<li>
 	                    <h3><em></em><span>版本：V2.1.9 2015-05-23</span></h3>
 						<dl>
