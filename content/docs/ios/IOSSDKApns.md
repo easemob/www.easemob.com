@@ -59,7 +59,7 @@ else{
 </code></pre>
 
 ** apns注册失败，一般是由于使用了通用证书或者是模拟器调试导致，请检查证书并用真机调试。
-此处是iOS系统报的错，如仍不能确定，请从网上查找相关资料**
+此处是iOS系统报的错，如仍不能确定，请从网上查找相关资料 **
 
 
 ## 获取全局apns配置 {#apnsGlobalFetch}
@@ -209,4 +209,37 @@ password:password completion:^(NSDictionary *loginInfo, EMError *error) {
 NSArray *ignoredGroupIds = [[EaseMob sharedInstance].chatManager ignoredGroupIds];
 
 </code></pre>
+
+## 全局免打扰设置 {#apnsGlobal}
+
+登录成功后设置
+
+<pre class="hll"><code class="language-java">
+/*!
+ @enum
+ @brief 推送消息免打扰设置的状态
+ @constant ePushNotificationNoDisturbStatusDay     全天免打扰
+ @constant ePushNotificationNoDisturbStatusCustom  自定义时间段免打扰
+ @constant ePushNotificationNoDisturbStatusClose   关闭免打扰模式
+ */
+typedef NS_ENUM(NSInteger, EMPushNotificationNoDisturbStatus) {
+    ePushNotificationNoDisturbStatusDay = 0,
+    ePushNotificationNoDisturbStatusCustom = 1,
+    ePushNotificationNoDisturbStatusClose = 2,
+};
+
+// 设置全天免打扰，设置后，您将收不到任何推送
+EMPushNotificationOptions *options = [[EaseMob sharedInstance].chatManager pushNotificationOptions];
+options.noDisturbStatus = ePushNotificationNoDisturbStatusDay;
+[[EaseMob sharedInstance].chatManager asyncUpdatePushOptions:options];
+
+
+// 设置免打扰时段，设置后，在改时间内不收推送
+EMPushNotificationOptions *options = [[EaseMob sharedInstance].chatManager pushNotificationOptions];
+options.noDisturbStatus = ePushNotificationNoDisturbStatusCustom;
+options.noDisturbingStartH = 9;
+options.noDisturbingEndH = 22;
+[[EaseMob sharedInstance].chatManager asyncUpdatePushOptions:options];
+</code></pre>
+
 
