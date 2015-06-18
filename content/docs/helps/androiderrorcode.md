@@ -44,5 +44,6 @@ android中错误码的类为<b>EMError</b>。<br/>如：注册时用户返回已
 |ILLEGAL_USER_NAME|-1025|不合法的用户名|
 |MESSAGE_SEND_NOT_IN_THE_GROUP|-2000|用户已经不在群里，发消息后会收到此 error|
 |MESSAGE_SEND_INVALID_CONTENT|-2001|用户发了被禁止的内容，发消息后会收到此 error|
+
 <br/>
  
