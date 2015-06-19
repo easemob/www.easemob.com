@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150528.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150619.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.7　</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.8　</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -44,6 +44,24 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+                        <li>
+                            <h3><em></em><span>版本：V2.1.8 2015-06-19</span></h3>
+                            <dl>
+                                <dt>
+                                    <span>新功能：<br/>
+                                    1、支持不同网络类型间的实时音视频的互通(wifi/2G/3G/4G，beta版)。 <br/>
+                                    </span>
+
+                                    <span> SDK性能优化:<br/>
+                                    1、从数据库获取EMMessage速度优化。<br/>
+                                    </span>
+
+                                    <span>SDK细节调整：<br/>
+                                    1、EMError描述国际化：SDK提供EMError的中文和英文描述，默认为英文描述。 <br/>
+                                    </span>
+                                </dt>
+                            </dl>
+                            </li>
                         <li>
                             <h3><em></em><span>版本：V2.1.7 2015-05-28</span></h3>
                             <dl>
