@@ -49,7 +49,7 @@ var _hmt = _hmt || [];
                             <dl>
                                 <dt>
                                     <span>新功能：<br/>
-                                    1、实时通话实现relay。 <br/>
+                                    1、支持不同网络类型间的实时音视频的互通(wifi/2G/3G/4G，beta版)。 <br/>
                                     </span>
 
                                     <span> SDK性能优化:<br/>
