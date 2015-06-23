@@ -45,20 +45,12 @@ curl --verbose --header "Authorization: Bearer YWMtz1hFWOZpEeOPpcmw1FB0RwAAAUZnA
 {
     "action" : "post",//post请求
     "application" : "ecc6b6c0-e668-11e3-9d00-896af7b8411e",
-    "params" : { },
     "path" : "/chatfiles",
     "uri" : "http://a1.easemob.com/easemob-demo/chatdemoui/chatfiles", //上传路径
     "entities" : [ {
         	"uuid" : "0c0f5f3a-e66b-11e3-8863-f1c202c2b3ae",//文件唯一id，发送消息时需要用到指定是哪个文件。
         	"type" : "chatfile",
-        	"created" : 1401283318947,//创建时间
-        	"modified" : 1401283318947,//修改时间
-        	"file-metadata" : {
-            	"content-type" : "image/jpeg",//上传类型
-            	"last-modified" : 1401283319448,
-            	"content-length" : 2195456//文件长度
-        },
-        "share-secret" : "DRGM8OZrEeO1vafuJSo2IjHBeKlIhDp0GCnFu54xOF3M6KLr" //上传成功后返回，发送消息时需要用到。
+            "share-secret" : "DRGM8OZrEeO1vafuJSo2IjHBeKlIhDp0GCnFu54xOF3M6KLr" //上传成功后返回，发送消息时需要用到。
     }],
     "timestamp" : 1401283318916,
     "duration" : 1841,//上传时间
