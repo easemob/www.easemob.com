@@ -70,18 +70,37 @@ secondnavios: true
 - (void)willReceiveOfflineMessages;
 
 /*!
-@method
-@brief 离线非透传消息接收完成的回调
-@discussion
-@param offlineMessages 接收到的离线列表
-@result
-*/
+ @method
+ @brief 接收到离线非透传消息的回调
+ @discussion
+ @param offlineMessages 接收到的离线列表
+ @result
+ */
+- (void)didReceiveOfflineMessages:(NSArray *)offlineMessages;
+
+/*!
+ @method
+ @brief 离线非透传消息接收完成的回调
+ @discussion
+ @param offlineMessages 接收到的离线列表
+ @result
+ */
 - (void)didFinishedReceiveOfflineMessages:(NSArray *)offlineMessages;
 </code></pre>
 
 离线透传消息会走以下回调:
 
 <pre class="hll"><code class="language-java">
+
+/*!
+ @method
+ @brief 接收到离线透传消息的回调
+ @discussion
+ @param offlineCmdMessages 接收到的离线透传消息列表
+ @result
+ */
+- (void)didReceiveOfflineCmdMessages:(NSArray *)offlineCmdMessages;
+
 /*!
 @method
 @brief 离线透传消息接收完成的回调
