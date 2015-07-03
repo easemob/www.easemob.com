@@ -26,9 +26,9 @@ var _hmt = _hmt || [];
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.2.0.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.2.1.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.2.0　</span>
+						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.2.1　</span>
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
@@ -498,6 +498,21 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 
 			    <ul class="history_right">
 				    <h2 class="first">Andriod SDK 更新日志</h2>
+				    <li>
+	                    <h3><em></em><span>版本：V2.2.1 2015-07-03</span></h3>
+						<dl>
+						  <dt>
+						      <span>新功能/改进：<br/>	
+							    1、提供新api，可以根据基本的消息类型分页获取消息EMChatManager.getMessagesByMsgType
+<br/>	
+								2、减小login timeout时间，避免弱网情况长时间login不返回
+<br/>
+								3、Demo增加环信助手演示功能，可自动回复消息<br/>
+								
+						      </span>
+						  </dt>
+						</dl>
+	                </li>     
 					<li>
 	                    <h3><em></em><span>版本：V2.2.0 2015-06-15</span></h3>
 						<dl>
