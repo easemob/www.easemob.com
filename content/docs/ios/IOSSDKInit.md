@@ -290,7 +290,7 @@ if (!isAutoLogin) {
 
 EMError *error = nil;
 NSDictionary *info = [[EaseMob sharedInstance].chatManager logoffWithUnbindDeviceToken:YES/NO error:&error];
-if (!error && info) {
+if (!error) {
     NSLog(@"退出成功");
 }
 
@@ -302,7 +302,7 @@ if (!error && info) {
 <pre class="hll"><code class="language-java">
 
 [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES/NO completion:^(NSDictionary *info, EMError *error) {
-    if (!error && info) {
+    if (!error) {
         NSLog(@"退出成功");
     }
 } onQueue:nil];
