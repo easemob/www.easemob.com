@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150619.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150710.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.8　</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.9　</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -44,6 +44,26 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+			      		<li>
+                            <h3><em></em><span>版本：V2.1.9 2015-07-10</span></h3>
+                            <dl>
+                                <dt>
+                                    <span>新功能：<br/>
+                                    1、环信小助手功能，可自动回复，在demo中有体现。 <br/>
+                                    </span>
+
+                                    <span> bug fix:<br/>
+                                    1、demo bug: 好友删除, 对应的会话不被删除。<br/>
+                                    </span>
+
+                                    <span>SDK细节调整：<br/>
+                                    1、使用SDK后，在沙盒中生成的存储数据的文件夹，不同步到iCloud;<br/>
+                                    2、自动登录流程优化;<br/>
+                                    3、接收离线消息的回调接口有所调整，具体请参考<a href="http://www.easemob.com/docs/ios/releaseNote2_1_9">2.1.9release note</a>。 <br/>
+                                    </span>
+                                </dt>
+                            </dl>
+                        </li>
                         <li>
                             <h3><em></em><span>版本：V2.1.8 2015-06-19</span></h3>
                             <dl>
@@ -61,7 +81,7 @@ var _hmt = _hmt || [];
                                     </span>
                                 </dt>
                             </dl>
-                            </li>
+                        </li>
                         <li>
                             <h3><em></em><span>版本：V2.1.7 2015-05-28</span></h3>
                             <dl>

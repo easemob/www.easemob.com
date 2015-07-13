@@ -268,8 +268,14 @@ function disclosure_triangle(elt) {
 <dt><tt><a href="index.html#//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFetchingMessageAttachments:progress:" target="_top">-didFetchingMessageAttachments:progress:</a></tt></dt>
 <dd><p>SDK接收到消息时, 下载附件的进度回调, 回调方法有不在主线程中调用, 需要App自己切换到主线程中执行UI的刷新等操作
 </dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages" target="_top">-didFinishedReceiveOfflineCmdMessages</a></tt></dt>
+<dd><p>离线透传消息接收完成的回调
+</dd>
 <dt><tt><a href="index.html#//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages:" target="_top">-didFinishedReceiveOfflineCmdMessages:</a></tt></dt>
 <dd><p>离线透传消息接收完成的回调
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages" target="_top">-didFinishedReceiveOfflineMessages</a></tt></dt>
+<dd><p>离线非透传消息接收完成的回调
 </dd>
 <dt><tt><a href="index.html#//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages:" target="_top">-didFinishedReceiveOfflineMessages:</a></tt></dt>
 <dd><p>离线非透传消息接收完成的回调
@@ -291,6 +297,12 @@ function disclosure_triangle(elt) {
 </dd>
 <dt><tt><a href="index.html#//apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveMessageId:chatter:error:" target="_top">-didReceiveMessageId:chatter:error:</a></tt></dt>
 <dd><p>收到发送消错误的回调
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages:" target="_top">-didReceiveOfflineCmdMessages:</a></tt></dt>
+<dd><p>接收到离线透传消息的回调
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineMessages:" target="_top">-didReceiveOfflineMessages:</a></tt></dt>
+<dd><p>接收到离线非透传消息的回调
 </dd>
 <dt><tt><a href="index.html#//apple_ref/occ/intfm/EMChatManagerChatDelegate/didSendMessage:error:" target="_top">-didSendMessage:error:</a></tt></dt>
 <dd><p>发送消息后的回调
@@ -337,6 +349,23 @@ function disclosure_triangle(elt) {
 </p></li><li><p> 如果是语音消息时, 会自动下载语音附件, 
 会调用 didMessageAttachmentsStatusChanged:error这个回调
 </p></li></ol><!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFetchingMessageAttachments:progress:;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages;   name=EMChatManagerChatDelegate::didFinishedReceiveOfflineCmdMessages -->
+<a name="//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages"></a>
+<h3><a name="didFinishedReceiveOfflineCmdMessages">didFinishedReceiveOfflineCmdMessages</a></h3>
+<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages;name=start --><!-- begin abstract --><p>离线透传消息接收完成的回调
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages;name=end --></p>
+<div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/data/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/data/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/clconst/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages " machineGenerated="true" --><span class="var">didFinishedReceiveOfflineCmdMessages</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class='param_indent'>
+<dl>
+<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages/offlineCmdMessages;   name=didFinishedReceiveOfflineCmdMessages::offlineCmdMessages -->
+<a name="//apple_ref/doc/methodparam/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages/offlineCmdMessages"></a>
+<code>offlineCmdMessages</code></dt><dd><p>接收到的离线透传消息列表</dd>
+</dl>
+</div>
 <hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages:;   name=EMChatManagerChatDelegate::didFinishedReceiveOfflineCmdMessages: -->
 <a name="//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages:"></a>
 <h3><a name="didFinishedReceiveOfflineCmdMessages:">didFinishedReceiveOfflineCmdMessages:</a></h3>
@@ -344,7 +373,7 @@ function disclosure_triangle(elt) {
 <!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages:;name=end --></p>
 <div class='declaration_indent'>
 <pre><tt>@optional</tt>
-<br>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/clm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/intfcm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/func/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/ftmplt/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/defn/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/macro/didFinishedReceiveOfflineCmdMessages //apple_ref/doc/anysymbol/didFinishedReceiveOfflineCmdMessages" machineGenerated="true" --><span class="function">didFinishedReceiveOfflineCmdMessages</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/intf/NSArray //apple_ref/doc/anysymbol/NSArray" machineGenerated="true" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/offlineCmdMessages //apple_ref/occ/data/EMChatManagerChatDelegate/offlineCmdMessages //apple_ref/occ/data/offlineCmdMessages //apple_ref/occ/clconst/EMChatManagerChatDelegate/offlineCmdMessages " machineGenerated="true" --><span class="var">offlineCmdMessages</span><!-- /a -->; </pre>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/clm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/intfcm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/func/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/ftmplt/EMChatManagerChatDelegate/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/defn/didFinishedReceiveOfflineCmdMessages //apple_ref/occ/macro/didFinishedReceiveOfflineCmdMessages //apple_ref/doc/anysymbol/didFinishedReceiveOfflineCmdMessages" machineGenerated="true" --><span class="function">didFinishedReceiveOfflineCmdMessages</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/intf/NSArray //apple_ref/doc/anysymbol/NSArray" machineGenerated="true" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<span class="param">offlineCmdMessages</span> EM_DEPRECATED_IOS(<span class="param">2_1_5</span>,<span class="param">2_1_8</span>,"使用<span class="string">didFinishedReceiveOfflineCmdMessages</span>标识离线消息结束，离线<span class="string">CMD</span>全部通过<span class="string">didReceiveOfflineCmdMessages</span>返回"); </pre>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
 <div class='param_indent'>
@@ -354,6 +383,23 @@ function disclosure_triangle(elt) {
 <code>offlineCmdMessages</code></dt><dd><p>接收到的离线透传消息列表</dd>
 </dl>
 </div>
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages;   name=EMChatManagerChatDelegate::didFinishedReceiveOfflineMessages -->
+<a name="//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages"></a>
+<h3><a name="didFinishedReceiveOfflineMessages">didFinishedReceiveOfflineMessages</a></h3>
+<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages;name=start --><!-- begin abstract --><p>离线非透传消息接收完成的回调
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages;name=end --></p>
+<div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/didFinishedReceiveOfflineMessages //apple_ref/occ/data/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages //apple_ref/occ/data/didFinishedReceiveOfflineMessages //apple_ref/occ/clconst/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages " machineGenerated="true" --><span class="var">didFinishedReceiveOfflineMessages</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class='param_indent'>
+<dl>
+<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages/offlineMessages;   name=didFinishedReceiveOfflineMessages::offlineMessages -->
+<a name="//apple_ref/doc/methodparam/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages/offlineMessages"></a>
+<code>offlineMessages</code></dt><dd><p>接收到的离线列表</dd>
+</dl>
+</div>
 <hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages:;   name=EMChatManagerChatDelegate::didFinishedReceiveOfflineMessages: -->
 <a name="//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages:"></a>
 <h3><a name="didFinishedReceiveOfflineMessages:">didFinishedReceiveOfflineMessages:</a></h3>
@@ -361,7 +407,7 @@ function disclosure_triangle(elt) {
 <!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages:;name=end --></p>
 <div class='declaration_indent'>
 <pre><tt>@optional</tt>
-<br>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages //apple_ref/occ/clm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages //apple_ref/occ/intfcm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages //apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages //apple_ref/occ/func/didFinishedReceiveOfflineMessages //apple_ref/occ/ftmplt/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages //apple_ref/occ/defn/didFinishedReceiveOfflineMessages //apple_ref/occ/macro/didFinishedReceiveOfflineMessages //apple_ref/doc/anysymbol/didFinishedReceiveOfflineMessages" machineGenerated="true" --><span class="function">didFinishedReceiveOfflineMessages</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/intf/NSArray //apple_ref/doc/anysymbol/NSArray" machineGenerated="true" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/offlineMessages //apple_ref/occ/data/EMChatManagerChatDelegate/offlineMessages //apple_ref/occ/data/offlineMessages //apple_ref/occ/clconst/EMChatManagerChatDelegate/offlineMessages " machineGenerated="true" --><span class="var">offlineMessages</span><!-- /a -->; </pre>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages //apple_ref/occ/clm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages //apple_ref/occ/intfcm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages //apple_ref/occ/intfm/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages //apple_ref/occ/func/didFinishedReceiveOfflineMessages //apple_ref/occ/ftmplt/EMChatManagerChatDelegate/didFinishedReceiveOfflineMessages //apple_ref/occ/defn/didFinishedReceiveOfflineMessages //apple_ref/occ/macro/didFinishedReceiveOfflineMessages //apple_ref/doc/anysymbol/didFinishedReceiveOfflineMessages" machineGenerated="true" --><span class="function">didFinishedReceiveOfflineMessages</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/intf/NSArray //apple_ref/doc/anysymbol/NSArray" machineGenerated="true" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<span class="param">offlineMessages</span> EM_DEPRECATED_IOS(<span class="param">2_1_5</span>,<span class="param">2_1_8</span>,"使用<span class="string">didFinishedReceiveOfflineMessages</span>标识离线消息结束，离线消息全部通过<span class="string">didReceiveOfflineMessages</span>返回"); </pre>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
 <div class='param_indent'>
@@ -508,6 +554,40 @@ function disclosure_triangle(elt) {
 <code>error</code></dt><dd><p>错误信息</dd>
 </dl>
 </div>
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages:;   name=EMChatManagerChatDelegate::didReceiveOfflineCmdMessages: -->
+<a name="//apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages:"></a>
+<h3><a name="didReceiveOfflineCmdMessages:">didReceiveOfflineCmdMessages:</a></h3>
+<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages:;name=start --><!-- begin abstract --><p>接收到离线透传消息的回调
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages:;name=end --></p>
+<div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages //apple_ref/occ/clm/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages //apple_ref/occ/intfcm/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages //apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages //apple_ref/occ/func/didReceiveOfflineCmdMessages //apple_ref/occ/ftmplt/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages //apple_ref/occ/defn/didReceiveOfflineCmdMessages //apple_ref/occ/macro/didReceiveOfflineCmdMessages //apple_ref/doc/anysymbol/didReceiveOfflineCmdMessages" machineGenerated="true" --><span class="function">didReceiveOfflineCmdMessages</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/intf/NSArray //apple_ref/doc/anysymbol/NSArray" machineGenerated="true" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/offlineCmdMessages //apple_ref/occ/data/EMChatManagerChatDelegate/offlineCmdMessages //apple_ref/occ/data/offlineCmdMessages //apple_ref/occ/clconst/EMChatManagerChatDelegate/offlineCmdMessages " machineGenerated="true" --><span class="var">offlineCmdMessages</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class='param_indent'>
+<dl>
+<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages:/offlineCmdMessages;   name=didReceiveOfflineCmdMessages:::offlineCmdMessages -->
+<a name="//apple_ref/doc/methodparam/EMChatManagerChatDelegate/didReceiveOfflineCmdMessages:/offlineCmdMessages"></a>
+<code>offlineCmdMessages</code></dt><dd><p>接收到的离线透传消息列表</dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineMessages:;   name=EMChatManagerChatDelegate::didReceiveOfflineMessages: -->
+<a name="//apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineMessages:"></a>
+<h3><a name="didReceiveOfflineMessages:">didReceiveOfflineMessages:</a></h3>
+<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineMessages:;name=start --><!-- begin abstract --><p>接收到离线非透传消息的回调
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineMessages:;name=end --></p>
+<div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/EMChatManagerChatDelegate/didReceiveOfflineMessages //apple_ref/occ/clm/EMChatManagerChatDelegate/didReceiveOfflineMessages //apple_ref/occ/intfcm/EMChatManagerChatDelegate/didReceiveOfflineMessages //apple_ref/occ/intfm/EMChatManagerChatDelegate/didReceiveOfflineMessages //apple_ref/occ/func/didReceiveOfflineMessages //apple_ref/occ/ftmplt/EMChatManagerChatDelegate/didReceiveOfflineMessages //apple_ref/occ/defn/didReceiveOfflineMessages //apple_ref/occ/macro/didReceiveOfflineMessages //apple_ref/doc/anysymbol/didReceiveOfflineMessages" machineGenerated="true" --><span class="function">didReceiveOfflineMessages</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/intf/NSArray //apple_ref/doc/anysymbol/NSArray" machineGenerated="true" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/offlineMessages //apple_ref/occ/data/EMChatManagerChatDelegate/offlineMessages //apple_ref/occ/data/offlineMessages //apple_ref/occ/clconst/EMChatManagerChatDelegate/offlineMessages " machineGenerated="true" --><span class="var">offlineMessages</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class='param_indent'>
+<dl>
+<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/EMChatManagerChatDelegate/didReceiveOfflineMessages:/offlineMessages;   name=didReceiveOfflineMessages:::offlineMessages -->
+<a name="//apple_ref/doc/methodparam/EMChatManagerChatDelegate/didReceiveOfflineMessages:/offlineMessages"></a>
+<code>offlineMessages</code></dt><dd><p>接收到的离线列表</dd>
+</dl>
+</div>
 <hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/EMChatManagerChatDelegate/didSendMessage:error:;   name=EMChatManagerChatDelegate::didSendMessage:error: -->
 <a name="//apple_ref/occ/intfm/EMChatManagerChatDelegate/didSendMessage:error:"></a>
 <h3><a name="didSendMessage:error:">didSendMessage:error:</a></h3>
@@ -590,7 +670,7 @@ function disclosure_triangle(elt) {
 </dl>
 </div>
 <p class="gapBeforeFooter">&nbsp;</p><hr class="afterFooter"><div class="hd_copyright_and_timestamp">
-<p class="hd_timestamp">Last Updated: Thursday, March 19, 2015
+<p class="hd_timestamp">Last Updated: Monday, July 13, 2015
 </p></div>
 </td></tr></table>
 </body></html>
