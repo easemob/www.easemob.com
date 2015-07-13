@@ -30,20 +30,7 @@ secondnavios: true
 
 ## REST {#rest}
 
-* 支持建群
-* curl -X POST "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer azfuPA9RobgM8SXITeBtRnQOXDi8dU" -d '{"owner":"u1","members":["u1","u2"],"maxusers":5000,"groupname":"chatroom title","desc":"chatroom description"}'
-
-* 支持查询所有APP聊天室
-* curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms" -H "Authorization: Bearer azfuPA9RobgM8SXITeBtRnQOXDi8dU"
-
-* 支持查询聊天室详情
-* curl -X GET "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235" -H "Authorization: Bearer azfuPA9RobgM8SXITeBtRnQOXDi8dU"
-
-* 支持聊天室踢人
-* curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1430798028680235/users/u2' -H "Authorization: Bearer azfuPA9RobgM8SXITeBtRnQOXDi8dU"
-
-* 支持删除聊天室
-* curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/143228117786605' -H "Authorization: Bearer azfuPA9RobgM8SXITeBtRnQOXDi8dU"
+通过rest管理聊天室 <http://www.easemob.com/docs/rest/chatrooms/#section>
 
 ## 获取聊天室 {#fetch}
 
