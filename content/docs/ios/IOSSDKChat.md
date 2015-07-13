@@ -76,7 +76,7 @@ secondnavios: true
 @param offlineMessages 接收到的离线列表
 @result
 */
-- (void)didFinishedReceiveOfflineMessages:(NSArray *)offlineMessages;
+- (void)didReceiveOfflineMessages:(NSArray *)offlineMessages;
 </code></pre>
 
 离线透传消息会走以下回调:
@@ -89,7 +89,7 @@ secondnavios: true
 @param offlineCmdMessages 接收到的离线透传消息列表
 @result
 */
-- (void)didFinishedReceiveOfflineCmdMessages:(NSArray *)offlineCmdMessages;
+- (void)didReceiveOfflineCmdMessages:(NSArray *)offlineCmdMessages;
 </code></pre>
 
 ## 接收在线消息 {#receiveonlinemessage}
