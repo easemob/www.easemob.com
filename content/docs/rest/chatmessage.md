@@ -111,12 +111,12 @@ sidebar: restsidebar
     "bodies":[{
         "type": "video",//视频消息类型
         "filename": "1418105136313.mp4",//视频文件名称
-        "thumb": "http://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/67279b20-7f69-11e4-8eee-21d3334b3a97",//上传视频缩略图远程地址，在上传视频缩略图后会返回uuid
+        "thumb": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/67279b20-7f69-11e4-8eee-21d3334b3a97",//上传视频缩略图远程地址，在上传视频缩略图后会返回uuid
         "length": 10,//视频播放长度
         "secret": "VfEpSmSvEeS7yU8dwa9rAQc-DIL2HhmpujTNfSTsrDt6eNb_",//secret在上传文件后会返回
         "file_length": 58103,
         "thumb_secret": "ZyebKn9pEeSSfY03ROk7ND24zUf74s7HpPN1oMV-1JxN2O2I",//secret在上传缩略图后会返回
-        "url": "http://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/671dfe30-7f69-11e4-ba67-8fef0d502f46"//上传视频远程地址，在上传视频后会返回uuid
+        "url": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/671dfe30-7f69-11e4-ba67-8fef0d502f46"//上传视频远程地址，在上传视频后会返回uuid
      }]
 }
 </code></pre>
