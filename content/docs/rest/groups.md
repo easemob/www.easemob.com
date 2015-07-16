@@ -302,7 +302,7 @@ curl -X GET 'https://a1.easemob.com/easemob-demo/chatdemoui/chatgroups/141181601
 <pre class="hll"><code class="language-java">
 {
   "action" : "get",
-  "uri" : "http://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5/chatgroups/1411816013089/users",
+  "uri" : "https://a1.easemob.com/easemob-demo/4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5/chatgroups/1411816013089/users",
   "entities" : [ ],
   "data" : [ {
     "member" : "lidis"
@@ -468,7 +468,7 @@ curl -X DELETE 'https://a1.easemob.com/easemob-demo/chatdemoui/chatgroups/141181
 <pre class="hll"><code class="language-java">
 {
   "action" : "get",
-  "uri" : "http://a1.easemob.com/easemob-demo/chatdemoui/users/kenshinn/joined_chatgroups",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users/kenshinn/joined_chatgroups",
   "entities" : [ ],
   "data" : [ {
     "groupid" : "1413193977786197",
