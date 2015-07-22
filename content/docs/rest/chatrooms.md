@@ -186,7 +186,7 @@ curl -X GET -H "Authorization: Bearer YWMtG4T5wkOTEeST5V-9lp7f-wAAAUnafsqrQFnCU4
 <pre class="hll"><code class="language-java">
 {
   "action" : "get",
-  "uri" : "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms",
   "entities" : [ ],
   "data" : [ {
     "id" : "1432259621444159",
@@ -230,7 +230,7 @@ curl -X GET -H "Authorization: Bearer YWMtG4T5wkOTEeST5V-9lp7f-wAAAUnafsqrQFnCU4
 <pre class="hll"><code class="language-java">
 {
   "action" : "get",
-  "uri" : "http://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1432259621444159",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/chatrooms/1432259621444159",
   "entities" : [ ],
   "data" : [ {
     "membersonly" : false,
@@ -276,7 +276,7 @@ curl -X GET 'https://a1.easemob.com/easemob-demo/chatdemoui/users/jma1/joined_ch
 <pre class="hll"><code class="language-java">
 {
   "action" : "get",
-  "uri" : "http://a1.easemob.com/easemob-demo/chatdemoui/users/jma1/joined_chatrooms",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users/jma1/joined_chatrooms",
   "entities" : [ ],
   "data" : [ {
     "id" : "1432266600611977",

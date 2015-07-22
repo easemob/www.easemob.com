@@ -26,7 +26,8 @@ sidebar: restsidebar
 * 环信ID不能使用email地址
 * 环信ID不能使用UUID
 * 环信ID中间不能有空格或者井号（#）等特殊字符
-* <b>允许的用户名正则  "[a-zA-Z0-9_\\-./]*" (a~z大小写字母和数字和下划线和斜线和横线和英文点) 其他都不允许</b>
+* <b>允许的环信ID正则  "[a-zA-Z0-9_\\-.]*" (a~z大小写字母和数字和下划线和横线和英文点) 其他都不允许</b>
+* 环信ID不区分大小写。系统忽略大小写，认为AA,Aa,aa,aA都是一样的,如果系统已经存在了环信ID为AA的用户，再试图使用aa作为环信ID注册新用户，系统返回用户名重复,以此类推。但是请注意：环信ID在数据上的表现形式还是用户最初注册的形式，注册时候使用的大写就保存大写，是小写就保存小写，即:使用AA注册，环信保存的ID就是AA;使用Aa注册，环信保存的ID就是Aa,以此类推。
 
 另: 本文档中可能会交错使用"环信ID"和"环信用户名"两个术语, 但是请注意, 这里两个的意思是一样的
 
@@ -865,7 +866,7 @@ curl -X POST -H "Authorization: Bearer YWMtP_8IisA-EeK-a5cNq4Jt3QAAAT7fI10IbPuKd
 {
     "action":"post","application":"4d7e4ba0-dc4a-11e3-90d5-e1ffbaacdaf5","params":{},
     "path":"/users/aa6160da-eb01-11e3-ab09-15edd986e7b7/contacts",
-    "uri":"http://a1.easemob.com/easemob-demo/chatdemoui/users/jliu/contacts/yantao",
+    "uri":"https://a1.easemob.com/easemob-demo/chatdemoui/users/jliu/contacts/yantao",
     "entities":[
         	{
         	"uuid":"0086742a-dc9b-11e3-a782-1b5d581c57a9",
@@ -997,7 +998,7 @@ curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk
 <pre class="hll"><code class="language-java">
 {
   "action" : "get",
-  "uri" : "http://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/blocks/users",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/blocks/users",
   "entities" : [ ],
   "data" : [ "stliu2" ],
   "timestamp" : 1412824409803,
@@ -1152,7 +1153,7 @@ curl -X GET -H "Authorization: Bearer YWMtwIRGSE9gEeSbpNnVBsIhiwAAAUon2XDyEBoBUk
 <pre class="hll"><code class="language-java">
 {
   "action" : "get",
-  "uri" : "http://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/offline_msg_count",
+  "uri" : "https://a1.easemob.com/easemob-demo/chatdemoui/users/v3y0kf9arx/offline_msg_count",
   "entities" : [ ],
   "data" : {
     "v3y0kf9arx" : 0
@@ -1188,7 +1189,7 @@ curl -X GET -i -H "Authorization: Bearer YWMtxc6K0L1aEeKf9LWFzT9xEAAAAT7MNR_9OcN
 <pre class="hll"><code class="language-java">
 {
     "action": "get",
-    "uri": "http://a2.easemob.com/easemob-demo/chatdemoui/users/jianxin/offline_msg_status/12",
+    "uri": "https://a1.easemob.com/easemob-demo/chatdemoui/users/jianxin/offline_msg_status/12",
     "entities": [],
     "data": {
         "12": "delivered"      // 格式："{消息id}":"{状态}", 状态的值有两个: deliverd 表示此用户的该条离线消息已经收到过了，undelivered 表示此用户的该条离线消息未还未收到
