@@ -26,9 +26,9 @@ var _hmt = _hmt || [];
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
-						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.2.1.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
+						<a  id="androidHref" class="ios_btn andriod_btn" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'AndroidSDK'])" href="http://www.easemob.com/downloads/easemob-sdk-2.2.2.zip">下载Andriod版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.2.1　</span>
+						<span><em><a href="/docs/android/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/android/singlechat" target="_blank">Android SDK 集成指南</a></em>V 2.2.2　</span>
 					</li>
 					<li class="li_away li_web">
 						<span class="webIm_icon"></span>
@@ -518,6 +518,23 @@ setp3、将error和warning逐个击破，千万不要忽略warning，亲~~。<br
 
 			    <ul class="history_right">
 				    <h2 class="first">Andriod SDK 更新日志</h2>
+					<li>
+	                    <h3><em></em><span>版本：V2.2.2 2015-08-05</span></h3>
+						<dl>
+						  <dt>
+						      <span>新功能/改进：<br/>	
+							    1、支持Google push service,所以想做国际化APP的开发者可以用此版本
+<br/>	
+								2、修复日志输出导致的APPcrash
+<br/>
+								3、修复后台相应有问题时，前端导致的crash问题<br/>
+								4、修复在弱网转态下，实时音视频卡顿的问题<br/>
+								5、Demo集成parse SDK，展示如何获取联系人头像和昵称<br/>
+								
+						      </span>
+						  </dt>
+						</dl>
+	                </li>     
 				    <li>
 	                    <h3><em></em><span>版本：V2.2.1 2015-07-03</span></h3>
 						<dl>
