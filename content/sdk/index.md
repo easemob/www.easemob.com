@@ -20,7 +20,7 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/IOSSDK-20150813.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150813.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
 						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.2.0　</span>
 					</li>
