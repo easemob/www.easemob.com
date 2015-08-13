@@ -20,9 +20,9 @@ var _hmt = _hmt || [];
 				<ul class="step_icon">
 					<li>
 						<span class="ios_icon"></span>
-						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150710.zip">下载IOS版开发包（SDK+文档+Demo)</a>
+						<a class="ios_btn" id="iosHref" onclick="_hmt.push(['_trackEvent', 'IMSDK', 'click', 'iosSDK'])" href=" http://downloads.easemob.com/downloads/iOSSDK-20150813.zip">下载IOS版开发包（SDK+文档+Demo)</a>
  						
-						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.1.9　</span>
+						<span><em><a href="/docs/ios/quickstart"  target="_blank">5分钟快速入门</a> | <a href="/docs/ios/singlechat" target="_blank">iOS SDK 集成指南</a></em>V 2.2.0　</span>
 					</li>
 					<li class="li_away">
 						<span class="andriod_icon"></span>
@@ -44,6 +44,27 @@ var _hmt = _hmt || [];
 			<div class="history_date">
 				<ul class="history_left">
 			      	<h2 class="first">iOS SDK 更新日志</h2>
+			      		<li>
+                            <h3><em></em><span>版本：V2.2.0 2015-08-13</span></h3>
+                            <dl>
+                                <dt>
+                                    <span>新功能：<br/>
+                                    1、Demo集成parse SDK，展示如何获取联系人头像和昵称。 <br/>
+                                    </span>
+
+                                    <span> bug fix:<br/>
+                                    1、SDK bug: 修复当离线消息数为0时回调的bug。<br/>
+                                    2、SDK bug: 当群组创建时群组实际人数错误bug。<br/>
+                                    3、SDK bug: 图片发送时按照图片分辨率进行剪裁压缩,保证图片正常显示。<br/>
+                                    </span>
+
+                                    <span>SDK细节调整：<br/>
+                                    1、SDK支持iOS9;<br/>
+                                    2、图片发送支持按原分辨率发送图片<a href="http://www.easemob.com/docs/ios/releaseNote2_2_0">2.2.0release note</a>。<br/> <br/>
+                                    </span>
+                                </dt>
+                            </dl>
+                        </li>
 			      		<li>
                             <h3><em></em><span>版本：V2.1.9 2015-07-10</span></h3>
                             <dl>
