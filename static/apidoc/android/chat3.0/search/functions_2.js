@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['callmanager',['callManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a24d555fb3ac11af3078fbf3c78fd416a',1,'com::hyphenate::chat::EMClient']]],
+  ['changegroupname',['changeGroupName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a6bb2db1f83e4ce3026109a1505ba5634',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['chatmanager',['chatManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a4e6f34a56c359a9e5420dbfefadb15a8',1,'com::hyphenate::chat::EMClient']]],
+  ['chatroommanager',['chatroomManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a9ac57843da590eec74cca3f646b06405',1,'com::hyphenate::chat::EMClient']]],
+  ['clear',['clear',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a6564545a38d47b99cc76780619022637',1,'com::hyphenate::chat::EMConversation']]],
+  ['clearallmessages',['clearAllMessages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#ad65ea036100eddfb06cf00c80ef2cc87',1,'com::hyphenate::chat::EMConversation']]],
+  ['contactmanager',['contactManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#acf1538f9850034cebd46f2cc726c7b72',1,'com::hyphenate::chat::EMClient']]],
+  ['conversationid',['conversationId',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43',1,'com::hyphenate::chat::EMConversation']]],
+  ['createaccount',['createAccount',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a2905c3cc10d3b61a7630a83cc80c60fc',1,'com::hyphenate::chat::EMClient']]],
+  ['createfilesendmessage',['createFileSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a0e862ad404ea67f4a8a465ccb55b0b1a',1,'com::hyphenate::chat::EMMessage']]],
+  ['creategroup',['createGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a1479170e101eecd90a8edca2461b85a6',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['createimagesendmessage',['createImageSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a3ac69d152231b4e9077845c7e65f95f2',1,'com::hyphenate::chat::EMMessage']]],
+  ['createlocationsendmessage',['createLocationSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#af604bb041bba71907ca34203f1664a47',1,'com::hyphenate::chat::EMMessage']]],
+  ['createreceivemessage',['createReceiveMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a807e755eb9d40390691f73639921aa1d',1,'com::hyphenate::chat::EMMessage']]],
+  ['createsendmessage',['createSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#aefa8cbb7663d83b2a6bbaab9ede155f1',1,'com::hyphenate::chat::EMMessage']]],
+  ['createtxtsendmessage',['createTxtSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ada043cb0f1512242d016c54e4352eccc',1,'com::hyphenate::chat::EMMessage']]],
+  ['createvideosendmessage',['createVideoSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a1b9ee01aa3b2ea120fb992aa8502c5ca',1,'com::hyphenate::chat::EMMessage']]],
+  ['createvoicesendmessage',['createVoiceSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#acda3d7825b6f4ecbeaefe81bbae2f75a',1,'com::hyphenate::chat::EMMessage']]]
+];
