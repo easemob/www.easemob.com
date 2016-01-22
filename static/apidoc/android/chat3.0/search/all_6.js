@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['general_5ferror',['GENERAL_ERROR',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa0588007ca25fab81e635625f01639bc',1,'com::hyphenate::EMError']]],
   ['getacceptinvitationalways',['getAcceptInvitationAlways',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a7cd7b4162d4014386917c9a4a0c927a4',1,'com::hyphenate::chat::EMOptions']]],
   ['getaddress',['getAddress',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_location_message_body.html#aa90cd64472941d73c0c378436712117b',1,'com::hyphenate::chat::EMLocationMessageBody']]],
   ['getaffiliationscount',['getAffiliationsCount',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#ac97933a0ecf1c01da7e60108863eadda',1,'com::hyphenate::chat::EMGroup']]],
@@ -82,6 +83,12 @@ var searchData=
   ['getvideotimedelay',['getVideoTimedelay',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_call_helper.html#a28e55074298962099d72266f3e769dd2',1,'com::hyphenate::chat::EMVideoCallHelper']]],
   ['getvideowidth',['getVideoWidth',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_call_helper.html#a0d5a9060d753f057228b5f1bb17382fd',1,'com::hyphenate::chat::EMVideoCallHelper']]],
   ['getwidth',['getWidth',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a69976c737c34c8b0582fc069697add5d',1,'com::hyphenate::chat::EMImageMessageBody']]],
+  ['group_5falready_5fjoined',['GROUP_ALREADY_JOINED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a4df77f4928f2cb365e7089a52e8cda2d',1,'com::hyphenate::EMError']]],
+  ['group_5finvalid_5fid',['GROUP_INVALID_ID',['../classcom_1_1hyphenate_1_1_e_m_error.html#af4f51c046ca4a82ea41d9ee3e4ab5832',1,'com::hyphenate::EMError']]],
+  ['group_5fmembers_5ffull',['GROUP_MEMBERS_FULL',['../classcom_1_1hyphenate_1_1_e_m_error.html#acd4fdf197c83dbb8d4ad0fffbc2258c6',1,'com::hyphenate::EMError']]],
+  ['group_5fnot_5fexist',['GROUP_NOT_EXIST',['../classcom_1_1hyphenate_1_1_e_m_error.html#afeda85f3d61e17baf12be942a5d58e07',1,'com::hyphenate::EMError']]],
+  ['group_5fnot_5fjoined',['GROUP_NOT_JOINED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac1eb45bfd243d809ea25c60b9277249f',1,'com::hyphenate::EMError']]],
+  ['group_5fpermission_5fdenied',['GROUP_PERMISSION_DENIED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a5fd34106c7e9b063430743fd0f2ce7b7',1,'com::hyphenate::EMError']]],
   ['groupchat',['GroupChat',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#aa83280ce79df6f5aa49f7a5223498cad',1,'com::hyphenate::chat::EMMessage::ChatType']]],
   ['groupmanager',['groupManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a519220cf905c540e9ca60a944d7930d5',1,'com::hyphenate::chat::EMClient']]]
 ];

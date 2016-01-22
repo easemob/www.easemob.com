@@ -34,7 +34,6 @@ var searchData=
   ['emlocationmessagebody',['EMLocationMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_location_message_body.html',1,'com::hyphenate::chat']]],
   ['emmessage',['EMMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html',1,'com::hyphenate::chat']]],
   ['emmessagebody',['EMMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message_body.html',1,'com::hyphenate::chat']]],
-  ['emmessagechangeeventdata',['EMMessageChangeEventData',['../classcom_1_1hyphenate_1_1_e_m_message_change_event_data.html',1,'com::hyphenate']]],
   ['emmessagelistener',['EMMessageListener',['../interfacecom_1_1hyphenate_1_1_e_m_message_listener.html',1,'com::hyphenate']]],
   ['emmipushreceiver',['EMMipushReceiver',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_mipush_receiver.html',1,'com::hyphenate::chat']]],
   ['emmonitorreceiver',['EMMonitorReceiver',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_monitor_receiver.html',1,'com::hyphenate::chat']]],

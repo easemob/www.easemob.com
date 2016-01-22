@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['source',['source',['../classcom_1_1hyphenate_1_1_e_m_message_change_event_data.html#a8c33035674b12e856871938c3d2ae124',1,'com::hyphenate::EMMessageChangeEventData']]]
+  ['network_5ferror',['NETWORK_ERROR',['../classcom_1_1hyphenate_1_1_e_m_error.html#a53f03b9faef49cc12ee5c3bca387d3e6',1,'com::hyphenate::EMError']]]
 ];
