@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['options',['options',['../interface_e_m_client.html#a70811751f9492f9bcfe0bfcccfaada9a',1,'EMClient']]],
-  ['optionswithappkey_3a',['optionsWithAppkey:',['../interface_e_m_options.html#ab862ec18b8e5af328594c82ea292c387',1,'EMOptions']]]
+  ['joinchatroom_3aerror_3a',['joinChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a32a8775b7719f1426e885f864464fb68',1,'IEMChatroomManager-p']]],
+  ['joinpublicgroup_3aerror_3a',['joinPublicGroup:error:',['../protocol_i_e_m_group_manager-p.html#ab8a4e26cd835e7bf13a9198c20aed1ec',1,'IEMGroupManager-p']]]
 ];

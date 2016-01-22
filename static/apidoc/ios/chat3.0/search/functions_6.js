@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['loginwithusername_3apassword_3a',['loginWithUsername:password:',['../interface_e_m_client.html#a586c4bdeb649055886c25603125072fe',1,'EMClient']]],
-  ['logout_3a',['logout:',['../interface_e_m_client.html#ab4562627674072e4b2a98ece2d429efb',1,'EMClient']]]
+  ['fetchgroupbanslist_3aerror_3a',['fetchGroupBansList:error:',['../protocol_i_e_m_group_manager-p.html#a14f2a9c6a9840fbaedb4357ecc0c367b',1,'IEMGroupManager-p']]],
+  ['fetchgroupinfo_3aincludememberslist_3aerror_3a',['fetchGroupInfo:includeMembersList:error:',['../protocol_i_e_m_group_manager-p.html#a356e2a7e17e6d0b3d6aacf7d1996ab14',1,'IEMGroupManager-p']]]
 ];

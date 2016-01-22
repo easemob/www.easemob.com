@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>HyphenateSDK: CallManager/EMCallSession.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">HyphenateSDK
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c6e0845230f136aedcfd5ba6cb5159a4.html">CallManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EMCallSession.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    EMCallSessionStatusDisconnected = 0,    </div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    EMCallSessionStatusRinging,             </div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    EMCallSessionStatusConnecting,          </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    EMCallSessionStatusConnected,           </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    EMCallSessionStatusAccepted,            </div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}EMCallSessionStatus;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    EMCallTypeVoice = 0,    </div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    EMCallTypeVideo,        </div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}EMCallType;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    EMCallEndReasonHangup   = 0,    </div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    EMCallEndReasonNoResponse,      </div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    EMCallEndReasonDecline,         </div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    EMCallEndReasonBusy,            </div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    EMCallEndReasonFailed,          </div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}EMCallEndReason;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    EMCallConnectTypeNone = 0,  </div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    EMCallConnectTypeDirect,    </div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    EMCallConnectTypeRelay,     </div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}EMCallConnectType;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="interface_e_m_call_session.html">   79</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_e_m_call_session.html">EMCallSession</a> : NSObject</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="interface_e_m_call_session.html#ab54c256c5fec397181757c9e7ff697cd">   88</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *<a class="code" href="interface_e_m_call_session.html#ab54c256c5fec397181757c9e7ff697cd">sessionId</a>;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="interface_e_m_call_session.html#ac5e4f56b1352871d5e0a1f3f11f45c13">   97</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *<a class="code" href="interface_e_m_call_session.html#ac5e4f56b1352871d5e0a1f3f11f45c13">username</a>;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div><div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="interface_e_m_call_session.html#a1effd35b783eb60a1726a0325bb983f8">  106</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *<a class="code" href="interface_e_m_call_session.html#a1effd35b783eb60a1726a0325bb983f8">remoteUsername</a>;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div><div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="interface_e_m_call_session.html#aa12fc9a028f5ae16869a302894ffdb4f">  115</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) EMCallType <a class="code" href="interface_e_m_call_session.html#aa12fc9a028f5ae16869a302894ffdb4f">type</a>;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div><div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="interface_e_m_call_session.html#ab31443f1605498f4bb80a4e98925fecb">  124</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) EMCallConnectType <a class="code" href="interface_e_m_call_session.html#ab31443f1605498f4bb80a4e98925fecb">connectType</a>;</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div><div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="interface_e_m_call_session.html#a7ac723de33f96d1f05777c5e53001636">  133</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) EMCallSessionStatus <a class="code" href="interface_e_m_call_session.html#a7ac723de33f96d1f05777c5e53001636">status</a>;</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">@end</span></div><div class="ttc" id="interface_e_m_call_session_html"><div class="ttname"><a href="interface_e_m_call_session.html">EMCallSession</a></div><div class="ttdef"><b>Definition:</b> EMCallSession.h:79</div></div>
+<div class="ttc" id="interface_e_m_call_session_html_a1effd35b783eb60a1726a0325bb983f8"><div class="ttname"><a href="interface_e_m_call_session.html#a1effd35b783eb60a1726a0325bb983f8">EMCallSession::remoteUsername</a></div><div class="ttdeci">NSString * remoteUsername</div><div class="ttdef"><b>Definition:</b> EMCallSession.h:106</div></div>
+<div class="ttc" id="interface_e_m_call_session_html_aa12fc9a028f5ae16869a302894ffdb4f"><div class="ttname"><a href="interface_e_m_call_session.html#aa12fc9a028f5ae16869a302894ffdb4f">EMCallSession::type</a></div><div class="ttdeci">EMCallType type</div><div class="ttdef"><b>Definition:</b> EMCallSession.h:115</div></div>
+<div class="ttc" id="interface_e_m_call_session_html_ac5e4f56b1352871d5e0a1f3f11f45c13"><div class="ttname"><a href="interface_e_m_call_session.html#ac5e4f56b1352871d5e0a1f3f11f45c13">EMCallSession::username</a></div><div class="ttdeci">NSString * username</div><div class="ttdef"><b>Definition:</b> EMCallSession.h:97</div></div>
+<div class="ttc" id="interface_e_m_call_session_html_a7ac723de33f96d1f05777c5e53001636"><div class="ttname"><a href="interface_e_m_call_session.html#a7ac723de33f96d1f05777c5e53001636">EMCallSession::status</a></div><div class="ttdeci">EMCallSessionStatus status</div><div class="ttdef"><b>Definition:</b> EMCallSession.h:133</div></div>
+<div class="ttc" id="interface_e_m_call_session_html_ab54c256c5fec397181757c9e7ff697cd"><div class="ttname"><a href="interface_e_m_call_session.html#ab54c256c5fec397181757c9e7ff697cd">EMCallSession::sessionId</a></div><div class="ttdeci">NSString * sessionId</div><div class="ttdef"><b>Definition:</b> EMCallSession.h:88</div></div>
+<div class="ttc" id="interface_e_m_call_session_html_ab31443f1605498f4bb80a4e98925fecb"><div class="ttname"><a href="interface_e_m_call_session.html#ab31443f1605498f4bb80a4e98925fecb">EMCallSession::connectType</a></div><div class="ttdeci">EMCallConnectType connectType</div><div class="ttdef"><b>Definition:</b> EMCallSession.h:124</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
