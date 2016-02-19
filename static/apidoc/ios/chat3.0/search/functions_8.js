@@ -12,6 +12,5 @@ var searchData=
   ['initwithlatitude_3alongitude_3aaddress_3a',['initWithLatitude:longitude:address:',['../interface_e_m_location_message_body.html#af229efc7f40bef7d8589de498e51be1f',1,'EMLocationMessageBody']]],
   ['initwithlocalpath_3adisplayname_3a',['initWithLocalPath:displayName:',['../interface_e_m_file_message_body.html#a536a7a4f9d928a01d51015fa22885aec',1,'EMFileMessageBody']]],
   ['initwithtext_3a',['initWithText:',['../interface_e_m_text_message_body.html#a918b8fb211a6b75cf03202f48eea9cc8',1,'EMTextMessageBody']]],
-  ['insertmessage_3a',['insertMessage:',['../interface_e_m_conversation.html#adec509d5087b169d94b2305f90580243',1,'EMConversation']]],
-  ['isappkey_3a',['isAppkey:',['../interface_e_m_string_util.html#a248cc015c298c888bb737587795ccbd9',1,'EMStringUtil']]]
+  ['insertmessage_3a',['insertMessage:',['../interface_e_m_conversation.html#adec509d5087b169d94b2305f90580243',1,'EMConversation']]]
 ];
