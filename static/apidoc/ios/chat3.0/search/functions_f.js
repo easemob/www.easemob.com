@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['searchpublicgroupwithid_3aerror_3a',['searchPublicGroupWithId:error:',['../protocol_i_e_m_group_manager-p.html#a6bb1222214e0f15ce1034da4be30a55f',1,'IEMGroupManager-p']]],
-  ['setapnsnickname_3a',['setApnsNickname:',['../interface_e_m_client.html#a29f928aab2d104e6bf00426ed0c3d7dc',1,'EMClient']]],
-  ['setbitrate_3a',['setBitrate:',['../protocol_i_e_m_call_manager-p.html#a73b4ebb86a8c796c5498d41a8b146255',1,'IEMCallManager-p']]],
-  ['sharedclient',['sharedClient',['../interface_e_m_client.html#abdf7f014fc5a6c76d9a9bd676d9543f5',1,'EMClient']]],
-  ['stdtonsstring_3a',['stdToNSString:',['../interface_e_m_string_util.html#a4d1ff27567eacb554ff42a4e60299337',1,'EMStringUtil']]]
+  ['unblockgroup_3aerror_3a',['unblockGroup:error:',['../protocol_i_e_m_group_manager-p.html#a252663db7def2959c9ed47df5d279328',1,'IEMGroupManager-p']]],
+  ['unblockoccupants_3aforgroup_3aerror_3a',['unblockOccupants:forGroup:error:',['../protocol_i_e_m_group_manager-p.html#ae74a6c21accb8069bca968f9d7f2edbe',1,'IEMGroupManager-p']]],
+  ['updateconversationexttodb',['updateConversationExtToDB',['../interface_e_m_conversation.html#a34e983afb92087d2bbef334caf6dff7b',1,'EMConversation']]],
+  ['updatemessage_3a',['updateMessage:',['../interface_e_m_conversation.html#a4dca17de552da315a566bb1596cd1ce1',1,'EMConversation::updateMessage:()'],['../protocol_i_e_m_chat_manager-p.html#a2ee224a596c75fa427d9e0f973f4520d',1,'IEMChatManager-p::updateMessage:()']]],
+  ['updatepushoptionstoserver',['updatePushOptionsToServer',['../interface_e_m_client.html#aeb2d55a9deecd62749e2f25af01014be',1,'EMClient']]]
 ];

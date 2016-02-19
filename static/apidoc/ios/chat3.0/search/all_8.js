@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['iemcallmanager_2dp',['IEMCallManager-p',['../protocol_i_e_m_call_manager-p.html',1,'']]],
   ['iemchatmanager_2dp',['IEMChatManager-p',['../protocol_i_e_m_chat_manager-p.html',1,'']]],
   ['iemchatroommanager_2dp',['IEMChatroomManager-p',['../protocol_i_e_m_chatroom_manager-p.html',1,'']]],
   ['iemcontactmanager_2dp',['IEMContactManager-p',['../protocol_i_e_m_contact_manager-p.html',1,'']]],
   ['iemgroupmanager_2dp',['IEMGroupManager-p',['../protocol_i_e_m_group_manager-p.html',1,'']]],
-  ['iempushmanager_2dp',['IEMPushManager-p',['../protocol_i_e_m_push_manager-p.html',1,'']]],
   ['ignoregrouppush_3aignore_3a',['ignoreGroupPush:ignore:',['../protocol_i_e_m_group_manager-p.html#add5f83a1283d222a914f04d474df5964',1,'IEMGroupManager-p']]],
   ['importconversations_3a',['importConversations:',['../protocol_i_e_m_chat_manager-p.html#a4dc89b15dc572c8fa0015c4bdc5e85be',1,'IEMChatManager-p']]],
   ['importmessages_3a',['importMessages:',['../protocol_i_e_m_chat_manager-p.html#a10c9a74e983bee8ce02f329116749d77',1,'IEMChatManager-p']]],
@@ -19,7 +17,6 @@ var searchData=
   ['initwithlocalpath_3adisplayname_3a',['initWithLocalPath:displayName:',['../interface_e_m_file_message_body.html#a536a7a4f9d928a01d51015fa22885aec',1,'EMFileMessageBody']]],
   ['initwithtext_3a',['initWithText:',['../interface_e_m_text_message_body.html#a918b8fb211a6b75cf03202f48eea9cc8',1,'EMTextMessageBody']]],
   ['insertmessage_3a',['insertMessage:',['../interface_e_m_conversation.html#adec509d5087b169d94b2305f90580243',1,'EMConversation']]],
-  ['isappkey_3a',['isAppkey:',['../interface_e_m_string_util.html#a248cc015c298c888bb737587795ccbd9',1,'EMStringUtil']]],
   ['isautoacceptfriendinvitation',['isAutoAcceptFriendInvitation',['../interface_e_m_options.html#aebd6883b757ce8a073adf03d231ebcc4',1,'EMOptions']]],
   ['isautoacceptgroupinvitation',['isAutoAcceptGroupInvitation',['../interface_e_m_options.html#a63cfcf47cd6f0a4cfd608c7b2e2f3875',1,'EMOptions']]],
   ['isautologin',['isAutoLogin',['../interface_e_m_client.html#ae50fe6b04f44098399b6522abbb89849',1,'EMClient::isAutoLogin()'],['../interface_e_m_options.html#a04e53a0ebdbe1cf8716ee65af34c3e77',1,'EMOptions::isAutoLogin()']]],
