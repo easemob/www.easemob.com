@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['unblockgroup_3aerror_3a',['unblockGroup:error:',['../protocol_i_e_m_group_manager-p.html#a252663db7def2959c9ed47df5d279328',1,'IEMGroupManager-p']]],
-  ['unblockoccupants_3aforgroup_3aerror_3a',['unblockOccupants:forGroup:error:',['../protocol_i_e_m_group_manager-p.html#ae74a6c21accb8069bca968f9d7f2edbe',1,'IEMGroupManager-p']]],
-  ['updateconversationexttodb',['updateConversationExtToDB',['../interface_e_m_conversation.html#a34e983afb92087d2bbef334caf6dff7b',1,'EMConversation']]],
-  ['updatemessage_3a',['updateMessage:',['../interface_e_m_conversation.html#a4dca17de552da315a566bb1596cd1ce1',1,'EMConversation::updateMessage:()'],['../protocol_i_e_m_chat_manager-p.html#a2ee224a596c75fa427d9e0f973f4520d',1,'IEMChatManager-p::updateMessage:()']]],
-  ['updatepushoptionstoserver',['updatePushOptionsToServer',['../interface_e_m_client.html#aeb2d55a9deecd62749e2f25af01014be',1,'EMClient']]]
+  ['searchpublicgroupwithid_3aerror_3a',['searchPublicGroupWithId:error:',['../protocol_i_e_m_group_manager-p.html#a6bb1222214e0f15ce1034da4be30a55f',1,'IEMGroupManager-p']]],
+  ['setapnsnickname_3a',['setApnsNickname:',['../interface_e_m_client.html#a29f928aab2d104e6bf00426ed0c3d7dc',1,'EMClient']]],
+  ['setvideoadaptive_3a',['setVideoAdaptive:',['../protocol_i_e_m_call_manager-p.html#a52b8e4df7af5e56002869f72316d3d16',1,'IEMCallManager-p']]],
+  ['setvideosize_3aheight_3a',['setVideoSize:height:',['../interface_open_g_l_view20.html#af4c6980587da84e1c5157e6ea4b59eda',1,'OpenGLView20']]],
+  ['sharedclient',['sharedClient',['../interface_e_m_client.html#abdf7f014fc5a6c76d9a9bd676d9543f5',1,'EMClient']]],
+  ['startvideorecord_3a',['startVideoRecord:',['../interface_e_m_call_session.html#a8be657b36ec9ed51e91d98aefcc522b3',1,'EMCallSession']]],
+  ['stopvideorecord',['stopVideoRecord',['../interface_e_m_call_session.html#af023d9a8c8163519ade3040ceb8abe90',1,'EMCallSession']]]
 ];

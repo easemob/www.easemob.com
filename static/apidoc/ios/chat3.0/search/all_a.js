@@ -9,9 +9,14 @@ var searchData=
   ['loadallconversationsfromdb',['loadAllConversationsFromDB',['../protocol_i_e_m_chat_manager-p.html#aa7f112da8fe1ee49c9749c417e1186cf',1,'IEMChatManager-p']]],
   ['loadallmygroupsfromdb',['loadAllMyGroupsFromDB',['../protocol_i_e_m_group_manager-p.html#ad32a1e1830d5d858b9d9c7eae31fc1fe',1,'IEMGroupManager-p']]],
   ['loadmessagewithid_3a',['loadMessageWithId:',['../interface_e_m_conversation.html#acb5a2ad74dda943f56f7da4585f2a1a5',1,'EMConversation']]],
-  ['loadmoremessagesfromid_3alimit_3a',['loadMoreMessagesFromId:limit:',['../interface_e_m_conversation.html#a3815dafb0dd54337a581132419cdde2c',1,'EMConversation']]],
+  ['loadmoremessagescontain_3abefore_3alimit_3afrom_3adirection_3a',['loadMoreMessagesContain:before:limit:from:direction:',['../interface_e_m_conversation.html#a4a1b7f9440e6f04445c04d70a569c148',1,'EMConversation']]],
+  ['loadmoremessagesfrom_3ato_3amaxcount_3a',['loadMoreMessagesFrom:to:maxCount:',['../interface_e_m_conversation.html#a3a6eb956d2713f689a7471912e6d7368',1,'EMConversation']]],
+  ['loadmoremessagesfromid_3alimit_3adirection_3a',['loadMoreMessagesFromId:limit:direction:',['../interface_e_m_conversation.html#a96c69fcce8b43e59a23e1f7fd47f5180',1,'EMConversation']]],
+  ['loadmoremessageswithtype_3abefore_3alimit_3afrom_3adirection_3a',['loadMoreMessagesWithType:before:limit:from:direction:',['../interface_e_m_conversation.html#a2635bf1a082d257158499516840da6ec',1,'EMConversation']]],
   ['localpath',['localPath',['../interface_e_m_file_message_body.html#aa109e9466c919f0fe5c1c9ef37b5386d',1,'EMFileMessageBody']]],
+  ['localview',['localView',['../interface_e_m_call_session.html#a8717ba20f2e040ff590725c28231fb25',1,'EMCallSession']]],
   ['loginwithusername_3apassword_3a',['loginWithUsername:password:',['../interface_e_m_client.html#a586c4bdeb649055886c25603125072fe',1,'EMClient']]],
+  ['loglevel',['logLevel',['../interface_e_m_options.html#a0532bf2756002f639f403bed4c8a589e',1,'EMOptions']]],
   ['logout_3a',['logout:',['../interface_e_m_client.html#ab4562627674072e4b2a98ece2d429efb',1,'EMClient']]],
   ['longitude',['longitude',['../interface_e_m_location_message_body.html#a803a3f6cd011398d9f3125092359ce67',1,'EMLocationMessageBody']]]
 ];
