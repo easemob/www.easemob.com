@@ -2,7 +2,7 @@ var searchData=
 [
   ['onapplicationaccept',['onApplicationAccept',['../interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#ac0cee6b68a55cd89429808b51d1a53e6',1,'com::hyphenate::EMGroupChangeListener']]],
   ['onapplicationdeclined',['onApplicationDeclined',['../interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a14c356e1a44ebf6bc81c096268227301',1,'com::hyphenate::EMGroupChangeListener']]],
-  ['onapplicationreceived',['onApplicationReceived',['../interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a961b8e1e4cb8b6c5fb45c5abdeb5d052',1,'com::hyphenate::EMGroupChangeListener']]],
+  ['onapplicationreceived',['onApplicationReceived',['../interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a31cba85047747986774cf8f9c8014355',1,'com::hyphenate::EMGroupChangeListener']]],
   ['onautoacceptinvitationfromgroup',['onAutoAcceptInvitationFromGroup',['../interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a65f06e308c000a2219e1d7852dc4f370',1,'com::hyphenate::EMGroupChangeListener']]],
   ['oncallstatechanged',['onCallStateChanged',['../interfacecom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener.html#a809a983230f567e449a1a6ca60149451',1,'com::hyphenate::chat::EMCallStateChangeListener']]],
   ['onchatroomdestroyed',['onChatRoomDestroyed',['../interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#a7ff4a777f1efbb7ba487cb8d76b2515c',1,'com::hyphenate::EMChatRoomChangeListener']]],
@@ -29,5 +29,5 @@ var searchData=
   ['onprogress',['onProgress',['../interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa9fa39a4afcf86a8a9b0e308ecd4e137',1,'com::hyphenate::EMCallBack']]],
   ['onsuccess',['onSuccess',['../interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa819895b47f578c0bc25b8c7eca9fe45',1,'com.hyphenate.EMCallBack.onSuccess()'],['../interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#aee8df9da3d7a15e700f358344d9b2b98',1,'com.hyphenate.EMValueCallBack.onSuccess()']]],
   ['onuserremoved',['onUserRemoved',['../interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a384a1449894868434c842652d50e2382',1,'com::hyphenate::EMGroupChangeListener']]],
-  ['onwindowresize',['onWindowResize',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_call_helper.html#a56fbc196988c94268befa67d0e7846ac',1,'com::hyphenate::chat::EMVideoCallHelper']]]
+  ['openfile',['openFile',['../classcom_1_1hyphenate_1_1util_1_1_file_utils.html#a0e5463848af5ee7b21f0201fce5f127e',1,'com::hyphenate::util::FileUtils']]]
 ];

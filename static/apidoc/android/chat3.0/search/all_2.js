@@ -3,9 +3,10 @@ var searchData=
   ['callerror',['CallError',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_error.html',1,'com::hyphenate::chat::EMCallStateChangeListener']]],
   ['callmanager',['callManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a24d555fb3ac11af3078fbf3c78fd416a',1,'com::hyphenate::chat::EMClient']]],
   ['callstate',['CallState',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_state.html',1,'com::hyphenate::chat::EMCallStateChangeListener']]],
+  ['calltype',['CallType',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager_1_1_e_m_video_call_helper_1_1_call_type.html',1,'com::hyphenate::chat::EMCallManager::EMVideoCallHelper']]],
   ['changegroupname',['changeGroupName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a6bb2db1f83e4ce3026109a1505ba5634',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['chat',['chat',['../namespacecom_1_1hyphenate_1_1chat.html',1,'com::hyphenate']]],
   ['chat',['Chat',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#a160bb0aa31d02b25444da9b0eb83250c',1,'com::hyphenate::chat::EMMessage::ChatType']]],
+  ['chat',['chat',['../namespacecom_1_1hyphenate_1_1chat.html',1,'com::hyphenate']]],
   ['chatmanager',['chatManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a4e6f34a56c359a9e5420dbfefadb15a8',1,'com::hyphenate::chat::EMClient']]],
   ['chatroom',['ChatRoom',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#a5a9b5032e0df84c52ff9ec94896c02e1',1,'com::hyphenate::chat::EMMessage::ChatType']]],
   ['chatroom_5falready_5fjoined',['CHATROOM_ALREADY_JOINED',['../classcom_1_1hyphenate_1_1_e_m_error.html#aba83ab09364eccc5e7ed5bd68eebc00a',1,'com::hyphenate::EMError']]],
@@ -20,6 +21,7 @@ var searchData=
   ['clearallmessages',['clearAllMessages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#ad65ea036100eddfb06cf00c80ef2cc87',1,'com::hyphenate::chat::EMConversation']]],
   ['connected',['CONNECTED',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_state.html#a4d71b0fb259693e52a4a5edb27971eb7',1,'com::hyphenate::chat::EMCallStateChangeListener::CallState']]],
   ['connecting',['CONNECTING',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_state.html#a9361fa1a8652e219684113302f3d32ca',1,'com::hyphenate::chat::EMCallStateChangeListener::CallState']]],
+  ['connecttype',['ConnectType',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_session_1_1_connect_type.html',1,'com::hyphenate::chat::EMCallSession']]],
   ['contactmanager',['contactManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#acf1538f9850034cebd46f2cc726c7b72',1,'com::hyphenate::chat::EMClient']]],
   ['conversationid',['conversationId',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43',1,'com::hyphenate::chat::EMConversation']]],
   ['createaccount',['createAccount',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a2905c3cc10d3b61a7630a83cc80c60fc',1,'com::hyphenate::chat::EMClient']]],
@@ -31,5 +33,6 @@ var searchData=
   ['createsendmessage',['createSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#aefa8cbb7663d83b2a6bbaab9ede155f1',1,'com::hyphenate::chat::EMMessage']]],
   ['createtxtsendmessage',['createTxtSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ada043cb0f1512242d016c54e4352eccc',1,'com::hyphenate::chat::EMMessage']]],
   ['createvideosendmessage',['createVideoSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a1b9ee01aa3b2ea120fb992aa8502c5ca',1,'com::hyphenate::chat::EMMessage']]],
-  ['createvoicesendmessage',['createVoiceSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#acda3d7825b6f4ecbeaefe81bbae2f75a',1,'com::hyphenate::chat::EMMessage']]]
+  ['createvoicesendmessage',['createVoiceSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#acda3d7825b6f4ecbeaefe81bbae2f75a',1,'com::hyphenate::chat::EMMessage']]],
+  ['cryptoutils',['CryptoUtils',['../classcom_1_1hyphenate_1_1util_1_1_crypto_utils.html',1,'com::hyphenate::util']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['messageencoder',['MessageEncoder',['../classcom_1_1hyphenate_1_1chat_1_1_message_encoder.html',1,'com::hyphenate::chat']]]
+  ['hanzitopinyin',['HanziToPinyin',['../classcom_1_1hyphenate_1_1util_1_1_hanzi_to_pinyin.html',1,'com::hyphenate::util']]]
 ];
