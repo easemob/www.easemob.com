@@ -11,5 +11,5 @@ var searchData=
   ['loadmoremessagesfromid_3alimit_3adirection_3a',['loadMoreMessagesFromId:limit:direction:',['../interface_e_m_conversation.html#a96c69fcce8b43e59a23e1f7fd47f5180',1,'EMConversation']]],
   ['loadmoremessageswithtype_3abefore_3alimit_3afrom_3adirection_3a',['loadMoreMessagesWithType:before:limit:from:direction:',['../interface_e_m_conversation.html#a2635bf1a082d257158499516840da6ec',1,'EMConversation']]],
   ['loginwithusername_3apassword_3a',['loginWithUsername:password:',['../interface_e_m_client.html#a586c4bdeb649055886c25603125072fe',1,'EMClient']]],
-  ['logout_3a',['logout:',['../interface_e_m_client.html#ab4562627674072e4b2a98ece2d429efb',1,'EMClient']]]
+  ['logout_3a',['logout:',['../interface_e_m_client.html#a7acc0965e91540b699b671c5a0118aba',1,'EMClient']]]
 ];

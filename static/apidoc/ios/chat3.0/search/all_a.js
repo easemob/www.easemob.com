@@ -17,6 +17,6 @@ var searchData=
   ['localview',['localView',['../interface_e_m_call_session.html#a8717ba20f2e040ff590725c28231fb25',1,'EMCallSession']]],
   ['loginwithusername_3apassword_3a',['loginWithUsername:password:',['../interface_e_m_client.html#a586c4bdeb649055886c25603125072fe',1,'EMClient']]],
   ['loglevel',['logLevel',['../interface_e_m_options.html#a0532bf2756002f639f403bed4c8a589e',1,'EMOptions']]],
-  ['logout_3a',['logout:',['../interface_e_m_client.html#ab4562627674072e4b2a98ece2d429efb',1,'EMClient']]],
+  ['logout_3a',['logout:',['../interface_e_m_client.html#a7acc0965e91540b699b671c5a0118aba',1,'EMClient']]],
   ['longitude',['longitude',['../interface_e_m_location_message_body.html#a803a3f6cd011398d9f3125092359ce67',1,'EMLocationMessageBody']]]
 ];

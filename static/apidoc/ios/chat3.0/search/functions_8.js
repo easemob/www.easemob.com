@@ -9,6 +9,7 @@ var searchData=
   ['initwithdata_3adisplayname_3a',['initWithData:displayName:',['../interface_e_m_file_message_body.html#ab5bccb18fa7577b39e28a6b9cd1dd413',1,'EMFileMessageBody']]],
   ['initwithdata_3athumbnaildata_3a',['initWithData:thumbnailData:',['../interface_e_m_image_message_body.html#ae6ef4e09771f3a3814baced8799c42df',1,'EMImageMessageBody']]],
   ['initwithdescription_3acode_3a',['initWithDescription:code:',['../interface_e_m_error.html#afee65c932ca8dad57ae1108a2a2a607f',1,'EMError']]],
+  ['initwithframe_3awithsessionpreset_3a',['initWithFrame:withSessionPreset:',['../interface_e_m_call_local_view.html#a956bd5aee50bbfe29354fc3bdbfef8e4',1,'EMCallLocalView']]],
   ['initwithlatitude_3alongitude_3aaddress_3a',['initWithLatitude:longitude:address:',['../interface_e_m_location_message_body.html#af229efc7f40bef7d8589de498e51be1f',1,'EMLocationMessageBody']]],
   ['initwithlocalpath_3adisplayname_3a',['initWithLocalPath:displayName:',['../interface_e_m_file_message_body.html#a536a7a4f9d928a01d51015fa22885aec',1,'EMFileMessageBody']]],
   ['initwithtext_3a',['initWithText:',['../interface_e_m_text_message_body.html#a918b8fb211a6b75cf03202f48eea9cc8',1,'EMTextMessageBody']]],
