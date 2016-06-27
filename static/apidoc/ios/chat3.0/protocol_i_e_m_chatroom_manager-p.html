@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateSDK
-   &#160;<span id="projectnumber">3.1.2</span>
+   &#160;<span id="projectnumber">3.1.3</span>
    </div>
   </td>
  </tr>
@@ -113,6 +113,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:a32a8775b7719f1426e885f864464fb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8a4a9d3627a3070569b50ba78125e7"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_e_m_chatroom.html">EMChatroom</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a7b8a4a9d3627a3070569b50ba78125e7">leaveChatroom:error:</a></td></tr>
 <tr class="separator:a7b8a4a9d3627a3070569b50ba78125e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f18c4bc8ea4d61788b898629feff80"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chatroom_manager-p.html#ab9f18c4bc8ea4d61788b898629feff80">asyncGetAllChatroomsFromServer:failure:</a></td></tr>
+<tr class="separator:ab9f18c4bc8ea4d61788b898629feff80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab716fa68cbc661a8259ea512f12af421"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chatroom_manager-p.html#ab716fa68cbc661a8259ea512f12af421">asyncJoinChatroom:success:failure:</a></td></tr>
+<tr class="separator:ab716fa68cbc661a8259ea512f12af421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95839749748e4a4e4e3a37b7568a2e81"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a95839749748e4a4e4e3a37b7568a2e81">asyncLeaveChatroom:success:failure:</a></td></tr>
+<tr class="separator:a95839749748e4a4e4e3a37b7568a2e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>聊天室相关操作 </p>
@@ -156,6 +162,147 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="ab9f18c4bc8ea4d61788b898629feff80"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) asyncGetAllChatroomsFromServer: </td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSArray *aList))&#160;</td>
+          <td class="paramname"><em>aSuccessBlock</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">failure:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aFailureBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>从服务器获取所有的聊天室</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aSuccessBlock</td><td>成功的回调 </td></tr>
+    <tr><td class="paramname">aFailureBlock</td><td>失败的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab716fa68cbc661a8259ea512f12af421"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) asyncJoinChatroom: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aChatroomId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">success:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_chatroom.html">EMChatroom</a> *aRoom))&#160;</td>
+          <td class="paramname"><em>aSuccessBlock</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">failure:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aFailureBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>加入聊天室</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aChatroomId</td><td>聊天室的ID </td></tr>
+    <tr><td class="paramname">aSuccessBlock</td><td>成功的回调 </td></tr>
+    <tr><td class="paramname">aFailureBlock</td><td>失败的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a95839749748e4a4e4e3a37b7568a2e81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) asyncLeaveChatroom: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aChatroomId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">success:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_chatroom.html">EMChatroom</a> *aRoom))&#160;</td>
+          <td class="paramname"><em>aSuccessBlock</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">failure:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aFailureBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>退出聊天室</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aChatroomId</td><td>聊天室ID </td></tr>
+    <tr><td class="paramname">aSuccessBlock</td><td>成功的回调 </td></tr>
+    <tr><td class="paramname">aFailureBlock</td><td>失败的回调</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>退出的聊天室 </dd></dl>
 
 </div>
 </div>
