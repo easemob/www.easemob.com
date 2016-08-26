@@ -9,6 +9,7 @@ var searchData=
   ['user_5flogin_5fanother_5fdevice',['USER_LOGIN_ANOTHER_DEVICE',['../classcom_1_1hyphenate_1_1_e_m_error.html#ae31d425e256946618f4d1ea66ab03c09',1,'com::hyphenate::EMError']]],
   ['user_5fnot_5ffound',['USER_NOT_FOUND',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa9d032148aaddfd11774265eb34fe5d8',1,'com::hyphenate::EMError']]],
   ['user_5fnot_5flogin',['USER_NOT_LOGIN',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa498f83d523127e5314b53348df0e31b',1,'com::hyphenate::EMError']]],
+  ['user_5fpermission_5fdenied',['USER_PERMISSION_DENIED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ad937d38bbcf93ba7ad938c04430d27ca',1,'com::hyphenate::EMError']]],
   ['user_5freg_5ffailed',['USER_REG_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a817cfd3c08a073afa353fac3f5027473',1,'com::hyphenate::EMError']]],
   ['user_5fremoved',['USER_REMOVED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac17ad534d9a04bca878e21a469bb6535',1,'com::hyphenate::EMError']]],
   ['user_5funbind_5fdevicetoken_5ffailed',['USER_UNBIND_DEVICETOKEN_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ab1e3e56332d5b4dcc4381d931997983c',1,'com::hyphenate::EMError']]],

@@ -10,5 +10,7 @@ var searchData=
   ['message_5finvalid',['MESSAGE_INVALID',['../classcom_1_1hyphenate_1_1_e_m_error.html#afea45a5fbac3a4a40f3a2d24d092aecb',1,'com::hyphenate::EMError']]],
   ['message_5fsend_5ftraffic_5flimit',['MESSAGE_SEND_TRAFFIC_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a35cdce147efc8c840242791e6206d215',1,'com::hyphenate::EMError']]],
   ['messageencoder',['MessageEncoder',['../classcom_1_1hyphenate_1_1chat_1_1_message_encoder.html',1,'com::hyphenate::chat']]],
+  ['messageid',['MessageId',['../enumcom_1_1hyphenate_1_1_e_m_message_change_event_data_1_1_e_m_change_source.html#acc8b9b31f5a864c67ad5dba8c7f6ed82',1,'com::hyphenate::EMMessageChangeEventData::EMChangeSource']]],
+  ['messagestate',['MessageState',['../enumcom_1_1hyphenate_1_1_e_m_message_change_event_data_1_1_e_m_change_source.html#ac542b0adaab1b78b18ec2f5bb45aae34',1,'com::hyphenate::EMMessageChangeEventData::EMChangeSource']]],
   ['msgtype2conversationtype',['msgType2ConversationType',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a2af3c651b5402f316fea84d97bf5e1eb',1,'com::hyphenate::chat::EMConversation']]]
 ];

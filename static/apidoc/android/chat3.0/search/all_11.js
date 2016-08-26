@@ -7,6 +7,6 @@ var searchData=
   ['tostring',['toString',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a4b78922949af0c458ab80ca4c2979546',1,'com::hyphenate::chat::EMGroup']]],
   ['totime',['toTime',['../classcom_1_1hyphenate_1_1util_1_1_date_utils.html#af7e9c2a5e2f3a61d12b5e3f70f5cb0d7',1,'com::hyphenate::util::DateUtils']]],
   ['totimebysecond',['toTimeBySecond',['../classcom_1_1hyphenate_1_1util_1_1_date_utils.html#a9deb0e35ff9b88e04cac64038ac14c7e',1,'com::hyphenate::util::DateUtils']]],
-  ['type',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_session_1_1_type.html',1,'com::hyphenate::chat::EMCallSession']]],
-  ['type',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html',1,'com::hyphenate::chat::EMMessage']]]
+  ['type',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html',1,'com::hyphenate::chat::EMMessage']]],
+  ['type',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_session_1_1_type.html',1,'com::hyphenate::chat::EMCallSession']]]
 ];

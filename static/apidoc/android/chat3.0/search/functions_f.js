@@ -26,7 +26,10 @@ var searchData=
   ['setgcmnumber',['setGCMNumber',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ad2569a32772491b4ae3f0aeb2d539eb5',1,'com::hyphenate::chat::EMOptions']]],
   ['setgroupid',['setGroupId',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_info.html#a58437f3479df07aacacb848a10d46096',1,'com::hyphenate::chat::EMGroupInfo']]],
   ['setgroupname',['setGroupName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_info.html#a8e8acae645177e11e17809301a7610bf',1,'com::hyphenate::chat::EMGroupInfo']]],
+  ['setimport',['setImPort',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a7b3bbf65a27817f01538b63524d10440',1,'com::hyphenate::chat::EMOptions']]],
+  ['setimserver',['setIMServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aad3890a8fe19c55213b6ddb25f2e3e5f',1,'com::hyphenate::chat::EMOptions']]],
   ['setlistened',['setListened',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a3cca4a37883aa16db58e09b716d71b9c',1,'com::hyphenate::chat::EMMessage']]],
+  ['setlocaltime',['setLocalTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a558129c0d68ea5c3e5a28f02ef40dd09',1,'com::hyphenate::chat::EMMessage']]],
   ['setlogouttime',['setLogoutTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_preference_utils.html#a3802e9e54740dba87ab62e53507d1f4a',1,'com::hyphenate::chat::EMPreferenceUtils']]],
   ['setmessagelistened',['setMessageListened',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a0f853cccb71980386bba279e1e472541',1,'com::hyphenate::chat::EMChatManager']]],
   ['setmessagestatuscallback',['setMessageStatusCallback',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a8598ee23d311d1e23730a040c51970e3',1,'com::hyphenate::chat::EMMessage']]],
@@ -38,13 +41,14 @@ var searchData=
   ['setrequireack',['setRequireAck',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012',1,'com::hyphenate::chat::EMOptions']]],
   ['setrequiredeliveryack',['setRequireDeliveryAck',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a806f3d93bec9e86e37cc863fbf172b46',1,'com::hyphenate::chat::EMOptions']]],
   ['setrequireserverack',['setRequireServerAck',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a579b8d6a468c52e4c4bdff70e88e4d96',1,'com::hyphenate::chat::EMOptions']]],
+  ['setrestserver',['setRestServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a27767756d0612a55314ee9ebcf6134c8',1,'com::hyphenate::chat::EMOptions']]],
   ['setsendoriginalimage',['setSendOriginalImage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a18e72b9f2271c8aa8ae6f9b7322e68eb',1,'com::hyphenate::chat::EMImageMessageBody']]],
   ['setstatus',['setStatus',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ae49d4c615dacea6f375a96bbd6780ad6',1,'com::hyphenate::chat::EMMessage']]],
+  ['setstyle',['setStyle',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a7d58a0c90a54e6870f29b393a8a14bc9',1,'com::hyphenate::chat::EMGroup']]],
   ['setsurfaceview',['setSurfaceView',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#ad075dd46e48c1f98a5e785b9279cc724',1,'com::hyphenate::chat::EMCallManager']]],
   ['setthumbnailurl',['setThumbnailUrl',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a474a5e9b695ff52c16410e8905fcb627',1,'com::hyphenate::chat::EMImageMessageBody']]],
   ['setto',['setTo',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a426de4400e68b712f28aa727e4bb9d65',1,'com::hyphenate::chat::EMMessage']]],
   ['sp2px',['sp2px',['../classcom_1_1hyphenate_1_1util_1_1_density_util.html#afaecd2e7e9255d8d35d9cb7bdc756388',1,'com::hyphenate::util::DensityUtil']]],
   ['startrecording',['startRecording',['../classcom_1_1hyphenate_1_1util_1_1_voice_recorder.html#a4ae72aa38952a69957213bf1e2f8288d',1,'com::hyphenate::util::VoiceRecorder']]],
-  ['status',['status',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2e93fe95d0be479c5f58c4c56b0132c2',1,'com::hyphenate::chat::EMMessage']]],
-  ['streamstarted',['streamStarted',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#ad988da0854afc00c33da2b5a10f851f3',1,'com::hyphenate::chat::EMCallManager']]]
+  ['status',['status',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2e93fe95d0be479c5f58c4c56b0132c2',1,'com::hyphenate::chat::EMMessage']]]
 ];

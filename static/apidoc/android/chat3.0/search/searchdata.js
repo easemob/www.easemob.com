@@ -4,9 +4,8 @@ var indexSectionsWithContent =
   1: "cdefhilmnpstuvz",
   2: "c",
   3: "abcdefghijlmoprstuz",
-  4: "acdefgimnprsu",
-  5: "v",
-  6: "å"
+  4: "acdefgimnprsuv",
+  5: "å"
 };
 
 var indexSectionNames =
@@ -16,8 +15,7 @@ var indexSectionNames =
   2: "namespaces",
   3: "functions",
   4: "variables",
-  5: "enumvalues",
-  6: "pages"
+  5: "pages"
 };
 
 var indexSectionLabels =
@@ -27,7 +25,6 @@ var indexSectionLabels =
   2: "命名空间",
   3: "函数",
   4: "变量",
-  5: "枚举值",
-  6: "页"
+  5: "页"
 };
 
