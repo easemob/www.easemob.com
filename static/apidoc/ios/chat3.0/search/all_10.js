@@ -1,17 +1,26 @@
 var searchData=
 [
+  ['screencapturetofilepath_3aerror_3a',['screenCaptureToFilePath:error:',['../interface_e_m_call_session.html#a1716995676c4dad64c514c69d8cc292b',1,'EMCallSession']]],
+  ['searchpublicgroupwithid_3acompletion_3a',['searchPublicGroupWithId:completion:',['../protocol_i_e_m_group_manager-p.html#a36a7fd3e322e219d60d651a3832000ac',1,'IEMGroupManager-p']]],
   ['searchpublicgroupwithid_3aerror_3a',['searchPublicGroupWithId:error:',['../protocol_i_e_m_group_manager-p.html#a6bb1222214e0f15ce1034da4be30a55f',1,'IEMGroupManager-p']]],
   ['secretkey',['secretKey',['../interface_e_m_file_message_body.html#ae56d6b8868c9efe0c6a3321df980bd6c',1,'EMFileMessageBody']]],
+  ['sendmessage_3aprogress_3acompletion_3a',['sendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#ad139d7ad31d934a721a979955baf1868',1,'IEMChatManager-p']]],
+  ['sendmessagereadack_3acompletion_3a',['sendMessageReadAck:completion:',['../protocol_i_e_m_chat_manager-p.html#a47881745f8927f2a703181b8233122a8',1,'IEMChatManager-p']]],
   ['sessionid',['sessionId',['../interface_e_m_call_session.html#ab54c256c5fec397181757c9e7ff697cd',1,'EMCallSession']]],
   ['setapnsnickname_3a',['setApnsNickname:',['../interface_e_m_client.html#a29f928aab2d104e6bf00426ed0c3d7dc',1,'EMClient']]],
+  ['setcamerabackorfront_3a',['setCameraBackOrFront:',['../interface_e_m_call_session.html#a557cf85020a80b4d8558f907db0b9a2a',1,'EMCallSession']]],
   ['setting',['setting',['../interface_e_m_group.html#a2277b5dca3e2342d4e94b15a5d32ad88',1,'EMGroup']]],
-  ['setvideoadaptive_3a',['setVideoAdaptive:',['../protocol_i_e_m_call_manager-p.html#a52b8e4df7af5e56002869f72316d3d16',1,'IEMCallManager-p']]],
-  ['setvideosize_3aheight_3a',['setVideoSize:height:',['../interface_open_g_l_view20.html#af4c6980587da84e1c5157e6ea4b59eda',1,'OpenGLView20']]],
+  ['setvideoadaptive_3a',['setVideoAdaptive:',['../protocol_i_e_m_call_manager-p.html#a9bb12a929bb67c3328068ec1cd7fcdbb',1,'IEMCallManager-p']]],
   ['sharedclient',['sharedClient',['../interface_e_m_client.html#abdf7f014fc5a6c76d9a9bd676d9543f5',1,'EMClient']]],
   ['size',['size',['../interface_e_m_image_message_body.html#a6939a87d878fe756979ebf624b937657',1,'EMImageMessageBody']]],
-  ['startvideorecord_3a',['startVideoRecord:',['../interface_e_m_call_session.html#a8be657b36ec9ed51e91d98aefcc522b3',1,'EMCallSession']]],
+  ['sortmessagebyservertime',['sortMessageByServerTime',['../interface_e_m_options.html#aa653fb528db133b69b3ab0a0a307dbff',1,'EMOptions']]],
+  ['startvideocall_3acompletion_3a',['startVideoCall:completion:',['../protocol_i_e_m_call_manager-p.html#a2de1c75304be0e6e3bf6310ca926730b',1,'IEMCallManager-p']]],
+  ['startvideorecord_3a',['startVideoRecord:',['../interface_e_m_call_session.html#a0cac43903702cff5df87ec7662c66aee',1,'EMCallSession']]],
+  ['startvideorecordingtofilepath_3aerror_3a',['startVideoRecordingToFilePath:error:',['../interface_e_m_call_session.html#a8d2ae1e0b5b135c2149ad9e680b66b06',1,'EMCallSession']]],
+  ['startvoicecall_3acompletion_3a',['startVoiceCall:completion:',['../protocol_i_e_m_call_manager-p.html#a27ce596f06c26e3e8046a07b8c57fddc',1,'IEMCallManager-p']]],
   ['status',['status',['../interface_e_m_call_session.html#a7ac723de33f96d1f05777c5e53001636',1,'EMCallSession::status()'],['../interface_e_m_message.html#aa4c81d9447ac7c252f37fc7843bfdb4d',1,'EMMessage::status()']]],
-  ['stopvideorecord',['stopVideoRecord',['../interface_e_m_call_session.html#af023d9a8c8163519ade3040ceb8abe90',1,'EMCallSession']]],
+  ['stopvideorecording_3a',['stopVideoRecording:',['../interface_e_m_call_session.html#aded1a0d283d6b4713f4303e9e03857a7',1,'EMCallSession']]],
   ['style',['style',['../interface_e_m_group_options.html#a620cfb9f0308ae836185dd7d9b539adf',1,'EMGroupOptions']]],
-  ['subject',['subject',['../interface_e_m_chatroom.html#a2b263c417b4ed0df7db664dc8b2182ad',1,'EMChatroom::subject()'],['../interface_e_m_group.html#afbfb0e344003c967fd654764ac294527',1,'EMGroup::subject()']]]
+  ['subject',['subject',['../interface_e_m_chatroom.html#a2b263c417b4ed0df7db664dc8b2182ad',1,'EMChatroom::subject()'],['../interface_e_m_group.html#afbfb0e344003c967fd654764ac294527',1,'EMGroup::subject()']]],
+  ['switchcameraposition_3a',['switchCameraPosition:',['../interface_e_m_call_session.html#a5c3eb19b609b57c4842a4ef8900c984b',1,'EMCallSession']]]
 ];

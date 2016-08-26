@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['takeremotepicture_3a',['takeRemotePicture:',['../interface_e_m_call_session.html#a62ebdd1c8d6b4388a307a4540d3da69a',1,'EMCallSession']]]
+  ['takeremotepicture_3a',['takeRemotePicture:',['../interface_e_m_call_session.html#ac2e2ba11bfba6ed5b753e68828f18bda',1,'EMCallSession']]]
 ];

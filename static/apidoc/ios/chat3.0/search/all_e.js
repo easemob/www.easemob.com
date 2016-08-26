@@ -1,8 +1,10 @@
 var searchData=
 [
   ['params',['params',['../interface_e_m_cmd_message_body.html#a20bc77479a764510867c09f6ff62af54',1,'EMCmdMessageBody']]],
-  ['pausevideotransfer_3a',['pauseVideoTransfer:',['../protocol_i_e_m_call_manager-p.html#a9d3ea852ca3171c6d950a3609bcea5d5',1,'IEMCallManager-p']]],
-  ['pausevoiceandvideotransfer_3a',['pauseVoiceAndVideoTransfer:',['../protocol_i_e_m_call_manager-p.html#a2179ba38b6209e274877409f384deb14',1,'IEMCallManager-p']]],
-  ['pausevoicetransfer_3a',['pauseVoiceTransfer:',['../protocol_i_e_m_call_manager-p.html#ad749c1d660c251d20340aab70079d66e',1,'IEMCallManager-p']]],
+  ['pausevideotransfer_3a',['pauseVideoTransfer:',['../protocol_i_e_m_call_manager-p.html#a0a1da2a1377b2940d5562e8a1a5e90dc',1,'IEMCallManager-p']]],
+  ['pausevideowithsession_3aerror_3a',['pauseVideoWithSession:error:',['../protocol_i_e_m_call_manager-p.html#a6f5a30f157d9417be9a784a8eb7adb47',1,'IEMCallManager-p']]],
+  ['pausevoiceandvideotransfer_3a',['pauseVoiceAndVideoTransfer:',['../protocol_i_e_m_call_manager-p.html#a0a70fc56d97c9492738716f81df6bab4',1,'IEMCallManager-p']]],
+  ['pausevoicetransfer_3a',['pauseVoiceTransfer:',['../protocol_i_e_m_call_manager-p.html#a336cbb8359c84c907421217dbf91049d',1,'IEMCallManager-p']]],
+  ['pausevoicewithsession_3aerror_3a',['pauseVoiceWithSession:error:',['../protocol_i_e_m_call_manager-p.html#ad149c1cde3b40dfb34c7572034fa0164',1,'IEMCallManager-p']]],
   ['pushoptions',['pushOptions',['../interface_e_m_client.html#a4dd459e3f06535ef62f38f53769333ed',1,'EMClient']]]
 ];
