@@ -1,5 +1,7 @@
 # www.easemob.com
 
+[![Build Status](https://travis-ci.org/easemob/www.easemob.com.svg?branch=master)](https://travis-ci.org/easemob/www.easemob.com)
+
 This is a Easemob API resource built with [nanoc][nanoc].
 
 All submissions are welcome. To submit a change, fork this repo, commit your changes, and send us a [pull request](http://help.github.com/send-pull-requests/).
