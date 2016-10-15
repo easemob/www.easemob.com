@@ -18,8 +18,8 @@ var searchData=
   ['uploadlogtoserver',['uploadLogToServer',['../interface_e_m_client.html#a48823c26e8102cbec8752c35eb7d5c11',1,'EMClient']]],
   ['useraccountdidloginfromotherdevice',['userAccountDidLoginFromOtherDevice',['../protocol_e_m_client_delegate-p.html#ab05f37bdd26ba94f97f2d7d077091f8d',1,'EMClientDelegate-p']]],
   ['useraccountdidremovefromserver',['userAccountDidRemoveFromServer',['../protocol_e_m_client_delegate-p.html#a973d8544232a05da9068dd5535e396e8',1,'EMClientDelegate-p']]],
+  ['userdidforbidbyserver',['userDidForbidByServer',['../protocol_e_m_client_delegate-p.html#a4cbb63f33783bd5cdea2295e091da904',1,'EMClientDelegate-p']]],
   ['userdidjoinchatroom_3auser_3a',['userDidJoinChatroom:user:',['../protocol_e_m_chatroom_manager_delegate-p.html#ae6c83f7f739bc6133bbfa7e6079c0e84',1,'EMChatroomManagerDelegate-p']]],
   ['userdidleavechatroom_3auser_3a',['userDidLeaveChatroom:user:',['../protocol_e_m_chatroom_manager_delegate-p.html#acd5c334bf17fde779940f077b58ed547',1,'EMChatroomManagerDelegate-p']]],
-  ['username',['username',['../interface_e_m_call_session.html#ac5e4f56b1352871d5e0a1f3f11f45c13',1,'EMCallSession']]],
   ['usinghttps',['usingHttps',['../interface_e_m_options.html#a24bfec0b0dab7998da6474a1be0e5e4b',1,'EMOptions']]]
 ];

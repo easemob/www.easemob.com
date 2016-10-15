@@ -1,7 +1,7 @@
 var searchData=
 [
+  ['scalemode',['scaleMode',['../interface_e_m_call_local_view.html#a19dc788a206a8bdbd0221036e8c366c9',1,'EMCallLocalView::scaleMode()'],['../interface_e_m_call_remote_view.html#aa413c1c893693ca0d371e72a0da77b03',1,'EMCallRemoteView::scaleMode()']]],
   ['secretkey',['secretKey',['../interface_e_m_file_message_body.html#ae56d6b8868c9efe0c6a3321df980bd6c',1,'EMFileMessageBody']]],
-  ['sessionid',['sessionId',['../interface_e_m_call_session.html#ab54c256c5fec397181757c9e7ff697cd',1,'EMCallSession']]],
   ['setting',['setting',['../interface_e_m_group.html#a2277b5dca3e2342d4e94b15a5d32ad88',1,'EMGroup']]],
   ['size',['size',['../interface_e_m_image_message_body.html#a6939a87d878fe756979ebf624b937657',1,'EMImageMessageBody']]],
   ['sortmessagebyservertime',['sortMessageByServerTime',['../interface_e_m_options.html#aa653fb528db133b69b3ab0a0a307dbff',1,'EMOptions']]],

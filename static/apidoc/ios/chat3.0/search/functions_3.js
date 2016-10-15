@@ -4,7 +4,7 @@ var searchData=
   ['calldidconnect_3a',['callDidConnect:',['../protocol_e_m_call_manager_delegate-p.html#a5203fbf604e29cacedf483c5f52b9923',1,'EMCallManagerDelegate-p']]],
   ['calldidend_3areason_3aerror_3a',['callDidEnd:reason:error:',['../protocol_e_m_call_manager_delegate-p.html#a82a5133f2175c94c4b39cf6f42010601',1,'EMCallManagerDelegate-p']]],
   ['calldidreceive_3a',['callDidReceive:',['../protocol_e_m_call_manager_delegate-p.html#a3eba09d467fd76b4af04e5bf47154b77',1,'EMCallManagerDelegate-p']]],
-  ['callnetworkstatusdidchange_3astatus_3a',['callNetworkStatusDidChange:status:',['../protocol_e_m_call_manager_delegate-p.html#afb914105eea2556b54af0c40776551f0',1,'EMCallManagerDelegate-p']]],
+  ['callnetworkdidchange_3astatus_3a',['callNetworkDidChange:status:',['../protocol_e_m_call_manager_delegate-p.html#aae5150a53d6c69c278b9bdde4cac2022',1,'EMCallManagerDelegate-p']]],
   ['callstatedidchange_3atype_3a',['callStateDidChange:type:',['../protocol_e_m_call_manager_delegate-p.html#a3b78b91a87d76a4ec5f79f60cb213228',1,'EMCallManagerDelegate-p']]],
   ['changedescription_3aforgroup_3aerror_3a',['changeDescription:forGroup:error:',['../protocol_i_e_m_group_manager-p.html#abf9fda9a1df498d36716301814417280',1,'IEMGroupManager-p']]],
   ['changegroupsubject_3aforgroup_3aerror_3a',['changeGroupSubject:forGroup:error:',['../protocol_i_e_m_group_manager-p.html#a090b2759d586d91044f439ee111e2b3d',1,'IEMGroupManager-p']]],
