@@ -27,6 +27,7 @@ var searchData=
   ['onmessagereadackreceived',['onMessageReadAckReceived',['../interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#ac49b98ed907d1f086c9f16f6f648e4c3',1,'com::hyphenate::EMMessageListener']]],
   ['onmessagereceived',['onMessageReceived',['../interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#a4d8e68d37a859c00d6a90dccccc219f8',1,'com::hyphenate::EMMessageListener']]],
   ['onprogress',['onProgress',['../interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa9fa39a4afcf86a8a9b0e308ecd4e137',1,'com::hyphenate::EMCallBack']]],
+  ['onremoteoffline',['onRemoteOffline',['../interfacecom_1_1hyphenate_1_1chat_1_1_e_m_call_manager_1_1_e_m_call_push_provider.html#a2f7eb2e385bb767d19c523e35541b7b0',1,'com::hyphenate::chat::EMCallManager::EMCallPushProvider']]],
   ['onsuccess',['onSuccess',['../interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa819895b47f578c0bc25b8c7eca9fe45',1,'com.hyphenate.EMCallBack.onSuccess()'],['../interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#aee8df9da3d7a15e700f358344d9b2b98',1,'com.hyphenate.EMValueCallBack.onSuccess()']]],
   ['onuserremoved',['onUserRemoved',['../interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a384a1449894868434c842652d50e2382',1,'com::hyphenate::EMGroupChangeListener']]],
   ['openfile',['openFile',['../classcom_1_1hyphenate_1_1util_1_1_file_utils.html#a0e5463848af5ee7b21f0201fce5f127e',1,'com::hyphenate::util::FileUtils']]]

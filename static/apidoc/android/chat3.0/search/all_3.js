@@ -14,7 +14,7 @@ var searchData=
   ['direct',['Direct',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_direct.html',1,'com::hyphenate::chat::EMMessage']]],
   ['direct',['direct',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a63a9692bdcc9c7da476e42141c338c84',1,'com::hyphenate::chat::EMMessage']]],
   ['discardrecording',['discardRecording',['../classcom_1_1hyphenate_1_1util_1_1_voice_recorder.html#a87a4b71f46c87b05bbbdc6708af20777',1,'com::hyphenate::util::VoiceRecorder']]],
-  ['disconnnected',['DISCONNNECTED',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_state.html#af310a75dc5804c6b79e9d2741f42ddca',1,'com::hyphenate::chat::EMCallStateChangeListener::CallState']]],
+  ['disconnected',['DISCONNECTED',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_state.html#a9d270eeeddaedf1259c127d0e563f41b',1,'com::hyphenate::chat::EMCallStateChangeListener::CallState']]],
   ['downloadattachment',['downloadAttachment',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1a938a579e8e5e07518d1e5008f9241d',1,'com::hyphenate::chat::EMChatManager']]],
   ['downloadfile',['downloadFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#af39b20828a22e8a13ace18a8335ac50a',1,'com::hyphenate::chat::EMChatManager']]],
   ['downloadthumbnail',['downloadThumbnail',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4c4f426c7cb00d44fee5d550a7eea5ce',1,'com::hyphenate::chat::EMChatManager']]]
