@@ -2,6 +2,7 @@ var searchData=
 [
   ['emcalllocalview',['EMCallLocalView',['../interface_e_m_call_local_view.html',1,'']]],
   ['emcallmanagerdelegate_2dp',['EMCallManagerDelegate-p',['../protocol_e_m_call_manager_delegate-p.html',1,'']]],
+  ['emcalloptions',['EMCallOptions',['../interface_e_m_call_options.html',1,'']]],
   ['emcallremoteview',['EMCallRemoteView',['../interface_e_m_call_remote_view.html',1,'']]],
   ['emcallsession',['EMCallSession',['../interface_e_m_call_session.html',1,'']]],
   ['emchatmanagerdelegate_2dp',['EMChatManagerDelegate-p',['../protocol_e_m_chat_manager_delegate-p.html',1,'']]],

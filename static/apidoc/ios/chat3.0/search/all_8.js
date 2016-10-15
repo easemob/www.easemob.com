@@ -16,7 +16,6 @@ var searchData=
   ['initwithdata_3adisplayname_3a',['initWithData:displayName:',['../interface_e_m_file_message_body.html#ab5bccb18fa7577b39e28a6b9cd1dd413',1,'EMFileMessageBody']]],
   ['initwithdata_3athumbnaildata_3a',['initWithData:thumbnailData:',['../interface_e_m_image_message_body.html#ae6ef4e09771f3a3814baced8799c42df',1,'EMImageMessageBody']]],
   ['initwithdescription_3acode_3a',['initWithDescription:code:',['../interface_e_m_error.html#afee65c932ca8dad57ae1108a2a2a607f',1,'EMError']]],
-  ['initwithframe_3awithsessionpreset_3a',['initWithFrame:withSessionPreset:',['../interface_e_m_call_local_view.html#a956bd5aee50bbfe29354fc3bdbfef8e4',1,'EMCallLocalView']]],
   ['initwithlatitude_3alongitude_3aaddress_3a',['initWithLatitude:longitude:address:',['../interface_e_m_location_message_body.html#af229efc7f40bef7d8589de498e51be1f',1,'EMLocationMessageBody']]],
   ['initwithlocalpath_3adisplayname_3a',['initWithLocalPath:displayName:',['../interface_e_m_file_message_body.html#a536a7a4f9d928a01d51015fa22885aec',1,'EMFileMessageBody']]],
   ['initwithtext_3a',['initWithText:',['../interface_e_m_text_message_body.html#a918b8fb211a6b75cf03202f48eea9cc8',1,'EMTextMessageBody']]],
@@ -26,6 +25,7 @@ var searchData=
   ['isautoacceptgroupinvitation',['isAutoAcceptGroupInvitation',['../interface_e_m_options.html#a63cfcf47cd6f0a4cfd608c7b2e2f3875',1,'EMOptions']]],
   ['isautologin',['isAutoLogin',['../interface_e_m_client.html#ae50fe6b04f44098399b6522abbb89849',1,'EMClient::isAutoLogin()'],['../interface_e_m_options.html#a04e53a0ebdbe1cf8716ee65af34c3e77',1,'EMOptions::isAutoLogin()']]],
   ['isblocked',['isBlocked',['../interface_e_m_group.html#a0a6ce2fdd7b736b1ef571ff4c4e0e532',1,'EMGroup']]],
+  ['iscaller',['isCaller',['../interface_e_m_call_session.html#a782bad856c936638349d96e8520cc0ef',1,'EMCallSession']]],
   ['ischatroomownerleaveallowed',['isChatroomOwnerLeaveAllowed',['../interface_e_m_options.html#ac79582b043e21b7087000531ce8c1655',1,'EMOptions']]],
   ['isconnected',['isConnected',['../interface_e_m_client.html#adc6613f8c69c7aba0b1540c114800125',1,'EMClient']]],
   ['isdeletemessageswhenexitchatroom',['isDeleteMessagesWhenExitChatRoom',['../interface_e_m_options.html#a4c7adf38a617a73c5cdf27d801e9d41a',1,'EMOptions']]],
@@ -36,5 +36,6 @@ var searchData=
   ['ispushnotificationenabled',['isPushNotificationEnabled',['../interface_e_m_group.html#a8c91ccdda39b50b9c06a5fa5a3cfa3a8',1,'EMGroup']]],
   ['isread',['isRead',['../interface_e_m_message.html#a17138a2b3391e192a3d3aa6600834bea',1,'EMMessage']]],
   ['isreadacked',['isReadAcked',['../interface_e_m_message.html#a7da28dc57afc53f21ca7f581a4cc5815',1,'EMMessage']]],
-  ['issandboxmode',['isSandboxMode',['../interface_e_m_options.html#a156cbcd4bf550f8f2e91c378a0d48bc3',1,'EMOptions']]]
+  ['issandboxmode',['isSandboxMode',['../interface_e_m_options.html#a156cbcd4bf550f8f2e91c378a0d48bc3',1,'EMOptions']]],
+  ['issendpushifoffline',['isSendPushIfOffline',['../interface_e_m_call_options.html#a387a20ee25e1d735b61b0c31bf834556',1,'EMCallOptions']]]
 ];
