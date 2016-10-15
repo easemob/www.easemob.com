@@ -8,6 +8,7 @@ var searchData=
   ['server_5fbusy',['SERVER_BUSY',['../classcom_1_1hyphenate_1_1_e_m_error.html#acb17152172d3af150b3906f06ae26ea2',1,'com::hyphenate::EMError']]],
   ['server_5fget_5fdnslist_5ffailed',['SERVER_GET_DNSLIST_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a47bf219f00f9413678eef16120841186',1,'com::hyphenate::EMError']]],
   ['server_5fnot_5freachable',['SERVER_NOT_REACHABLE',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa3d81fcde062618d9f81c1cb3e00ad11',1,'com::hyphenate::EMError']]],
+  ['server_5fservice_5frestricted',['SERVER_SERVICE_RESTRICTED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a8b258f5de26370c55891d52e72101411',1,'com::hyphenate::EMError']]],
   ['server_5ftimeout',['SERVER_TIMEOUT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a0c2644b11ada9016f40e9be20d1116ad',1,'com::hyphenate::EMError']]],
   ['server_5funknown_5ferror',['SERVER_UNKNOWN_ERROR',['../classcom_1_1hyphenate_1_1_e_m_error.html#ae913315d6d8b7cf71c061e5440b87cb6',1,'com::hyphenate::EMError']]],
   ['setacceptinvitationalways',['setAcceptInvitationAlways',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aa8c98c7b70ae4a9c050f907946fcf1be',1,'com::hyphenate::chat::EMOptions']]],
@@ -33,6 +34,7 @@ var searchData=
   ['setgroupname',['setGroupName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_info.html#a8e8acae645177e11e17809301a7610bf',1,'com::hyphenate::chat::EMGroupInfo']]],
   ['setimport',['setImPort',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a7b3bbf65a27817f01538b63524d10440',1,'com::hyphenate::chat::EMOptions']]],
   ['setimserver',['setIMServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aad3890a8fe19c55213b6ddb25f2e3e5f',1,'com::hyphenate::chat::EMOptions']]],
+  ['setissendpushifoffline',['setIsSendPushIfOffline',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_options.html#a8f99a36fbbb6190a2f911d5e9d8ee331',1,'com::hyphenate::chat::EMCallOptions']]],
   ['setlistened',['setListened',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a3cca4a37883aa16db58e09b716d71b9c',1,'com::hyphenate::chat::EMMessage']]],
   ['setlocaltime',['setLocalTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a558129c0d68ea5c3e5a28f02ef40dd09',1,'com::hyphenate::chat::EMMessage']]],
   ['setlogouttime',['setLogoutTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_preference_utils.html#a3802e9e54740dba87ab62e53507d1f4a',1,'com::hyphenate::chat::EMPreferenceUtils']]],
@@ -50,12 +52,14 @@ var searchData=
   ['setsendoriginalimage',['setSendOriginalImage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a18e72b9f2271c8aa8ae6f9b7322e68eb',1,'com::hyphenate::chat::EMImageMessageBody']]],
   ['setstatus',['setStatus',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ae49d4c615dacea6f375a96bbd6780ad6',1,'com::hyphenate::chat::EMMessage']]],
   ['setstyle',['setStyle',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a7d58a0c90a54e6870f29b393a8a14bc9',1,'com::hyphenate::chat::EMGroup']]],
-  ['setsurfaceview',['setSurfaceView',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#ad075dd46e48c1f98a5e785b9279cc724',1,'com::hyphenate::chat::EMCallManager']]],
+  ['setsurfaceview',['setSurfaceView',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#aa311abb441e21a687257c81fe4ee1d75',1,'com::hyphenate::chat::EMCallManager']]],
   ['setthumbnailurl',['setThumbnailUrl',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a474a5e9b695ff52c16410e8905fcb627',1,'com::hyphenate::chat::EMImageMessageBody']]],
   ['setto',['setTo',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a426de4400e68b712f28aa727e4bb9d65',1,'com::hyphenate::chat::EMMessage']]],
+  ['setvideokbps',['setVideoKbps',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_options.html#a4eed927504399a2356097c9ad2949d7e',1,'com::hyphenate::chat::EMCallOptions']]],
+  ['setvideoresolution',['setVideoResolution',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_options.html#a3625944d1497000b65bbb2b748d9edc9',1,'com::hyphenate::chat::EMCallOptions']]],
   ['sp2px',['sp2px',['../classcom_1_1hyphenate_1_1util_1_1_density_util.html#afaecd2e7e9255d8d35d9cb7bdc756388',1,'com::hyphenate::util::DensityUtil']]],
   ['startrecording',['startRecording',['../classcom_1_1hyphenate_1_1util_1_1_voice_recorder.html#a4ae72aa38952a69957213bf1e2f8288d',1,'com::hyphenate::util::VoiceRecorder']]],
   ['status',['status',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2e93fe95d0be479c5f58c4c56b0132c2',1,'com::hyphenate::chat::EMMessage']]],
-  ['status',['Status',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html',1,'com::hyphenate::chat::EMMessage']]],
-  ['status',['Status',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_session_1_1_status.html',1,'com::hyphenate::chat::EMCallSession']]]
+  ['status',['Status',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_session_1_1_status.html',1,'com::hyphenate::chat::EMCallSession']]],
+  ['status',['Status',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html',1,'com::hyphenate::chat::EMMessage']]]
 ];

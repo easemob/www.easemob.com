@@ -23,7 +23,6 @@ var searchData=
   ['issendoriginalimage',['isSendOriginalImage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a05f113c7ad47b96e25ac1514f53e789c',1,'com::hyphenate::chat::EMImageMessageBody']]],
   ['issilentmessage',['isSilentMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a6ca4b2d915b8bc3cff954f7c34ba826d',1,'com::hyphenate::chat::EMChatManager']]],
   ['issortmessagebyservertime',['isSortMessageByServerTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a96cacc44c07c257d46db6d3467860f5b',1,'com::hyphenate::chat::EMOptions']]],
-  ['isstreamstarted',['isStreamStarted',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#a4ce0dd41fb8659836d483517a1b5efe2',1,'com::hyphenate::chat::EMCallManager']]],
   ['isunread',['isUnread',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a7814071869a845938865a4eabbe5d9e3',1,'com::hyphenate::chat::EMMessage']]],
   ['iswificonnection',['isWifiConnection',['../classcom_1_1hyphenate_1_1util_1_1_net_utils.html#a80edf7294eccc219d2f61150d72b338f',1,'com::hyphenate::util::NetUtils']]]
 ];

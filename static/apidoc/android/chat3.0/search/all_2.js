@@ -4,6 +4,7 @@ var searchData=
   ['callmanager',['callManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a24d555fb3ac11af3078fbf3c78fd416a',1,'com::hyphenate::chat::EMClient']]],
   ['callstate',['CallState',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_state.html',1,'com::hyphenate::chat::EMCallStateChangeListener']]],
   ['calltype',['CallType',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager_1_1_e_m_video_call_helper_1_1_call_type.html',1,'com::hyphenate::chat::EMCallManager::EMVideoCallHelper']]],
+  ['changeappkey',['changeAppkey',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a5e6eca765750112021feebc1d4f0793b',1,'com::hyphenate::chat::EMClient']]],
   ['changegroupname',['changeGroupName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a6bb2db1f83e4ce3026109a1505ba5634',1,'com::hyphenate::chat::EMGroupManager']]],
   ['chat',['Chat',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#a160bb0aa31d02b25444da9b0eb83250c',1,'com::hyphenate::chat::EMMessage::ChatType']]],
   ['chat',['chat',['../namespacecom_1_1hyphenate_1_1chat.html',1,'com::hyphenate']]],

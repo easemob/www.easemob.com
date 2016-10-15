@@ -1,6 +1,7 @@
 var searchData=
 [
   ['callmanager',['callManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a24d555fb3ac11af3078fbf3c78fd416a',1,'com::hyphenate::chat::EMClient']]],
+  ['changeappkey',['changeAppkey',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a5e6eca765750112021feebc1d4f0793b',1,'com::hyphenate::chat::EMClient']]],
   ['changegroupname',['changeGroupName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a6bb2db1f83e4ce3026109a1505ba5634',1,'com::hyphenate::chat::EMGroupManager']]],
   ['chatmanager',['chatManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a4e6f34a56c359a9e5420dbfefadb15a8',1,'com::hyphenate::chat::EMClient']]],
   ['chatroommanager',['chatroomManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a9ac57843da590eec74cca3f646b06405',1,'com::hyphenate::chat::EMClient']]],
