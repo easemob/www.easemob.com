@@ -11,6 +11,7 @@ var searchData=
   ['connecttype',['connectType',['../interface_e_m_call_session.html#ab31443f1605498f4bb80a4e98925fecb',1,'EMCallSession']]],
   ['contactmanager',['contactManager',['../interface_e_m_client.html#aabe23dfa1c1d2dcc7a4a577baf2b953a',1,'EMClient']]],
   ['conversationid',['conversationId',['../interface_e_m_conversation.html#adadfc8b72fb52e6ec461417ac9e26221',1,'EMConversation::conversationId()'],['../interface_e_m_message.html#a3f7b43164e1ad4fe438db195735de5c3',1,'EMMessage::conversationId()']]],
+  ['count',['count',['../interface_e_m_page_result.html#a6f275137b861de012056edf0986a3908',1,'EMPageResult']]],
   ['currentusername',['currentUsername',['../interface_e_m_client.html#adc532d66ce6e2dece51af2aadbe2ea31',1,'EMClient']]],
   ['cursor',['cursor',['../interface_e_m_cursor_result.html#a3f85d9a83ed3d5851e18b185322b44a2',1,'EMCursorResult']]]
 ];

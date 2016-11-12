@@ -23,6 +23,7 @@ var searchData=
   ['contactmanager',['contactManager',['../interface_e_m_client.html#aabe23dfa1c1d2dcc7a4a577baf2b953a',1,'EMClient']]],
   ['conversationid',['conversationId',['../interface_e_m_conversation.html#adadfc8b72fb52e6ec461417ac9e26221',1,'EMConversation::conversationId()'],['../interface_e_m_message.html#a3f7b43164e1ad4fe438db195735de5c3',1,'EMMessage::conversationId()']]],
   ['conversationlistdidupdate_3a',['conversationListDidUpdate:',['../protocol_e_m_chat_manager_delegate-p.html#a32d53c14b6d26041120ba521fef6e2f5',1,'EMChatManagerDelegate-p']]],
+  ['count',['count',['../interface_e_m_page_result.html#a6f275137b861de012056edf0986a3908',1,'EMPageResult']]],
   ['creategroupwithsubject_3adescription_3ainvitees_3amessage_3asetting_3acompletion_3a',['createGroupWithSubject:description:invitees:message:setting:completion:',['../protocol_i_e_m_group_manager-p.html#a9811c38c880660212ec17771fa1cf870',1,'IEMGroupManager-p']]],
   ['creategroupwithsubject_3adescription_3ainvitees_3amessage_3asetting_3aerror_3a',['createGroupWithSubject:description:invitees:message:setting:error:',['../protocol_i_e_m_group_manager-p.html#ae54181cbadb18880c8264c743d3a05cd',1,'IEMGroupManager-p']]],
   ['currentusername',['currentUsername',['../interface_e_m_client.html#adc532d66ce6e2dece51af2aadbe2ea31',1,'EMClient']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['pageresultwithlist_3aandcount_3a',['pageResultWithList:andCount:',['../interface_e_m_page_result.html#a744f17523849cbbc76988755a75cba3f',1,'EMPageResult']]],
   ['pausevideo',['pauseVideo',['../interface_e_m_call_session.html#a36946520d5b65fbe1900c3fc87d7d6c9',1,'EMCallSession']]],
   ['pausevideotransfer_3a',['pauseVideoTransfer:',['../protocol_i_e_m_call_manager-p.html#a0a1da2a1377b2940d5562e8a1a5e90dc',1,'IEMCallManager-p']]],
   ['pausevideowithsession_3aerror_3a',['pauseVideoWithSession:error:',['../protocol_i_e_m_call_manager-p.html#a3271619f6d7355d6668134470a100b29',1,'IEMCallManager-p']]],
