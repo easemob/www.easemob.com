@@ -7,7 +7,7 @@ var searchData=
   ['leavechatroom_3aerror_3a',['leaveChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a7b8a4a9d3627a3070569b50ba78125e7',1,'IEMChatroomManager-p']]],
   ['leavegroup_3acompletion_3a',['leaveGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a52684e4d621341233dffebc1442f209d',1,'IEMGroupManager-p']]],
   ['leavegroup_3aerror_3a',['leaveGroup:error:',['../protocol_i_e_m_group_manager-p.html#a7ddf033ceaa8bbe34d53f6904f22ab5f',1,'IEMGroupManager-p']]],
-  ['list',['list',['../interface_e_m_cursor_result.html#abf5113042bfaf11657f1fe8ad7120cb9',1,'EMCursorResult']]],
+  ['list',['list',['../interface_e_m_cursor_result.html#abf5113042bfaf11657f1fe8ad7120cb9',1,'EMCursorResult::list()'],['../interface_e_m_page_result.html#a98428683dcf514814854c995c975940e',1,'EMPageResult::list()']]],
   ['loadmessagesfrom_3ato_3acount_3acompletion_3a',['loadMessagesFrom:to:count:completion:',['../interface_e_m_conversation.html#af828dc2e31279d6aeea690d3d38eaa8b',1,'EMConversation']]],
   ['loadmessagesstartfromid_3acount_3asearchdirection_3acompletion_3a',['loadMessagesStartFromId:count:searchDirection:completion:',['../interface_e_m_conversation.html#a8fc508ae3f4aa3e307aede90809b1f63',1,'EMConversation']]],
   ['loadmessageswithkeyword_3atimestamp_3acount_3afromuser_3asearchdirection_3acompletion_3a',['loadMessagesWithKeyword:timestamp:count:fromUser:searchDirection:completion:',['../interface_e_m_conversation.html#ae890a42aba6340a2b5e1e0b7e7322899',1,'EMConversation']]],

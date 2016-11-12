@@ -26,6 +26,7 @@ var searchData=
   ['emmessagebody',['EMMessageBody',['../interface_e_m_message_body.html',1,'']]],
   ['emoptions',['EMOptions',['../interface_e_m_options.html',1,'']]],
   ['emoptions_28privatedeploy_29',['EMOptions(PrivateDeploy)',['../category_e_m_options_07_private_deploy_08.html',1,'']]],
+  ['empageresult',['EMPageResult',['../interface_e_m_page_result.html',1,'']]],
   ['empushoptions',['EMPushOptions',['../interface_e_m_push_options.html',1,'']]],
   ['emtextmessagebody',['EMTextMessageBody',['../interface_e_m_text_message_body.html',1,'']]],
   ['emvideomessagebody',['EMVideoMessageBody',['../interface_e_m_video_message_body.html',1,'']]],

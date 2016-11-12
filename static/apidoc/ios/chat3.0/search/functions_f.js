@@ -10,10 +10,11 @@ var searchData=
   ['setcamerabackorfront_3a',['setCameraBackOrFront:',['../interface_e_m_call_session.html#a557cf85020a80b4d8558f907db0b9a2a',1,'EMCallSession']]],
   ['setvideoadaptive_3a',['setVideoAdaptive:',['../protocol_i_e_m_call_manager-p.html#a9bb12a929bb67c3328068ec1cd7fcdbb',1,'IEMCallManager-p']]],
   ['sharedclient',['sharedClient',['../interface_e_m_client.html#abdf7f014fc5a6c76d9a9bd676d9543f5',1,'EMClient']]],
-  ['startvideocall_3acompletion_3a',['startVideoCall:completion:',['../protocol_i_e_m_call_manager-p.html#a2de1c75304be0e6e3bf6310ca926730b',1,'IEMCallManager-p']]],
+  ['startcall_3aremotename_3aext_3acompletion_3a',['startCall:remoteName:ext:completion:',['../protocol_i_e_m_call_manager-p.html#a49def75bf30cec8bb9c77ce3d1a87fc4',1,'IEMCallManager-p']]],
+  ['startvideocall_3acompletion_3a',['startVideoCall:completion:',['../protocol_i_e_m_call_manager-p.html#a05572fbec6d3286c9feefcf9c4e179c1',1,'IEMCallManager-p']]],
   ['startvideorecord_3a',['startVideoRecord:',['../interface_e_m_call_session.html#a0cac43903702cff5df87ec7662c66aee',1,'EMCallSession']]],
   ['startvideorecordingtofilepath_3aerror_3a',['startVideoRecordingToFilePath:error:',['../interface_e_m_call_session.html#a3677e30fdf25a5ecf945c140d0b89c90',1,'EMCallSession']]],
-  ['startvoicecall_3acompletion_3a',['startVoiceCall:completion:',['../protocol_i_e_m_call_manager-p.html#a27ce596f06c26e3e8046a07b8c57fddc',1,'IEMCallManager-p']]],
+  ['startvoicecall_3acompletion_3a',['startVoiceCall:completion:',['../protocol_i_e_m_call_manager-p.html#a1f7c0cd03bdcd6cbaa3f053ba7cd3df0',1,'IEMCallManager-p']]],
   ['stopvideorecording_3a',['stopVideoRecording:',['../interface_e_m_call_session.html#a7987eed40c164a880441489c001a3e86',1,'EMCallSession']]],
   ['switchcameraposition_3a',['switchCameraPosition:',['../interface_e_m_call_session.html#a5c3eb19b609b57c4842a4ef8900c984b',1,'EMCallSession']]]
 ];

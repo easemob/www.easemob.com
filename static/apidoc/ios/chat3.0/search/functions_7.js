@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['getallchatroomsfromserverwithcompletion_3a',['getAllChatroomsFromServerWithCompletion:',['../protocol_i_e_m_chatroom_manager-p.html#a046953bb77d9d08fd58e96f428e60f63',1,'IEMChatroomManager-p']]],
-  ['getallchatroomsfromserverwitherror_3a',['getAllChatroomsFromServerWithError:',['../protocol_i_e_m_chatroom_manager-p.html#a1d70caa7be255e6f855eb9a43d530c4a',1,'IEMChatroomManager-p']]],
+  ['getallchatroomsfromserverwithcompletion_3a',['getAllChatroomsFromServerWithCompletion:',['../protocol_i_e_m_chatroom_manager-p.html#a67423f084fd7792a47e95166f95be40b',1,'IEMChatroomManager-p']]],
+  ['getallchatroomsfromserverwitherror_3a',['getAllChatroomsFromServerWithError:',['../protocol_i_e_m_chatroom_manager-p.html#ac55f5c3e90a04067845bd9f71bab135f',1,'IEMChatroomManager-p']]],
   ['getallconversations',['getAllConversations',['../protocol_i_e_m_chat_manager-p.html#aba39ab25aa4a5b58623ae97cf6e05b96',1,'IEMChatManager-p']]],
   ['getblacklist',['getBlackList',['../protocol_i_e_m_contact_manager-p.html#aa2ac0ea9119e4fa46fafc9569e74f161',1,'IEMContactManager-p']]],
   ['getblacklistfromserverwithcompletion_3a',['getBlackListFromServerWithCompletion:',['../protocol_i_e_m_contact_manager-p.html#a29d169efc324baf5681f0a78ca9e7c73',1,'IEMContactManager-p']]],
   ['getblacklistfromserverwitherror_3a',['getBlackListFromServerWithError:',['../protocol_i_e_m_contact_manager-p.html#a905843d04ec122ace9c9e582ff5ebea1',1,'IEMContactManager-p']]],
   ['getcalloptions',['getCallOptions',['../protocol_i_e_m_call_manager-p.html#aa57c5e2e99d712a9e228fa4a3456cab4',1,'IEMCallManager-p']]],
+  ['getchatroomsfromserverwithpage_3apagesize_3acompletion_3a',['getChatroomsFromServerWithPage:pageSize:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a499ecc6e3d2221e2adfb6172d13eb7c6',1,'IEMChatroomManager-p']]],
+  ['getchatroomsfromserverwithpage_3apagesize_3aerror_3a',['getChatroomsFromServerWithPage:pageSize:error:',['../protocol_i_e_m_chatroom_manager-p.html#a6bdb126df0f79f9653fe89781601dcb4',1,'IEMChatroomManager-p']]],
   ['getchatroomspecificationfromserverbyid_3aincludememberslist_3acompletion_3a',['getChatroomSpecificationFromServerByID:includeMembersList:completion:',['../protocol_i_e_m_chatroom_manager-p.html#adfa725e59749083b8553ad1cce020d17',1,'IEMChatroomManager-p']]],
   ['getcontacts',['getContacts',['../protocol_i_e_m_contact_manager-p.html#ad7882deb360a270bf9c5dd2d15cfc998',1,'IEMContactManager-p']]],
   ['getcontactsfromserverwithcompletion_3a',['getContactsFromServerWithCompletion:',['../protocol_i_e_m_contact_manager-p.html#a50b9fb9e3cb6a003e336547994b2bdfd',1,'IEMContactManager-p']]],
