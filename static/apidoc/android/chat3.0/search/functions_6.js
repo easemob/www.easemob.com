@@ -2,6 +2,7 @@ var searchData=
 [
   ['get',['get',['../classcom_1_1hyphenate_1_1util_1_1_hanzi_to_pinyin.html#a7553b493059d194d013db543d30bb96f',1,'com::hyphenate::util::HanziToPinyin']]],
   ['getacceptinvitationalways',['getAcceptInvitationAlways',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a7cd7b4162d4014386917c9a4a0c927a4',1,'com::hyphenate::chat::EMOptions']]],
+  ['getaccesstoken',['getAccessToken',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a002fa0f7dde35321d4f86571b34100c5',1,'com::hyphenate::chat::EMClient']]],
   ['getaddress',['getAddress',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_location_message_body.html#aa90cd64472941d73c0c378436712117b',1,'com::hyphenate::chat::EMLocationMessageBody']]],
   ['getaffiliationscount',['getAffiliationsCount',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html#ab58ff7de55b10c30def2feb9dc12936f',1,'com.hyphenate.chat.EMChatRoom.getAffiliationsCount()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#ac97933a0ecf1c01da7e60108863eadda',1,'com.hyphenate.chat.EMGroup.getAffiliationsCount()']]],
   ['getallchatrooms',['getAllChatRooms',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a5c9749d9e6102348e679f3345ebf28c8',1,'com::hyphenate::chat::EMChatRoomManager']]],
@@ -92,5 +93,6 @@ var searchData=
   ['getvideofilelength',['getVideoFileLength',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_message_body.html#a198b9f74509326d8fc62880ec36b073a',1,'com::hyphenate::chat::EMVideoMessageBody']]],
   ['getvideothumbnail',['getVideoThumbnail',['../classcom_1_1hyphenate_1_1util_1_1_image_utils.html#ae86f4985051d1694fe046085c3f929f3',1,'com::hyphenate::util::ImageUtils']]],
   ['getwidth',['getWidth',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a69976c737c34c8b0582fc069697add5d',1,'com::hyphenate::chat::EMImageMessageBody']]],
+  ['getwifissid',['getWiFiSSID',['../classcom_1_1hyphenate_1_1util_1_1_net_utils.html#a50021b4a0818714d0d493e248c42c325',1,'com::hyphenate::util::NetUtils']]],
   ['groupmanager',['groupManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a519220cf905c540e9ca60a944d7930d5',1,'com::hyphenate::chat::EMClient']]]
 ];

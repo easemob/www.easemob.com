@@ -7,6 +7,7 @@ var searchData=
   ['chatroommanager',['chatroomManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a9ac57843da590eec74cca3f646b06405',1,'com::hyphenate::chat::EMClient']]],
   ['clear',['clear',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a6564545a38d47b99cc76780619022637',1,'com::hyphenate::chat::EMConversation']]],
   ['clearallmessages',['clearAllMessages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#ad65ea036100eddfb06cf00c80ef2cc87',1,'com::hyphenate::chat::EMConversation']]],
+  ['configminbitrate',['configMinBitrate',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_options.html#a8a47622caa6613980c96ce3fa39fe4c5',1,'com::hyphenate::chat::EMCallOptions']]],
   ['contactmanager',['contactManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#acf1538f9850034cebd46f2cc726c7b72',1,'com::hyphenate::chat::EMClient']]],
   ['conversationid',['conversationId',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43',1,'com::hyphenate::chat::EMConversation']]],
   ['createaccount',['createAccount',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a2905c3cc10d3b61a7630a83cc80c60fc',1,'com::hyphenate::chat::EMClient']]],
