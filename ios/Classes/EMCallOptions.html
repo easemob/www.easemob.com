@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>EMLocationMessageBody Class Reference</title>
+	<title>EMCallOptions Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,23 +56,19 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/address">address</option>
+		<option value="//api/name/isSendPushIfOffline">isSendPushIfOffline</option>
 		
-		<option value="//api/name/latitude">latitude</option>
+		<option value="//api/name/offlineMessageText">offlineMessageText</option>
 		
-		<option value="//api/name/longitude">longitude</option>
+		<option value="//api/name/videoKbps">videoKbps</option>
+		
+		<option value="//api/name/videoResolution">videoResolution</option>
 		
 	</optgroup>
 	
 
 	
 
-	
-	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/initWithLatitude:longitude:address:">- initWithLatitude:longitude:address:</option>
-		
-	</optgroup>
 	
 	
 </select>
@@ -87,16 +83,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">EMLocationMessageBody Class Reference</h1>
+					<h1 class="title">EMCallOptions Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/EMMessageBody.html">EMMessageBody</a> : NSObject</td>
+	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>EMLocationMessageBody.h</td>
+	<td>EMCallOptions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,7 +102,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Location message body</p>
+						<p>@header EMCallOptions.h</p>
 					</div>
 					
 					
@@ -122,8 +118,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/latitude" title="latitude"></a>
-	<h3 class="method-title"><code><a href="#//api/name/latitude">&nbsp;&nbsp;latitude</a></code>
+	<a name="//api/name/isSendPushIfOffline" title="isSendPushIfOffline"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isSendPushIfOffline">&nbsp;&nbsp;isSendPushIfOffline</a></code>
 </h3>
 
 	<div class="method-info">
@@ -133,12 +129,13 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Location latitude</p>
+				<p>When remote is not online, whether to send offline push
+default NO</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic) double latitude</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL isSendPushIfOffline</code></div>
 
 		    
 			
@@ -150,7 +147,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Location latitude</p>
+				<p>When remote is not online, whether to send offline push
+default NO</p>
 			</div>
 			
 
@@ -161,15 +159,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EMLocationMessageBody.h</code></p>
+				<p><code class="declared-in-ref">EMCallOptions.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/longitude" title="longitude"></a>
-	<h3 class="method-title"><code><a href="#//api/name/longitude">&nbsp;&nbsp;longitude</a></code>
+	<a name="//api/name/offlineMessageText" title="offlineMessageText"></a>
+	<h3 class="method-title"><code><a href="#//api/name/offlineMessageText">&nbsp;&nbsp;offlineMessageText</a></code>
 </h3>
 
 	<div class="method-info">
@@ -179,12 +177,13 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Loctaion longitude</p>
+				<p>Only effective when <a href="#//api/name/isSendPushIfOffline">isSendPushIfOffline</a> is YES.
+default “You have incoming call&hellip;”</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic) double longitude</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *offlineMessageText</code></div>
 
 		    
 			
@@ -196,7 +195,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Loctaion longitude</p>
+				<p>Only effective when <a href="#//api/name/isSendPushIfOffline">isSendPushIfOffline</a> is YES.
+default “You have incoming call&hellip;”</p>
 			</div>
 			
 
@@ -207,15 +207,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EMLocationMessageBody.h</code></p>
+				<p><code class="declared-in-ref">EMCallOptions.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/address" title="address"></a>
-	<h3 class="method-title"><code><a href="#//api/name/address">&nbsp;&nbsp;address</a></code>
+	<a name="//api/name/videoResolution" title="videoResolution"></a>
+	<h3 class="method-title"><code><a href="#//api/name/videoResolution">&nbsp;&nbsp;videoResolution</a></code>
 </h3>
 
 	<div class="method-info">
@@ -225,12 +225,13 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Address</p>
+				<p>Video resolution
+default adaptive</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *address</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) EMCallVideoResolution videoResolution</code></div>
 
 		    
 			
@@ -242,7 +243,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Address</p>
+				<p>Video resolution
+default adaptive</p>
 			</div>
 			
 
@@ -253,15 +255,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EMLocationMessageBody.h</code></p>
+				<p><code class="declared-in-ref">EMCallOptions.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/initWithLatitude:longitude:address:" title="initWithLatitude:longitude:address:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithLatitude:longitude:address:">&ndash;&nbsp;initWithLatitude:longitude:address:</a></code>
+	<a name="//api/name/videoKbps" title="videoKbps"></a>
+	<h3 class="method-title"><code><a href="#//api/name/videoKbps">&nbsp;&nbsp;videoKbps</a></code>
 </h3>
 
 	<div class="method-info">
@@ -271,43 +273,18 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Initialize a location message body instance</p>
+				<p>Video kbps
+range 50 &lt; videoKbps &lt; 5000, default 0 , 0 means adaptive
+advice 0</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithLatitude:(double)<em>aLatitude</em> longitude:(double)<em>aLongitude</em> address:(NSString *)<em>aAddress</em></code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) long videoKbps</code></div>
 
 		    
 			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aLatitude</code></th>
-						<td><p>Latitude</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aLongitude</code></th>
-						<td><p>Longitude</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aAddress</code></th>
-						<td><p>Address</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Location message body instance</p>
-			</div>
 			
 
 			
@@ -315,7 +292,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Initialize a location message body instance</p>
+				<p>Video kbps
+range 50 &lt; videoKbps &lt; 5000, default 0 , 0 means adaptive
+advice 0</p>
 			</div>
 			
 
@@ -326,7 +305,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EMLocationMessageBody.h</code></p>
+				<p><code class="declared-in-ref">EMCallOptions.h</code></p>
 			</div>
 			
 			
