@@ -9,6 +9,7 @@ var searchData=
   ['emtextmessagebody',['EMTextMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_text_message_body.html#a912afb427268ef854e2c396102656059',1,'com::hyphenate::chat::EMTextMessageBody']]],
   ['emvideomessagebody',['EMVideoMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_message_body.html#a1bd33427b1917d4473205bdbd0f39aec',1,'com::hyphenate::chat::EMVideoMessageBody']]],
   ['emvoicemessagebody',['EMVoiceMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_voice_message_body.html#a36de77310205bf76ab6b2a72f7bb2132',1,'com::hyphenate::chat::EMVoiceMessageBody']]],
+  ['enablefixedvideoresolution',['enableFixedVideoResolution',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_options.html#a4d4d72dd704f72ea6d1476fa3a3198a4',1,'com::hyphenate::chat::EMCallOptions']]],
   ['encrypt',['encrypt',['../interfacecom_1_1hyphenate_1_1chat_1_1_encrypt_provider.html#a9e1764fd2e74cac3ac87f1a7ae8f9ea9',1,'com::hyphenate::chat::EncryptProvider']]],
   ['encryptbase64string',['encryptBase64String',['../classcom_1_1hyphenate_1_1util_1_1_crypto_utils.html#abff3bccb0da0d71f797a56a17dee3322',1,'com::hyphenate::util::CryptoUtils']]],
   ['encryptfile',['encryptFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_encrypt_utils.html#aaad56797819699858df7aab3afcc453f',1,'com::hyphenate::chat::EMEncryptUtils']]],

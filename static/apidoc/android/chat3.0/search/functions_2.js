@@ -2,12 +2,12 @@ var searchData=
 [
   ['callmanager',['callManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a24d555fb3ac11af3078fbf3c78fd416a',1,'com::hyphenate::chat::EMClient']]],
   ['changeappkey',['changeAppkey',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a5e6eca765750112021feebc1d4f0793b',1,'com::hyphenate::chat::EMClient']]],
+  ['changegroupdescription',['changeGroupDescription',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a9a78fd4f1ac9c7efab4c781079c9d8ef',1,'com::hyphenate::chat::EMGroupManager']]],
   ['changegroupname',['changeGroupName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a6bb2db1f83e4ce3026109a1505ba5634',1,'com::hyphenate::chat::EMGroupManager']]],
   ['chatmanager',['chatManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a4e6f34a56c359a9e5420dbfefadb15a8',1,'com::hyphenate::chat::EMClient']]],
   ['chatroommanager',['chatroomManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a9ac57843da590eec74cca3f646b06405',1,'com::hyphenate::chat::EMClient']]],
   ['clear',['clear',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a6564545a38d47b99cc76780619022637',1,'com::hyphenate::chat::EMConversation']]],
   ['clearallmessages',['clearAllMessages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#ad65ea036100eddfb06cf00c80ef2cc87',1,'com::hyphenate::chat::EMConversation']]],
-  ['configminbitrate',['configMinBitrate',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_options.html#a8a47622caa6613980c96ce3fa39fe4c5',1,'com::hyphenate::chat::EMCallOptions']]],
   ['contactmanager',['contactManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#acf1538f9850034cebd46f2cc726c7b72',1,'com::hyphenate::chat::EMClient']]],
   ['conversationid',['conversationId',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43',1,'com::hyphenate::chat::EMConversation']]],
   ['createaccount',['createAccount',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a2905c3cc10d3b61a7630a83cc80c60fc',1,'com::hyphenate::chat::EMClient']]],

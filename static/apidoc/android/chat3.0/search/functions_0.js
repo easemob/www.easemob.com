@@ -24,6 +24,7 @@ var searchData=
   ['asyncapplyjointogroup',['asyncApplyJoinToGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a868f10367fa7ff87ff4ed14461ec2e2e',1,'com::hyphenate::chat::EMGroupManager']]],
   ['asyncblockgroupmessage',['asyncBlockGroupMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a3f95446fd3af7b3c38044e7c297ff8c2',1,'com::hyphenate::chat::EMGroupManager']]],
   ['asyncblockuser',['asyncBlockUser',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#af2000524465b23a97da72414f3e03bad',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['asyncchangegroupdescription',['asyncChangeGroupDescription',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a28efec4a07966f2a942fbba23a9f02a8',1,'com::hyphenate::chat::EMGroupManager']]],
   ['asyncchangegroupname',['asyncChangeGroupName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a739a32728fbcc0bd53bc43f2be71c2f0',1,'com::hyphenate::chat::EMGroupManager']]],
   ['asynccreategroup',['asyncCreateGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a2bea3e61abc9728c7e40c148f2a290a6',1,'com::hyphenate::chat::EMGroupManager']]],
   ['asyncdeclineapplication',['asyncDeclineApplication',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a5e885a985399e47458e588655c3693f2',1,'com::hyphenate::chat::EMGroupManager']]],
