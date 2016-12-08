@@ -21,5 +21,5 @@ var searchData=
   ['userdidforbidbyserver',['userDidForbidByServer',['../protocol_e_m_client_delegate-p.html#a4cbb63f33783bd5cdea2295e091da904',1,'EMClientDelegate-p']]],
   ['userdidjoinchatroom_3auser_3a',['userDidJoinChatroom:user:',['../protocol_e_m_chatroom_manager_delegate-p.html#ae6c83f7f739bc6133bbfa7e6079c0e84',1,'EMChatroomManagerDelegate-p']]],
   ['userdidleavechatroom_3auser_3a',['userDidLeaveChatroom:user:',['../protocol_e_m_chatroom_manager_delegate-p.html#acd5c334bf17fde779940f077b58ed547',1,'EMChatroomManagerDelegate-p']]],
-  ['usinghttps',['usingHttps',['../interface_e_m_options.html#a24bfec0b0dab7998da6474a1be0e5e4b',1,'EMOptions']]]
+  ['usinghttpsonly',['usingHttpsOnly',['../interface_e_m_options.html#ae55204c816b2c5ed791726f7a1389d0e',1,'EMOptions']]]
 ];
