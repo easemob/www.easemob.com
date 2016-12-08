@@ -7,6 +7,8 @@ var searchData=
   ['markmessageasreadwithid_3a',['markMessageAsReadWithId:',['../interface_e_m_conversation.html#a023ded16fede620f2ac09f3edf0b633d',1,'EMConversation']]],
   ['markmessageasreadwithid_3aerror_3a',['markMessageAsReadWithId:error:',['../interface_e_m_conversation.html#a97e2a01852fd5e53595a54eaffc0e8ca',1,'EMConversation']]],
   ['maxuserscount',['maxUsersCount',['../interface_e_m_group_options.html#a363499589cbb9040619c9a64c2ad27e9',1,'EMGroupOptions']]],
+  ['maxvideoframerate',['maxVideoFrameRate',['../interface_e_m_call_options.html#a45f020f84b4513fdc0cb3f8a123fe678',1,'EMCallOptions']]],
+  ['maxvideokbps',['maxVideoKbps',['../interface_e_m_call_options.html#a4130c8f7488d6d6f58c3783dc63be5fd',1,'EMCallOptions']]],
   ['members',['members',['../interface_e_m_group.html#a100605134c905e8ba3b4a24436fc0158',1,'EMGroup']]],
   ['messageattachmentstatusdidchange_3aerror_3a',['messageAttachmentStatusDidChange:error:',['../protocol_e_m_chat_manager_delegate-p.html#aa1a4a8b8f3de7a06ccc61b7e73e3aa71',1,'EMChatManagerDelegate-p']]],
   ['messageid',['messageId',['../interface_e_m_message.html#a3a85be4426c1f17888b8cb614c9e537c',1,'EMMessage']]],
@@ -14,5 +16,6 @@ var searchData=
   ['messagesdidread_3a',['messagesDidRead:',['../protocol_e_m_chat_manager_delegate-p.html#a47aa66211e74a93da6c3ee555e8eb158',1,'EMChatManagerDelegate-p']]],
   ['messagesdidreceive_3a',['messagesDidReceive:',['../protocol_e_m_chat_manager_delegate-p.html#ab086b0134c177e917b62339c28c09d7e',1,'EMChatManagerDelegate-p']]],
   ['messagestatusdidchange_3aerror_3a',['messageStatusDidChange:error:',['../protocol_e_m_chat_manager_delegate-p.html#ab531bad356ffde37d945530f52661e2b',1,'EMChatManagerDelegate-p']]],
-  ['migratedatabasetolatestsdk',['migrateDatabaseToLatestSDK',['../interface_e_m_client.html#ae71f63865d43821c05c72d4fcb899498',1,'EMClient']]]
+  ['migratedatabasetolatestsdk',['migrateDatabaseToLatestSDK',['../interface_e_m_client.html#ae71f63865d43821c05c72d4fcb899498',1,'EMClient']]],
+  ['minvideokbps',['minVideoKbps',['../interface_e_m_call_options.html#ae070e260597c913634a21c03aa31826a',1,'EMCallOptions']]]
 ];
