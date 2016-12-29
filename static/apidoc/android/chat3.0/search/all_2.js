@@ -35,6 +35,5 @@ var searchData=
   ['createsendmessage',['createSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#aefa8cbb7663d83b2a6bbaab9ede155f1',1,'com::hyphenate::chat::EMMessage']]],
   ['createtxtsendmessage',['createTxtSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ada043cb0f1512242d016c54e4352eccc',1,'com::hyphenate::chat::EMMessage']]],
   ['createvideosendmessage',['createVideoSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a1b9ee01aa3b2ea120fb992aa8502c5ca',1,'com::hyphenate::chat::EMMessage']]],
-  ['createvoicesendmessage',['createVoiceSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#acda3d7825b6f4ecbeaefe81bbae2f75a',1,'com::hyphenate::chat::EMMessage']]],
-  ['cryptoutils',['CryptoUtils',['../classcom_1_1hyphenate_1_1util_1_1_crypto_utils.html',1,'com::hyphenate::util']]]
+  ['createvoicesendmessage',['createVoiceSendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#acda3d7825b6f4ecbeaefe81bbae2f75a',1,'com::hyphenate::chat::EMMessage']]]
 ];

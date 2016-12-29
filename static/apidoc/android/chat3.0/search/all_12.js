@@ -2,10 +2,12 @@ var searchData=
 [
   ['unblockgroupmessage',['unblockGroupMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a2f455d711ec775490996abf6cb31ea86',1,'com::hyphenate::chat::EMGroupManager']]],
   ['unblockuser',['unblockUser',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a2c26127fddaac96ffdde2463a8222926',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['unihans',['UNIHANS',['../classcom_1_1hyphenate_1_1util_1_1_hanzi_to_pinyin.html#adb6b0439d3b9b28c2d05d9ff1607afd7',1,'com::hyphenate::util::HanziToPinyin']]],
   ['updatecurrentusernick',['updateCurrentUserNick',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#ac65e9255670c1da37482f686dbe9a176',1,'com::hyphenate::chat::EMClient']]],
   ['updatemessage',['updateMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#aa2f28f17a8e04067b8fade1ec0fdf7b5',1,'com.hyphenate.chat.EMChatManager.updateMessage()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a2c83f7b450834a04447f265d9b65089d',1,'com.hyphenate.chat.EMConversation.updateMessage()']]],
   ['updateparticipant',['updateParticipant',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1d06bab9a69824162292d39283bfa3ae',1,'com::hyphenate::chat::EMChatManager']]],
+  ['updatepushnickname',['updatePushNickname',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#afc4cdda10f004b2b673102b43222235d',1,'com::hyphenate::chat::EMPushManager']]],
+  ['updatepushserviceforgroup',['updatePushServiceForGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#af0e2e43e5840f1c03c567f797bee312c',1,'com::hyphenate::chat::EMPushManager']]],
+  ['uploadlog',['uploadLog',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#af592159a62a963afae19318c66a8e236',1,'com::hyphenate::chat::EMClient']]],
   ['user_5falready_5fexist',['USER_ALREADY_EXIST',['../classcom_1_1hyphenate_1_1_e_m_error.html#a497e16020b7fe36e8075d2b787a00e8d',1,'com::hyphenate::EMError']]],
   ['user_5falready_5flogin',['USER_ALREADY_LOGIN',['../classcom_1_1hyphenate_1_1_e_m_error.html#a09893124e1fbcd100a9583a4293957af',1,'com::hyphenate::EMError']]],
   ['user_5fauthentication_5ffailed',['USER_AUTHENTICATION_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a0745733baac8fd07b64186742cd89db4',1,'com::hyphenate::EMError']]],
@@ -19,6 +21,5 @@ var searchData=
   ['user_5fremoved',['USER_REMOVED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac17ad534d9a04bca878e21a469bb6535',1,'com::hyphenate::EMError']]],
   ['user_5funbind_5fdevicetoken_5ffailed',['USER_UNBIND_DEVICETOKEN_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ab1e3e56332d5b4dcc4381d931997983c',1,'com::hyphenate::EMError']]],
   ['user_5fupdateinfo_5ffailed',['USER_UPDATEINFO_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a398f514f3df0ab0d9f07b83098cfbd69',1,'com::hyphenate::EMError']]],
-  ['username',['username',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact.html#a7e6de215c10138628f2ce8e75e987d6c',1,'com::hyphenate::chat::EMContact']]],
-  ['utils',['Utils',['../classcom_1_1hyphenate_1_1util_1_1_utils.html',1,'com::hyphenate::util']]]
+  ['username',['username',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact.html#a7e6de215c10138628f2ce8e75e987d6c',1,'com::hyphenate::chat::EMContact']]]
 ];

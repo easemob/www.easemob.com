@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['latlng',['LatLng',['../classcom_1_1hyphenate_1_1util_1_1_lat_lng.html',1,'com::hyphenate::util']]],
   ['leavechatroom',['leaveChatRoom',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a86283233b629c0ce1246e6e02af30682',1,'com::hyphenate::chat::EMChatRoomManager']]],
   ['leavegroup',['leaveGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a59d3547b31d194ab674eec08dae94408',1,'com::hyphenate::chat::EMGroupManager']]],
   ['loadallconversations',['loadAllConversations',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ab3db470adf8017018da3f5bc0eeac39f',1,'com::hyphenate::chat::EMChatManager']]],

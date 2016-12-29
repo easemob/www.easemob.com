@@ -1,7 +1,6 @@
 var searchData=
 [
   ['idle',['IDLE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_state.html#ac30d2eccd755c7df4350ce8927cff5f9',1,'com::hyphenate::chat::EMCallStateChangeListener::CallState']]],
-  ['imageutils',['ImageUtils',['../classcom_1_1hyphenate_1_1util_1_1_image_utils.html',1,'com::hyphenate::util']]],
   ['importmessages',['importMessages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#abdd3cb234efac3ecc74e1eabdd5c7a10',1,'com::hyphenate::chat::EMChatManager']]],
   ['init',['init',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a739c181ecd146af520cde6076e4b4de4',1,'com::hyphenate::chat::EMClient']]],
   ['insertmessage',['insertMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a18e37861ae13ec85c881c267611e90fd',1,'com::hyphenate::chat::EMConversation']]],
@@ -18,17 +17,15 @@ var searchData=
   ['isdeletemessagesasexitgroup',['isDeleteMessagesAsExitGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aff62ff3e07a0f9bb49e126b708d35655',1,'com::hyphenate::chat::EMOptions']]],
   ['isdelivered',['isDelivered',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#afed061098bc21cccb66cb8cf49d04521',1,'com::hyphenate::chat::EMMessage']]],
   ['isdirectcall',['isDirectCall',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#a866daea70ddec39101b7da293f254eb9',1,'com::hyphenate::chat::EMCallManager']]],
-  ['isethernetconnection',['isEthernetConnection',['../classcom_1_1hyphenate_1_1util_1_1_net_utils.html#a7e08f73f28576538f3e795690f67d9a4',1,'com::hyphenate::util::NetUtils']]],
   ['isgroup',['isGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#ad2a9018afd133b29fccc4d58e4a16b93',1,'com::hyphenate::chat::EMConversation']]],
   ['islistened',['isListened',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a4262d29fe7a173495ee5fdbccad59eed',1,'com::hyphenate::chat::EMMessage']]],
   ['isloggedinbefore',['isLoggedInBefore',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#ab36367adfea7e7e707b143d39356f452',1,'com::hyphenate::chat::EMClient']]],
-  ['ismobileconnection',['isMobileConnection',['../classcom_1_1hyphenate_1_1util_1_1_net_utils.html#a6172d592109bd561e8c21b729972db0a',1,'com::hyphenate::util::NetUtils']]],
+  ['ismemberallowtoinvite',['isMemberAllowToInvite',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#adb54bbc1475e4ba346b9b1c7fbe41589',1,'com::hyphenate::chat::EMGroup']]],
+  ['ismemberonly',['isMemberOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#aa71058cbdfbe29b04090eeae1fb0756d',1,'com::hyphenate::chat::EMGroup']]],
+  ['ismembersonly',['isMembersOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#af167b8ceecbddad735478c1dfa7861e9',1,'com::hyphenate::chat::EMGroup']]],
   ['ismsgblocked',['isMsgBlocked',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#ad98b22914ef53e9cf566a08a6acb634f',1,'com::hyphenate::chat::EMGroup']]],
   ['ispublic',['isPublic',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a6db83d8a1156a964a2ca13e5bb51fcd2',1,'com::hyphenate::chat::EMGroup']]],
-  ['issdcardexist',['isSDCardExist',['../classcom_1_1hyphenate_1_1util_1_1_easy_utils.html#aea30fded99e3f706c69acee28dac940b',1,'com::hyphenate::util::EasyUtils']]],
   ['issendoriginalimage',['isSendOriginalImage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a05f113c7ad47b96e25ac1514f53e789c',1,'com::hyphenate::chat::EMImageMessageBody']]],
-  ['issilentmessage',['isSilentMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a6ca4b2d915b8bc3cff954f7c34ba826d',1,'com::hyphenate::chat::EMChatManager']]],
   ['issortmessagebyservertime',['isSortMessageByServerTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a96cacc44c07c257d46db6d3467860f5b',1,'com::hyphenate::chat::EMOptions']]],
-  ['isunread',['isUnread',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a7814071869a845938865a4eabbe5d9e3',1,'com::hyphenate::chat::EMMessage']]],
-  ['iswificonnection',['isWifiConnection',['../classcom_1_1hyphenate_1_1util_1_1_net_utils.html#a80edf7294eccc219d2f61150d72b338f',1,'com::hyphenate::util::NetUtils']]]
+  ['isunread',['isUnread',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a7814071869a845938865a4eabbe5d9e3',1,'com::hyphenate::chat::EMMessage']]]
 ];
