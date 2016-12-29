@@ -17,7 +17,6 @@ var searchData=
   ['removeuserfromblacklist_3acompletion_3a',['removeUserFromBlackList:completion:',['../protocol_i_e_m_contact_manager-p.html#adb1dd42cf5fc8ea67e9e813660ea829b',1,'IEMContactManager-p']]],
   ['requesttojoinpublicgroup_3amessage_3acompletion_3a',['requestToJoinPublicGroup:message:completion:',['../protocol_i_e_m_group_manager-p.html#a1bb1760c3e23c7c2dcdd296c3c4a2b85',1,'IEMGroupManager-p']]],
   ['resendmessage_3aprogress_3acompletion_3a',['resendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#ab7021c90cc8a2579375d5e9e9933f2ff',1,'IEMChatManager-p']]],
-  ['restserver',['restServer',['../category_e_m_options_07_private_deploy_08.html#a534277c754dd1448227b01fa2401d68d',1,'EMOptions(PrivateDeploy)::restServer()'],['../interface_e_m_options.html#a534277c754dd1448227b01fa2401d68d',1,'EMOptions::restServer()']]],
   ['resumevideo',['resumeVideo',['../interface_e_m_call_session.html#a5529c28cebfd1959f37934028464b2a6',1,'EMCallSession']]],
   ['resumevideotransfer_3a',['resumeVideoTransfer:',['../protocol_i_e_m_call_manager-p.html#a4f4f9ab81380d42ee78d13072c6f7dad',1,'IEMCallManager-p']]],
   ['resumevideowithsession_3aerror_3a',['resumeVideoWithSession:error:',['../protocol_i_e_m_call_manager-p.html#a76bd83f477033d55ac5e1d56eff66974',1,'IEMCallManager-p']]],
