@@ -10,6 +10,7 @@ var searchData=
   ['setcalloptions_3a',['setCallOptions:',['../protocol_i_e_m_call_manager-p.html#a8bdffc278012912e6b647496f950f2d0',1,'IEMCallManager-p']]],
   ['setcamerabackorfront_3a',['setCameraBackOrFront:',['../interface_e_m_call_session.html#a557cf85020a80b4d8558f907db0b9a2a',1,'EMCallSession']]],
   ['setvideoadaptive_3a',['setVideoAdaptive:',['../protocol_i_e_m_call_manager-p.html#a9bb12a929bb67c3328068ec1cd7fcdbb',1,'IEMCallManager-p']]],
+  ['setvideosize_3aheight_3a',['setVideoSize:height:',['../interface_open_g_l_view20.html#af4c6980587da84e1c5157e6ea4b59eda',1,'OpenGLView20']]],
   ['sharedclient',['sharedClient',['../interface_e_m_client.html#abdf7f014fc5a6c76d9a9bd676d9543f5',1,'EMClient']]],
   ['startcall_3aremotename_3aext_3acompletion_3a',['startCall:remoteName:ext:completion:',['../protocol_i_e_m_call_manager-p.html#a49def75bf30cec8bb9c77ce3d1a87fc4',1,'IEMCallManager-p']]],
   ['startvideocall_3acompletion_3a',['startVideoCall:completion:',['../protocol_i_e_m_call_manager-p.html#a05572fbec6d3286c9feefcf9c4e179c1',1,'IEMCallManager-p']]],

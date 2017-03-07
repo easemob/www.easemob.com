@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateSDK
-   &#160;<span id="projectnumber">3.2.3</span>
+   &#160;<span id="projectnumber">3.3.0</span>
    </div>
   </td>
  </tr>
@@ -143,6 +143,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:aa653fb528db133b69b3ab0a0a307dbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bc4133a846b0c769ec6f47277473dc5"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#a0bc4133a846b0c769ec6f47277473dc5">apnsCertName</a></td></tr>
 <tr class="separator:a0bc4133a846b0c769ec6f47277473dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf551f2e0bcf1be8454d42c7eac763f5"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#acf551f2e0bcf1be8454d42c7eac763f5">enableDnsConfig</a></td></tr>
+<tr class="separator:acf551f2e0bcf1be8454d42c7eac763f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add8ffc7906a0b90c66402014173b6e69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#add8ffc7906a0b90c66402014173b6e69">chatPort</a></td></tr>
+<tr class="separator:add8ffc7906a0b90c66402014173b6e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48eef5818d35875db7aefa7cb6991c97"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#a48eef5818d35875db7aefa7cb6991c97">chatServer</a></td></tr>
+<tr class="separator:a48eef5818d35875db7aefa7cb6991c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534277c754dd1448227b01fa2401d68d"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#a534277c754dd1448227b01fa2401d68d">restServer</a></td></tr>
+<tr class="separator:a534277c754dd1448227b01fa2401d68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>SDK的设置选项 </p>
@@ -270,6 +278,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 
 </div>
 </div>
+<a class="anchor" id="add8ffc7906a0b90c66402014173b6e69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int) chatPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>IM服务器端口</p>
+<p>enableDnsConfig为NO时有效。只能在[<a class="el" href="interface_e_m_client.html">EMClient</a> initializeSDKWithOptions:]中设置，不能在程序运行过程中动态修改 </p>
+
+<p>由 category <a class="el" href="category_e_m_options_07_private_deploy_08.html#add8ffc7906a0b90c66402014173b6e69">EMOptions(PrivateDeploy)</a> 提供.</p>
+
+</div>
+</div>
+<a class="anchor" id="a48eef5818d35875db7aefa7cb6991c97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString*) chatServer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>IM服务器地址</p>
+<p>enableDnsConfig为NO时生效。只能在[<a class="el" href="interface_e_m_client.html">EMClient</a> initializeSDKWithOptions:]中设置，不能在程序运行过程中动态修改 </p>
+
+<p>由 category <a class="el" href="category_e_m_options_07_private_deploy_08.html#a48eef5818d35875db7aefa7cb6991c97">EMOptions(PrivateDeploy)</a> 提供.</p>
+
+</div>
+</div>
 <a class="anchor" id="a1a38d10364aa4d9c0579d7f9db5f1a29"></a>
 <div class="memitem">
 <div class="memproto">
@@ -309,6 +365,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </table>
 </div><div class="memdoc">
 <p>是否发送消息送达回执, 默认为NO，如果设置为YES，SDK收到单聊消息时会自动发送送达回执 </p>
+
+</div>
+</div>
+<a class="anchor" id="acf551f2e0bcf1be8454d42c7eac763f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) enableDnsConfig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>是否允许使用DNS, 默认为YES</p>
+<p>只能在[<a class="el" href="interface_e_m_client.html">EMClient</a> initializeSDKWithOptions:]中设置，不能在程序运行过程中动态修改。 </p>
+
+<p>由 category <a class="el" href="category_e_m_options_07_private_deploy_08.html#acf551f2e0bcf1be8454d42c7eac763f5">EMOptions(PrivateDeploy)</a> 提供.</p>
 
 </div>
 </div>
@@ -460,6 +540,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 
 </div>
 </div>
+<a class="anchor" id="a534277c754dd1448227b01fa2401d68d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString*) restServer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>REST服务器地址</p>
+<p>enableDnsConfig为NO时生效。只能在[<a class="el" href="interface_e_m_client.html">EMClient</a> initializeSDKWithOptions:]中设置，不能在程序运行过程中动态修改 </p>
+
+<p>由 category <a class="el" href="category_e_m_options_07_private_deploy_08.html#a534277c754dd1448227b01fa2401d68d">EMOptions(PrivateDeploy)</a> 提供.</p>
+
+</div>
+</div>
 <a class="anchor" id="aa653fb528db133b69b3ab0a0a307dbff"></a>
 <div class="memitem">
 <div class="memproto">
@@ -498,7 +602,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </tr>
 </table>
 </div><div class="memdoc">
-<p>是否只使用https, 默认为YES </p>
+<p>是否只使用https, 默认为NO </p>
 
 </div>
 </div>

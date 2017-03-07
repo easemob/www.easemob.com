@@ -6,12 +6,11 @@ var searchData=
   ['markcallsession_3aissilence_3a',['markCallSession:isSilence:',['../protocol_i_e_m_call_manager-p.html#ab4e12d36c22b2cc29962c69d8e3c3ed8',1,'IEMCallManager-p']]],
   ['markmessageasreadwithid_3a',['markMessageAsReadWithId:',['../interface_e_m_conversation.html#a023ded16fede620f2ac09f3edf0b633d',1,'EMConversation']]],
   ['markmessageasreadwithid_3aerror_3a',['markMessageAsReadWithId:error:',['../interface_e_m_conversation.html#a97e2a01852fd5e53595a54eaffc0e8ca',1,'EMConversation']]],
-  ['maxmemberscount',['maxMembersCount',['../interface_e_m_chatroom.html#ab9197745e7294cb713af232b4138fee6',1,'EMChatroom']]],
-  ['maxuserscount',['maxUsersCount',['../interface_e_m_group_options.html#a363499589cbb9040619c9a64c2ad27e9',1,'EMGroupOptions']]],
+  ['maxoccupantscount',['maxOccupantsCount',['../interface_e_m_chatroom.html#a1be7d7507769472b119c8c0c09bb2ba3',1,'EMChatroom']]],
+  ['maxuserscount',['maxUsersCount',['../interface_e_m_chatroom_options.html#a0440ab078134a82d3b503959f72bbc36',1,'EMChatroomOptions::maxUsersCount()'],['../interface_e_m_group_options.html#a363499589cbb9040619c9a64c2ad27e9',1,'EMGroupOptions::maxUsersCount()']]],
   ['maxvideoframerate',['maxVideoFrameRate',['../interface_e_m_call_options.html#a45f020f84b4513fdc0cb3f8a123fe678',1,'EMCallOptions']]],
   ['maxvideokbps',['maxVideoKbps',['../interface_e_m_call_options.html#a4130c8f7488d6d6f58c3783dc63be5fd',1,'EMCallOptions']]],
-  ['members',['members',['../interface_e_m_chatroom.html#a00a580cd7a2fa2a678ac2b57566fb835',1,'EMChatroom::members()'],['../interface_e_m_group.html#a100605134c905e8ba3b4a24436fc0158',1,'EMGroup::members()']]],
-  ['memberscount',['membersCount',['../interface_e_m_chatroom.html#a64cb7d675efe60e4b62f286cb29d1768',1,'EMChatroom::membersCount()'],['../interface_e_m_group.html#a85f2ea09936fc90d3c5f6f7723d69d3f',1,'EMGroup::membersCount()']]],
+  ['memberlist',['memberList',['../interface_e_m_chatroom.html#a34d173b5832db084d87cc79bc0056354',1,'EMChatroom::memberList()'],['../interface_e_m_group.html#a8b2008daad5e5dd62d95028efc69a18e',1,'EMGroup::memberList()']]],
   ['messageattachmentstatusdidchange_3aerror_3a',['messageAttachmentStatusDidChange:error:',['../protocol_e_m_chat_manager_delegate-p.html#aa1a4a8b8f3de7a06ccc61b7e73e3aa71',1,'EMChatManagerDelegate-p']]],
   ['messageid',['messageId',['../interface_e_m_message.html#a3a85be4426c1f17888b8cb614c9e537c',1,'EMMessage']]],
   ['messagesdiddeliver_3a',['messagesDidDeliver:',['../protocol_e_m_chat_manager_delegate-p.html#aeb655fe7e623359bee76cc6bb6c7b8d4',1,'EMChatManagerDelegate-p']]],
@@ -19,5 +18,10 @@ var searchData=
   ['messagesdidreceive_3a',['messagesDidReceive:',['../protocol_e_m_chat_manager_delegate-p.html#ab086b0134c177e917b62339c28c09d7e',1,'EMChatManagerDelegate-p']]],
   ['messagestatusdidchange_3aerror_3a',['messageStatusDidChange:error:',['../protocol_e_m_chat_manager_delegate-p.html#ab531bad356ffde37d945530f52661e2b',1,'EMChatManagerDelegate-p']]],
   ['migratedatabasetolatestsdk',['migrateDatabaseToLatestSDK',['../interface_e_m_client.html#ae71f63865d43821c05c72d4fcb899498',1,'EMClient']]],
-  ['minvideokbps',['minVideoKbps',['../interface_e_m_call_options.html#ae070e260597c913634a21c03aa31826a',1,'EMCallOptions']]]
+  ['minvideokbps',['minVideoKbps',['../interface_e_m_call_options.html#ae070e260597c913634a21c03aa31826a',1,'EMCallOptions']]],
+  ['mutelist',['muteList',['../interface_e_m_chatroom.html#a707571b53e6156c353f128109e76d733',1,'EMChatroom::muteList()'],['../interface_e_m_group.html#adbe83d0dd7bf3b5e863ec416a8c55869',1,'EMGroup::muteList()']]],
+  ['mutemembers_3amutemilliseconds_3afromchatroom_3acompletion_3a',['muteMembers:muteMilliseconds:fromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#af49c35190194fe04d605ad711734df6d',1,'IEMChatroomManager-p']]],
+  ['mutemembers_3amutemilliseconds_3afromchatroom_3aerror_3a',['muteMembers:muteMilliseconds:fromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#acab136d39fba30acf56b3566aaa15d41',1,'IEMChatroomManager-p']]],
+  ['mutemembers_3amutemilliseconds_3afromgroup_3acompletion_3a',['muteMembers:muteMilliseconds:fromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#afa6edc4f523b00559026f42a303effed',1,'IEMGroupManager-p']]],
+  ['mutemembers_3amutemilliseconds_3afromgroup_3aerror_3a',['muteMembers:muteMilliseconds:fromGroup:error:',['../protocol_i_e_m_group_manager-p.html#a859c0b392ee4064c036c4686946054ed',1,'IEMGroupManager-p']]]
 ];

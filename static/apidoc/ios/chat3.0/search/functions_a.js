@@ -1,10 +1,10 @@
 var searchData=
 [
   ['lastreceivedmessage',['lastReceivedMessage',['../interface_e_m_conversation.html#a7883f84d016394fd0a0454a5a89ff31a',1,'EMConversation']]],
-  ['leavechatroom_3acompletion_3a',['leaveChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a10d54ffc97ffaf71728348d6abc023c3',1,'IEMChatroomManager-p']]],
-  ['leavechatroom_3aerror_3a',['leaveChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a7b8a4a9d3627a3070569b50ba78125e7',1,'IEMChatroomManager-p']]],
-  ['leavegroup_3acompletion_3a',['leaveGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a52684e4d621341233dffebc1442f209d',1,'IEMGroupManager-p']]],
-  ['leavegroup_3aerror_3a',['leaveGroup:error:',['../protocol_i_e_m_group_manager-p.html#a7ddf033ceaa8bbe34d53f6904f22ab5f',1,'IEMGroupManager-p']]],
+  ['leavechatroom_3acompletion_3a',['leaveChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a765bf3daf720915e4b05f832afa02599',1,'IEMChatroomManager-p']]],
+  ['leavechatroom_3aerror_3a',['leaveChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a808ca10bcc4703c509262f1c6a1ddf85',1,'IEMChatroomManager-p']]],
+  ['leavegroup_3acompletion_3a',['leaveGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a769d89db94ec2fc1f164b05e472ed49d',1,'IEMGroupManager-p']]],
+  ['leavegroup_3aerror_3a',['leaveGroup:error:',['../protocol_i_e_m_group_manager-p.html#ab98f124b692684740689e394cb04c1a5',1,'IEMGroupManager-p']]],
   ['loadmessagesfrom_3ato_3acount_3acompletion_3a',['loadMessagesFrom:to:count:completion:',['../interface_e_m_conversation.html#af828dc2e31279d6aeea690d3d38eaa8b',1,'EMConversation']]],
   ['loadmessagesstartfromid_3acount_3asearchdirection_3acompletion_3a',['loadMessagesStartFromId:count:searchDirection:completion:',['../interface_e_m_conversation.html#a8fc508ae3f4aa3e307aede90809b1f63',1,'EMConversation']]],
   ['loadmessageswithkeyword_3atimestamp_3acount_3afromuser_3asearchdirection_3acompletion_3a',['loadMessagesWithKeyword:timestamp:count:fromUser:searchDirection:completion:',['../interface_e_m_conversation.html#ae890a42aba6340a2b5e1e0b7e7322899',1,'EMConversation']]],

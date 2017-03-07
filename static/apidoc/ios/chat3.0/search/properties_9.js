@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['maxmemberscount',['maxMembersCount',['../interface_e_m_chatroom.html#ab9197745e7294cb713af232b4138fee6',1,'EMChatroom']]],
-  ['maxuserscount',['maxUsersCount',['../interface_e_m_group_options.html#a363499589cbb9040619c9a64c2ad27e9',1,'EMGroupOptions']]],
+  ['maxoccupantscount',['maxOccupantsCount',['../interface_e_m_chatroom.html#a1be7d7507769472b119c8c0c09bb2ba3',1,'EMChatroom']]],
+  ['maxuserscount',['maxUsersCount',['../interface_e_m_chatroom_options.html#a0440ab078134a82d3b503959f72bbc36',1,'EMChatroomOptions::maxUsersCount()'],['../interface_e_m_group_options.html#a363499589cbb9040619c9a64c2ad27e9',1,'EMGroupOptions::maxUsersCount()']]],
   ['maxvideoframerate',['maxVideoFrameRate',['../interface_e_m_call_options.html#a45f020f84b4513fdc0cb3f8a123fe678',1,'EMCallOptions']]],
   ['maxvideokbps',['maxVideoKbps',['../interface_e_m_call_options.html#a4130c8f7488d6d6f58c3783dc63be5fd',1,'EMCallOptions']]],
-  ['members',['members',['../interface_e_m_chatroom.html#a00a580cd7a2fa2a678ac2b57566fb835',1,'EMChatroom::members()'],['../interface_e_m_group.html#a100605134c905e8ba3b4a24436fc0158',1,'EMGroup::members()']]],
-  ['memberscount',['membersCount',['../interface_e_m_chatroom.html#a64cb7d675efe60e4b62f286cb29d1768',1,'EMChatroom::membersCount()'],['../interface_e_m_group.html#a85f2ea09936fc90d3c5f6f7723d69d3f',1,'EMGroup::membersCount()']]],
+  ['memberlist',['memberList',['../interface_e_m_chatroom.html#a34d173b5832db084d87cc79bc0056354',1,'EMChatroom::memberList()'],['../interface_e_m_group.html#a8b2008daad5e5dd62d95028efc69a18e',1,'EMGroup::memberList()']]],
   ['messageid',['messageId',['../interface_e_m_message.html#a3a85be4426c1f17888b8cb614c9e537c',1,'EMMessage']]],
-  ['minvideokbps',['minVideoKbps',['../interface_e_m_call_options.html#ae070e260597c913634a21c03aa31826a',1,'EMCallOptions']]]
+  ['minvideokbps',['minVideoKbps',['../interface_e_m_call_options.html#ae070e260597c913634a21c03aa31826a',1,'EMCallOptions']]],
+  ['mutelist',['muteList',['../interface_e_m_chatroom.html#a707571b53e6156c353f128109e76d733',1,'EMChatroom::muteList()'],['../interface_e_m_group.html#adbe83d0dd7bf3b5e863ec416a8c55869',1,'EMGroup::muteList()']]]
 ];

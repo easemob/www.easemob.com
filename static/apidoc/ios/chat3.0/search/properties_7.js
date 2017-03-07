@@ -11,6 +11,7 @@ var searchData=
   ['isdeletemessageswhenexitgroup',['isDeleteMessagesWhenExitGroup',['../interface_e_m_options.html#a87977ce6262723f66d75114c61dcf2c6',1,'EMOptions']]],
   ['isdeliveracked',['isDeliverAcked',['../interface_e_m_message.html#a94832d9030f11cac66e4c8e79db24585',1,'EMMessage']]],
   ['isfixedvideoresolution',['isFixedVideoResolution',['../interface_e_m_call_options.html#aecb79e3a01860936ba82b8cf29dce776',1,'EMCallOptions']]],
+  ['isinviteneedconfirm',['IsInviteNeedConfirm',['../interface_e_m_group_options.html#a8baa934d189fe8fa8564c22ffe9adee9',1,'EMGroupOptions']]],
   ['isloggedin',['isLoggedIn',['../interface_e_m_client.html#a980267158808e32dee8981bb854eb9d4',1,'EMClient']]],
   ['ispublic',['isPublic',['../interface_e_m_group.html#aed6396dd2c96945e01a3332241bff705',1,'EMGroup']]],
   ['ispushnotificationenabled',['isPushNotificationEnabled',['../interface_e_m_group.html#a8c91ccdda39b50b9c06a5fa5a3cfa3a8',1,'EMGroup']]],
