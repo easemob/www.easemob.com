@@ -2,6 +2,7 @@ var searchData=
 [
   ['importmessages',['importMessages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#abdd3cb234efac3ecc74e1eabdd5c7a10',1,'com::hyphenate::chat::EMChatManager']]],
   ['init',['init',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a739c181ecd146af520cde6076e4b4de4',1,'com::hyphenate::chat::EMClient']]],
+  ['inputexternalvideodata',['inputExternalVideoData',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#a75c1911842e876ffe2cff7619072e7e1',1,'com::hyphenate::chat::EMCallManager']]],
   ['insertmessage',['insertMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a18e37861ae13ec85c881c267611e90fd',1,'com::hyphenate::chat::EMConversation']]],
   ['inviteuser',['inviteUser',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a64a9fbd9bbb9984bfdbcc583fdd5694a',1,'com::hyphenate::chat::EMGroupManager']]],
   ['isacked',['isAcked',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a814412b9cabc5ea0078f71d96395ad15',1,'com::hyphenate::chat::EMMessage']]],

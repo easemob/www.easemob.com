@@ -9,5 +9,7 @@ var searchData=
   ['message_5finvalid',['MESSAGE_INVALID',['../classcom_1_1hyphenate_1_1_e_m_error.html#afea45a5fbac3a4a40f3a2d24d092aecb',1,'com::hyphenate::EMError']]],
   ['message_5fsend_5ftraffic_5flimit',['MESSAGE_SEND_TRAFFIC_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a35cdce147efc8c840242791e6206d215',1,'com::hyphenate::EMError']]],
   ['messageencoder',['MessageEncoder',['../classcom_1_1hyphenate_1_1chat_1_1_message_encoder.html',1,'com::hyphenate::chat']]],
-  ['msgtype2conversationtype',['msgType2ConversationType',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a2af3c651b5402f316fea84d97bf5e1eb',1,'com::hyphenate::chat::EMConversation']]]
+  ['msgtype2conversationtype',['msgType2ConversationType',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a2af3c651b5402f316fea84d97bf5e1eb',1,'com::hyphenate::chat::EMConversation']]],
+  ['mutechatroommembers',['muteChatRoomMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a9085e1f9d988cccec5c8ecc7125babbf',1,'com::hyphenate::chat::EMChatRoomManager']]],
+  ['mutegroupmembers',['muteGroupMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a5a3abd57e52455ae68a1a5a5039862c3',1,'com::hyphenate::chat::EMGroupManager']]]
 ];

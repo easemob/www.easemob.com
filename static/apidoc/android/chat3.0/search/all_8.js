@@ -3,6 +3,7 @@ var searchData=
   ['idle',['IDLE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_state.html#ac30d2eccd755c7df4350ce8927cff5f9',1,'com::hyphenate::chat::EMCallStateChangeListener::CallState']]],
   ['importmessages',['importMessages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#abdd3cb234efac3ecc74e1eabdd5c7a10',1,'com::hyphenate::chat::EMChatManager']]],
   ['init',['init',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a739c181ecd146af520cde6076e4b4de4',1,'com::hyphenate::chat::EMClient']]],
+  ['inputexternalvideodata',['inputExternalVideoData',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#a75c1911842e876ffe2cff7619072e7e1',1,'com::hyphenate::chat::EMCallManager']]],
   ['insertmessage',['insertMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a18e37861ae13ec85c881c267611e90fd',1,'com::hyphenate::chat::EMConversation']]],
   ['invalid_5fapp_5fkey',['INVALID_APP_KEY',['../classcom_1_1hyphenate_1_1_e_m_error.html#a5198447a66a45c3a839ce4416ee6fec0',1,'com::hyphenate::EMError']]],
   ['invalid_5fpassword',['INVALID_PASSWORD',['../classcom_1_1hyphenate_1_1_e_m_error.html#a304984d1262c05bd8486c4889eee7088',1,'com::hyphenate::EMError']]],
