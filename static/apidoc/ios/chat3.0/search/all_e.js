@@ -9,5 +9,6 @@ var searchData=
   ['pausevoiceandvideotransfer_3a',['pauseVoiceAndVideoTransfer:',['../protocol_i_e_m_call_manager-p.html#a0a70fc56d97c9492738716f81df6bab4',1,'IEMCallManager-p']]],
   ['pausevoicetransfer_3a',['pauseVoiceTransfer:',['../protocol_i_e_m_call_manager-p.html#a336cbb8359c84c907421217dbf91049d',1,'IEMCallManager-p']]],
   ['pausevoicewithsession_3aerror_3a',['pauseVoiceWithSession:error:',['../protocol_i_e_m_call_manager-p.html#ab39eb7e74e28153b392590d6ae0c69df',1,'IEMCallManager-p']]],
+  ['permissiontype',['permissionType',['../interface_e_m_chatroom.html#a88c3a5ddde2cc67aad2bff7ad5c72fa0',1,'EMChatroom::permissionType()'],['../interface_e_m_group.html#aa2c03fbb097e27cd609e75d5e9843c33',1,'EMGroup::permissionType()']]],
   ['pushoptions',['pushOptions',['../interface_e_m_client.html#a4dd459e3f06535ef62f38f53769333ed',1,'EMClient']]]
 ];
