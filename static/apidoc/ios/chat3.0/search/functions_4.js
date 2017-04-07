@@ -58,7 +58,6 @@ var searchData=
   ['didreceiveuserleavedchatroom_3ausername_3a',['didReceiveUserLeavedChatroom:username:',['../protocol_e_m_chatroom_manager_delegate-p.html#a90272e47c0c125aa61b04daf69648700',1,'EMChatroomManagerDelegate-p']]],
   ['didupdateconversationlist_3a',['didUpdateConversationList:',['../protocol_e_m_chat_manager_delegate-p.html#aa82e64b787264af49265e11d7054e4ba',1,'EMChatManagerDelegate-p']]],
   ['didupdategrouplist_3a',['didUpdateGroupList:',['../protocol_e_m_group_manager_delegate-p.html#a48920c8af6220d1af47786ae300b2998',1,'EMGroupManagerDelegate-p']]],
-  ['displayyuv420pdata_3awidth_3aheight_3a',['displayYUV420pData:width:height:',['../interface_open_g_l_view20.html#ac841f004f80fdf266454a52d7e992254',1,'OpenGLView20']]],
   ['downloadmessageattachment_3aprogress_3acompletion_3a',['downloadMessageAttachment:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#ab44bd10f0939fe32546eadf44ebc1e7a',1,'IEMChatManager-p']]],
   ['downloadmessagethumbnail_3aprogress_3acompletion_3a',['downloadMessageThumbnail:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#aed8564ecd04bee034e9d1bcd98ea5435',1,'IEMChatManager-p']]]
 ];

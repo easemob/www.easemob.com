@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateSDK
-   &#160;<span id="projectnumber">3.3.0</span>
+   &#160;<span id="projectnumber">3.3.1</span>
    </div>
   </td>
  </tr>
@@ -120,6 +120,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:a586c4bdeb649055886c25603125072fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd44fd9ae24b755ea3530f7dfe1ebde8"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#afd44fd9ae24b755ea3530f7dfe1ebde8">loginWithUsername:password:completion:</a></td></tr>
 <tr class="separator:afd44fd9ae24b755ea3530f7dfe1ebde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62591a617466e14b6872b055fa35ae50"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_e_m_error.html">EMError</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#a62591a617466e14b6872b055fa35ae50">loginWithUsername:token:</a></td></tr>
+<tr class="separator:a62591a617466e14b6872b055fa35ae50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0dbe412ac33266568aaf330761f9c65"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#af0dbe412ac33266568aaf330761f9c65">loginWithUsername:token:completion:</a></td></tr>
+<tr class="separator:af0dbe412ac33266568aaf330761f9c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7acc0965e91540b699b671c5a0118aba"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_e_m_error.html">EMError</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#a7acc0965e91540b699b671c5a0118aba">logout:</a></td></tr>
 <tr class="separator:a7acc0965e91540b699b671c5a0118aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8424275b570a327b81f68a6ae94e2b27"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#a8424275b570a327b81f68a6ae94e2b27">logout:completion:</a></td></tr>
@@ -881,7 +885,7 @@ Protected 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>登录</p>
+<p>密码登录</p>
 <p>同步方法，会阻塞当前线程</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -923,11 +927,88 @@ Protected 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>登录</p>
+<p>密码登录</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aUsername</td><td>用户名 </td></tr>
     <tr><td class="paramname">aPassword</td><td>密码 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>完成的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a62591a617466e14b6872b055fa35ae50"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_e_m_error.html">EMError</a> *) loginWithUsername: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aUsername</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">token:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aToken</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>token登录，不支持自动登录</p>
+<p>同步方法，会阻塞当前线程</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aUsername</td><td>用户名 </td></tr>
+    <tr><td class="paramname">aToken</td><td>Token</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>错误信息 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af0dbe412ac33266568aaf330761f9c65"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) loginWithUsername: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aUsername</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">token:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aToken</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSString *aUsername, <a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>token登录，不支持自动登录</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aUsername</td><td>用户名 </td></tr>
+    <tr><td class="paramname">aToken</td><td>Token </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>完成的回调 </td></tr>
   </table>
   </dd>
@@ -1561,7 +1642,7 @@ Protected 属性</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>export/include/<a class="el" href="_e_m_client_8h_source.html">EMClient.h</a></li>
+<li>HyphenateFullSDK/Hyphenate.framework/Headers/<a class="el" href="_e_m_client_8h_source.html">EMClient.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

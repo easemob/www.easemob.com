@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateSDK
-   &#160;<span id="projectnumber">3.3.0</span>
+   &#160;<span id="projectnumber">3.3.1</span>
    </div>
   </td>
  </tr>
@@ -131,6 +131,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:a0b455e095f060989107ecabe7b204481"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf3845ae489248ec330bbb1d84e8ad7e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_group_manager_delegate-p.html#aaf3845ae489248ec330bbb1d84e8ad7e">groupOwnerDidUpdate:newOwner:oldOwner:</a></td></tr>
 <tr class="separator:aaf3845ae489248ec330bbb1d84e8ad7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27875c06d09e3ccc46200f9baf433c7e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_group_manager_delegate-p.html#a27875c06d09e3ccc46200f9baf433c7e">userDidJoinGroup:user:</a></td></tr>
+<tr class="separator:a27875c06d09e3ccc46200f9baf433c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea896601e1aa54defdcee40035c96d7"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_group_manager_delegate-p.html#acea896601e1aa54defdcee40035c96d7">userDidLeaveGroup:user:</a></td></tr>
+<tr class="separator:acea896601e1aa54defdcee40035c96d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a687d4a0b6fc5ef907ab2715cf7b6ec00"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_group_manager_delegate-p.html#a687d4a0b6fc5ef907ab2715cf7b6ec00">didReceiveGroupInvitation:inviter:message:</a></td></tr>
 <tr class="separator:a687d4a0b6fc5ef907ab2715cf7b6ec00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2d82aa8459b16b28c523f20435d7a78"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_group_manager_delegate-p.html#ab2d82aa8459b16b28c523f20435d7a78">didReceiveAcceptedGroupInvitation:invitee:</a></td></tr>
@@ -1145,8 +1149,92 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 
 </div>
 </div>
+<a class="anchor" id="a27875c06d09e3ccc46200f9baf433c7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) userDidJoinGroup: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_group.html">EMGroup</a> *)&#160;</td>
+          <td class="paramname"><em>aGroup</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">user:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aUsername</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>有用户加入群组</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aGroup</td><td>加入的群组 </td></tr>
+    <tr><td class="paramname">aUsername</td><td>加入者 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acea896601e1aa54defdcee40035c96d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) userDidLeaveGroup: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_group.html">EMGroup</a> *)&#160;</td>
+          <td class="paramname"><em>aGroup</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">user:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aUsername</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>有用户离开群组</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aGroup</td><td>离开的群组 </td></tr>
+    <tr><td class="paramname">aUsername</td><td>离开者 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>该协议的文档由以下文件生成:<ul>
-<li>export/include/<a class="el" href="_e_m_group_manager_delegate_8h_source.html">EMGroupManagerDelegate.h</a></li>
+<li>HyphenateFullSDK/Hyphenate.framework/Headers/<a class="el" href="_e_m_group_manager_delegate_8h_source.html">EMGroupManagerDelegate.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

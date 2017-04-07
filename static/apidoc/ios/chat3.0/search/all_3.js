@@ -21,7 +21,6 @@ var searchData=
   ['chatroomwithid_3a',['chatroomWithId:',['../interface_e_m_chatroom.html#a47814fcec0824c7417ed3f69202f4aec',1,'EMChatroom']]],
   ['chatserver',['chatServer',['../category_e_m_options_07_private_deploy_08.html#a48eef5818d35875db7aefa7cb6991c97',1,'EMOptions(PrivateDeploy)::chatServer()'],['../interface_e_m_options.html#a48eef5818d35875db7aefa7cb6991c97',1,'EMOptions::chatServer()']]],
   ['chattype',['chatType',['../interface_e_m_message.html#aab839095b6ca5d54ba48a4fa18342b34',1,'EMMessage']]],
-  ['clearframe',['clearFrame',['../interface_open_g_l_view20.html#a737bf7ddf15bf9841fa49c96c1bd64f4',1,'OpenGLView20']]],
   ['cmdmessagesdidreceive_3a',['cmdMessagesDidReceive:',['../protocol_e_m_chat_manager_delegate-p.html#aa053cba8206700f0635fa3db310a8717',1,'EMChatManagerDelegate-p']]],
   ['code',['code',['../interface_e_m_error.html#a1afcdf4484d6ac443e76e4b360c02969',1,'EMError']]],
   ['compressionratio',['compressionRatio',['../interface_e_m_image_message_body.html#a7fc65f5be4541b987b8129d028b0cebd',1,'EMImageMessageBody']]],
