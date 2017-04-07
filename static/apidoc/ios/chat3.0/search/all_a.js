@@ -27,6 +27,8 @@ var searchData=
   ['localvideoview',['localVideoView',['../interface_e_m_call_session.html#ab02fa44d0b21065a3cf0ed2e83af33c6',1,'EMCallSession']]],
   ['loginwithusername_3apassword_3a',['loginWithUsername:password:',['../interface_e_m_client.html#a586c4bdeb649055886c25603125072fe',1,'EMClient']]],
   ['loginwithusername_3apassword_3acompletion_3a',['loginWithUsername:password:completion:',['../interface_e_m_client.html#afd44fd9ae24b755ea3530f7dfe1ebde8',1,'EMClient']]],
+  ['loginwithusername_3atoken_3a',['loginWithUsername:token:',['../interface_e_m_client.html#a62591a617466e14b6872b055fa35ae50',1,'EMClient']]],
+  ['loginwithusername_3atoken_3acompletion_3a',['loginWithUsername:token:completion:',['../interface_e_m_client.html#af0dbe412ac33266568aaf330761f9c65',1,'EMClient']]],
   ['loglevel',['logLevel',['../interface_e_m_options.html#a0532bf2756002f639f403bed4c8a589e',1,'EMOptions']]],
   ['logout_3a',['logout:',['../interface_e_m_client.html#a7acc0965e91540b699b671c5a0118aba',1,'EMClient']]],
   ['logout_3acompletion_3a',['logout:completion:',['../interface_e_m_client.html#a8424275b570a327b81f68a6ae94e2b27',1,'EMClient']]],

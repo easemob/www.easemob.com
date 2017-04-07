@@ -14,7 +14,6 @@ var searchData=
   ['chatroommutelistdidupdate_3aremovedmutedmembers_3a',['chatroomMuteListDidUpdate:removedMutedMembers:',['../protocol_e_m_chatroom_manager_delegate-p.html#a5b78413a4218d21a9e1e620818c394a5',1,'EMChatroomManagerDelegate-p']]],
   ['chatroomownerdidupdate_3anewowner_3aoldowner_3a',['chatroomOwnerDidUpdate:newOwner:oldOwner:',['../protocol_e_m_chatroom_manager_delegate-p.html#ad467f8c97a579beac4d77eee76065b95',1,'EMChatroomManagerDelegate-p']]],
   ['chatroomwithid_3a',['chatroomWithId:',['../interface_e_m_chatroom.html#a47814fcec0824c7417ed3f69202f4aec',1,'EMChatroom']]],
-  ['clearframe',['clearFrame',['../interface_open_g_l_view20.html#a737bf7ddf15bf9841fa49c96c1bd64f4',1,'OpenGLView20']]],
   ['cmdmessagesdidreceive_3a',['cmdMessagesDidReceive:',['../protocol_e_m_chat_manager_delegate-p.html#aa053cba8206700f0635fa3db310a8717',1,'EMChatManagerDelegate-p']]],
   ['connectionstatedidchange_3a',['connectionStateDidChange:',['../protocol_e_m_client_delegate-p.html#adf175d117ada98617c054bacf4c11dcb',1,'EMClientDelegate-p']]],
   ['conversationlistdidupdate_3a',['conversationListDidUpdate:',['../protocol_e_m_chat_manager_delegate-p.html#a32d53c14b6d26041120ba521fef6e2f5',1,'EMChatManagerDelegate-p']]],
