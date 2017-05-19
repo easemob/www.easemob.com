@@ -14,7 +14,7 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../index.html">HyphenateSDK </a>
+				<a href="../index.html">Hyphenate </a>
 			</h1>
 
 			<p id="developer-home">
@@ -63,6 +63,14 @@
 		<option value="//api/name/autoLoginDidCompleteWithError:">- autoLoginDidCompleteWithError:</option>
 		
 		<option value="//api/name/connectionStateDidChange:">- connectionStateDidChange:</option>
+		
+		<option value="//api/name/didAutoLoginWithError:">- didAutoLoginWithError:</option>
+		
+		<option value="//api/name/didConnectionStateChanged:">- didConnectionStateChanged:</option>
+		
+		<option value="//api/name/didLoginFromOtherDevice">- didLoginFromOtherDevice</option>
+		
+		<option value="//api/name/didRemovedFromServer">- didRemovedFromServer</option>
 		
 		<option value="//api/name/userAccountDidLoginFromOtherDevice">- userAccountDidLoginFromOtherDevice</option>
 		
@@ -367,6 +375,218 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/didConnectionStateChanged:" title="didConnectionStateChanged:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didConnectionStateChanged:">&ndash;&nbsp;didConnectionStateChanged:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Connection to the server status changes will receive the callback</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didConnectionStateChanged:(EMConnectionState)<em>aConnectionState</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aConnectionState</code></th>
+						<td><p>Current state</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Connection to the server status changes will receive the callback</p>
+
+<p>calling the method causes:
+1. After successful login, the phone can not access
+2. After a successful login, network status change</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClientDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didAutoLoginWithError:" title="didAutoLoginWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didAutoLoginWithError:">&ndash;&nbsp;didAutoLoginWithError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Callback Automatic login fails</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didAutoLoginWithError:(EMError *)<em>aError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Callback Automatic login fails</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClientDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didLoginFromOtherDevice" title="didLoginFromOtherDevice"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didLoginFromOtherDevice">&ndash;&nbsp;didLoginFromOtherDevice</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Will receive this callback when current account login from other device</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didLoginFromOtherDevice</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Will receive this callback when current account login from other device</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClientDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didRemovedFromServer" title="didRemovedFromServer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didRemovedFromServer">&ndash;&nbsp;didRemovedFromServer</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Current login account will receive the callback is deleted from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)didRemovedFromServer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Current login account will receive the callback is deleted from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClientDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -382,7 +602,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-05-03</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

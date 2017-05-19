@@ -14,7 +14,7 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../index.html">HyphenateSDK </a>
+				<a href="../index.html">Hyphenate </a>
 			</h1>
 
 			<p id="developer-home">
@@ -74,15 +74,27 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/appendMessage:">- appendMessage:</option>
+		
 		<option value="//api/name/appendMessage:error:">- appendMessage:error:</option>
+		
+		<option value="//api/name/deleteAllMessages">- deleteAllMessages</option>
 		
 		<option value="//api/name/deleteAllMessages:">- deleteAllMessages:</option>
 		
+		<option value="//api/name/deleteMessageWithId:">- deleteMessageWithId:</option>
+		
 		<option value="//api/name/deleteMessageWithId:error:">- deleteMessageWithId:error:</option>
+		
+		<option value="//api/name/insertMessage:">- insertMessage:</option>
 		
 		<option value="//api/name/insertMessage:error:">- insertMessage:error:</option>
 		
 		<option value="//api/name/lastReceivedMessage">- lastReceivedMessage</option>
+		
+		<option value="//api/name/latestMessageFromOthers">- latestMessageFromOthers</option>
+		
+		<option value="//api/name/loadMessageWithId:">- loadMessageWithId:</option>
 		
 		<option value="//api/name/loadMessageWithId:error:">- loadMessageWithId:error:</option>
 		
@@ -94,9 +106,25 @@
 		
 		<option value="//api/name/loadMessagesWithType:timestamp:count:fromUser:searchDirection:completion:">- loadMessagesWithType:timestamp:count:fromUser:searchDirection:completion:</option>
 		
+		<option value="//api/name/loadMoreMessagesContain:before:limit:from:direction:">- loadMoreMessagesContain:before:limit:from:direction:</option>
+		
+		<option value="//api/name/loadMoreMessagesFrom:to:maxCount:">- loadMoreMessagesFrom:to:maxCount:</option>
+		
+		<option value="//api/name/loadMoreMessagesFromId:limit:direction:">- loadMoreMessagesFromId:limit:direction:</option>
+		
+		<option value="//api/name/loadMoreMessagesWithType:before:limit:from:direction:">- loadMoreMessagesWithType:before:limit:from:direction:</option>
+		
+		<option value="//api/name/markAllMessagesAsRead">- markAllMessagesAsRead</option>
+		
 		<option value="//api/name/markAllMessagesAsRead:">- markAllMessagesAsRead:</option>
 		
+		<option value="//api/name/markMessageAsReadWithId:">- markMessageAsReadWithId:</option>
+		
 		<option value="//api/name/markMessageAsReadWithId:error:">- markMessageAsReadWithId:error:</option>
+		
+		<option value="//api/name/updateConversationExtToDB">- updateConversationExtToDB</option>
+		
+		<option value="//api/name/updateMessage:">- updateMessage:</option>
 		
 		<option value="//api/name/updateMessageChange:error:">- updateMessageChange:error:</option>
 		
@@ -1033,11 +1061,6 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aCount</code></th>
-						<td><p>Count of messages to load</p></td>
-					</tr>
-				
-					<tr>
 						<th scope="row" class="argument-name"><code>aUsername</code></th>
 						<td><p>Message sender (optional)</p></td>
 					</tr>
@@ -1050,6 +1073,11 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
 						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aLimit</code></th>
+						<td><p>Count of messages to load</p></td>
 					</tr>
 				
 				</table>
@@ -1106,11 +1134,6 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aKeyword</code></th>
-						<td><p>Search content, will ignore it if it&rsquo;s empty</p></td>
-					</tr>
-				
-					<tr>
 						<th scope="row" class="argument-name"><code>aTimestamp</code></th>
 						<td><p>Reference timestamp</p></td>
 					</tr>
@@ -1133,6 +1156,11 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
 						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aKeywords</code></th>
+						<td><p>Search content, will ignore it if it&rsquo;s empty</p></td>
 					</tr>
 				
 				</table>
@@ -1236,6 +1264,900 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/insertMessage:" title="insertMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/insertMessage:">&ndash;&nbsp;insertMessage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Insert a message to a conversation. ConversationId of the message should be the same as <a href="#//api/name/conversationId">conversationId</a> of the conversation in order to insert the message into the conversation correctly.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)insertMessage:(EMMessage *)<em>aMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Message</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Message insert result, return YES or success, return No for failure.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Insert a message to a conversation. ConversationId of the message should be the same as <a href="#//api/name/conversationId">conversationId</a> of the conversation in order to insert the message into the conversation correctly.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/appendMessage:" title="appendMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/appendMessage:">&ndash;&nbsp;appendMessage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Insert a message to the tail of conversation, message&rsquo;s <a href="#//api/name/conversationId">conversationId</a> should equle to conversation&rsquo;s <a href="#//api/name/conversationId">conversationId</a>, message will be inserted to DB, and update conversation&rsquo;s property</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)appendMessage:(EMMessage *)<em>aMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Message</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Message insert result, YES: success, No: fail</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Insert a message to the tail of conversation, message&rsquo;s <a href="#//api/name/conversationId">conversationId</a> should equle to conversation&rsquo;s <a href="#//api/name/conversationId">conversationId</a>, message will be inserted to DB, and update conversation&rsquo;s property</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteMessageWithId:" title="deleteMessageWithId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteMessageWithId:">&ndash;&nbsp;deleteMessageWithId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delete a message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)deleteMessageWithId:(NSString *)<em>aMessageId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessageId</code></th>
+						<td><p>Message&rsquo;s ID who will be deleted</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Message delete result, YES: success, No: fail</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delete a message</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteAllMessages" title="deleteAllMessages"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteAllMessages">&ndash;&nbsp;deleteAllMessages</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delete all message of the conversation</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)deleteAllMessages</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Delete result, YES: success, No: fail</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delete all message of the conversation</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateMessage:" title="updateMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateMessage:">&ndash;&nbsp;updateMessage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update a message, can&rsquo;t update message&rsquo;s messageId, conversation&rsquo;s <a href="#//api/name/latestMessage">latestMessage</a> and so on properties will update after update the message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)updateMessage:(EMMessage *)<em>aMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Message</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Message update result, YES: success, No: fail</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Update a message, can&rsquo;t update message&rsquo;s messageId, conversation&rsquo;s <a href="#//api/name/latestMessage">latestMessage</a> and so on properties will update after update the message</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/markMessageAsReadWithId:" title="markMessageAsReadWithId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/markMessageAsReadWithId:">&ndash;&nbsp;markMessageAsReadWithId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Mark a message as read</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)markMessageAsReadWithId:(NSString *)<em>aMessageId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessageId</code></th>
+						<td><p>Message&rsquo;s ID who will be set read status</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Result of mark message as read, YES: success, No: fail</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Mark a message as read</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/markAllMessagesAsRead" title="markAllMessagesAsRead"></a>
+	<h3 class="method-title"><code><a href="#//api/name/markAllMessagesAsRead">&ndash;&nbsp;markAllMessagesAsRead</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Mark all message as read</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)markAllMessagesAsRead</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Result of mark all message as read, YES: success, No: fail</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Mark all message as read</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateConversationExtToDB" title="updateConversationExtToDB"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateConversationExtToDB">&ndash;&nbsp;updateConversationExtToDB</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update conversation extend properties to DB</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)updateConversationExtToDB</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Extend properties update result, YES: success, No: fail</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Update conversation extend properties to DB</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMessageWithId:" title="loadMessageWithId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMessageWithId:">&ndash;&nbsp;loadMessageWithId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get a message with the ID</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMMessage *)loadMessageWithId:(NSString *)<em>aMessageId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessageId</code></th>
+						<td><p>Message&rsquo;s id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Message instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get a message with the ID</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMoreMessagesFromId:limit:direction:" title="loadMoreMessagesFromId:limit:direction:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMoreMessagesFromId:limit:direction:">&ndash;&nbsp;loadMoreMessagesFromId:limit:direction:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get more messages from DB, result messages are sorted by receive time, and NOT include the reference message, if reference messag&rsquo;s ID is nil, will fetch message from latest message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)loadMoreMessagesFromId:(NSString *)<em>aMessageId</em> limit:(int)<em>aLimit</em> direction:(EMMessageSearchDirection)<em>aDirection</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessageId</code></th>
+						<td><p>Reference message&rsquo;s ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aLimit</code></th>
+						<td><p>Count of messages to load</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDirection</code></th>
+						<td><p>Message search direction</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Message list<a href="../Classes/EMMessage.html">EMMessage</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get more messages from DB, result messages are sorted by receive time, and NOT include the reference message, if reference messag&rsquo;s ID is nil, will fetch message from latest message</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMoreMessagesWithType:before:limit:from:direction:" title="loadMoreMessagesWithType:before:limit:from:direction:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMoreMessagesWithType:before:limit:from:direction:">&ndash;&nbsp;loadMoreMessagesWithType:before:limit:from:direction:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get more messages with specified <a href="#//api/name/type">type</a> from DB, result messages are sorted by received time, if reference timestamp is negative, will fetch message from latest message, andd will fetch all messages that meet the condition if aLimit is negative</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)loadMoreMessagesWithType:(EMMessageBodyType)<em>aType</em> before:(long long)<em>aTimestamp</em> limit:(int)<em>aLimit</em> from:(NSString *)<em>aSender</em> direction:(EMMessageSearchDirection)<em>aDirection</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aType</code></th>
+						<td><p>Message <a href="#//api/name/type">type</a> to load</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aTimestamp</code></th>
+						<td><p>Reference timestamp</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aLimit</code></th>
+						<td><p>Count of messages to load</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSender</code></th>
+						<td><p>Message sender, will ignore it if it&rsquo;s empty</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDirection</code></th>
+						<td><p>Message search direction</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Message list<a href="../Classes/EMMessage.html">EMMessage</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get more messages with specified <a href="#//api/name/type">type</a> from DB, result messages are sorted by received time, if reference timestamp is negative, will fetch message from latest message, andd will fetch all messages that meet the condition if aLimit is negative</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMoreMessagesContain:before:limit:from:direction:" title="loadMoreMessagesContain:before:limit:from:direction:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMoreMessagesContain:before:limit:from:direction:">&ndash;&nbsp;loadMoreMessagesContain:before:limit:from:direction:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get more messages contain specified keywords from DB, result messages are sorted by received time, if reference timestamp is negative, will fetch message from latest message, andd will fetch all messages that meet the condition if aLimit is negative</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)loadMoreMessagesContain:(NSString *)<em>aKeywords</em> before:(long long)<em>aTimestamp</em> limit:(int)<em>aLimit</em> from:(NSString *)<em>aSender</em> direction:(EMMessageSearchDirection)<em>aDirection</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aKeywords</code></th>
+						<td><p>Search content, will ignore it if it&rsquo;s empty</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aTimestamp</code></th>
+						<td><p>Reference timestamp</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aLimit</code></th>
+						<td><p>Count of messages to load</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSender</code></th>
+						<td><p>Message sender, will ignore it if it&rsquo;s empty</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDirection</code></th>
+						<td><p>Message search direction</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Message list<a href="../Classes/EMMessage.html">EMMessage</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get more messages contain specified keywords from DB, result messages are sorted by received time, if reference timestamp is negative, will fetch message from latest message, andd will fetch all messages that meet the condition if aLimit is negative</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMoreMessagesFrom:to:maxCount:" title="loadMoreMessagesFrom:to:maxCount:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMoreMessagesFrom:to:maxCount:">&ndash;&nbsp;loadMoreMessagesFrom:to:maxCount:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Load messages from DB in duration, result messages are sorted by receive time, user should limit the max count to load to avoid memory issue</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)loadMoreMessagesFrom:(long long)<em>aStartTimestamp</em> to:(long long)<em>aEndTimestamp</em> maxCount:(int)<em>aMaxCount</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aStartTimestamp</code></th>
+						<td><p>Start time&rsquo;s timestamp in miliseconds</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aEndTimestamp</code></th>
+						<td><p>End time&rsquo;s timestamp in miliseconds</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMaxCount</code></th>
+						<td><p>Message search direction</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Message list<a href="../Classes/EMMessage.html">EMMessage</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Load messages from DB in duration, result messages are sorted by receive time, user should limit the max count to load to avoid memory issue</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/latestMessageFromOthers" title="latestMessageFromOthers"></a>
+	<h3 class="method-title"><code><a href="#//api/name/latestMessageFromOthers">&ndash;&nbsp;latestMessageFromOthers</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get latest message that received from others</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMMessage *)latestMessageFromOthers</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Message instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get latest message that received from others</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -1251,7 +2173,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-05-03</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
