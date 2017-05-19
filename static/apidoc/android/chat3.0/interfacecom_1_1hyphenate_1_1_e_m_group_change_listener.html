@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">hyphenate_SDK3.0
-   &#160;<span id="projectnumber">3.3.0</span>
+   &#160;<span id="projectnumber">3.3.2</span>
    </div>
    <div id="projectbrief">hyphenatejavaIMSDK</div>
   </td>
@@ -127,6 +127,16 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a832ee57525f60186106a96c7aeee7577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0abd1880b53d45959aa50884cc9fd420"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a0abd1880b53d45959aa50884cc9fd420">onOwnerChanged</a> (String groupId, String newOwner, String oldOwner)</td></tr>
 <tr class="separator:a0abd1880b53d45959aa50884cc9fd420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae56739e02abf221fa513524232b6e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a3ae56739e02abf221fa513524232b6e1">onMemberJoined</a> (final String groupId, final String member)</td></tr>
+<tr class="separator:a3ae56739e02abf221fa513524232b6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4029cc87388cb50e21cafd2154819595"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a4029cc87388cb50e21cafd2154819595">onMemberExited</a> (final String groupId, final String member)</td></tr>
+<tr class="separator:a4029cc87388cb50e21cafd2154819595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25cfb3e6922a02f16788c69673a47c79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a25cfb3e6922a02f16788c69673a47c79">onAnnouncementChanged</a> (String groupId, String announcement)</td></tr>
+<tr class="separator:a25cfb3e6922a02f16788c69673a47c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b5c51faf87436d54a84cd7394abea9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a44b5c51faf87436d54a84cd7394abea9">onSharedFileAdded</a> (String groupId, <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_muc_shared_file.html">EMMucSharedFile</a> sharedFile)</td></tr>
+<tr class="separator:a44b5c51faf87436d54a84cd7394abea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad9148480725369c1417c92691b07f55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#aad9148480725369c1417c92691b07f55">onSharedFileDeleted</a> (String groupId, String fileId)</td></tr>
+<tr class="separator:aad9148480725369c1417c92691b07f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>群组相关的监听器，侦听群组相关的事件，例如加群申请，希望加入某个群，这个群的群主同意或者拒绝，被踢群等事件。 </p>
@@ -193,6 +203,39 @@ Public 成员函数</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">groupId</td><td>取消管理员权限事件发生的群id </td></tr>
     <tr><td class="paramname">administrator</td><td>被取消管理员权限的成员 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a25cfb3e6922a02f16788c69673a47c79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.EMGroupChangeListener.onAnnouncementChanged </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>groupId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>announcement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>群公告更改事件 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
+    <tr><td class="paramname">announcement</td><td>更新的公告内容 </td></tr>
   </table>
   </dd>
 </dl>
@@ -394,6 +437,74 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">groupName</td><td>要加入的群的名称 </td></tr>
     <tr><td class="paramname">inviter</td><td>邀请人的id </td></tr>
     <tr><td class="paramname">reason</td><td>邀请加入的reason </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4029cc87388cb50e21cafd2154819595"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.EMGroupChangeListener.onMemberExited </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>groupId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>member</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>群组成员主动退出事件</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
+    <tr><td class="paramname">member</td><td>退出的成员的id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3ae56739e02abf221fa513524232b6e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.EMGroupChangeListener.onMemberJoined </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>groupId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>member</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>群组加入新成员事件</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
+    <tr><td class="paramname">member</td><td>新成员id </td></tr>
   </table>
   </dd>
 </dl>
@@ -650,6 +761,72 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a44b5c51faf87436d54a84cd7394abea9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.EMGroupChangeListener.onSharedFileAdded </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>groupId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_muc_shared_file.html">EMMucSharedFile</a>&#160;</td>
+          <td class="paramname"><em>sharedFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>群组增加共享文件事件 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
+    <tr><td class="paramname">sharedFile</td><td>增加的文件 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aad9148480725369c1417c92691b07f55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.EMGroupChangeListener.onSharedFileDeleted </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>groupId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>fileId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>群组删除共享文件事件 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
+    <tr><td class="paramname">fileId</td><td>删除文件的id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a384a1449894868434c842652d50e2382"></a>
 <div class="memitem">
 <div class="memproto">
@@ -689,7 +866,7 @@ Public 成员函数</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2017年 三月 7日 星期二 19:48:30 , 为 hyphenate_SDK3.0使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2017年 五月 18日 星期四 19:20:43 , 为 hyphenate_SDK3.0使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
