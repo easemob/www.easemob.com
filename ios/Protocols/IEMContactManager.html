@@ -14,7 +14,7 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../index.html">HyphenateSDK </a>
+				<a href="../index.html">Hyphenate </a>
 			</h1>
 
 			<p id="developer-home">
@@ -60,6 +60,10 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/acceptInvitationForUsername:">- acceptInvitationForUsername:</option>
+		
+		<option value="//api/name/addContact:message:">- addContact:message:</option>
+		
 		<option value="//api/name/addContact:message:completion:">- addContact:message:completion:</option>
 		
 		<option value="//api/name/addDelegate:">- addDelegate:</option>
@@ -68,23 +72,57 @@
 		
 		<option value="//api/name/addUserToBlackList:completion:">- addUserToBlackList:completion:</option>
 		
+		<option value="//api/name/addUserToBlackList:relationshipBoth:">- addUserToBlackList:relationshipBoth:</option>
+		
 		<option value="//api/name/approveFriendRequestFromUser:completion:">- approveFriendRequestFromUser:completion:</option>
+		
+		<option value="//api/name/asyncAcceptInvitationForUsername:success:failure:">- asyncAcceptInvitationForUsername:success:failure:</option>
+		
+		<option value="//api/name/asyncAddContact:message:success:failure:">- asyncAddContact:message:success:failure:</option>
+		
+		<option value="//api/name/asyncAddUserToBlackList:relationshipBoth:success:failure:">- asyncAddUserToBlackList:relationshipBoth:success:failure:</option>
+		
+		<option value="//api/name/asyncDeclineInvitationForUsername:success:failure:">- asyncDeclineInvitationForUsername:success:failure:</option>
+		
+		<option value="//api/name/asyncDeleteContact:success:failure:">- asyncDeleteContact:success:failure:</option>
+		
+		<option value="//api/name/asyncGetBlackListFromServer:failure:">- asyncGetBlackListFromServer:failure:</option>
+		
+		<option value="//api/name/asyncGetContactsFromServer:failure:">- asyncGetContactsFromServer:failure:</option>
+		
+		<option value="//api/name/asyncRemoveUserFromBlackList:success:failure:">- asyncRemoveUserFromBlackList:success:failure:</option>
 		
 		<option value="//api/name/declineFriendRequestFromUser:completion:">- declineFriendRequestFromUser:completion:</option>
 		
+		<option value="//api/name/declineInvitationForUsername:">- declineInvitationForUsername:</option>
+		
+		<option value="//api/name/deleteContact:">- deleteContact:</option>
+		
 		<option value="//api/name/deleteContact:completion:">- deleteContact:completion:</option>
+		
+		<option value="//api/name/deleteContact:isDeleteConversation:">- deleteContact:isDeleteConversation:</option>
 		
 		<option value="//api/name/deleteContact:isDeleteConversation:completion:">- deleteContact:isDeleteConversation:completion:</option>
 		
 		<option value="//api/name/getBlackList">- getBlackList</option>
 		
+		<option value="//api/name/getBlackListFromDB">- getBlackListFromDB</option>
+		
 		<option value="//api/name/getBlackListFromServerWithCompletion:">- getBlackListFromServerWithCompletion:</option>
+		
+		<option value="//api/name/getBlackListFromServerWithError:">- getBlackListFromServerWithError:</option>
 		
 		<option value="//api/name/getContacts">- getContacts</option>
 		
+		<option value="//api/name/getContactsFromDB">- getContactsFromDB</option>
+		
 		<option value="//api/name/getContactsFromServerWithCompletion:">- getContactsFromServerWithCompletion:</option>
 		
+		<option value="//api/name/getContactsFromServerWithError:">- getContactsFromServerWithError:</option>
+		
 		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+		<option value="//api/name/removeUserFromBlackList:">- removeUserFromBlackList:</option>
 		
 		<option value="//api/name/removeUserFromBlackList:completion:">- removeUserFromBlackList:completion:</option>
 		
@@ -170,64 +208,6 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>aQueue</code></th>
 						<td><p>The queue of call delegate method</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add delegate</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Add delegate</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;EMContactManagerDelegate&gt;)<em>aDelegate</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aDelegate</code></th>
-						<td><p>Delegate</p></td>
 					</tr>
 				
 				</table>
@@ -402,6 +382,545 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Get the blacklist of blocked users</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getContactsFromServerWithError:" title="getContactsFromServerWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getContactsFromServerWithError:">&ndash;&nbsp;getContactsFromServerWithError:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all the contacts from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getContactsFromServerWithError:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Contact list<NSString></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all the contacts from the server</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addContact:message:" title="addContact:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addContact:message:">&ndash;&nbsp;addContact:message:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a contact with invitation message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)addContact:(NSString *)<em>aUsername</em> message:(NSString *)<em>aMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The user to add</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Invitation message</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add a contact with invitation message</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteContact:isDeleteConversation:" title="deleteContact:isDeleteConversation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteContact:isDeleteConversation:">&ndash;&nbsp;deleteContact:isDeleteConversation:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delete a contact</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)deleteContact:(NSString *)<em>aUsername</em> isDeleteConversation:(BOOL)<em>aIsDeleteConversation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The user to delete</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIsDeleteConversation</code></th>
+						<td><p>Delete the conversation or not</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delete a contact</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getBlackListFromServerWithError:" title="getBlackListFromServerWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getBlackListFromServerWithError:">&ndash;&nbsp;getBlackListFromServerWithError:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the blacklist from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getBlackListFromServerWithError:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Blacklist<NSString></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the blacklist from the server</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addUserToBlackList:relationshipBoth:" title="addUserToBlackList:relationshipBoth:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addUserToBlackList:relationshipBoth:">&ndash;&nbsp;addUserToBlackList:relationshipBoth:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a user to blacklist</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)addUserToBlackList:(NSString *)<em>aUsername</em> relationshipBoth:(BOOL)<em>aBoth</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Block user</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aBoth</code></th>
+						<td><p>if aBoth is YES, then hide user and block messages from blocked user; if NO, then hide user from blocked user</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add a user to blacklist</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeUserFromBlackList:" title="removeUserFromBlackList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeUserFromBlackList:">&ndash;&nbsp;removeUserFromBlackList:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove user out of blacklist</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)removeUserFromBlackList:(NSString *)<em>aUsername</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Unblock user</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove user out of blacklist</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acceptInvitationForUsername:" title="acceptInvitationForUsername:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acceptInvitationForUsername:">&ndash;&nbsp;acceptInvitationForUsername:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Accept a friend request</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)acceptInvitationForUsername:(NSString *)<em>aUsername</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>User who initiated the friend request</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Accept a friend request</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/declineInvitationForUsername:" title="declineInvitationForUsername:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/declineInvitationForUsername:">&ndash;&nbsp;declineInvitationForUsername:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decline a friend request</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)declineInvitationForUsername:(NSString *)<em>aUsername</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>User who initiated the friend request</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+
+<p>Please use the new method
+- (void)declineFriendRequestFromUser:(NSString <em>)aUsername
+completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">EMError</a> *aError))aCompletionBlock;</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Decline a friend request</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -923,6 +1442,367 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add delegate</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;EMContactManagerDelegate&gt;)<em>aDelegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDelegate</code></th>
+						<td><p>Delegate</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add delegate</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getContactsFromDB" title="getContactsFromDB"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getContactsFromDB">&ndash;&nbsp;getContactsFromDB</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all the friends from the DB</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getContactsFromDB</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Contact list<NSString></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all the friends from the DB</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getBlackListFromDB" title="getBlackListFromDB"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getBlackListFromDB">&ndash;&nbsp;getBlackListFromDB</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the blacklist from the DB</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getBlackListFromDB</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Blacklist<NSString></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the blacklist from the DB</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncGetContactsFromServer:failure:" title="asyncGetContactsFromServer:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncGetContactsFromServer:failure:">&ndash;&nbsp;asyncGetContactsFromServer:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all the friends from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncGetContactsFromServer:(void ( ^ ) ( NSArray *aList ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all the friends from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncAddContact:message:success:failure:" title="asyncAddContact:message:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncAddContact:message:success:failure:">&ndash;&nbsp;asyncAddContact:message:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a contact</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncAddContact:(NSString *)<em>aUsername</em> message:(NSString *)<em>aMessage</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The user to add</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Friend invitation message</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add a contact</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteContact:" title="deleteContact:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteContact:">&ndash;&nbsp;deleteContact:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delete a contact</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)deleteContact:(NSString *)<em>aUsername</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The user to delete</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delete a contact</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/deleteContact:completion:" title="deleteContact:completion:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/deleteContact:completion:">&ndash;&nbsp;deleteContact:completion:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -985,6 +1865,414 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncDeleteContact:success:failure:" title="asyncDeleteContact:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncDeleteContact:success:failure:">&ndash;&nbsp;asyncDeleteContact:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delete friend</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncDeleteContact:(NSString *)<em>aUsername</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The user to delete</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delete friend</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncGetBlackListFromServer:failure:" title="asyncGetBlackListFromServer:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncGetBlackListFromServer:failure:">&ndash;&nbsp;asyncGetBlackListFromServer:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the blacklist from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncGetBlackListFromServer:(void ( ^ ) ( NSArray *aList ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the blacklist from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncAddUserToBlackList:relationshipBoth:success:failure:" title="asyncAddUserToBlackList:relationshipBoth:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncAddUserToBlackList:relationshipBoth:success:failure:">&ndash;&nbsp;asyncAddUserToBlackList:relationshipBoth:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add user to blacklist</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncAddUserToBlackList:(NSString *)<em>aUsername</em> relationshipBoth:(BOOL)<em>aBoth</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The user to add</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aBoth</code></th>
+						<td><p>Whether block messages from me to the user which is added to the black list</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add user to blacklist</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncRemoveUserFromBlackList:success:failure:" title="asyncRemoveUserFromBlackList:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncRemoveUserFromBlackList:success:failure:">&ndash;&nbsp;asyncRemoveUserFromBlackList:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove user from blacklist</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncRemoveUserFromBlackList:(NSString *)<em>aUsername</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The user to remove from blacklist</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove user from blacklist</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncAcceptInvitationForUsername:success:failure:" title="asyncAcceptInvitationForUsername:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncAcceptInvitationForUsername:success:failure:">&ndash;&nbsp;asyncAcceptInvitationForUsername:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Agree invitation</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncAcceptInvitationForUsername:(NSString *)<em>aUsername</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Applicants</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Agree invitation</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncDeclineInvitationForUsername:success:failure:" title="asyncDeclineInvitationForUsername:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncDeclineInvitationForUsername:success:failure:">&ndash;&nbsp;asyncDeclineInvitationForUsername:success:failure:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decline invitation</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncDeclineInvitationForUsername:(NSString *)<em>aUsername</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Applicants</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Decline invitation</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -1000,7 +2288,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-05-03</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
