@@ -5,11 +5,13 @@ var searchData=
   ['decryptfile',['decryptFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_encrypt_utils.html#a5aaf1ba5fe1cf85f367be46066c3c453',1,'com::hyphenate::chat::EMEncryptUtils']]],
   ['deletecontact',['deleteContact',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#afc04729eb6d43609d05521c19c5450e0',1,'com.hyphenate.chat.EMContactManager.deleteContact(String username)'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a747189d70df66c5e46ac95d6533a3113',1,'com.hyphenate.chat.EMContactManager.deleteContact(String username, boolean keepConversation)']]],
   ['deleteconversation',['deleteConversation',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ae00d3eb41e070546b6b7dc1c3e0750c3',1,'com::hyphenate::chat::EMChatManager']]],
+  ['deletegroupsharedfile',['deleteGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#ab09213239c23e815d21d27a16ba8e970',1,'com::hyphenate::chat::EMGroupManager']]],
   ['destroychatroom',['destroyChatRoom',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a3fd3cf731688c16383100825bc6ee827',1,'com::hyphenate::chat::EMChatRoomManager']]],
   ['destroygroup',['destroyGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a860a34ecd342b1e15d3e6be7e31879be',1,'com::hyphenate::chat::EMGroupManager']]],
   ['direct',['direct',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a63a9692bdcc9c7da476e42141c338c84',1,'com::hyphenate::chat::EMMessage']]],
   ['disableofflinepush',['disableOfflinePush',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a5eefa3153a879aec8482805c9617dce8',1,'com::hyphenate::chat::EMPushManager']]],
   ['downloadattachment',['downloadAttachment',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1a938a579e8e5e07518d1e5008f9241d',1,'com::hyphenate::chat::EMChatManager']]],
   ['downloadfile',['downloadFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#af39b20828a22e8a13ace18a8335ac50a',1,'com::hyphenate::chat::EMChatManager']]],
+  ['downloadgroupsharedfile',['downloadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a9f6c882d4a43ea0ff78bb5fb0c77ceea',1,'com::hyphenate::chat::EMGroupManager']]],
   ['downloadthumbnail',['downloadThumbnail',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4c4f426c7cb00d44fee5d550a7eea5ce',1,'com::hyphenate::chat::EMChatManager']]]
 ];

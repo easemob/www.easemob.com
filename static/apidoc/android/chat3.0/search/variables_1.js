@@ -1,5 +1,16 @@
 var searchData=
 [
+  ['call_5fbusy',['CALL_BUSY',['../classcom_1_1hyphenate_1_1_e_m_error.html#a731ae74e714320d3f8c7f8e74d623139',1,'com::hyphenate::EMError']]],
+  ['call_5fconnection_5ferror',['CALL_CONNECTION_ERROR',['../classcom_1_1hyphenate_1_1_e_m_error.html#abbe26c1e4db2866579644e81c81b83f9',1,'com::hyphenate::EMError']]],
+  ['call_5fcreate_5ffailed',['CALL_CREATE_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ad9def013a9dc428ab6f01e9b6971abb6',1,'com::hyphenate::EMError']]],
+  ['call_5finvalid_5fcamera_5findex',['CALL_INVALID_CAMERA_INDEX',['../classcom_1_1hyphenate_1_1_e_m_error.html#a748ae9c10bb497b948f098c5f8b6e1b6',1,'com::hyphenate::EMError']]],
+  ['call_5finvalid_5fid',['CALL_INVALID_ID',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac50f7129be47797ab0790fa19a81bdb0',1,'com::hyphenate::EMError']]],
+  ['call_5fjoin_5ffailed',['CALL_JOIN_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#acb4548911982d52586d1547e2915863b',1,'com::hyphenate::EMError']]],
+  ['call_5fnot_5fjoined',['CALL_NOT_JOINED',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa715ccb498d951e436641a5ccbf6e7de',1,'com::hyphenate::EMError']]],
+  ['call_5foperation_5fcancel',['CALL_OPERATION_CANCEL',['../classcom_1_1hyphenate_1_1_e_m_error.html#abecf2a7e64c23c261b2de1a5fc9bfbd5',1,'com::hyphenate::EMError']]],
+  ['call_5fpermission_5fdenied',['CALL_PERMISSION_DENIED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ab64ac6ce7e1321e9c5fbab4a62d3377d',1,'com::hyphenate::EMError']]],
+  ['call_5fremote_5foffline',['CALL_REMOTE_OFFLINE',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac7565a421d38ff81dd0ff0c1193de060',1,'com::hyphenate::EMError']]],
+  ['call_5funsub_5ffailed',['CALL_UNSUB_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a5fdff4fb23b8c1d9da7f391cfc08252b',1,'com::hyphenate::EMError']]],
   ['chat',['Chat',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#a160bb0aa31d02b25444da9b0eb83250c',1,'com::hyphenate::chat::EMMessage::ChatType']]],
   ['chatroom',['ChatRoom',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#a5a9b5032e0df84c52ff9ec94896c02e1',1,'com::hyphenate::chat::EMMessage::ChatType']]],
   ['chatroom_5falready_5fjoined',['CHATROOM_ALREADY_JOINED',['../classcom_1_1hyphenate_1_1_e_m_error.html#aba83ab09364eccc5e7ed5bd68eebc00a',1,'com::hyphenate::EMError']]],
