@@ -14,7 +14,7 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../index.html">HyphenateSDK </a>
+				<a href="../index.html">Hyphenate </a>
 			</h1>
 
 			<p id="developer-home">
@@ -104,11 +104,45 @@
 		
 		<option value="//api/name/applicationWillEnterForeground:">- applicationWillEnterForeground:</option>
 		
+		<option value="//api/name/asyncBindDeviceToken:success:failure:">- asyncBindDeviceToken:success:failure:</option>
+		
+		<option value="//api/name/asyncGetPushOptionsFromServer:failure:">- asyncGetPushOptionsFromServer:failure:</option>
+		
+		<option value="//api/name/asyncLoginWithUsername:password:success:failure:">- asyncLoginWithUsername:password:success:failure:</option>
+		
+		<option value="//api/name/asyncLogout:success:failure:">- asyncLogout:success:failure:</option>
+		
+		<option value="//api/name/asyncRegisterWithUsername:password:success:failure:">- asyncRegisterWithUsername:password:success:failure:</option>
+		
+		<option value="//api/name/asyncSetApnsNickname:success:failure:">- asyncSetApnsNickname:success:failure:</option>
+		
+		<option value="//api/name/asyncUpdatePushOptionsToServer:failure:">- asyncUpdatePushOptionsToServer:failure:</option>
+		
+		<option value="//api/name/asyncUploadLogToServer:failure:">- asyncUploadLogToServer:failure:</option>
+		
+		<option value="//api/name/bindDeviceToken:">- bindDeviceToken:</option>
+		
+		<option value="//api/name/dataMigrationTo3">- dataMigrationTo3</option>
+		
+		<option value="//api/name/getLogFilesPath:">- getLogFilesPath:</option>
+		
+		<option value="//api/name/getLogFilesPathWithCompletion:">- getLogFilesPathWithCompletion:</option>
+		
 		<option value="//api/name/getPushNotificationOptionsFromServerWithCompletion:">- getPushNotificationOptionsFromServerWithCompletion:</option>
+		
+		<option value="//api/name/getPushOptionsFromServerWithError:">- getPushOptionsFromServerWithError:</option>
 		
 		<option value="//api/name/initializeSDKWithOptions:">- initializeSDKWithOptions:</option>
 		
+		<option value="//api/name/loginWithUsername:password:">- loginWithUsername:password:</option>
+		
 		<option value="//api/name/loginWithUsername:password:completion:">- loginWithUsername:password:completion:</option>
+		
+		<option value="//api/name/loginWithUsername:token:">- loginWithUsername:token:</option>
+		
+		<option value="//api/name/loginWithUsername:token:completion:">- loginWithUsername:token:completion:</option>
+		
+		<option value="//api/name/logout:">- logout:</option>
 		
 		<option value="//api/name/logout:completion:">- logout:completion:</option>
 		
@@ -116,15 +150,23 @@
 		
 		<option value="//api/name/registerForRemoteNotificationsWithDeviceToken:completion:">- registerForRemoteNotificationsWithDeviceToken:completion:</option>
 		
+		<option value="//api/name/registerWithUsername:password:">- registerWithUsername:password:</option>
+		
 		<option value="//api/name/registerWithUsername:password:completion:">- registerWithUsername:password:completion:</option>
 		
 		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+		<option value="//api/name/setApnsNickname:">- setApnsNickname:</option>
 		
 		<option value="//api/name/updatePushNotifiationDisplayName:completion:">- updatePushNotifiationDisplayName:completion:</option>
 		
 		<option value="//api/name/updatePushNotificationOptionsToServerWithCompletion:">- updatePushNotificationOptionsToServerWithCompletion:</option>
 		
+		<option value="//api/name/updatePushOptionsToServer">- updatePushOptionsToServer</option>
+		
 		<option value="//api/name/uploadDebugLogToServerWithCompletion:">- uploadDebugLogToServerWithCompletion:</option>
+		
+		<option value="//api/name/uploadLogToServer">- uploadLogToServer</option>
 		
 	</optgroup>
 	
@@ -793,64 +835,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Add delegate</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;EMClientDelegate&gt;)<em>aDelegate</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aDelegate</code></th>
-						<td><p>Delegate</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add delegate</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EMClient.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/removeDelegate:" title="removeDelegate:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/removeDelegate:">&ndash;&nbsp;removeDelegate:</a></code>
 </h3>
@@ -972,6 +956,76 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/registerWithUsername:password:" title="registerWithUsername:password:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerWithUsername:password:">&ndash;&nbsp;registerWithUsername:password:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Register a new IM user</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)registerWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPassword</code></th>
+						<td><p>Password</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Register a new IM user</p>
+
+<p>To enhance the reliability, registering new IM user through REST API from backend is highly recommended</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/registerWithUsername:password:completion:" title="registerWithUsername:password:completion:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/registerWithUsername:password:completion:">&ndash;&nbsp;registerWithUsername:password:completion:</a></code>
 </h3>
@@ -1024,7 +1078,77 @@
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Register a new IM user</p>
 
-<p>To enhance the reliability, registering new IM user through REST API from backend is highly recommended</p>
+<p>To enhance the reliability, recommend register new IM user via backend using REST API</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loginWithUsername:password:" title="loginWithUsername:password:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loginWithUsername:password:">&ndash;&nbsp;loginWithUsername:password:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Login with password</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)loginWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPassword</code></th>
+						<td><p>Password</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Login with password</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -1053,7 +1177,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Login</p>
+				<p>Login with password</p>
 			</div>
 			
 		    
@@ -1092,7 +1216,210 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Login</p>
+				<p>Login with password</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loginWithUsername:token:" title="loginWithUsername:token:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loginWithUsername:token:">&ndash;&nbsp;loginWithUsername:token:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Login with token, does not support automatic login</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)loginWithUsername:(NSString *)<em>aUsername</em> token:(NSString *)<em>aToken</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aToken</code></th>
+						<td><p>Token</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Login with token, does not support automatic login</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loginWithUsername:token:completion:" title="loginWithUsername:token:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loginWithUsername:token:completion:">&ndash;&nbsp;loginWithUsername:token:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Login with token, does not support automatic login</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loginWithUsername:(NSString *)<em>aUsername</em> token:(NSString *)<em>aToken</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aToken</code></th>
+						<td><p>Token</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Login with token, does not support automatic login</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logout:" title="logout:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logout:">&ndash;&nbsp;logout:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Logout</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)logout:(BOOL)<em>aIsUnbindDeviceToken</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIsUnbindDeviceToken</code></th>
+						<td><p>Unbind device token to disable Apple Push Notification Service</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Logout</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -1173,6 +1500,71 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/bindDeviceToken:" title="bindDeviceToken:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bindDeviceToken:">&ndash;&nbsp;bindDeviceToken:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Device token binding is required for enabling Apple Push Notification Service</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)bindDeviceToken:(NSData *)<em>aDeviceToken</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDeviceToken</code></th>
+						<td><p>Device token to bind</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Device token binding is required for enabling Apple Push Notification Service</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/registerForRemoteNotificationsWithDeviceToken:completion:" title="registerForRemoteNotificationsWithDeviceToken:completion:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/registerForRemoteNotificationsWithDeviceToken:completion:">&ndash;&nbsp;registerForRemoteNotificationsWithDeviceToken:completion:</a></code>
 </h3>
@@ -1219,6 +1611,71 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Device token binding is required to enable Apple push notification service</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setApnsNickname:" title="setApnsNickname:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setApnsNickname:">&ndash;&nbsp;setApnsNickname:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set display name for Apple Push Notification message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)setApnsNickname:(NSString *)<em>aNickname</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aNickname</code></th>
+						<td><p>Display name</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Set display name for Apple Push Notification message</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -1299,6 +1756,71 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/getPushOptionsFromServerWithError:" title="getPushOptionsFromServerWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPushOptionsFromServerWithError:">&ndash;&nbsp;getPushOptionsFromServerWithError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get Apple Push Notification Service <a href="#//api/name/options">options</a> from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMPushOptions *)getPushOptionsFromServerWithError:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Apple Push Notification Service <a href="#//api/name/options">options</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get Apple Push Notification Service <a href="#//api/name/options">options</a> from the server</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/getPushNotificationOptionsFromServerWithCompletion:" title="getPushNotificationOptionsFromServerWithCompletion:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/getPushNotificationOptionsFromServerWithCompletion:">&ndash;&nbsp;getPushNotificationOptionsFromServerWithCompletion:</a></code>
 </h3>
@@ -1340,6 +1862,59 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Get Apple Push Notification Service <a href="#//api/name/options">options</a> from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updatePushOptionsToServer" title="updatePushOptionsToServer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updatePushOptionsToServer">&ndash;&nbsp;updatePushOptionsToServer</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update Apple Push Notification Service <a href="#//api/name/options">options</a> to the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)updatePushOptionsToServer</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Update Apple Push Notification Service <a href="#//api/name/options">options</a> to the server</p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -1415,6 +1990,59 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/uploadLogToServer" title="uploadLogToServer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/uploadLogToServer">&ndash;&nbsp;uploadLogToServer</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Upload debugging log to server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)uploadLogToServer</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Upload debugging log to server</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/uploadDebugLogToServerWithCompletion:" title="uploadDebugLogToServerWithCompletion:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/uploadDebugLogToServerWithCompletion:">&ndash;&nbsp;uploadDebugLogToServerWithCompletion:</a></code>
 </h3>
@@ -1473,6 +2101,129 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/getLogFilesPath:" title="getLogFilesPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getLogFilesPath:">&ndash;&nbsp;getLogFilesPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Compress the log file into a .gz file, return to the gz file path. It is strongly recommended that you remove the gz file after the method completes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getLogFilesPath:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>File path</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Compress the log file into a .gz file, return to the gz file path. It is strongly recommended that you remove the gz file after the method completes.</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getLogFilesPathWithCompletion:" title="getLogFilesPathWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getLogFilesPathWithCompletion:">&ndash;&nbsp;getLogFilesPathWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Compress the log file into a .gz file, return to the gz file path. It is strongly recommended that you remove the gz file after the method completes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getLogFilesPathWithCompletion:(void ( ^ ) ( NSString *aPath , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Compress the log file into a .gz file, return to the gz file path. It is strongly recommended that you remove the gz file after the method completes.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/migrateDatabaseToLatestSDK" title="migrateDatabaseToLatestSDK"></a>
 	<h3 class="method-title"><code><a href="#//api/name/migrateDatabaseToLatestSDK">&ndash;&nbsp;migrateDatabaseToLatestSDK</a></code>
 </h3>
@@ -1507,6 +2258,8 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Migrate the IM database to the latest SDK <a href="#//api/name/version">version</a></p>
+
+<p>Synchronization method will block the current thread</p>
 			</div>
 			
 
@@ -1702,6 +2455,655 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDelegate:" title="addDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add delegate</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addDelegate:(id&lt;EMClientDelegate&gt;)<em>aDelegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDelegate</code></th>
+						<td><p>Delegate</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add delegate</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncRegisterWithUsername:password:success:failure:" title="asyncRegisterWithUsername:password:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncRegisterWithUsername:password:success:failure:">&ndash;&nbsp;asyncRegisterWithUsername:password:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Register a new user</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncRegisterWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPassword</code></th>
+						<td><p>Password</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Register a new user</p>
+
+<p>To enhance the reliability, registering new IM user through REST API from backend is highly recommended</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncLoginWithUsername:password:success:failure:" title="asyncLoginWithUsername:password:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncLoginWithUsername:password:success:failure:">&ndash;&nbsp;asyncLoginWithUsername:password:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Login</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncLoginWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPassword</code></th>
+						<td><p>Password</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Login</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncLogout:success:failure:" title="asyncLogout:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncLogout:success:failure:">&ndash;&nbsp;asyncLogout:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Logout</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncLogout:(BOOL)<em>aIsUnbindDeviceToken</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIsUnbindDeviceToken</code></th>
+						<td><p>Unbind device token to disable the Apple Push Notification Service</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Logout</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncBindDeviceToken:success:failure:" title="asyncBindDeviceToken:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncBindDeviceToken:success:failure:">&ndash;&nbsp;asyncBindDeviceToken:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Bind device token</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncBindDeviceToken:(NSData *)<em>aDeviceToken</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDeviceToken</code></th>
+						<td><p>Device token to bind</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Bind device token</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncSetApnsNickname:success:failure:" title="asyncSetApnsNickname:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncSetApnsNickname:success:failure:">&ndash;&nbsp;asyncSetApnsNickname:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set display name for push notification</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncSetApnsNickname:(NSString *)<em>aNickname</em> success:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDisplayName</code></th>
+						<td><p>Push Notification display name</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Set display name for push notification</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncGetPushOptionsFromServer:failure:" title="asyncGetPushOptionsFromServer:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncGetPushOptionsFromServer:failure:">&ndash;&nbsp;asyncGetPushOptionsFromServer:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get apns <a href="#//api/name/options">options</a> from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncGetPushOptionsFromServer:(void ( ^ ) ( EMPushOptions *aOptions ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get apns <a href="#//api/name/options">options</a> from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncUpdatePushOptionsToServer:failure:" title="asyncUpdatePushOptionsToServer:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncUpdatePushOptionsToServer:failure:">&ndash;&nbsp;asyncUpdatePushOptionsToServer:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update APNS <a href="#//api/name/options">options</a> to the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncUpdatePushOptionsToServer:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Update APNS <a href="#//api/name/options">options</a> to the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncUploadLogToServer:failure:" title="asyncUploadLogToServer:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncUploadLogToServer:failure:">&ndash;&nbsp;asyncUploadLogToServer:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Upload log to server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncUploadLogToServer:(void ( ^ ) ( ))<em>aSuccessBlock</em> failure:(void ( ^ ) ( EMError *aError ))<em>aFailureBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
+						<td><p>The callback block of success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
+						<td><p>The callback block of failure</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Upload log to server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dataMigrationTo3" title="dataMigrationTo3"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataMigrationTo3">&ndash;&nbsp;dataMigrationTo3</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>iOS-specific, data migration to SDK3.0</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)dataMigrationTo3</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Whether migration successful</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>iOS-specific, data migration to SDK3.0</p>
+
+<p>Synchronization method will block the current thread</p>
+
+<p>It&rsquo;s needed to call this method when update to SDK3.0, developers need to wait this method complete before DB related operations</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -1771,7 +3173,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Hyphenate Inc. All rights reserved. Updated: 2016-12-08</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-05-03</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
