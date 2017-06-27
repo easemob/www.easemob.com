@@ -14,7 +14,7 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../index.html">Hyphenate </a>
+				<a href="../index.html">HyphenateSDK </a>
 			</h1>
 
 			<p id="developer-home">
@@ -94,6 +94,10 @@
 		
 		<option value="//api/name/getAllChatroomsFromServerWithError:">- getAllChatroomsFromServerWithError:</option>
 		
+		<option value="//api/name/getChatroomAnnouncementWithId:completion:">- getChatroomAnnouncementWithId:completion:</option>
+		
+		<option value="//api/name/getChatroomAnnouncementWithId:error:">- getChatroomAnnouncementWithId:error:</option>
+		
 		<option value="//api/name/getChatroomBlacklistFromServerWithId:pageNumber:pageSize:completion:">- getChatroomBlacklistFromServerWithId:pageNumber:pageSize:completion:</option>
 		
 		<option value="//api/name/getChatroomBlacklistFromServerWithId:pageNumber:pageSize:error:">- getChatroomBlacklistFromServerWithId:pageNumber:pageSize:error:</option>
@@ -145,6 +149,10 @@
 		<option value="//api/name/unmuteMembers:fromChatroom:completion:">- unmuteMembers:fromChatroom:completion:</option>
 		
 		<option value="//api/name/unmuteMembers:fromChatroom:error:">- unmuteMembers:fromChatroom:error:</option>
+		
+		<option value="//api/name/updateChatroomAnnouncementWithId:announcement:completion:">- updateChatroomAnnouncementWithId:announcement:completion:</option>
+		
+		<option value="//api/name/updateChatroomAnnouncementWithId:announcement:error:">- updateChatroomAnnouncementWithId:announcement:error:</option>
 		
 		<option value="//api/name/updateChatroomOwner:newOwner:completion:">- updateChatroomOwner:newOwner:completion:</option>
 		
@@ -1610,6 +1618,137 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/getChatroomAnnouncementWithId:error:" title="getChatroomAnnouncementWithId:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getChatroomAnnouncementWithId:error:">&ndash;&nbsp;getChatroomAnnouncementWithId:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the announcement of chatroom from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getChatroomAnnouncementWithId:(NSString *)<em>aChatroomId</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aChatroomId</code></th>
+						<td><p>Chatroom id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The announcement of chatroom</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the announcement of chatroom from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getChatroomAnnouncementWithId:completion:" title="getChatroomAnnouncementWithId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getChatroomAnnouncementWithId:completion:">&ndash;&nbsp;getChatroomAnnouncementWithId:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the announcement of chatroom from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getChatroomAnnouncementWithId:(NSString *)<em>aChatroomId</em> completion:(void ( ^ ) ( NSString *aAnnouncement , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aChatroomId</code></th>
+						<td><p>Chatroom id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the announcement of chatroom from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/updateSubject:forChatroom:error:" title="updateSubject:forChatroom:error:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/updateSubject:forChatroom:error:">&ndash;&nbsp;updateSubject:forChatroom:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -3054,6 +3193,149 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/updateChatroomAnnouncementWithId:announcement:error:" title="updateChatroomAnnouncementWithId:announcement:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateChatroomAnnouncementWithId:announcement:error:">&ndash;&nbsp;updateChatroomAnnouncementWithId:announcement:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Change the announcement of chatroom, need Owner / Admin permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMChatroom *)updateChatroomAnnouncementWithId:(NSString *)<em>aChatroomId</em> announcement:(NSString *)<em>aAnnouncement</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aChatroomId</code></th>
+						<td><p>Chatroom id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aAnnouncement</code></th>
+						<td><p>announcement of chatroom</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Chatroom instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Change the announcement of chatroom, need Owner / Admin permissions</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateChatroomAnnouncementWithId:announcement:completion:" title="updateChatroomAnnouncementWithId:announcement:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateChatroomAnnouncementWithId:announcement:completion:">&ndash;&nbsp;updateChatroomAnnouncementWithId:announcement:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Change the announcement of chatroom, need Owner / Admin permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateChatroomAnnouncementWithId:(NSString *)<em>aChatroomId</em> announcement:(NSString *)<em>aAnnouncement</em> completion:(void ( ^ ) ( EMChatroom *aChatroom , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aChatroomId</code></th>
+						<td><p>Chatroom id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aAnnouncement</code></th>
+						<td><p>announcement of chatroom</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Change the announcement of chatroom, need Owner / Admin permissions</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatroomManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/fetchChatroomInfo:includeMembersList:error:" title="fetchChatroomInfo:includeMembersList:error:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/fetchChatroomInfo:includeMembersList:error:">&ndash;&nbsp;fetchChatroomInfo:includeMembersList:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -3669,7 +3951,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-05-03</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-06-27</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
