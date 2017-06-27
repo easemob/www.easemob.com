@@ -14,7 +14,7 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../index.html">Hyphenate </a>
+				<a href="../index.html">HyphenateSDK </a>
 			</h1>
 
 			<p id="developer-home">
@@ -160,6 +160,8 @@
 		
 		<option value="//api/name/destroyGroup:finishCompletion:">- destroyGroup:finishCompletion:</option>
 		
+		<option value="//api/name/downloadGroupSharedFileWithId:filePath:sharedFileId:progress:completion:">- downloadGroupSharedFileWithId:filePath:sharedFileId:progress:completion:</option>
+		
 		<option value="//api/name/fetchGroupBansList:error:">- fetchGroupBansList:error:</option>
 		
 		<option value="//api/name/fetchGroupInfo:includeMembersList:error:">- fetchGroupInfo:includeMembersList:error:</option>
@@ -168,11 +170,19 @@
 		
 		<option value="//api/name/getAllIgnoredGroupIds">- getAllIgnoredGroupIds</option>
 		
+		<option value="//api/name/getGroupAnnouncementWithId:completion:">- getGroupAnnouncementWithId:completion:</option>
+		
+		<option value="//api/name/getGroupAnnouncementWithId:error:">- getGroupAnnouncementWithId:error:</option>
+		
 		<option value="//api/name/getGroupBlackListFromServerByID:completion:">- getGroupBlackListFromServerByID:completion:</option>
 		
 		<option value="//api/name/getGroupBlacklistFromServerWithId:pageNumber:pageSize:completion:">- getGroupBlacklistFromServerWithId:pageNumber:pageSize:completion:</option>
 		
 		<option value="//api/name/getGroupBlacklistFromServerWithId:pageNumber:pageSize:error:">- getGroupBlacklistFromServerWithId:pageNumber:pageSize:error:</option>
+		
+		<option value="//api/name/getGroupFileListWithId:pageNumber:pageSize:completion:">- getGroupFileListWithId:pageNumber:pageSize:completion:</option>
+		
+		<option value="//api/name/getGroupFileListWithId:pageNumber:pageSize:error:">- getGroupFileListWithId:pageNumber:pageSize:error:</option>
 		
 		<option value="//api/name/getGroupMemberListFromServerWithId:cursor:pageSize:completion:">- getGroupMemberListFromServerWithId:cursor:pageSize:completion:</option>
 		
@@ -206,6 +216,8 @@
 		
 		<option value="//api/name/ignoreGroupPush:ignore:">- ignoreGroupPush:ignore:</option>
 		
+		<option value="//api/name/ignoreGroupsPush:ignore:">- ignoreGroupsPush:ignore:</option>
+		
 		<option value="//api/name/joinPublicGroup:completion:">- joinPublicGroup:completion:</option>
 		
 		<option value="//api/name/joinPublicGroup:error:">- joinPublicGroup:error:</option>
@@ -225,6 +237,10 @@
 		<option value="//api/name/removeAdmin:fromGroup:error:">- removeAdmin:fromGroup:error:</option>
 		
 		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+		<option value="//api/name/removeGroupSharedFileWithId:sharedFileId:completion:">- removeGroupSharedFileWithId:sharedFileId:completion:</option>
+		
+		<option value="//api/name/removeGroupSharedFileWithId:sharedFileId:error:">- removeGroupSharedFileWithId:sharedFileId:error:</option>
 		
 		<option value="//api/name/removeMembers:fromGroup:completion:">- removeMembers:fromGroup:completion:</option>
 		
@@ -250,6 +266,14 @@
 		
 		<option value="//api/name/updateDescription:forGroup:completion:">- updateDescription:forGroup:completion:</option>
 		
+		<option value="//api/name/updateGroupAnnouncementWithId:announcement:completion:">- updateGroupAnnouncementWithId:announcement:completion:</option>
+		
+		<option value="//api/name/updateGroupAnnouncementWithId:announcement:error:">- updateGroupAnnouncementWithId:announcement:error:</option>
+		
+		<option value="//api/name/updateGroupExtWithId:ext:completion:">- updateGroupExtWithId:ext:completion:</option>
+		
+		<option value="//api/name/updateGroupExtWithId:ext:error:">- updateGroupExtWithId:ext:error:</option>
+		
 		<option value="//api/name/updateGroupOwner:newOwner:completion:">- updateGroupOwner:newOwner:completion:</option>
 		
 		<option value="//api/name/updateGroupOwner:newOwner:error:">- updateGroupOwner:newOwner:error:</option>
@@ -257,6 +281,10 @@
 		<option value="//api/name/updateGroupSubject:forGroup:completion:">- updateGroupSubject:forGroup:completion:</option>
 		
 		<option value="//api/name/updatePushServiceForGroup:isPushEnabled:completion:">- updatePushServiceForGroup:isPushEnabled:completion:</option>
+		
+		<option value="//api/name/updatePushServiceForGroups:isPushEnabled:completion:">- updatePushServiceForGroups:isPushEnabled:completion:</option>
+		
+		<option value="//api/name/uploadGroupSharedFileWithId:filePath:progress:completion:">- uploadGroupSharedFileWithId:filePath:progress:completion:</option>
 		
 	</optgroup>
 	
@@ -1689,6 +1717,288 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Get the mutes of group  from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupFileListWithId:pageNumber:pageSize:error:" title="getGroupFileListWithId:pageNumber:pageSize:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupFileListWithId:pageNumber:pageSize:error:">&ndash;&nbsp;getGroupFileListWithId:pageNumber:pageSize:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the share files of group from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getGroupFileListWithId:(NSString *)<em>aGroupId</em> pageNumber:(NSInteger)<em>aPageNum</em> pageSize:(NSInteger)<em>aPageSize</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageNum</code></th>
+						<td><p>Page number</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Page size</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The share files of group</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the share files of group from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupFileListWithId:pageNumber:pageSize:completion:" title="getGroupFileListWithId:pageNumber:pageSize:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupFileListWithId:pageNumber:pageSize:completion:">&ndash;&nbsp;getGroupFileListWithId:pageNumber:pageSize:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the share files of group from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getGroupFileListWithId:(NSString *)<em>aGroupId</em> pageNumber:(NSInteger)<em>aPageNum</em> pageSize:(NSInteger)<em>aPageSize</em> completion:(void ( ^ ) ( NSArray *aList , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageNum</code></th>
+						<td><p>Page number</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPageSize</code></th>
+						<td><p>Page size</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the share files of group from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupAnnouncementWithId:error:" title="getGroupAnnouncementWithId:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupAnnouncementWithId:error:">&ndash;&nbsp;getGroupAnnouncementWithId:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the announcement of group from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getGroupAnnouncementWithId:(NSString *)<em>aGroupId</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group Announcement, return nil if fail</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the announcement of group from the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGroupAnnouncementWithId:completion:" title="getGroupAnnouncementWithId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGroupAnnouncementWithId:completion:">&ndash;&nbsp;getGroupAnnouncementWithId:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the announcement of group from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getGroupAnnouncementWithId:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( NSString *aAnnouncement , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the announcement of group from the server</p>
 			</div>
 			
 
@@ -3825,6 +4135,586 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/uploadGroupSharedFileWithId:filePath:progress:completion:" title="uploadGroupSharedFileWithId:filePath:progress:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/uploadGroupSharedFileWithId:filePath:progress:completion:">&ndash;&nbsp;uploadGroupSharedFileWithId:filePath:progress:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Upload the share file of group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)uploadGroupSharedFileWithId:(NSString *)<em>aGroupId</em> filePath:(NSString *)<em>aFilePath</em> progress:(void ( ^ ) ( int progress ))<em>aProgressBlock</em> completion:(void ( ^ ) ( EMGroupSharedFile *aSharedFile , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFilePath</code></th>
+						<td><p>Path of file</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Upload the share file of group</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadGroupSharedFileWithId:filePath:sharedFileId:progress:completion:" title="downloadGroupSharedFileWithId:filePath:sharedFileId:progress:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadGroupSharedFileWithId:filePath:sharedFileId:progress:completion:">&ndash;&nbsp;downloadGroupSharedFileWithId:filePath:sharedFileId:progress:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Download the share file of group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadGroupSharedFileWithId:(NSString *)<em>aGroupId</em> filePath:(NSString *)<em>aFilePath</em> sharedFileId:(NSString *)<em>aSharedFileId</em> progress:(void ( ^ ) ( int progress ))<em>aProgressBlock</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aFilePath</code></th>
+						<td><p>Path of file</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSharedFileId</code></th>
+						<td><p>share file id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aProgressBlock</code></th>
+						<td><p>The block of attachment upload progress</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Download the share file of group</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeGroupSharedFileWithId:sharedFileId:error:" title="removeGroupSharedFileWithId:sharedFileId:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeGroupSharedFileWithId:sharedFileId:error:">&ndash;&nbsp;removeGroupSharedFileWithId:sharedFileId:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove the share file of group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMGroup *)removeGroupSharedFileWithId:(NSString *)<em>aGroupId</em> sharedFileId:(NSString *)<em>aSharedFileId</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSharedFileId</code></th>
+						<td><p>share file Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove the share file of group</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeGroupSharedFileWithId:sharedFileId:completion:" title="removeGroupSharedFileWithId:sharedFileId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeGroupSharedFileWithId:sharedFileId:completion:">&ndash;&nbsp;removeGroupSharedFileWithId:sharedFileId:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove the share file of group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeGroupSharedFileWithId:(NSString *)<em>aGroupId</em> sharedFileId:(NSString *)<em>aSharedFileId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSharedFileId</code></th>
+						<td><p>share file Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove the share file of group</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateGroupAnnouncementWithId:announcement:error:" title="updateGroupAnnouncementWithId:announcement:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateGroupAnnouncementWithId:announcement:error:">&ndash;&nbsp;updateGroupAnnouncementWithId:announcement:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update the announcement of group, need Owner / Admin permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMGroup *)updateGroupAnnouncementWithId:(NSString *)<em>aGroupId</em> announcement:(NSString *)<em>aAnnouncement</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aAnnouncement</code></th>
+						<td><p>announcement of group</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Update the announcement of group, need Owner / Admin permissions</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateGroupAnnouncementWithId:announcement:completion:" title="updateGroupAnnouncementWithId:announcement:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateGroupAnnouncementWithId:announcement:completion:">&ndash;&nbsp;updateGroupAnnouncementWithId:announcement:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update the announcement of group, need Owner / Admin permissions</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateGroupAnnouncementWithId:(NSString *)<em>aGroupId</em> announcement:(NSString *)<em>aAnnouncement</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aAnnouncement</code></th>
+						<td><p>announcement of group</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Update the announcement of group, need Owner / Admin permissions</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateGroupExtWithId:ext:error:" title="updateGroupExtWithId:ext:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateGroupExtWithId:ext:error:">&ndash;&nbsp;updateGroupExtWithId:ext:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update the extended of the group, need Owner</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMGroup *)updateGroupExtWithId:(NSString *)<em>aGroupId</em> ext:(NSString *)<em>aExt</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aExt</code></th>
+						<td><p>Extended of the group</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Group instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Update the extended of the group, need Owner</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateGroupExtWithId:ext:completion:" title="updateGroupExtWithId:ext:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateGroupExtWithId:ext:completion:">&ndash;&nbsp;updateGroupExtWithId:ext:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Update the extended of the group, need Owner</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateGroupExtWithId:(NSString *)<em>aGroupId</em> ext:(NSString *)<em>aExt</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aExt</code></th>
+						<td><p>Extended of the group</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Update the extended of the group, need Owner</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/joinPublicGroup:error:" title="joinPublicGroup:error:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/joinPublicGroup:error:">&ndash;&nbsp;joinPublicGroup:error:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -4748,6 +5638,76 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/ignoreGroupsPush:ignore:" title="ignoreGroupsPush:ignore:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ignoreGroupsPush:ignore:">&ndash;&nbsp;ignoreGroupsPush:ignore:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Block / unblock group message‘s push notification</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)ignoreGroupsPush:(NSArray *)<em>aGroupIDs</em> ignore:(BOOL)<em>aIsIgnore</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupIDs</code></th>
+						<td><p>Group ids list</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIgnore</code></th>
+						<td><p>Whether block</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Block / unblock group message‘s push notification</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/updatePushServiceForGroup:isPushEnabled:completion:" title="updatePushServiceForGroup:isPushEnabled:completion:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/updatePushServiceForGroup:isPushEnabled:completion:">&ndash;&nbsp;updatePushServiceForGroup:isPushEnabled:completion:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -4785,6 +5745,74 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>aGroupId</code></th>
 						<td><p>Group id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Block / unblock group message‘s push notification</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMGroupManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updatePushServiceForGroups:isPushEnabled:completion:" title="updatePushServiceForGroups:isPushEnabled:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updatePushServiceForGroups:isPushEnabled:completion:">&ndash;&nbsp;updatePushServiceForGroups:isPushEnabled:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Block / unblock group message‘s push notification</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updatePushServiceForGroups:(NSArray *)<em>aGroupIDs</em> isPushEnabled:(BOOL)<em>aIsEnable</em> completion:(void ( ^ ) ( NSArray *groups , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupIDs</code></th>
+						<td><p>Group ids list</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIsEnable</code></th>
+						<td><p>Whether enable</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
 					</tr>
 				
 				</table>
@@ -7237,7 +8265,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-05-03</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-06-27</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
