@@ -1,11 +1,14 @@
 var searchData=
 [
+  ['up',['UP',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html#a7da6922f03fda8d28c8c051bb1086a3b',1,'com::hyphenate::chat::EMConversation::EMSearchDirection']]],
   ['user_5falready_5fexist',['USER_ALREADY_EXIST',['../classcom_1_1hyphenate_1_1_e_m_error.html#a497e16020b7fe36e8075d2b787a00e8d',1,'com::hyphenate::EMError']]],
   ['user_5falready_5flogin',['USER_ALREADY_LOGIN',['../classcom_1_1hyphenate_1_1_e_m_error.html#a09893124e1fbcd100a9583a4293957af',1,'com::hyphenate::EMError']]],
   ['user_5fauthentication_5ffailed',['USER_AUTHENTICATION_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a0745733baac8fd07b64186742cd89db4',1,'com::hyphenate::EMError']]],
   ['user_5fbind_5fanother_5fdevice',['USER_BIND_ANOTHER_DEVICE',['../classcom_1_1hyphenate_1_1_e_m_error.html#a9110bf27a3678ee8eef4a24fe8b1efcd',1,'com::hyphenate::EMError']]],
   ['user_5fbinddevicetoken_5ffailed',['USER_BINDDEVICETOKEN_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ae0a5b26119381c560e3a354515578db1',1,'com::hyphenate::EMError']]],
   ['user_5fillegal_5fargument',['USER_ILLEGAL_ARGUMENT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a4ca11c930cdc5d1527c5801ff0f143ed',1,'com::hyphenate::EMError']]],
+  ['user_5fkicked_5fby_5fchange_5fpassword',['USER_KICKED_BY_CHANGE_PASSWORD',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa09fbbdf7a4441a7bd2205ff7c878591',1,'com::hyphenate::EMError']]],
+  ['user_5fkicked_5fby_5fother_5fdevice',['USER_KICKED_BY_OTHER_DEVICE',['../classcom_1_1hyphenate_1_1_e_m_error.html#a18c8cae32449e804f73fc46a260d8fae',1,'com::hyphenate::EMError']]],
   ['user_5flogin_5fanother_5fdevice',['USER_LOGIN_ANOTHER_DEVICE',['../classcom_1_1hyphenate_1_1_e_m_error.html#ae31d425e256946618f4d1ea66ab03c09',1,'com::hyphenate::EMError']]],
   ['user_5flogin_5ftoo_5fmany_5fdevices',['USER_LOGIN_TOO_MANY_DEVICES',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa1826648b8ee67734df6f460b5d18fba',1,'com::hyphenate::EMError']]],
   ['user_5fmuted',['USER_MUTED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a9bb3d51a3c43c6fbd4997cb3295303f1',1,'com::hyphenate::EMError']]],
