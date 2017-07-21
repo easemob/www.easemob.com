@@ -6,7 +6,7 @@ var searchData=
   ['sendmessage_3aprogress_3acompletion_3a',['sendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#ad139d7ad31d934a721a979955baf1868',1,'IEMChatManager-p']]],
   ['sendmessagereadack_3acompletion_3a',['sendMessageReadAck:completion:',['../protocol_i_e_m_chat_manager-p.html#a47881745f8927f2a703181b8233122a8',1,'IEMChatManager-p']]],
   ['setapnsnickname_3a',['setApnsNickname:',['../interface_e_m_client.html#a29f928aab2d104e6bf00426ed0c3d7dc',1,'EMClient']]],
-  ['setbuilderdelegate_3a',['setBuilderDelegate:',['../protocol_i_e_m_call_manager-p.html#af0cff560de6263617f22479f1f00427f',1,'IEMCallManager-p']]],
+  ['setbuilderdelegate_3a',['setBuilderDelegate:',['../protocol_i_e_m_call_manager-p.html#ab186d489c2779e2984498f79b63432fd',1,'IEMCallManager-p']]],
   ['setcalloptions_3a',['setCallOptions:',['../protocol_i_e_m_call_manager-p.html#a8bdffc278012912e6b647496f950f2d0',1,'IEMCallManager-p']]],
   ['setcamerabackorfront_3a',['setCameraBackOrFront:',['../interface_e_m_call_session.html#a557cf85020a80b4d8558f907db0b9a2a',1,'EMCallSession']]],
   ['setvideoadaptive_3a',['setVideoAdaptive:',['../protocol_i_e_m_call_manager-p.html#a9bb12a929bb67c3328068ec1cd7fcdbb',1,'IEMCallManager-p']]],
