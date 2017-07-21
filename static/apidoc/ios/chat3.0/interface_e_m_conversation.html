@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateSDK
-   &#160;<span id="projectnumber">3.3.2</span>
+   &#160;<span id="projectnumber">3.3.3</span>
    </div>
   </td>
  </tr>
@@ -104,6 +104,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 构造函数</h2></td></tr>
+<tr class="memitem:a7883f84d016394fd0a0454a5a89ff31a"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_e_m_message.html">EMMessage</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_conversation.html#a7883f84d016394fd0a0454a5a89ff31a">lastReceivedMessage</a></td></tr>
+<tr class="separator:a7883f84d016394fd0a0454a5a89ff31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00f20d6f1196855618dbec1da33d6c03"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_conversation.html#a00f20d6f1196855618dbec1da33d6c03">insertMessage:error:</a></td></tr>
 <tr class="separator:a00f20d6f1196855618dbec1da33d6c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5973ef242c18a964184857cd1e8d00e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_conversation.html#ac5973ef242c18a964184857cd1e8d00e">appendMessage:error:</a></td></tr>
@@ -120,8 +122,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:a05803775b9e1ee424bb6d352293c5e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e508a043daab1c9044411ec29e19272"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_e_m_message.html">EMMessage</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_conversation.html#a4e508a043daab1c9044411ec29e19272">loadMessageWithId:error:</a></td></tr>
 <tr class="separator:a4e508a043daab1c9044411ec29e19272"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7883f84d016394fd0a0454a5a89ff31a"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_e_m_message.html">EMMessage</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_conversation.html#a7883f84d016394fd0a0454a5a89ff31a">lastReceivedMessage</a></td></tr>
-<tr class="separator:a7883f84d016394fd0a0454a5a89ff31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fc508ae3f4aa3e307aede90809b1f63"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_conversation.html#a8fc508ae3f4aa3e307aede90809b1f63">loadMessagesStartFromId:count:searchDirection:completion:</a></td></tr>
 <tr class="separator:a8fc508ae3f4aa3e307aede90809b1f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66176d122f9606c44d9c162844aeb5db"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_conversation.html#a66176d122f9606c44d9c162844aeb5db">loadMessagesWithType:timestamp:count:fromUser:searchDirection:completion:</a></td></tr>
@@ -314,7 +314,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
         </tr>
       </table>
 </div><div class="memdoc">
-<p>删除该会话所有消息 </p><dl class="params"><dt>参数</dt><dd>
+<p>删除该会话所有消息，同时清除内存和数据库中的消息</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">pError</td><td>错误信息 </td></tr>
   </table>
@@ -428,7 +429,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
         </tr>
       </table>
 </div><div class="memdoc">
-<p>插入一条消息，消息的conversationId应该和会话的conversationId一致，消息会被插入DB，并且更新会话的latestMessage等属性</p>
+<p>插入一条消息，消息的conversationId应该和会话的conversationId一致，消息会被插入DB，并且更新会话的latestMessage等属性 insertMessage 会更新对应Conversation里的latestMessage Method <a class="el" href="interface_e_m_conversation.html">EMConversation</a> insertMessage:error: = EMChatManager importMsessage:completion: + update conversation latest message</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aMessage</td><td>消息实例 </td></tr>
@@ -451,7 +452,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
         </tr>
       </table>
 </div><div class="memdoc">
-<p>收到的对方发送的最后一条消息</p>
+<p>收到的对方发送的最后一条消息，也是会话里的最新消息</p>
 <dl class="section return"><dt>返回</dt><dd>消息实例 </dd></dl>
 
 </div>
@@ -1058,7 +1059,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
         </tr>
       </table>
 </div><div class="memdoc">
-<p>更新一条消息，不能更新消息ID，消息更新后，会话的latestMessage等属性进行相应更新</p>
+<p>更新本地的消息，不能更新消息ID，消息更新后，会话的latestMessage等属性进行相应更新</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aMessage</td><td>要更新的消息 </td></tr>
@@ -1087,7 +1088,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </tr>
 </table>
 </div><div class="memdoc">
-<p>会话唯一标识 </p>
+<p>会话ID 对于单聊类型，会话ID同时也是对方用户的名称。 对于群聊类型，会话ID同时也是对方群组的ID，并不同于群组的名称。 对于聊天室类型，会话ID同时也是聊天室的ID，并不同于聊天室的名称。 对于HelpDesk类型，会话ID与单聊类型相同，是对方用户的名称。 </p>
 
 </div>
 </div>
@@ -1171,7 +1172,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </tr>
 </table>
 </div><div class="memdoc">
-<p>会话未读消息数量 </p>
+<p>对话中未读取的消息数量 </p>
 
 </div>
 </div>

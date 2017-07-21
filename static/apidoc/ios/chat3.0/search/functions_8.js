@@ -1,6 +1,7 @@
 var searchData=
 [
   ['ignoregrouppush_3aignore_3a',['ignoreGroupPush:ignore:',['../protocol_i_e_m_group_manager-p.html#add5f83a1283d222a914f04d474df5964',1,'IEMGroupManager-p']]],
+  ['ignoregroupspush_3aignore_3a',['ignoreGroupsPush:ignore:',['../protocol_i_e_m_group_manager-p.html#a88a42329a5170502e1e27bb3ae3816e5',1,'IEMGroupManager-p']]],
   ['importconversations_3a',['importConversations:',['../protocol_i_e_m_chat_manager-p.html#a5b426776bfbbb7dc27806e51b55770bd',1,'IEMChatManager-p']]],
   ['importconversations_3acompletion_3a',['importConversations:completion:',['../protocol_i_e_m_chat_manager-p.html#a37758569528eddf8b3fd40f1a28ba9dc',1,'IEMChatManager-p']]],
   ['importmessages_3a',['importMessages:',['../protocol_i_e_m_chat_manager-p.html#abb6bb7e0f7e29976c96c085630529c6b',1,'IEMChatManager-p']]],

@@ -19,15 +19,18 @@ var searchData=
   ['emcontactmanagerdelegate_2dp',['EMContactManagerDelegate-p',['../protocol_e_m_contact_manager_delegate-p.html',1,'']]],
   ['emconversation',['EMConversation',['../interface_e_m_conversation.html',1,'']]],
   ['emcursorresult',['EMCursorResult',['../interface_e_m_cursor_result.html',1,'']]],
+  ['emdeviceconfig',['EMDeviceConfig',['../interface_e_m_device_config.html',1,'']]],
   ['emerror',['EMError',['../interface_e_m_error.html',1,'']]],
   ['emfilemessagebody',['EMFileMessageBody',['../interface_e_m_file_message_body.html',1,'']]],
   ['emgroup',['EMGroup',['../interface_e_m_group.html',1,'']]],
   ['emgroupmanagerdelegate_2dp',['EMGroupManagerDelegate-p',['../protocol_e_m_group_manager_delegate-p.html',1,'']]],
   ['emgroupoptions',['EMGroupOptions',['../interface_e_m_group_options.html',1,'']]],
+  ['emgroupsharedfile',['EMGroupSharedFile',['../interface_e_m_group_shared_file.html',1,'']]],
   ['emimagemessagebody',['EMImageMessageBody',['../interface_e_m_image_message_body.html',1,'']]],
   ['emlocationmessagebody',['EMLocationMessageBody',['../interface_e_m_location_message_body.html',1,'']]],
   ['emmessage',['EMMessage',['../interface_e_m_message.html',1,'']]],
   ['emmessagebody',['EMMessageBody',['../interface_e_m_message_body.html',1,'']]],
+  ['emmultidevicesdelegate_2dp',['EMMultiDevicesDelegate-p',['../protocol_e_m_multi_devices_delegate-p.html',1,'']]],
   ['emoptions',['EMOptions',['../interface_e_m_options.html',1,'']]],
   ['emoptions_28privatedeploy_29',['EMOptions(PrivateDeploy)',['../category_e_m_options_07_private_deploy_08.html',1,'']]],
   ['empageresult',['EMPageResult',['../interface_e_m_page_result.html',1,'']]],
@@ -42,5 +45,5 @@ var searchData=
   ['endcall_3areason_3a',['endCall:reason:',['../protocol_i_e_m_call_manager-p.html#a3964f06814f26a3f3f9b435f59ee3385',1,'IEMCallManager-p']]],
   ['errordescription',['errorDescription',['../interface_e_m_error.html#ac85262b511e0fd3c33dde07c991d0637',1,'EMError']]],
   ['errorwithdescription_3acode_3a',['errorWithDescription:code:',['../interface_e_m_error.html#a6fd5e6492c94100feb0220444201380a',1,'EMError']]],
-  ['ext',['ext',['../interface_e_m_call_session.html#a7c446f7fa3e2d23fd3cb2c8eb448dcd1',1,'EMCallSession::ext()'],['../interface_e_m_conversation.html#a164480add35abfde2c733d264373388a',1,'EMConversation::ext()'],['../interface_e_m_message.html#a522b3c7511947736d6ba78beb9ae38f5',1,'EMMessage::ext()']]]
+  ['ext',['ext',['../interface_e_m_call_session.html#a7c446f7fa3e2d23fd3cb2c8eb448dcd1',1,'EMCallSession::ext()'],['../interface_e_m_conversation.html#a164480add35abfde2c733d264373388a',1,'EMConversation::ext()'],['../interface_e_m_group_options.html#a123965087ce79b1c78bcdaa7faa7dbd5',1,'EMGroupOptions::ext()'],['../interface_e_m_message.html#a522b3c7511947736d6ba78beb9ae38f5',1,'EMMessage::ext()']]]
 ];

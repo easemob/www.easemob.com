@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['pageresultwithlist_3aandcount_3a',['pageResultWithList:andCount:',['../interface_e_m_page_result.html#a744f17523849cbbc76988755a75cba3f',1,'EMPageResult']]],
-  ['params',['params',['../interface_e_m_cmd_message_body.html#a20bc77479a764510867c09f6ff62af54',1,'EMCmdMessageBody']]],
-  ['pausevideo',['pauseVideo',['../interface_e_m_call_session.html#a36946520d5b65fbe1900c3fc87d7d6c9',1,'EMCallSession']]],
-  ['pausevideotransfer_3a',['pauseVideoTransfer:',['../protocol_i_e_m_call_manager-p.html#a0a1da2a1377b2940d5562e8a1a5e90dc',1,'IEMCallManager-p']]],
-  ['pausevideowithsession_3aerror_3a',['pauseVideoWithSession:error:',['../protocol_i_e_m_call_manager-p.html#a3271619f6d7355d6668134470a100b29',1,'IEMCallManager-p']]],
-  ['pausevoice',['pauseVoice',['../interface_e_m_call_session.html#a42467f8c736ca48b7d97d0281e52e0c7',1,'EMCallSession']]],
-  ['pausevoiceandvideotransfer_3a',['pauseVoiceAndVideoTransfer:',['../protocol_i_e_m_call_manager-p.html#a0a70fc56d97c9492738716f81df6bab4',1,'IEMCallManager-p']]],
-  ['pausevoicetransfer_3a',['pauseVoiceTransfer:',['../protocol_i_e_m_call_manager-p.html#a336cbb8359c84c907421217dbf91049d',1,'IEMCallManager-p']]],
-  ['pausevoicewithsession_3aerror_3a',['pauseVoiceWithSession:error:',['../protocol_i_e_m_call_manager-p.html#ab39eb7e74e28153b392590d6ae0c69df',1,'IEMCallManager-p']]],
-  ['permissiontype',['permissionType',['../interface_e_m_chatroom.html#a88c3a5ddde2cc67aad2bff7ad5c72fa0',1,'EMChatroom::permissionType()'],['../interface_e_m_group.html#aa2c03fbb097e27cd609e75d5e9843c33',1,'EMGroup::permissionType()']]],
-  ['pushoptions',['pushOptions',['../interface_e_m_client.html#a4dd459e3f06535ef62f38f53769333ed',1,'EMClient']]]
+  ['occupants',['occupants',['../interface_e_m_group.html#a38794a836680c3df4382120c246d0cf6',1,'EMGroup']]],
+  ['occupantscount',['occupantsCount',['../interface_e_m_chatroom.html#a3e807b1af9dbda4beaae8746b209cb19',1,'EMChatroom::occupantsCount()'],['../interface_e_m_group.html#a792fd91c92ef4a043505a95f675e49f5',1,'EMGroup::occupantsCount()']]],
+  ['offlinemessagetext',['offlineMessageText',['../interface_e_m_call_options.html#a62d88c4b292cdfb13b4ea8d723ba2f65',1,'EMCallOptions']]],
+  ['options',['options',['../interface_e_m_client.html#a3bf3e3165dfdebd0319f9b7378e7a93f',1,'EMClient']]],
+  ['optionswithappkey_3a',['optionsWithAppkey:',['../interface_e_m_options.html#ab862ec18b8e5af328594c82ea292c387',1,'EMOptions']]],
+  ['owner',['owner',['../interface_e_m_chatroom.html#aa4c82dc0b6e6bcb3d23c25f9e2ca9930',1,'EMChatroom::owner()'],['../interface_e_m_group.html#ae03a2f19396ee83ed51ef704509edf05',1,'EMGroup::owner()']]]
 ];
