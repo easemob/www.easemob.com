@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">hyphenate_SDK3.0
-   &#160;<span id="projectnumber">3.3.2</span>
+   &#160;<span id="projectnumber">3.3.3</span>
    </div>
    <div id="projectbrief">hyphenatejavaIMSDK</div>
   </td>
@@ -145,13 +145,13 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a6d634ba80deec6340bd8b3419d7bf120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8878c691b7bb63f7784a685c932ddd0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a8878c691b7bb63f7784a685c932ddd0a">asyncAcceptInvitation</a> (final String username, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callback)</td></tr>
 <tr class="separator:a8878c691b7bb63f7784a685c932ddd0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ad0958d5b9de677cce7eaef4e0337fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a9ad0958d5b9de677cce7eaef4e0337fd">declineInvitation</a> (String username)  throws HyphenateException     </td></tr>
+<tr class="memitem:a9ad0958d5b9de677cce7eaef4e0337fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a9ad0958d5b9de677cce7eaef4e0337fd">declineInvitation</a> (String username)  throws HyphenateException  </td></tr>
 <tr class="separator:a9ad0958d5b9de677cce7eaef4e0337fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cbddf9bb29fd10ce3c8c8f303724086"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a7cbddf9bb29fd10ce3c8c8f303724086">asyncDeclineInvitation</a> (final String username, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callback)</td></tr>
 <tr class="separator:a7cbddf9bb29fd10ce3c8c8f303724086"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html">EMContactManager</a> 用来记录，查询，修改 用户的联系人/好友列表 它主要负责： 登陆后从环信服务器获取联系人列表  添加联系人 删除联系人 刷新联系人列表</p>
+<div class="textblock"><p><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html">EMContactManager</a> 用来记录，查询，修改 用户的联系人/好友列表 它主要负责： 登陆后从环信服务器获取联系人列表 添加联系人 删除联系人 刷新联系人列表</p>
 <p>如果应用自己管理联系人/好友列表，则不需要使用此 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html">EMContactManager</a> EMChatOptions.setUseRoster(false); </p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a class="anchor" id="a6d634ba80deec6340bd8b3419d7bf120"></a>
@@ -167,7 +167,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>接受加好友的邀请 </p><dl class="params"><dt>参数</dt><dd>
+<p>接受加好友的邀请</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td></td></tr>
   </table>
@@ -199,10 +200,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>添加联系人 </p><dl class="params"><dt>参数</dt><dd>
+<p>添加联系人</p>
+<p>同步方法，会阻塞当前线程</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>用户名 </td></tr>
-    <tr><td class="paramname">reason</td><td>原因、理由（optional) </td></tr>
+    <tr><td class="paramname">reason</td><td>原因、理由（optional. use "" or null) </td></tr>
   </table>
   </dd>
 </dl>
@@ -238,7 +241,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>把指定用户加入到黑名单中 </p><dl class="params"><dt>参数</dt><dd>
+<p>把指定用户加入到黑名单中</p>
+<p>同步方法，会阻塞当前线程</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>此用户的username </td></tr>
     <tr><td class="paramname">both</td><td>把用户加入黑民单时，如果是both双方发消息时对方都收不到；如果不是， 则我能给黑名单的中用户发消息，但是对方发给我时我是收不到的 </td></tr>
@@ -277,9 +282,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>接受加好友的邀请 </p><dl class="params"><dt>参数</dt><dd>
+<p>接受加好友的邀请</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td></td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -309,9 +316,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>拒绝加好友的邀请 </p><dl class="params"><dt>参数</dt><dd>
+<p>拒绝加好友的邀请</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td></td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -341,9 +350,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>保存黑名单列表 </p><dl class="params"><dt>参数</dt><dd>
+<p>保存黑名单列表</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">blackList</td><td></td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -379,16 +390,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>添加联系人 </p><dl class="params"><dt>参数</dt><dd>
+<p>添加联系人</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>用户名 </td></tr>
     <tr><td class="paramname">reason</td><td>原因、理由（optional) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>异常</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td></td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -424,16 +431,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>把指定用户加入到黑名单中 </p><dl class="params"><dt>参数</dt><dd>
+<p>把指定用户加入到黑名单中</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>此用户的username </td></tr>
     <tr><td class="paramname">both</td><td>把用户加入黑民单时，如果是both双方发消息时对方都收不到；如果不是， 则我能给黑名单的中用户发消息，但是对方发给我时我是收不到的 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>异常</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td></td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -463,15 +466,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>删除联系人 </p><dl class="params"><dt>参数</dt><dd>
+<p>删除好友</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>异常</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td></td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -491,10 +490,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>获取所有联系人的用户名列表 </p><dl class="section return"><dt>返回</dt><dd>联系人列表 </dd></dl>
-<dl class="exception"><dt>异常</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td></td></tr>
+<p>从服务器获取所有的好友</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>包含联系人列表 </td></tr>
   </table>
   </dd>
 </dl>
@@ -514,10 +513,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>从服务器获取黑名单中的用户的usernames </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
-<dl class="exception"><dt>异常</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td></td></tr>
+<p>从服务器获取黑名单中的用户的usernames</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>包含黑名单列表 </td></tr>
   </table>
   </dd>
 </dl>
@@ -547,15 +546,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>把用户从黑名单中移除 </p><dl class="params"><dt>参数</dt><dd>
+<p>把用户从黑名单中移除</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>异常</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td></td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -575,7 +570,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>拒绝加好友的邀请 </p><dl class="params"><dt>参数</dt><dd>
+<p>拒绝加好友的邀请</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td></td></tr>
   </table>
@@ -597,7 +593,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>删除联系人 </p><dl class="params"><dt>参数</dt><dd>
+<p>删除好友</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td></td></tr>
   </table>
@@ -635,7 +632,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>删除联系人 </p><dl class="params"><dt>参数</dt><dd>
+<p>删除好友</p>
+<p>同步方法，会阻塞当前线程</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td></td></tr>
     <tr><td class="paramname">keepConversation</td><td>是否保留会话和消息 </td></tr>
@@ -663,7 +662,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>获取所有联系人的用户名列表 </p><dl class="section return"><dt>返回</dt><dd>联系人列表 </dd></dl>
+<p>从服务器获取所有的好友</p>
+<p>同步方法，会阻塞当前线程</p>
+<dl class="section return"><dt>返回</dt><dd>联系人列表 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
     <tr><td class="paramname">HyphenateException</td><td></td></tr>
@@ -685,7 +686,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>从服务器获取黑名单中的用户的usernames </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+<p>从服务器获取黑名单中的用户的usernames</p>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
     <tr><td class="paramname">HyphenateException</td><td></td></tr>
@@ -707,13 +709,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>从本地获取黑名单中的用户的usernames </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
-<dl class="exception"><dt>异常</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
+<p>从本地获取黑名单中的用户的usernames</p>
+<dl class="section return"><dt>返回</dt><dd>List </dd></dl>
 
 </div>
 </div>
@@ -747,7 +744,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>把用户从黑名单中移除 </p><dl class="params"><dt>参数</dt><dd>
+<p>把用户从黑名单中移除</p>
+<p>同步方法，会阻塞当前线程</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td></td></tr>
   </table>
@@ -775,7 +774,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>保存黑名单列表 </p><dl class="params"><dt>参数</dt><dd>
+<p>保存黑名单列表</p>
+<p>同步方法，会阻塞当前线程</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">blackList</td><td></td></tr>
   </table>
@@ -797,7 +798,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>应用通过此接口设置回调，获得联系人变化 </p><dl class="params"><dt>参数</dt><dd>
+<p>应用通过此接口设置回调，获得联系人变化</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">contactListener</td><td></td></tr>
   </table>
@@ -812,7 +814,7 @@ Public 成员函数</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2017年 五月 18日 星期四 19:20:43 , 为 hyphenate_SDK3.0使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2017年 七月 20日 星期四 17:22:53 , 为 hyphenate_SDK3.0使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

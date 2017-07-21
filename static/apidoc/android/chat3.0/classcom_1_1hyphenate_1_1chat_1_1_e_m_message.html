@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">hyphenate_SDK3.0
-   &#160;<span id="projectnumber">3.3.2</span>
+   &#160;<span id="projectnumber">3.3.3</span>
    </div>
    <div id="projectbrief">hyphenatejavaIMSDK</div>
   </td>
@@ -1721,7 +1721,13 @@ T&#160;</td><td class="memItemRight" valign="bottom"><b>emaObject</b></td></tr>
 </div><div class="memdoc">
 <b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Parcelable.Creator&lt;EMMessage&gt;() {</div>
 <div class="line">        <span class="keyword">public</span> EMMessage createFromParcel(Parcel in) {</div>
-<div class="line">            <span class="keywordflow">return</span> <span class="keyword">new</span> EMMessage(in);</div>
+<div class="line">            EMMessage msg = null;</div>
+<div class="line">            <span class="keywordflow">try</span> {</div>
+<div class="line">                msg = <span class="keyword">new</span> EMMessage(in);</div>
+<div class="line">            } <span class="keywordflow">catch</span> (HyphenateException e) {</div>
+<div class="line">                e.printStackTrace();</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">return</span> msg;</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keyword">public</span> EMMessage[] newArray(<span class="keywordtype">int</span> size) {</div>
@@ -1737,7 +1743,7 @@ T&#160;</td><td class="memItemRight" valign="bottom"><b>emaObject</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2017年 五月 18日 星期四 19:20:43 , 为 hyphenate_SDK3.0使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2017年 七月 20日 星期四 17:22:53 , 为 hyphenate_SDK3.0使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
