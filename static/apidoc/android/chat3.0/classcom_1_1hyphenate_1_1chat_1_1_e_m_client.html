@@ -170,11 +170,9 @@ Context&#160;</td><td class="memItemRight" valign="bottom"><b>getContext</b> ()<
 <tr class="separator:a34ee764ec4a8839b8c366e5961305aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af910c513e859d34c070a215f372328bc"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#af910c513e859d34c070a215f372328bc">compressLogs</a> ()  throws HyphenateException </td></tr>
 <tr class="separator:af910c513e859d34c070a215f372328bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dc367e46a9c0f0b7dc5962482e38792"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7dc367e46a9c0f0b7dc5962482e38792"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addMultiDeviceListener</b> (<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a> listener)</td></tr>
+<tr class="memitem:a7dc367e46a9c0f0b7dc5962482e38792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a7dc367e46a9c0f0b7dc5962482e38792">addMultiDeviceListener</a> (<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a> listener)</td></tr>
 <tr class="separator:a7dc367e46a9c0f0b7dc5962482e38792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97b0aebad57d022f0840df1f2410fcb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97b0aebad57d022f0840df1f2410fcb3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removeMultiDeviceListener</b> (<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a> listener)</td></tr>
+<tr class="memitem:a97b0aebad57d022f0840df1f2410fcb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a97b0aebad57d022f0840df1f2410fcb3">removeMultiDeviceListener</a> (<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a> listener)</td></tr>
 <tr class="separator:a97b0aebad57d022f0840df1f2410fcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ebde33c06767c2347fde5f663b8d9c0"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_device_info.html">EMDeviceInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a3ebde33c06767c2347fde5f663b8d9c0">getLoggedInDevicesFromServer</a> (String username, String password)  throws HyphenateException </td></tr>
 <tr class="separator:a3ebde33c06767c2347fde5f663b8d9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,6 +220,28 @@ static final String&#160;</td><td class="memItemRight" valign="bottom"><b>VERSIO
 </div><div class="memdoc">
 <p>添加EMConnectionListener</p>
 <dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7dc367e46a9c0f0b7dc5962482e38792"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMClient.addMultiDeviceListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>添加多设备监听的接口 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">listener</td><td></td></tr>
   </table>
@@ -434,7 +454,7 @@ static final String&#160;</td><td class="memItemRight" valign="bottom"><b>VERSIO
         </tr>
       </table>
 </div><div class="memdoc">
-<p>multi-device: get logged in devices under current account </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+<p>获取账号名下登陆的在线设备 </p><dl class="section return"><dt>返回</dt><dd>在线设备列表 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
     <tr><td class="paramname">HyphenateException</td><td></td></tr>
@@ -590,7 +610,7 @@ if(EMClient.getInstance().<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_
         </tr>
       </table>
 </div><div class="memdoc">
-<p>multi-device: kill all devices under current account </p><dl class="exception"><dt>异常</dt><dd>
+<p>将该账号下的所有设备都踢下线 </p><dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
     <tr><td class="paramname">HyphenateException</td><td></td></tr>
   </table>
@@ -628,9 +648,12 @@ if(EMClient.getInstance().<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_
         </tr>
       </table>
 </div><div class="memdoc">
-<p>multi-device: kick device specified by resource </p><dl class="params"><dt>参数</dt><dd>
+<p>根据设备ID，将该设备下线, 设备ID：<a class="el" href="">EMDeviceInfo#getResource()</a></p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">resource</td><td></td></tr>
+    <tr><td class="paramname">username</td><td>账户名称 </td></tr>
+    <tr><td class="paramname">password</td><td>该账户密码 </td></tr>
+    <tr><td class="paramname">resource</td><td>设备ID </td></tr>
   </table>
   </dd>
 </dl>
@@ -770,6 +793,28 @@ if(EMClient.getInstance().<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_
 
 </div>
 </div>
+<a class="anchor" id="a97b0aebad57d022f0840df1f2410fcb3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMClient.removeMultiDeviceListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>删除多设备监听的接口 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a87445125262a00a08ecd01bf91fdfac0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -840,7 +885,7 @@ if(EMClient.getInstance().<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2017年 七月 20日 星期四 17:22:53 , 为 hyphenate_SDK3.0使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2017年 七月 24日 星期一 10:51:10 , 为 hyphenate_SDK3.0使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
