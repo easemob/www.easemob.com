@@ -53,6 +53,8 @@ var searchData=
   ['getpublicgroupsfromserverwithcursor_3apagesize_3aerror_3a',['getPublicGroupsFromServerWithCursor:pageSize:error:',['../protocol_i_e_m_group_manager-p.html#af6e5cffd558572ee043857a06e58feac',1,'IEMGroupManager-p']]],
   ['getpushnotificationoptionsfromserverwithcompletion_3a',['getPushNotificationOptionsFromServerWithCompletion:',['../interface_e_m_client.html#a4f8d41ea3252000f8c3a4209bd5de61e',1,'EMClient']]],
   ['getpushoptionsfromserverwitherror_3a',['getPushOptionsFromServerWithError:',['../interface_e_m_client.html#a3aea95ecb234aee1bab4f52b139d8efb',1,'EMClient']]],
+  ['getselfidsonotherplatformwithcompletion_3a',['getSelfIdsOnOtherPlatformWithCompletion:',['../protocol_i_e_m_contact_manager-p.html#a940069f573baff0413414fe09500bcef',1,'IEMContactManager-p']]],
+  ['getselfidsonotherplatformwitherror_3a',['getSelfIdsOnOtherPlatformWithError:',['../protocol_i_e_m_contact_manager-p.html#ad9c3ef78954dda94e8cc01339550697b',1,'IEMContactManager-p']]],
   ['groupadminlistdidupdate_3aaddedadmin_3a',['groupAdminListDidUpdate:addedAdmin:',['../protocol_e_m_group_manager_delegate-p.html#a294ceb42e459c88aee5cf08a04089c94',1,'EMGroupManagerDelegate-p']]],
   ['groupadminlistdidupdate_3aremovedadmin_3a',['groupAdminListDidUpdate:removedAdmin:',['../protocol_e_m_group_manager_delegate-p.html#a0b455e095f060989107ecabe7b204481',1,'EMGroupManagerDelegate-p']]],
   ['groupannouncementdidupdate_3aannouncement_3a',['groupAnnouncementDidUpdate:announcement:',['../protocol_e_m_group_manager_delegate-p.html#ad7375cf0df05ec3bb5b41497c3f2c3ee',1,'EMGroupManagerDelegate-p']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['recallmessage_3acompletion_3a',['recallMessage:completion:',['../protocol_i_e_m_chat_manager-p.html#a80a2c8a0824db42742d2b0a767df1226',1,'IEMChatManager-p']]],
   ['registerforremotenotificationswithdevicetoken_3acompletion_3a',['registerForRemoteNotificationsWithDeviceToken:completion:',['../interface_e_m_client.html#a6ebc69bb49345687b59c3ae1d06e3090',1,'EMClient']]],
   ['registerwithusername_3apassword_3a',['registerWithUsername:password:',['../interface_e_m_client.html#a1bb2e72b995535670e8ac74f88b1038e',1,'EMClient']]],
   ['registerwithusername_3apassword_3acompletion_3a',['registerWithUsername:password:completion:',['../interface_e_m_client.html#a633e25ca4f1652bcd2c516306518c523',1,'EMClient']]],
