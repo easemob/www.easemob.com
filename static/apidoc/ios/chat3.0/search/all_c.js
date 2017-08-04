@@ -15,6 +15,7 @@ var searchData=
   ['messageid',['messageId',['../interface_e_m_message.html#a3a85be4426c1f17888b8cb614c9e537c',1,'EMMessage']]],
   ['messagesdiddeliver_3a',['messagesDidDeliver:',['../protocol_e_m_chat_manager_delegate-p.html#aeb655fe7e623359bee76cc6bb6c7b8d4',1,'EMChatManagerDelegate-p']]],
   ['messagesdidread_3a',['messagesDidRead:',['../protocol_e_m_chat_manager_delegate-p.html#a47aa66211e74a93da6c3ee555e8eb158',1,'EMChatManagerDelegate-p']]],
+  ['messagesdidrecall_3a',['messagesDidRecall:',['../protocol_e_m_chat_manager_delegate-p.html#aab0c4bc949c884e607cf879318a1d39a',1,'EMChatManagerDelegate-p']]],
   ['messagesdidreceive_3a',['messagesDidReceive:',['../protocol_e_m_chat_manager_delegate-p.html#ab086b0134c177e917b62339c28c09d7e',1,'EMChatManagerDelegate-p']]],
   ['messagestatusdidchange_3aerror_3a',['messageStatusDidChange:error:',['../protocol_e_m_chat_manager_delegate-p.html#ab531bad356ffde37d945530f52661e2b',1,'EMChatManagerDelegate-p']]],
   ['migratedatabasetolatestsdk',['migrateDatabaseToLatestSDK',['../interface_e_m_client.html#ae71f63865d43821c05c72d4fcb899498',1,'EMClient']]],

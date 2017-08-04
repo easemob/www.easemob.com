@@ -55,6 +55,7 @@ var searchData=
   ['asyncfetchchatroominfo_3aincludememberslist_3asuccess_3afailure_3a',['asyncFetchChatroomInfo:includeMembersList:success:failure:',['../protocol_i_e_m_chatroom_manager-p.html#aa68b89dc988f1d20f7682e2f867017c0',1,'IEMChatroomManager-p']]],
   ['asyncfetchgroupbanslist_3asuccess_3afailure_3a',['asyncFetchGroupBansList:success:failure:',['../protocol_i_e_m_group_manager-p.html#a964c5e890b81231f2f9e09de65e7563a',1,'IEMGroupManager-p']]],
   ['asyncfetchgroupinfo_3aincludememberslist_3asuccess_3afailure_3a',['asyncFetchGroupInfo:includeMembersList:success:failure:',['../protocol_i_e_m_group_manager-p.html#a93bbda82f58e416c480811e66449a3bd',1,'IEMGroupManager-p']]],
+  ['asyncfetchhistorymessagesfromserver_3aconversationtype_3astartmessageid_3apagesize_3acomplation_3a',['asyncFetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:complation:',['../protocol_i_e_m_chat_manager-p.html#add3178200315874b7a6f084a520e0066',1,'IEMChatManager-p']]],
   ['asyncgetallchatroomsfromserver_3afailure_3a',['asyncGetAllChatroomsFromServer:failure:',['../protocol_i_e_m_chatroom_manager-p.html#acff2892d2657c1b620c6fe1843d30986',1,'IEMChatroomManager-p']]],
   ['asyncgetblacklistfromserver_3afailure_3a',['asyncGetBlackListFromServer:failure:',['../protocol_i_e_m_contact_manager-p.html#aff2fbab20ada5e551399e013227b6ff3',1,'IEMContactManager-p']]],
   ['asyncgetcontactsfromserver_3afailure_3a',['asyncGetContactsFromServer:failure:',['../protocol_i_e_m_contact_manager-p.html#a86a9711df6006480b47608c765a77eac',1,'IEMContactManager-p']]],
