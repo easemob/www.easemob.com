@@ -4,6 +4,7 @@ var searchData=
   ['unblockgroupmessage',['unblockGroupMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a2f455d711ec775490996abf6cb31ea86',1,'com::hyphenate::chat::EMGroupManager']]],
   ['unblockuser',['unblockUser',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a2c26127fddaac96ffdde2463a8222926',1,'com::hyphenate::chat::EMGroupManager']]],
   ['unmutechatroommembers',['unMuteChatRoomMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a393557093541019789e4332b009aa9e6',1,'com::hyphenate::chat::EMChatRoomManager']]],
+  ['unmutegroupmembers',['unMuteGroupMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#af2d67599ccd59c86b2f864e111c1cb37',1,'com::hyphenate::chat::EMGroupManager']]],
   ['up',['UP',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html#a7da6922f03fda8d28c8c051bb1086a3b',1,'com::hyphenate::chat::EMConversation::EMSearchDirection']]],
   ['updatechatroomannouncement',['updateChatRoomAnnouncement',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a34f923e7b7b3e44d903787a4f8616953',1,'com::hyphenate::chat::EMChatRoomManager']]],
   ['updatecurrentusernick',['updateCurrentUserNick',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#ac65e9255670c1da37482f686dbe9a176',1,'com::hyphenate::chat::EMClient']]],
