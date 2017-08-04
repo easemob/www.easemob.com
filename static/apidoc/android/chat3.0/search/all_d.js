@@ -26,6 +26,7 @@ var searchData=
   ['onmessagechanged',['onMessageChanged',['../interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#a6273f7a45f54804c7ef57e85711970e1',1,'com::hyphenate::EMMessageListener']]],
   ['onmessagedelivered',['onMessageDelivered',['../interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#ae702cdd75075f075dc702e9ed13c4294',1,'com::hyphenate::EMMessageListener']]],
   ['onmessageread',['onMessageRead',['../interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#ab80d9b7b8c05c4bc1f645fe985449924',1,'com::hyphenate::EMMessageListener']]],
+  ['onmessagerecalled',['onMessageRecalled',['../interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#adf914eb747aeeda1818a506c4989c645',1,'com::hyphenate::EMMessageListener']]],
   ['onmessagereceived',['onMessageReceived',['../interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#a4d8e68d37a859c00d6a90dccccc219f8',1,'com::hyphenate::EMMessageListener']]],
   ['onmigrate2x',['onMigrate2x',['../interfacecom_1_1hyphenate_1_1_e_m_client_listener.html#ac1fb143221950e79723c477201fe0f9a',1,'com::hyphenate::EMClientListener']]],
   ['onmutelistadded',['onMuteListAdded',['../interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#a02b81de93cea6f36fc0fd424d0cea08a',1,'com.hyphenate.EMChatRoomChangeListener.onMuteListAdded()'],['../interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#afa4df48cc8b76121596342bea0b3b846',1,'com.hyphenate.EMGroupChangeListener.onMuteListAdded()']]],

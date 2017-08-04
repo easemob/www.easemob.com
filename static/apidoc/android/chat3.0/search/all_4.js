@@ -58,7 +58,7 @@ var searchData=
   ['emgroupstyleprivateonlyownerinvite',['EMGroupStylePrivateOnlyOwnerInvite',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#a059981b5d40681b7f3c42b5aa6ea4967',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
   ['emgroupstylepublicjoinneedapproval',['EMGroupStylePublicJoinNeedApproval',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#af241f64d82e50c11a644b6bfb221cd0e',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
   ['emgroupstylepublicopenjoin',['EMGroupStylePublicOpenJoin',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#a7e715664b7cf519ab6a4734f013a619c',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
-  ['emhuaweipushreceiver',['EMHuaweiPushReceiver',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_huawei_push_receiver.html',1,'com::hyphenate::chat']]],
+  ['emhwpushreceiver',['EMHWPushReceiver',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_h_w_push_receiver.html',1,'com::hyphenate::chat']]],
   ['emimagemessagebody',['EMImageMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#ac8ca3773cb9dd9b3b12ff2178acedbc5',1,'com.hyphenate.chat.EMImageMessageBody.EMImageMessageBody(File imageFile)'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a25968f19f1573b75bcd532ffdbcc4fb4',1,'com.hyphenate.chat.EMImageMessageBody.EMImageMessageBody(File imageFile, File thumbnailFile)']]],
   ['emimagemessagebody',['EMImageMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html',1,'com::hyphenate::chat']]],
   ['emjobservice',['EMJobService',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_job_service.html',1,'com::hyphenate::chat']]],
