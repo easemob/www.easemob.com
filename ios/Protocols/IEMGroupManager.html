@@ -367,7 +367,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aQueue</code></th>
-						<td><p>The queue of call delegate method</p></td>
+						<td><p>(optional) The queue of calling delegate methods. Pass in nil to run on main thread.</p></td>
 					</tr>
 				
 				</table>
@@ -577,7 +577,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get pagesize number group from server.</p>
+				<p>Get pagesize number group you joined from the server.</p>
 			</div>
 			
 		    
@@ -621,7 +621,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get pagesize number group from server.</p>
+				<p>Get pagesize number group you joined from the server.</p>
 
 <p>Synchronization method will block the current thread</p>
 			</div>
@@ -652,7 +652,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get all the groups from server</p>
+				<p>Get pagesize number group you joined from the server.</p>
 			</div>
 			
 		    
@@ -691,7 +691,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get all the groups from server</p>
+				<p>Get pagesize number group you joined from the server.</p>
 			</div>
 			
 
@@ -1239,12 +1239,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Fetch group specification，include ID, name, description，setting, owner, admins</p>
+				<p>Fetch group specification, including: ID, name, description, setting, owner, admins</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)getGroupSpecificationFromServerWithId:(NSString *)<em>aGroupID</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)getGroupSpecificationFromServerWithId:(NSString *)<em>aGroupId</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
@@ -1253,13 +1253,13 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
 					</tr>
 				
 				</table>
@@ -1273,7 +1273,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Fetch group specification，include ID, name, description，setting, owner, admins</p>
+				<p>Fetch group specification, including: ID, name, description, setting, owner, admins</p>
 			</div>
 			
 
@@ -5302,6 +5302,11 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
 						<th scope="row" class="argument-name"><code>aUsername</code></th>
 						<td><p>Inviter</p></td>
 					</tr>
@@ -5309,11 +5314,6 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>pError</code></th>
 						<td><p>Error</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>groupId</code></th>
-						<td><p>Group id</p></td>
 					</tr>
 				
 				</table>
@@ -5377,6 +5377,11 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
 						<th scope="row" class="argument-name"><code>aUsername</code></th>
 						<td><p>Inviter</p></td>
 					</tr>
@@ -5384,11 +5389,6 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
 						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>groupId</code></th>
-						<td><p>Group id</p></td>
 					</tr>
 				
 				</table>
@@ -5579,7 +5579,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Block / unblock group message‘s push notification</p>
+				<p>Block/unblock group message‘s push notification</p>
 			</div>
 			
 		    
@@ -5598,8 +5598,8 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aIgnore</code></th>
-						<td><p>Whether block</p></td>
+						<th scope="row" class="argument-name"><code>aIsIgnore</code></th>
+						<td><p>Show/ignore push notificatino</p></td>
 					</tr>
 				
 				</table>
@@ -5618,7 +5618,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Block / unblock group message‘s push notification</p>
+				<p>Block/unblock group message‘s push notification</p>
 
 <p>Synchronization method will block the current thread</p>
 			</div>
@@ -5649,7 +5649,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Block / unblock group message‘s push notification</p>
+				<p>Block/unblock group message‘s push notification</p>
 			</div>
 			
 		    
@@ -5668,8 +5668,8 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aIgnore</code></th>
-						<td><p>Whether block</p></td>
+						<th scope="row" class="argument-name"><code>aIsIgnore</code></th>
+						<td><p>Show or ignore push notification</p></td>
 					</tr>
 				
 				</table>
@@ -5688,7 +5688,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Block / unblock group message‘s push notification</p>
+				<p>Block/unblock group message‘s push notification</p>
 
 <p>Synchronization method will block the current thread</p>
 			</div>
@@ -5719,18 +5719,23 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Block / unblock group message‘s push notification</p>
+				<p>Block/unblock group message‘s push notification</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)updatePushServiceForGroup:(NSString *)<em>aGroupID</em> isPushEnabled:(BOOL)<em>aIsEnable</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)updatePushServiceForGroup:(NSString *)<em>aGroupId</em> isPushEnabled:(BOOL)<em>aIsEnable</em> completion:(void ( ^ ) ( EMGroup *aGroup , EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aIsEnable</code></th>
@@ -5740,11 +5745,6 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
 						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aGroupId</code></th>
-						<td><p>Group id</p></td>
 					</tr>
 				
 				</table>
@@ -5758,7 +5758,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Block / unblock group message‘s push notification</p>
+				<p>Block/unblock group message‘s push notification</p>
 			</div>
 			
 
@@ -5787,7 +5787,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Block / unblock group message‘s push notification</p>
+				<p>Block/unblock group message‘s push notification</p>
 			</div>
 			
 		    
@@ -5826,7 +5826,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Block / unblock group message‘s push notification</p>
+				<p>Block/unblock group message‘s push notification</p>
 			</div>
 			
 
@@ -8265,7 +8265,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-06-27</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-09-04</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>EMPageResult Class Reference</title>
+	<title>EMMultiDevicesDelegate Protocol Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -54,23 +54,17 @@
 
 	
 	
-	<optgroup label="Properties">
-		
-		<option value="//api/name/count">count</option>
-		
-		<option value="//api/name/list">list</option>
-		
-	</optgroup>
+
 	
 
 	
-	<optgroup label="Class Methods">
+	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/pageResultWithList:andCount:">+ pageResultWithList:andCount:</option>
+		<option value="//api/name/multiDevicesContactEventDidReceive:username:ext:">- multiDevicesContactEventDidReceive:username:ext:</option>
+		
+		<option value="//api/name/multiDevicesGroupEventDidReceive:groupId:ext:">- multiDevicesGroupEventDidReceive:groupId:ext:</option>
 		
 	</optgroup>
-	
-
 	
 	
 </select>
@@ -85,16 +79,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">EMPageResult Class Reference</h1>
+					<h1 class="title">EMMultiDevicesDelegate Protocol Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<th>Inherits from</th>
+	<th>Conforms to</th>
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>EMPageResult.h</td>
+	<td>EMMultiDevicesDelegate.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,7 +98,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Sub-section result</p>
+						<p>  UserA un-silent a user(s) on GroupA on DeviceA1, DeviceA2 will receive this callback</p>
 					</div>
 					
 					
@@ -120,8 +114,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/list" title="list"></a>
-	<h3 class="method-title"><code><a href="#//api/name/list">&nbsp;&nbsp;list</a></code>
+	<a name="//api/name/multiDevicesContactEventDidReceive:username:ext:" title="multiDevicesContactEventDidReceive:username:ext:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/multiDevicesContactEventDidReceive:username:ext:">&ndash;&nbsp;multiDevicesContactEventDidReceive:username:ext:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -131,104 +125,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Result list<id></p>
+				<p>The multi-device event callback of contact</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray *list</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Result list<id></p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EMPageResult.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/count" title="count"></a>
-	<h3 class="method-title"><code><a href="#//api/name/count">&nbsp;&nbsp;count</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The count of current <a href="#//api/name/list">list</a></p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic) NSInteger count</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The count of current <a href="#//api/name/list">list</a></p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EMPageResult.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pageResultWithList:andCount:" title="pageResultWithList:andCount:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pageResultWithList:andCount:">+&nbsp;pageResultWithList:andCount:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Get result instance</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (instancetype)pageResultWithList:(NSArray *)<em>aList</em> andCount:(NSInteger)<em>aCount</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)multiDevicesContactEventDidReceive:(EMMultiDevicesEvent)<em>aEvent</em> username:(NSString *)<em>aUsername</em> ext:(NSString *)<em>aExt</em></code></div>
 
 		    
 			
@@ -237,13 +139,18 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aList</code></th>
-						<td><p>Result list<id></p></td>
+						<th scope="row" class="argument-name"><code>aEvent</code></th>
+						<td><p>Event type</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aCount</code></th>
-						<td><p>The <a href="#//api/name/count">count</a> of current <a href="#//api/name/list">list</a></p></td>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aExt</code></th>
+						<td><p>Extended Information</p></td>
 					</tr>
 				
 				</table>
@@ -251,18 +158,13 @@
 			
 
 			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>An instance of cursor result</p>
-			</div>
-			
 
 			
 
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get result instance</p>
+				<p>The multi-device event callback of contact</p>
 			</div>
 			
 
@@ -273,7 +175,75 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EMPageResult.h</code></p>
+				<p><code class="declared-in-ref">EMMultiDevicesDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/multiDevicesGroupEventDidReceive:groupId:ext:" title="multiDevicesGroupEventDidReceive:groupId:ext:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/multiDevicesGroupEventDidReceive:groupId:ext:">&ndash;&nbsp;multiDevicesGroupEventDidReceive:groupId:ext:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The multi-device event callback of group</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)multiDevicesGroupEventDidReceive:(EMMultiDevicesEvent)<em>aEvent</em> groupId:(NSString *)<em>aGroupId</em> ext:(id)<em>aExt</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aEvent</code></th>
+						<td><p>Event type</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aGroupId</code></th>
+						<td><p>Group id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aExt</code></th>
+						<td><p>Extended Information</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The multi-device event callback of group</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMMultiDevicesDelegate.h</code></p>
 			</div>
 			
 			

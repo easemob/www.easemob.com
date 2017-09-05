@@ -120,6 +120,10 @@
 		
 		<option value="//api/name/getContactsFromServerWithError:">- getContactsFromServerWithError:</option>
 		
+		<option value="//api/name/getSelfIdsOnOtherPlatformWithCompletion:">- getSelfIdsOnOtherPlatformWithCompletion:</option>
+		
+		<option value="//api/name/getSelfIdsOnOtherPlatformWithError:">- getSelfIdsOnOtherPlatformWithError:</option>
+		
 		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
 		
 		<option value="//api/name/removeUserFromBlackList:">- removeUserFromBlackList:</option>
@@ -207,7 +211,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aQueue</code></th>
-						<td><p>The queue of call delegate method</p></td>
+						<td><p>(optional) The queue of calling delegate methods. Pass in nil to run on main thread.</p></td>
 					</tr>
 				
 				</table>
@@ -308,7 +312,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get all contacts</p>
+				<p>Get all contacts from local database</p>
 			</div>
 			
 		    
@@ -321,7 +325,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Contact list<a href="../Classes/EMGroup.html">EMGroup</a></p>
+				<p>Contact list<String></p>
 			</div>
 			
 
@@ -330,7 +334,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get all contacts</p>
+				<p>Get all contacts from local database</p>
 			</div>
 			
 
@@ -348,8 +352,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/getBlackList" title="getBlackList"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getBlackList">&ndash;&nbsp;getBlackList</a></code>
+	<a name="//api/name/getContactsFromServerWithCompletion:" title="getContactsFromServerWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getContactsFromServerWithCompletion:">&ndash;&nbsp;getContactsFromServerWithCompletion:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -359,21 +363,28 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get the blacklist of blocked users</p>
+				<p>Get all contacts from the server</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSArray *)getBlackList</code></div>
+			<div class="method-subsection method-declaration"><code>- (void)getContactsFromServerWithCompletion:(void ( ^ ) ( NSArray *aList , EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Blacklist<a href="../Classes/EMGroup.html">EMGroup</a></p>
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
 			</div>
+			
+
 			
 
 			
@@ -381,7 +392,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get the blacklist of blocked users</p>
+				<p>Get all contacts from the server</p>
 			</div>
 			
 
@@ -495,7 +506,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aMessage</code></th>
-						<td><p>Invitation message</p></td>
+						<td><p>(optional) Invitation message. Pass in nil to ignore.</p></td>
 					</tr>
 				
 				</table>
@@ -517,6 +528,74 @@
 				<p>Add a contact with invitation message</p>
 
 <p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addContact:message:completion:" title="addContact:message:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addContact:message:completion:">&ndash;&nbsp;addContact:message:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a contact</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addContact:(NSString *)<em>aUsername</em> message:(NSString *)<em>aMessage</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The user to be added</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Friend request message</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add a contact</p>
 			</div>
 			
 
@@ -565,7 +644,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aIsDeleteConversation</code></th>
-						<td><p>Delete the conversation or not</p></td>
+						<td><p>If to keep the assoicated conversation and messages</p></td>
 					</tr>
 				
 				</table>
@@ -587,6 +666,314 @@
 				<p>Delete a contact</p>
 
 <p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteContact:isDeleteConversation:completion:" title="deleteContact:isDeleteConversation:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteContact:isDeleteConversation:completion:">&ndash;&nbsp;deleteContact:isDeleteConversation:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delete a contact</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteContact:(NSString *)<em>aUsername</em> isDeleteConversation:(BOOL)<em>aIsDeleteConversation</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>The user to be deleted</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aIsDeleteConversation</code></th>
+						<td><p>Delete the conversation or not</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delete a contact</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/approveFriendRequestFromUser:completion:" title="approveFriendRequestFromUser:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/approveFriendRequestFromUser:completion:">&ndash;&nbsp;approveFriendRequestFromUser:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Apporove a friend request</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)approveFriendRequestFromUser:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>User who initiated the friend request</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Apporove a friend request</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/declineFriendRequestFromUser:completion:" title="declineFriendRequestFromUser:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/declineFriendRequestFromUser:completion:">&ndash;&nbsp;declineFriendRequestFromUser:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decline a friend request</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)declineFriendRequestFromUser:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>User who initiated the friend request</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Decline a friend request</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getBlackList" title="getBlackList"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getBlackList">&ndash;&nbsp;getBlackList</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the blacklist of blocked users from local database</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getBlackList</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Blacklist<NSString> blacklist usernames</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the blacklist of blocked users from local database</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getBlackListFromServerWithCompletion:" title="getBlackListFromServerWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getBlackListFromServerWithCompletion:">&ndash;&nbsp;getBlackListFromServerWithCompletion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the blacklist from the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getBlackListFromServerWithCompletion:(void ( ^ ) ( NSArray *aList , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>aList<NSString> blacklist usernames</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the blacklist from the server</p>
 			</div>
 			
 
@@ -739,6 +1126,69 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/addUserToBlackList:completion:" title="addUserToBlackList:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addUserToBlackList:completion:">&ndash;&nbsp;addUserToBlackList:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a user to blacklist</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addUserToBlackList:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Block user</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add a user to blacklist</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/removeUserFromBlackList:" title="removeUserFromBlackList:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/removeUserFromBlackList:">&ndash;&nbsp;removeUserFromBlackList:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -787,6 +1237,69 @@
 				<p>Remove user out of blacklist</p>
 
 <p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeUserFromBlackList:completion:" title="removeUserFromBlackList:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeUserFromBlackList:completion:">&ndash;&nbsp;removeUserFromBlackList:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove a user from blacklist</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeUserFromBlackList:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Unblock user</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove a user from blacklist</p>
 			</div>
 			
 
@@ -938,8 +1451,8 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/getContactsFromServerWithCompletion:" title="getContactsFromServerWithCompletion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getContactsFromServerWithCompletion:">&ndash;&nbsp;getContactsFromServerWithCompletion:</a></code>
+	<a name="//api/name/getSelfIdsOnOtherPlatformWithError:" title="getSelfIdsOnOtherPlatformWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSelfIdsOnOtherPlatformWithError:">&ndash;&nbsp;getSelfIdsOnOtherPlatformWithError:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -949,12 +1462,13 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get all contacts from the server</p>
+				<p>Get the id list of the current account on another platform (Windows or Web)
+Id usage is similar to friend username</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)getContactsFromServerWithCompletion:(void ( ^ ) ( NSArray *aList , EMError *aError ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getSelfIdsOnOtherPlatformWithError:(EMError **)<em>pError</em></code></div>
 
 		    
 			
@@ -963,8 +1477,8 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
 					</tr>
 				
 				</table>
@@ -972,13 +1486,19 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 			
 
 			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>id list</p>
+			</div>
+			
 
 			
 
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get all contacts from the server</p>
+				<p>Get the id list of the current account on another platform (Windows or Web)
+Id usage is similar to friend username</p>
 			</div>
 			
 
@@ -996,8 +1516,8 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/addContact:message:completion:" title="addContact:message:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addContact:message:completion:">&ndash;&nbsp;addContact:message:completion:</a></code>
+	<a name="//api/name/getSelfIdsOnOtherPlatformWithCompletion:" title="getSelfIdsOnOtherPlatformWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSelfIdsOnOtherPlatformWithCompletion:">&ndash;&nbsp;getSelfIdsOnOtherPlatformWithCompletion:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -1007,148 +1527,13 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Add a contact</p>
+				<p>Get the id list of the current account on another platform (Windows or Web)
+Id usage is similar to friend username</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)addContact:(NSString *)<em>aUsername</em> message:(NSString *)<em>aMessage</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>The user to be added</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aMessage</code></th>
-						<td><p>Friend request message</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add a contact</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/deleteContact:isDeleteConversation:completion:" title="deleteContact:isDeleteConversation:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/deleteContact:isDeleteConversation:completion:">&ndash;&nbsp;deleteContact:isDeleteConversation:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Delete a contact</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)deleteContact:(NSString *)<em>aUsername</em> isDeleteConversation:(BOOL)<em>aIsDeleteConversation</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>The user to be deleted</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aIsDeleteConversation</code></th>
-						<td><p>Delete the conversation or not</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Delete a contact</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/getBlackListFromServerWithCompletion:" title="getBlackListFromServerWithCompletion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getBlackListFromServerWithCompletion:">&ndash;&nbsp;getBlackListFromServerWithCompletion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Get the blacklist from the server</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)getBlackListFromServerWithCompletion:(void ( ^ ) ( NSArray *aList , EMError *aError ))<em>aCompletionBlock</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)getSelfIdsOnOtherPlatformWithCompletion:(void ( ^ ) ( NSArray *aList , EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
 			
@@ -1172,259 +1557,8 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get the blacklist from the server</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/addUserToBlackList:completion:" title="addUserToBlackList:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addUserToBlackList:completion:">&ndash;&nbsp;addUserToBlackList:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Add a user to blacklist</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)addUserToBlackList:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>Block user</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add a user to blacklist</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/removeUserFromBlackList:completion:" title="removeUserFromBlackList:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/removeUserFromBlackList:completion:">&ndash;&nbsp;removeUserFromBlackList:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Remove a user from blacklist</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)removeUserFromBlackList:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>Unblock user</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Remove a user from blacklist</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/approveFriendRequestFromUser:completion:" title="approveFriendRequestFromUser:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/approveFriendRequestFromUser:completion:">&ndash;&nbsp;approveFriendRequestFromUser:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Apporove a friend request</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)approveFriendRequestFromUser:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>User who initiated the friend request</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Apporove a friend request</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">IEMContactManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/declineFriendRequestFromUser:completion:" title="declineFriendRequestFromUser:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/declineFriendRequestFromUser:completion:">&ndash;&nbsp;declineFriendRequestFromUser:completion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Decline a friend request</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)declineFriendRequestFromUser:(NSString *)<em>aUsername</em> completion:(void ( ^ ) ( NSString *aUsername , EMError *aError ))<em>aCompletionBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>User who initiated the friend request</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Decline a friend request</p>
+				<p>Get the id list of the current account on another platform (Windows or Web)
+Id usage is similar to friend username</p>
 			</div>
 			
 
@@ -2288,7 +2422,7 @@ completion:(void (^)(NSString </em>aUsername, <a href="../Classes/EMError.html">
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-06-27</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-09-04</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
