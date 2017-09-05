@@ -98,6 +98,8 @@
 		
 		<option value="//api/name/addDelegate:delegateQueue:">- addDelegate:delegateQueue:</option>
 		
+		<option value="//api/name/addMultiDevicesDelegate:delegateQueue:">- addMultiDevicesDelegate:delegateQueue:</option>
+		
 		<option value="//api/name/application:didReceiveRemoteNotification:">- application:didReceiveRemoteNotification:</option>
 		
 		<option value="//api/name/applicationDidEnterBackground:">- applicationDidEnterBackground:</option>
@@ -130,11 +132,23 @@
 		
 		<option value="//api/name/getLogFilesPathWithCompletion:">- getLogFilesPathWithCompletion:</option>
 		
+		<option value="//api/name/getLoggedInDevicesFromServerWithUsername:password:completion:">- getLoggedInDevicesFromServerWithUsername:password:completion:</option>
+		
+		<option value="//api/name/getLoggedInDevicesFromServerWithUsername:password:error:">- getLoggedInDevicesFromServerWithUsername:password:error:</option>
+		
 		<option value="//api/name/getPushNotificationOptionsFromServerWithCompletion:">- getPushNotificationOptionsFromServerWithCompletion:</option>
 		
 		<option value="//api/name/getPushOptionsFromServerWithError:">- getPushOptionsFromServerWithError:</option>
 		
 		<option value="//api/name/initializeSDKWithOptions:">- initializeSDKWithOptions:</option>
+		
+		<option value="//api/name/kickAllDevicesWithUsername:password:">- kickAllDevicesWithUsername:password:</option>
+		
+		<option value="//api/name/kickAllDevicesWithUsername:password:completion:">- kickAllDevicesWithUsername:password:completion:</option>
+		
+		<option value="//api/name/kickDevice:username:password:">- kickDevice:username:password:</option>
+		
+		<option value="//api/name/kickDevice:username:password:completion:">- kickDevice:username:password:completion:</option>
 		
 		<option value="//api/name/loginWithUsername:password:">- loginWithUsername:password:</option>
 		
@@ -157,6 +171,8 @@
 		<option value="//api/name/registerWithUsername:password:completion:">- registerWithUsername:password:completion:</option>
 		
 		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
+		
+		<option value="//api/name/removeMultiDevicesDelegate:">- removeMultiDevicesDelegate:</option>
 		
 		<option value="//api/name/setApnsNickname:">- setApnsNickname:</option>
 		
@@ -555,7 +571,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Chat room Management</p>
+				<p>Chat Room Management</p>
 			</div>
 			
 		    
@@ -572,7 +588,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Chat room Management</p>
+				<p>Chat Room Management</p>
 			</div>
 			
 
@@ -601,7 +617,9 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If SDK will automatically log into with previously logged in session</p>
+				<p>If SDK will automatically log into with previously logged in session. If the current login failed, then isAutoLogin attribute will be reset to NO, you need to set it back to YES in order to allow automatic login
+1. password changed
+2. deactivate, forced logout, etc</p>
 			</div>
 			
 		    
@@ -618,7 +636,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>If SDK will automatically log into with previously logged in session</p>
+				<p>If SDK will automatically log into with previously logged in session. If the current login failed, then isAutoLogin attribute will be reset to NO, you need to set it back to YES in order to allow automatic login
+1. password changed
+2. deactivate, forced logout, etc</p>
 			</div>
 			
 
@@ -805,7 +825,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aQueue</code></th>
-						<td><p>The queue of calling delegate methods</p></td>
+						<td><p>(optional) The queue of calling delegate methods. Pass in nil to run on main thread.</p></td>
 					</tr>
 				
 				</table>
@@ -878,6 +898,127 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Remove delegate</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addMultiDevicesDelegate:delegateQueue:" title="addMultiDevicesDelegate:delegateQueue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addMultiDevicesDelegate:delegateQueue:">&ndash;&nbsp;addMultiDevicesDelegate:delegateQueue:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add multi-device delegate</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addMultiDevicesDelegate:(id&lt;EMMultiDevicesDelegate&gt;)<em>aDelegate</em> delegateQueue:(dispatch_queue_t)<em>aQueue</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDelegate</code></th>
+						<td><p>Delegate</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aQueue</code></th>
+						<td><p>The queue of calling delegate methods</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add multi-device delegate</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeMultiDevicesDelegate:" title="removeMultiDevicesDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeMultiDevicesDelegate:">&ndash;&nbsp;removeMultiDevicesDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Remove multi devices delegate</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeMultiDevicesDelegate:(id&lt;EMMultiDevicesDelegate&gt;)<em>aDelegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDelegate</code></th>
+						<td><p>Delegate</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Remove multi devices delegate</p>
 			</div>
 			
 
@@ -969,7 +1110,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Change appkey,just logged out could change appkey</p>
+				<p>Change appkey. Can only change appkey when the user is logged out</p>
 			</div>
 			
 		    
@@ -1003,7 +1144,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Change appkey,just logged out could change appkey</p>
+				<p>Change appkey. Can only change appkey when the user is logged out</p>
 			</div>
 			
 
@@ -1073,7 +1214,7 @@
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Register a new IM user</p>
 
-<p>To enhance the reliability, registering new IM user through REST API from backend is highly recommended</p>
+<p>To ensure good reliability, registering new IM user via REST API from developer backend is highly recommended</p>
 			</div>
 			
 
@@ -1127,7 +1268,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -1143,7 +1284,7 @@
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Register a new IM user</p>
 
-<p>To enhance the reliability, recommend register new IM user via backend using REST API</p>
+<p>To ensure good reliability, registering new IM user via REST API from developer backend is highly recommended</p>
 			</div>
 			
 
@@ -1267,7 +1408,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -1310,7 +1451,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Login with token, does not support automatic login</p>
+				<p>Login with token. Does not support automatic login</p>
 			</div>
 			
 		    
@@ -1349,7 +1490,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Login with token, does not support automatic login</p>
+				<p>Login with token. Does not support automatic login</p>
 
 <p>Synchronization method will block the current thread</p>
 			</div>
@@ -1380,7 +1521,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Login with token, does not support automatic login</p>
+				<p>Login with token. Does not support automatic login</p>
 			</div>
 			
 		    
@@ -1405,7 +1546,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -1419,7 +1560,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Login with token, does not support automatic login</p>
+				<p>Login with token. Does not support automatic login</p>
 			</div>
 			
 
@@ -1533,7 +1674,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -1576,7 +1717,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Device token binding is required for enabling Apple Push Notification Service</p>
+				<p>Device token binding is required to enable Apple Push Notification Service</p>
 			</div>
 			
 		    
@@ -1610,7 +1751,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Device token binding is required for enabling Apple Push Notification Service</p>
+				<p>Device token binding is required to enable Apple Push Notification Service</p>
 
 <p>Synchronization method will block the current thread</p>
 			</div>
@@ -1912,7 +2053,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -2119,7 +2260,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Upload log to server</p>
+				<p>Upload debugging log to server</p>
 			</div>
 			
 		    
@@ -2134,7 +2275,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -2148,7 +2289,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Upload log to server</p>
+				<p>Upload debugging log to server</p>
 			</div>
 			
 
@@ -2177,7 +2318,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Compress the log file into a .gz file, return to the gz file path. It is strongly recommended that you remove the gz file after the method completes.</p>
+				<p>Compress the log file into a .gz file and return the gz file path. Recommend delete the gz file if file is no longer used</p>
 			</div>
 			
 		    
@@ -2211,7 +2352,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Compress the log file into a .gz file, return to the gz file path. It is strongly recommended that you remove the gz file after the method completes.</p>
+				<p>Compress the log file into a .gz file and return the gz file path. Recommend delete the gz file if file is no longer used</p>
 
 <p>Synchronization method will block the current thread</p>
 			</div>
@@ -2242,7 +2383,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Compress the log file into a .gz file, return to the gz file path. It is strongly recommended that you remove the gz file after the method completes.</p>
+				<p>Compress the log file into a .gz file and return the gz file path. Recommend delete the gz file if file is no longer used</p>
 			</div>
 			
 		    
@@ -2254,6 +2395,304 @@
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback of completion block</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Compress the log file into a .gz file and return the gz file path. Recommend delete the gz file if file is no longer used</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getLoggedInDevicesFromServerWithUsername:password:error:" title="getLoggedInDevicesFromServerWithUsername:password:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getLoggedInDevicesFromServerWithUsername:password:error:">&ndash;&nbsp;getLoggedInDevicesFromServerWithUsername:password:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all the device information <a href="../Classes/EMDeviceConfig.html">EMDeviceConfig</a> that logged in to the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getLoggedInDevicesFromServerWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPassword</code></th>
+						<td><p>Password</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pError</code></th>
+						<td><p>Error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Information of logged in device <a href="../Classes/EMDeviceConfig.html">EMDeviceConfig</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all the device information <a href="../Classes/EMDeviceConfig.html">EMDeviceConfig</a> that logged in to the server</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getLoggedInDevicesFromServerWithUsername:password:completion:" title="getLoggedInDevicesFromServerWithUsername:password:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getLoggedInDevicesFromServerWithUsername:password:completion:">&ndash;&nbsp;getLoggedInDevicesFromServerWithUsername:password:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get all the device information <a href="../Classes/EMDeviceConfig.html">EMDeviceConfig</a> that logged in to the server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getLoggedInDevicesFromServerWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em> completion:(void ( ^ ) ( NSArray *aList , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPassword</code></th>
+						<td><p>Password</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>aList           Information of logged in device <a href="../Classes/EMDeviceConfig.html">EMDeviceConfig</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get all the device information <a href="../Classes/EMDeviceConfig.html">EMDeviceConfig</a> that logged in to the server</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/kickDevice:username:password:" title="kickDevice:username:password:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/kickDevice:username:password:">&ndash;&nbsp;kickDevice:username:password:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Force logout the specified device</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)kickDevice:(EMDeviceConfig *)<em>aDevice</em> username:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDevice</code></th>
+						<td><p>device information <a href="../Classes/EMDeviceConfig.html">EMDeviceConfig</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPassword</code></th>
+						<td><p>Password</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Force logout the specified device</p>
+
+<p>device information can be obtained from <a href="#//api/name/getLoggedInDevicesFromServerWithUsername:password:error:">getLoggedInDevicesFromServerWithUsername:password:error:</a></p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/kickDevice:username:password:completion:" title="kickDevice:username:password:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/kickDevice:username:password:completion:">&ndash;&nbsp;kickDevice:username:password:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Force logout the specified device</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)kickDevice:(EMDeviceConfig *)<em>aDevice</em> username:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em> completion:(void ( ^ ) ( EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aDevice</code></th>
+						<td><p>device information <a href="../Classes/EMDeviceConfig.html">EMDeviceConfig</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPassword</code></th>
+						<td><p>Password</p></td>
+					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
@@ -2271,7 +2710,147 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Compress the log file into a .gz file, return to the gz file path. It is strongly recommended that you remove the gz file after the method completes.</p>
+				<p>Force logout the specified device</p>
+
+<p>device information can be obtained from <a href="#//api/name/getLoggedInDevicesFromServerWithUsername:password:error:">getLoggedInDevicesFromServerWithUsername:password:error:</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/kickAllDevicesWithUsername:password:" title="kickAllDevicesWithUsername:password:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/kickAllDevicesWithUsername:password:">&ndash;&nbsp;kickAllDevicesWithUsername:password:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Force logout all logged in device for the specified user</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMError *)kickAllDevicesWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPassword</code></th>
+						<td><p>Password</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Error</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Force logout all logged in device for the specified user</p>
+
+<p>Synchronization method will block the current thread</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/kickAllDevicesWithUsername:password:completion:" title="kickAllDevicesWithUsername:password:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/kickAllDevicesWithUsername:password:completion:">&ndash;&nbsp;kickAllDevicesWithUsername:password:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Force all logged in device to logout.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)kickAllDevicesWithUsername:(NSString *)<em>aUsername</em> password:(NSString *)<em>aPassword</em> completion:(void ( ^ ) ( EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUsername</code></th>
+						<td><p>Username</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aPassword</code></th>
+						<td><p>Password</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Force all logged in device to logout.</p>
 			</div>
 			
 
@@ -2411,7 +2990,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Re-connect to server when app enters foreground</p>
+				<p>Reconnect to server when app enters foreground</p>
 			</div>
 			
 		    
@@ -2440,7 +3019,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Re-connect to server when app enters foreground</p>
+				<p>Reconnect to server when app enters foreground</p>
 			</div>
 			
 
@@ -2469,7 +3048,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Need to call this method when APP receive APNs in foreground</p>
+				<p>Invoked when receiving APNs in foreground</p>
 			</div>
 			
 		    
@@ -2503,7 +3082,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Need to call this method when APP receive APNs in foreground</p>
+				<p>Invoked when receiving APNs in foreground</p>
 			</div>
 			
 
@@ -2883,6 +3462,11 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
+						<th scope="row" class="argument-name"><code>aNickname</code></th>
+						<td><p>Push Notification display name</p></td>
+					</tr>
+				
+					<tr>
 						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
 						<td><p>The callback block of success</p></td>
 					</tr>
@@ -2890,11 +3474,6 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>aFailureBlock</code></th>
 						<td><p>The callback block of failure</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aDisplayName</code></th>
-						<td><p>Push Notification display name</p></td>
 					</tr>
 				
 				</table>
@@ -3238,7 +3817,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-06-27</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-09-04</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

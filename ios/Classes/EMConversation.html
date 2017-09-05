@@ -189,7 +189,11 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Unique identifier of conversation</p>
+				<p>conversation ID
+For single chat，conversation ID is to chat user&rsquo;s name
+For group chat, conversation ID is groupID(), different with getGroupName()
+For chat room, conversation ID is chatroom ID, different with chat room name()
+For help desk, it is same with single chat, conversationID is also chat user&rsquo;s name</p>
 			</div>
 			
 		    
@@ -206,7 +210,11 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Unique identifier of conversation</p>
+				<p>conversation ID
+For single chat，conversation ID is to chat user&rsquo;s name
+For group chat, conversation ID is groupID(), different with getGroupName()
+For chat room, conversation ID is chatroom ID, different with chat room name()
+For help desk, it is same with single chat, conversationID is also chat user&rsquo;s name</p>
 			</div>
 			
 
@@ -281,7 +289,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Count of unread messages</p>
+				<p>unread message count</p>
 			</div>
 			
 		    
@@ -298,7 +306,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Count of unread messages</p>
+				<p>unread message count</p>
 			</div>
 			
 
@@ -408,6 +416,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/lastReceivedMessage" title="lastReceivedMessage"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lastReceivedMessage">&ndash;&nbsp;lastReceivedMessage</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get last received message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMMessage *)lastReceivedMessage</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Message instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get last received message</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EMConversation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/insertMessage:error:" title="insertMessage:error:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/insertMessage:error:">&ndash;&nbsp;insertMessage:error:</a></code>
 </h3>
@@ -419,7 +478,9 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Insert a message to a conversation. ConversationId of the message should be the same as <a href="#//api/name/conversationId">conversationId</a> of the conversation in order to insert the message into the conversation correctly.</p>
+				<p>Insert a message to a conversation in local database and SDK will update the last message automatically
+ConversationId of the message should be the same as <a href="#//api/name/conversationId">conversationId</a> of the conversation in order to insert the message into the conversation correctly. The inserting message will be inserted based on timestamp.
+Method EMConversation insertMessage:error: = EMChatManager importMsessage:completion: + update conversation latest message</p>
 			</div>
 			
 		    
@@ -453,7 +514,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Insert a message to a conversation. ConversationId of the message should be the same as <a href="#//api/name/conversationId">conversationId</a> of the conversation in order to insert the message into the conversation correctly.</p>
+				<p>Insert a message to a conversation in local database and SDK will update the last message automatically
+ConversationId of the message should be the same as <a href="#//api/name/conversationId">conversationId</a> of the conversation in order to insert the message into the conversation correctly. The inserting message will be inserted based on timestamp.
+Method EMConversation insertMessage:error: = EMChatManager importMsessage:completion: + update conversation latest message</p>
 			</div>
 			
 
@@ -482,7 +545,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Insert a message to the end of a conversation. ConversationId of the message should be the same as <a href="#//api/name/conversationId">conversationId</a> of the conversation in order to insert the message into the conversation correctly.</p>
+				<p>Insert a message to the end of a conversation in local database. ConversationId of the message should be the same as <a href="#//api/name/conversationId">conversationId</a> of the conversation in order to insert the message into the conversation correctly.</p>
 			</div>
 			
 		    
@@ -516,7 +579,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Insert a message to the end of a conversation. ConversationId of the message should be the same as <a href="#//api/name/conversationId">conversationId</a> of the conversation in order to insert the message into the conversation correctly.</p>
+				<p>Insert a message to the end of a conversation in local database. ConversationId of the message should be the same as <a href="#//api/name/conversationId">conversationId</a> of the conversation in order to insert the message into the conversation correctly.</p>
 			</div>
 			
 
@@ -560,7 +623,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aMessageId</code></th>
-						<td><p>MessageId of the message to be deleted</p></td>
+						<td><p>Id of the message to be deleted</p></td>
 					</tr>
 				
 					<tr>
@@ -608,7 +671,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Delete all message of a conversation</p>
+				<p>Delete all messages of the conversation from memory cache and local database</p>
 			</div>
 			
 		    
@@ -637,7 +700,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Delete all message of a conversation</p>
+				<p>Delete all messages of the conversation from memory cache and local database</p>
 			</div>
 			
 
@@ -666,7 +729,8 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Update a local message, conversation&rsquo;s <a href="#//api/name/latestMessage">latestMessage</a> and other properties will be updated accordingly. Please note that messageId can not be updated.</p>
+				<p>Use this method to update a message in local database. Changing properties will affect data in database
+LatestMessage of the conversation and other properties will be updated accordingly. messageId of the message cannot be updated</p>
 			</div>
 			
 		    
@@ -700,7 +764,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Update a local message, conversation&rsquo;s <a href="#//api/name/latestMessage">latestMessage</a> and other properties will be updated accordingly. Please note that messageId can not be updated.</p>
+				<p>Use this method to update a message in local database. Changing properties will affect data in database
+LatestMessage of the conversation and other properties will be updated accordingly. messageId of the message cannot be updated</p>
 			</div>
 			
 
@@ -792,7 +857,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Mark all message as read</p>
+				<p>Mark all messages as read</p>
 			</div>
 			
 		    
@@ -821,7 +886,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Mark all message as read</p>
+				<p>Mark all messages as read</p>
 			</div>
 			
 
@@ -902,57 +967,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/lastReceivedMessage" title="lastReceivedMessage"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lastReceivedMessage">&ndash;&nbsp;lastReceivedMessage</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Get last received message</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (EMMessage *)lastReceivedMessage</code></div>
-
-		    
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>Message instance</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get last received message</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">EMConversation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/loadMessagesStartFromId:count:searchDirection:completion:" title="loadMessagesStartFromId:count:searchDirection:completion:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/loadMessagesStartFromId:count:searchDirection:completion:">&ndash;&nbsp;loadMessagesStartFromId:count:searchDirection:completion:</a></code>
 </h3>
@@ -964,7 +978,18 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Load messages from a specified message, returning messages are sorted by receiving timestamp. If the aMessageId is nil, return the latest received messages.</p>
+				<ul>
+<li>Load messages starting from the specified message id from local database. Returning messages are sorted by receiving timestamp based on EMMessageSearchDirection. If the aMessageId is nil, will return starting from the latest message
+*</li>
+<li>@param aMessageId       Start loading messages from the specified message id</li>
+<li>@param aCount           Max number of messages to load</li>
+<li>@param aDirection       Message search direction.
+                         EMMessageSearchDirectionUp: get aCount of messages before aMessageId;
+                         EMMessageSearchDirectionDown: get aCount of messages after aMessageId</li>
+<li>@param aCompletionBlock The callback of completion block
+*</li>
+</ul>
+
 			</div>
 			
 		    
@@ -972,33 +997,6 @@
 			<div class="method-subsection method-declaration"><code>- (void)loadMessagesStartFromId:(NSString *)<em>aMessageId</em> count:(int)<em>aCount</em> searchDirection:(EMMessageSearchDirection)<em>aDirection</em> completion:(void ( ^ ) ( NSArray *aMessages , EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aMessageId</code></th>
-						<td><p>Reference message&rsquo;s ID</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCount</code></th>
-						<td><p>Count of messages to load</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aDirection</code></th>
-						<td><p>Message search direction</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
@@ -1008,7 +1006,18 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Load messages from a specified message, returning messages are sorted by receiving timestamp. If the aMessageId is nil, return the latest received messages.</p>
+				<ul>
+<li>Load messages starting from the specified message id from local database. Returning messages are sorted by receiving timestamp based on EMMessageSearchDirection. If the aMessageId is nil, will return starting from the latest message
+*</li>
+<li>@param aMessageId       Start loading messages from the specified message id</li>
+<li>@param aCount           Max number of messages to load</li>
+<li>@param aDirection       Message search direction.
+                         EMMessageSearchDirectionUp: get aCount of messages before aMessageId;
+                         EMMessageSearchDirectionDown: get aCount of messages after aMessageId</li>
+<li>@param aCompletionBlock The callback of completion block
+*</li>
+</ul>
+
 			</div>
 			
 
@@ -1037,7 +1046,20 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Load messages with specified <a href="#//api/name/type">type</a>, returning messages are sorted by receiving timestamp. If reference timestamp is negative, load from the latest messages; if message count is negative, count deal with 1 and load one message that meet the condition.</p>
+				<ul>
+<li>Load messages with specified message <a href="#//api/name/type">type</a> from local database. Returning messages are sorted by receiving timestamp based on EMMessageSearchDirection.
+*</li>
+<li>@param aType            Message <a href="#//api/name/type">type</a> to load</li>
+<li>@param aTimestamp       load based on reference timestamp. If aTimestamp=-1, will load from the most recent (the latest) message</li>
+<li>@param aCount           Max number of messages to load. if aCount&lt;0, will be handled as count=1</li>
+<li>@param aUsername        Message sender (optional). Use aUsername=nil to ignore</li>
+<li>@param aDirection       Message search direction
+                         EMMessageSearchDirectionUp: get aCount of messages before aMessageId;
+                         EMMessageSearchDirectionDown: get aCount of messages after aMessageId</li>
+<li>@param aCompletionBlock The callback of completion block
+*</li>
+</ul>
+
 			</div>
 			
 		    
@@ -1045,43 +1067,6 @@
 			<div class="method-subsection method-declaration"><code>- (void)loadMessagesWithType:(EMMessageBodyType)<em>aType</em> timestamp:(long long)<em>aTimestamp</em> count:(int)<em>aCount</em> fromUser:(NSString *)<em>aUsername</em> searchDirection:(EMMessageSearchDirection)<em>aDirection</em> completion:(void ( ^ ) ( NSArray *aMessages , EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aType</code></th>
-						<td><p>Message <a href="#//api/name/type">type</a> to load</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aTimestamp</code></th>
-						<td><p>Reference timestamp</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aUsername</code></th>
-						<td><p>Message sender (optional)</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aDirection</code></th>
-						<td><p>Message search direction</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aLimit</code></th>
-						<td><p>Count of messages to load</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
@@ -1091,7 +1076,20 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Load messages with specified <a href="#//api/name/type">type</a>, returning messages are sorted by receiving timestamp. If reference timestamp is negative, load from the latest messages; if message count is negative, count deal with 1 and load one message that meet the condition.</p>
+				<ul>
+<li>Load messages with specified message <a href="#//api/name/type">type</a> from local database. Returning messages are sorted by receiving timestamp based on EMMessageSearchDirection.
+*</li>
+<li>@param aType            Message <a href="#//api/name/type">type</a> to load</li>
+<li>@param aTimestamp       load based on reference timestamp. If aTimestamp=-1, will load from the most recent (the latest) message</li>
+<li>@param aCount           Max number of messages to load. if aCount&lt;0, will be handled as count=1</li>
+<li>@param aUsername        Message sender (optional). Use aUsername=nil to ignore</li>
+<li>@param aDirection       Message search direction
+                         EMMessageSearchDirectionUp: get aCount of messages before aMessageId;
+                         EMMessageSearchDirectionDown: get aCount of messages after aMessageId</li>
+<li>@param aCompletionBlock The callback of completion block
+*</li>
+</ul>
+
 			</div>
 			
 
@@ -1120,7 +1118,20 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Load messages with specified keyword, returning messages are sorted by receiving timestamp. If reference timestamp is negative, load from the latest messages; if message count is negative, count deal with 1 and load one message that meet the condition.</p>
+				<ul>
+<li>Load messages with specified keyword from local database, returning messages are sorted by receiving timestamp based on EMMessageSearchDirection. If reference timestamp is negative, load from the latest messages; if message count is negative, will be handled as count=1
+*</li>
+<li>@param aKeyword         Search keyword. aKeyword=nil to ignore</li>
+<li>@param aTimestamp       load based on reference timestamp. If aTimestamp=-1, will load from the most recent (the latest) message</li>
+<li>@param aCount           Max number of messages to load</li>
+<li>@param aSender          Message sender (optional). Pass nil to ignore</li>
+<li>@param aDirection       Message search direction
+                         EMMessageSearchDirectionUp: get aCount of messages before aMessageId;
+                         EMMessageSearchDirectionDown: get aCount of messages after aMessageId *  &mdash;-</li>
+<li>@param aCompletionBlock The callback of completion block
+*</li>
+</ul>
+
 			</div>
 			
 		    
@@ -1128,43 +1139,6 @@
 			<div class="method-subsection method-declaration"><code>- (void)loadMessagesWithKeyword:(NSString *)<em>aKeyword</em> timestamp:(long long)<em>aTimestamp</em> count:(int)<em>aCount</em> fromUser:(NSString *)<em>aSender</em> searchDirection:(EMMessageSearchDirection)<em>aDirection</em> completion:(void ( ^ ) ( NSArray *aMessages , EMError *aError ))<em>aCompletionBlock</em></code></div>
 
 		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aTimestamp</code></th>
-						<td><p>Reference timestamp</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCount</code></th>
-						<td><p>Count of messages to load</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aSender</code></th>
-						<td><p>Message sender (optional)</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aDirection</code></th>
-						<td><p>Message search direction</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>aKeywords</code></th>
-						<td><p>Search content, will ignore it if it&rsquo;s empty</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
@@ -1174,7 +1148,20 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Load messages with specified keyword, returning messages are sorted by receiving timestamp. If reference timestamp is negative, load from the latest messages; if message count is negative, count deal with 1 and load one message that meet the condition.</p>
+				<ul>
+<li>Load messages with specified keyword from local database, returning messages are sorted by receiving timestamp based on EMMessageSearchDirection. If reference timestamp is negative, load from the latest messages; if message count is negative, will be handled as count=1
+*</li>
+<li>@param aKeyword         Search keyword. aKeyword=nil to ignore</li>
+<li>@param aTimestamp       load based on reference timestamp. If aTimestamp=-1, will load from the most recent (the latest) message</li>
+<li>@param aCount           Max number of messages to load</li>
+<li>@param aSender          Message sender (optional). Pass nil to ignore</li>
+<li>@param aDirection       Message search direction
+                         EMMessageSearchDirectionUp: get aCount of messages before aMessageId;
+                         EMMessageSearchDirectionDown: get aCount of messages after aMessageId *  &mdash;-</li>
+<li>@param aCompletionBlock The callback of completion block
+*</li>
+</ul>
+
 			</div>
 			
 
@@ -1203,7 +1190,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Load messages within specified time range, retruning messages are sorted by receiving timestamp</p>
+				<p>Load messages within specified time range from local database. Returning messages are sorted by sending timestamp</p>
 			</div>
 			
 		    
@@ -1218,22 +1205,22 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aStartTimestamp</code></th>
-						<td><p>Start time&rsquo;s timestamp in miliseconds</p></td>
+						<td><p>Starting timestamp in miliseconds</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aEndTimestamp</code></th>
-						<td><p>End time&rsquo;s timestamp in miliseconds</p></td>
+						<td><p>Ending timestamp in miliseconds</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCount</code></th>
-						<td><p>Message search direction</p></td>
+						<td><p>Max number of messages to load</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -1247,7 +1234,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Load messages within specified time range, retruning messages are sorted by receiving timestamp</p>
+				<p>Load messages within specified time range from local database. Returning messages are sorted by sending timestamp</p>
 			</div>
 			
 
@@ -2173,7 +2160,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-06-27</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-09-04</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

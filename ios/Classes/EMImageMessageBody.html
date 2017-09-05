@@ -120,7 +120,11 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Image message body</p>
+						<p>Image message body
+-(instancetype)initWithData:displayName:
+or
+-(instancetype)<a href="#//api/name/initWithData:thumbnailData:">initWithData:thumbnailData:</a>
+Note: SDK will compress the image based on the attribute compressRatio when delivering the image</p>
 					</div>
 					
 					
@@ -147,7 +151,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Size of image attachment</p>
+				<p>Resolution of the image</p>
 			</div>
 			
 		    
@@ -164,7 +168,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Size of image attachment</p>
+				<p>Resolution of the image</p>
 			</div>
 			
 
@@ -193,7 +197,8 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Image compression ratio. 1.0 without compression, default value is 0.6. SDK uses the default value if the given value is less than zero.</p>
+				<p>SDK will compress the image based on the attribute compressRatio when delivering the image
+Image compression ratio. 1.0x is original image without compression , default value is 0.6x (60% compression). SDK uses the default value if the given value is less than zero.</p>
 			</div>
 			
 		    
@@ -210,7 +215,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Image compression ratio. 1.0 without compression, default value is 0.6. SDK uses the default value if the given value is less than zero.</p>
+				<p>SDK will compress the image based on the attribute compressRatio when delivering the image
+Image compression ratio. 1.0x is original image without compression , default value is 0.6x (60% compression). SDK uses the default value if the given value is less than zero.</p>
 			</div>
 			
 
@@ -285,7 +291,8 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Local path of thumbnail</p>
+				<p>Local path of thumbnail
+UIImage *image = [UIImage imageWithContentsOfFile:thumbnailLocalPath];</p>
 			</div>
 			
 		    
@@ -302,7 +309,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Local path of thumbnail</p>
+				<p>Local path of thumbnail
+UIImage *image = [UIImage imageWithContentsOfFile:thumbnailLocalPath];</p>
 			</div>
 			
 
@@ -331,7 +339,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Server path of thumbnail</p>
+				<p>Server url path of thumbnail</p>
 			</div>
 			
 		    
@@ -348,7 +356,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Server path of thumbnail</p>
+				<p>Server url path of thumbnail</p>
 			</div>
 			
 
@@ -377,7 +385,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Secret key for downloading a thumbnail image</p>
+				<p>Secret key for downloading thumbnail image</p>
 			</div>
 			
 		    
@@ -394,7 +402,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Secret key for downloading a thumbnail image</p>
+				<p>Secret key for downloading thumbnail image</p>
 			</div>
 			
 
@@ -423,7 +431,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Size of a thumbnail</p>
+				<p>Resolution of the thumbnail</p>
 			</div>
 			
 		    
@@ -440,7 +448,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Size of a thumbnail</p>
+				<p>Resolution of the thumbnail</p>
 			</div>
 			
 
@@ -576,12 +584,12 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aData</code></th>
-						<td><p>The data of image</p></td>
+						<td><p>original image object in NSData format</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aThumbnailData</code></th>
-						<td><p>The data of thumbnail</p></td>
+						<td><p>Thumbnail in NSData format. Will not push to server, but only for local usage</p></td>
 					</tr>
 				
 				</table>
@@ -601,6 +609,16 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Initialize an image message body instance</p>
+
+<p>Image receiver will receive object thumbnail that generated based on sender&rsquo;s aData object.
+Adjust thumbnail resolution on Hyphenate conosle -> &ldquo;Thumbnail Size&rdquo; -> width and height. Unit in px.
+ex. aData resolution 200 x 400 (1：2), thumbnail resolution setting (width x height) 200 x 200, then will generate thumbnail in 100 x 200
+ex. aData resolution 600 x 300 (2：1), thumbnail resolution setting (width x height) 200 x 200, then will generate thumbnail in 200 x 100</p>
+
+<p>Image sender can obtain thumbnail from <a href="#//api/name/thumbnailLocalPath">thumbnailLocalPath</a>
+Image receiver will get thumbnail stored under <a href="#//api/name/thumbnailRemotePath">thumbnailRemotePath</a> after a successful download automatically.
+However, if the automatic downloading failed, use the following method,
+downloadMessageThumbnail:progress:completion:</p>
 			</div>
 			
 
@@ -678,7 +696,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-06-27</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-09-04</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

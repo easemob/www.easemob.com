@@ -68,6 +68,8 @@
 		
 		<option value="//api/name/asyncDownloadMessageThumbnail:progress:completion:">- asyncDownloadMessageThumbnail:progress:completion:</option>
 		
+		<option value="//api/name/asyncFetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:complation:">- asyncFetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:complation:</option>
+		
 		<option value="//api/name/asyncResendMessage:progress:completion:">- asyncResendMessage:progress:completion:</option>
 		
 		<option value="//api/name/asyncSendMessage:progress:completion:">- asyncSendMessage:progress:completion:</option>
@@ -86,6 +88,8 @@
 		
 		<option value="//api/name/downloadMessageThumbnail:progress:completion:">- downloadMessageThumbnail:progress:completion:</option>
 		
+		<option value="//api/name/fetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:error:">- fetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:error:</option>
+		
 		<option value="//api/name/getAllConversations">- getAllConversations</option>
 		
 		<option value="//api/name/getConversation:type:createIfNotExist:">- getConversation:type:createIfNotExist:</option>
@@ -101,6 +105,8 @@
 		<option value="//api/name/importMessages:completion:">- importMessages:completion:</option>
 		
 		<option value="//api/name/loadAllConversationsFromDB">- loadAllConversationsFromDB</option>
+		
+		<option value="//api/name/recallMessage:completion:">- recallMessage:completion:</option>
 		
 		<option value="//api/name/removeDelegate:">- removeDelegate:</option>
 		
@@ -148,7 +154,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Operations of chat</p>
+						<p>Operations of chat
+Current message are loaded from local database, not from server</p>
 					</div>
 					
 					
@@ -195,7 +202,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aQueue</code></th>
-						<td><p>The queue of call delegate method</p></td>
+						<td><p>(optional) The queue of calling delegate methods. Pass in nil to run on main thread.</p></td>
 					</tr>
 				
 				</table>
@@ -296,7 +303,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get all conversations, by loading conversations from DB if not exist in memory</p>
+				<p>Get all conversations from local databse. Will load conversations from cache first, otherwise local database</p>
 			</div>
 			
 		    
@@ -318,7 +325,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get all conversations, by loading conversations from DB if not exist in memory</p>
+				<p>Get all conversations from local databse. Will load conversations from cache first, otherwise local database</p>
 			</div>
 			
 
@@ -347,7 +354,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get a conversation</p>
+				<p>Get a conversation from local database</p>
 			</div>
 			
 		    
@@ -367,7 +374,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aType</code></th>
-						<td><p>Conversation type</p></td>
+						<td><p>Conversation type (Must be specified)</p></td>
 					</tr>
 				
 					<tr>
@@ -391,7 +398,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get a conversation</p>
+				<p>Get a conversation from local database</p>
 			</div>
 			
 
@@ -420,7 +427,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Delete a conversation</p>
+				<p>Delete a conversation from local database</p>
 			</div>
 			
 		    
@@ -440,12 +447,12 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aIsDeleteMessages</code></th>
-						<td><p>Whether delete messages</p></td>
+						<td><p>if delete messages</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -459,7 +466,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Delete a conversation</p>
+				<p>Delete a conversation from local database</p>
 			</div>
 			
 
@@ -513,7 +520,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -556,7 +563,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Import multiple conversations to DB</p>
+				<p>Import multiple conversations to local database</p>
 			</div>
 			
 		    
@@ -576,7 +583,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -590,7 +597,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Import multiple conversations to DB</p>
+				<p>Import multiple conversations to local database</p>
 			</div>
 			
 
@@ -619,7 +626,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Get message attachment local path for the conversation. Delete the conversation will also delete the files under the file path.</p>
+				<p>Get message attachment local path for the conversation. Delete the conversation will also delete the files under the file path</p>
 			</div>
 			
 		    
@@ -653,7 +660,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Get message attachment local path for the conversation. Delete the conversation will also delete the files under the file path.</p>
+				<p>Get message attachment local path for the conversation. Delete the conversation will also delete the files under the file path</p>
 			</div>
 			
 
@@ -682,7 +689,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Import multiple messages</p>
+				<p>Import multiple messages to local database</p>
 			</div>
 			
 		    
@@ -702,7 +709,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -716,7 +723,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Import multiple messages</p>
+				<p>Import multiple messages to local database</p>
 			</div>
 			
 
@@ -745,7 +752,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Update message</p>
+				<p>Update a message in local database. latestMessage of the conversation and other properties will be updated accordingly. messageId of the message cannot be updated</p>
 			</div>
 			
 		    
@@ -764,8 +771,8 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>aSuccessBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -779,7 +786,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Update message</p>
+				<p>Update a message in local database. latestMessage of the conversation and other properties will be updated accordingly. messageId of the message cannot be updated</p>
 			</div>
 			
 
@@ -828,7 +835,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of completion</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -843,6 +850,69 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Send read acknowledgement for message</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/recallMessage:completion:" title="recallMessage:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/recallMessage:completion:">&ndash;&nbsp;recallMessage:completion:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Recall a message</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)recallMessage:(EMMessage *)<em>aMessage</em> completion:(void ( ^ ) ( EMMessage *aMessage , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aMessage</code></th>
+						<td><p>Message instance</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
+						<td><p>The callback block of completion</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Recall a message</p>
 			</div>
 			
 
@@ -891,12 +961,12 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aProgressBlock</code></th>
-						<td><p>The block of attachment upload progress</p></td>
+						<td><p>The block of attachment upload progress in percentage, 0~100.</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The block of send complete</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -964,7 +1034,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of send complete</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -1007,7 +1077,8 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Download message thumbnail (thumbnail of image message or first frame of video image), SDK downloads thumbails automatically, no need to download thumbail manually unless automatic download failed.</p>
+				<p>Manual download the message thumbnail (thumbnail of image message or first frame of video image).
+SDK handles the thumbnail downloading automatically, no need to download thumbnail manually unless automatic download failed.</p>
 			</div>
 			
 		    
@@ -1032,7 +1103,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of download complete</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -1046,7 +1117,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Download message thumbnail (thumbnail of image message or first frame of video image), SDK downloads thumbails automatically, no need to download thumbail manually unless automatic download failed.</p>
+				<p>Manual download the message thumbnail (thumbnail of image message or first frame of video image).
+SDK handles the thumbnail downloading automatically, no need to download thumbnail manually unless automatic download failed.</p>
 			</div>
 			
 
@@ -1075,7 +1147,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Download message attachment(voice, video, image or file), SDK downloads attachment automatically, no need to download attachment manually unless automatic download failed</p>
+				<p>Download message attachment (voice, video, image or file). SDK handles attachment downloading automatically, no need to download attachment manually unless automatic download failed</p>
 			</div>
 			
 		    
@@ -1090,7 +1162,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aMessage</code></th>
-						<td><p>Message instance</p></td>
+						<td><p>Message object</p></td>
 					</tr>
 				
 					<tr>
@@ -1100,7 +1172,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>aCompletionBlock</code></th>
-						<td><p>The callback block of download complete</p></td>
+						<td><p>The callback of completion block</p></td>
 					</tr>
 				
 				</table>
@@ -1114,7 +1186,123 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Download message attachment(voice, video, image or file), SDK downloads attachment automatically, no need to download attachment manually unless automatic download failed</p>
+				<p>Download message attachment (voice, video, image or file). SDK handles attachment downloading automatically, no need to download attachment manually unless automatic download failed</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:error:" title="fetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:error:">&ndash;&nbsp;fetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>Fetch conversation roam messages from server.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EMCursorResult *)fetchHistoryMessagesFromServer:(NSString *)<em>aConversationId</em> conversationType:(EMConversationType)<em>aConversationType</em> startMessageId:(NSString *)<em>aStartMessageId</em> pageSize:(int)<em>aPageSize</em> error:(EMError **)<em>pError</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li><p>Fetch conversation roam messages from server.</p></li>
+<li><p>@param aConversationId      The conversation id which select to fetch roam message.</p></li>
+<li>@param aConversationType    The conversation type which select to fetch roam message.</li>
+<li>@param aStartMessageId      The start search roam message, if empty start from the server leastst message.</li>
+<li>@param aPageSize            The page size.</li>
+<li>@param pError               <a href="../Classes/EMError.html">EMError</a> used for output.
+*</li>
+<li>@return    The result</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">IEMChatManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/asyncFetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:complation:" title="asyncFetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:complation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/asyncFetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:complation:">&ndash;&nbsp;asyncFetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:complation:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>Fetch conversation roam messages from server.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)asyncFetchHistoryMessagesFromServer:(NSString *)<em>aConversationId</em> conversationType:(EMConversationType)<em>aConversationType</em> startMessageId:(NSString *)<em>aStartMessageId</em> pageSize:(int)<em>aPageSize</em> complation:(void ( ^ ) ( EMCursorResult *aResult , EMError *aError ))<em>aCompletionBlock</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<ul>
+<li><p>Fetch conversation roam messages from server.</p></li>
+<li><p>@param aConversationId      The conversation id which select to fetch roam message.</p></li>
+<li>@param aConversationType    The conversation type which select to fetch roam message.</li>
+<li>@param aStartMessageId      The start search roam message, if empty start from the server leastst message.</li>
+<li>@param aPageSize            The page size.</li>
+<li>@param aCompletionBlock     The callback block of fetch complete</li>
+</ul>
+
 			</div>
 			
 
@@ -1922,7 +2110,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-06-27</p>
+						<p class="copyright">Copyright &copy; 2017 Hyphenate Inc. All rights reserved. Updated: 2017-09-04</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
