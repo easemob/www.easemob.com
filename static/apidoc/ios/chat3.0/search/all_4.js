@@ -64,6 +64,7 @@ var searchData=
   ['direction',['direction',['../interface_e_m_message.html#a8c254b16f5f81cb33cccb2b393273adb',1,'EMMessage']]],
   ['displayname',['displayName',['../interface_e_m_file_message_body.html#ab4500ce2155f1e2bcc6d06ea5a0f007d',1,'EMFileMessageBody::displayName()'],['../interface_e_m_push_options.html#a99705b768501a9c1f38a9105043066a2',1,'EMPushOptions::displayName()']]],
   ['displaystyle',['displayStyle',['../interface_e_m_push_options.html#ac4afe6ecb687f5a5000d411ac70cbf56',1,'EMPushOptions']]],
+  ['dnsurl',['dnsURL',['../category_e_m_options_07_private_deploy_08.html#adeb36b28a7d93c6a859e8e94505bbad0',1,'EMOptions(PrivateDeploy)::dnsURL()'],['../interface_e_m_options.html#adeb36b28a7d93c6a859e8e94505bbad0',1,'EMOptions::dnsURL()']]],
   ['downloadgroupsharedfilewithid_3afilepath_3asharedfileid_3aprogress_3acompletion_3a',['downloadGroupSharedFileWithId:filePath:sharedFileId:progress:completion:',['../protocol_i_e_m_group_manager-p.html#a72b62898a276689e961b35846783b839',1,'IEMGroupManager-p']]],
   ['downloadmessageattachment_3aprogress_3acompletion_3a',['downloadMessageAttachment:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#ab44bd10f0939fe32546eadf44ebc1e7a',1,'IEMChatManager-p']]],
   ['downloadmessagethumbnail_3aprogress_3acompletion_3a',['downloadMessageThumbnail:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#aed8564ecd04bee034e9d1bcd98ea5435',1,'IEMChatManager-p']]],
