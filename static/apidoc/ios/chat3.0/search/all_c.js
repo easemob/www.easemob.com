@@ -11,6 +11,7 @@ var searchData=
   ['maxvideoframerate',['maxVideoFrameRate',['../interface_e_m_call_options.html#a45f020f84b4513fdc0cb3f8a123fe678',1,'EMCallOptions']]],
   ['maxvideokbps',['maxVideoKbps',['../interface_e_m_call_options.html#a4130c8f7488d6d6f58c3783dc63be5fd',1,'EMCallOptions']]],
   ['memberlist',['memberList',['../interface_e_m_chatroom.html#a34d173b5832db084d87cc79bc0056354',1,'EMChatroom::memberList()'],['../interface_e_m_group.html#a8b2008daad5e5dd62d95028efc69a18e',1,'EMGroup::memberList()']]],
+  ['membername',['memberName',['../interface_e_m_call_stream.html#a1b7431f3fe0bcad7a6bd3b6a65de6f2a',1,'EMCallStream']]],
   ['messageattachmentstatusdidchange_3aerror_3a',['messageAttachmentStatusDidChange:error:',['../protocol_e_m_chat_manager_delegate-p.html#aa1a4a8b8f3de7a06ccc61b7e73e3aa71',1,'EMChatManagerDelegate-p']]],
   ['messageid',['messageId',['../interface_e_m_message.html#a3a85be4426c1f17888b8cb614c9e537c',1,'EMMessage']]],
   ['messagesdiddeliver_3a',['messagesDidDeliver:',['../protocol_e_m_chat_manager_delegate-p.html#aeb655fe7e623359bee76cc6bb6c7b8d4',1,'EMChatManagerDelegate-p']]],
