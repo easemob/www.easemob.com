@@ -8,6 +8,7 @@ var searchData=
   ['addcallstatechangelistener',['addCallStateChangeListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#a80b224a48a9019501bc724c5ff65a267',1,'com::hyphenate::chat::EMCallManager']]],
   ['addchatroomadmin',['addChatRoomAdmin',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#af8105afc70c613eac48a02c931093dfe',1,'com::hyphenate::chat::EMChatRoomManager']]],
   ['addchatroomchangelistener',['addChatRoomChangeListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#af9632409ceade687d35ea8f05c1dc7c8',1,'com::hyphenate::chat::EMChatRoomManager']]],
+  ['addconferencelistener',['addConferenceListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a62bb92e3ae75f9c55a5da4b63471c34b',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['addconnectionlistener',['addConnectionListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#acd1dab94f40f5d0c5b100edde4864334',1,'com::hyphenate::chat::EMClient']]],
   ['addcontact',['addContact',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#ac32cc6f4fa31d0239f4fbd1228000a1e',1,'com::hyphenate::chat::EMContactManager']]],
   ['addconversationlistener',['addConversationListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ace81b019cf17b0449b4eddd7aeffe19d',1,'com::hyphenate::chat::EMChatManager']]],

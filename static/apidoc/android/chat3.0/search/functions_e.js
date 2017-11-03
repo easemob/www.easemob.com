@@ -7,6 +7,7 @@ var searchData=
   ['removechatroomchangelistener',['removeChatRoomChangeListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a206592ae7eb993bcd9dc3edd9ef4c10c',1,'com::hyphenate::chat::EMChatRoomManager']]],
   ['removechatroomlistener',['removeChatRoomListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a06f5ef6d4ea48d9c79441eff96e74506',1,'com::hyphenate::chat::EMChatRoomManager']]],
   ['removechatroommembers',['removeChatRoomMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a541ed4480d01f83971da1f37f651aadc',1,'com::hyphenate::chat::EMChatRoomManager']]],
+  ['removeconferencelistener',['removeConferenceListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a254acf2c8ea56054157baa4bfacb811d',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['removeconnectionlistener',['removeConnectionListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a4e6873c088ea3cc594558dba1a21b2a4',1,'com::hyphenate::chat::EMClient']]],
   ['removecontactlistener',['removeContactListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a30a00840020f30d51c1e026eeaa29707',1,'com::hyphenate::chat::EMContactManager']]],
   ['removeconversationlistener',['removeConversationListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a0a8fb4720890a1d25cc909804312a6f8',1,'com::hyphenate::chat::EMChatManager']]],
@@ -17,6 +18,7 @@ var searchData=
   ['removemultidevicelistener',['removeMultiDeviceListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a97b0aebad57d022f0840df1f2410fcb3',1,'com::hyphenate::chat::EMClient']]],
   ['removeuserfromblacklist',['removeUserFromBlackList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a03653c00e8c7bfb78456f23921dbba2c',1,'com::hyphenate::chat::EMContactManager']]],
   ['removeuserfromgroup',['removeUserFromGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a3de6c01858f77f44f1641189b4ab19fa',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['reset',['reset',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference.html#aa628e9ba3dff1c07de8d7cc7f6033779',1,'com::hyphenate::chat::EMConference']]],
   ['resumevideotransfer',['resumeVideoTransfer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#a4c0c6ba346d7432185d49dc594c5fe72',1,'com::hyphenate::chat::EMCallManager']]],
   ['resumevoicetransfer',['resumeVoiceTransfer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#ae294c324c0fa3a08e83111c3cb5207b1',1,'com::hyphenate::chat::EMCallManager']]]
 ];
