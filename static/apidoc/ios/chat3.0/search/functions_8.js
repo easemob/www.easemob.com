@@ -14,7 +14,9 @@ var searchData=
   ['initwithdescription_3acode_3a',['initWithDescription:code:',['../interface_e_m_error.html#afee65c932ca8dad57ae1108a2a2a607f',1,'EMError']]],
   ['initwithlatitude_3alongitude_3aaddress_3a',['initWithLatitude:longitude:address:',['../interface_e_m_location_message_body.html#af229efc7f40bef7d8589de498e51be1f',1,'EMLocationMessageBody']]],
   ['initwithlocalpath_3adisplayname_3a',['initWithLocalPath:displayName:',['../interface_e_m_file_message_body.html#a536a7a4f9d928a01d51015fa22885aec',1,'EMFileMessageBody']]],
+  ['initwithstreamname_3a',['initWithStreamName:',['../interface_e_m_stream_param.html#a71d9514053c1805ba225e0d42d7ddb1f',1,'EMStreamParam']]],
   ['initwithtext_3a',['initWithText:',['../interface_e_m_text_message_body.html#a918b8fb211a6b75cf03202f48eea9cc8',1,'EMTextMessageBody']]],
   ['insertmessage_3a',['insertMessage:',['../interface_e_m_conversation.html#aa983233151fbfcf0fea3d3d061835231',1,'EMConversation']]],
-  ['insertmessage_3aerror_3a',['insertMessage:error:',['../interface_e_m_conversation.html#a00f20d6f1196855618dbec1da33d6c03',1,'EMConversation']]]
+  ['insertmessage_3aerror_3a',['insertMessage:error:',['../interface_e_m_conversation.html#a00f20d6f1196855618dbec1da33d6c03',1,'EMConversation']]],
+  ['inviteusertojoinconference_3ausername_3apassword_3aext_3aerror_3a',['inviteUserToJoinConference:userName:password:ext:error:',['../protocol_i_e_m_conference_manager-p.html#a698d53f50946ffb163bef4f4fb3584f6',1,'IEMConferenceManager-p']]]
 ];

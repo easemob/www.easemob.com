@@ -3,6 +3,7 @@ var searchData=
   ['lastreceivedmessage',['lastReceivedMessage',['../interface_e_m_conversation.html#a7883f84d016394fd0a0454a5a89ff31a',1,'EMConversation']]],
   ['leavechatroom_3acompletion_3a',['leaveChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a765bf3daf720915e4b05f832afa02599',1,'IEMChatroomManager-p']]],
   ['leavechatroom_3aerror_3a',['leaveChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a808ca10bcc4703c509262f1c6a1ddf85',1,'IEMChatroomManager-p']]],
+  ['leaveconference_3acompletion_3a',['leaveConference:completion:',['../protocol_i_e_m_conference_manager-p.html#a0d3fb9b9cf32d3b62a4b8bd57a3ecb7e',1,'IEMConferenceManager-p']]],
   ['leavegroup_3acompletion_3a',['leaveGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a769d89db94ec2fc1f164b05e472ed49d',1,'IEMGroupManager-p']]],
   ['leavegroup_3aerror_3a',['leaveGroup:error:',['../protocol_i_e_m_group_manager-p.html#ab98f124b692684740689e394cb04c1a5',1,'IEMGroupManager-p']]],
   ['loadmessagesfrom_3ato_3acount_3acompletion_3a',['loadMessagesFrom:to:count:completion:',['../interface_e_m_conversation.html#af828dc2e31279d6aeea690d3d38eaa8b',1,'EMConversation']]],
