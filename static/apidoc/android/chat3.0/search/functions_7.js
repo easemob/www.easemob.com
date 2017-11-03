@@ -5,8 +5,10 @@ var searchData=
   ['inputexternalvideodata',['inputExternalVideoData',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#a75c1911842e876ffe2cff7619072e7e1',1,'com::hyphenate::chat::EMCallManager']]],
   ['insertmessage',['insertMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a18e37861ae13ec85c881c267611e90fd',1,'com::hyphenate::chat::EMConversation']]],
   ['inviteuser',['inviteUser',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a64a9fbd9bbb9984bfdbcc583fdd5694a',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['inviteusertojoinconference',['inviteUserToJoinConference',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a46185b19b85ee8366c0f22ef36a3e05e',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['isacked',['isAcked',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a814412b9cabc5ea0078f71d96395ad15',1,'com::hyphenate::chat::EMMessage']]],
   ['isallowinvites',['isAllowInvites',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#ad71da53ee82a9614d08ae44541121e07',1,'com::hyphenate::chat::EMGroup']]],
+  ['isaudiooff',['isAudioOff',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_stream.html#a9de7ca96da69e90ba7c6fb8091938a40',1,'com::hyphenate::chat::EMConferenceStream']]],
   ['isautoacceptgroupinvitation',['isAutoAcceptGroupInvitation',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ae462f7c046ba17097baa51a3a40db526',1,'com::hyphenate::chat::EMOptions']]],
   ['ischatroomownerleaveallowed',['isChatroomOwnerLeaveAllowed',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aaf81e0b85d75f04b8d29b5bc2d9b0e95',1,'com::hyphenate::chat::EMOptions']]],
   ['isconnected',['isConnected',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a4ed8afb8f7d33e8f343e4591ce379353',1,'com::hyphenate::chat::EMClient']]],
@@ -20,8 +22,10 @@ var searchData=
   ['ismemberonly',['isMemberOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#aa71058cbdfbe29b04090eeae1fb0756d',1,'com::hyphenate::chat::EMGroup']]],
   ['ismembersonly',['isMembersOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#af167b8ceecbddad735478c1dfa7861e9',1,'com::hyphenate::chat::EMGroup']]],
   ['ismsgblocked',['isMsgBlocked',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#ad98b22914ef53e9cf566a08a6acb634f',1,'com::hyphenate::chat::EMGroup']]],
+  ['ismute',['isMute',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_stream_param.html#a5008ccd82299fc9c6d1681ac6719669d',1,'com::hyphenate::chat::EMStreamParam']]],
   ['ispublic',['isPublic',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a6db83d8a1156a964a2ca13e5bb51fcd2',1,'com::hyphenate::chat::EMGroup']]],
   ['issendoriginalimage',['isSendOriginalImage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a05f113c7ad47b96e25ac1514f53e789c',1,'com::hyphenate::chat::EMImageMessageBody']]],
   ['issortmessagebyservertime',['isSortMessageByServerTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a96cacc44c07c257d46db6d3467860f5b',1,'com::hyphenate::chat::EMOptions']]],
-  ['isunread',['isUnread',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a7814071869a845938865a4eabbe5d9e3',1,'com::hyphenate::chat::EMMessage']]]
+  ['isunread',['isUnread',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a7814071869a845938865a4eabbe5d9e3',1,'com::hyphenate::chat::EMMessage']]],
+  ['isvideooff',['isVideoOff',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_stream.html#adf570ce4deafeff59ca289949fd3d48f',1,'com.hyphenate.chat.EMConferenceStream.isVideoOff()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_stream_param.html#ae932211325ed697bad9aa6a9f80659ff',1,'com.hyphenate.chat.EMStreamParam.isVideoOff()']]]
 ];
