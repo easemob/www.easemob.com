@@ -119,6 +119,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:acc32a00500f5ff029035a723fc4234c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3964f06814f26a3f3f9b435f59ee3385"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_e_m_error.html">EMError</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_call_manager-p.html#a3964f06814f26a3f3f9b435f59ee3385">endCall:reason:</a></td></tr>
 <tr class="separator:a3964f06814f26a3f3f9b435f59ee3385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b988437ca6a0856951001efec295101"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_call_manager-p.html#a6b988437ca6a0856951001efec295101">forceEndAllCall</a></td></tr>
+<tr class="separator:a6b988437ca6a0856951001efec295101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071fc3e44c6cd4d2def3cf379be01c2c"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_call_manager-p.html#a071fc3e44c6cd4d2def3cf379be01c2c">inputVideoSampleBuffer:callId:format:rotation:completion:</a></td></tr>
+<tr class="separator:a071fc3e44c6cd4d2def3cf379be01c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a194556b31f03bce17998e86e25efde88"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_call_manager-p.html#a194556b31f03bce17998e86e25efde88">inputVideoPixelBuffer:callId:format:rotation:completion:</a></td></tr>
+<tr class="separator:a194556b31f03bce17998e86e25efde88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2676b43906bb7fabe8e806e7718edff7"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_call_manager-p.html#a2676b43906bb7fabe8e806e7718edff7">inputVideoData:callId:widthInPixels:heightInPixels:format:rotation:completion:</a></td></tr>
+<tr class="separator:a2676b43906bb7fabe8e806e7718edff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f7c0cd03bdcd6cbaa3f053ba7cd3df0"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_call_manager-p.html#a1f7c0cd03bdcd6cbaa3f053ba7cd3df0">startVoiceCall:completion:</a></td></tr>
 <tr class="separator:a1f7c0cd03bdcd6cbaa3f053ba7cd3df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05572fbec6d3286c9feefcf9c4e179c1"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_call_manager-p.html#a05572fbec6d3286c9feefcf9c4e179c1">startVideoCall:completion:</a></td></tr>
@@ -321,6 +329,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 
 </div>
 </div>
+<a class="anchor" id="a6b988437ca6a0856951001efec295101"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) forceEndAllCall </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>强制结束所有通话 使用场景：做了某些错误操作造成Call UI已经消失但是没有释放掉EMCallManager中维护的EMCallSession,造成再次调用方法[<a class="el" href="protocol_i_e_m_call_manager-p.html">IEMCallManager</a> startCall:remoteName:ext:completion:]返回错误EMErrorCallBusy，如果这时无法调用方法[<a class="el" href="protocol_i_e_m_call_manager-p.html">IEMCallManager</a> endCall:reason:]，可以调用该方法 </p>
+
+</div>
+</div>
 <a class="anchor" id="aa57c5e2e99d712a9e228fa4a3456cab4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -343,6 +375,209 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div><div class="memdoc">
 <p>获取设置项</p>
 <dl class="section return"><dt>返回</dt><dd>设置项 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2676b43906bb7fabe8e806e7718edff7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) inputVideoData: </td>
+          <td></td>
+          <td class="paramtype">(NSData *)&#160;</td>
+          <td class="paramname"><em>aData</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">callId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aCallId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">widthInPixels:</td>
+          <td></td>
+          <td class="paramtype">(size_t)&#160;</td>
+          <td class="paramname"><em>aWidth</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">heightInPixels:</td>
+          <td></td>
+          <td class="paramtype">(size_t)&#160;</td>
+          <td class="paramname"><em>aHeight</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">format:</td>
+          <td></td>
+          <td class="paramtype">(EMCallVideoFormat)&#160;</td>
+          <td class="paramname"><em>aFormat</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">rotation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>aRotation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>自定义本地视频数据</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aData</td><td>视频数据 </td></tr>
+    <tr><td class="paramname">aCallId</td><td>1v1会话实例ID，即[<a class="el" href="interface_e_m_call_session.html">EMCallSession</a> callId] </td></tr>
+    <tr><td class="paramname">aWidth</td><td>宽度 </td></tr>
+    <tr><td class="paramname">aHeight</td><td>高度 </td></tr>
+    <tr><td class="paramname">aFormat</td><td>视频格式 </td></tr>
+    <tr><td class="paramname">aRotation</td><td>旋转角度0~360，默认0 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>完成后的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a194556b31f03bce17998e86e25efde88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) inputVideoPixelBuffer: </td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef)&#160;</td>
+          <td class="paramname"><em>aPixelBuffer</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">callId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aCallId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">format:</td>
+          <td></td>
+          <td class="paramtype">(EMCallVideoFormat)&#160;</td>
+          <td class="paramname"><em>aFormat</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">rotation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>aRotation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>自定义本地视频数据</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aPixelBuffer</td><td>视频像素缓冲区 </td></tr>
+    <tr><td class="paramname">aCallId</td><td>1v1会话实例ID，即[<a class="el" href="interface_e_m_call_session.html">EMCallSession</a> callId] </td></tr>
+    <tr><td class="paramname">aFormat</td><td>视频格式 </td></tr>
+    <tr><td class="paramname">aRotation</td><td>旋转角度0~360，默认0 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>完成后的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a071fc3e44c6cd4d2def3cf379be01c2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) inputVideoSampleBuffer: </td>
+          <td></td>
+          <td class="paramtype">(CMSampleBufferRef)&#160;</td>
+          <td class="paramname"><em>aSampleBuffer</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">callId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aCallId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">format:</td>
+          <td></td>
+          <td class="paramtype">(EMCallVideoFormat)&#160;</td>
+          <td class="paramname"><em>aFormat</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">rotation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>aRotation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>自定义本地视频数据</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aSampleBuffer</td><td>视频采样缓冲区 </td></tr>
+    <tr><td class="paramname">aCallId</td><td>1v1会话实例ID，即[<a class="el" href="interface_e_m_call_session.html">EMCallSession</a> callId] </td></tr>
+    <tr><td class="paramname">aFormat</td><td>视频格式 </td></tr>
+    <tr><td class="paramname">aRotation</td><td>旋转角度0~360，默认0 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>完成后的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

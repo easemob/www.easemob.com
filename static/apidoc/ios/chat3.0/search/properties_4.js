@@ -1,6 +1,7 @@
 var searchData=
 [
   ['enableconsolelog',['enableConsoleLog',['../interface_e_m_options.html#a1a38d10364aa4d9c0579d7f9db5f1a29',1,'EMOptions']]],
+  ['enablecustomizevideodata',['enableCustomizeVideoData',['../interface_e_m_call_options.html#a89f38b15e05ed5d6636af5fde628d114',1,'EMCallOptions::enableCustomizeVideoData()'],['../interface_e_m_stream_param.html#a6e307404f58d7e78f3647c96d2f5a64e',1,'EMStreamParam::enableCustomizeVideoData()']]],
   ['enabledeliveryack',['enableDeliveryAck',['../interface_e_m_options.html#a32063171c5d8ea464eb11cfa7b6374c1',1,'EMOptions']]],
   ['enablednsconfig',['enableDnsConfig',['../category_e_m_options_07_private_deploy_08.html#acf551f2e0bcf1be8454d42c7eac763f5',1,'EMOptions(PrivateDeploy)::enableDnsConfig()'],['../interface_e_m_options.html#acf551f2e0bcf1be8454d42c7eac763f5',1,'EMOptions::enableDnsConfig()']]],
   ['enablevideo',['enableVideo',['../interface_e_m_call_stream.html#a38bb35c4c2a6cd0a21873cecff8d7e03',1,'EMCallStream::enableVideo()'],['../interface_e_m_stream_param.html#abb3e229460ff146f27dedcd37c5d8a41',1,'EMStreamParam::enableVideo()']]],
