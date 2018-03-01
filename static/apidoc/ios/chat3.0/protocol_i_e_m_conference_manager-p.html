@@ -129,6 +129,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:abc3d1658875a99bdd1f5f1158a74e789"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a478c1c8b08758a55fdea520d6772ae9e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_conference_manager-p.html#a478c1c8b08758a55fdea520d6772ae9e">updateConference:enableVideo:</a></td></tr>
 <tr class="separator:a478c1c8b08758a55fdea520d6772ae9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a275b31fcb53fa173820eedae7f0949f5"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_conference_manager-p.html#a275b31fcb53fa173820eedae7f0949f5">inputVideoSampleBuffer:conference:publishedStreamId:format:rotation:completion:</a></td></tr>
+<tr class="separator:a275b31fcb53fa173820eedae7f0949f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13da8d62a3601dd5637b691ba46267a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_conference_manager-p.html#ab13da8d62a3601dd5637b691ba46267a">inputVideoPixelBuffer:conference:publishedStreamId:format:rotation:completion:</a></td></tr>
+<tr class="separator:ab13da8d62a3601dd5637b691ba46267a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd59950bff78bd2472baceb3fa97a67a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_conference_manager-p.html#abd59950bff78bd2472baceb3fa97a67a">inputVideoData:conference:publishedStreamId:widthInPixels:heightInPixels:format:rotation:completion:</a></td></tr>
+<tr class="separator:abd59950bff78bd2472baceb3fa97a67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>多人实时音频/视频通话相关操作 </p>
@@ -211,6 +217,230 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <table class="params">
     <tr><td class="paramname">aPassword</td><td>会议密码 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>完成的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abd59950bff78bd2472baceb3fa97a67a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) inputVideoData: </td>
+          <td></td>
+          <td class="paramtype">(NSData *)&#160;</td>
+          <td class="paramname"><em>aData</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">conference:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_call_conference.html">EMCallConference</a> *)&#160;</td>
+          <td class="paramname"><em>aCall</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">publishedStreamId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aPubStreamId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">widthInPixels:</td>
+          <td></td>
+          <td class="paramtype">(size_t)&#160;</td>
+          <td class="paramname"><em>aWidth</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">heightInPixels:</td>
+          <td></td>
+          <td class="paramtype">(size_t)&#160;</td>
+          <td class="paramname"><em>aHeight</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">format:</td>
+          <td></td>
+          <td class="paramtype">(EMCallVideoFormat)&#160;</td>
+          <td class="paramname"><em>aFormat</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">rotation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>aRotation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>自定义本地视频数据</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aData</td><td>视频数据 </td></tr>
+    <tr><td class="paramname">aCall</td><td>会议实例 </td></tr>
+    <tr><td class="paramname">aPubStreamId</td><td>调用接口[EMConferenceManager publishConference:streamParam:completion]，如果成功则会在回调中返回该值 </td></tr>
+    <tr><td class="paramname">aWidth</td><td>宽度 </td></tr>
+    <tr><td class="paramname">aHeight</td><td>高度 </td></tr>
+    <tr><td class="paramname">aFormat</td><td>视频格式 </td></tr>
+    <tr><td class="paramname">aRotation</td><td>旋转角度0~360，默认0 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>完成后的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab13da8d62a3601dd5637b691ba46267a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) inputVideoPixelBuffer: </td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef)&#160;</td>
+          <td class="paramname"><em>aPixelBuffer</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">conference:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_call_conference.html">EMCallConference</a> *)&#160;</td>
+          <td class="paramname"><em>aCall</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">publishedStreamId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aPubStreamId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">format:</td>
+          <td></td>
+          <td class="paramtype">(EMCallVideoFormat)&#160;</td>
+          <td class="paramname"><em>aFormat</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">rotation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>aRotation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>自定义本地视频数据</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aPixelBuffer</td><td>视频像素缓冲区 </td></tr>
+    <tr><td class="paramname">aCall</td><td>会议实例 </td></tr>
+    <tr><td class="paramname">aPubStreamId</td><td>调用接口[EMConferenceManager publishConference:streamParam:completion]，如果成功则会在回调中返回该值 </td></tr>
+    <tr><td class="paramname">aFormat</td><td>视频格式 </td></tr>
+    <tr><td class="paramname">aRotation</td><td>旋转角度0~360，默认0 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>完成后的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a275b31fcb53fa173820eedae7f0949f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) inputVideoSampleBuffer: </td>
+          <td></td>
+          <td class="paramtype">(CMSampleBufferRef)&#160;</td>
+          <td class="paramname"><em>aSampleBuffer</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">conference:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_call_conference.html">EMCallConference</a> *)&#160;</td>
+          <td class="paramname"><em>aCall</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">publishedStreamId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aPubStreamId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">format:</td>
+          <td></td>
+          <td class="paramtype">(EMCallVideoFormat)&#160;</td>
+          <td class="paramname"><em>aFormat</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">rotation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>aRotation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>自定义本地视频数据</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aSampleBuffer</td><td>视频采样缓冲区 </td></tr>
+    <tr><td class="paramname">aCall</td><td>会议实例 </td></tr>
+    <tr><td class="paramname">aPubStreamId</td><td>调用接口[EMConferenceManager publishConference:streamParam:completion]，如果成功则会在回调中返回该值 </td></tr>
+    <tr><td class="paramname">aFormat</td><td>视频格式 </td></tr>
+    <tr><td class="paramname">aRotation</td><td>旋转角度0~360，默认0 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>完成后的回调 </td></tr>
   </table>
   </dd>
 </dl>

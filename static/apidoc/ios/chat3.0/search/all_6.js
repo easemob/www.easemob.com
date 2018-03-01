@@ -9,6 +9,7 @@ var searchData=
   ['filename',['fileName',['../interface_e_m_group_shared_file.html#a2f862002b48b030eb49fbaf0767a0bff',1,'EMGroupSharedFile']]],
   ['fileowner',['fileOwner',['../interface_e_m_group_shared_file.html#a5ff3c7e4ddc6efaa471d5039757e65f5',1,'EMGroupSharedFile']]],
   ['filesize',['fileSize',['../interface_e_m_group_shared_file.html#afe3b908f127188cbdc3668e57d73d8ab',1,'EMGroupSharedFile']]],
+  ['forceendallcall',['forceEndAllCall',['../protocol_i_e_m_call_manager-p.html#a6b988437ca6a0856951001efec295101',1,'IEMCallManager-p']]],
   ['friendrequestdidapprovebyuser_3a',['friendRequestDidApproveByUser:',['../protocol_e_m_contact_manager_delegate-p.html#a9c98c065b0ae91c3cb120a831cd91a02',1,'EMContactManagerDelegate-p']]],
   ['friendrequestdiddeclinebyuser_3a',['friendRequestDidDeclineByUser:',['../protocol_e_m_contact_manager_delegate-p.html#a31cc6e8da8de6eb9bdd78bf62eb0c29e',1,'EMContactManagerDelegate-p']]],
   ['friendrequestdidreceivefromuser_3amessage_3a',['friendRequestDidReceiveFromUser:message:',['../protocol_e_m_contact_manager_delegate-p.html#a73ea8e66ff288c57d62ce4e56977bcef',1,'EMContactManagerDelegate-p']]],

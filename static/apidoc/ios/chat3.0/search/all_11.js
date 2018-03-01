@@ -7,6 +7,7 @@ var searchData=
   ['secretkey',['secretKey',['../interface_e_m_file_message_body.html#ae56d6b8868c9efe0c6a3321df980bd6c',1,'EMFileMessageBody']]],
   ['sendmessage_3aprogress_3acompletion_3a',['sendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#ad139d7ad31d934a721a979955baf1868',1,'IEMChatManager-p']]],
   ['sendmessagereadack_3acompletion_3a',['sendMessageReadAck:completion:',['../protocol_i_e_m_chat_manager-p.html#a47881745f8927f2a703181b8233122a8',1,'IEMChatManager-p']]],
+  ['servicecheckwithusername_3apassword_3acompletion_3a',['serviceCheckWithUsername:password:completion:',['../interface_e_m_client.html#a3a4d7e200de90fcc8d9d45763f3d1b7c',1,'EMClient']]],
   ['setapnsnickname_3a',['setApnsNickname:',['../interface_e_m_client.html#a29f928aab2d104e6bf00426ed0c3d7dc',1,'EMClient']]],
   ['setbuilderdelegate_3a',['setBuilderDelegate:',['../protocol_i_e_m_call_manager-p.html#ab186d489c2779e2984498f79b63432fd',1,'IEMCallManager-p']]],
   ['setcalloptions_3a',['setCallOptions:',['../protocol_i_e_m_call_manager-p.html#a8bdffc278012912e6b647496f950f2d0',1,'IEMCallManager-p']]],

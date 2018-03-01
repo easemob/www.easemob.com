@@ -6,6 +6,7 @@ var searchData=
   ['markcallsession_3aissilence_3a',['markCallSession:isSilence:',['../protocol_i_e_m_call_manager-p.html#ab4e12d36c22b2cc29962c69d8e3c3ed8',1,'IEMCallManager-p']]],
   ['markmessageasreadwithid_3a',['markMessageAsReadWithId:',['../interface_e_m_conversation.html#a023ded16fede620f2ac09f3edf0b633d',1,'EMConversation']]],
   ['markmessageasreadwithid_3aerror_3a',['markMessageAsReadWithId:error:',['../interface_e_m_conversation.html#a97e2a01852fd5e53595a54eaffc0e8ca',1,'EMConversation']]],
+  ['maxaudiokbps',['maxAudioKbps',['../interface_e_m_call_options.html#aea45547ce623a0fd5d53a36f00334520',1,'EMCallOptions']]],
   ['maxoccupantscount',['maxOccupantsCount',['../interface_e_m_chatroom.html#a1be7d7507769472b119c8c0c09bb2ba3',1,'EMChatroom']]],
   ['maxuserscount',['maxUsersCount',['../interface_e_m_chatroom_options.html#a0440ab078134a82d3b503959f72bbc36',1,'EMChatroomOptions::maxUsersCount()'],['../interface_e_m_group_options.html#a363499589cbb9040619c9a64c2ad27e9',1,'EMGroupOptions::maxUsersCount()']]],
   ['maxvideoframerate',['maxVideoFrameRate',['../interface_e_m_call_options.html#a45f020f84b4513fdc0cb3f8a123fe678',1,'EMCallOptions']]],
