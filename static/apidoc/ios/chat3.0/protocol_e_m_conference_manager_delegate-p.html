@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateSDK
-   &#160;<span id="projectnumber">3.3.9</span>
+   &#160;<span id="projectnumber">3.4.0</span>
    </div>
   </td>
  </tr>
@@ -119,8 +119,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:a9e35574e2e6fcedcc5cf3d4f0f9a26e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37025ed1fda0ff26798c31aabbcf7105"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_conference_manager_delegate-p.html#a37025ed1fda0ff26798c31aabbcf7105">streamStartTransmitting:streamId:</a></td></tr>
 <tr class="separator:a37025ed1fda0ff26798c31aabbcf7105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad75e9a267a5af3a3dd8deedf436d36db"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_conference_manager_delegate-p.html#ad75e9a267a5af3a3dd8deedf436d36db">conferenceNetworkDidChange:status:</a></td></tr>
-<tr class="separator:ad75e9a267a5af3a3dd8deedf436d36db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca71ff4555735ad8e3e826b83ad5d68"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_conference_manager_delegate-p.html#aaca71ff4555735ad8e3e826b83ad5d68">conferenceNetworkDidChange:status:</a></td></tr>
+<tr class="separator:aaca71ff4555735ad8e3e826b83ad5d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0917065a18ca3ce9433d6677288830c3"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_conference_manager_delegate-p.html#a0917065a18ca3ce9433d6677288830c3">conferenceSpeakerDidChange:speakingStreamIds:</a></td></tr>
+<tr class="separator:a0917065a18ca3ce9433d6677288830c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>多人实时语音/视频相关的回调 </p>
@@ -174,7 +176,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 
 </div>
 </div>
-<a class="anchor" id="ad75e9a267a5af3a3dd8deedf436d36db"></a>
+<a class="anchor" id="aaca71ff4555735ad8e3e826b83ad5d68"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -185,7 +187,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
           <td class="memname">- (void) conferenceNetworkDidChange: </td>
           <td></td>
           <td class="paramtype">(<a class="el" href="interface_e_m_call_conference.html">EMCallConference</a> *)&#160;</td>
-          <td class="paramname"><em>aSession</em></td>
+          <td class="paramname"><em>aConference</em></td>
         </tr>
         <tr>
           <td class="paramkey">status:</td>
@@ -210,6 +212,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <table class="params">
     <tr><td class="paramname">aSession</td><td>会话实例 </td></tr>
     <tr><td class="paramname">aStatus</td><td>当前状态 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0917065a18ca3ce9433d6677288830c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) conferenceSpeakerDidChange: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_call_conference.html">EMCallConference</a> *)&#160;</td>
+          <td class="paramname"><em>aConference</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">speakingStreamIds:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>aStreamIds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>用户A用户B在同一个会议中，用户A开始说话时，用户B会收到该回调</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aSession</td><td>会话实例 </td></tr>
+    <tr><td class="paramname">aStreamIds</td><td>数据流ID列表 </td></tr>
   </table>
   </dd>
 </dl>
