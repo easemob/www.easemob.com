@@ -11,5 +11,7 @@ var searchData=
   ['error_5fnoresponse',['ERROR_NORESPONSE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_error.html#a2cb0e677b1cda5211a70fd67089cf9ff',1,'com::hyphenate::chat::EMCallStateChangeListener::CallError']]],
   ['error_5ftransport',['ERROR_TRANSPORT',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_error.html#a9d445232fbf19ab6b97999ecf3432c0b',1,'com::hyphenate::chat::EMCallStateChangeListener::CallError']]],
   ['error_5funavailable',['ERROR_UNAVAILABLE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_error.html#ad9aa8a289a588b0c4ecea5ceb81bd047',1,'com::hyphenate::chat::EMCallStateChangeListener::CallError']]],
+  ['exceed_5fservice_5flimit',['EXCEED_SERVICE_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a86230c3342586028bbe73b36aba0934c',1,'com::hyphenate::EMError']]],
+  ['extension',['extension',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_stream_param.html#a65daa3acf8e0fc0b0e5b684b4265df77',1,'com::hyphenate::chat::EMStreamParam']]],
   ['extfield',['extField',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_options.html#a4eff1fc24b638e768b1ae00395f60b37',1,'com::hyphenate::chat::EMGroupOptions']]]
 ];

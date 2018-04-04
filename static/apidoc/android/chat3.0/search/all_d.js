@@ -43,6 +43,7 @@ var searchData=
   ['onrequesttojoinreceived',['onRequestToJoinReceived',['../interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a9586db146a9190443bb7f59b1e2c374a',1,'com::hyphenate::EMGroupChangeListener']]],
   ['onsharedfileadded',['onSharedFileAdded',['../interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a44b5c51faf87436d54a84cd7394abea9',1,'com::hyphenate::EMGroupChangeListener']]],
   ['onsharedfiledeleted',['onSharedFileDeleted',['../interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#aad9148480725369c1417c92691b07f55',1,'com::hyphenate::EMGroupChangeListener']]],
+  ['onspeakers',['onSpeakers',['../interfacecom_1_1hyphenate_1_1_e_m_conference_listener.html#a4e9febe04b53b334e5c11b69fbf27749',1,'com::hyphenate::EMConferenceListener']]],
   ['onstreamadded',['onStreamAdded',['../interfacecom_1_1hyphenate_1_1_e_m_conference_listener.html#ad06a034d00575fbf41798b98bebe6089',1,'com::hyphenate::EMConferenceListener']]],
   ['onstreamremoved',['onStreamRemoved',['../interfacecom_1_1hyphenate_1_1_e_m_conference_listener.html#a080acc326683db64228ccd1b08448d45',1,'com::hyphenate::EMConferenceListener']]],
   ['onstreamsetup',['onStreamSetup',['../interfacecom_1_1hyphenate_1_1_e_m_conference_listener.html#ad27bc75a608abc06c48ddbbbe8449d52',1,'com::hyphenate::EMConferenceListener']]],

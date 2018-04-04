@@ -1,6 +1,7 @@
 var searchData=
 [
   ['up',['UP',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html#a7da6922f03fda8d28c8c051bb1086a3b',1,'com::hyphenate::chat::EMConversation::EMSearchDirection']]],
+  ['usebackcamera',['useBackCamera',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_stream_param.html#a682014ca04fe6e692ee0470f3d59d325',1,'com::hyphenate::chat::EMStreamParam']]],
   ['user_5falready_5fexist',['USER_ALREADY_EXIST',['../classcom_1_1hyphenate_1_1_e_m_error.html#a497e16020b7fe36e8075d2b787a00e8d',1,'com::hyphenate::EMError']]],
   ['user_5falready_5flogin',['USER_ALREADY_LOGIN',['../classcom_1_1hyphenate_1_1_e_m_error.html#a09893124e1fbcd100a9583a4293957af',1,'com::hyphenate::EMError']]],
   ['user_5fauthentication_5ffailed',['USER_AUTHENTICATION_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a0745733baac8fd07b64186742cd89db4',1,'com::hyphenate::EMError']]],
