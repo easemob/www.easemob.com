@@ -1,6 +1,7 @@
 var searchData=
 [
   ['description',['description',['../interface_e_m_chatroom.html#a37754da85a0576075734e53de9b0ed97',1,'EMChatroom::description()'],['../interface_e_m_group.html#a172779f5521399958046505cb3555809',1,'EMGroup::description()']]],
+  ['desktopview',['desktopView',['../interface_e_m_stream_param.html#ada0dec8985f57a38bec960be4d20463c',1,'EMStreamParam']]],
   ['devicename',['deviceName',['../interface_e_m_device_config.html#a199dd0f4c5ed39f5f6662895a18bf2bd',1,'EMDeviceConfig']]],
   ['deviceuuid',['deviceUUID',['../interface_e_m_device_config.html#a9ee748436a20e26c7e33061089cf9849',1,'EMDeviceConfig']]],
   ['direction',['direction',['../interface_e_m_message.html#a8c254b16f5f81cb33cccb2b393273adb',1,'EMMessage']]],

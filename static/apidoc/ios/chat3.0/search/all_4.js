@@ -18,6 +18,7 @@ var searchData=
   ['deletemessagewithid_3a',['deleteMessageWithId:',['../interface_e_m_conversation.html#ac366a88f46e8003333ba1647b680feae',1,'EMConversation']]],
   ['deletemessagewithid_3aerror_3a',['deleteMessageWithId:error:',['../interface_e_m_conversation.html#adc6ec4bf1c5cb6d2ac516430c726bf17',1,'EMConversation']]],
   ['description',['description',['../interface_e_m_chatroom.html#a37754da85a0576075734e53de9b0ed97',1,'EMChatroom::description()'],['../interface_e_m_group.html#a172779f5521399958046505cb3555809',1,'EMGroup::description()']]],
+  ['desktopview',['desktopView',['../interface_e_m_stream_param.html#ada0dec8985f57a38bec960be4d20463c',1,'EMStreamParam']]],
   ['destroychatroom_3a',['destroyChatroom:',['../protocol_i_e_m_chatroom_manager-p.html#af405d6b2b02caa208edcfa091608a706',1,'IEMChatroomManager-p']]],
   ['destroychatroom_3acompletion_3a',['destroyChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#ac78185ad164822a42610f90af7c4e239',1,'IEMChatroomManager-p']]],
   ['destroygroup_3a',['destroyGroup:',['../protocol_i_e_m_group_manager-p.html#a31091738bce3731a094638a58c13d588',1,'IEMGroupManager-p']]],
