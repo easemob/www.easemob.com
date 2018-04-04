@@ -22,6 +22,7 @@ var searchData=
   ['emchatroomchangelistener',['EMChatRoomChangeListener',['../interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html',1,'com::hyphenate']]],
   ['emchatroommanager',['EMChatRoomManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html',1,'com::hyphenate::chat']]],
   ['emchatservice',['EMChatService',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_service.html',1,'com::hyphenate::chat']]],
+  ['emchecktype',['EMCheckType',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_check_type.html',1,'com::hyphenate::chat']]],
   ['emclient',['EMClient',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html',1,'com::hyphenate::chat']]],
   ['emclientlistener',['EMClientListener',['../interfacecom_1_1hyphenate_1_1_e_m_client_listener.html',1,'com::hyphenate']]],
   ['emcmdmessagebody',['EMCmdMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_cmd_message_body.html',1,'com::hyphenate::chat']]],

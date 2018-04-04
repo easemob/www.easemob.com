@@ -81,6 +81,7 @@ var searchData=
   ['asyncuploadgroupsharedfile',['asyncUploadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a135a866faf915b49870a6d683cb15f91',1,'com::hyphenate::chat::EMGroupManager']]],
   ['attr_5ftype',['ATTR_TYPE',['../classcom_1_1hyphenate_1_1chat_1_1_message_encoder.html#a86f70a68df633ce315c3b1075dc009e8',1,'com::hyphenate::chat::MessageEncoder']]],
   ['audio',['audio',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_video_call_helper_1_1_call_type.html#aae55af7981786adf32001d410e8f5bab',1,'com::hyphenate::chat::EMVideoCallHelper::CallType']]],
+  ['audiooff',['audioOff',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_stream_param.html#a4e4bc1d46d1c82f324950aea9b0c8a0f',1,'com::hyphenate::chat::EMStreamParam']]],
   ['aysncaddcontact',['aysncAddContact',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#aada79db6b84b74b47c883704b70757eb',1,'com::hyphenate::chat::EMContactManager']]],
   ['aysncaddusertoblacklist',['aysncAddUserToBlackList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a311c2db573c67be7dc008fe36b44c175',1,'com::hyphenate::chat::EMContactManager']]],
   ['aysncdeletecontact',['aysncDeleteContact',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a72eab3ca43ece8984d84cade0c7b1f11',1,'com::hyphenate::chat::EMContactManager']]],
