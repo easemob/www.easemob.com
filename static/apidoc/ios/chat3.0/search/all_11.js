@@ -19,6 +19,7 @@ var searchData=
   ['sharedfilewithid_3a',['sharedFileWithId:',['../interface_e_m_group_shared_file.html#ac6b00368e3575cd5392913f278eba3ad',1,'EMGroupSharedFile']]],
   ['size',['size',['../interface_e_m_image_message_body.html#a6939a87d878fe756979ebf624b937657',1,'EMImageMessageBody']]],
   ['sortmessagebyservertime',['sortMessageByServerTime',['../interface_e_m_options.html#aa653fb528db133b69b3ab0a0a307dbff',1,'EMOptions']]],
+  ['speakerids',['speakerIds',['../interface_e_m_call_conference.html#aab50be1113e3666f017c6d78901b357a',1,'EMCallConference']]],
   ['startcall_3aremotename_3aext_3acompletion_3a',['startCall:remoteName:ext:completion:',['../protocol_i_e_m_call_manager-p.html#a49def75bf30cec8bb9c77ce3d1a87fc4',1,'IEMCallManager-p']]],
   ['startmonitorspeaker_3atimeinterval_3acompletion_3a',['startMonitorSpeaker:timeInterval:completion:',['../protocol_i_e_m_conference_manager-p.html#ad827fefd141536ebaaba175a87b50442',1,'IEMConferenceManager-p']]],
   ['startvideocall_3acompletion_3a',['startVideoCall:completion:',['../protocol_i_e_m_call_manager-p.html#a05572fbec6d3286c9feefcf9c4e179c1',1,'IEMCallManager-p']]],

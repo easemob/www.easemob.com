@@ -36,5 +36,7 @@ var searchData=
   ['resumevoiceandvideotransfer_3a',['resumeVoiceAndVideoTransfer:',['../protocol_i_e_m_call_manager-p.html#a2ea14735c9cbb4ea7f04e10f4c3b45ab',1,'IEMCallManager-p']]],
   ['resumevoicetransfer_3a',['resumeVoiceTransfer:',['../protocol_i_e_m_call_manager-p.html#ae150cc8b04ce169840d1470311c1f444',1,'IEMCallManager-p']]],
   ['resumevoicewithsession_3aerror_3a',['resumeVoiceWithSession:error:',['../protocol_i_e_m_call_manager-p.html#acea6e63b9638c36447a0bb2f84d206ed',1,'IEMCallManager-p']]],
+  ['role',['role',['../interface_e_m_call_conference.html#a20a4b6c1e523217cd99e6c40d568e01c',1,'EMCallConference']]],
+  ['roledidchanged_3a',['roleDidChanged:',['../protocol_e_m_conference_manager_delegate-p.html#ada8c07dac796d492a5165b28b50fb02c',1,'EMConferenceManagerDelegate-p']]],
   ['roommanager',['roomManager',['../interface_e_m_client.html#ae434fab3d92a083ee3c7dad9e353d44e',1,'EMClient']]]
 ];

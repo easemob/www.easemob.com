@@ -26,5 +26,6 @@ var searchData=
   ['resumevoice',['resumeVoice',['../interface_e_m_call_session.html#a52119fa0310787b4041fab33248abf0e',1,'EMCallSession']]],
   ['resumevoiceandvideotransfer_3a',['resumeVoiceAndVideoTransfer:',['../protocol_i_e_m_call_manager-p.html#a2ea14735c9cbb4ea7f04e10f4c3b45ab',1,'IEMCallManager-p']]],
   ['resumevoicetransfer_3a',['resumeVoiceTransfer:',['../protocol_i_e_m_call_manager-p.html#ae150cc8b04ce169840d1470311c1f444',1,'IEMCallManager-p']]],
-  ['resumevoicewithsession_3aerror_3a',['resumeVoiceWithSession:error:',['../protocol_i_e_m_call_manager-p.html#acea6e63b9638c36447a0bb2f84d206ed',1,'IEMCallManager-p']]]
+  ['resumevoicewithsession_3aerror_3a',['resumeVoiceWithSession:error:',['../protocol_i_e_m_call_manager-p.html#acea6e63b9638c36447a0bb2f84d206ed',1,'IEMCallManager-p']]],
+  ['roledidchanged_3a',['roleDidChanged:',['../protocol_e_m_conference_manager_delegate-p.html#ada8c07dac796d492a5165b28b50fb02c',1,'EMConferenceManagerDelegate-p']]]
 ];
