@@ -6,6 +6,8 @@ var searchData=
   ['markcallsession_3aissilence_3a',['markCallSession:isSilence:',['../protocol_i_e_m_call_manager-p.html#ab4e12d36c22b2cc29962c69d8e3c3ed8',1,'IEMCallManager-p']]],
   ['markmessageasreadwithid_3a',['markMessageAsReadWithId:',['../interface_e_m_conversation.html#a023ded16fede620f2ac09f3edf0b633d',1,'EMConversation']]],
   ['markmessageasreadwithid_3aerror_3a',['markMessageAsReadWithId:error:',['../interface_e_m_conversation.html#a97e2a01852fd5e53595a54eaffc0e8ca',1,'EMConversation']]],
+  ['memberdidjoin_3amember_3a',['memberDidJoin:member:',['../protocol_e_m_conference_manager_delegate-p.html#a35ae6bcf830548162cc9c7e6f6df0cd8',1,'EMConferenceManagerDelegate-p']]],
+  ['memberdidleave_3amember_3a',['memberDidLeave:member:',['../protocol_e_m_conference_manager_delegate-p.html#a2349384a054912620858346dff81eb41',1,'EMConferenceManagerDelegate-p']]],
   ['messageattachmentstatusdidchange_3aerror_3a',['messageAttachmentStatusDidChange:error:',['../protocol_e_m_chat_manager_delegate-p.html#aa1a4a8b8f3de7a06ccc61b7e73e3aa71',1,'EMChatManagerDelegate-p']]],
   ['messagesdiddeliver_3a',['messagesDidDeliver:',['../protocol_e_m_chat_manager_delegate-p.html#aeb655fe7e623359bee76cc6bb6c7b8d4',1,'EMChatManagerDelegate-p']]],
   ['messagesdidread_3a',['messagesDidRead:',['../protocol_e_m_chat_manager_delegate-p.html#a47aa66211e74a93da6c3ee555e8eb158',1,'EMChatManagerDelegate-p']]],

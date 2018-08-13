@@ -48,13 +48,13 @@ var searchData=
   ['useraccountdidloginfromotherdevice',['userAccountDidLoginFromOtherDevice',['../protocol_e_m_client_delegate-p.html#ab05f37bdd26ba94f97f2d7d077091f8d',1,'EMClientDelegate-p']]],
   ['useraccountdidremovefromserver',['userAccountDidRemoveFromServer',['../protocol_e_m_client_delegate-p.html#a973d8544232a05da9068dd5535e396e8',1,'EMClientDelegate-p']]],
   ['userdidforbidbyserver',['userDidForbidByServer',['../protocol_e_m_client_delegate-p.html#a4cbb63f33783bd5cdea2295e091da904',1,'EMClientDelegate-p']]],
-  ['userdidjoin_3auser_3a',['userDidJoin:user:',['../protocol_e_m_conference_manager_delegate-p.html#a0b2543821013f11f771c5436919fcc22',1,'EMConferenceManagerDelegate-p']]],
+  ['userdidjoin_3auser_3a',['userDidJoin:user:',['../protocol_e_m_conference_manager_delegate-p.html#ae695e343314c7cf2d3d7144f730ced4c',1,'EMConferenceManagerDelegate-p']]],
   ['userdidjoinchatroom_3auser_3a',['userDidJoinChatroom:user:',['../protocol_e_m_chatroom_manager_delegate-p.html#ae6c83f7f739bc6133bbfa7e6079c0e84',1,'EMChatroomManagerDelegate-p']]],
   ['userdidjoingroup_3auser_3a',['userDidJoinGroup:user:',['../protocol_e_m_group_manager_delegate-p.html#a27875c06d09e3ccc46200f9baf433c7e',1,'EMGroupManagerDelegate-p']]],
-  ['userdidleave_3auser_3a',['userDidLeave:user:',['../protocol_e_m_conference_manager_delegate-p.html#a4d2e3d5b4fef9a65fde58c2220bd0b18',1,'EMConferenceManagerDelegate-p']]],
+  ['userdidleave_3auser_3a',['userDidLeave:user:',['../protocol_e_m_conference_manager_delegate-p.html#abda4578cbf35ceb98cc9d8aaebde52b0',1,'EMConferenceManagerDelegate-p']]],
   ['userdidleavechatroom_3auser_3a',['userDidLeaveChatroom:user:',['../protocol_e_m_chatroom_manager_delegate-p.html#acd5c334bf17fde779940f077b58ed547',1,'EMChatroomManagerDelegate-p']]],
   ['userdidleavegroup_3auser_3a',['userDidLeaveGroup:user:',['../protocol_e_m_group_manager_delegate-p.html#acea896601e1aa54defdcee40035c96d7',1,'EMGroupManagerDelegate-p']]],
-  ['userdidrecvinvite_3apassword_3aext_3a',['userDidRecvInvite:password:ext:',['../protocol_e_m_conference_manager_delegate-p.html#ad391c77bb8257b3b02207250ae66e04a',1,'EMConferenceManagerDelegate-p']]],
+  ['userdidrecvinvite_3apassword_3aext_3a',['userDidRecvInvite:password:ext:',['../protocol_e_m_conference_manager_delegate-p.html#aca08a1c1369a3a9c1c62f1504e68280d',1,'EMConferenceManagerDelegate-p']]],
   ['username',['userName',['../interface_e_m_call_stream.html#a101bb64f02467cc0f3607f7f56195f13',1,'EMCallStream']]],
   ['usinghttpsonly',['usingHttpsOnly',['../interface_e_m_options.html#ae55204c816b2c5ed791726f7a1389d0e',1,'EMOptions']]]
 ];

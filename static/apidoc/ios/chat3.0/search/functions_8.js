@@ -24,5 +24,5 @@ var searchData=
   ['inputvideosamplebuffer_3aconference_3apublishedstreamid_3aformat_3arotation_3acompletion_3a',['inputVideoSampleBuffer:conference:publishedStreamId:format:rotation:completion:',['../protocol_i_e_m_conference_manager-p.html#a275b31fcb53fa173820eedae7f0949f5',1,'IEMConferenceManager-p']]],
   ['insertmessage_3a',['insertMessage:',['../interface_e_m_conversation.html#aa983233151fbfcf0fea3d3d061835231',1,'EMConversation']]],
   ['insertmessage_3aerror_3a',['insertMessage:error:',['../interface_e_m_conversation.html#a00f20d6f1196855618dbec1da33d6c03',1,'EMConversation']]],
-  ['inviteusertojoinconference_3ausername_3apassword_3aext_3aerror_3a',['inviteUserToJoinConference:userName:password:ext:error:',['../protocol_i_e_m_conference_manager-p.html#a698d53f50946ffb163bef4f4fb3584f6',1,'IEMConferenceManager-p']]]
+  ['inviteusertojoinconference_3ausername_3apassword_3aext_3aerror_3a',['inviteUserToJoinConference:userName:password:ext:error:',['../protocol_i_e_m_conference_manager-p.html#a7bd8bba1f4537a6295dcdb62de2c79d8',1,'IEMConferenceManager-p']]]
 ];
