@@ -51,7 +51,6 @@ var searchData=
   ['emgroupmanager',['EMGroupManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html',1,'com::hyphenate::chat']]],
   ['emgroupoptions',['EMGroupOptions',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_options.html',1,'com::hyphenate::chat']]],
   ['emgroupstyle',['EMGroupStyle',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['emhwpushreceiver',['EMHWPushReceiver',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_h_w_push_receiver.html',1,'com::hyphenate::chat']]],
   ['emimagemessagebody',['EMImageMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html',1,'com::hyphenate::chat']]],
   ['emjobservice',['EMJobService',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_job_service.html',1,'com::hyphenate::chat']]],
   ['emlocationmessagebody',['EMLocationMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_location_message_body.html',1,'com::hyphenate::chat']]],
