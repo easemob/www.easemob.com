@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['type',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html',1,'com.hyphenate.chat.EMMessage.Type'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_session_1_1_type.html',1,'com.hyphenate.chat.EMCallSession.Type']]]
+  ['type',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1EMMessage_1_1Type.html',1,'com::hyphenate::chat::EMMessage']]],
+  ['type',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1EMCallSession_1_1Type.html',1,'com::hyphenate::chat::EMCallSession']]]
 ];
