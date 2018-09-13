@@ -18,6 +18,7 @@ var searchData=
   ['updatepushserviceforgroup',['updatePushServiceForGroup',['../classcom_1_1hyphenate_1_1chat_1_1EMPushManager.html#af0e2e43e5840f1c03c567f797bee312c',1,'com::hyphenate::chat::EMPushManager']]],
   ['updateremotesurfaceview',['updateRemoteSurfaceView',['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#a4e1350c5b350054474ba85c8d29d67d5',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['updatesubscribe',['updateSubscribe',['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#a084981244bf4840d717a7d49ba472bcb',1,'com::hyphenate::chat::EMConferenceManager']]],
+  ['updatevideomaxkbps',['updateVideoMaxKbps',['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#a2e7abe01376640918f7f0f29901f369b',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['uploadgroupsharedfile',['uploadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1EMGroupManager.html#adb127813e9598b699fc2bfc09f63f656',1,'com::hyphenate::chat::EMGroupManager']]],
   ['uploadlog',['uploadLog',['../classcom_1_1hyphenate_1_1chat_1_1EMClient.html#af592159a62a963afae19318c66a8e236',1,'com::hyphenate::chat::EMClient']]]
 ];
