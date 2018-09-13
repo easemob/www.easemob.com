@@ -116,6 +116,7 @@ var searchData=
   ['getunreadmsgcount',['getUnreadMsgCount',['../classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#a38864711bae1ca592090de1bfff96f74',1,'com::hyphenate::chat::EMConversation']]],
   ['getunreadmsgscount',['getUnreadMsgsCount',['../classcom_1_1hyphenate_1_1chat_1_1EMChatManager.html#a6818928e2a43bc8b214d8a3e4426c205',1,'com::hyphenate::chat::EMChatManager']]],
   ['getusername',['getUserName',['../classcom_1_1hyphenate_1_1chat_1_1EMMessage.html#aa4e08a80072c42163d2e3a3711a6f464',1,'com.hyphenate.chat.EMMessage.getUserName()'],['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceStream.html#a851e77d978ef23db876d9f99c59789a8',1,'com.hyphenate.chat.EMConferenceStream.getUsername()'],['../classcom_1_1hyphenate_1_1chat_1_1EMContact.html#a7991125508f97cf0a324b757584e1761',1,'com.hyphenate.chat.EMContact.getUsername()']]],
+  ['getusertokenfromserver',['getUserTokenFromServer',['../classcom_1_1hyphenate_1_1chat_1_1EMClient.html#a9dc2d59b2c08f4f6f13d1f2402a8d2d5',1,'com::hyphenate::chat::EMClient']]],
   ['getusinghttpsonly',['getUsingHttpsOnly',['../classcom_1_1hyphenate_1_1chat_1_1EMOptions.html#a752057ecd7333f9c73fa481a4a6510e7',1,'com::hyphenate::chat::EMOptions']]],
   ['getvideofilelength',['getVideoFileLength',['../classcom_1_1hyphenate_1_1chat_1_1EMVideoMessageBody.html#a198b9f74509326d8fc62880ec36b073a',1,'com::hyphenate::chat::EMVideoMessageBody']]],
   ['getvideoframerate',['getVideoFrameRate',['../classcom_1_1hyphenate_1_1chat_1_1EMVideoCallHelper.html#ac83387d292e78d7d9fca7c5a8820385f',1,'com::hyphenate::chat::EMVideoCallHelper']]],
