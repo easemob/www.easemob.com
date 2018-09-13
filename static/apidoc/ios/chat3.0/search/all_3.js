@@ -2,6 +2,7 @@ var searchData=
 [
   ['calldidaccept_3a',['callDidAccept:',['../protocol_e_m_call_manager_delegate-p.html#aa0f4c7b3f5a9c6613f6726420910e76c',1,'EMCallManagerDelegate-p']]],
   ['calldidconnect_3a',['callDidConnect:',['../protocol_e_m_call_manager_delegate-p.html#a5203fbf604e29cacedf483c5f52b9923',1,'EMCallManagerDelegate-p']]],
+  ['calldidcustomaudiosessioncategoryoptionswithcategory_3a',['callDidCustomAudioSessionCategoryOptionsWithCategory:',['../protocol_e_m_call_manager_delegate-p.html#a4e6e8a101899a47e2e8a80a7d9457705',1,'EMCallManagerDelegate-p']]],
   ['calldidend_3areason_3aerror_3a',['callDidEnd:reason:error:',['../protocol_e_m_call_manager_delegate-p.html#a82a5133f2175c94c4b39cf6f42010601',1,'EMCallManagerDelegate-p']]],
   ['calldidreceive_3a',['callDidReceive:',['../protocol_e_m_call_manager_delegate-p.html#a3eba09d467fd76b4af04e5bf47154b77',1,'EMCallManagerDelegate-p']]],
   ['callid',['callId',['../interface_e_m_call_conference.html#adda89fb961cd8261a222d323d3337ba9',1,'EMCallConference::callId()'],['../interface_e_m_call_session.html#a66283c44edfc5ae767b382f63176d953',1,'EMCallSession::callId()']]],
