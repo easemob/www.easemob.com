@@ -49,7 +49,6 @@ var searchData=
   ['setmipushconfig',['setMipushConfig',['../classcom_1_1hyphenate_1_1chat_1_1EMOptions.html#a29616d678fd46ad207603812aac17e19',1,'com::hyphenate::chat::EMOptions']]],
   ['setmsgid',['setMsgId',['../classcom_1_1hyphenate_1_1chat_1_1EMMessage.html#ad24403943825f00c4c2f663f0d2aed5b',1,'com::hyphenate::chat::EMMessage']]],
   ['setmsgtime',['setMsgTime',['../classcom_1_1hyphenate_1_1chat_1_1EMMessage.html#abbf40bfb899b577f40fdcdf6029da5b4',1,'com::hyphenate::chat::EMMessage']]],
-  ['setnick',['setNick',['../classcom_1_1hyphenate_1_1chat_1_1EMContact.html#a8f49a2e88b4219d059cf6f219137bcae',1,'com::hyphenate::chat::EMContact']]],
   ['setnickname',['setNickname',['../classcom_1_1hyphenate_1_1chat_1_1EMContact.html#aa000883e62dd42951799b8aabc9f6e33',1,'com::hyphenate::chat::EMContact']]],
   ['setpassword',['setPassword',['../classcom_1_1hyphenate_1_1chat_1_1EMConference.html#a3b1f98fb381318c1179ca6cdee18c278',1,'com::hyphenate::chat::EMConference']]],
   ['setpinginterval',['setPingInterval',['../classcom_1_1hyphenate_1_1chat_1_1EMCallOptions.html#adcda2ab5ab431592ef906983c8a9df26',1,'com::hyphenate::chat::EMCallOptions']]],
