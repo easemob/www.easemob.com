@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['takeremotepicture_3a',['takeRemotePicture:',['../interface_e_m_call_session.html#ac2e2ba11bfba6ed5b753e68828f18bda',1,'EMCallSession']]],
   ['text',['text',['../interface_e_m_text_message_body.html#a10860d1f3e8d5187fe27826e41b80429',1,'EMTextMessageBody']]],
   ['thumbnaildisplayname',['thumbnailDisplayName',['../interface_e_m_image_message_body.html#ad9e1e2b3cfc76e8da497d544d3929488',1,'EMImageMessageBody']]],
   ['thumbnaildownloadstatus',['thumbnailDownloadStatus',['../interface_e_m_image_message_body.html#a721e8d9c61d6607f54fdbd94c184031d',1,'EMImageMessageBody::thumbnailDownloadStatus()'],['../interface_e_m_video_message_body.html#a92ac699fcc4e13b02b0c7ddc5bfe6ffa',1,'EMVideoMessageBody::thumbnailDownloadStatus()']]],
