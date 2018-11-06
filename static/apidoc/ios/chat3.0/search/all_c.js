@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['makevideocall_3aerror_3a',['makeVideoCall:error:',['../protocol_i_e_m_call_manager-p.html#ae5b96a29bc338ae33b265f8aa61255e4',1,'IEMCallManager-p']]],
-  ['makevoicecall_3aerror_3a',['makeVoiceCall:error:',['../protocol_i_e_m_call_manager-p.html#a4cab4d83ab8bc792770969c945329425',1,'IEMCallManager-p']]],
   ['markallmessagesasread_3a',['markAllMessagesAsRead:',['../interface_e_m_conversation.html#a05803775b9e1ee424bb6d352293c5e6d',1,'EMConversation']]],
-  ['markcallsession_3aissilence_3a',['markCallSession:isSilence:',['../protocol_i_e_m_call_manager-p.html#ab4e12d36c22b2cc29962c69d8e3c3ed8',1,'IEMCallManager-p']]],
   ['markmessageasreadwithid_3a',['markMessageAsReadWithId:',['../interface_e_m_conversation.html#a023ded16fede620f2ac09f3edf0b633d',1,'EMConversation']]],
   ['markmessageasreadwithid_3aerror_3a',['markMessageAsReadWithId:error:',['../interface_e_m_conversation.html#a97e2a01852fd5e53595a54eaffc0e8ca',1,'EMConversation']]],
   ['maxaudiokbps',['maxAudioKbps',['../interface_e_m_call_options.html#aea45547ce623a0fd5d53a36f00334520',1,'EMCallOptions::maxAudioKbps()'],['../interface_e_m_stream_param.html#a0add4b04cdb5d26082603fc80312538d',1,'EMStreamParam::maxAudioKbps()']]],
