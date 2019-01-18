@@ -14,6 +14,7 @@ var searchData=
   ['message_5fsend_5ftraffic_5flimit',['MESSAGE_SEND_TRAFFIC_LIMIT',['../classcom_1_1hyphenate_1_1EMError.html#a35cdce147efc8c840242791e6206d215',1,'com::hyphenate::EMError']]],
   ['messageencoder',['MessageEncoder',['../classcom_1_1hyphenate_1_1chat_1_1MessageEncoder.html',1,'com::hyphenate::chat']]],
   ['minvideokbps',['minVideoKbps',['../classcom_1_1hyphenate_1_1chat_1_1EMStreamParam.html#adb8eb12d1d37b28f9a2216e57aa651d4',1,'com::hyphenate::chat::EMStreamParam']]],
+  ['mirror',['MIRROR',['../interfacecom_1_1hyphenate_1_1chat_1_1EMMirror_1_1MIRROR.html',1,'com::hyphenate::chat::EMMirror']]],
   ['msgtype2conversationtype',['msgType2ConversationType',['../classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#a2af3c651b5402f316fea84d97bf5e1eb',1,'com::hyphenate::chat::EMConversation']]],
   ['mutechatroommembers',['muteChatRoomMembers',['../classcom_1_1hyphenate_1_1chat_1_1EMChatRoomManager.html#a9085e1f9d988cccec5c8ecc7125babbf',1,'com::hyphenate::chat::EMChatRoomManager']]],
   ['mutegroupmembers',['muteGroupMembers',['../classcom_1_1hyphenate_1_1chat_1_1EMGroupManager.html#a5a3abd57e52455ae68a1a5a5039862c3',1,'com::hyphenate::chat::EMGroupManager']]]

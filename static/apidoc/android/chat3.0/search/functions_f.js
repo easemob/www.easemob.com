@@ -39,6 +39,7 @@ var searchData=
   ['setlistened',['setListened',['../classcom_1_1hyphenate_1_1chat_1_1EMMessage.html#a3cca4a37883aa16db58e09b716d71b9c',1,'com::hyphenate::chat::EMMessage']]],
   ['setlocalsurfaceview',['setLocalSurfaceView',['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#a9594aa797296a3e7327fadd699f2ac53',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['setlocaltime',['setLocalTime',['../classcom_1_1hyphenate_1_1chat_1_1EMMessage.html#a558129c0d68ea5c3e5a28f02ef40dd09',1,'com::hyphenate::chat::EMMessage']]],
+  ['setlocalvideoviewmirror',['setLocalVideoViewMirror',['../classcom_1_1hyphenate_1_1chat_1_1EMCallOptions.html#a4cb1cfe6a11e21a99eb28df1c660c9da',1,'com.hyphenate.chat.EMCallOptions.setLocalVideoViewMirror()'],['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#acc62694d0c18068081209f6d987b0db6',1,'com.hyphenate.chat.EMConferenceManager.setLocalVideoViewMirror()']]],
   ['setmaxaudiokbps',['setMaxAudioKbps',['../classcom_1_1hyphenate_1_1chat_1_1EMCallOptions.html#a90b11b4c40bbbc4757287efdb8312ec4',1,'com::hyphenate::chat::EMCallOptions']]],
   ['setmaxvideoframerate',['setMaxVideoFrameRate',['../classcom_1_1hyphenate_1_1chat_1_1EMCallOptions.html#a334a5bfb414903da4b919539eac4dde4',1,'com::hyphenate::chat::EMCallOptions']]],
   ['setmaxvideokbps',['setMaxVideoKbps',['../classcom_1_1hyphenate_1_1chat_1_1EMCallOptions.html#a237df350c5e19dbb5f596b6d78e895fb',1,'com::hyphenate::chat::EMCallOptions']]],

@@ -59,6 +59,7 @@ var searchData=
   ['emmessagebody',['EMMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1EMMessageBody.html',1,'com::hyphenate::chat']]],
   ['emmessagelistener',['EMMessageListener',['../interfacecom_1_1hyphenate_1_1EMMessageListener.html',1,'com::hyphenate']]],
   ['emmipushreceiver',['EMMipushReceiver',['../classcom_1_1hyphenate_1_1chat_1_1EMMipushReceiver.html',1,'com::hyphenate::chat']]],
+  ['emmirror',['EMMirror',['../classcom_1_1hyphenate_1_1chat_1_1EMMirror.html',1,'com::hyphenate::chat']]],
   ['emmonitorreceiver',['EMMonitorReceiver',['../classcom_1_1hyphenate_1_1chat_1_1EMMonitorReceiver.html',1,'com::hyphenate::chat']]],
   ['emmucsharedfile',['EMMucSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1EMMucSharedFile.html',1,'com::hyphenate::chat']]],
   ['emmultidevicelistener',['EMMultiDeviceListener',['../interfacecom_1_1hyphenate_1_1EMMultiDeviceListener.html',1,'com::hyphenate']]],
