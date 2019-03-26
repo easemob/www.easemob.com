@@ -75,7 +75,7 @@ var searchData=
   ['getmembers',['getMembers',['../classcom_1_1hyphenate_1_1chat_1_1EMGroup.html#a3fd720620d5eff11e3d48c4cfb4f300f',1,'com::hyphenate::chat::EMGroup']]],
   ['getmessage',['getMessage',['../classcom_1_1hyphenate_1_1chat_1_1EMChatManager.html#a02cf8e1a43810b97f496198eecaba746',1,'com.hyphenate.chat.EMChatManager.getMessage()'],['../classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#aaaab722487466ceddfa43b01cce8b1f8',1,'com.hyphenate.chat.EMConversation.getMessage()'],['../classcom_1_1hyphenate_1_1chat_1_1EMTextMessageBody.html#af9cef37be8f76d086d0beb273dcdc3db',1,'com.hyphenate.chat.EMTextMessageBody.getMessage()']]],
   ['getmessageattachmentpath',['getMessageAttachmentPath',['../classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#af147e532c3683643a174efcbd2e1880b',1,'com::hyphenate::chat::EMConversation']]],
-  ['getmipushconfig',['getMipushConfig',['../classcom_1_1hyphenate_1_1chat_1_1EMOptions.html#a5d9eb05865effd13c40f4943039051da',1,'com::hyphenate::chat::EMOptions']]],
+  ['getmipushconfig',['getMipushConfig',['../classcom_1_1hyphenate_1_1chat_1_1EMOptions.html#a5cca77ecf339f908bda0a905cabae684',1,'com::hyphenate::chat::EMOptions']]],
   ['getmsgfromjson',['getMsgFromJson',['../classcom_1_1hyphenate_1_1chat_1_1MessageEncoder.html#ac3923096b082ca58b968187209f6a6c9',1,'com::hyphenate::chat::MessageEncoder']]],
   ['getmsgid',['getMsgId',['../classcom_1_1hyphenate_1_1chat_1_1EMMessage.html#ad787e066653adf543105b19b8c56275b',1,'com::hyphenate::chat::EMMessage']]],
   ['getmsgtime',['getMsgTime',['../classcom_1_1hyphenate_1_1chat_1_1EMMessage.html#af3a96397cecb2da9ce58c9c3c01e50ee',1,'com::hyphenate::chat::EMMessage']]],
