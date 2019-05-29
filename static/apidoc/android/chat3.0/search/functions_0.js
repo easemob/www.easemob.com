@@ -18,6 +18,7 @@ var searchData=
   ['addmultidevicelistener',['addMultiDeviceListener',['../classcom_1_1hyphenate_1_1chat_1_1EMClient.html#a7dc367e46a9c0f0b7dc5962482e38792',1,'com::hyphenate::chat::EMClient']]],
   ['adduserstogroup',['addUsersToGroup',['../classcom_1_1hyphenate_1_1chat_1_1EMGroupManager.html#a8bff6e3e1eefd221d57682499a6a9bcb',1,'com::hyphenate::chat::EMGroupManager']]],
   ['addusertoblacklist',['addUserToBlackList',['../classcom_1_1hyphenate_1_1chat_1_1EMContactManager.html#a5aef9054d15fbf3b8c5f841ee81bb720',1,'com::hyphenate::chat::EMContactManager']]],
+  ['adjustaudiomixingvolume',['adjustAudioMixingVolume',['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#a0546239a8e45778d59deeb5796770505',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['allowchatroomownerleave',['allowChatroomOwnerLeave',['../classcom_1_1hyphenate_1_1chat_1_1EMOptions.html#a896bbe5021287c11bf2ca2719cc72dad',1,'com::hyphenate::chat::EMOptions']]],
   ['answercall',['answerCall',['../classcom_1_1hyphenate_1_1chat_1_1EMCallManager.html#a51fa517af552f757d716c29492a11064',1,'com::hyphenate::chat::EMCallManager']]],
   ['appendmessage',['appendMessage',['../classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#ac670c9fa4683eaab19a2f03d8885d8f5',1,'com::hyphenate::chat::EMConversation']]],
