@@ -41,5 +41,6 @@ var searchData=
   ['user_5fremoved',['USER_REMOVED',['../classcom_1_1hyphenate_1_1EMError.html#ac17ad534d9a04bca878e21a469bb6535',1,'com::hyphenate::EMError']]],
   ['user_5funbind_5fdevicetoken_5ffailed',['USER_UNBIND_DEVICETOKEN_FAILED',['../classcom_1_1hyphenate_1_1EMError.html#ab1e3e56332d5b4dcc4381d931997983c',1,'com::hyphenate::EMError']]],
   ['user_5fupdateinfo_5ffailed',['USER_UPDATEINFO_FAILED',['../classcom_1_1hyphenate_1_1EMError.html#a398f514f3df0ab0d9f07b83098cfbd69',1,'com::hyphenate::EMError']]],
-  ['username',['username',['../classcom_1_1hyphenate_1_1chat_1_1EMContact.html#a7e6de215c10138628f2ce8e75e987d6c',1,'com::hyphenate::chat::EMContact']]]
+  ['username',['username',['../classcom_1_1hyphenate_1_1chat_1_1EMContact.html#a7e6de215c10138628f2ce8e75e987d6c',1,'com::hyphenate::chat::EMContact']]],
+  ['usingexternalsource',['usingExternalSource',['../classcom_1_1hyphenate_1_1chat_1_1EMStreamParam.html#a693bcc6c1e47718910c60383bee767e7',1,'com::hyphenate::chat::EMStreamParam']]]
 ];
