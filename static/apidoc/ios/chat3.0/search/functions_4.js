@@ -7,6 +7,7 @@ var searchData=
   ['declinejoinapplication_3aapplicant_3areason_3a',['declineJoinApplication:applicant:reason:',['../protocol_i_e_m_group_manager-p.html#a864402d585981ca3ee265f4efcf87b12',1,'IEMGroupManager-p']]],
   ['declinejoingrouprequest_3asender_3areason_3acompletion_3a',['declineJoinGroupRequest:sender:reason:completion:',['../protocol_i_e_m_group_manager-p.html#a7df008662fbe5727b7a32477d1f0a5f4',1,'IEMGroupManager-p']]],
   ['deleteallmessages_3a',['deleteAllMessages:',['../interface_e_m_conversation.html#a22f2b71c03473e4de999eb3cb4e7b946',1,'EMConversation']]],
+  ['deleteattributewithkey_3acompletion_3a',['deleteAttributeWithKey:completion:',['../protocol_i_e_m_conference_manager-p.html#a76450f8f0bee0e9df7e2742d0c2447a1',1,'IEMConferenceManager-p']]],
   ['deletecontact_3a',['deleteContact:',['../protocol_i_e_m_contact_manager-p.html#a37b32155de104f3ba01dbbfacf84ce4d',1,'IEMContactManager-p']]],
   ['deletecontact_3acompletion_3a',['deleteContact:completion:',['../protocol_i_e_m_contact_manager-p.html#acf60a8cc7499448b67b01916b28e4318',1,'IEMContactManager-p']]],
   ['deletecontact_3aisdeleteconversation_3a',['deleteContact:isDeleteConversation:',['../protocol_i_e_m_contact_manager-p.html#ae24e7e2f47190942f8d324487a429f12',1,'IEMContactManager-p']]],

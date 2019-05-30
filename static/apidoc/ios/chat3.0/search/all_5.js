@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['em_5fdeprecated_5fios',['EM_DEPRECATED_IOS',['../interface_e_m_chatroom.html#adf6c1ea9ce5758cadc603d59a77de987',1,'EMChatroom::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -memberList&quot;)'],['../interface_e_m_chatroom.html#a301ef2c60ba7a600feb5a117c2c01d70',1,'EMChatroom::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -occupantsCount&quot;)'],['../interface_e_m_chatroom.html#a6c68554b1320ac01c1e3b47cbd44ab6b',1,'EMChatroom::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -maxOccupantsCount&quot;)'],['../interface_e_m_group.html#a72cba774514e0d2556234a1cc8c5423b',1,'EMGroup::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -memberList&quot;)'],['../interface_e_m_group.html#ac586395b54f9b68f930774770bef8e2e',1,'EMGroup::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -blacklist&quot;)'],['../interface_e_m_group.html#a32f1210c22c6bffefd8d5ab18e8f2949',1,'EMGroup::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -occupantsCount&quot;)'],['../interface_e_m_options.html#ae331ed1afe5cedf62bef72f59ce4f5ca',1,'EMOptions::EM_DEPRECATED_IOS(3_0_0, 3_2_2)'],['../interface_e_m_options.html#a1cf796ea6c62d7f46768cf2c2ccc79d5',1,'EMOptions::EM_DEPRECATED_IOS(3_0_0, 3_2_1)'],['../protocol_i_e_m_conference_manager-p.html#a66b8276e6667bda5d71b9698744c85a9',1,'IEMConferenceManager-p::EM_DEPRECATED_IOS()']]],
+  ['em_5fdeprecated_5fios',['EM_DEPRECATED_IOS',['../interface_e_m_call_options.html#a31af73db66376033e103524dd8f6fe87',1,'EMCallOptions::EM_DEPRECATED_IOS()'],['../interface_e_m_stream_param.html#a7c2ac3f3e372cc658d6ca9cf38efc014',1,'EMStreamParam::EM_DEPRECATED_IOS()'],['../interface_e_m_chatroom.html#adf6c1ea9ce5758cadc603d59a77de987',1,'EMChatroom::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -memberList&quot;)'],['../interface_e_m_chatroom.html#a301ef2c60ba7a600feb5a117c2c01d70',1,'EMChatroom::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -occupantsCount&quot;)'],['../interface_e_m_chatroom.html#a6c68554b1320ac01c1e3b47cbd44ab6b',1,'EMChatroom::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -maxOccupantsCount&quot;)'],['../interface_e_m_group.html#a72cba774514e0d2556234a1cc8c5423b',1,'EMGroup::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -memberList&quot;)'],['../interface_e_m_group.html#ac586395b54f9b68f930774770bef8e2e',1,'EMGroup::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -blacklist&quot;)'],['../interface_e_m_group.html#a32f1210c22c6bffefd8d5ab18e8f2949',1,'EMGroup::EM_DEPRECATED_IOS(3_1_0, 3_3_0,&quot;Use -occupantsCount&quot;)'],['../interface_e_m_options.html#ae331ed1afe5cedf62bef72f59ce4f5ca',1,'EMOptions::EM_DEPRECATED_IOS(3_0_0, 3_2_2)'],['../interface_e_m_options.html#a1cf796ea6c62d7f46768cf2c2ccc79d5',1,'EMOptions::EM_DEPRECATED_IOS(3_0_0, 3_2_1)'],['../protocol_i_e_m_conference_manager-p.html#a66b8276e6667bda5d71b9698744c85a9',1,'IEMConferenceManager-p::EM_DEPRECATED_IOS()']]],
   ['emcallbuilderdelegate_2dp',['EMCallBuilderDelegate-p',['../protocol_e_m_call_builder_delegate-p.html',1,'']]],
   ['emcallconference',['EMCallConference',['../interface_e_m_call_conference.html',1,'']]],
+  ['emcalllocalvideoview',['EMCallLocalVideoView',['../interface_e_m_call_local_video_view.html',1,'']]],
   ['emcalllocalview',['EMCallLocalView',['../interface_e_m_call_local_view.html',1,'']]],
   ['emcallmanagerdelegate_2dp',['EMCallManagerDelegate-p',['../protocol_e_m_call_manager_delegate-p.html',1,'']]],
   ['emcallmember',['EMCallMember',['../interface_e_m_call_member.html',1,'']]],
   ['emcalloptions',['EMCallOptions',['../interface_e_m_call_options.html',1,'']]],
+  ['emcallremotevideoview',['EMCallRemoteVideoView',['../interface_e_m_call_remote_video_view.html',1,'']]],
   ['emcallremoteview',['EMCallRemoteView',['../interface_e_m_call_remote_view.html',1,'']]],
   ['emcallsession',['EMCallSession',['../interface_e_m_call_session.html',1,'']]],
   ['emcallstream',['EMCallStream',['../interface_e_m_call_stream.html',1,'']]],
@@ -19,6 +21,7 @@ var searchData=
   ['emclient_28conference_29',['EMClient(Conference)',['../category_e_m_client_07_conference_08.html',1,'']]],
   ['emclientdelegate_2dp',['EMClientDelegate-p',['../protocol_e_m_client_delegate-p.html',1,'']]],
   ['emcmdmessagebody',['EMCmdMessageBody',['../interface_e_m_cmd_message_body.html',1,'']]],
+  ['emconferenceattribute',['EMConferenceAttribute',['../interface_e_m_conference_attribute.html',1,'']]],
   ['emconferencemanagerdelegate_2dp',['EMConferenceManagerDelegate-p',['../protocol_e_m_conference_manager_delegate-p.html',1,'']]],
   ['emcontactmanager',['EMContactManager',['../interface_e_m_contact_manager.html',1,'']]],
   ['emcontactmanagerdelegate_2dp',['EMContactManagerDelegate-p',['../protocol_e_m_contact_manager_delegate-p.html',1,'']]],

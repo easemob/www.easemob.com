@@ -9,8 +9,8 @@ var searchData=
   ['localvideobitrate',['localVideoBitrate',['../interface_e_m_call_session.html#aecc7d56536bfedcb924e19e0bc860109',1,'EMCallSession']]],
   ['localvideoframerate',['localVideoFrameRate',['../interface_e_m_call_session.html#a6d05d54be6d7508b959f2ef020ca0eee',1,'EMCallSession']]],
   ['localvideolostrateinpercent',['localVideoLostRateInPercent',['../interface_e_m_call_session.html#ab42eb2571e0bb1111ab33f84c80588a0',1,'EMCallSession']]],
-  ['localvideoview',['localVideoView',['../interface_e_m_call_session.html#ab02fa44d0b21065a3cf0ed2e83af33c6',1,'EMCallSession']]],
-  ['localview',['localView',['../interface_e_m_stream_param.html#aa62778f0db62da994863d8efdb2cf30b',1,'EMStreamParam']]],
+  ['localvideoview',['localVideoView',['../interface_e_m_call_session.html#ad8ed75a4fedb8ae9573d8c5ce296867a',1,'EMCallSession']]],
+  ['localview',['localView',['../interface_e_m_stream_param.html#ae07d3fea0a3617f718782704d02820b3',1,'EMStreamParam']]],
   ['loglevel',['logLevel',['../interface_e_m_options.html#a0532bf2756002f639f403bed4c8a589e',1,'EMOptions']]],
   ['longitude',['longitude',['../interface_e_m_location_message_body.html#a803a3f6cd011398d9f3125092359ce67',1,'EMLocationMessageBody']]]
 ];

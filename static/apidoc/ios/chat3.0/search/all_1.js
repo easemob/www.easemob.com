@@ -19,6 +19,7 @@ var searchData=
   ['address',['address',['../interface_e_m_location_message_body.html#a49ae191f23b2d6630081b5cfc4eb00c6',1,'EMLocationMessageBody']]],
   ['addusertoblacklist_3acompletion_3a',['addUserToBlackList:completion:',['../protocol_i_e_m_contact_manager-p.html#a7a3a8c76b2523485a5f8ef27782e7511',1,'IEMContactManager-p']]],
   ['addusertoblacklist_3arelationshipboth_3a',['addUserToBlackList:relationshipBoth:',['../protocol_i_e_m_contact_manager-p.html#a0bb66ecb3dbde4c0dd423b3b8e8198a9',1,'IEMContactManager-p']]],
+  ['adjustaudiomixingvolume_3a',['adjustAudioMixingVolume:',['../protocol_i_e_m_conference_manager-p.html#a9b9a168a7e160ff08b5ccf13d2b8ab2f',1,'IEMConferenceManager-p']]],
   ['adminids',['adminIds',['../interface_e_m_call_conference.html#ad019490994e25fd61873a79a895a43ed',1,'EMCallConference']]],
   ['adminlist',['adminList',['../interface_e_m_chatroom.html#a30a3365cd75aa7f59bbbd1bf254e0907',1,'EMChatroom::adminList()'],['../interface_e_m_group.html#a27575ce14505a4893c4c9bf5da663fb8',1,'EMGroup::adminList()']]],
   ['announcement',['announcement',['../interface_e_m_chatroom.html#a2ad3fe1b641ea7fd52e8557f3d67f821',1,'EMChatroom::announcement()'],['../interface_e_m_group.html#a1ae69e0c6fdc8a63a9e0fbafa0779805',1,'EMGroup::announcement()']]],

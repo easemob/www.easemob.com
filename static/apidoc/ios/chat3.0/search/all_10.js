@@ -10,7 +10,7 @@ var searchData=
   ['remotevideoframerate',['remoteVideoFrameRate',['../interface_e_m_call_session.html#ac1e60bc6f19f4cf2d50c2264702928dd',1,'EMCallSession']]],
   ['remotevideolostrateinpercent',['remoteVideoLostRateInPercent',['../interface_e_m_call_session.html#aea427d3dd20376f3a9a5f37fb157358a',1,'EMCallSession']]],
   ['remotevideoresolution',['remoteVideoResolution',['../interface_e_m_call_session.html#a3ef044730afda942a2e7955b23bc9d75',1,'EMCallSession']]],
-  ['remotevideoview',['remoteVideoView',['../interface_e_m_call_session.html#a2c37b1513424b328b0742c46a9689b22',1,'EMCallSession']]],
+  ['remotevideoview',['remoteVideoView',['../interface_e_m_call_session.html#a74cf99cc4f08c2694459b878b04f3829',1,'EMCallSession']]],
   ['removeadmin_3afromchatroom_3acompletion_3a',['removeAdmin:fromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#ae0af50aecbfe234516c8f0f817b476d3',1,'IEMChatroomManager-p']]],
   ['removeadmin_3afromchatroom_3aerror_3a',['removeAdmin:fromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a5037fa05dc06aa257ac5747a399c7330',1,'IEMChatroomManager-p']]],
   ['removeadmin_3afromgroup_3acompletion_3a',['removeAdmin:fromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a313012bb91b40ee1dba87f9cca5a06eb',1,'IEMGroupManager-p']]],
