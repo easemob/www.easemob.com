@@ -14,7 +14,6 @@ var searchData=
   ['isdeletemessageswhenexitgroup',['isDeleteMessagesWhenExitGroup',['../interface_e_m_options.html#a87977ce6262723f66d75114c61dcf2c6',1,'EMOptions']]],
   ['isdeliveracked',['isDeliverAcked',['../interface_e_m_message.html#a94832d9030f11cac66e4c8e79db24585',1,'EMMessage']]],
   ['isdeliveronlineonly',['isDeliverOnlineOnly',['../interface_e_m_cmd_message_body.html#a90b64892f1b6b859b9b3a1a1c81dd263',1,'EMCmdMessageBody']]],
-  ['isfixedvideoresolution',['isFixedVideoResolution',['../interface_e_m_call_options.html#aecb79e3a01860936ba82b8cf29dce776',1,'EMCallOptions::isFixedVideoResolution()'],['../interface_e_m_stream_param.html#a11fb38e1ebfb0b99653b78622f0c448a',1,'EMStreamParam::isFixedVideoResolution()']]],
   ['isinviteneedconfirm',['IsInviteNeedConfirm',['../interface_e_m_group_options.html#a8baa934d189fe8fa8564c22ffe9adee9',1,'EMGroupOptions']]],
   ['isloggedin',['isLoggedIn',['../interface_e_m_client.html#a980267158808e32dee8981bb854eb9d4',1,'EMClient']]],
   ['ismute',['isMute',['../interface_e_m_stream_param.html#a048b7b29d5868be36013c5adfcafd2fa',1,'EMStreamParam']]],

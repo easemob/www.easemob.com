@@ -17,6 +17,7 @@ var searchData=
   ['addoccupants_3atogroup_3awelcomemessage_3aerror_3a',['addOccupants:toGroup:welcomeMessage:error:',['../protocol_i_e_m_group_manager-p.html#ae7f05f42d5c6dfacbde4b45edc728143',1,'IEMGroupManager-p']]],
   ['addusertoblacklist_3acompletion_3a',['addUserToBlackList:completion:',['../protocol_i_e_m_contact_manager-p.html#a7a3a8c76b2523485a5f8ef27782e7511',1,'IEMContactManager-p']]],
   ['addusertoblacklist_3arelationshipboth_3a',['addUserToBlackList:relationshipBoth:',['../protocol_i_e_m_contact_manager-p.html#a0bb66ecb3dbde4c0dd423b3b8e8198a9',1,'IEMContactManager-p']]],
+  ['adjustaudiomixingvolume_3a',['adjustAudioMixingVolume:',['../protocol_i_e_m_conference_manager-p.html#a9b9a168a7e160ff08b5ccf13d2b8ab2f',1,'IEMConferenceManager-p']]],
   ['answerincomingcall_3a',['answerIncomingCall:',['../protocol_i_e_m_call_manager-p.html#acc32a00500f5ff029035a723fc4234c2',1,'IEMCallManager-p']]],
   ['appendmessage_3a',['appendMessage:',['../interface_e_m_conversation.html#a1cce8fd155560b609d925e2c25bd9635',1,'EMConversation']]],
   ['appendmessage_3aerror_3a',['appendMessage:error:',['../interface_e_m_conversation.html#ac5973ef242c18a964184857cd1e8d00e',1,'EMConversation']]],
