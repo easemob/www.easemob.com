@@ -17,5 +17,7 @@ var searchData=
   ['mutemembers_3amutemilliseconds_3afromchatroom_3acompletion_3a',['muteMembers:muteMilliseconds:fromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#af49c35190194fe04d605ad711734df6d',1,'IEMChatroomManager-p']]],
   ['mutemembers_3amutemilliseconds_3afromchatroom_3aerror_3a',['muteMembers:muteMilliseconds:fromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#acab136d39fba30acf56b3566aaa15d41',1,'IEMChatroomManager-p']]],
   ['mutemembers_3amutemilliseconds_3afromgroup_3acompletion_3a',['muteMembers:muteMilliseconds:fromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#afa6edc4f523b00559026f42a303effed',1,'IEMGroupManager-p']]],
-  ['mutemembers_3amutemilliseconds_3afromgroup_3aerror_3a',['muteMembers:muteMilliseconds:fromGroup:error:',['../protocol_i_e_m_group_manager-p.html#a859c0b392ee4064c036c4686946054ed',1,'IEMGroupManager-p']]]
+  ['mutemembers_3amutemilliseconds_3afromgroup_3aerror_3a',['muteMembers:muteMilliseconds:fromGroup:error:',['../protocol_i_e_m_group_manager-p.html#a859c0b392ee4064c036c4686946054ed',1,'IEMGroupManager-p']]],
+  ['muteremoteaudio_3amute_3a',['muteRemoteAudio:mute:',['../protocol_i_e_m_conference_manager-p.html#a28f9297ad2411c6aa9bdbb291bb8df26',1,'IEMConferenceManager-p']]],
+  ['muteremotevideo_3amute_3a',['muteRemoteVideo:mute:',['../protocol_i_e_m_conference_manager-p.html#a870a36303635529c953194b9d240521b',1,'IEMConferenceManager-p']]]
 ];

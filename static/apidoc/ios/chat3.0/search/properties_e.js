@@ -2,6 +2,7 @@ var searchData=
 [
   ['scalemode',['scaleMode',['../interface_e_m_call_local_video_view.html#a860827128c29734c97ae73b6ff5c6ce1',1,'EMCallLocalVideoView::scaleMode()'],['../interface_e_m_call_remote_video_view.html#a3d2a583686fb9876c8566a31467917c0',1,'EMCallRemoteVideoView::scaleMode()']]],
   ['secretkey',['secretKey',['../interface_e_m_file_message_body.html#ae56d6b8868c9efe0c6a3321df980bd6c',1,'EMFileMessageBody']]],
+  ['servervideoid',['serverVideoId',['../interface_e_m_call_session.html#ac0aa89265a9e30dbb23d3d605cf91172',1,'EMCallSession']]],
   ['setting',['setting',['../interface_e_m_group.html#a2277b5dca3e2342d4e94b15a5d32ad88',1,'EMGroup']]],
   ['sharedfilelist',['sharedFileList',['../interface_e_m_group.html#a83bb6c3c611eab57a41252c1eff76a82',1,'EMGroup']]],
   ['size',['size',['../interface_e_m_image_message_body.html#a6939a87d878fe756979ebf624b937657',1,'EMImageMessageBody']]],

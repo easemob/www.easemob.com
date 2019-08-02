@@ -12,7 +12,7 @@ var searchData=
   ['setconferenceattribute_3avalue_3acompletion_3a',['setConferenceAttribute:value:completion:',['../protocol_i_e_m_conference_manager-p.html#a7e29cc54c08e9cab13a3b58df89eea80',1,'IEMConferenceManager-p']]],
   ['sharedclient',['sharedClient',['../interface_e_m_client.html#abdf7f014fc5a6c76d9a9bd676d9543f5',1,'EMClient']]],
   ['sharedfilewithid_3a',['sharedFileWithId:',['../interface_e_m_group_shared_file.html#ac6b00368e3575cd5392913f278eba3ad',1,'EMGroupSharedFile']]],
-  ['startaudiomixing_3aloop_3a',['startAudioMixing:loop:',['../protocol_i_e_m_conference_manager-p.html#a63f0840f3b4466f6f4cd3f692a445611',1,'IEMConferenceManager-p']]],
+  ['startaudiomixing_3aloop_3asendmix_3a',['startAudioMixing:loop:sendMix:',['../protocol_i_e_m_conference_manager-p.html#aa7e7d1a088f746f98b796d94b3eb631d',1,'IEMConferenceManager-p']]],
   ['startcall_3aremotename_3aext_3acompletion_3a',['startCall:remoteName:ext:completion:',['../protocol_i_e_m_call_manager-p.html#a49def75bf30cec8bb9c77ce3d1a87fc4',1,'IEMCallManager-p']]],
   ['startcall_3aremotename_3arecord_3amergestream_3aext_3acompletion_3a',['startCall:remoteName:record:mergeStream:ext:completion:',['../protocol_i_e_m_call_manager-p.html#a429bded3e8040875d02e84936cd75521',1,'IEMCallManager-p']]],
   ['startmonitorspeaker_3atimeinterval_3acompletion_3a',['startMonitorSpeaker:timeInterval:completion:',['../protocol_i_e_m_conference_manager-p.html#ad827fefd141536ebaaba175a87b50442',1,'IEMConferenceManager-p']]],
