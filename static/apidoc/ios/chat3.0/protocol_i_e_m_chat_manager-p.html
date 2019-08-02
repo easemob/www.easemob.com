@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateSDK
-   &#160;<span id="projectnumber">3.6.0</span>
+   &#160;<span id="projectnumber">3.6.1</span>
    </div>
   </td>
  </tr>
@@ -163,6 +163,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:a5e024de6f20fba34b842aa098a4b52aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad66ac47f566aa949a1abce2975ab5660"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#ad66ac47f566aa949a1abce2975ab5660">asyncDownloadMessageAttachments:progress:completion:</a></td></tr>
 <tr class="separator:ad66ac47f566aa949a1abce2975ab5660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbe7cd4dd6a145ba828cca0f2c2ed0a1"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#adbe7cd4dd6a145ba828cca0f2c2ed0a1">loadMessagesWithType:timestamp:count:fromUser:searchDirection:completion:</a></td></tr>
+<tr class="separator:adbe7cd4dd6a145ba828cca0f2c2ed0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf544ee0342fe91cb10aa8df8f09badc"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#adf544ee0342fe91cb10aa8df8f09badc">loadMessagesWithKeyword:timestamp:count:fromUser:searchDirection:completion:</a></td></tr>
+<tr class="separator:adf544ee0342fe91cb10aa8df8f09badc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>聊天相关操作 目前消息都是从DB中加载，沒有從server端加载 </p>
@@ -1173,6 +1177,146 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aMessages</td><td>消息列表&lt;EMMessage&gt; </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>完成的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adf544ee0342fe91cb10aa8df8f09badc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) loadMessagesWithKeyword: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aKeywords</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(long long)&#160;</td>
+          <td class="paramname"><em>aTimestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">count:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>aCount</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">fromUser:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aSender</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">searchDirection:</td>
+          <td></td>
+          <td class="paramtype">(EMMessageSearchDirection)&#160;</td>
+          <td class="paramname"><em>aDirection</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSArray *aMessages, <a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>从数据库获取包含指定内容的消息，取到的消息按时间排序，如果参考的时间戳为负数，则从最新消息向前取，如果aCount小于等于0当作1处理</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aKeywords</td><td>搜索关键字，如果为空则忽略 </td></tr>
+    <tr><td class="paramname">aTimestamp</td><td>参考时间戳 </td></tr>
+    <tr><td class="paramname">aCount</td><td>获取的条数 </td></tr>
+    <tr><td class="paramname">aSender</td><td>消息发送方，如果为空则忽略 </td></tr>
+    <tr><td class="paramname">aDirection</td><td>消息搜索方向 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>完成的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adbe7cd4dd6a145ba828cca0f2c2ed0a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) loadMessagesWithType: </td>
+          <td></td>
+          <td class="paramtype">(EMMessageBodyType)&#160;</td>
+          <td class="paramname"><em>aType</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(long long)&#160;</td>
+          <td class="paramname"><em>aTimestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">count:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>aCount</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">fromUser:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aUsername</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">searchDirection:</td>
+          <td></td>
+          <td class="paramtype">(EMMessageSearchDirection)&#160;</td>
+          <td class="paramname"><em>aDirection</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSArray *aMessages, <a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>从数据库获取指定类型的消息，取到的消息按时间排序，如果参考的时间戳为负数，则从最新消息取，如果aCount小于等于0当作1处理</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aType</td><td>消息类型 </td></tr>
+    <tr><td class="paramname">aTimestamp</td><td>参考时间戳 </td></tr>
+    <tr><td class="paramname">aCount</td><td>获取的条数 </td></tr>
+    <tr><td class="paramname">aUsername</td><td>消息发送方，如果为空则忽略 </td></tr>
+    <tr><td class="paramname">aDirection</td><td>消息搜索方向 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>完成的回调 </td></tr>
   </table>
   </dd>

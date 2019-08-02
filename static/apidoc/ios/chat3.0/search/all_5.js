@@ -52,6 +52,7 @@ var searchData=
   ['enabledeliveryack',['enableDeliveryAck',['../interface_e_m_options.html#a32063171c5d8ea464eb11cfa7b6374c1',1,'EMOptions']]],
   ['enablednsconfig',['enableDnsConfig',['../category_e_m_options_07_private_deploy_08.html#acf551f2e0bcf1be8454d42c7eac763f5',1,'EMOptions(PrivateDeploy)::enableDnsConfig()'],['../interface_e_m_options.html#acf551f2e0bcf1be8454d42c7eac763f5',1,'EMOptions::enableDnsConfig()']]],
   ['enablereportquality',['enableReportQuality',['../interface_e_m_call_options.html#af2129acdd0d3d73a583e8d37dfc087e2',1,'EMCallOptions']]],
+  ['enablestatistics_3a',['enableStatistics:',['../protocol_i_e_m_conference_manager-p.html#aa57d7c7aaec58f84fb0f81b38f36a2e4',1,'IEMConferenceManager-p']]],
   ['enablevideo',['enableVideo',['../interface_e_m_call_stream.html#a38bb35c4c2a6cd0a21873cecff8d7e03',1,'EMCallStream::enableVideo()'],['../interface_e_m_stream_param.html#abb3e229460ff146f27dedcd37c5d8a41',1,'EMStreamParam::enableVideo()']]],
   ['enablevoice',['enableVoice',['../interface_e_m_call_stream.html#aaa16a022971e07a6ae70c3422b323f6a',1,'EMCallStream']]],
   ['endcall_3areason_3a',['endCall:reason:',['../protocol_i_e_m_call_manager-p.html#a3964f06814f26a3f3f9b435f59ee3385',1,'IEMCallManager-p']]],
