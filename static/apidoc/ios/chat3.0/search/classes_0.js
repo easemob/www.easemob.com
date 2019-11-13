@@ -31,6 +31,7 @@ var searchData=
   ['emfilemessagebody',['EMFileMessageBody',['../interface_e_m_file_message_body.html',1,'']]],
   ['emgroup',['EMGroup',['../interface_e_m_group.html',1,'']]],
   ['emgroupmanagerdelegate_2dp',['EMGroupManagerDelegate-p',['../protocol_e_m_group_manager_delegate-p.html',1,'']]],
+  ['emgroupmessageack',['EMGroupMessageAck',['../interface_e_m_group_message_ack.html',1,'']]],
   ['emgroupoptions',['EMGroupOptions',['../interface_e_m_group_options.html',1,'']]],
   ['emgroupsharedfile',['EMGroupSharedFile',['../interface_e_m_group_shared_file.html',1,'']]],
   ['emimagemessagebody',['EMImageMessageBody',['../interface_e_m_image_message_body.html',1,'']]],

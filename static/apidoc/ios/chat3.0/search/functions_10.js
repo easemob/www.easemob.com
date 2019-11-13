@@ -2,8 +2,10 @@ var searchData=
 [
   ['searchpublicgroupwithid_3acompletion_3a',['searchPublicGroupWithId:completion:',['../protocol_i_e_m_group_manager-p.html#a36a7fd3e322e219d60d651a3832000ac',1,'IEMGroupManager-p']]],
   ['searchpublicgroupwithid_3aerror_3a',['searchPublicGroupWithId:error:',['../protocol_i_e_m_group_manager-p.html#a6bb1222214e0f15ce1034da4be30a55f',1,'IEMGroupManager-p']]],
+  ['sendgroupmessagereadack_3atogroup_3acontent_3acompletion_3a',['sendGroupMessageReadAck:toGroup:content:completion:',['../protocol_i_e_m_chat_manager-p.html#a685507f9302c573e638dee5af0a31a8f',1,'IEMChatManager-p']]],
   ['sendmessage_3aprogress_3acompletion_3a',['sendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#ad139d7ad31d934a721a979955baf1868',1,'IEMChatManager-p']]],
-  ['sendmessagereadack_3acompletion_3a',['sendMessageReadAck:completion:',['../protocol_i_e_m_chat_manager-p.html#a47881745f8927f2a703181b8233122a8',1,'IEMChatManager-p']]],
+  ['sendmessagereadack_3acompletion_3a',['sendMessageReadAck:completion:',['../protocol_i_e_m_chat_manager-p.html#a06c79694896fcad618511ca5a4afb05c',1,'IEMChatManager-p']]],
+  ['sendmessagereadack_3atouser_3acompletion_3a',['sendMessageReadAck:toUser:completion:',['../protocol_i_e_m_chat_manager-p.html#a447aed4b6cf49f4a034530e773f05cc3',1,'IEMChatManager-p']]],
   ['servicecheckwithusername_3apassword_3acompletion_3a',['serviceCheckWithUsername:password:completion:',['../interface_e_m_client.html#a3a4d7e200de90fcc8d9d45763f3d1b7c',1,'EMClient']]],
   ['setapnsnickname_3a',['setApnsNickname:',['../interface_e_m_client.html#a29f928aab2d104e6bf00426ed0c3d7dc',1,'EMClient']]],
   ['setappkey_3ausername_3atoken_3a',['setAppkey:username:token:',['../protocol_i_e_m_conference_manager-p.html#a16c1d9b53642b97e07e6ae1c55925519',1,'IEMConferenceManager-p']]],

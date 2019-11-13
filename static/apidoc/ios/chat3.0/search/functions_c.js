@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['markallconversationasread',['markAllConversationAsRead',['../protocol_i_e_m_chat_manager-p.html#ae953417a77d0b455310daa52571fd5b6',1,'IEMChatManager-p']]],
   ['markallmessagesasread_3a',['markAllMessagesAsRead:',['../interface_e_m_conversation.html#a05803775b9e1ee424bb6d352293c5e6d',1,'EMConversation']]],
   ['markmessageasreadwithid_3a',['markMessageAsReadWithId:',['../interface_e_m_conversation.html#a023ded16fede620f2ac09f3edf0b633d',1,'EMConversation']]],
   ['markmessageasreadwithid_3aerror_3a',['markMessageAsReadWithId:error:',['../interface_e_m_conversation.html#a97e2a01852fd5e53595a54eaffc0e8ca',1,'EMConversation']]],
