@@ -12,7 +12,7 @@ gem 'nokogiri', '~> 1.6.0'
 gem 'rouge', '~> 1.4'
 gem 'rake', '~> 0.9.2'
 gem 'thin'
-gem 'yajl-ruby', '~> 0.8.2'
+gem 'yajl-ruby', '~> 1.3.1'
 
 group :development do
   gem 'adsf'
