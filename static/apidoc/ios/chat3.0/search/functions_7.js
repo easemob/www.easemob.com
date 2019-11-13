@@ -66,6 +66,8 @@ var searchData=
   ['groupinvitationdiddecline_3ainvitee_3areason_3a',['groupInvitationDidDecline:invitee:reason:',['../protocol_e_m_group_manager_delegate-p.html#a42ca8caff1d2fb7f24c4f931dbbc1c3d',1,'EMGroupManagerDelegate-p']]],
   ['groupinvitationdidreceive_3ainviter_3amessage_3a',['groupInvitationDidReceive:inviter:message:',['../protocol_e_m_group_manager_delegate-p.html#a95832f51bb11b8e53ae23694e2b8bb81',1,'EMGroupManagerDelegate-p']]],
   ['grouplistdidupdate_3a',['groupListDidUpdate:',['../protocol_e_m_group_manager_delegate-p.html#aa494b756706513e87107bd8c777bacc2',1,'EMGroupManagerDelegate-p']]],
+  ['groupmessageackhaschanged',['groupMessageAckHasChanged',['../protocol_e_m_chat_manager_delegate-p.html#aa209384b77e33fec99166cd129571b3e',1,'EMChatManagerDelegate-p']]],
+  ['groupmessagedidread_3agroupacks_3a',['groupMessageDidRead:groupAcks:',['../protocol_e_m_chat_manager_delegate-p.html#adb99c44c2b0c85bca66535a5169a711d',1,'EMChatManagerDelegate-p']]],
   ['groupmutelistdidupdate_3aaddedmutedmembers_3amuteexpire_3a',['groupMuteListDidUpdate:addedMutedMembers:muteExpire:',['../protocol_e_m_group_manager_delegate-p.html#a89c8e98ab19e932e90eb8dbc89bb9551',1,'EMGroupManagerDelegate-p']]],
   ['groupmutelistdidupdate_3aremovedmutedmembers_3a',['groupMuteListDidUpdate:removedMutedMembers:',['../protocol_e_m_group_manager_delegate-p.html#a5d0369c093e8899fc385c1d2a80590fa',1,'EMGroupManagerDelegate-p']]],
   ['groupownerdidupdate_3anewowner_3aoldowner_3a',['groupOwnerDidUpdate:newOwner:oldOwner:',['../protocol_e_m_group_manager_delegate-p.html#aaf3845ae489248ec330bbb1d84e8ad7e',1,'EMGroupManagerDelegate-p']]],
