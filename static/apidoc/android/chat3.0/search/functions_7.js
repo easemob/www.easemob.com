@@ -23,11 +23,13 @@ var searchData=
   ['ismemberonly',['isMemberOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#aa71058cbdfbe29b04090eeae1fb0756d',1,'com::hyphenate::chat::EMGroup']]],
   ['ismembersonly',['isMembersOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#af167b8ceecbddad735478c1dfa7861e9',1,'com::hyphenate::chat::EMGroup']]],
   ['ismsgblocked',['isMsgBlocked',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#ad98b22914ef53e9cf566a08a6acb634f',1,'com::hyphenate::chat::EMGroup']]],
+  ['isneedgroupack',['isNeedGroupAck',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a93cb85756d4f130d7cb058f5b3ed6aae',1,'com::hyphenate::chat::EMMessage']]],
   ['ispublic',['isPublic',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a6db83d8a1156a964a2ca13e5bb51fcd2',1,'com::hyphenate::chat::EMGroup']]],
   ['isrecordonserver',['isRecordOnServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference.html#ad9d0782589e50a43a7c9ce3f17497994',1,'com::hyphenate::chat::EMConference']]],
   ['issendoriginalimage',['isSendOriginalImage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a05f113c7ad47b96e25ac1514f53e789c',1,'com::hyphenate::chat::EMImageMessageBody']]],
   ['issortmessagebyservertime',['isSortMessageByServerTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a96cacc44c07c257d46db6d3467860f5b',1,'com::hyphenate::chat::EMOptions']]],
   ['isunread',['isUnread',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a7814071869a845938865a4eabbe5d9e3',1,'com::hyphenate::chat::EMMessage']]],
   ['isusefcm',['isUseFCM',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a83630ba5034987bab47a699c10026f94',1,'com::hyphenate::chat::EMOptions']]],
+  ['isusestereoinput',['isUseStereoInput',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a7d2613152135a859502acffd217153c3',1,'com::hyphenate::chat::EMOptions']]],
   ['isvideooff',['isVideoOff',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_stream.html#adf570ce4deafeff59ca289949fd3d48f',1,'com::hyphenate::chat::EMConferenceStream']]]
 ];
