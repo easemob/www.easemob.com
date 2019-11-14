@@ -150,6 +150,7 @@ var searchData=
   ['group_5fremove_5fadmin',['GROUP_REMOVE_ADMIN',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a636222b83d90a757d6bc2546e3a4aef9',1,'com::hyphenate::EMMultiDeviceListener']]],
   ['group_5fremove_5fmute',['GROUP_REMOVE_MUTE',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a2a3ed3e8ab7f3b84f598438c3e76b2c0',1,'com::hyphenate::EMMultiDeviceListener']]],
   ['group_5funblock',['GROUP_UNBLOCK',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a95537d129a1a6df71f6e3850b398f360',1,'com::hyphenate::EMMultiDeviceListener']]],
+  ['groupackcount',['groupAckCount',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#afd62dc71e54f281ffb45dd5cd758d28c',1,'com::hyphenate::chat::EMMessage']]],
   ['groupchat',['GroupChat',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_conversation_type.html#aab8fe59c081eb6c2af2d912ac3d34466',1,'com.hyphenate.chat.EMConversation.EMConversationType.GroupChat()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#aa83280ce79df6f5aa49f7a5223498cad',1,'com.hyphenate.chat.EMMessage.ChatType.GroupChat()']]],
   ['groupmanager',['groupManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a519220cf905c540e9ca60a944d7930d5',1,'com::hyphenate::chat::EMClient']]],
   ['groupsubject',['groupSubject',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a9ecd7b4130d8e6d15c5e60d9a532c914',1,'com::hyphenate::chat::EMGroup']]]
