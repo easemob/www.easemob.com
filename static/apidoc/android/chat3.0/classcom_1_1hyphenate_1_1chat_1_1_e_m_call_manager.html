@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">hyphenate_SDK3.0
-   &#160;<span id="projectnumber">3.6.2</span>
+   &#160;<span id="projectnumber">3.6.3</span>
    </div>
    <div id="projectbrief">hyphenatejavaIMSDK</div>
   </td>
@@ -181,6 +181,8 @@ synchronized void&#160;</td><td class="memItemRight" valign="bottom"><b>switchCa
 <tr class="separator:a75c1911842e876ffe2cff7619072e7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d92d7f4db3d9d64cd2e3d9068f1534d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#a3d92d7f4db3d9d64cd2e3d9068f1534d">inputExternalVideoData</a> (byte[] data, RtcConnection.FORMAT format, int width, int height, int rotation)</td></tr>
 <tr class="separator:a3d92d7f4db3d9d64cd2e3d9068f1534d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dd9ce23f11e6e7aff53d1e151396368"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#a1dd9ce23f11e6e7aff53d1e151396368">inputExternalAudioData</a> (byte[] data, int length)</td></tr>
+<tr class="separator:a1dd9ce23f11e6e7aff53d1e151396368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 静态 Public 属性</h2></td></tr>
@@ -278,6 +280,41 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>changeState</b> (fina
 </div><div class="memdoc">
 <p>获取当前正在使用的摄像头</p>
 <dl class="section return"><dt>返回</dt><dd>值可以是 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1dd9ce23f11e6e7aff53d1e151396368"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.hyphenate.chat.EMCallManager.inputExternalAudioData </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>从外部直接输入音频数据 （发送的数据为计算出来的10ms的pcm byte数据 该功能目前只支持单声道，）</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>发送的自定义音频数据（计算出来的10ms的pcm byte数据）</td></tr>
+    <tr><td class="paramname">length</td><td>发送的自定义音频数据长度 ,是计算出来的10ms所需要的pcm byte数据长度， 计算方式: length = sampleRate * 10 / 1000 * bytesPerSample * channels. 参数说明：sampleRate 音频采样率 channels 音频声道（目前本sdk只支持单声道） bytesPerSample = BITS_PER_SAMPLE/8( 一般 BITS_PER_SAMPLE=16 ， 默认的音频数据格式是PCM 16位每个样本.）</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 - 输入成功 -1 - 输入失败，缓冲区未满 -2 - 输入失败，缓冲区满 </dd></dl>
 
 </div>
 </div>
