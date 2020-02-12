@@ -78,5 +78,7 @@ var searchData=
   ['emvideocallhelper',['EMVideoCallHelper',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_call_helper.html',1,'com::hyphenate::chat']]],
   ['emvideomessagebody',['EMVideoMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_message_body.html',1,'com::hyphenate::chat']]],
   ['emvoicemessagebody',['EMVoiceMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_voice_message_body.html',1,'com::hyphenate::chat']]],
+  ['emwatermarkoption',['EMWaterMarkOption',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_water_mark_option.html',1,'com::hyphenate::chat']]],
+  ['emwatermarkposition',['EMWaterMarkPosition',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_water_mark_position.html',1,'com::hyphenate::chat']]],
   ['endreason',['EndReason',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_session_1_1_end_reason.html',1,'com::hyphenate::chat::EMCallSession']]]
 ];

@@ -93,6 +93,8 @@ var searchData=
   ['emvideomessagebody',['EMVideoMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_message_body.html',1,'com::hyphenate::chat']]],
   ['emvoicemessagebody',['EMVoiceMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_voice_message_body.html',1,'com::hyphenate::chat']]],
   ['emvoicemessagebody',['EMVoiceMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_voice_message_body.html#a36de77310205bf76ab6b2a72f7bb2132',1,'com::hyphenate::chat::EMVoiceMessageBody']]],
+  ['emwatermarkoption',['EMWaterMarkOption',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_water_mark_option.html',1,'com::hyphenate::chat']]],
+  ['emwatermarkposition',['EMWaterMarkPosition',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_water_mark_position.html',1,'com::hyphenate::chat']]],
   ['enablefixedvideoresolution',['enableFixedVideoResolution',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_stream_param.html#ab78fe86db5a29cb2548677ecc976ca68',1,'com.hyphenate.chat.EMStreamParam.enableFixedVideoResolution()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_options.html#a4d4d72dd704f72ea6d1476fa3a3198a4',1,'com.hyphenate.chat.EMCallOptions.enableFixedVideoResolution()']]],
   ['enableofflinepush',['enableOfflinePush',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a67b8657b076bbcf98383d91932533ca0',1,'com::hyphenate::chat::EMPushManager']]],
   ['enablestatistics',['enableStatistics',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a8332e86b981056d930dde2965c047274',1,'com::hyphenate::chat::EMConferenceManager']]],
