@@ -11,6 +11,8 @@ var searchData=
   ['removeconnectionlistener',['removeConnectionListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a4e6873c088ea3cc594558dba1a21b2a4',1,'com::hyphenate::chat::EMClient']]],
   ['removecontactlistener',['removeContactListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a30a00840020f30d51c1e026eeaa29707',1,'com::hyphenate::chat::EMContactManager']]],
   ['removeconversationlistener',['removeConversationListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a0a8fb4720890a1d25cc909804312a6f8',1,'com::hyphenate::chat::EMChatManager']]],
+  ['removefromchatroomwhitelist',['removeFromChatRoomWhiteList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a35f14aac09be4365b70c9619c2d7fe21',1,'com::hyphenate::chat::EMChatRoomManager']]],
+  ['removefromgroupwhitelist',['removeFromGroupWhiteList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#aea431bf8eca1f1c0e8aab96a43ccac4c',1,'com::hyphenate::chat::EMGroupManager']]],
   ['removegroupadmin',['removeGroupAdmin',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a620e389a3f385bd784adf2e3cc6706f7',1,'com::hyphenate::chat::EMGroupManager']]],
   ['removegroupchangelistener',['removeGroupChangeListener',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a7100c4376149601ab04d927cfa6613a0',1,'com::hyphenate::chat::EMGroupManager']]],
   ['removemessage',['removeMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a6d31e7572d30226ea4f7e9c8ffce6806',1,'com::hyphenate::chat::EMConversation']]],

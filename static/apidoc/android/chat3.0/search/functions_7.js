@@ -8,6 +8,7 @@ var searchData=
   ['inviteuser',['inviteUser',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a64a9fbd9bbb9984bfdbcc583fdd5694a',1,'com::hyphenate::chat::EMGroupManager']]],
   ['inviteusertojoinconference',['inviteUserToJoinConference',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a46185b19b85ee8366c0f22ef36a3e05e',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['isacked',['isAcked',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a814412b9cabc5ea0078f71d96395ad15',1,'com::hyphenate::chat::EMMessage']]],
+  ['isallmembermuted',['isAllMemberMuted',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html#af3f9684170f452aaebdaec700720fb89',1,'com.hyphenate.chat.EMChatRoom.isAllMemberMuted()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a92aae603ba4e4315014e111d9d0111d2',1,'com.hyphenate.chat.EMGroup.isAllMemberMuted()']]],
   ['isallowinvites',['isAllowInvites',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#ad71da53ee82a9614d08ae44541121e07',1,'com::hyphenate::chat::EMGroup']]],
   ['isaudiooff',['isAudioOff',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_stream.html#a9de7ca96da69e90ba7c6fb8091938a40',1,'com::hyphenate::chat::EMConferenceStream']]],
   ['isautoacceptgroupinvitation',['isAutoAcceptGroupInvitation',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ae462f7c046ba17097baa51a3a40db526',1,'com::hyphenate::chat::EMOptions']]],

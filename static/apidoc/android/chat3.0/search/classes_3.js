@@ -43,6 +43,7 @@ var searchData=
   ['emconversationlistener',['EMConversationListener',['../interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html',1,'com::hyphenate']]],
   ['emconversationtype',['EMConversationType',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_conversation_type.html',1,'com::hyphenate::chat::EMConversation']]],
   ['emcursorresult',['EMCursorResult',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_cursor_result.html',1,'com::hyphenate::chat']]],
+  ['emcustommessagebody',['EMCustomMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_custom_message_body.html',1,'com::hyphenate::chat']]],
   ['emdeviceinfo',['EMDeviceInfo',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_device_info.html',1,'com::hyphenate::chat']]],
   ['emdownloadstatus',['EMDownloadStatus',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body_1_1_e_m_download_status.html',1,'com::hyphenate::chat::EMFileMessageBody']]],
   ['emencryptutils',['EMEncryptUtils',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_encrypt_utils.html',1,'com::hyphenate::chat']]],
@@ -70,6 +71,7 @@ var searchData=
   ['empageresult',['EMPageResult',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_page_result.html',1,'com::hyphenate::chat']]],
   ['empushconfigs',['EMPushConfigs',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_configs.html',1,'com::hyphenate::chat']]],
   ['empushmanager',['EMPushManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html',1,'com::hyphenate::chat']]],
+  ['emroomconfig',['EMRoomConfig',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_room_config.html',1,'com::hyphenate::chat']]],
   ['emsearchdirection',['EMSearchDirection',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html',1,'com::hyphenate::chat::EMConversation']]],
   ['emstreamparam',['EMStreamParam',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_stream_param.html',1,'com::hyphenate::chat']]],
   ['emstreamstatistics',['EMStreamStatistics',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_stream_statistics.html',1,'com::hyphenate::chat']]],
@@ -80,5 +82,6 @@ var searchData=
   ['emvoicemessagebody',['EMVoiceMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_voice_message_body.html',1,'com::hyphenate::chat']]],
   ['emwatermarkoption',['EMWaterMarkOption',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_water_mark_option.html',1,'com::hyphenate::chat']]],
   ['emwatermarkposition',['EMWaterMarkPosition',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_water_mark_position.html',1,'com::hyphenate::chat']]],
+  ['emwhiteboard',['EMWhiteboard',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_whiteboard.html',1,'com::hyphenate::chat']]],
   ['endreason',['EndReason',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_session_1_1_end_reason.html',1,'com::hyphenate::chat::EMCallSession']]]
 ];

@@ -21,6 +21,7 @@ var searchData=
   ['call_5fother_5fdevice',['CALL_OTHER_DEVICE',['../classcom_1_1hyphenate_1_1_e_m_error.html#a695c9652134db23fd3619170725ed4ae',1,'com::hyphenate::EMError']]],
   ['call_5fremote_5foffline',['CALL_REMOTE_OFFLINE',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac7565a421d38ff81dd0ff0c1193de060',1,'com::hyphenate::EMError']]],
   ['call_5fsession_5fexpired',['CALL_SESSION_EXPIRED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a3cc920ce0931e1e4ff6ab6fd1804b1d1',1,'com::hyphenate::EMError']]],
+  ['call_5ftalker_5fisfull',['CALL_TALKER_ISFULL',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa27246b6cd770af44d9e953194e7ce54',1,'com::hyphenate::EMError']]],
   ['call_5fticket_5fexpired',['CALL_TICKET_EXPIRED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a1b819c4da80c4582c46758dc26e8cfa3',1,'com::hyphenate::EMError']]],
   ['call_5fticket_5finvalid',['CALL_TICKET_INVALID',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa428e7827de03c701425a9a461f065eb',1,'com::hyphenate::EMError']]],
   ['chat',['Chat',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_conversation_type.html#aa3954f1a8444c45f63a4f6b52b2cb3ab',1,'com.hyphenate.chat.EMConversation.EMConversationType.Chat()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#a160bb0aa31d02b25444da9b0eb83250c',1,'com.hyphenate.chat.EMMessage.ChatType.Chat()']]],
