@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">hyphenate_SDK3.0
-   &#160;<span id="projectnumber">3.6.5</span>
+   &#160;<span id="projectnumber">3.6.6</span>
    </div>
    <div id="projectbrief">hyphenatejavaIMSDK</div>
   </td>
@@ -149,6 +149,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a46185b19b85ee8366c0f22ef36a3e05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52a1e73bc4b588bc57227c7a57512409"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a52a1e73bc4b588bc57227c7a57512409">grantRole</a> (final String confId, final <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_member.html">EMConferenceMember</a> member, final <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager_1_1_e_m_conference_role.html">EMConferenceRole</a> toRole, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; String &gt; callback)</td></tr>
 <tr class="separator:a52a1e73bc4b588bc57227c7a57512409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8762ac9fa0fd293f05b4bcf1efbef10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#af8762ac9fa0fd293f05b4bcf1efbef10">kickMember</a> (final String confId, final List&lt; String &gt; members, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; String &gt; callback)</td></tr>
+<tr class="separator:af8762ac9fa0fd293f05b4bcf1efbef10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a785be01c2f30dbe661fb91c9c8cac7a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a785be01c2f30dbe661fb91c9c8cac7a9">setConferenceAttribute</a> (@NonNull String key,@NonNull String value, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; Void &gt; callback)</td></tr>
 <tr class="separator:a785be01c2f30dbe661fb91c9c8cac7a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5527cfbd5bcb9851eb01bdb8ffd97eaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a5527cfbd5bcb9851eb01bdb8ffd97eaa">deleteConferenceAttribute</a> (@NonNull String key, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; Void &gt; callback)</td></tr>
@@ -1633,6 +1635,47 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addCommonParams</b> (
     <tr><td class="paramname">roomName</td><td>房间名 </td></tr>
     <tr><td class="paramname">password</td><td>房间的密码 </td></tr>
     <tr><td class="paramname">callBack</td><td>请求完成的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af8762ac9fa0fd293f05b4bcf1efbef10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMConferenceManager.kickMember </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>confId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final List&lt; String &gt;&#160;</td>
+          <td class="paramname"><em>members</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; String &gt;&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>移除会议中存在的主播 用户角色: Admin &gt; Talker &gt; Audience 注意: 踢人只允许Admin 去操作</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">confId</td><td>会议id </td></tr>
+    <tr><td class="paramname">members</td><td>移除的主播列表 </td></tr>
+    <tr><td class="paramname">callback</td><td>结果回调 </td></tr>
   </table>
   </dd>
 </dl>
