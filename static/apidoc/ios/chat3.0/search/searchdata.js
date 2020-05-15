@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdefgijklmnoprstuvw",
-  1: "eir",
+  0: "_abcdefghijklmnoprstuvwxyz",
+  1: "ceilr",
   2: "_abcdefgijklmoprsu",
-  3: "abcdefgilmnoprstuvw"
+  3: "abcdefghiklmnoprstuvwxyz"
 };
 
 var indexSectionNames =
@@ -16,9 +16,9 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Classes",
-  2: "Functions",
-  3: "Properties"
+  0: "全部",
+  1: "类",
+  2: "函数",
+  3: "属性"
 };
 

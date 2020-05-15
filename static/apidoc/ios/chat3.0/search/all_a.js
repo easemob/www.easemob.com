@@ -1,10 +1,16 @@
 var searchData=
 [
-  ['kickalldeviceswithusername_3apassword_3a_479',['kickAllDevicesWithUsername:password:',['../interface_e_m_client.html#a0bcebc27a58245bd167aa7fd0f7d52cd',1,'EMClient']]],
-  ['kickalldeviceswithusername_3apassword_3acompletion_3a_480',['kickAllDevicesWithUsername:password:completion:',['../interface_e_m_client.html#a14aa695c8f2c868f3fd0adc80256a524',1,'EMClient']]],
-  ['kickdevice_3ausername_3apassword_3a_481',['kickDevice:username:password:',['../interface_e_m_client.html#ac3bb14b9aa24b71101a89d101ac290d4',1,'EMClient']]],
-  ['kickdevice_3ausername_3apassword_3acompletion_3a_482',['kickDevice:username:password:completion:',['../interface_e_m_client.html#a40cbc3f86ce5102b55bb8f5c70967f8c',1,'EMClient']]],
-  ['kickdevicewithusername_3apassword_3aresource_3a_483',['kickDeviceWithUsername:password:resource:',['../interface_e_m_client.html#a3d73b721df8fd9475cba4c6ec00322b1',1,'EMClient']]],
-  ['kickdevicewithusername_3apassword_3aresource_3acompletion_3a_484',['kickDeviceWithUsername:password:resource:completion:',['../interface_e_m_client.html#a2ea6327d04f7352f9080f5a5253a1c06',1,'EMClient']]],
-  ['kickmemberwithconfid_3amembernames_3acompletion_3a_485',['kickMemberWithConfId:memberNames:completion:',['../protocol_i_e_m_conference_manager-p.html#a094785f9b5ee245226399234bd72fe58',1,'IEMConferenceManager-p']]]
+  ['joinchatroom_3acompletion_3a_490',['joinChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a96972200755a19944a4fd3edd6e207c3',1,'IEMChatroomManager-p']]],
+  ['joinchatroom_3aerror_3a_491',['joinChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a32a8775b7719f1426e885f864464fb68',1,'IEMChatroomManager-p']]],
+  ['joinconferencewithconfid_3apassword_3acompletion_3a_492',['joinConferenceWithConfId:password:completion:',['../protocol_i_e_m_conference_manager-p.html#acead28618cffee8a9068897bbb238df8',1,'IEMConferenceManager-p']]],
+  ['joinconferencewithticket_3acompletion_3a_493',['joinConferenceWithTicket:completion:',['../protocol_i_e_m_conference_manager-p.html#a1a81bcafde9fa0d9a826a80dee15f981',1,'IEMConferenceManager-p']]],
+  ['joingrouprequestdidapprove_3a_494',['joinGroupRequestDidApprove:',['../protocol_e_m_group_manager_delegate-p.html#a1a46522e3bda01d100e7d97766301cf3',1,'EMGroupManagerDelegate-p']]],
+  ['joingrouprequestdiddecline_3areason_3a_495',['joinGroupRequestDidDecline:reason:',['../protocol_e_m_group_manager_delegate-p.html#a04c19455375477181825935349cc4842',1,'EMGroupManagerDelegate-p']]],
+  ['joingrouprequestdidreceive_3auser_3areason_3a_496',['joinGroupRequestDidReceive:user:reason:',['../protocol_e_m_group_manager_delegate-p.html#ad7e38106f3c2471827c0831ee2189885',1,'EMGroupManagerDelegate-p']]],
+  ['joinpublicgroup_3acompletion_3a_497',['joinPublicGroup:completion:',['../protocol_i_e_m_group_manager-p.html#aef8fbbdc8cfa36e7d696836d0fddd0ef',1,'IEMGroupManager-p']]],
+  ['joinpublicgroup_3aerror_3a_498',['joinPublicGroup:error:',['../protocol_i_e_m_group_manager-p.html#ab8a4e26cd835e7bf13a9198c20aed1ec',1,'IEMGroupManager-p']]],
+  ['joinroom_3apassword_3arole_3acompletion_3a_499',['joinRoom:password:role:completion:',['../protocol_i_e_m_conference_manager-p.html#a9884d47a852b8821e288117ce2482bfb',1,'IEMConferenceManager-p']]],
+  ['joinroom_3apassword_3arole_3aroomconfig_3acompletion_3a_500',['joinRoom:password:role:roomConfig:completion:',['../protocol_i_e_m_conference_manager-p.html#a9dc56f6f8c505322baff4074964640d8',1,'IEMConferenceManager-p']]],
+  ['joinwhiteboardroomwithid_3ausername_3ausertoken_3aroompassword_3acompletion_3a_501',['joinWhiteboardRoomWithId:username:userToken:roomPassword:completion:',['../protocol_i_e_m_conference_manager-p.html#abfa292362b5130c011566b4e04566142',1,'IEMConferenceManager-p']]],
+  ['joinwhiteboardroomwithname_3ausername_3ausertoken_3aroompassword_3acompletion_3a_502',['joinWhiteboardRoomWithName:username:userToken:roomPassword:completion:',['../protocol_i_e_m_conference_manager-p.html#a8e8224035b986fb2b41bfc8ea45e5291',1,'IEMConferenceManager-p']]]
 ];

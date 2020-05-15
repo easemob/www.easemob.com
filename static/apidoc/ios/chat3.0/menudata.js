@@ -21,13 +21,13 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Main Page",url:"index.html"},
-{text:"Classes",url:"annotated.html",children:[
-{text:"Class List",url:"annotated.html"},
-{text:"Class Index",url:"classes.html"},
-{text:"Class Hierarchy",url:"hierarchy.html"},
-{text:"Class Members",url:"functions.html",children:[
-{text:"All",url:"functions.html",children:[
+{text:"首页",url:"index.html"},
+{text:"类",url:"annotated.html",children:[
+{text:"类列表",url:"annotated.html"},
+{text:"类索引",url:"classes.html"},
+{text:"类继承关系",url:"hierarchy.html"},
+{text:"类成员",url:"functions.html",children:[
+{text:"全部",url:"functions.html",children:[
 {text:"_",url:"functions.html#index__5F"},
 {text:"a",url:"functions_a.html#index_a"},
 {text:"b",url:"functions_b.html#index_b"},
@@ -36,6 +36,7 @@ var menudata={children:[
 {text:"e",url:"functions_e.html#index_e"},
 {text:"f",url:"functions_f.html#index_f"},
 {text:"g",url:"functions_g.html#index_g"},
+{text:"h",url:"functions_h.html#index_h"},
 {text:"i",url:"functions_i.html#index_i"},
 {text:"j",url:"functions_j.html#index_j"},
 {text:"k",url:"functions_k.html#index_k"},
@@ -49,8 +50,11 @@ var menudata={children:[
 {text:"t",url:"functions_t.html#index_t"},
 {text:"u",url:"functions_u.html#index_u"},
 {text:"v",url:"functions_v.html#index_v"},
-{text:"w",url:"functions_w.html#index_w"}]},
-{text:"Functions",url:"functions_func.html",children:[
+{text:"w",url:"functions_w.html#index_w"},
+{text:"x",url:"functions_x.html#index_x"},
+{text:"y",url:"functions_y.html#index_y"},
+{text:"z",url:"functions_z.html#index_z"}]},
+{text:"函数",url:"functions_func.html",children:[
 {text:"_",url:"functions_func.html#index__5F"},
 {text:"a",url:"functions_func_a.html#index_a"},
 {text:"b",url:"functions_func_b.html#index_b"},
@@ -69,7 +73,7 @@ var menudata={children:[
 {text:"r",url:"functions_func_r.html#index_r"},
 {text:"s",url:"functions_func_s.html#index_s"},
 {text:"u",url:"functions_func_u.html#index_u"}]},
-{text:"Properties",url:"functions_prop.html",children:[
+{text:"属性",url:"functions_prop.html",children:[
 {text:"a",url:"functions_prop.html#index_a"},
 {text:"b",url:"functions_prop_b.html#index_b"},
 {text:"c",url:"functions_prop_c.html#index_c"},
@@ -77,7 +81,9 @@ var menudata={children:[
 {text:"e",url:"functions_prop_e.html#index_e"},
 {text:"f",url:"functions_prop_f.html#index_f"},
 {text:"g",url:"functions_prop_g.html#index_g"},
+{text:"h",url:"functions_prop_h.html#index_h"},
 {text:"i",url:"functions_prop_i.html#index_i"},
+{text:"k",url:"functions_prop_k.html#index_k"},
 {text:"l",url:"functions_prop_l.html#index_l"},
 {text:"m",url:"functions_prop_m.html#index_m"},
 {text:"n",url:"functions_prop_n.html#index_n"},
@@ -88,6 +94,9 @@ var menudata={children:[
 {text:"t",url:"functions_prop_t.html#index_t"},
 {text:"u",url:"functions_prop_u.html#index_u"},
 {text:"v",url:"functions_prop_v.html#index_v"},
-{text:"w",url:"functions_prop_w.html#index_w"}]}]}]},
-{text:"Files",url:"files.html",children:[
-{text:"File List",url:"files.html"}]}]}
+{text:"w",url:"functions_prop_w.html#index_w"},
+{text:"x",url:"functions_prop_x.html#index_x"},
+{text:"y",url:"functions_prop_y.html#index_y"},
+{text:"z",url:"functions_prop_z.html#index_z"}]}]}]},
+{text:"文件",url:"files.html",children:[
+{text:"文件列表",url:"files.html"}]}]}
