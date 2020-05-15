@@ -92,7 +92,8 @@ var searchData=
   ['asyncunblockoccupants_3aforgroup_3asuccess_3afailure_3a_90',['asyncUnblockOccupants:forGroup:success:failure:',['../protocol_i_e_m_group_manager-p.html#af6070db1b70b8a3279a4ee3dffe5b5e4',1,'IEMGroupManager-p']]],
   ['asyncupdatepushoptionstoserver_3afailure_3a_91',['asyncUpdatePushOptionsToServer:failure:',['../interface_e_m_client.html#a3bd344114b7a6c3ec52063761c31af24',1,'EMClient']]],
   ['asyncuploadlogtoserver_3afailure_3a_92',['asyncUploadLogToServer:failure:',['../interface_e_m_client.html#a4d4a639f63c868499c9970985242d27a',1,'EMClient']]],
-  ['audiocustomchannels_93',['audioCustomChannels',['../interface_e_m_call_options.html#a13c64c9c57bf4591195d452e58c546ff',1,'EMCallOptions']]],
-  ['audiocustomsamples_94',['audioCustomSamples',['../interface_e_m_call_options.html#a76482a8e2702e1905c036142e41c8a6d',1,'EMCallOptions']]],
-  ['autologindidcompletewitherror_3a_95',['autoLoginDidCompleteWithError:',['../protocol_e_m_client_delegate-p.html#a64c0dd4b13410879866d4e17028802fc',1,'EMClientDelegate-p']]]
+  ['audiencescount_93',['audiencesCount',['../interface_e_m_call_conference.html#a38bb5d2837fdddd6f99e2e521b5ec603',1,'EMCallConference']]],
+  ['audiocustomchannels_94',['audioCustomChannels',['../interface_e_m_call_options.html#a13c64c9c57bf4591195d452e58c546ff',1,'EMCallOptions']]],
+  ['audiocustomsamples_95',['audioCustomSamples',['../interface_e_m_call_options.html#a76482a8e2702e1905c036142e41c8a6d',1,'EMCallOptions']]],
+  ['autologindidcompletewitherror_3a_96',['autoLoginDidCompleteWithError:',['../protocol_e_m_client_delegate-p.html#a64c0dd4b13410879866d4e17028802fc',1,'EMClientDelegate-p']]]
 ];

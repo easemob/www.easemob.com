@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['whitelist_740',['whiteList',['../interface_e_m_chatroom.html#ab9ea9bdd35fe27a7df227b5983cfb835',1,'EMChatroom::whiteList()'],['../interface_e_m_group.html#af908a2293e8e79a144341f899eb14953',1,'EMGroup::whiteList()']]],
-  ['willrecord_741',['willRecord',['../interface_e_m_call_conference.html#a7efbe601fca99069fa3e7f15b54b48eb',1,'EMCallConference::willRecord()'],['../interface_e_m_call_session.html#a6b76c8b2df03bcf4fab8b459fcc60407',1,'EMCallSession::willRecord()']]]
+  ['version_776',['version',['../interface_e_m_client.html#ae0806b1523e5b49381660594a26d4fdf',1,'EMClient']]],
+  ['videoheight_777',['videoHeight',['../interface_e_m_stream_param.html#aee30d626dd9a988389abce150d203ee3',1,'EMStreamParam']]],
+  ['videolatency_778',['videoLatency',['../interface_e_m_call_session.html#a218b700793cbd72fb0bd1a5556bf0e06',1,'EMCallSession']]],
+  ['videoresolution_779',['videoResolution',['../interface_e_m_call_options.html#af49ac4f01b9bca538fbce40e1de5f866',1,'EMCallOptions::videoResolution()'],['../interface_e_m_stream_param.html#a5c66fdfdb0f9e268e95323c13df02203',1,'EMStreamParam::videoResolution()']]],
+  ['videowidth_780',['videoWidth',['../interface_e_m_stream_param.html#a9d0128aa30ccaec0a19528f88fd0ba2a',1,'EMStreamParam']]]
 ];

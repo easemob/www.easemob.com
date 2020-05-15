@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['text_1464',['text',['../interface_e_m_text_message_body.html#a10860d1f3e8d5187fe27826e41b80429',1,'EMTextMessageBody']]],
-  ['thumbnaildisplayname_1465',['thumbnailDisplayName',['../interface_e_m_image_message_body.html#ad9e1e2b3cfc76e8da497d544d3929488',1,'EMImageMessageBody']]],
-  ['thumbnaildownloadstatus_1466',['thumbnailDownloadStatus',['../interface_e_m_image_message_body.html#a721e8d9c61d6607f54fdbd94c184031d',1,'EMImageMessageBody::thumbnailDownloadStatus()'],['../interface_e_m_video_message_body.html#a92ac699fcc4e13b02b0c7ddc5bfe6ffa',1,'EMVideoMessageBody::thumbnailDownloadStatus()']]],
-  ['thumbnailfilelength_1467',['thumbnailFileLength',['../interface_e_m_image_message_body.html#ace5114e5dfea7208384e505501245e55',1,'EMImageMessageBody']]],
-  ['thumbnaillocalpath_1468',['thumbnailLocalPath',['../interface_e_m_image_message_body.html#a00a797f904777c5d2e27cbfb72e59a9d',1,'EMImageMessageBody::thumbnailLocalPath()'],['../interface_e_m_video_message_body.html#ade11a6933c8200e286fc2deccc747e5e',1,'EMVideoMessageBody::thumbnailLocalPath()']]],
-  ['thumbnailremotepath_1469',['thumbnailRemotePath',['../interface_e_m_image_message_body.html#a2e74922df3d12eeffc02b956716b77ca',1,'EMImageMessageBody::thumbnailRemotePath()'],['../interface_e_m_video_message_body.html#a0141b504f5d319a403342a174ba1282a',1,'EMVideoMessageBody::thumbnailRemotePath()']]],
-  ['thumbnailsecretkey_1470',['thumbnailSecretKey',['../interface_e_m_image_message_body.html#a119515326d9dc02587b62a957c8be87a',1,'EMImageMessageBody::thumbnailSecretKey()'],['../interface_e_m_video_message_body.html#a41eec6bc6cb2a77a7387e60f94bc0a1c',1,'EMVideoMessageBody::thumbnailSecretKey()']]],
-  ['thumbnailsize_1471',['thumbnailSize',['../interface_e_m_image_message_body.html#a865b82fa03877c2ed1cdb5acb74615f6',1,'EMImageMessageBody::thumbnailSize()'],['../interface_e_m_video_message_body.html#ae9a1c5fda5bbe2a15dbada9361222f10',1,'EMVideoMessageBody::thumbnailSize()']]],
-  ['timestamp_1472',['timestamp',['../interface_e_m_message.html#a8020f31c2261bd530a1ed1ed93ac0c7d',1,'EMMessage']]],
-  ['to_1473',['to',['../interface_e_m_message.html#ae17fcc36b3005cef5a416246d855e43f',1,'EMMessage']]],
-  ['type_1474',['type',['../interface_e_m_call_conference.html#a5e6632c1a2cf45be0bbcc260cf251efc',1,'EMCallConference::type()'],['../interface_e_m_call_session.html#aa12fc9a028f5ae16869a302894ffdb4f',1,'EMCallSession::type()'],['../interface_e_m_call_stream.html#aa1bd70f61b99fab4223752fc1e26af70',1,'EMCallStream::type()'],['../interface_e_m_stream_param.html#a67aa5596102ea0a1297ad2bc08f9a251',1,'EMStreamParam::type()'],['../interface_e_m_conversation.html#a88337abd048972a28dfcc92a8f26a363',1,'EMConversation::type()'],['../interface_e_m_message_body.html#a62da57da9e0658c51a69be89a5fe5436',1,'EMMessageBody::type()']]]
+  ['remotename_1524',['remoteName',['../interface_e_m_call_session.html#a0652ad964df50c2bafe76281026cde69',1,'EMCallSession']]],
+  ['remotepath_1525',['remotePath',['../interface_e_m_file_message_body.html#a26be76c47f8ce7e0cb2f24b2e95b10d3',1,'EMFileMessageBody']]],
+  ['remotevideobitrate_1526',['remoteVideoBitrate',['../interface_e_m_call_session.html#adf4ac941a4a002e5025b78d01b98b2c0',1,'EMCallSession']]],
+  ['remotevideoframerate_1527',['remoteVideoFrameRate',['../interface_e_m_call_session.html#ac1e60bc6f19f4cf2d50c2264702928dd',1,'EMCallSession']]],
+  ['remotevideolostrateinpercent_1528',['remoteVideoLostRateInPercent',['../interface_e_m_call_session.html#aea427d3dd20376f3a9a5f37fb157358a',1,'EMCallSession']]],
+  ['remotevideoresolution_1529',['remoteVideoResolution',['../interface_e_m_call_session.html#a3ef044730afda942a2e7955b23bc9d75',1,'EMCallSession']]],
+  ['remotevideoview_1530',['remoteVideoView',['../interface_e_m_call_session.html#a74cf99cc4f08c2694459b878b04f3829',1,'EMCallSession']]],
+  ['resource_1531',['resource',['../interface_e_m_device_config.html#a96f8ee2ca2477ab8aec67494a9dab522',1,'EMDeviceConfig']]],
+  ['restserver_1532',['restServer',['../category_e_m_options_07_private_deploy_08.html#a534277c754dd1448227b01fa2401d68d',1,'EMOptions(PrivateDeploy)::restServer()'],['../interface_e_m_options.html#a534277c754dd1448227b01fa2401d68d',1,'EMOptions::restServer()']]],
+  ['role_1533',['role',['../interface_e_m_call_conference.html#a20a4b6c1e523217cd99e6c40d568e01c',1,'EMCallConference']]],
+  ['roommanager_1534',['roomManager',['../interface_e_m_client.html#ae434fab3d92a083ee3c7dad9e353d44e',1,'EMClient']]],
+  ['rtcurldomain_1535',['rtcUrlDomain',['../category_e_m_options_07_private_deploy_08.html#abb91268e2a293d1a914c57775432953d',1,'EMOptions(PrivateDeploy)::rtcUrlDomain()'],['../interface_e_m_options.html#abb91268e2a293d1a914c57775432953d',1,'EMOptions::rtcUrlDomain()']]]
 ];
