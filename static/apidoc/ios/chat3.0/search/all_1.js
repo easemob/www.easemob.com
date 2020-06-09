@@ -27,6 +27,8 @@ var searchData=
   ['addwhitelistmembers_3afromgroup_3acompletion_3a',['addWhiteListMembers:fromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#ada1fba14653a8e89be90776be949d4c6',1,'IEMGroupManager-p']]],
   ['addwhitelistmembers_3afromgroup_3aerror_3a',['addWhiteListMembers:fromGroup:error:',['../protocol_i_e_m_group_manager-p.html#a0adcdddfd780553d692eb781eab6b8f4',1,'IEMGroupManager-p']]],
   ['adjustaudiomixingvolume_3a',['adjustAudioMixingVolume:',['../protocol_i_e_m_conference_manager-p.html#a9b9a168a7e160ff08b5ccf13d2b8ab2f',1,'IEMConferenceManager-p']]],
+  ['admindidchanged_3anewadmin_3a',['adminDidChanged:newAdmin:',['../protocol_e_m_conference_manager_delegate-p.html#a0532f12f9e7ae6cf5f7837793062f4ea',1,'EMConferenceManagerDelegate-p']]],
+  ['admindidchanged_3aremoveadmin_3a',['adminDidChanged:removeAdmin:',['../protocol_e_m_conference_manager_delegate-p.html#a56cc91df21df41aad12e33940bff987c',1,'EMConferenceManagerDelegate-p']]],
   ['adminids',['adminIds',['../interface_e_m_call_conference.html#ad019490994e25fd61873a79a895a43ed',1,'EMCallConference']]],
   ['adminlist',['adminList',['../interface_e_m_chatroom.html#a30a3365cd75aa7f59bbbd1bf254e0907',1,'EMChatroom::adminList()'],['../interface_e_m_group.html#a27575ce14505a4893c4c9bf5da663fb8',1,'EMGroup::adminList()']]],
   ['announcement',['announcement',['../interface_e_m_chatroom.html#a2ad3fe1b641ea7fd52e8557f3d67f821',1,'EMChatroom::announcement()'],['../interface_e_m_group.html#a1ae69e0c6fdc8a63a9e0fbafa0779805',1,'EMGroup::announcement()']]],
@@ -90,6 +92,7 @@ var searchData=
   ['asyncunblockoccupants_3aforgroup_3asuccess_3afailure_3a',['asyncUnblockOccupants:forGroup:success:failure:',['../protocol_i_e_m_group_manager-p.html#afeaa9716b0744a3e459b077260174143',1,'IEMGroupManager-p']]],
   ['asyncupdatepushoptionstoserver_3afailure_3a',['asyncUpdatePushOptionsToServer:failure:',['../interface_e_m_client.html#a3b0c839fb894cf7c62995cd898fbfc6b',1,'EMClient']]],
   ['asyncuploadlogtoserver_3afailure_3a',['asyncUploadLogToServer:failure:',['../interface_e_m_client.html#a1659ebe299344910d403770c47980a44',1,'EMClient']]],
+  ['audiencescount',['audiencesCount',['../interface_e_m_call_conference.html#a38bb5d2837fdddd6f99e2e521b5ec603',1,'EMCallConference']]],
   ['audiocustomchannels',['audioCustomChannels',['../interface_e_m_call_options.html#a13c64c9c57bf4591195d452e58c546ff',1,'EMCallOptions']]],
   ['audiocustomsamples',['audioCustomSamples',['../interface_e_m_call_options.html#a76482a8e2702e1905c036142e41c8a6d',1,'EMCallOptions']]],
   ['autologindidcompletewitherror_3a',['autoLoginDidCompleteWithError:',['../protocol_e_m_client_delegate-p.html#a64c0dd4b13410879866d4e17028802fc',1,'EMClientDelegate-p']]]

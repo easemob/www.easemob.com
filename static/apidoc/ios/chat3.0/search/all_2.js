@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['bgclr',['bgclr',['../interface_c_d_n_canvas.html#aede1c8adb85bdffc30505ead343e6545',1,'CDNCanvas']]],
   ['binddevicetoken_3a',['bindDeviceToken:',['../interface_e_m_client.html#a9c9c332ea31acc6ea6355673e0b8d1bb',1,'EMClient']]],
   ['blacklist',['blacklist',['../interface_e_m_chatroom.html#ab105bc5fdeeeb63b6e4693077735b360',1,'EMChatroom::blacklist()'],['../interface_e_m_group.html#aa482dd20042357f1aae7a854e5b57f59',1,'EMGroup::blacklist()']]],
   ['blockgroup_3acompletion_3a',['blockGroup:completion:',['../protocol_i_e_m_group_manager-p.html#afcf5d675a457d229dbe6429fb4d27450',1,'IEMGroupManager-p']]],

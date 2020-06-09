@@ -21,8 +21,12 @@ var searchData=
   ['removeuserfromblacklist_3acompletion_3a',['removeUserFromBlackList:completion:',['../protocol_i_e_m_contact_manager-p.html#adb1dd42cf5fc8ea67e9e813660ea829b',1,'IEMContactManager-p']]],
   ['removewhitelistmembers_3afromchatroom_3acompletion_3a',['removeWhiteListMembers:fromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a2863319cfca54f10ac2a2f27fe3225a4',1,'IEMChatroomManager-p']]],
   ['removewhitelistmembers_3afromchatroom_3aerror_3a',['removeWhiteListMembers:fromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a35366bf17bb8650346d6f92fb9c8a460',1,'IEMChatroomManager-p']]],
+  ['requesttobeadmin_3aadminid_3acompletion_3a',['requestTobeAdmin:adminId:completion:',['../protocol_i_e_m_conference_manager-p.html#a05fdba446f9c14bd394c00da52cc210c',1,'IEMConferenceManager-p']]],
+  ['requesttobespeaker_3aadminid_3acompletion_3a',['requestTobeSpeaker:adminId:completion:',['../protocol_i_e_m_conference_manager-p.html#ab47ebf97b1e283b68195fe65bbd239d4',1,'IEMConferenceManager-p']]],
   ['requesttojoinpublicgroup_3amessage_3acompletion_3a',['requestToJoinPublicGroup:message:completion:',['../protocol_i_e_m_group_manager-p.html#a1bb1760c3e23c7c2dcdd296c3c4a2b85',1,'IEMGroupManager-p']]],
   ['resendmessage_3aprogress_3acompletion_3a',['resendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#ab7021c90cc8a2579375d5e9e9933f2ff',1,'IEMChatManager-p']]],
+  ['responsereqadmin_3amemid_3aresult_3acompletion_3a',['responseReqAdmin:memId:result:completion:',['../protocol_i_e_m_conference_manager-p.html#a325a794094bd728b5672aabacf39d917',1,'IEMConferenceManager-p']]],
+  ['responsereqspeaker_3amemid_3aresult_3acompletion_3a',['responseReqSpeaker:memId:result:completion:',['../protocol_i_e_m_conference_manager-p.html#af5ed68f29daf1641f05fee5b2fff438e',1,'IEMConferenceManager-p']]],
   ['resumevideo',['resumeVideo',['../interface_e_m_call_session.html#a5529c28cebfd1959f37934028464b2a6',1,'EMCallSession']]],
   ['resumevoice',['resumeVoice',['../interface_e_m_call_session.html#a52119fa0310787b4041fab33248abf0e',1,'EMCallSession']]],
   ['roledidchanged_3a',['roleDidChanged:',['../protocol_e_m_conference_manager_delegate-p.html#ada8c07dac796d492a5165b28b50fb02c',1,'EMConferenceManagerDelegate-p']]]

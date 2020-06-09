@@ -12,6 +12,7 @@ var searchData=
   ['setbuilderdelegate_3a',['setBuilderDelegate:',['../protocol_i_e_m_call_manager-p.html#ab186d489c2779e2984498f79b63432fd',1,'IEMCallManager-p']]],
   ['setcalloptions_3a',['setCallOptions:',['../protocol_i_e_m_call_manager-p.html#a8bdffc278012912e6b647496f950f2d0',1,'IEMCallManager-p']]],
   ['setconferenceattribute_3avalue_3acompletion_3a',['setConferenceAttribute:value:completion:',['../protocol_i_e_m_conference_manager-p.html#a7e29cc54c08e9cab13a3b58df89eea80',1,'IEMConferenceManager-p']]],
+  ['setmutemember_3amemid_3amute_3acompletion_3a',['setMuteMember:memId:mute:completion:',['../protocol_i_e_m_conference_manager-p.html#a81bdb0789300950ce9525a358f217bac',1,'IEMConferenceManager-p']]],
   ['sharedclient',['sharedClient',['../interface_e_m_client.html#abdf7f014fc5a6c76d9a9bd676d9543f5',1,'EMClient']]],
   ['sharedfilewithid_3a',['sharedFileWithId:',['../interface_e_m_group_shared_file.html#ac6b00368e3575cd5392913f278eba3ad',1,'EMGroupSharedFile']]],
   ['startaudiomixing_3aloop_3asendmix_3a',['startAudioMixing:loop:sendMix:',['../protocol_i_e_m_conference_manager-p.html#aa7e7d1a088f746f98b796d94b3eb631d',1,'IEMConferenceManager-p']]],
@@ -25,7 +26,10 @@ var searchData=
   ['streamdidupdate_3aaddstream_3a',['streamDidUpdate:addStream:',['../protocol_e_m_conference_manager_delegate-p.html#aaec86cf13eaa8930fa5261c1f3848785',1,'EMConferenceManagerDelegate-p']]],
   ['streamdidupdate_3aremovestream_3a',['streamDidUpdate:removeStream:',['../protocol_e_m_conference_manager_delegate-p.html#a4a92350f846d00e913c48a3286e9da77',1,'EMConferenceManagerDelegate-p']]],
   ['streamdidupdate_3astream_3a',['streamDidUpdate:stream:',['../protocol_e_m_conference_manager_delegate-p.html#adee2f6109508e383000d5e99e33b9bde',1,'EMConferenceManagerDelegate-p']]],
+  ['streamiddidupdate_3artcid_3astreamid_3a',['streamIdDidUpdate:rtcId:streamId:',['../protocol_e_m_conference_manager_delegate-p.html#adde6567323a5ffaf249841da585174b8',1,'EMConferenceManagerDelegate-p']]],
+  ['streampubdidfailed_3aerror_3a',['streamPubDidFailed:error:',['../protocol_e_m_conference_manager_delegate-p.html#a99ce878eb647a0ae04b8de3829e41f9b',1,'EMConferenceManagerDelegate-p']]],
   ['streamstarttransmitting_3astreamid_3a',['streamStartTransmitting:streamId:',['../protocol_e_m_conference_manager_delegate-p.html#a37025ed1fda0ff26798c31aabbcf7105',1,'EMConferenceManagerDelegate-p']]],
+  ['streamupdatedidfailed_3aerror_3a',['streamUpdateDidFailed:error:',['../protocol_e_m_conference_manager_delegate-p.html#a0ac987ff2ecb9e34dc786f1da50466df',1,'EMConferenceManagerDelegate-p']]],
   ['subscribeconference_3astreamid_3aremotevideoview_3acompletion_3a',['subscribeConference:streamId:remoteVideoView:completion:',['../protocol_i_e_m_conference_manager-p.html#a97e899177d4a7abcc49d8d7ea5152039',1,'IEMConferenceManager-p']]],
   ['switchcameraposition_3a',['switchCameraPosition:',['../interface_e_m_call_session.html#a5c3eb19b609b57c4842a4ef8900c984b',1,'EMCallSession']]]
 ];

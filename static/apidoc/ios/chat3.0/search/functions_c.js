@@ -14,6 +14,7 @@ var searchData=
   ['migratedatabasetolatestsdk',['migrateDatabaseToLatestSDK',['../interface_e_m_client.html#ae71f63865d43821c05c72d4fcb899498',1,'EMClient']]],
   ['multidevicescontacteventdidreceive_3ausername_3aext_3a',['multiDevicesContactEventDidReceive:username:ext:',['../protocol_e_m_multi_devices_delegate-p.html#ac5698bcd22dd2df512c8f43906570bb4',1,'EMMultiDevicesDelegate-p']]],
   ['multidevicesgroupeventdidreceive_3agroupid_3aext_3a',['multiDevicesGroupEventDidReceive:groupId:ext:',['../protocol_e_m_multi_devices_delegate-p.html#ad85f12dcaf0737012c4a7f4acf9f38ef',1,'EMMultiDevicesDelegate-p']]],
+  ['muteall_3acompletion_3a',['muteAll:completion:',['../protocol_i_e_m_conference_manager-p.html#a2bff07d09ff1ba02e317440186313d11',1,'IEMConferenceManager-p']]],
   ['muteallmembersfromchatroom_3acompletion_3a',['muteAllMembersFromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#ab5bebac45f9b553d39c92abf13178995',1,'IEMChatroomManager-p']]],
   ['muteallmembersfromchatroom_3aerror_3a',['muteAllMembersFromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a50c3ae34e771184b2a495493272acffd',1,'IEMChatroomManager-p']]],
   ['muteallmembersfromgroup_3acompletion_3a',['muteAllMembersFromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a86f905c2ce095b5fba7dbe37ec2b1e15',1,'IEMGroupManager-p']]],

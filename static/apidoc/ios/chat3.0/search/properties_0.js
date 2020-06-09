@@ -8,6 +8,7 @@ var searchData=
   ['announcement',['announcement',['../interface_e_m_chatroom.html#a2ad3fe1b641ea7fd52e8557f3d67f821',1,'EMChatroom::announcement()'],['../interface_e_m_group.html#a1ae69e0c6fdc8a63a9e0fbafa0779805',1,'EMGroup::announcement()']]],
   ['apnscertname',['apnsCertName',['../interface_e_m_options.html#a0bc4133a846b0c769ec6f47277473dc5',1,'EMOptions']]],
   ['appkey',['appkey',['../interface_e_m_options.html#a3a691b8da310dbbeaffd87f1e00c56eb',1,'EMOptions']]],
+  ['audiencescount',['audiencesCount',['../interface_e_m_call_conference.html#a38bb5d2837fdddd6f99e2e521b5ec603',1,'EMCallConference']]],
   ['audiocustomchannels',['audioCustomChannels',['../interface_e_m_call_options.html#a13c64c9c57bf4591195d452e58c546ff',1,'EMCallOptions']]],
   ['audiocustomsamples',['audioCustomSamples',['../interface_e_m_call_options.html#a76482a8e2702e1905c036142e41c8a6d',1,'EMCallOptions']]]
 ];

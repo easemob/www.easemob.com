@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['whitelist',['whiteList',['../interface_e_m_chatroom.html#ab9ea9bdd35fe27a7df227b5983cfb835',1,'EMChatroom::whiteList()'],['../interface_e_m_group.html#af908a2293e8e79a144341f899eb14953',1,'EMGroup::whiteList()']]],
-  ['willrecord',['willRecord',['../interface_e_m_call_conference.html#a7efbe601fca99069fa3e7f15b54b48eb',1,'EMCallConference::willRecord()'],['../interface_e_m_call_session.html#a6b76c8b2df03bcf4fab8b459fcc60407',1,'EMCallSession::willRecord()']]]
+  ['unreadmessagescount',['unreadMessagesCount',['../interface_e_m_conversation.html#ac0f666957be5047ae9560942f168b078',1,'EMConversation']]],
+  ['url',['url',['../interface_e_m_water_mark_option.html#a5cc95af25dc5facc3e4f64a459f1ee8c',1,'EMWaterMarkOption']]],
+  ['username',['userName',['../interface_e_m_call_stream.html#a101bb64f02467cc0f3607f7f56195f13',1,'EMCallStream']]],
+  ['usinghttpsonly',['usingHttpsOnly',['../interface_e_m_options.html#ae55204c816b2c5ed791726f7a1389d0e',1,'EMOptions']]]
 ];

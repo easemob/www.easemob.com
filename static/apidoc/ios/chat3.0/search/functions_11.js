@@ -23,6 +23,7 @@ var searchData=
   ['updateconference_3aenablevideo_3a',['updateConference:enableVideo:',['../protocol_i_e_m_conference_manager-p.html#a478c1c8b08758a55fdea520d6772ae9e',1,'IEMConferenceManager-p']]],
   ['updateconference_3aismute_3a',['updateConference:isMute:',['../protocol_i_e_m_conference_manager-p.html#abc3d1658875a99bdd1f5f1158a74e789',1,'IEMConferenceManager-p']]],
   ['updateconference_3amaxvideokbps_3a',['updateConference:maxVideoKbps:',['../protocol_i_e_m_conference_manager-p.html#ab57a72f199fa779b7b3158712e2d0a0a',1,'IEMConferenceManager-p']]],
+  ['updateconference_3asetregions_3acompletion_3a',['updateConference:setRegions:completion:',['../protocol_i_e_m_conference_manager-p.html#abcaad228467c761c990b61b700c69abf',1,'IEMConferenceManager-p']]],
   ['updateconference_3astreamid_3aremotevideoview_3acompletion_3a',['updateConference:streamId:remoteVideoView:completion:',['../protocol_i_e_m_conference_manager-p.html#a36545595bb7ab7eecd634107de31324c',1,'IEMConferenceManager-p']]],
   ['updateconferencewithswitchcamera_3a',['updateConferenceWithSwitchCamera:',['../protocol_i_e_m_conference_manager-p.html#a28bd7490cb8e238a07a5aec62d164cea',1,'IEMConferenceManager-p']]],
   ['updatedescription_3aforchatroom_3acompletion_3a',['updateDescription:forChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#aadcc7641d065f44482d50dbe58fc029e',1,'IEMChatroomManager-p']]],
