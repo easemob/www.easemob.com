@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['status',['Status',['../enumcom_1_1hyphenate_1_1chat_1_1EMMessage_1_1Status.html',1,'com::hyphenate::chat::EMMessage']]],
-  ['status',['Status',['../enumcom_1_1hyphenate_1_1chat_1_1EMCallSession_1_1Status.html',1,'com::hyphenate::chat::EMCallSession']]],
-  ['streamtype',['StreamType',['../enumcom_1_1hyphenate_1_1chat_1_1EMConferenceStream_1_1StreamType.html',1,'com::hyphenate::chat::EMConferenceStream']]]
+  ['messageencoder',['MessageEncoder',['../classcom_1_1hyphenate_1_1chat_1_1_message_encoder.html',1,'com::hyphenate::chat']]],
+  ['mirror',['MIRROR',['../interfacecom_1_1hyphenate_1_1chat_1_1_e_m_mirror_1_1_m_i_r_r_o_r.html',1,'com::hyphenate::chat::EMMirror']]]
 ];
