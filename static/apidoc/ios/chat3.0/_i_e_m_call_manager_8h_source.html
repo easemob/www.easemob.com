@@ -1,17 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HyphenateSDK: IEMCallManager.h 源文件</title>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>HyphenateSDK: Hyphenate.framework/Headers/IEMCallManager.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -22,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateSDK
-   &#160;<span id="projectnumber">3.6.7</span>
+   &#160;<span id="projectnumber">3.6.8</span>
    </div>
   </td>
  </tr>
@@ -30,23 +32,38 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.8.11 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
-/* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-</div><!-- top -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,143 +78,33 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_84695623466ba8ae0658522665df7269.html">Hyphenate.framework</a></li><li class="navelem"><a class="el" href="dir_573644b33b49c96641633ac97083decf.html">Headers</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">IEMCallManager.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;AVFoundation/AVFoundation.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#import &quot;EMCallOptions.h&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;EMCallManagerDelegate.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;EMCallBuilderDelegate.h&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;EMWaterMarkOption.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_error.html">EMError</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_call_stream.html">EMCallStream</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="protocol_i_e_m_call_manager-p.html">   33</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_i_e_m_call_manager-p.html">IEMCallManager</a> &lt;NSObject&gt;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">@optional</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#pragma mark - Delegate</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- (void)addDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_call_manager_delegate-p.html">EMCallManagerDelegate</a>&gt;)aDelegate</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      delegateQueue:(dispatch_queue_t)aQueue;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;- (void)removeDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_call_manager_delegate-p.html">EMCallManagerDelegate</a>&gt;)aDelegate;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;- (void)setBuilderDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_call_builder_delegate-p.html">EMCallBuilderDelegate</a>&gt;)aDelegate;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#pragma mark - Options</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;- (void)setCallOptions:(<a class="code" href="interface_e_m_call_options.html">EMCallOptions</a> *)aOptions;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;- (<a class="code" href="interface_e_m_call_options.html">EMCallOptions</a> *)<a class="code" href="protocol_i_e_m_call_manager-p.html#aa57c5e2e99d712a9e228fa4a3456cab4">getCallOptions</a>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#pragma mark - Make and Answer and End</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;- (void)startCall:(EMCallType)aType</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;       remoteName:(NSString *)aRemoteName</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;              ext:(NSString *)aExt</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;       completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_call_session.html">EMCallSession</a> *aCallSession, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;- (void)startCall:(EMCallType)aType</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;       remoteName:(NSString *)aRemoteName</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;           record:(BOOL)isRecord</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      mergeStream:(BOOL)isMerge</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;              ext:(NSString *)aExt</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;       completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_call_session.html">EMCallSession</a> *aCallSession, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;- (<a class="code" href="interface_e_m_error.html">EMError</a> *)answerIncomingCall:(NSString *)aCallId;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;- (<a class="code" href="interface_e_m_error.html">EMError</a> *)endCall:(NSString *)aCallId</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;              reason:(EMCallEndReason)aReason;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;- (void)<a class="code" href="protocol_i_e_m_call_manager-p.html#a6b988437ca6a0856951001efec295101">forceEndAllCall</a>;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#pragma mark - Input Video Data</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;- (void)inputVideoSampleBuffer:(CMSampleBufferRef)aSampleBuffer</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                      rotation:(UIDeviceOrientation)aRotation</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                        callId:(NSString *)aCallId</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;- (void)inputVideoPixelBuffer:(CVPixelBufferRef)aPixelBuffer</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;             sampleBufferTime:(CMTime)aTime</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                     rotation:(UIDeviceOrientation)aRotation</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                       callId:(NSString *)aCallId</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                   completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor">#pragma mark - 截图</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">//截取本地视频图片</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;- (void)takeLocalVideoPictureWithCallId:(NSString *)aCallId</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                             saveToPath:(NSString *)aSavePath</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                             completion:(<span class="keywordtype">void</span> (^)(NSString *aFilePath, NSError *aError))aCompletion;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment">//截取对方视频图片</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;- (void)takeRemoteVideoPictureWithCallId:(NSString *)aCallId</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                              saveToPath:(NSString *)aSavePath</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                            completion:(<span class="keywordtype">void</span> (^)(NSString *aFilePath, NSError *aError))aCompletion;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#pragma mark -  自定义音频数据</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;- (int) inputCustomAudioData:(NSData*)data;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#pragma mark - Watermark</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;- (void)addVideoWatermark:(<a class="code" href="interface_e_m_water_mark_option.html">EMWaterMarkOption</a>*)option;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;- (void)<a class="code" href="protocol_i_e_m_call_manager-p.html#a16bddaff9383df6da73e08919019d322">clearVideoWatermark</a>;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS 3.5.2</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;- (void)inputVideoSampleBuffer:(CMSampleBufferRef)aSampleBuffer</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                        callId:(NSString *)aCallId</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                        format:(EMCallVideoFormat)aFormat</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                      rotation:(<span class="keywordtype">int</span>)aRotation</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                    completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_2_2, 3_5_2, &quot;Delete, Use -inputVideoSampleBuffer:rotation:callId:completion:&quot;);</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;- (void)inputVideoPixelBuffer:(CVPixelBufferRef)aPixelBuffer</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                       callId:(NSString *)aCallId</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                       format:(EMCallVideoFormat)aFormat</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                     rotation:(<span class="keywordtype">int</span>)aRotation</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                   completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_2_2, 3_5_2, &quot;Delete, Use -inputVideoPixelBuffer:sampleBufferTime:rotation:callId:completion:&quot;);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;- (void)inputVideoData:(NSData *)aData</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                callId:(NSString *)aCallId</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;         widthInPixels:(<span class="keywordtype">size_t</span>)aWidth</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        heightInPixels:(<span class="keywordtype">size_t</span>)aHeight</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                format:(EMCallVideoFormat)aFormat</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;              rotation:(<span class="keywordtype">int</span>)aRotation</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock  EM_DEPRECATED_IOS(3_2_2, 3_5_2, &quot;Delete&quot;);</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS 3.2.1</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;- (void)startVoiceCall:(NSString *)aUsername</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_call_session.html">EMCallSession</a> *aCallSession, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_1_0, 3_2_0, &quot;Use -[<a class="code" href="protocol_i_e_m_call_manager-p.html">IEMCallManager</a> startCall:remoteName:ext:completion:]&quot;);</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;- (void)startVideoCall:(NSString *)aUsername</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_call_session.html">EMCallSession</a> *aCallSession, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_1_0, 3_2_0, &quot;Use -[<a class="code" href="protocol_i_e_m_call_manager-p.html">IEMCallManager</a> startCall:remoteName:ext:completion:]&quot;);</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="keyword">@end</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;AVFoundation/AVFoundation.h&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#import &quot;EMCallOptions.h&quot;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;EMCallManagerDelegate.h&quot;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;EMCallBuilderDelegate.h&quot;</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;EMWaterMarkOption.h&quot;</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_error.html">EMError</a>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_call_stream.html">EMCallStream</a>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="protocol_i_e_m_call_manager-p.html">   33</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_i_e_m_call_manager-p.html">IEMCallManager</a> &lt;NSObject&gt;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">@optional</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#pragma mark - Delegate</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- (void)addDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_call_manager_delegate-p.html">EMCallManagerDelegate</a>&gt;)aDelegate</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      delegateQueue:(dispatch_queue_t)aQueue;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;- (void)removeDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_call_manager_delegate-p.html">EMCallManagerDelegate</a>&gt;)aDelegate;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;- (void)setBuilderDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_call_builder_delegate-p.html">EMCallBuilderDelegate</a>&gt;)aDelegate;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#pragma mark - Options</span></div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;- (void)setCallOptions:(<a class="code" href="interface_e_m_call_options.html">EMCallOptions</a> *)aOptions;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;- (<a class="code" href="interface_e_m_call_options.html">EMCallOptions</a> *)<a class="code" href="protocol_i_e_m_call_manager-p.html#aa57c5e2e99d712a9e228fa4a3456cab4">getCallOptions</a>;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#pragma mark - Make and Answer and End</span></div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;- (void)startCall:(EMCallType)aType</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;       remoteName:(NSString *)aRemoteName</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;              ext:(NSString *)aExt</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;       completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_call_session.html">EMCallSession</a> *aCallSession, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;- (void)startCall:(EMCallType)aType</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;       remoteName:(NSString *)aRemoteName</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;           record:(BOOL)isRecord</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      mergeStream:(BOOL)isMerge</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;              ext:(NSString *)aExt</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;       completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_call_session.html">EMCallSession</a> *aCallSession, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;- (<a class="code" href="interface_e_m_error.html">EMError</a> *)answerIncomingCall:(NSString *)aCallId;</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;- (<a class="code" href="interface_e_m_error.html">EMError</a> *)endCall:(NSString *)aCallId</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;              reason:(EMCallEndReason)aReason;</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;- (void)<a class="code" href="protocol_i_e_m_call_manager-p.html#a6b988437ca6a0856951001efec295101">forceEndAllCall</a>;</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#pragma mark - Input Video Data</span></div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;- (void)inputVideoSampleBuffer:(CMSampleBufferRef)aSampleBuffer</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                      rotation:(UIDeviceOrientation)aRotation</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                        callId:(NSString *)aCallId</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;- (void)inputVideoPixelBuffer:(CVPixelBufferRef)aPixelBuffer</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;             sampleBufferTime:(CMTime)aTime</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                     rotation:(UIDeviceOrientation)aRotation</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                       callId:(NSString *)aCallId</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                   completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor">#pragma mark - 截图</span></div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">//截取本地视频图片</span></div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;- (void)takeLocalVideoPictureWithCallId:(NSString *)aCallId</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                             saveToPath:(NSString *)aSavePath</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                             completion:(<span class="keywordtype">void</span> (^)(NSString *aFilePath, NSError *aError))aCompletion;</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment">//截取对方视频图片</span></div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;- (void)takeRemoteVideoPictureWithCallId:(NSString *)aCallId</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                              saveToPath:(NSString *)aSavePath</div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                            completion:(<span class="keywordtype">void</span> (^)(NSString *aFilePath, NSError *aError))aCompletion;</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#pragma mark -  自定义音频数据</span></div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;- (int) inputCustomAudioData:(NSData*)data;</div><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#pragma mark - Watermark</span></div><div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;- (void)addVideoWatermark:(<a class="code" href="interface_e_m_water_mark_option.html">EMWaterMarkOption</a>*)option;</div><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;- (void)<a class="code" href="protocol_i_e_m_call_manager-p.html#a16bddaff9383df6da73e08919019d322">clearVideoWatermark</a>;</div><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS 3.5.2</span></div><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;- (void)inputVideoSampleBuffer:(CMSampleBufferRef)aSampleBuffer</div><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                        callId:(NSString *)aCallId</div><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                        format:(EMCallVideoFormat)aFormat</div><div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                      rotation:(<span class="keywordtype">int</span>)aRotation</div><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                    completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_2_2, 3_5_2, &quot;Delete, Use -inputVideoSampleBuffer:rotation:callId:completion:&quot;);</div><div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div><div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;- (void)inputVideoPixelBuffer:(CVPixelBufferRef)aPixelBuffer</div><div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                       callId:(NSString *)aCallId</div><div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                       format:(EMCallVideoFormat)aFormat</div><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                     rotation:(<span class="keywordtype">int</span>)aRotation</div><div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                   completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_2_2, 3_5_2, &quot;Delete, Use -inputVideoPixelBuffer:sampleBufferTime:rotation:callId:completion:&quot;);</div><div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div><div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;- (void)inputVideoData:(NSData *)aData</div><div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                callId:(NSString *)aCallId</div><div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;         widthInPixels:(<span class="keywordtype">size_t</span>)aWidth</div><div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        heightInPixels:(<span class="keywordtype">size_t</span>)aHeight</div><div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                format:(EMCallVideoFormat)aFormat</div><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;              rotation:(<span class="keywordtype">int</span>)aRotation</div><div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock  EM_DEPRECATED_IOS(3_2_2, 3_5_2, &quot;Delete&quot;);</div><div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div><div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div><div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS 3.2.1</span></div><div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div><div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;- (void)startVoiceCall:(NSString *)aUsername</div><div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_call_session.html">EMCallSession</a> *aCallSession, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_1_0, 3_2_0, &quot;Use -[<a class="code" href="protocol_i_e_m_call_manager-p.html">IEMCallManager</a> startCall:remoteName:ext:completion:]&quot;);</div><div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div><div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;- (void)startVideoCall:(NSString *)aUsername</div><div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_call_session.html">EMCallSession</a> *aCallSession, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_1_0, 3_2_0, &quot;Use -[<a class="code" href="protocol_i_e_m_call_manager-p.html">IEMCallManager</a> startCall:remoteName:ext:completion:]&quot;);</div><div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div><div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="keyword">@end</span></div><div class="ttc" id="interface_e_m_call_session_html"><div class="ttname"><a href="interface_e_m_call_session.html">EMCallSession</a></div><div class="ttdef"><b>Definition:</b> EMCallSession.h:30</div></div>
+<div class="ttc" id="protocol_i_e_m_call_manager-p_html"><div class="ttname"><a href="protocol_i_e_m_call_manager-p.html">IEMCallManager-p</a></div><div class="ttdef"><b>Definition:</b> IEMCallManager.h:33</div></div>
+<div class="ttc" id="interface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:26</div></div>
+<div class="ttc" id="protocol_e_m_call_builder_delegate-p_html"><div class="ttname"><a href="protocol_e_m_call_builder_delegate-p.html">EMCallBuilderDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMCallBuilderDelegate.h:17</div></div>
+<div class="ttc" id="protocol_i_e_m_call_manager-p_html_a16bddaff9383df6da73e08919019d322"><div class="ttname"><a href="protocol_i_e_m_call_manager-p.html#a16bddaff9383df6da73e08919019d322">-[IEMCallManager-p clearVideoWatermark]</a></div><div class="ttdeci">void clearVideoWatermark()</div></div>
+<div class="ttc" id="interface_e_m_call_options_html"><div class="ttname"><a href="interface_e_m_call_options.html">EMCallOptions</a></div><div class="ttdef"><b>Definition:</b> EMCallOptions.h:20</div></div>
+<div class="ttc" id="protocol_e_m_call_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_call_manager_delegate-p.html">EMCallManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMCallManagerDelegate.h:28</div></div>
+<div class="ttc" id="interface_e_m_water_mark_option_html"><div class="ttname"><a href="interface_e_m_water_mark_option.html">EMWaterMarkOption</a></div><div class="ttdef"><b>Definition:</b> EMWaterMarkOption.h:18</div></div>
+<div class="ttc" id="interface_e_m_call_stream_html"><div class="ttname"><a href="interface_e_m_call_stream.html">EMCallStream</a></div><div class="ttdef"><b>Definition:</b> EMCallStream.h:40</div></div>
+<div class="ttc" id="protocol_i_e_m_call_manager-p_html_a6b988437ca6a0856951001efec295101"><div class="ttname"><a href="protocol_i_e_m_call_manager-p.html#a6b988437ca6a0856951001efec295101">-[IEMCallManager-p forceEndAllCall]</a></div><div class="ttdeci">void forceEndAllCall()</div></div>
+<div class="ttc" id="protocol_i_e_m_call_manager-p_html_aa57c5e2e99d712a9e228fa4a3456cab4"><div class="ttname"><a href="protocol_i_e_m_call_manager-p.html#aa57c5e2e99d712a9e228fa4a3456cab4">-[IEMCallManager-p getCallOptions]</a></div><div class="ttdeci">EMCallOptions * getCallOptions()</div></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aprotocol_i_e_m_call_manager-p_html_a6b988437ca6a0856951001efec295101"><div class="ttname"><a href="protocol_i_e_m_call_manager-p.html#a6b988437ca6a0856951001efec295101">-[IEMCallManager-p forceEndAllCall]</a></div><div class="ttdeci">void forceEndAllCall()</div></div>
-<div class="ttc" id="ainterface_e_m_call_stream_html"><div class="ttname"><a href="interface_e_m_call_stream.html">EMCallStream</a></div><div class="ttdef"><b>Definition:</b> EMCallStream.h:40</div></div>
-<div class="ttc" id="aprotocol_e_m_call_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_call_manager_delegate-p.html">EMCallManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMCallManagerDelegate.h:28</div></div>
-<div class="ttc" id="aprotocol_i_e_m_call_manager-p_html"><div class="ttname"><a href="protocol_i_e_m_call_manager-p.html">IEMCallManager-p</a></div><div class="ttdef"><b>Definition:</b> IEMCallManager.h:33</div></div>
-<div class="ttc" id="aprotocol_i_e_m_call_manager-p_html_a16bddaff9383df6da73e08919019d322"><div class="ttname"><a href="protocol_i_e_m_call_manager-p.html#a16bddaff9383df6da73e08919019d322">-[IEMCallManager-p clearVideoWatermark]</a></div><div class="ttdeci">void clearVideoWatermark()</div></div>
-<div class="ttc" id="aprotocol_i_e_m_call_manager-p_html_aa57c5e2e99d712a9e228fa4a3456cab4"><div class="ttname"><a href="protocol_i_e_m_call_manager-p.html#aa57c5e2e99d712a9e228fa4a3456cab4">-[IEMCallManager-p getCallOptions]</a></div><div class="ttdeci">EMCallOptions * getCallOptions()</div></div>
-<div class="ttc" id="ainterface_e_m_call_session_html"><div class="ttname"><a href="interface_e_m_call_session.html">EMCallSession</a></div><div class="ttdef"><b>Definition:</b> EMCallSession.h:30</div></div>
-<div class="ttc" id="ainterface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:26</div></div>
-<div class="ttc" id="ainterface_e_m_call_options_html"><div class="ttname"><a href="interface_e_m_call_options.html">EMCallOptions</a></div><div class="ttdef"><b>Definition:</b> EMCallOptions.h:20</div></div>
-<div class="ttc" id="ainterface_e_m_water_mark_option_html"><div class="ttname"><a href="interface_e_m_water_mark_option.html">EMWaterMarkOption</a></div><div class="ttdef"><b>Definition:</b> EMWaterMarkOption.h:18</div></div>
-<div class="ttc" id="aprotocol_e_m_call_builder_delegate-p_html"><div class="ttname"><a href="protocol_e_m_call_builder_delegate-p.html">EMCallBuilderDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMCallBuilderDelegate.h:17</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+</a> 1.8.11
 </small></address>
 </body>
 </html>
