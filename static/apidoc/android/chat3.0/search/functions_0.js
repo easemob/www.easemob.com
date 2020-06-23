@@ -25,6 +25,8 @@ var searchData=
   ['answercall',['answerCall',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_call_manager.html#a51fa517af552f757d716c29492a11064',1,'com::hyphenate::chat::EMCallManager']]],
   ['appendmessage',['appendMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#ac670c9fa4683eaab19a2f03d8885d8f5',1,'com::hyphenate::chat::EMConversation']]],
   ['applyjointogroup',['applyJoinToGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a41bb99202b3a065705434495bf1cfb24',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['applytobeadmin',['applyTobeAdmin',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a5240c7d53051f0d14b27f0a59a2fc945',1,'com::hyphenate::chat::EMConferenceManager']]],
+  ['applytobespeaker',['applyTobeSpeaker',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a59d53f3c392714f201486d788f38cf07',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['asyncacceptapplication',['asyncAcceptApplication',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#aeee56a3f49ad28260efd9614f5247fa8',1,'com::hyphenate::chat::EMGroupManager']]],
   ['asyncacceptinvitation',['asyncAcceptInvitation',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a8878c691b7bb63f7784a685c932ddd0a',1,'com.hyphenate.chat.EMContactManager.asyncAcceptInvitation()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a67426c977d552495fc58e585ff5a49f0',1,'com.hyphenate.chat.EMGroupManager.asyncAcceptInvitation()']]],
   ['asyncaddchatroomadmin',['asyncAddChatRoomAdmin',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#abffe1d6f9f506ef61e42c00f749d34ec',1,'com::hyphenate::chat::EMChatRoomManager']]],
