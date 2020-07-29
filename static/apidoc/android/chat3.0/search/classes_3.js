@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['emaudiobpstype',['EMAudioBpsType',['../enumcom_1_1hyphenate_1_1chat_1_1EMAudioBpsType.html',1,'com::hyphenate::chat']]],
+  ['emaudioconfig',['EMAudioConfig',['../classcom_1_1hyphenate_1_1chat_1_1EMAudioConfig.html',1,'com::hyphenate::chat']]],
+  ['emaudiosamplestype',['EMAudioSamplesType',['../enumcom_1_1hyphenate_1_1chat_1_1EMAudioSamplesType.html',1,'com::hyphenate::chat']]],
   ['embase',['EMBase',['../classcom_1_1hyphenate_1_1chat_1_1EMBase.html',1,'com::hyphenate::chat']]],
   ['embase_3c_20emacallsession_20_3e',['EMBase&lt; EMACallSession &gt;',['../classcom_1_1hyphenate_1_1chat_1_1EMBase.html',1,'com::hyphenate::chat']]],
   ['embase_3c_20emachatroom_20_3e',['EMBase&lt; EMAChatRoom &gt;',['../classcom_1_1hyphenate_1_1chat_1_1EMBase.html',1,'com::hyphenate::chat']]],
