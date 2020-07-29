@@ -16,6 +16,7 @@ var searchData=
   ['addconversationlistener',['addConversationListener',['../classcom_1_1hyphenate_1_1chat_1_1EMChatManager.html#ace81b019cf17b0449b4eddd7aeffe19d',1,'com::hyphenate::chat::EMChatManager']]],
   ['addgroupadmin',['addGroupAdmin',['../classcom_1_1hyphenate_1_1chat_1_1EMGroupManager.html#ad6ea01d0cb8d764d12c8a0408a005d5a',1,'com::hyphenate::chat::EMGroupManager']]],
   ['addgroupchangelistener',['addGroupChangeListener',['../classcom_1_1hyphenate_1_1chat_1_1EMGroupManager.html#adb9e092564c319a7fdd1642d8c41d245',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['addlivestream',['addLiveStream',['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#a1682b222486d14ffd77da06a6c111c88',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['addmessagelistener',['addMessageListener',['../classcom_1_1hyphenate_1_1chat_1_1EMChatManager.html#a923a569276cc251b85fd541d23432a4f',1,'com::hyphenate::chat::EMChatManager']]],
   ['addmultidevicelistener',['addMultiDeviceListener',['../classcom_1_1hyphenate_1_1chat_1_1EMClient.html#a7dc367e46a9c0f0b7dc5962482e38792',1,'com::hyphenate::chat::EMClient']]],
   ['addtochatroomwhitelist',['addToChatRoomWhiteList',['../classcom_1_1hyphenate_1_1chat_1_1EMChatRoomManager.html#adccac2149e8075802c252b23e1003db4',1,'com::hyphenate::chat::EMChatRoomManager']]],

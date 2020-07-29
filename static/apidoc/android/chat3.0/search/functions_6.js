@@ -95,6 +95,7 @@ var searchData=
   ['getremoteaudiobitrate',['getRemoteAudioBitrate',['../classcom_1_1hyphenate_1_1chat_1_1EMVideoCallHelper.html#a490453dbb94cc50750f654c5dde8b170',1,'com::hyphenate::chat::EMVideoCallHelper']]],
   ['getremotebitrate',['getRemoteBitrate',['../classcom_1_1hyphenate_1_1chat_1_1EMVideoCallHelper.html#a9f025b264ccc6adfefd66ec7c278de41',1,'com::hyphenate::chat::EMVideoCallHelper']]],
   ['getremoteurl',['getRemoteUrl',['../classcom_1_1hyphenate_1_1chat_1_1EMFileMessageBody.html#a9c9ffee675934f057ca5ee938cf5a0b6',1,'com::hyphenate::chat::EMFileMessageBody']]],
+  ['getreportserver',['getReportServer',['../classcom_1_1hyphenate_1_1chat_1_1EMOptions.html#a30453727348f37b8a8e331f65d28e632',1,'com::hyphenate::chat::EMOptions']]],
   ['getrequireack',['getRequireAck',['../classcom_1_1hyphenate_1_1chat_1_1EMOptions.html#a0f51be991905e1201b5b44022aaba007',1,'com::hyphenate::chat::EMOptions']]],
   ['getrequiredeliveryack',['getRequireDeliveryAck',['../classcom_1_1hyphenate_1_1chat_1_1EMOptions.html#a57813680cb9b555d3ec0a0a8395dc1e0',1,'com::hyphenate::chat::EMOptions']]],
   ['getrestserver',['getRestServer',['../classcom_1_1hyphenate_1_1chat_1_1EMOptions.html#a144a78665cb4f0a05bd03d2bb58c1d5e',1,'com::hyphenate::chat::EMOptions']]],

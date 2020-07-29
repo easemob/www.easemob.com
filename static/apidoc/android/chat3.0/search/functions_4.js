@@ -13,6 +13,7 @@ var searchData=
   ['emvoicemessagebody',['EMVoiceMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1EMVoiceMessageBody.html#a36de77310205bf76ab6b2a72f7bb2132',1,'com.hyphenate.chat.EMVoiceMessageBody.EMVoiceMessageBody(File voiceFile, int duration)'],['../classcom_1_1hyphenate_1_1chat_1_1EMVoiceMessageBody.html#a50e97a3d2263ebd2aa9b7c5a15b850db',1,'com.hyphenate.chat.EMVoiceMessageBody.EMVoiceMessageBody(Uri voiceFile, int duration)']]],
   ['enablefixedvideoresolution',['enableFixedVideoResolution',['../classcom_1_1hyphenate_1_1chat_1_1EMCallOptions.html#a4d4d72dd704f72ea6d1476fa3a3198a4',1,'com::hyphenate::chat::EMCallOptions']]],
   ['enableofflinepush',['enableOfflinePush',['../classcom_1_1hyphenate_1_1chat_1_1EMPushManager.html#a67b8657b076bbcf98383d91932533ca0',1,'com::hyphenate::chat::EMPushManager']]],
+  ['enablerecordlivestream',['enableRecordLivestream',['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#abf0e222c3ec094c9dea7ec9c7b89a1a1',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['enablestatistics',['enableStatistics',['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#a8332e86b981056d930dde2965c047274',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['encryptfile',['encryptFile',['../classcom_1_1hyphenate_1_1chat_1_1EMEncryptUtils.html#aaad56797819699858df7aab3afcc453f',1,'com::hyphenate::chat::EMEncryptUtils']]],
   ['endcall',['endCall',['../classcom_1_1hyphenate_1_1chat_1_1EMCallManager.html#a1e48d8764d6ffa3b0fc26ea29dca8689',1,'com::hyphenate::chat::EMCallManager']]],
