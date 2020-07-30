@@ -59,6 +59,7 @@ var searchData=
   ['getlatestmessagefromothers',['getLatestMessageFromOthers',['../classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#a19cbb25d685d56f64a0ae91db3194194',1,'com::hyphenate::chat::EMConversation']]],
   ['getlatitude',['getLatitude',['../classcom_1_1hyphenate_1_1chat_1_1EMLocationMessageBody.html#abf886123d619d867818c8a0d85108b7c',1,'com::hyphenate::chat::EMLocationMessageBody']]],
   ['getlength',['getLength',['../classcom_1_1hyphenate_1_1chat_1_1EMVoiceMessageBody.html#a18ba63d837a3d41a158795cfb8955b01',1,'com::hyphenate::chat::EMVoiceMessageBody']]],
+  ['getlivecfgs',['getLiveCfgs',['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#aa444cdcdc9aa17df62e44bec967ced4a',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['getlocalaudiobitrate',['getLocalAudioBitrate',['../classcom_1_1hyphenate_1_1chat_1_1EMVideoCallHelper.html#af76d7ce55e0121872f2d2b62f071ffaf',1,'com::hyphenate::chat::EMVideoCallHelper']]],
   ['getlocalbitrate',['getLocalBitrate',['../classcom_1_1hyphenate_1_1chat_1_1EMVideoCallHelper.html#a6c10265ec15af009a0b21017652edc1a',1,'com::hyphenate::chat::EMVideoCallHelper']]],
   ['getlocalthumb',['getLocalThumb',['../classcom_1_1hyphenate_1_1chat_1_1EMVideoMessageBody.html#aa443f54702dba76396bcaeeaefee66c4',1,'com::hyphenate::chat::EMVideoMessageBody']]],
