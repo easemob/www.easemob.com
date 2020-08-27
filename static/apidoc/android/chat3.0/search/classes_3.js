@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['emaudiobpstype',['EMAudioBpsType',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_audio_bps_type.html',1,'com::hyphenate::chat']]],
+  ['emaudioconfig',['EMAudioConfig',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_audio_config.html',1,'com::hyphenate::chat']]],
+  ['emaudiosamplestype',['EMAudioSamplesType',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_audio_samples_type.html',1,'com::hyphenate::chat']]],
   ['embase',['EMBase',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_base.html',1,'com::hyphenate::chat']]],
   ['embase_3c_20emacallsession_20_3e',['EMBase&lt; EMACallSession &gt;',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_base.html',1,'com::hyphenate::chat']]],
   ['embase_3c_20emachatroom_20_3e',['EMBase&lt; EMAChatRoom &gt;',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_base.html',1,'com::hyphenate::chat']]],
@@ -75,6 +78,7 @@ var searchData=
   ['empageresult',['EMPageResult',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_page_result.html',1,'com::hyphenate::chat']]],
   ['empushconfigs',['EMPushConfigs',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_configs.html',1,'com::hyphenate::chat']]],
   ['empushmanager',['EMPushManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html',1,'com::hyphenate::chat']]],
+  ['emrecordmediaformat',['EMRecordMediaFormat',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager_1_1_e_m_record_media_format.html',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['emregionstyle',['EMRegionStyle',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_live_region_1_1_e_m_region_style.html',1,'com::hyphenate::chat::EMLiveRegion']]],
   ['emroomconfig',['EMRoomConfig',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_room_config.html',1,'com::hyphenate::chat']]],
   ['emsearchdirection',['EMSearchDirection',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html',1,'com::hyphenate::chat::EMConversation']]],

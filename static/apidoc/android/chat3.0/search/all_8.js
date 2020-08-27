@@ -24,6 +24,7 @@ var searchData=
   ['ischatroomownerleaveallowed',['isChatroomOwnerLeaveAllowed',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aaf81e0b85d75f04b8d29b5bc2d9b0e95',1,'com::hyphenate::chat::EMOptions']]],
   ['isclarityfirst',['isClarityFirst',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_stream_param.html#a0ab938d04bf0b17060f688f2575d3929',1,'com::hyphenate::chat::EMStreamParam']]],
   ['isconnected',['isConnected',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a4ed8afb8f7d33e8f343e4591ce379353',1,'com::hyphenate::chat::EMClient']]],
+  ['isdeletemessagesasexitchatroom',['isDeleteMessagesAsExitChatRoom',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#afdfb24fa7dc651e4e8510785b9a73db8',1,'com::hyphenate::chat::EMOptions']]],
   ['isdeletemessagesasexitgroup',['isDeleteMessagesAsExitGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aff62ff3e07a0f9bb49e126b708d35655',1,'com::hyphenate::chat::EMOptions']]],
   ['isdelivered',['isDelivered',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#afed061098bc21cccb66cb8cf49d04521',1,'com::hyphenate::chat::EMMessage']]],
   ['isdeliveronlineonly',['isDeliverOnlineOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_cmd_message_body.html#a690ca0aa64827a3ae07b2f16908f8fba',1,'com::hyphenate::chat::EMCmdMessageBody']]],
