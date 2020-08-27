@@ -100,5 +100,7 @@ var searchData=
   ['audioconfig_98',['AudioConfig',['../interface_audio_config.html',1,'']]],
   ['audiocustomchannels_99',['audioCustomChannels',['../interface_e_m_call_options.html#a13c64c9c57bf4591195d452e58c546ff',1,'EMCallOptions']]],
   ['audiocustomsamples_100',['audioCustomSamples',['../interface_e_m_call_options.html#a76482a8e2702e1905c036142e41c8a6d',1,'EMCallOptions']]],
-  ['autologindidcompletewitherror_3a_101',['autoLoginDidCompleteWithError:',['../protocol_e_m_client_delegate-p.html#a64c0dd4b13410879866d4e17028802fc',1,'EMClientDelegate-p']]]
+  ['autoaudiostreamdidsubfail_3astreamid_3aerror_3a_101',['autoAudioStreamDidSubFail:streamId:error:',['../protocol_e_m_conference_manager_delegate-p.html#a80655b710ba20664ae7d3ec30ad411fc',1,'EMConferenceManagerDelegate-p']]],
+  ['autoaudiostreamdidunsubfail_3astreamid_3aerror_3a_102',['autoAudioStreamDidUnsubFail:streamId:error:',['../protocol_e_m_conference_manager_delegate-p.html#a1519709be1ccf0fd022847001e20eef7',1,'EMConferenceManagerDelegate-p']]],
+  ['autologindidcompletewitherror_3a_103',['autoLoginDidCompleteWithError:',['../protocol_e_m_client_delegate-p.html#a64c0dd4b13410879866d4e17028802fc',1,'EMClientDelegate-p']]]
 ];

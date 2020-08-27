@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateSDK
-   &#160;<span id="projectnumber">3.7.0</span>
+   &#160;<span id="projectnumber">3.7.1</span>
    </div>
   </td>
  </tr>
@@ -179,61 +179,71 @@ $(function() {
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    GRID</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;};</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">typedef</span> <a class="code" href="interface_c_d_n_canvas.html">CDNCanvas</a> <a class="code" href="interface_c_d_n_canvas.html">LiveCanvas</a>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="interface_live_config.html">  202</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_live_config.html">LiveConfig</a> : NSObject</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="interface_live_config.html#a0dda55c385032d339f1ba9edea30b0ac">  205</a></span>&#160;<span class="keyword">@property</span> (nonatomic,strong) NSString *cdnUrl;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="interface_live_config.html#a8ed9d410254799c74d3a35192c4924ea">  208</a></span>&#160;<span class="keyword">@property</span> (nonatomic) <a class="code" href="interface_c_d_n_canvas.html">LiveCanvas</a>* canvas;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="interface_live_config.html#af0f2d026551421c9a43887ec4f658af1">  211</a></span>&#160;<span class="keyword">@property</span> (nonatomic) LayoutStyle layoutStyle;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="interface_live_config.html#a1ab1b0fb55313225209ea9528f129054">  214</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL record;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="interface_live_config.html#aef19381818d1670261b3918ca8a8597c">  217</a></span>&#160;<span class="keyword">@property</span> (nonatomic) <a class="code" href="interface_audio_config.html">AudioConfig</a>* audioCfg;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">typedef</span> NS_ENUM(NSInteger, RecordExt) {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    RecordExtMP3,</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    RecordExtWAV,</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    RecordExtM4A,</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    RecordExtMP4,</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    RecordExtAUTO,</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    RecordExtUNSUPPORTED = RecordExtAUTO,</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;};</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="interface_live_config.html">  217</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_live_config.html">LiveConfig</a> : NSObject</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="interface_live_config.html#a0dda55c385032d339f1ba9edea30b0ac">  220</a></span>&#160;<span class="keyword">@property</span> (nonatomic,strong) NSString *cdnUrl;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="interface_e_m_call_member.html">  229</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_e_m_call_member.html">EMCallMember</a> : NSObject</div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="interface_live_config.html#a8ed9d410254799c74d3a35192c4924ea">  223</a></span>&#160;<span class="keyword">@property</span> (nonatomic) <a class="code" href="interface_c_d_n_canvas.html">LiveCanvas</a>* canvas;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="interface_live_config.html#af0f2d026551421c9a43887ec4f658af1">  226</a></span>&#160;<span class="keyword">@property</span> (nonatomic) LayoutStyle layoutStyle;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="interface_live_config.html#a1ab1b0fb55313225209ea9528f129054">  229</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL record;</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="interface_e_m_call_member.html#ab2dd3019961430b8846ba4dd4cf2a590">  238</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *memberId;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="interface_e_m_call_member.html#ae2da54cf4316949fd757208b4186d6c1">  248</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *memberName;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="interface_e_m_call_member.html#a0d57179444841cfd18b54f84158d8fd0">  257</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *ext;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="interface_e_m_call_member.html#a976bea1adf98c1b68bf8cff9ac78a6ea">  266</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *nickname;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html">  277</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_e_m_call_conference.html">EMCallConference</a> : NSObject</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
-<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#adda89fb961cd8261a222d323d3337ba9">  286</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *callId;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#aec1950bda75487bca69afb0b18e4dcf8">  295</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *confId;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#adb685e451ad124c379a18af05cd0eba8">  304</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *localName;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a5e6632c1a2cf45be0bbcc260cf251efc">  313</a></span>&#160;<span class="keyword">@property</span> (nonatomic) EMConferenceType type;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
-<div class="line"><a name="l00322"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a20a4b6c1e523217cd99e6c40d568e01c">  322</a></span>&#160;<span class="keyword">@property</span> (nonatomic) EMConferenceRole role;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#ad019490994e25fd61873a79a895a43ed">  331</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSArray&lt;NSString *&gt; *adminIds;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#aab50be1113e3666f017c6d78901b357a">  340</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSArray&lt;NSString *&gt; *speakerIds;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
-<div class="line"><a name="l00349"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a348d49884bd207b09bef80ce614ab346">  349</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSInteger memberCount;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
-<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a7efbe601fca99069fa3e7f15b54b48eb">  358</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL willRecord;</div>
-<div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a13b23d4993fe20a279ad1b29e27bbd7d">  366</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* nickName;</div>
-<div class="line"><a name="l00374"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#acd5ada92a68d4e6de5ee99f7a500990d">  374</a></span>&#160;<span class="keyword">@property</span> (nonatomic,strong ,readonly) NSString* memId;</div>
-<div class="line"><a name="l00382"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a27f9ab929188907fc81999310206fd94">  382</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* liveId;</div>
-<div class="line"><a name="l00390"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#ad60f4a76eb6e720221ed214b6538b776">  390</a></span>&#160;<span class="keyword">@property</span> (nonatomic,strong) NSDictionary* liveCfgs;</div>
-<div class="line"><a name="l00398"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#ab6ad67a6c3e1f7bd01d35da81816ecb3">  398</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL isCreator;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
-<div class="line"><a name="l00407"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a38bb5d2837fdddd6f99e2e521b5ec603">  407</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSInteger audiencesCount;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="interface_live_config.html#aef19381818d1670261b3918ca8a8597c">  232</a></span>&#160;<span class="keyword">@property</span> (nonatomic) <a class="code" href="interface_audio_config.html">AudioConfig</a>* audioCfg;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="keyword">@property</span> (nonatomic) RecordExt recordExt;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="interface_e_m_call_member.html">  246</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_e_m_call_member.html">EMCallMember</a> : NSObject</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="interface_e_m_call_member.html#ab2dd3019961430b8846ba4dd4cf2a590">  255</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *memberId;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="interface_e_m_call_member.html#ae2da54cf4316949fd757208b4186d6c1">  265</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *memberName;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="interface_e_m_call_member.html#a0d57179444841cfd18b54f84158d8fd0">  274</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *ext;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="interface_e_m_call_member.html#a976bea1adf98c1b68bf8cff9ac78a6ea">  283</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *nickname;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html">  294</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_e_m_call_conference.html">EMCallConference</a> : NSObject</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#adda89fb961cd8261a222d323d3337ba9">  303</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *callId;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#aec1950bda75487bca69afb0b18e4dcf8">  312</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *confId;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#adb685e451ad124c379a18af05cd0eba8">  321</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSString *localName;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a5e6632c1a2cf45be0bbcc260cf251efc">  330</a></span>&#160;<span class="keyword">@property</span> (nonatomic) EMConferenceType type;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a20a4b6c1e523217cd99e6c40d568e01c">  339</a></span>&#160;<span class="keyword">@property</span> (nonatomic) EMConferenceRole role;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#ad019490994e25fd61873a79a895a43ed">  348</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSArray&lt;NSString *&gt; *adminIds;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#aab50be1113e3666f017c6d78901b357a">  357</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSArray&lt;NSString *&gt; *speakerIds;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
+<div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a348d49884bd207b09bef80ce614ab346">  366</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSInteger memberCount;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a7efbe601fca99069fa3e7f15b54b48eb">  375</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL willRecord;</div>
+<div class="line"><a name="l00383"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a13b23d4993fe20a279ad1b29e27bbd7d">  383</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* nickName;</div>
+<div class="line"><a name="l00391"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#acd5ada92a68d4e6de5ee99f7a500990d">  391</a></span>&#160;<span class="keyword">@property</span> (nonatomic,strong ,readonly) NSString* memId;</div>
+<div class="line"><a name="l00399"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a27f9ab929188907fc81999310206fd94">  399</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* liveId;</div>
+<div class="line"><a name="l00407"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#ad60f4a76eb6e720221ed214b6538b776">  407</a></span>&#160;<span class="keyword">@property</span> (nonatomic,strong) NSDictionary* liveCfgs;</div>
+<div class="line"><a name="l00415"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#ab6ad67a6c3e1f7bd01d35da81816ecb3">  415</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL isCreator;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="interface_e_m_call_conference.html#a38bb5d2837fdddd6f99e2e521b5ec603">  424</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSInteger audiencesCount;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="ainterface_audio_config_html"><div class="ttname"><a href="interface_audio_config.html">AudioConfig</a></div><div class="ttdef"><b>Definition:</b> EMCallConference.h:168</div></div>
 <div class="ttc" id="ainterface_c_d_n_canvas_html_aca97d6e58cfe6f76fd5807d573f17272"><div class="ttname"><a href="interface_c_d_n_canvas.html#aca97d6e58cfe6f76fd5807d573f17272">CDNCanvas::fps</a></div><div class="ttdeci">NSInteger fps</div><div class="ttdef"><b>Definition:</b> EMCallConference.h:74</div></div>
@@ -242,9 +252,9 @@ $(function() {
 <div class="ttc" id="ainterface_live_region_html"><div class="ttname"><a href="interface_live_region.html">LiveRegion</a></div><div class="ttdef"><b>Definition:</b> EMCallConference.h:103</div></div>
 <div class="ttc" id="ainterface_c_d_n_canvas_html_adec28ab41ceb26246c1ae36662acca52"><div class="ttname"><a href="interface_c_d_n_canvas.html#adec28ab41ceb26246c1ae36662acca52">CDNCanvas::width</a></div><div class="ttdeci">NSInteger width</div><div class="ttdef"><b>Definition:</b> EMCallConference.h:67</div></div>
 <div class="ttc" id="ainterface_c_d_n_canvas_html"><div class="ttname"><a href="interface_c_d_n_canvas.html">CDNCanvas</a></div><div class="ttdef"><b>Definition:</b> EMCallConference.h:65</div></div>
-<div class="ttc" id="ainterface_e_m_call_member_html"><div class="ttname"><a href="interface_e_m_call_member.html">EMCallMember</a></div><div class="ttdef"><b>Definition:</b> EMCallConference.h:229</div></div>
-<div class="ttc" id="ainterface_e_m_call_conference_html"><div class="ttname"><a href="interface_e_m_call_conference.html">EMCallConference</a></div><div class="ttdef"><b>Definition:</b> EMCallConference.h:277</div></div>
-<div class="ttc" id="ainterface_live_config_html"><div class="ttname"><a href="interface_live_config.html">LiveConfig</a></div><div class="ttdef"><b>Definition:</b> EMCallConference.h:202</div></div>
+<div class="ttc" id="ainterface_e_m_call_member_html"><div class="ttname"><a href="interface_e_m_call_member.html">EMCallMember</a></div><div class="ttdef"><b>Definition:</b> EMCallConference.h:246</div></div>
+<div class="ttc" id="ainterface_e_m_call_conference_html"><div class="ttname"><a href="interface_e_m_call_conference.html">EMCallConference</a></div><div class="ttdef"><b>Definition:</b> EMCallConference.h:294</div></div>
+<div class="ttc" id="ainterface_live_config_html"><div class="ttname"><a href="interface_live_config.html">LiveConfig</a></div><div class="ttdef"><b>Definition:</b> EMCallConference.h:217</div></div>
 <div class="ttc" id="ainterface_c_d_n_canvas_html_a6ca95020b1594d95c2cdc061cd3bc96d"><div class="ttname"><a href="interface_c_d_n_canvas.html#a6ca95020b1594d95c2cdc061cd3bc96d">CDNCanvas::kbps</a></div><div class="ttdeci">NSInteger kbps</div><div class="ttdef"><b>Definition:</b> EMCallConference.h:76</div></div>
 <div class="ttc" id="ainterface_c_d_n_canvas_html_a84752e04848cc8d74b3f4d2bdbc4bb0c"><div class="ttname"><a href="interface_c_d_n_canvas.html#a84752e04848cc8d74b3f4d2bdbc4bb0c">CDNCanvas::height</a></div><div class="ttdeci">NSInteger height</div><div class="ttdef"><b>Definition:</b> EMCallConference.h:69</div></div>
 <!-- start footer part -->
