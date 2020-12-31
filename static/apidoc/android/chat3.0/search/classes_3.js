@@ -85,6 +85,8 @@ var searchData=
   ['emstreamparam',['EMStreamParam',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_stream_param.html',1,'com::hyphenate::chat']]],
   ['emstreamstatistics',['EMStreamStatistics',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_stream_statistics.html',1,'com::hyphenate::chat']]],
   ['emtextmessagebody',['EMTextMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_text_message_body.html',1,'com::hyphenate::chat']]],
+  ['emtoolbarbuttontype',['EMToolbarButtonType',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager_1_1_e_m_toolbar_button_type.html',1,'com::hyphenate::chat::EMConferenceManager']]],
+  ['emuploadbuttonlayout',['EMUploadButtonLayout',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager_1_1_e_m_upload_button_layout.html',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['emvaluecallback',['EMValueCallBack',['../interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html',1,'com::hyphenate']]],
   ['emvideocallhelper',['EMVideoCallHelper',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_call_helper.html',1,'com::hyphenate::chat']]],
   ['emvideomessagebody',['EMVideoMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_message_body.html',1,'com::hyphenate::chat']]],
