@@ -13,6 +13,7 @@ var searchData=
   ['user_5flogin_5fanother_5fdevice',['USER_LOGIN_ANOTHER_DEVICE',['../classcom_1_1hyphenate_1_1_e_m_error.html#ae31d425e256946618f4d1ea66ab03c09',1,'com::hyphenate::EMError']]],
   ['user_5flogin_5ftoo_5fmany_5fdevices',['USER_LOGIN_TOO_MANY_DEVICES',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa1826648b8ee67734df6f460b5d18fba',1,'com::hyphenate::EMError']]],
   ['user_5fmuted',['USER_MUTED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a9bb3d51a3c43c6fbd4997cb3295303f1',1,'com::hyphenate::EMError']]],
+  ['user_5fname_5ftoo_5flong',['USER_NAME_TOO_LONG',['../classcom_1_1hyphenate_1_1_e_m_error.html#a0e113321443d45cef07a09bbab37c891',1,'com::hyphenate::EMError']]],
   ['user_5fnot_5ffound',['USER_NOT_FOUND',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa9d032148aaddfd11774265eb34fe5d8',1,'com::hyphenate::EMError']]],
   ['user_5fnot_5flogin',['USER_NOT_LOGIN',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa498f83d523127e5314b53348df0e31b',1,'com::hyphenate::EMError']]],
   ['user_5fpermission_5fdenied',['USER_PERMISSION_DENIED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ad937d38bbcf93ba7ad938c04430d27ca',1,'com::hyphenate::EMError']]],
