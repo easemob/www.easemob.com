@@ -16,6 +16,8 @@ var searchData=
   ['oncontactdeleted',['onContactDeleted',['../interfacecom_1_1hyphenate_1_1_e_m_contact_listener.html#a6a026d8909b309c1a6554b711dec8f99',1,'com::hyphenate::EMContactListener']]],
   ['oncontactevent',['onContactEvent',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a54f0162e902a313349ac59c4caea67f5',1,'com::hyphenate::EMMultiDeviceListener']]],
   ['oncontactinvited',['onContactInvited',['../interfacecom_1_1hyphenate_1_1_e_m_contact_listener.html#a7c4dbba1ad3f793c1e3d704fa0a255f2',1,'com::hyphenate::EMContactListener']]],
+  ['onconversationread',['onConversationRead',['../interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html#a57efff3b4e02b0dee090d75951b1a735',1,'com::hyphenate::EMConversationListener']]],
+  ['oncoversationupdate',['onCoversationUpdate',['../interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html#ae978b232c067f610155dcac21c19b157',1,'com::hyphenate::EMConversationListener']]],
   ['ondisconnected',['onDisconnected',['../interfacecom_1_1hyphenate_1_1_e_m_connection_listener.html#a18ad7da02f0b8284c6b0a1627501e050',1,'com::hyphenate::EMConnectionListener']]],
   ['onerror',['onError',['../interfacecom_1_1hyphenate_1_1_e_m_call_back.html#a26e40e77141d471fec8ff69ea7ebbfce',1,'com.hyphenate.EMCallBack.onError()'],['../interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa',1,'com.hyphenate.EMValueCallBack.onError()']]],
   ['onfirstframerecived',['onFirstFrameRecived',['../interfacecom_1_1hyphenate_1_1_e_m_conference_listener.html#a98e14b220cfa43ff992406cb3a9089e5',1,'com::hyphenate::EMConferenceListener']]],

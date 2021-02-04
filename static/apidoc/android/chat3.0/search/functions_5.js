@@ -6,6 +6,7 @@ var searchData=
   ['fetchchatroommembers',['fetchChatRoomMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#ad7469b46a789d9a5d664646822dd6f9f',1,'com::hyphenate::chat::EMChatRoomManager']]],
   ['fetchchatroommutelist',['fetchChatRoomMuteList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#adcc8a2cf7b46380e4efa050b4180a48a',1,'com::hyphenate::chat::EMChatRoomManager']]],
   ['fetchchatroomwhitelist',['fetchChatRoomWhiteList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#af634af734735dd4f4cf286f6632589d2',1,'com::hyphenate::chat::EMChatRoomManager']]],
+  ['fetchconversationsfromserver',['fetchConversationsFromServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#acee8e5bedb3a033f6a236ce125f46020',1,'com::hyphenate::chat::EMChatManager']]],
   ['fetchgroupannouncement',['fetchGroupAnnouncement',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a2feaa7ca0c92753499a46882283394ec',1,'com::hyphenate::chat::EMGroupManager']]],
   ['fetchgroupblacklist',['fetchGroupBlackList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a06a2d5b74dfa76cdc77f8b9f06edf059',1,'com::hyphenate::chat::EMGroupManager']]],
   ['fetchgroupmembers',['fetchGroupMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#aa7b80f6795a6273e83018abb124968e1',1,'com::hyphenate::chat::EMGroupManager']]],
