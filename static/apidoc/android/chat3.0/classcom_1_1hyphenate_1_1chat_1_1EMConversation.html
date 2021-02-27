@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">hyphenate_SDK3.0
-   &#160;<span id="projectnumber">3.7.0</span>
+   &#160;<span id="projectnumber">3.8.0</span>
    </div>
    <div id="projectbrief">hyphenatejavaIMSDK</div>
   </td>
@@ -138,6 +138,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ac750143a90440e5e9cd825263e387c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab76c1fe8ec3f65223aa8f8727bd215b5"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1EMMessage.html">EMMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#ab76c1fe8ec3f65223aa8f8727bd215b5">searchMsgFromDB</a> (long startTimeStamp, long endTimeStamp, int maxCount)</td></tr>
 <tr class="separator:ab76c1fe8ec3f65223aa8f8727bd215b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a14e8f3c5d7b773758801be41aac6d"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1EMMessage.html">EMMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#a48a14e8f3c5d7b773758801be41aac6d">searchCustomMsgFromDB</a> (String keywords, long timeStamp, int maxCount, String from, <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1EMConversation_1_1EMSearchDirection.html">EMSearchDirection</a> direction)</td></tr>
+<tr class="separator:a48a14e8f3c5d7b773758801be41aac6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaab722487466ceddfa43b01cce8b1f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1EMMessage.html">EMMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#aaaab722487466ceddfa43b01cce8b1f8">getMessage</a> (String messageId, boolean markAsRead)</td></tr>
 <tr class="separator:aaaab722487466ceddfa43b01cce8b1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada6add6423f0e84880ed0ed644ecc800"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1EMMessage.html">EMMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#ada6add6423f0e84880ed0ed644ecc800">loadMessages</a> (List&lt; String &gt; msgIds)</td></tr>
@@ -633,6 +635,61 @@ T&#160;</td><td class="memItemRight" valign="bottom"><b>emaObject</b></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a48a14e8f3c5d7b773758801be41aac6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1EMMessage.html">EMMessage</a>&gt; com.hyphenate.chat.EMConversation.searchCustomMsgFromDB </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>keywords</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>timeStamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1EMConversation_1_1EMSearchDirection.html">EMSearchDirection</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>根据传入的参数从本地存储中搜索自定义消息中指定数量的message。 注意：当maxCount非常大时，需要考虑内存消耗</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keywords</td><td>搜索消息中的关键词 </td></tr>
+    <tr><td class="paramname">timeStamp</td><td>搜索消息的时间点 </td></tr>
+    <tr><td class="paramname">maxCount</td><td>搜索结果的最大条数 </td></tr>
+    <tr><td class="paramname">from</td><td>搜索来自某人的消息，适用于搜索群组里的消息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表 </dd></dl>
 
 </div>
 </div>
