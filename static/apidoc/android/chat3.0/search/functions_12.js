@@ -13,15 +13,17 @@ var searchData=
   ['updatecurrentusernick',['updateCurrentUserNick',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#ac65e9255670c1da37482f686dbe9a176',1,'com::hyphenate::chat::EMClient']]],
   ['updategroupannouncement',['updateGroupAnnouncement',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a4d9274113f84b59cbc538c5f332fb34d',1,'com::hyphenate::chat::EMGroupManager']]],
   ['updategroupextension',['updateGroupExtension',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#abd98823ce253faa37a5d88a5694b9d6d',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['updatelivelayout',['updateLiveLayout',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a32df72582c5f610166a98783e0ce540c',1,'com::hyphenate::chat::EMConferenceManager']]],
+  ['updatelivelayout',['updateLiveLayout',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a08f1d1f058cb40a6bf745dfa4e0ab1e1',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['updatelocalsurfaceview',['updateLocalSurfaceView',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a63bd88ed797f3eeb650ac592dc1464b2',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['updatemessage',['updateMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#aa2f28f17a8e04067b8fade1ec0fdf7b5',1,'com.hyphenate.chat.EMChatManager.updateMessage()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a2c83f7b450834a04447f265d9b65089d',1,'com.hyphenate.chat.EMConversation.updateMessage()']]],
   ['updateparticipant',['updateParticipant',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1d06bab9a69824162292d39283bfa3ae',1,'com::hyphenate::chat::EMChatManager']]],
+  ['updatepushdisplaystyle',['updatePushDisplayStyle',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a107ffceb9cafe14ee528ab60d9095653',1,'com::hyphenate::chat::EMPushManager']]],
   ['updatepushnickname',['updatePushNickname',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#afc4cdda10f004b2b673102b43222235d',1,'com::hyphenate::chat::EMPushManager']]],
   ['updatepushserviceforgroup',['updatePushServiceForGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#af0e2e43e5840f1c03c567f797bee312c',1,'com::hyphenate::chat::EMPushManager']]],
   ['updateremotesurfaceview',['updateRemoteSurfaceView',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a4e1350c5b350054474ba85c8d29d67d5',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['updatesubscribe',['updateSubscribe',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a084981244bf4840d717a7d49ba472bcb',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['updatevideomaxkbps',['updateVideoMaxKbps',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#a2e7abe01376640918f7f0f29901f369b',1,'com::hyphenate::chat::EMConferenceManager']]],
+  ['updatewhiteboardroomwithroomid',['updateWhiteboardRoomWithRoomId',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conference_manager.html#ae005fa11c9f9087f6582fff84340f363',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['uploadgroupsharedfile',['uploadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#adb127813e9598b699fc2bfc09f63f656',1,'com::hyphenate::chat::EMGroupManager']]],
   ['uploadlog',['uploadLog',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#af592159a62a963afae19318c66a8e236',1,'com::hyphenate::chat::EMClient']]]
 ];
