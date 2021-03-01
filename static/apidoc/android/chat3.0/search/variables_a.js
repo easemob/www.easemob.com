@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['rejected',['REJECTED',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_error.html#a9b6779b9b6d22aefc61d626b480db2af',1,'com::hyphenate::chat::EMCallStateChangeListener::CallError']]],
-  ['ringing',['RINGING',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_call_state_change_listener_1_1_call_state.html#a0e8dd868ca4f02963f2ccf5996a75efc',1,'com::hyphenate::chat::EMCallStateChangeListener::CallState']]]
+  ['push_5fbind_5ffailed',['PUSH_BIND_FAILED',['../classcom_1_1hyphenate_1_1EMError.html#a727d04b5dcb8051239d3b4bea8a83ce9',1,'com::hyphenate::EMError']]],
+  ['push_5fnot_5fsupport',['PUSH_NOT_SUPPORT',['../classcom_1_1hyphenate_1_1EMError.html#a016634ad37ef538c6562d24c2f08b423',1,'com::hyphenate::EMError']]],
+  ['push_5funbind_5ffailed',['PUSH_UNBIND_FAILED',['../classcom_1_1hyphenate_1_1EMError.html#a68c79ea1effad987e7a7a09233818f3b',1,'com::hyphenate::EMError']]]
 ];
