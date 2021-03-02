@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['nickname_630',['nickName',['../interface_e_m_call_conference.html#a13b23d4993fe20a279ad1b29e27bbd7d',1,'EMCallConference::nickName()'],['../interface_room_config.html#aa14fb23d88a3e4281c75b8cb92502289',1,'RoomConfig::nickName()']]],
-  ['nickname_631',['nickname',['../interface_e_m_call_member.html#a976bea1adf98c1b68bf8cff9ac78a6ea',1,'EMCallMember']]],
-  ['nodisturbingendh_632',['noDisturbingEndH',['../interface_e_m_push_options.html#ac0b2290ac5d10553a07c5003cb132ef8',1,'EMPushOptions']]],
-  ['nodisturbingstarth_633',['noDisturbingStartH',['../interface_e_m_push_options.html#a32fffe7440ca693d579b656c62286060',1,'EMPushOptions']]]
+  ['occupants_454',['occupants',['../interface_e_m_group.html#a38794a836680c3df4382120c246d0cf6',1,'EMGroup']]],
+  ['occupantscount_455',['occupantsCount',['../interface_e_m_chatroom.html#a3e807b1af9dbda4beaae8746b209cb19',1,'EMChatroom::occupantsCount()'],['../interface_e_m_group.html#a792fd91c92ef4a043505a95f675e49f5',1,'EMGroup::occupantsCount()']]],
+  ['onconversationread_3ato_3a_456',['onConversationRead:to:',['../protocol_e_m_chat_manager_delegate-p.html#afad0423735cabb707c558e13f5828b64',1,'EMChatManagerDelegate-p']]],
+  ['options_457',['options',['../interface_e_m_client.html#a3bf3e3165dfdebd0319f9b7378e7a93f',1,'EMClient']]],
+  ['optionswithappkey_3a_458',['optionsWithAppkey:',['../interface_e_m_options.html#ab862ec18b8e5af328594c82ea292c387',1,'EMOptions']]],
+  ['owner_459',['owner',['../interface_e_m_chatroom.html#aa4c82dc0b6e6bcb3d23c25f9e2ca9930',1,'EMChatroom::owner()'],['../interface_e_m_group.html#ae03a2f19396ee83ed51ef704509edf05',1,'EMGroup::owner()']]]
 ];

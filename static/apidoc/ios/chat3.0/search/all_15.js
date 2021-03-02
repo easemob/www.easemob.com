@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['version_838',['version',['../interface_e_m_client.html#ae0806b1523e5b49381660594a26d4fdf',1,'EMClient']]],
-  ['videoheight_839',['videoHeight',['../interface_e_m_stream_param.html#aee30d626dd9a988389abce150d203ee3',1,'EMStreamParam']]],
-  ['videolatency_840',['videoLatency',['../interface_e_m_call_session.html#a218b700793cbd72fb0bd1a5556bf0e06',1,'EMCallSession']]],
-  ['videoresolution_841',['videoResolution',['../interface_e_m_call_options.html#af49ac4f01b9bca538fbce40e1de5f866',1,'EMCallOptions::videoResolution()'],['../interface_e_m_stream_param.html#a5c66fdfdb0f9e268e95323c13df02203',1,'EMStreamParam::videoResolution()']]],
-  ['videowidth_842',['videoWidth',['../interface_e_m_stream_param.html#a9d0128aa30ccaec0a19528f88fd0ba2a',1,'EMStreamParam']]]
+  ['whitelist_587',['whiteList',['../interface_e_m_chatroom.html#ab9ea9bdd35fe27a7df227b5983cfb835',1,'EMChatroom::whiteList()'],['../interface_e_m_group.html#af908a2293e8e79a144341f899eb14953',1,'EMGroup::whiteList()']]]
 ];
