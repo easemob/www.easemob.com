@@ -18,6 +18,8 @@ var searchData=
   ['updatelivelayout',['updateLiveLayout',['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#a08f1d1f058cb40a6bf745dfa4e0ab1e1',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['updatelocalsurfaceview',['updateLocalSurfaceView',['../classcom_1_1hyphenate_1_1chat_1_1EMConferenceManager.html#a63bd88ed797f3eeb650ac592dc1464b2',1,'com::hyphenate::chat::EMConferenceManager']]],
   ['updatemessage',['updateMessage',['../classcom_1_1hyphenate_1_1chat_1_1EMChatManager.html#aa2f28f17a8e04067b8fade1ec0fdf7b5',1,'com.hyphenate.chat.EMChatManager.updateMessage()'],['../classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#a2c83f7b450834a04447f265d9b65089d',1,'com.hyphenate.chat.EMConversation.updateMessage()']]],
+  ['updateowninfo',['updateOwnInfo',['../classcom_1_1hyphenate_1_1chat_1_1EMUserInfoManager.html#a20460f7fa7d5a175f81928d04f717fe5',1,'com::hyphenate::chat::EMUserInfoManager']]],
+  ['updateowninfobyattribute',['updateOwnInfoByAttribute',['../classcom_1_1hyphenate_1_1chat_1_1EMUserInfoManager.html#add3c98829c3abf410df8400e47373a07',1,'com::hyphenate::chat::EMUserInfoManager']]],
   ['updateparticipant',['updateParticipant',['../classcom_1_1hyphenate_1_1chat_1_1EMChatManager.html#a1d06bab9a69824162292d39283bfa3ae',1,'com::hyphenate::chat::EMChatManager']]],
   ['updatepushdisplaystyle',['updatePushDisplayStyle',['../classcom_1_1hyphenate_1_1chat_1_1EMPushManager.html#a107ffceb9cafe14ee528ab60d9095653',1,'com::hyphenate::chat::EMPushManager']]],
   ['updatepushnickname',['updatePushNickname',['../classcom_1_1hyphenate_1_1chat_1_1EMPushManager.html#afc4cdda10f004b2b673102b43222235d',1,'com::hyphenate::chat::EMPushManager']]],
@@ -48,6 +50,7 @@ var searchData=
   ['user_5fremoved',['USER_REMOVED',['../classcom_1_1hyphenate_1_1EMError.html#ac17ad534d9a04bca878e21a469bb6535',1,'com::hyphenate::EMError']]],
   ['user_5funbind_5fdevicetoken_5ffailed',['USER_UNBIND_DEVICETOKEN_FAILED',['../classcom_1_1hyphenate_1_1EMError.html#ab1e3e56332d5b4dcc4381d931997983c',1,'com::hyphenate::EMError']]],
   ['user_5fupdateinfo_5ffailed',['USER_UPDATEINFO_FAILED',['../classcom_1_1hyphenate_1_1EMError.html#a398f514f3df0ab0d9f07b83098cfbd69',1,'com::hyphenate::EMError']]],
+  ['userinfomanager',['userInfoManager',['../classcom_1_1hyphenate_1_1chat_1_1EMClient.html#a46d3cec05dd7855d5eb02d600614bcef',1,'com::hyphenate::chat::EMClient']]],
   ['username',['username',['../classcom_1_1hyphenate_1_1chat_1_1EMContact.html#a7e6de215c10138628f2ce8e75e987d6c',1,'com::hyphenate::chat::EMContact']]],
   ['usingexternalsource',['usingExternalSource',['../classcom_1_1hyphenate_1_1chat_1_1EMStreamParam.html#a693bcc6c1e47718910c60383bee767e7',1,'com::hyphenate::chat::EMStreamParam']]]
 ];
