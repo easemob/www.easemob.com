@@ -88,5 +88,6 @@ var searchData=
   ['asyncunblockoccupants_3aforgroup_3asuccess_3afailure_3a_86',['asyncUnblockOccupants:forGroup:success:failure:',['../protocol_i_e_m_group_manager-p.html#af6070db1b70b8a3279a4ee3dffe5b5e4',1,'IEMGroupManager-p']]],
   ['asyncupdatepushoptionstoserver_3afailure_3a_87',['asyncUpdatePushOptionsToServer:failure:',['../interface_e_m_client.html#a01e50f720fd787002b778fa6af8de3a6',1,'EMClient']]],
   ['asyncuploadlogtoserver_3afailure_3a_88',['asyncUploadLogToServer:failure:',['../interface_e_m_client.html#adea205c233b4666598bf3a75b607ba67',1,'EMClient']]],
-  ['autologindidcompletewitherror_3a_89',['autoLoginDidCompleteWithError:',['../protocol_e_m_client_delegate-p.html#a64c0dd4b13410879866d4e17028802fc',1,'EMClientDelegate-p']]]
+  ['autologindidcompletewitherror_3a_89',['autoLoginDidCompleteWithError:',['../protocol_e_m_client_delegate-p.html#a64c0dd4b13410879866d4e17028802fc',1,'EMClientDelegate-p']]],
+  ['avatarurl_90',['avatarUrl',['../interface_e_m_user_info.html#abfa1c401ede3f8dab688dcc36c5a03a1',1,'EMUserInfo']]]
 ];
