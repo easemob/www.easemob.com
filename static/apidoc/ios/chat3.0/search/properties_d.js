@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['occupants_1631',['occupants',['../interface_e_m_group.html#a38794a836680c3df4382120c246d0cf6',1,'EMGroup']]],
-  ['occupantscount_1632',['occupantsCount',['../interface_e_m_chatroom.html#a3e807b1af9dbda4beaae8746b209cb19',1,'EMChatroom::occupantsCount()'],['../interface_e_m_group.html#a792fd91c92ef4a043505a95f675e49f5',1,'EMGroup::occupantsCount()']]],
-  ['offlinemessagetext_1633',['offlineMessageText',['../interface_e_m_call_options.html#a62d88c4b292cdfb13b4ea8d723ba2f65',1,'EMCallOptions']]],
-  ['options_1634',['options',['../interface_e_m_client.html#a3bf3e3165dfdebd0319f9b7378e7a93f',1,'EMClient']]],
-  ['owner_1635',['owner',['../interface_e_m_chatroom.html#aa4c82dc0b6e6bcb3d23c25f9e2ca9930',1,'EMChatroom::owner()'],['../interface_e_m_group.html#ae03a2f19396ee83ed51ef704509edf05',1,'EMGroup::owner()']]]
+  ['remotepath_1173',['remotePath',['../interface_e_m_file_message_body.html#a26be76c47f8ce7e0cb2f24b2e95b10d3',1,'EMFileMessageBody']]],
+  ['resource_1174',['resource',['../interface_e_m_device_config.html#a96f8ee2ca2477ab8aec67494a9dab522',1,'EMDeviceConfig']]],
+  ['restserver_1175',['restServer',['../category_e_m_options_07_private_deploy_08.html#a534277c754dd1448227b01fa2401d68d',1,'EMOptions(PrivateDeploy)::restServer()'],['../interface_e_m_options.html#a534277c754dd1448227b01fa2401d68d',1,'EMOptions::restServer()']]],
+  ['roommanager_1176',['roomManager',['../interface_e_m_client.html#ae434fab3d92a083ee3c7dad9e353d44e',1,'EMClient']]],
+  ['rtcconfigurl_1177',['rtcConfigUrl',['../category_e_m_options_07_private_deploy_08.html#af3b92c3e33f5e41267449ada2bb76960',1,'EMOptions(PrivateDeploy)::rtcConfigUrl()'],['../interface_e_m_options.html#af3b92c3e33f5e41267449ada2bb76960',1,'EMOptions::rtcConfigUrl()']]],
+  ['rtcqoeupurl_1178',['rtcQoeUpUrl',['../category_e_m_options_07_private_deploy_08.html#a545a96313ebb08cc20b571cbd33ee20e',1,'EMOptions(PrivateDeploy)::rtcQoeUpUrl()'],['../interface_e_m_options.html#a545a96313ebb08cc20b571cbd33ee20e',1,'EMOptions::rtcQoeUpUrl()']]],
+  ['rtcurldomain_1179',['rtcUrlDomain',['../category_e_m_options_07_private_deploy_08.html#abb91268e2a293d1a914c57775432953d',1,'EMOptions(PrivateDeploy)::rtcUrlDomain()'],['../interface_e_m_options.html#abb91268e2a293d1a914c57775432953d',1,'EMOptions::rtcUrlDomain()']]]
 ];

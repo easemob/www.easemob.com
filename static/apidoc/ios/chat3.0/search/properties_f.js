@@ -1,19 +1,14 @@
 var searchData=
 [
-  ['ratio_1642',['ratio',['../interface_e_m_whiteboard_config.html#ab42d620a6383963bba9461907c0f32e4',1,'EMWhiteboardConfig']]],
-  ['record_1643',['record',['../interface_live_config.html#a1ab1b0fb55313225209ea9528f129054',1,'LiveConfig']]],
-  ['remotename_1644',['remoteName',['../interface_e_m_call_session.html#a0652ad964df50c2bafe76281026cde69',1,'EMCallSession']]],
-  ['remotepath_1645',['remotePath',['../interface_e_m_file_message_body.html#a26be76c47f8ce7e0cb2f24b2e95b10d3',1,'EMFileMessageBody']]],
-  ['remotevideobitrate_1646',['remoteVideoBitrate',['../interface_e_m_call_session.html#adf4ac941a4a002e5025b78d01b98b2c0',1,'EMCallSession']]],
-  ['remotevideoframerate_1647',['remoteVideoFrameRate',['../interface_e_m_call_session.html#ac1e60bc6f19f4cf2d50c2264702928dd',1,'EMCallSession']]],
-  ['remotevideolostrateinpercent_1648',['remoteVideoLostRateInPercent',['../interface_e_m_call_session.html#aea427d3dd20376f3a9a5f37fb157358a',1,'EMCallSession']]],
-  ['remotevideoresolution_1649',['remoteVideoResolution',['../interface_e_m_call_session.html#a3ef044730afda942a2e7955b23bc9d75',1,'EMCallSession']]],
-  ['remotevideoview_1650',['remoteVideoView',['../interface_e_m_call_session.html#a74cf99cc4f08c2694459b878b04f3829',1,'EMCallSession']]],
-  ['resource_1651',['resource',['../interface_e_m_device_config.html#a96f8ee2ca2477ab8aec67494a9dab522',1,'EMDeviceConfig']]],
-  ['restserver_1652',['restServer',['../category_e_m_options_07_private_deploy_08.html#a534277c754dd1448227b01fa2401d68d',1,'EMOptions(PrivateDeploy)::restServer()'],['../interface_e_m_options.html#a534277c754dd1448227b01fa2401d68d',1,'EMOptions::restServer()']]],
-  ['role_1653',['role',['../interface_e_m_call_conference.html#a20a4b6c1e523217cd99e6c40d568e01c',1,'EMCallConference']]],
-  ['roommanager_1654',['roomManager',['../interface_e_m_client.html#ae434fab3d92a083ee3c7dad9e353d44e',1,'EMClient']]],
-  ['rtcconfigurl_1655',['rtcConfigUrl',['../category_e_m_options_07_private_deploy_08.html#af3b92c3e33f5e41267449ada2bb76960',1,'EMOptions(PrivateDeploy)::rtcConfigUrl()'],['../interface_e_m_options.html#af3b92c3e33f5e41267449ada2bb76960',1,'EMOptions::rtcConfigUrl()']]],
-  ['rtcqoeupurl_1656',['rtcQoeUpUrl',['../category_e_m_options_07_private_deploy_08.html#a545a96313ebb08cc20b571cbd33ee20e',1,'EMOptions(PrivateDeploy)::rtcQoeUpUrl()'],['../interface_e_m_options.html#a545a96313ebb08cc20b571cbd33ee20e',1,'EMOptions::rtcQoeUpUrl()']]],
-  ['rtcurldomain_1657',['rtcUrlDomain',['../category_e_m_options_07_private_deploy_08.html#abb91268e2a293d1a914c57775432953d',1,'EMOptions(PrivateDeploy)::rtcUrlDomain()'],['../interface_e_m_options.html#abb91268e2a293d1a914c57775432953d',1,'EMOptions::rtcUrlDomain()']]]
+  ['text_1189',['text',['../interface_e_m_text_message_body.html#a10860d1f3e8d5187fe27826e41b80429',1,'EMTextMessageBody']]],
+  ['thumbnaildisplayname_1190',['thumbnailDisplayName',['../interface_e_m_image_message_body.html#ad9e1e2b3cfc76e8da497d544d3929488',1,'EMImageMessageBody']]],
+  ['thumbnaildownloadstatus_1191',['thumbnailDownloadStatus',['../interface_e_m_image_message_body.html#a721e8d9c61d6607f54fdbd94c184031d',1,'EMImageMessageBody::thumbnailDownloadStatus()'],['../interface_e_m_video_message_body.html#a92ac699fcc4e13b02b0c7ddc5bfe6ffa',1,'EMVideoMessageBody::thumbnailDownloadStatus()']]],
+  ['thumbnailfilelength_1192',['thumbnailFileLength',['../interface_e_m_image_message_body.html#ace5114e5dfea7208384e505501245e55',1,'EMImageMessageBody']]],
+  ['thumbnaillocalpath_1193',['thumbnailLocalPath',['../interface_e_m_image_message_body.html#a00a797f904777c5d2e27cbfb72e59a9d',1,'EMImageMessageBody::thumbnailLocalPath()'],['../interface_e_m_video_message_body.html#ade11a6933c8200e286fc2deccc747e5e',1,'EMVideoMessageBody::thumbnailLocalPath()']]],
+  ['thumbnailremotepath_1194',['thumbnailRemotePath',['../interface_e_m_image_message_body.html#a2e74922df3d12eeffc02b956716b77ca',1,'EMImageMessageBody::thumbnailRemotePath()'],['../interface_e_m_video_message_body.html#a0141b504f5d319a403342a174ba1282a',1,'EMVideoMessageBody::thumbnailRemotePath()']]],
+  ['thumbnailsecretkey_1195',['thumbnailSecretKey',['../interface_e_m_image_message_body.html#a119515326d9dc02587b62a957c8be87a',1,'EMImageMessageBody::thumbnailSecretKey()'],['../interface_e_m_video_message_body.html#a41eec6bc6cb2a77a7387e60f94bc0a1c',1,'EMVideoMessageBody::thumbnailSecretKey()']]],
+  ['thumbnailsize_1196',['thumbnailSize',['../interface_e_m_image_message_body.html#a865b82fa03877c2ed1cdb5acb74615f6',1,'EMImageMessageBody::thumbnailSize()'],['../interface_e_m_video_message_body.html#ae9a1c5fda5bbe2a15dbada9361222f10',1,'EMVideoMessageBody::thumbnailSize()']]],
+  ['timestamp_1197',['timestamp',['../interface_e_m_message.html#a8020f31c2261bd530a1ed1ed93ac0c7d',1,'EMMessage']]],
+  ['to_1198',['to',['../interface_e_m_message.html#ae17fcc36b3005cef5a416246d855e43f',1,'EMMessage']]],
+  ['type_1199',['type',['../interface_e_m_conversation.html#a88337abd048972a28dfcc92a8f26a363',1,'EMConversation::type()'],['../interface_e_m_message_body.html#a62da57da9e0658c51a69be89a5fe5436',1,'EMMessageBody::type()']]]
 ];

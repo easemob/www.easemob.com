@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['params_1636',['params',['../interface_e_m_cmd_message_body.html#a20bc77479a764510867c09f6ff62af54',1,'EMCmdMessageBody']]],
-  ['pattern_1637',['pattern',['../interface_e_m_whiteboard_config.html#ac76e671df74bbbac59e49f0075b694b6',1,'EMWhiteboardConfig']]],
-  ['permissiontype_1638',['permissionType',['../interface_e_m_chatroom.html#a88c3a5ddde2cc67aad2bff7ad5c72fa0',1,'EMChatroom::permissionType()'],['../interface_e_m_group.html#aa2c03fbb097e27cd609e75d5e9843c33',1,'EMGroup::permissionType()']]],
-  ['pinginterval_1639',['pingInterval',['../interface_e_m_call_options.html#a3186d2e45fcd6c5697c724679d0affc7',1,'EMCallOptions']]],
-  ['pushkitcertname_1640',['pushKitCertName',['../interface_e_m_options.html#a7195f117c6ea75364b7f9cd8b7e13962',1,'EMOptions']]],
-  ['pushmanager_1641',['pushManager',['../interface_e_m_client.html#a8b004890d955e83da2c79a67c7e1f84a',1,'EMClient']]]
+  ['secretkey_1180',['secretKey',['../interface_e_m_file_message_body.html#ae56d6b8868c9efe0c6a3321df980bd6c',1,'EMFileMessageBody']]],
+  ['setting_1181',['setting',['../interface_e_m_group.html#a2277b5dca3e2342d4e94b15a5d32ad88',1,'EMGroup']]],
+  ['sharedfilelist_1182',['sharedFileList',['../interface_e_m_group.html#a83bb6c3c611eab57a41252c1eff76a82',1,'EMGroup']]],
+  ['sign_1183',['sign',['../interface_e_m_user_info.html#a60978e1f4826ac17629994438fb99492',1,'EMUserInfo']]],
+  ['size_1184',['size',['../interface_e_m_image_message_body.html#a6939a87d878fe756979ebf624b937657',1,'EMImageMessageBody']]],
+  ['sortmessagebyservertime_1185',['sortMessageByServerTime',['../interface_e_m_options.html#aa653fb528db133b69b3ab0a0a307dbff',1,'EMOptions']]],
+  ['status_1186',['status',['../interface_e_m_message.html#aa4c81d9447ac7c252f37fc7843bfdb4d',1,'EMMessage']]],
+  ['style_1187',['style',['../interface_e_m_group_options.html#a620cfb9f0308ae836185dd7d9b539adf',1,'EMGroupOptions']]],
+  ['subject_1188',['subject',['../interface_e_m_chatroom.html#a2b263c417b4ed0df7db664dc8b2182ad',1,'EMChatroom']]]
 ];

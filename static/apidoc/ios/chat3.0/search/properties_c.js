@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['nickname_1627',['nickName',['../interface_e_m_call_conference.html#a13b23d4993fe20a279ad1b29e27bbd7d',1,'EMCallConference::nickName()'],['../interface_room_config.html#aa14fb23d88a3e4281c75b8cb92502289',1,'RoomConfig::nickName()']]],
-  ['nickname_1628',['nickname',['../interface_e_m_call_member.html#a976bea1adf98c1b68bf8cff9ac78a6ea',1,'EMCallMember']]],
-  ['nodisturbingendh_1629',['noDisturbingEndH',['../interface_e_m_push_options.html#ac0b2290ac5d10553a07c5003cb132ef8',1,'EMPushOptions']]],
-  ['nodisturbingstarth_1630',['noDisturbingStartH',['../interface_e_m_push_options.html#a32fffe7440ca693d579b656c62286060',1,'EMPushOptions']]]
+  ['params_1168',['params',['../interface_e_m_cmd_message_body.html#a20bc77479a764510867c09f6ff62af54',1,'EMCmdMessageBody']]],
+  ['permissiontype_1169',['permissionType',['../interface_e_m_chatroom.html#a88c3a5ddde2cc67aad2bff7ad5c72fa0',1,'EMChatroom::permissionType()'],['../interface_e_m_group.html#aa2c03fbb097e27cd609e75d5e9843c33',1,'EMGroup::permissionType()']]],
+  ['phone_1170',['phone',['../interface_e_m_user_info.html#a4517a2d6732df859580b18f632b23d26',1,'EMUserInfo']]],
+  ['pushkitcertname_1171',['pushKitCertName',['../interface_e_m_options.html#a7195f117c6ea75364b7f9cd8b7e13962',1,'EMOptions']]],
+  ['pushmanager_1172',['pushManager',['../interface_e_m_client.html#a8b004890d955e83da2c79a67c7e1f84a',1,'EMClient']]]
 ];
