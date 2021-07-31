@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">3.8.3.1</span>
+   &#160;<span id="projectnumber">3.8.4</span>
    </div>
   </td>
  </tr>
@@ -84,7 +84,7 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    EMMessageStatusPending  = 0,    </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    EMMessageStatusDelivering,      </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    EMMessageStatusSucceed,       </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    EMMessageStatusSucceed,         </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    EMMessageStatusFailed,          </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} EMMessageStatus;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
@@ -115,43 +115,45 @@ $(function() {
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
 <div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a7da28dc57afc53f21ca7f581a4cc5815">  155</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL <a class="code" href="interface_e_m_message.html#a7da28dc57afc53f21ca7f581a4cc5815">isReadAcked</a>;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL isNeedGroupAck;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) <span class="keywordtype">int</span> groupAckCount;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a94832d9030f11cac66e4c8e79db24585">  168</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL <a class="code" href="interface_e_m_message.html#a94832d9030f11cac66e4c8e79db24585">isDeliverAcked</a>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a17138a2b3391e192a3d3aa6600834bea">  177</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL <a class="code" href="interface_e_m_message.html#a17138a2b3391e192a3d3aa6600834bea">isRead</a>;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a822ec90f9db15819488496134b620e53">  186</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL <a class="code" href="interface_e_m_message.html#a822ec90f9db15819488496134b620e53">isListened</a>;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a48cb4a1294dc59e271a2b62b669d3ae2">  195</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) <a class="code" href="interface_e_m_message_body.html">EMMessageBody</a> *<a class="code" href="interface_e_m_message.html#a48cb4a1294dc59e271a2b62b669d3ae2">body</a>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a522b3c7511947736d6ba78beb9ae38f5">  208</a></span>&#160;<span class="keyword">@property</span> (nonatomic, copy) NSDictionary *<a class="code" href="interface_e_m_message.html#a522b3c7511947736d6ba78beb9ae38f5">ext</a>;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;- (id)initWithConversationID:(NSString *)aConversationId</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                        from:(NSString *)aFrom</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                          to:(NSString *)aTo</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                        body:(<a class="code" href="interface_e_m_message_body.html">EMMessageBody</a> *)aBody</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                         ext:(NSDictionary *)aExt;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="ainterface_e_m_message_body_html"><div class="ttname"><a href="interface_e_m_message_body.html">EMMessageBody</a></div><div class="ttdef"><b>Definition:</b> EMMessageBody.h:44</div></div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#abb1d4f54700de263b52e790465485f85">  164</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL <a class="code" href="interface_e_m_message.html#abb1d4f54700de263b52e790465485f85">isNeedGroupAck</a>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a0519b2d65c61269153327b3cdb158b2f">  173</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) <span class="keywordtype">int</span> <a class="code" href="interface_e_m_message.html#a0519b2d65c61269153327b3cdb158b2f">groupAckCount</a>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a94832d9030f11cac66e4c8e79db24585">  182</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL <a class="code" href="interface_e_m_message.html#a94832d9030f11cac66e4c8e79db24585">isDeliverAcked</a>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a17138a2b3391e192a3d3aa6600834bea">  191</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL <a class="code" href="interface_e_m_message.html#a17138a2b3391e192a3d3aa6600834bea">isRead</a>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a822ec90f9db15819488496134b620e53">  200</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL <a class="code" href="interface_e_m_message.html#a822ec90f9db15819488496134b620e53">isListened</a>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a48cb4a1294dc59e271a2b62b669d3ae2">  209</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) <a class="code" href="interface_e_m_message_body.html">EMMessageBody</a> *<a class="code" href="interface_e_m_message.html#a48cb4a1294dc59e271a2b62b669d3ae2">body</a>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="interface_e_m_message.html#a522b3c7511947736d6ba78beb9ae38f5">  222</a></span>&#160;<span class="keyword">@property</span> (nonatomic, copy) NSDictionary *<a class="code" href="interface_e_m_message.html#a522b3c7511947736d6ba78beb9ae38f5">ext</a>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;- (id)initWithConversationID:(NSString *)aConversationId</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                        from:(NSString *)aFrom</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                          to:(NSString *)aTo</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                        body:(<a class="code" href="interface_e_m_message_body.html">EMMessageBody</a> *)aBody</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                         ext:(NSDictionary *)aExt;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="ainterface_e_m_message_body_html"><div class="ttname"><a href="interface_e_m_message_body.html">EMMessageBody</a></div><div class="ttdef"><b>Definition:</b> EMMessageBody.h:45</div></div>
 <div class="ttc" id="ainterface_e_m_message_html"><div class="ttname"><a href="interface_e_m_message.html">EMMessage</a></div><div class="ttdef"><b>Definition:</b> EMMessage.h:66</div></div>
 <div class="ttc" id="ainterface_e_m_message_html_a04e019786fcd2c149b74bff2b9336713"><div class="ttname"><a href="interface_e_m_message.html#a04e019786fcd2c149b74bff2b9336713">EMMessage::localTime</a></div><div class="ttdeci">long long localTime</div><div class="ttdef"><b>Definition:</b> EMMessage.h:128</div></div>
-<div class="ttc" id="ainterface_e_m_message_html_a17138a2b3391e192a3d3aa6600834bea"><div class="ttname"><a href="interface_e_m_message.html#a17138a2b3391e192a3d3aa6600834bea">EMMessage::isRead</a></div><div class="ttdeci">BOOL isRead</div><div class="ttdef"><b>Definition:</b> EMMessage.h:177</div></div>
+<div class="ttc" id="ainterface_e_m_message_html_a0519b2d65c61269153327b3cdb158b2f"><div class="ttname"><a href="interface_e_m_message.html#a0519b2d65c61269153327b3cdb158b2f">EMMessage::groupAckCount</a></div><div class="ttdeci">int groupAckCount</div><div class="ttdef"><b>Definition:</b> EMMessage.h:173</div></div>
+<div class="ttc" id="ainterface_e_m_message_html_a17138a2b3391e192a3d3aa6600834bea"><div class="ttname"><a href="interface_e_m_message.html#a17138a2b3391e192a3d3aa6600834bea">EMMessage::isRead</a></div><div class="ttdeci">BOOL isRead</div><div class="ttdef"><b>Definition:</b> EMMessage.h:191</div></div>
 <div class="ttc" id="ainterface_e_m_message_html_a3a85be4426c1f17888b8cb614c9e537c"><div class="ttname"><a href="interface_e_m_message.html#a3a85be4426c1f17888b8cb614c9e537c">EMMessage::messageId</a></div><div class="ttdeci">NSString * messageId</div><div class="ttdef"><b>Definition:</b> EMMessage.h:74</div></div>
 <div class="ttc" id="ainterface_e_m_message_html_a3f7b43164e1ad4fe438db195735de5c3"><div class="ttname"><a href="interface_e_m_message.html#a3f7b43164e1ad4fe438db195735de5c3">EMMessage::conversationId</a></div><div class="ttdeci">NSString * conversationId</div><div class="ttdef"><b>Definition:</b> EMMessage.h:83</div></div>
-<div class="ttc" id="ainterface_e_m_message_html_a48cb4a1294dc59e271a2b62b669d3ae2"><div class="ttname"><a href="interface_e_m_message.html#a48cb4a1294dc59e271a2b62b669d3ae2">EMMessage::body</a></div><div class="ttdeci">EMMessageBody * body</div><div class="ttdef"><b>Definition:</b> EMMessage.h:195</div></div>
-<div class="ttc" id="ainterface_e_m_message_html_a522b3c7511947736d6ba78beb9ae38f5"><div class="ttname"><a href="interface_e_m_message.html#a522b3c7511947736d6ba78beb9ae38f5">EMMessage::ext</a></div><div class="ttdeci">NSDictionary * ext</div><div class="ttdef"><b>Definition:</b> EMMessage.h:208</div></div>
+<div class="ttc" id="ainterface_e_m_message_html_a48cb4a1294dc59e271a2b62b669d3ae2"><div class="ttname"><a href="interface_e_m_message.html#a48cb4a1294dc59e271a2b62b669d3ae2">EMMessage::body</a></div><div class="ttdeci">EMMessageBody * body</div><div class="ttdef"><b>Definition:</b> EMMessage.h:209</div></div>
+<div class="ttc" id="ainterface_e_m_message_html_a522b3c7511947736d6ba78beb9ae38f5"><div class="ttname"><a href="interface_e_m_message.html#a522b3c7511947736d6ba78beb9ae38f5">EMMessage::ext</a></div><div class="ttdeci">NSDictionary * ext</div><div class="ttdef"><b>Definition:</b> EMMessage.h:222</div></div>
 <div class="ttc" id="ainterface_e_m_message_html_a7da28dc57afc53f21ca7f581a4cc5815"><div class="ttname"><a href="interface_e_m_message.html#a7da28dc57afc53f21ca7f581a4cc5815">EMMessage::isReadAcked</a></div><div class="ttdeci">BOOL isReadAcked</div><div class="ttdef"><b>Definition:</b> EMMessage.h:155</div></div>
 <div class="ttc" id="ainterface_e_m_message_html_a8020f31c2261bd530a1ed1ed93ac0c7d"><div class="ttname"><a href="interface_e_m_message.html#a8020f31c2261bd530a1ed1ed93ac0c7d">EMMessage::timestamp</a></div><div class="ttdeci">long long timestamp</div><div class="ttdef"><b>Definition:</b> EMMessage.h:119</div></div>
-<div class="ttc" id="ainterface_e_m_message_html_a822ec90f9db15819488496134b620e53"><div class="ttname"><a href="interface_e_m_message.html#a822ec90f9db15819488496134b620e53">EMMessage::isListened</a></div><div class="ttdeci">BOOL isListened</div><div class="ttdef"><b>Definition:</b> EMMessage.h:186</div></div>
+<div class="ttc" id="ainterface_e_m_message_html_a822ec90f9db15819488496134b620e53"><div class="ttname"><a href="interface_e_m_message.html#a822ec90f9db15819488496134b620e53">EMMessage::isListened</a></div><div class="ttdeci">BOOL isListened</div><div class="ttdef"><b>Definition:</b> EMMessage.h:200</div></div>
 <div class="ttc" id="ainterface_e_m_message_html_a8c254b16f5f81cb33cccb2b393273adb"><div class="ttname"><a href="interface_e_m_message.html#a8c254b16f5f81cb33cccb2b393273adb">EMMessage::direction</a></div><div class="ttdeci">EMMessageDirection direction</div><div class="ttdef"><b>Definition:</b> EMMessage.h:92</div></div>
-<div class="ttc" id="ainterface_e_m_message_html_a94832d9030f11cac66e4c8e79db24585"><div class="ttname"><a href="interface_e_m_message.html#a94832d9030f11cac66e4c8e79db24585">EMMessage::isDeliverAcked</a></div><div class="ttdeci">BOOL isDeliverAcked</div><div class="ttdef"><b>Definition:</b> EMMessage.h:168</div></div>
+<div class="ttc" id="ainterface_e_m_message_html_a94832d9030f11cac66e4c8e79db24585"><div class="ttname"><a href="interface_e_m_message.html#a94832d9030f11cac66e4c8e79db24585">EMMessage::isDeliverAcked</a></div><div class="ttdeci">BOOL isDeliverAcked</div><div class="ttdef"><b>Definition:</b> EMMessage.h:182</div></div>
 <div class="ttc" id="ainterface_e_m_message_html_aa4c81d9447ac7c252f37fc7843bfdb4d"><div class="ttname"><a href="interface_e_m_message.html#aa4c81d9447ac7c252f37fc7843bfdb4d">EMMessage::status</a></div><div class="ttdeci">EMMessageStatus status</div><div class="ttdef"><b>Definition:</b> EMMessage.h:146</div></div>
 <div class="ttc" id="ainterface_e_m_message_html_aab839095b6ca5d54ba48a4fa18342b34"><div class="ttname"><a href="interface_e_m_message.html#aab839095b6ca5d54ba48a4fa18342b34">EMMessage::chatType</a></div><div class="ttdeci">EMChatType chatType</div><div class="ttdef"><b>Definition:</b> EMMessage.h:137</div></div>
+<div class="ttc" id="ainterface_e_m_message_html_abb1d4f54700de263b52e790465485f85"><div class="ttname"><a href="interface_e_m_message.html#abb1d4f54700de263b52e790465485f85">EMMessage::isNeedGroupAck</a></div><div class="ttdeci">BOOL isNeedGroupAck</div><div class="ttdef"><b>Definition:</b> EMMessage.h:164</div></div>
 <div class="ttc" id="ainterface_e_m_message_html_ad173eaa1fa087d95a81c16e0b23a058f"><div class="ttname"><a href="interface_e_m_message.html#ad173eaa1fa087d95a81c16e0b23a058f">EMMessage::from</a></div><div class="ttdeci">NSString * from</div><div class="ttdef"><b>Definition:</b> EMMessage.h:101</div></div>
 <div class="ttc" id="ainterface_e_m_message_html_ae17fcc36b3005cef5a416246d855e43f"><div class="ttname"><a href="interface_e_m_message.html#ae17fcc36b3005cef5a416246d855e43f">EMMessage::to</a></div><div class="ttdeci">NSString * to</div><div class="ttdef"><b>Definition:</b> EMMessage.h:110</div></div>
 </div><!-- fragment --></div><!-- contents -->
