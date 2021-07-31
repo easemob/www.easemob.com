@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['owner',['owner',['../enumcom_1_1hyphenate_1_1chat_1_1EMChatRoom_1_1EMChatRoomPermissionType.html#ad1fbb2301d847060611ebdb444bf6152',1,'com.hyphenate.chat.EMChatRoom.EMChatRoomPermissionType.owner()'],['../enumcom_1_1hyphenate_1_1chat_1_1EMGroup_1_1EMGroupPermissionType.html#af22f96d7f2da795941fc9897a2633a08',1,'com.hyphenate.chat.EMGroup.EMGroupPermissionType.owner()']]]
+  ['network_5ferror_1373',['NETWORK_ERROR',['../classcom_1_1hyphenate_1_1_e_m_error.html#a53f03b9faef49cc12ee5c3bca387d3e6',1,'com::hyphenate::EMError']]],
+  ['none_1374',['none',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_1_1_e_m_chat_room_permission_type.html#aa06545c7becfcb4e72693a531b049482',1,'com.hyphenate.chat.EMChatRoom.EMChatRoomPermissionType.none()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_1_1_e_m_group_permission_type.html#a29cca8593d13b32ad42f3af4749a87e9',1,'com.hyphenate.chat.EMGroup.EMGroupPermissionType.none()']]]
 ];
