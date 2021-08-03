@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ilocalaudiodatalistener',['ILocalAudioDataListener',['../interfacecom_1_1hyphenate_1_1chat_1_1EMConferenceManager_1_1ILocalAudioDataListener.html',1,'com::hyphenate::chat::EMConferenceManager']]],
-  ['iremoteaudiodatalistener',['IRemoteAudioDataListener',['../interfacecom_1_1hyphenate_1_1chat_1_1EMConferenceManager_1_1IRemoteAudioDataListener.html',1,'com::hyphenate::chat::EMConferenceManager']]]
+  ['status_759',['Status',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html',1,'com::hyphenate::chat::EMMessage']]]
 ];

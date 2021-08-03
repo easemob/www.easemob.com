@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['leavechatroom',['leaveChatRoom',['../classcom_1_1hyphenate_1_1chat_1_1EMChatRoomManager.html#a86283233b629c0ce1246e6e02af30682',1,'com::hyphenate::chat::EMChatRoomManager']]],
-  ['leavegroup',['leaveGroup',['../classcom_1_1hyphenate_1_1chat_1_1EMGroupManager.html#a59d3547b31d194ab674eec08dae94408',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['loadallconversations',['loadAllConversations',['../classcom_1_1hyphenate_1_1chat_1_1EMChatManager.html#ab3db470adf8017018da3f5bc0eeac39f',1,'com::hyphenate::chat::EMChatManager']]],
-  ['loadallgroups',['loadAllGroups',['../classcom_1_1hyphenate_1_1chat_1_1EMGroupManager.html#a8cc34e4a4a0ff7813059728d3adda7b7',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['loadmessages',['loadMessages',['../classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#ada6add6423f0e84880ed0ed644ecc800',1,'com::hyphenate::chat::EMConversation']]],
-  ['loadmoremsgfromdb',['loadMoreMsgFromDB',['../classcom_1_1hyphenate_1_1chat_1_1EMConversation.html#a8db64c06fffab7163b417554f306a8e0',1,'com::hyphenate::chat::EMConversation']]],
-  ['localtime',['localTime',['../classcom_1_1hyphenate_1_1chat_1_1EMMessage.html#ac4f0f39a422ae38f284cce958b6b4f8d',1,'com::hyphenate::chat::EMMessage']]],
-  ['login',['login',['../classcom_1_1hyphenate_1_1chat_1_1EMClient.html#a578ce9d15368632b7d645fc6db7621b6',1,'com::hyphenate::chat::EMClient']]],
-  ['logout',['logout',['../classcom_1_1hyphenate_1_1chat_1_1EMClient.html#ab23103df03af2f0466ff0832c2a750d3',1,'com.hyphenate.chat.EMClient.logout(boolean unbindToken)'],['../classcom_1_1hyphenate_1_1chat_1_1EMClient.html#a7aa23ca8fef294ea64ef85532a829b9c',1,'com.hyphenate.chat.EMClient.logout(final boolean unbindToken, final EMCallBack callback)']]]
+  ['markallconversationsasread_1116',['markAllConversationsAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4f7dbf5b36fadde636db34dfaa7fc41f',1,'com::hyphenate::chat::EMChatManager']]],
+  ['markallmessagesasread_1117',['markAllMessagesAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a7b647fa38c62bb24c2469a704d3f16d5',1,'com::hyphenate::chat::EMConversation']]],
+  ['markmessageasread_1118',['markMessageAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a9e542e10f41e0c7f84d9fac97d03b3fd',1,'com::hyphenate::chat::EMConversation']]],
+  ['msgtype2conversationtype_1119',['msgType2ConversationType',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a2af3c651b5402f316fea84d97bf5e1eb',1,'com::hyphenate::chat::EMConversation']]],
+  ['muteallmembers_1120',['muteAllMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a1da9ddb7b1c417d10d82ab6271ad17cd',1,'com.hyphenate.chat.EMChatRoomManager.muteAllMembers()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a1f7e6471a968f7e429b33dcb06d9e7d5',1,'com.hyphenate.chat.EMGroupManager.muteAllMembers()']]],
+  ['mutechatroommembers_1121',['muteChatRoomMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a9085e1f9d988cccec5c8ecc7125babbf',1,'com::hyphenate::chat::EMChatRoomManager']]],
+  ['mutegroupmembers_1122',['muteGroupMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a5a3abd57e52455ae68a1a5a5039862c3',1,'com::hyphenate::chat::EMGroupManager']]]
 ];
