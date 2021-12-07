@@ -87,13 +87,14 @@ var searchData=
   ['asyncupdatepushdisplaystyle_84',['asyncUpdatePushDisplayStyle',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#af9c29bc93f58f31b366e8ae6d9291b7b',1,'com::hyphenate::chat::EMPushManager']]],
   ['asyncupdatepushnickname_85',['asyncUpdatePushNickname',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#aa865b61ec16fb003c5bcc6f1f1023616',1,'com::hyphenate::chat::EMPushManager']]],
   ['asyncuploadgroupsharedfile_86',['asyncUploadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a135a866faf915b49870a6d683cb15f91',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['aysncaddcontact_87',['aysncAddContact',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#aada79db6b84b74b47c883704b70757eb',1,'com::hyphenate::chat::EMContactManager']]],
-  ['aysncaddusertoblacklist_88',['aysncAddUserToBlackList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a311c2db573c67be7dc008fe36b44c175',1,'com::hyphenate::chat::EMContactManager']]],
-  ['aysncdeletecontact_89',['aysncDeleteContact',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a72eab3ca43ece8984d84cade0c7b1f11',1,'com::hyphenate::chat::EMContactManager']]],
-  ['aysncgetallcontactsfromserver_90',['aysncGetAllContactsFromServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a8d5e704e65d00c67c6fe641087c8b37f',1,'com::hyphenate::chat::EMContactManager']]],
-  ['aysncgetblacklistfromserver_91',['aysncGetBlackListFromServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a551aa276669e66e7697c01aeaee53744',1,'com::hyphenate::chat::EMContactManager']]],
-  ['aysncgetselfidsonotherplatform_92',['aysncGetSelfIdsOnOtherPlatform',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a7762a68c1192b72120a089408963b437',1,'com::hyphenate::chat::EMContactManager']]],
-  ['aysncmutegroupmembers_93',['aysncMuteGroupMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#ae1bee53891af867c77dec12f0ed72c09',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['aysncrecallmessage_94',['aysncRecallMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#adcd9ebd42f61dd8ea65d4711d64db2b5',1,'com::hyphenate::chat::EMChatManager']]],
-  ['aysncremoveuserfromblacklist_95',['aysncRemoveUserFromBlackList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#aa84d7c0a384e45b48ed80d54b31d3a70',1,'com::hyphenate::chat::EMContactManager']]]
+  ['autoacceptgroupinvitations_87',['autoAcceptGroupInvitations',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a07b8689b0a651604cced1a7bc1ae7d4c',1,'com::hyphenate::chat::EMOptions']]],
+  ['aysncaddcontact_88',['aysncAddContact',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#aada79db6b84b74b47c883704b70757eb',1,'com::hyphenate::chat::EMContactManager']]],
+  ['aysncaddusertoblacklist_89',['aysncAddUserToBlackList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a311c2db573c67be7dc008fe36b44c175',1,'com::hyphenate::chat::EMContactManager']]],
+  ['aysncdeletecontact_90',['aysncDeleteContact',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a72eab3ca43ece8984d84cade0c7b1f11',1,'com::hyphenate::chat::EMContactManager']]],
+  ['aysncgetallcontactsfromserver_91',['aysncGetAllContactsFromServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a8d5e704e65d00c67c6fe641087c8b37f',1,'com::hyphenate::chat::EMContactManager']]],
+  ['aysncgetblacklistfromserver_92',['aysncGetBlackListFromServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a551aa276669e66e7697c01aeaee53744',1,'com::hyphenate::chat::EMContactManager']]],
+  ['aysncgetselfidsonotherplatform_93',['aysncGetSelfIdsOnOtherPlatform',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a7762a68c1192b72120a089408963b437',1,'com::hyphenate::chat::EMContactManager']]],
+  ['aysncmutegroupmembers_94',['aysncMuteGroupMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#ae1bee53891af867c77dec12f0ed72c09',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['aysncrecallmessage_95',['aysncRecallMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#adcd9ebd42f61dd8ea65d4711d64db2b5',1,'com::hyphenate::chat::EMChatManager']]],
+  ['aysncremoveuserfromblacklist_96',['aysncRemoveUserFromBlackList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#aa84d7c0a384e45b48ed80d54b31d3a70',1,'com::hyphenate::chat::EMContactManager']]]
 ];

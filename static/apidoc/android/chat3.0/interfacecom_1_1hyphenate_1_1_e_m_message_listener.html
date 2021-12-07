@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">hyphenate_SDK3.0
-   &#160;<span id="projectnumber">3.8.7</span>
+   &#160;<span id="projectnumber">3.8.8</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -91,8 +91,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ae702cdd75075f075dc702e9ed13c4294"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf914eb747aeeda1818a506c4989c645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#adf914eb747aeeda1818a506c4989c645">onMessageRecalled</a> (List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt; messages)</td></tr>
 <tr class="separator:adf914eb747aeeda1818a506c4989c645"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6273f7a45f54804c7ef57e85711970e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#a6273f7a45f54804c7ef57e85711970e1">onMessageChanged</a> (<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> message, Object change)</td></tr>
-<tr class="separator:a6273f7a45f54804c7ef57e85711970e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace19daddc9be9709f285e6b1a001e445"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#ace19daddc9be9709f285e6b1a001e445">onMessageChanged</a> (<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> message, Object change)</td></tr>
+<tr class="separator:ace19daddc9be9709f285e6b1a001e445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>消息监听接口 可以用来监听消息接收情况，成功发送到对方手机后会有回执（需要开启了送达回执，见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a806f3d93bec9e86e37cc863fbf172b46">com.hyphenate.chat.EMOptions#setRequireDeliveryAck(boolean)</a>）， 对方阅读了这条消息也会收到回执（需要开启了允许已读回执，见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">com.hyphenate.chat.EMOptions#setRequireAck(boolean)</a>） 发送消息过程中，消息的ID会发生改变，由最初本地生成的一个UUID，变更为服务器端生成的全局唯一的ID，这个ID在所有使用SDK的设备上都是唯一的 应用需要实现此接口来监听消息变更状态 </p><pre>
@@ -140,14 +140,14 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a6273f7a45f54804c7ef57e85711970e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6273f7a45f54804c7ef57e85711970e1">&#9670;&nbsp;</a></span>onMessageChanged()</h2>
+<a id="ace19daddc9be9709f285e6b1a001e445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace19daddc9be9709f285e6b1a001e445">&#9670;&nbsp;</a></span>onMessageChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void com.hyphenate.EMMessageListener.onMessageChanged </td>
+          <td class="memname">default void com.hyphenate.EMMessageListener.onMessageChanged </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a>&#160;</td>
           <td class="paramname"><em>message</em>, </td>
@@ -172,6 +172,7 @@ Public 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">弃用:</a></b></dt><dd>消息的变化，使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ac6fd24b05850f7f8e680c0caf1ea3f50">EMMessage#setMessageStatusCallback(EMCallBack)</a></dd></dl>
 
 </div>
 </div>
