@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['localbinder_783',['LocalBinder',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_service_1_1_local_binder.html',1,'com::hyphenate::chat::EMChatService']]]
+  ['hyphenateexception_0',['HyphenateException',['../classcom_1_1hyphenate_1_1exceptions_1_1_hyphenate_exception.html',1,'com::hyphenate::exceptions']]]
 ];
