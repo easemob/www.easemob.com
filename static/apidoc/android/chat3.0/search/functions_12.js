@@ -1,25 +1,10 @@
 var searchData=
 [
-  ['unblockchatroommembers_1292',['unblockChatRoomMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a629e346ab7ace09e203fa04f505086f3',1,'com::hyphenate::chat::EMChatRoomManager']]],
-  ['unblockgroupmessage_1293',['unblockGroupMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a2f455d711ec775490996abf6cb31ea86',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['unblockuser_1294',['unblockUser',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a2c26127fddaac96ffdde2463a8222926',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['unblockusers_1295',['unblockUsers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a109bf7bca480145b16007185ae378821',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['unmuteallmembers_1296',['unmuteAllMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a935ca1ab6e8b97279e24d407e1c33806',1,'com.hyphenate.chat.EMChatRoomManager.unmuteAllMembers()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#af433769cb26f3a5e8b6ccb924c83f398',1,'com.hyphenate.chat.EMGroupManager.unmuteAllMembers()']]],
-  ['unmutechatroommembers_1297',['unMuteChatRoomMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a393557093541019789e4332b009aa9e6',1,'com::hyphenate::chat::EMChatRoomManager']]],
-  ['unmutegroupmembers_1298',['unMuteGroupMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#af2d67599ccd59c86b2f864e111c1cb37',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['updatechatroomannouncement_1299',['updateChatRoomAnnouncement',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a34f923e7b7b3e44d903787a4f8616953',1,'com::hyphenate::chat::EMChatRoomManager']]],
-  ['updatecurrentusernick_1300',['updateCurrentUserNick',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#ac65e9255670c1da37482f686dbe9a176',1,'com::hyphenate::chat::EMClient']]],
-  ['updategroupannouncement_1301',['updateGroupAnnouncement',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a4d9274113f84b59cbc538c5f332fb34d',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['updategroupextension_1302',['updateGroupExtension',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#abd98823ce253faa37a5d88a5694b9d6d',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['updatemessage_1303',['updateMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#aa2f28f17a8e04067b8fade1ec0fdf7b5',1,'com.hyphenate.chat.EMChatManager.updateMessage()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a2c83f7b450834a04447f265d9b65089d',1,'com.hyphenate.chat.EMConversation.updateMessage()']]],
-  ['updateowninfo_1304',['updateOwnInfo',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#a20460f7fa7d5a175f81928d04f717fe5',1,'com::hyphenate::chat::EMUserInfoManager']]],
-  ['updateowninfobyattribute_1305',['updateOwnInfoByAttribute',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#add3c98829c3abf410df8400e47373a07',1,'com::hyphenate::chat::EMUserInfoManager']]],
-  ['updateparticipant_1306',['updateParticipant',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1d06bab9a69824162292d39283bfa3ae',1,'com::hyphenate::chat::EMChatManager']]],
-  ['updatepushdisplaystyle_1307',['updatePushDisplayStyle',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a107ffceb9cafe14ee528ab60d9095653',1,'com::hyphenate::chat::EMPushManager']]],
-  ['updatepushnickname_1308',['updatePushNickname',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#afc4cdda10f004b2b673102b43222235d',1,'com::hyphenate::chat::EMPushManager']]],
-  ['updatepushserviceforgroup_1309',['updatePushServiceForGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#af0e2e43e5840f1c03c567f797bee312c',1,'com::hyphenate::chat::EMPushManager']]],
-  ['updatepushserviceforusers_1310',['updatePushServiceForUsers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a4a0aed8c74244da185072087904a8f2b',1,'com::hyphenate::chat::EMPushManager']]],
-  ['uploadgroupsharedfile_1311',['uploadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#adb127813e9598b699fc2bfc09f63f656',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['uploadlog_1312',['uploadLog',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#af592159a62a963afae19318c66a8e236',1,'com::hyphenate::chat::EMClient']]],
-  ['userinfomanager_1313',['userInfoManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a46d3cec05dd7855d5eb02d600614bcef',1,'com::hyphenate::chat::EMClient']]]
+  ['thumbnaildownloadstatus_0',['thumbnailDownloadStatus',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#adedcc549bf3e6cb99d118fef94f31861',1,'com.hyphenate.chat.EMImageMessageBody.thumbnailDownloadStatus()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_message_body.html#a6a09841d75ec5400acfd18c9f64682a8',1,'com.hyphenate.chat.EMVideoMessageBody.thumbnailDownloadStatus()']]],
+  ['thumbnaillocalpath_1',['thumbnailLocalPath',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a7e3045c1c19573069b2b5d6e8218ea64',1,'com::hyphenate::chat::EMImageMessageBody']]],
+  ['thumbnaillocaluri_2',['thumbnailLocalUri',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#acfe13064181f0b50128ed12a308ebcd4',1,'com::hyphenate::chat::EMImageMessageBody']]],
+  ['tostring_3',['toString',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_cmd_message_body.html#a8bc2058cf6067a9d32baa0b307cb6b95',1,'com.hyphenate.chat.EMCmdMessageBody.toString()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a4b78922949af0c458ab80ca4c2979546',1,'com.hyphenate.chat.EMGroup.toString()']]],
+  ['translate_4',['translate',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_manager.html#ae9663453f776b39249b201e2fe322a20',1,'com::hyphenate::chat::EMTranslationManager']]],
+  ['translatecount_5',['translateCount',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_result.html#a8cd6a5992a50b1433d568a0a98fb7cfb',1,'com::hyphenate::chat::EMTranslationResult']]],
+  ['translatedtext_6',['translatedText',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_result.html#ac8603e4382666b7af4c5a082ade660e7',1,'com::hyphenate::chat::EMTranslationResult']]]
 ];

@@ -1,10 +1,14 @@
 var searchData=
 [
-  ['markallconversationsasread_1128',['markAllConversationsAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4f7dbf5b36fadde636db34dfaa7fc41f',1,'com::hyphenate::chat::EMChatManager']]],
-  ['markallmessagesasread_1129',['markAllMessagesAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a7b647fa38c62bb24c2469a704d3f16d5',1,'com::hyphenate::chat::EMConversation']]],
-  ['markmessageasread_1130',['markMessageAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a9e542e10f41e0c7f84d9fac97d03b3fd',1,'com::hyphenate::chat::EMConversation']]],
-  ['msgtype2conversationtype_1131',['msgType2ConversationType',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a2af3c651b5402f316fea84d97bf5e1eb',1,'com::hyphenate::chat::EMConversation']]],
-  ['muteallmembers_1132',['muteAllMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a1da9ddb7b1c417d10d82ab6271ad17cd',1,'com.hyphenate.chat.EMChatRoomManager.muteAllMembers()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a1f7e6471a968f7e429b33dcb06d9e7d5',1,'com.hyphenate.chat.EMGroupManager.muteAllMembers()']]],
-  ['mutechatroommembers_1133',['muteChatRoomMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a9085e1f9d988cccec5c8ecc7125babbf',1,'com::hyphenate::chat::EMChatRoomManager']]],
-  ['mutegroupmembers_1134',['muteGroupMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a5a3abd57e52455ae68a1a5a5039862c3',1,'com::hyphenate::chat::EMGroupManager']]]
+  ['leavechatroom_0',['leaveChatRoom',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a86283233b629c0ce1246e6e02af30682',1,'com::hyphenate::chat::EMChatRoomManager']]],
+  ['leavegroup_1',['leaveGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a59d3547b31d194ab674eec08dae94408',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['loadallconversations_2',['loadAllConversations',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ab3db470adf8017018da3f5bc0eeac39f',1,'com::hyphenate::chat::EMChatManager']]],
+  ['loadallgroups_3',['loadAllGroups',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a8cc34e4a4a0ff7813059728d3adda7b7',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['loadmessages_4',['loadMessages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#ac3e9b72c96d5c842eec85bef6e2fac2e',1,'com::hyphenate::chat::EMConversation']]],
+  ['loadmoremsgfromdb_5',['loadMoreMsgFromDB',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a86071c8df46550ed28307e2b5d6d6428',1,'com.hyphenate.chat.EMConversation.loadMoreMsgFromDB(String startMsgId, int pageSize)'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a65516c8cf79bc61fe7b9676aca99c474',1,'com.hyphenate.chat.EMConversation.loadMoreMsgFromDB(String startMsgId, int pageSize, EMSearchDirection direction)']]],
+  ['localtime_6',['localTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ac4f0f39a422ae38f284cce958b6b4f8d',1,'com::hyphenate::chat::EMMessage']]],
+  ['login_7',['login',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a578ce9d15368632b7d645fc6db7621b6',1,'com::hyphenate::chat::EMClient']]],
+  ['loginwithagoratoken_8',['loginWithAgoraToken',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#aed7be140a0cfb24ef92522991691324b',1,'com::hyphenate::chat::EMClient']]],
+  ['loginwithtoken_9',['loginWithToken',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a49a06c41d5c674d3fb5aecac2271f1e3',1,'com::hyphenate::chat::EMClient']]],
+  ['logout_10',['logout',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#ab23103df03af2f0466ff0832c2a750d3',1,'com.hyphenate.chat.EMClient.logout(boolean unbindToken)'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a7aa23ca8fef294ea64ef85532a829b9c',1,'com.hyphenate.chat.EMClient.logout(final boolean unbindToken, final EMCallBack callback)'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_manager.html#a8d952c100e9cd1e470815eb665ec460e',1,'com.hyphenate.chat.EMTranslationManager.logout()']]]
 ];
