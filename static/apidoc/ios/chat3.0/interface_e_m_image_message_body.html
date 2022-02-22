@@ -135,7 +135,7 @@ $(function() {
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>@header <a class="el" href="_e_m_image_message_body_8h_source.html">EMImageMessageBody.h</a> @abstract 图片消息体类 </p><dl class="section author"><dt>作者</dt><dd>Hyphenate </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>3.00</dd></dl>
-<p>通过创建的消息体的图片 -(instancetype)initWithData:displayName: or -(instancetype)initWithData:thumbnailData: Note: 图片消息体，SDK会根据压缩率compressRatio來发送消息 </p>
+<p>创建的图片消息体。以下为两种图片消息体生成的方式，图片数据和图片显示名称或者图片内容和缩略图数据。 -(instancetype)initWithData:displayName: or -(instancetype)initWithData:thumbnailData: Note: 图片消息体，SDK 会根据压缩率 compressRatio 來发送消息。 </p>
 </div><h2 class="groupheader">函数文档</h2>
 <a id="a6bf1ca26892f5852835207836d55b734"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6bf1ca26892f5852835207836d55b734">&#9670;&nbsp;</a></span>__deprecated_msg</h2>
@@ -152,7 +152,8 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>设置发送图片消息时的压缩率，1.0时不压缩，默认值是0.6，如果设置了小于等于0的值，则使用默认值 </p>
+<p>设置发送图片消息时的压缩率，1.0 时不压缩，默认值是 0.6，如果设置了小于等于 0 的值，则使用默认值。</p>
+<p>已废弃，请用 <a class="el" href="interface_e_m_image_message_body.html#a7fc65f5be4541b987b8129d028b0cebd">compressionRatio</a> 代替。 </p>
 
 </div>
 </div>
@@ -181,17 +182,21 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>初始化图片消息体 接收方的Thumbnail是服务器根据发送方的aData生成，生成大小可以在console的 "Thumbnail Size" 配置，配置时有两个参数，分别是width和height，单位是px。为等比缩放，举例如下：</p>
-<p>aData的分别率为 200 x 400 (1：2), 配置的width，height为 200 x 200,则生成的缩略图为 100 x 200 aData的分别率为 600 x 300 (2：1), 配置的width，height为 200 x 200,则生成的缩略图为 200 x 100</p>
-<p>发送方可以通过 thumbnailLocalPath 得到缩略图。 接受消息时，接收方会自动根据thumbnailRemotePath下载缩略图，存储到本地，下载失败还可以通过方法 downloadMessageThumbnail:progress:completion:</p>
+<p>初始化图片消息体。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aData</td><td>图片数据 </td></tr>
-    <tr><td class="paramname">aThumbnailData</td><td>缩略图数据。不会上传到服务器，只是用于本地展示使用。</td></tr>
+    <tr><td class="paramname">aData</td><td>图片数据。如果该图片的分辨率和你在控制台 Thumbnail Size 中配置的 width 和 height 不一致，SDK 会对该图片进行压缩。压缩原则维持图片的宽高比，是在控制台 width 和 height 的值为缩略图宽高中的更大值，然后按宽高比计算另一个值。以控制台中配置的 width 和 height 为 200 x 200 为例：</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>图片消息体实例 </dd></dl>
+<p>如果 aData 的分辨率为 200 x 400 (1:2)，则生成的缩略图分辨率为 100 x 200。 如果 aData 的分辨率为 600 x 300 (2:1)，则生成的缩略图分辨率为 200 x 100。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aThumbnailData</td><td>缩略图数据。该参数不会上传到服务器，只用于本地展示。</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>@Result 图片消息体实例。 </p>
 
 </div>
 </div>
@@ -215,7 +220,8 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>SDK会根据压缩率compressRatio來发送消息 设置发送图片消息时的压缩率。1.0表示发送原图不压缩。默认值是0.6，压缩的倍数是0.6倍。如果设置了小于等于0的值，则使用默认值 </p>
+<p>图片消息文件的压缩率。</p>
+<p>SDK 在发送图片消息时，会根据该参数的值来压缩图片文件。取值范围是 (0.0,1.0]，默认值是 0.6。其中 1.0 表示原图文件不压缩，0.6 表示将原图文件大小压缩为初始文件的 0.6 倍。如果设置小于等于 0，则 SDK 使用默认值。 </p>
 
 </div>
 </div>
@@ -238,7 +244,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>图片附件的尺寸 </p>
+<p>图片附件的尺寸。 </p>
 
 </div>
 </div>
@@ -261,7 +267,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>缩略图的显示名 </p>
+<p>缩略图的显示名。 </p>
 
 </div>
 </div>
@@ -284,7 +290,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>缩略图下载状态 </p>
+<p>缩略图下载状态。 </p>
 
 </div>
 </div>
@@ -307,7 +313,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>缩略图文件的大小, 以字节为单位 </p>
+<p>缩略图文件的大小, 以字节为单位。 </p>
 
 </div>
 </div>
@@ -330,7 +336,8 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>缩略图的本地路径 UIImage *image = [UIImage imageWithContentsOfFile:thumbnailLocalPath]; </p>
+<p>缩略图的本地路径。发送方可以根据该属性获取缩略本地路径。调用 imageWithContentsOfFile 方法，传入 thumbnailLocalPath 即可获取缩略图的数据。</p>
+<p>UIImage *image = [UIImage imageWithContentsOfFile:thumbnailLocalPath]; </p>
 
 </div>
 </div>
@@ -353,7 +360,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>缩略图在服务器的路径 </p>
+<p>缩略图在服务器的路径。接收方可以通过该属性获取缩略图服务器路径。 </p>
 
 </div>
 </div>
@@ -376,7 +383,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>缩略图的密钥, 下载缩略图时需要密匙做校验 </p>
+<p>缩略图的密钥。下载缩略图时用户需要提供密钥进行校验。 </p>
 
 </div>
 </div>
@@ -399,7 +406,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>缩略图的尺寸 </p>
+<p>缩略图的尺寸。 </p>
 
 </div>
 </div>

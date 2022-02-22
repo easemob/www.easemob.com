@@ -82,13 +82,86 @@ $(function() {
 <tr class="separator:a0faaf04852948a9aef00bbfedea397ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a998f7192b2e900f3b90a16cae16a592d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_local_notification_delegate-p.html#a998f7192b2e900f3b90a16cae16a592d">emuserNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:</a></td></tr>
 <tr class="separator:a998f7192b2e900f3b90a16cae16a592d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c15584349b2ee74015acf0e0d39b33"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_local_notification_delegate-p.html#ac8c15584349b2ee74015acf0e0d39b33">emuserNotificationCenter:openSettingsForNotification:</a></td></tr>
+<tr class="separator:ac8c15584349b2ee74015acf0e0d39b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0af555c05b7d77a5bac4ecbf9204bd"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_local_notification_delegate-p.html#aac0af555c05b7d77a5bac4ecbf9204bd">emGetNotificationMessage:state:</a></td></tr>
+<tr class="separator:aac0af555c05b7d77a5bac4ecbf9204bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7cf1c0c5615763ba10b6ba0606ef07"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_local_notification_delegate-p.html#a8e7cf1c0c5615763ba10b6ba0606ef07">emDidRecivePushSilentMessage:</a></td></tr>
+<tr class="separator:a8e7cf1c0c5615763ba10b6ba0606ef07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数文档</h2>
+<a id="a8e7cf1c0c5615763ba10b6ba0606ef07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7cf1c0c5615763ba10b6ba0606ef07">&#9670;&nbsp;</a></span>emDidRecivePushSilentMessage:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) emDidRecivePushSilentMessage: </td>
+          <td></td>
+          <td class="paramtype">(NSDictionary *)&#160;</td>
+          <td class="paramname"><em>messageDic</em></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>当应用收到环信推送透传消息时，此方法会被调用 </p>
+
+</div>
+</div>
+<a id="aac0af555c05b7d77a5bac4ecbf9204bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac0af555c05b7d77a5bac4ecbf9204bd">&#9670;&nbsp;</a></span>emGetNotificationMessage:state:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) emGetNotificationMessage: </td>
+          <td></td>
+          <td class="paramtype">(UNNotification *)&#160;</td>
+          <td class="paramname"><em>notification</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">state:</td>
+          <td></td>
+          <td class="paramtype">(EMNotificationState)&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取推送消息 可只实现这个代理方法统一获取推送通知消息 </p>
+
+</div>
+</div>
 <a id="a998f7192b2e900f3b90a16cae16a592d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a998f7192b2e900f3b90a16cae16a592d">&#9670;&nbsp;</a></span>emuserNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">- (void) emuserNotificationCenter: </td>
@@ -114,8 +187,50 @@ $(function() {
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>当应用打开非环信推送通知时，此方法会被调用 </p>
+<p>当用户打开应用推送通知时，此方法会被调用 completionHandler必须回调 </p>
+
+</div>
+</div>
+<a id="ac8c15584349b2ee74015acf0e0d39b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c15584349b2ee74015acf0e0d39b33">&#9670;&nbsp;</a></span>emuserNotificationCenter:openSettingsForNotification:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) emuserNotificationCenter: </td>
+          <td></td>
+          <td class="paramtype">(UNUserNotificationCenter *)&#160;</td>
+          <td class="paramname"><em>center</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">openSettingsForNotification:</td>
+          <td></td>
+          <td class="paramtype">(UNNotification *)&#160;</td>
+          <td class="paramname"><em>notification</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>在应用启动时被调用，以响应用户查看应用内通知设置的请求 </p>
 
 </div>
 </div>
@@ -124,6 +239,9 @@ $(function() {
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">- (void) emuserNotificationCenter: </td>
@@ -149,8 +267,13 @@ $(function() {
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>当应用收到非环信在线推送通知时，此方法会被调用 </p>
+<p>当应用在前台收到推送通知，此方法会被调用 通过completionHandle(UNNotificationPresentationOptions options)回调展示样式，必须回调 </p>
 
 </div>
 </div>

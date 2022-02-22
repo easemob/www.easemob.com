@@ -106,7 +106,7 @@ $(function() {
 <tr class="separator:a65b7278800287c454dd54d86b4c3d31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>@abstract 协议提供了与账号登录状态相关的回调 </p>
+<div class="textblock"><p>@abstract <a class="el" href="protocol_e_m_client_delegate-p.html">EMClientDelegate</a> 提供与账号登录状态相关的回调。 </p>
 </div><h2 class="groupheader">函数文档</h2>
 <a id="a8d4e165b8d7b894e39499c55e3147ba1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d4e165b8d7b894e39499c55e3147ba1">&#9670;&nbsp;</a></span>__deprecated_msg <span class="overload">[1/2]</span></h2>
@@ -130,7 +130,8 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>当前登录账号在其它设备登录时会接收到此回调 </p>
+<p>当前登录账号在其它设备登录时会接收到此回调。</p>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_client_delegate-p.html#ab05f37bdd26ba94f97f2d7d077091f8d">userAccountDidLoginFromOtherDevice</a> 代替。 </p>
 
 </div>
 </div>
@@ -156,7 +157,8 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>当前登录账号已经被从服务器端删除时会收到该回调 </p>
+<p>当前登录账号已经被从服务器端删除时会收到该回调。</p>
+<p>已废弃，请用 <a class="el" href="">userAccountDidRemoveFromServe</a> 代替。 </p>
 
 </div>
 </div>
@@ -183,10 +185,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>自动登录完成时的回调</p>
+<p>自动登录完成时的回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aError</td><td>错误信息 </td></tr>
+    <tr><td class="paramname">aError</td><td>错误信息，包含失败原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -216,14 +218,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>SDK连接服务器的状态变化时会接收到该回调</p>
-<p>有以下几种情况, 会引起该方法的调用:</p><ol type="1">
-<li>登录成功后, 手机无法上网时, 会调用该回调</li>
-<li>登录成功后, 网络状态变化时, 会调用该回调</li>
-</ol>
+<p>SDK 连接服务器的状态变化时会接收到该回调。</p>
+<p>SDK 会在以下情况下触发该回调： 1.登录成功后，设备无法上网时。 2.登录成功后，连接状态发生变化时。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aConnectionState</td><td>当前状态 </td></tr>
+    <tr><td class="paramname">aConnectionState</td><td>当前的连接状态。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -253,10 +252,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>自动登录完成时的回调</p>
+<p>自动登录完成时的回调。</p>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_client_delegate-p.html#a64c0dd4b13410879866d4e17028802fc">autoLoginDidCompleteWithError:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aError</td><td>错误信息 </td></tr>
+    <tr><td class="paramname">aError</td><td>错误信息，包含方法失败的原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -286,14 +286,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>SDK连接服务器的状态变化时会接收到该回调</p>
+<p>SDK 连接服务器的状态变化时会接收到该回调。</p>
 <p>有以下几种情况, 会引起该方法的调用:</p><ol type="1">
-<li>登录成功后, 手机无法上网时, 会调用该回调</li>
-<li>登录成功后, 网络状态变化时, 会调用该回调</li>
+<li>登录成功后, 手机无法上网时, 会调用该回调；</li>
+<li>登录成功后, 网络状态变化时, 会调用该回调。</li>
 </ol>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_client_delegate-p.html#adf175d117ada98617c054bacf4c11dcb">connectionStateDidChange:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aConnectionState</td><td>当前状态 </td></tr>
+    <tr><td class="paramname">aConnectionState</td><td>当前状态。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -350,7 +351,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>token即将过期 （使用声网token agoraToken 登陆） </p>
+<p>token 即将过期 （使用声网 token 即 Agora Chat user token 登陆）。 </p>
 
 </div>
 </div>
@@ -377,7 +378,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>当前登录账号被强制退出时会收到该回调，有以下原因： 1.密码被修改； 2.登录设备数过多； 3.服务被封禁; 4.被强制下线; </p>
+<p>当前登录账号被强制退出时会收到该回调，有以下原因：</p><ul>
+<li>密码被修改；</li>
+<li>登录设备数过多；</li>
+<li>服务被封禁;</li>
+<li>被强制下线; </li>
+</ul>
 
 </div>
 </div>
@@ -403,7 +409,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>当前登录账号在其它设备登录时会接收到此回调 </p>
+<p>当前登录账号在其它设备登录时会接收到此回调。 </p>
 
 </div>
 </div>
@@ -429,7 +435,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>当前登录账号已经被从服务器端删除时会收到该回调 </p>
+<p>当前登录账号已经被从服务器端删除时会收到该回调。 </p>
 
 </div>
 </div>
@@ -455,7 +461,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>服务被禁用（自动登录时符合条件会触发） </p>
+<p>当前用户账号被禁用时会收到该回调。 </p>
 
 </div>
 </div>

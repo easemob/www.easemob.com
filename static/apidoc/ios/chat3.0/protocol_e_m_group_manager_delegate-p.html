@@ -144,7 +144,7 @@ $(function() {
 <tr class="separator:a48a7ff3e914e972588196b2f3f145ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>群组相关的管理协议类 </p>
+<div class="textblock"><p>群组相关的管理协议类。 </p>
 </div><h2 class="groupheader">函数文档</h2>
 <a id="a8850e036bccaf6d6993441eab62630be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8850e036bccaf6d6993441eab62630be">&#9670;&nbsp;</a></span>didJoinedGroup:inviter:message:</h2>
@@ -185,12 +185,13 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>SDK自动同意了用户A的加B入群邀请后，用户B接收到该回调，需要设置EMOptions的isAutoAcceptGroupInvitation为YES</p>
+<p>SDK 自动同意了用户 A 的加 B 入群邀请后，用户 B 接收到该回调，需要设置 <a class="el" href="interface_e_m_options.html">EMOptions</a> 的 isAutoAcceptGroupInvitation 为 YES。</p>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_group_manager_delegate-p.html#a52f7fe2f68c852fbb5c438379f2d17fa">didJoinGroup:inviter:message:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aInviter</td><td>邀请者 </td></tr>
-    <tr><td class="paramname">aMessage</td><td>邀请消息 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aInviter</td><td>邀请者。 </td></tr>
+    <tr><td class="paramname">aMessage</td><td>邀请消息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -236,12 +237,13 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>SDK自动同意了用户A的加B入群邀请后，用户B接收到该回调，需要设置EMOptions的isAutoAcceptGroupInvitation为YES</p>
+<p>自动加入群组回调。</p>
+<p>如果你在 <a class="el" href="interface_e_m_options.html">EMOptions</a> 中将 isAutoAcceptGroupInvitation 设为 YES，则在收到其他用户的群组邀请后，SDK 会自动进群，并触发该回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aInviter</td><td>邀请者 </td></tr>
-    <tr><td class="paramname">aMessage</td><td>邀请消息 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aInviter</td><td>邀请者。 </td></tr>
+    <tr><td class="paramname">aMessage</td><td>邀请消息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -281,11 +283,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>离开群组收到回调</p>
+<p>离开群组回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aReason</td><td>离开原因 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aReason</td><td>离开原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -325,11 +327,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>用户B同意用户A的入群邀请后，用户A接收到该回调</p>
+<p>用户 B 同意用户 A 的入群邀请后，用户 A 接收到该回调。</p>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_group_manager_delegate-p.html#ae6f87deca327c8c43440eb860c4d49a4">groupInvitationDidAccept:invitee:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aInvitee</td><td>被邀请者 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aInvitee</td><td>被邀请者。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -359,10 +362,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>群主同意用户A的入群申请后，用户A会接收到该回调，群的类型是EMGroupStylePublicJoinNeedApproval</p>
+<p>群主同意用户 A 的入群申请后，用户 A 会接收到该回调，群的类型是 EMGroupStylePublicJoinNeedApproval。</p>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_group_manager_delegate-p.html#a1a46522e3bda01d100e7d97766301cf3">joinGroupRequestDidApprove:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -408,12 +412,13 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>用户B拒绝用户A的入群邀请后，用户A接收到该回调</p>
+<p>用户 B 拒绝用户 A 的入群邀请后，用户 A 接收到该回调。</p>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_group_manager_delegate-p.html#a42ca8caff1d2fb7f24c4f931dbbc1c3d">groupInvitationDidDecline:invitee:reason:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aInvitee</td><td>被邀请者 </td></tr>
-    <tr><td class="paramname">aReason</td><td>拒绝理由 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aInvitee</td><td>被邀请者。 </td></tr>
+    <tr><td class="paramname">aReason</td><td>拒绝理由。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -453,11 +458,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>群主拒绝用户A的入群申请后，用户A会接收到该回调，群的类型是EMGroupStylePublicJoinNeedApproval</p>
+<p>群主拒绝用户 A 的入群申请后，用户 A 会接收到该回调，群的类型是 EMGroupStylePublicJoinNeedApproval。</p>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_group_manager_delegate-p.html#a04c19455375477181825935349cc4842">joinGroupRequestDidDecline:reason:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroupId</td><td>群组ID </td></tr>
-    <tr><td class="paramname">aReason</td><td>拒绝理由 </td></tr>
+    <tr><td class="paramname">aGroupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">aReason</td><td>拒绝理由。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -503,12 +509,13 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>用户A邀请用户B入群,用户B接收到该回调</p>
+<p>用户 A 邀请用户 B 入群,用户 B 接收到该回调。</p>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_group_manager_delegate-p.html#a95832f51bb11b8e53ae23694e2b8bb81">groupInvitationDidReceive:inviter:message:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroupId</td><td>群组ID </td></tr>
-    <tr><td class="paramname">aInviter</td><td>邀请者 </td></tr>
-    <tr><td class="paramname">aMessage</td><td>邀请信息 </td></tr>
+    <tr><td class="paramname">aGroupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">aInviter</td><td>邀请者。 </td></tr>
+    <tr><td class="paramname">aMessage</td><td>邀请信息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -554,11 +561,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>群组的群主收到用户的入群申请，群的类型是EMGroupStylePublicJoinNeedApproval</p>
+<p>群主收到用户的入群申请，群的类型是 EMGroupStylePublicJoinNeedApproval。</p>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_group_manager_delegate-p.html#ad7e38106f3c2471827c0831ee2189885">joinGroupRequestDidReceive:user:reason:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aApplicant</td><td>申请者 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aApplicant</td><td>申请者。 </td></tr>
     <tr><td class="paramname">aReason</td><td>申请者的附属信息 </td></tr>
   </table>
   </dd>
@@ -599,11 +607,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>离开群组收到的回调</p>
+<p>离开群组收到的回调。</p>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_group_manager_delegate-p.html#a6ead129a6f0cd03efdd39047294c24e1">didLeaveGroup:reason:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aReason</td><td>离开原因 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aReason</td><td>离开原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -633,10 +642,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>群组列表发生变化</p>
+<p>群组列表发生变化。</p>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_group_manager_delegate-p.html#aa494b756706513e87107bd8c777bacc2">groupListDidUpdate:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroupList</td><td>群组列表&lt;EMGroup&gt; </td></tr>
+    <tr><td class="paramname">aGroupList</td><td>群组列表。&lt;EMGroup&gt; </td></tr>
   </table>
   </dd>
 </dl>
@@ -676,11 +686,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>有成员被加入管理员列表</p>
+<p>成员被加入管理员列表回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aAdmin</td><td>加入管理员列表的成员 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aAdmin</td><td>加入管理员列表的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -720,11 +730,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>有成员被移出管理员列表</p>
+<p>成员被移出管理员列表回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aAdmin</td><td>移出管理员列表的成员 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aAdmin</td><td>移出管理员列表的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -764,11 +774,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>群组全部禁言状态变化</p>
+<p>群组全部成员禁言状态发生变化回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aMuted</td><td>是否被全部禁言 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aMuted</td><td>是否被全部禁言。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -808,11 +818,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>群公告有更新</p>
+<p>群公告更新回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aAnnouncement</td><td>群公告 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aAnnouncement</td><td>群公告。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -852,11 +862,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>有用户上传群共享文件</p>
+<p>上传群共享文件回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aSharedFile</td><td>共享文件 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aSharedFile</td><td>共享文件。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -896,11 +906,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>有用户删除群共享文件</p>
+<p>群共享文件被删除回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aFileId</td><td>共享文件ID </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aFileId</td><td>共享文件 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -940,11 +950,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>用户B同意用户A的入群邀请后，用户A接收到该回调</p>
+<p>远端用户接受群组邀请回调。</p>
+<p>该回调是由远端用户接受本地用户发送的群组邀请触发的。如，用户 B 接受用户 A 的群组邀请后，用户 A 会收到该回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aInvitee</td><td>被邀请者 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aInvitee</td><td>被邀请者。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -990,12 +1001,13 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>用户B拒绝用户A的入群邀请后，用户A接收到该回调</p>
+<p>远端用户拒绝群组邀请回调。</p>
+<p>该回调是由远端用户拒绝本地用户发送的群组邀请触发的。如，用户 B 拒绝用户 A 的群组邀请后，用户 A 会收到该回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组 </td></tr>
-    <tr><td class="paramname">aInvitee</td><td>被邀请者 </td></tr>
-    <tr><td class="paramname">aReason</td><td>拒绝理由 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组。 </td></tr>
+    <tr><td class="paramname">aInvitee</td><td>被邀请者。 </td></tr>
+    <tr><td class="paramname">aReason</td><td>拒绝理由。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1041,12 +1053,13 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>用户A邀请用户B入群,用户B接收到该回调</p>
+<p>收到群组邀请回调。</p>
+<p>该回调是由远端用户发送群组邀请触发的。如，用户 A 邀请用户 B 入群，则用户 B 会收到该回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroupId</td><td>群组ID </td></tr>
-    <tr><td class="paramname">aInviter</td><td>邀请者 </td></tr>
-    <tr><td class="paramname">aMessage</td><td>邀请信息 </td></tr>
+    <tr><td class="paramname">aGroupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">aInviter</td><td>发送群组邀请的用户。 </td></tr>
+    <tr><td class="paramname">aMessage</td><td>群组邀请的信息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1076,10 +1089,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>群组列表发生变化</p>
+<p>群组列表发生变化回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroupList</td><td>群组列表&lt;EMGroup&gt; </td></tr>
+    <tr><td class="paramname">aGroupList</td><td>群组列表，详见 &lt;EMGroup&gt;。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1125,12 +1138,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>有成员被加入禁言列表</p>
+<p>群成员加入群禁言列表回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aMutedMembers</td><td>被禁言的成员 </td></tr>
-    <tr><td class="paramname">aMuteExpire</td><td>禁言失效时间，当前不可用 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aMutedMembers</td><td>被禁言的成员。 </td></tr>
+    <tr><td class="paramname">aMuteExpire</td><td>禁言失效时间，当前不可用。禁言后是永久禁言，直到被取消禁言。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1170,11 +1183,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>有成员被移出禁言列表</p>
+<p>成员被移出禁言列表回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aMutedMembers</td><td>移出禁言列表的成员 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aMutedMembers</td><td>移出禁言列表的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1220,12 +1233,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>群组所有者有更新</p>
+<p>群组所有者有更新回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aNewOwner</td><td>新群主 </td></tr>
-    <tr><td class="paramname">aOldOwner</td><td>旧群主 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aNewOwner</td><td>新群主。 </td></tr>
+    <tr><td class="paramname">aOldOwner</td><td>旧群主。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1265,11 +1278,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>有成员被加入白名单</p>
+<p>用户加入白名单回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aMembers</td><td>被加入白名单的成员 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aMembers</td><td>被加入白名单的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1309,11 +1322,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>有成员被移出白名单</p>
+<p>用户被移出白名单回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aMembers</td><td>被移出白名单的成员 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aMembers</td><td>被移出白名单的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1343,10 +1356,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>群主同意用户A的入群申请后，用户A会接收到该回调，群的类型是EMGroupStylePublicJoinNeedApproval</p>
+<p>加入群组申请已同意回调。</p>
+<p>如果你将群组类型设为 EMGroupStylePublicJoinNeedApproval，则群主同意用户的入群申请后，该用户会收到该回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>通过申请的群组 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>通过申请的群组。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1386,11 +1400,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>群主拒绝用户A的入群申请后，用户A会接收到该回调，群的类型是EMGroupStylePublicJoinNeedApproval</p>
+<p>群主拒绝入群申请回调。</p>
+<p>如果你将群组类型设为 EMGroupStylePublicJoinNeedApproval，则群主拒绝用户的入群申请后，该用户会收到该回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroupId</td><td>群组ID </td></tr>
-    <tr><td class="paramname">aReason</td><td>拒绝理由 </td></tr>
+    <tr><td class="paramname">aGroupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">aReason</td><td>拒绝理由。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1436,12 +1451,13 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>群组的群主收到用户的入群申请，群的类型是EMGroupStylePublicJoinNeedApproval</p>
+<p>群主收到用户入群申请回调。</p>
+<p>如果你将群组类型设置为 EMGroupStylePublicJoinNeedApproval，则用户申请入群时，群主会收到该回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>群组实例 </td></tr>
-    <tr><td class="paramname">aApplicant</td><td>申请者 </td></tr>
-    <tr><td class="paramname">aReason</td><td>申请者的附属信息 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>群组实例。 </td></tr>
+    <tr><td class="paramname">aApplicant</td><td>申请者。 </td></tr>
+    <tr><td class="paramname">aReason</td><td>申请者的附属信息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1481,11 +1497,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>有用户加入群组</p>
+<p>用户加入群组回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>加入的群组 </td></tr>
-    <tr><td class="paramname">aUsername</td><td>加入者 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>加入的群组。 </td></tr>
+    <tr><td class="paramname">aUsername</td><td>加入群组的用户名。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1525,11 +1541,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>有用户离开群组</p>
+<p>用户离开群组回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aGroup</td><td>离开的群组 </td></tr>
-    <tr><td class="paramname">aUsername</td><td>离开者 </td></tr>
+    <tr><td class="paramname">aGroup</td><td>离开的群组。 </td></tr>
+    <tr><td class="paramname">aUsername</td><td>离开群组的用户名。 </td></tr>
   </table>
   </dd>
 </dl>

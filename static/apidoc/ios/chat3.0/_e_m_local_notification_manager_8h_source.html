@@ -82,28 +82,41 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;NS_ASSUME_NONNULL_BEGIN</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="protocol_e_m_local_notification_delegate-p.html">   13</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_e_m_local_notification_delegate-p.html">EMLocalNotificationDelegate</a> &lt;NSObject&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;- (void)emuserNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(<span class="keywordtype">void</span> (^)(UNNotificationPresentationOptions options))completionHandler;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;- (void)emuserNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(<span class="keywordtype">void</span>(^)(<span class="keywordtype">void</span>))completionHandler;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="interface_e_m_local_notification_manager.html">   39</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_e_m_local_notification_manager.html">EMLocalNotificationManager</a> : NSObject</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;+(instancetype _Nonnull ) alloc __attribute__((unavailable(&quot;call sharedManager instead&quot;)));</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;+(instancetype _Nonnull ) new __attribute__((unavailable(&quot;call sharedManager instead&quot;)));</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;-(instancetype _Nonnull ) copy __attribute__((unavailable(&quot;call sharedManager instead&quot;)));</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;-(instancetype _Nonnull ) mutableCopy __attribute__((unavailable(&quot;call sharedManager instead&quot;)));</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;+ (instancetype _Nonnull )sharedManager;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;- (void)launchWithDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_local_notification_delegate-p.html">EMLocalNotificationDelegate</a>&gt;)aDelegate;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(<span class="keywordtype">void</span> (^)(UNNotificationPresentationOptions options))completionHandler;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(<span class="keywordtype">void</span>(^)(<span class="keywordtype">void</span>))completionHandler;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="protocol_e_m_local_notification_delegate-p.html#a998f7192b2e900f3b90a16cae16a592d">   82</a></span>&#160;NS_ASSUME_NONNULL_END</div>
-<div class="ttc" id="ainterface_e_m_local_notification_manager_html"><div class="ttname"><a href="interface_e_m_local_notification_manager.html">EMLocalNotificationManager</a></div><div class="ttdef"><b>Definition:</b> EMLocalNotificationManager.h:40</div></div>
-<div class="ttc" id="aprotocol_e_m_local_notification_delegate-p_html"><div class="ttname"><a href="protocol_e_m_local_notification_delegate-p.html">EMLocalNotificationDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMLocalNotificationManager.h:13</div></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;     EMWillPresentNotification = 0,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;     EMDidReceiveNotificationResponse</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; }EMNotificationState;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="protocol_e_m_local_notification_delegate-p.html">   18</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_e_m_local_notification_delegate-p.html">EMLocalNotificationDelegate</a> &lt;NSObject&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">@optional</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;- (void)emuserNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(<span class="keywordtype">void</span> (^)(UNNotificationPresentationOptions options))completionHandler;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;- (void)emuserNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(<span class="keywordtype">void</span>(^)(<span class="keywordtype">void</span>))completionHandler;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;- (void)emuserNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(UNNotification *)notification;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;- (void)emGetNotificationMessage:(UNNotification*)notification state:(EMNotificationState)state;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;- (void)emDidRecivePushSilentMessage:(NSDictionary *)messageDic;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="interface_e_m_local_notification_manager.html">   80</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_e_m_local_notification_manager.html">EMLocalNotificationManager</a> : NSObject</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;+(instancetype _Nonnull ) alloc <a class="code" href="interface_e_m_local_notification_manager.html#aae3403a487698387c5704f931c91cb41">__attribute__</a>((unavailable(&quot;call <a class="code" href="interface_e_m_local_notification_manager.html#a13dae8749df020c38b0d562923fa2bf7">sharedManager</a> instead&quot;)));</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;+(instancetype _Nonnull ) new <a class="code" href="interface_e_m_local_notification_manager.html#aae3403a487698387c5704f931c91cb41">__attribute__</a>((unavailable(&quot;call <a class="code" href="interface_e_m_local_notification_manager.html#a13dae8749df020c38b0d562923fa2bf7">sharedManager</a> instead&quot;)));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;-(instancetype _Nonnull ) copy <a class="code" href="interface_e_m_local_notification_manager.html#aae3403a487698387c5704f931c91cb41">__attribute__</a>((unavailable(&quot;call <a class="code" href="interface_e_m_local_notification_manager.html#a13dae8749df020c38b0d562923fa2bf7">sharedManager</a> instead&quot;)));</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;-(instancetype _Nonnull ) mutableCopy <a class="code" href="interface_e_m_local_notification_manager.html#aae3403a487698387c5704f931c91cb41">__attribute__</a>((unavailable(&quot;call <a class="code" href="interface_e_m_local_notification_manager.html#a13dae8749df020c38b0d562923fa2bf7">sharedManager</a> instead&quot;)));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;+  (instancetype _Nonnull )<a class="code" href="interface_e_m_local_notification_manager.html#a13dae8749df020c38b0d562923fa2bf7">sharedManager</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;- (void)launchWithDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_local_notification_delegate-p.html">EMLocalNotificationDelegate</a>&gt;)aDelegate;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(<span class="keywordtype">void</span> (^)(UNNotificationPresentationOptions options))completionHandler;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(<span class="keywordtype">void</span>(^)(<span class="keywordtype">void</span>))completionHandler;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="interface_e_m_local_notification_manager.html#aae3403a487698387c5704f931c91cb41">  168</a></span>&#160;NS_ASSUME_NONNULL_END</div>
+<div class="ttc" id="ainterface_e_m_local_notification_manager_html"><div class="ttname"><a href="interface_e_m_local_notification_manager.html">EMLocalNotificationManager</a></div><div class="ttdef"><b>Definition:</b> EMLocalNotificationManager.h:81</div></div>
+<div class="ttc" id="ainterface_e_m_local_notification_manager_html_a13dae8749df020c38b0d562923fa2bf7"><div class="ttname"><a href="interface_e_m_local_notification_manager.html#a13dae8749df020c38b0d562923fa2bf7">+[EMLocalNotificationManager sharedManager]</a></div><div class="ttdeci">instancetype _Nonnull sharedManager()</div></div>
+<div class="ttc" id="ainterface_e_m_local_notification_manager_html_aae3403a487698387c5704f931c91cb41"><div class="ttname"><a href="interface_e_m_local_notification_manager.html#aae3403a487698387c5704f931c91cb41">+[EMLocalNotificationManager __attribute__]</a></div><div class="ttdeci">(unavailable(&quot;call sharedManager instead&quot; __attribute__()</div></div>
+<div class="ttc" id="aprotocol_e_m_local_notification_delegate-p_html"><div class="ttname"><a href="protocol_e_m_local_notification_delegate-p.html">EMLocalNotificationDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMLocalNotificationManager.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
