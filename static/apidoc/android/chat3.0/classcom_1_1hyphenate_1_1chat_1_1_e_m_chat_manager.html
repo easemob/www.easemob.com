@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.8.9</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -127,6 +127,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ab3db470adf8017018da3f5bc0eeac39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae00d3eb41e070546b6b7dc1c3e0750c3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ae00d3eb41e070546b6b7dc1c3e0750c3">deleteConversation</a> (String username, boolean deleteMessages)</td></tr>
 <tr class="separator:ae00d3eb41e070546b6b7dc1c3e0750c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345e81b9caf2658c8796855fe63fe752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a345e81b9caf2658c8796855fe63fe752">deleteConversationFromServer</a> (String username, <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_conversation_type.html">EMConversationType</a> type, boolean isDeleteServerMessages, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> deleteCallBack)</td></tr>
+<tr class="separator:a345e81b9caf2658c8796855fe63fe752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a923a569276cc251b85fd541d23432a4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a923a569276cc251b85fd541d23432a4f">addMessageListener</a> (<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a> listener)</td></tr>
 <tr class="separator:a923a569276cc251b85fd541d23432a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a072e93b97c5859ea2780c1a898c37873"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a072e93b97c5859ea2780c1a898c37873">removeMessageListener</a> (<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a> listener)</td></tr>
@@ -163,10 +165,11 @@ Protected 成员函数</h2></td></tr>
 <tr class="separator:a3494b31d568e8df599279ede723fc976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >聊天管理类，负责管理会话（加载，删除等），发送消息，下载消息附件等 比如，发送一条文本消息： </p><pre>
- <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> message = EMMessage.createTxtSendMessage(content, toChatUsername);
-    EMClient.getInstance().chatManager().sendMessage(message);
-</pre> </div><h2 class="groupheader">成员函数说明</h2>
+<div class="textblock"><p >聊天管理类，该类负责管理会话（加载，删除等）、发送消息、下载消息附件等。</p>
+<p >比如，发送一条文本消息：</p>
+<div class="fragment"><div class="line">EMMessage message = EMMessage.createTxtSendMessage(content, toChatUsername);</div>
+<div class="line">   EMClient.getInstance().chatManager().sendMessage(message);</div>
+</div><!-- fragment --> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a121387f48448ea38e5b33ea4622e6e86" name="a121387f48448ea38e5b33ea4622e6e86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a121387f48448ea38e5b33ea4622e6e86">&#9670;&nbsp;</a></span>ackConversationRead()</h2>
 
@@ -182,18 +185,19 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >发送会话已读回执，只针对单聊会话 将通知服务器将此会话未读数置为0，对话方（包含多端多设备）将会在回调方法 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html#a57efff3b4e02b0dee090d75951b1a735">EMConversationListener#onConversationRead(String, String)</a> 中接收到回调</p>
-<p >群消息已读回执，详见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a></p>
-<p >建议：此方法可以在进入聊天页面时调用，在聊天过程中调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a79f4f361c996e464e54105776fffe44d">ackMessageRead(String, String)</a>， 可以在有大量未读消息时，减少调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a79f4f361c996e464e54105776fffe44d">ackMessageRead(String, String)</a> 的次数</p>
+<p >发送会话的已读回执，该方法只针对单聊会话。</p>
+<p >该方法会通知服务器将此会话未读数设置为 0，对话方（包含多端多设备）将会在下面这个回调方法中接收到回调。</p>
+<p ><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html#a57efff3b4e02b0dee090d75951b1a735">EMConversationListener#onConversationRead(String, String)</a></p>
+<p >参考： 群消息已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a>。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conversationId</td><td>会话ID </td></tr>
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>可能会抛出的异常 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa498f83d523127e5314b53348df0e31b">EMError#USER_NOT_LOGIN</a>、<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa3d81fcde062618d9f81c1cb3e00ad11">EMError#SERVER_NOT_REACHABLE</a>、 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#afea45a5fbac3a4a40f3a2d24d092aecb">EMError#MESSAGE_INVALID</a>等，详见<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a> </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>以下为可能抛出的异常：<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa498f83d523127e5314b53348df0e31b">EMError#USER_NOT_LOGIN</a>、<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa3d81fcde062618d9f81c1cb3e00ad11">EMError#SERVER_NOT_REACHABLE</a>、 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#afea45a5fbac3a4a40f3a2d24d092aecb">EMError#MESSAGE_INVALID</a> 等，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -231,19 +235,20 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >发送群消息已读回执 前提条件：设置了<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">EMOptions#setRequireAck(boolean)</a>和<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a8249b1722b5ac217f27584b223ad52c6">EMMessage#setIsNeedGroupAck(boolean)</a></p>
-<p >发送单聊消息已读回执，详见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a79f4f361c996e464e54105776fffe44d">ackMessageRead(String, String)</a> ;会话已读回执，详见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a121387f48448ea38e5b33ea4622e6e86">ackConversationRead(String)</a></p>
+<p >发送群消息已读回执。</p>
+<p >前提条件：设置了 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">EMOptions#setRequireAck(boolean)</a> 和 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a8249b1722b5ac217f27584b223ad52c6">EMMessage#setIsNeedGroupAck(boolean)</a>。</p>
+<p >参考： 发送单聊消息已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a79f4f361c996e464e54105776fffe44d">ackMessageRead(String, String)</a> ; 会话已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a121387f48448ea38e5b33ea4622e6e86">ackConversationRead(String)</a>。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">to</td><td>会话ID </td></tr>
-    <tr><td class="paramname">messageId</td><td>消息ID </td></tr>
-    <tr><td class="paramname">ext</td><td>扩展信息 </td></tr>
+    <tr><td class="paramname">to</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
+    <tr><td class="paramname">ext</td><td>扩展信息。<code>ext</code> 属性是用户自己定义的关键字，接收后，解析出自定义的字符串，可以自行处理。 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>详见<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a> </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -275,19 +280,21 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >发送消息已读回执，只针对单聊消息 前提条件：设置了<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">EMOptions#setRequireAck(boolean)</a></p>
-<p >发送群消息已读回执，详见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a></p>
-<p >建议：在进入聊天页面的时调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a121387f48448ea38e5b33ea4622e6e86">ackConversationRead(String)</a> ，其他场景再调用此方法，可以大量减少调用此方法的次数</p>
+<p >发送消息的已读回执。</p>
+<p >该方法仅适用于单聊会话。</p>
+<p >前提条件：设置了 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">EMOptions#setRequireAck(boolean)</a>。</p>
+<p >发送群消息已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a>。</p>
+<p >建议：在进入聊天页面的时调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a121387f48448ea38e5b33ea4622e6e86">ackConversationRead(String)</a> ，其他场景再调用此方法，可以大量减少调用此方法的次数。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">to</td><td>接收方的用户名 </td></tr>
-    <tr><td class="paramname">messageId</td><td>消息的ID </td></tr>
+    <tr><td class="paramname">to</td><td>接收方的用户名。 </td></tr>
+    <tr><td class="paramname">messageId</td><td>消息的 ID。 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>抛出的异常，详见<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a> </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -309,10 +316,12 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >注册会话监听 用于监听会话变化及监听会话已读回执，详见<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html">EMConversationListener</a> 需要配合<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a0a8fb4720890a1d25cc909804312a6f8">removeConversationListener(EMConversationListener)</a> 使用</p>
+<p >注册会话监听。</p>
+<p >用于监听会话变化及监听会话已读回执，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html">EMConversationListener</a>。</p>
+<p >需要配合 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a0a8fb4720890a1d25cc909804312a6f8">removeConversationListener(EMConversationListener)</a> 使用。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">listener</td><td>要添加的会话监听，详见<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html">EMConversationListener</a> </td></tr>
+    <tr><td class="paramname">listener</td><td>要添加的会话监听，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html">EMConversationListener</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -334,10 +343,12 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >注册消息监听 接受到新消息等回调可以通过设置此方法进行监听，详见<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a> 需要和<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a072e93b97c5859ea2780c1a898c37873">removeMessageListener(EMMessageListener)</a> 配合使用</p>
+<p >注册消息监听。</p>
+<p >接受到新消息等回调可以通过设置此方法进行监听，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a>。</p>
+<p >如果需要移除监听，可以和 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a072e93b97c5859ea2780c1a898c37873">removeMessageListener(EMMessageListener)</a> 方法配合使用。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">listener</td><td>要注册的消息监听，详见<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a> </td></tr>
+    <tr><td class="paramname">listener</td><td>要注册的消息监听，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -359,9 +370,9 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从服务器获取会话列表 默认最多返回100条数据</p>
-<p >异步方法</p>
-<dl class="section return"><dt>返回</dt><dd>返回当前用户的会话列表 </dd></dl>
+<p >从服务器获取会话列表。 默认最多返回 100 条数据。</p>
+<p >异步方法。</p>
+<dl class="section return"><dt>返回</dt><dd>返回当前用户的会话列表。 </dd></dl>
 
 </div>
 </div>
@@ -402,14 +413,16 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从服务器获取群组消息回执详情 分页获取 发送群组消息回执，详见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a></p>
-<p >异步方法</p>
+<p >从服务器获取群组消息回执详情。</p>
+<p >分页获取。</p>
+<p >参考： 发送群组消息回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a>。</p>
+<p >异步方法。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">msgId</td><td>消息id </td></tr>
-    <tr><td class="paramname">pageSize</td><td>每次获取群消息已读回执的条数 </td></tr>
-    <tr><td class="paramname">startAckId</td><td>已读回执的id，如果为空，从最新的回执向前开始获取 </td></tr>
-    <tr><td class="paramname">callBack</td><td>结果回调，成功执行<a class="el" href="">EMValueCallBack#onSuccess(Object)</a>，失败执行<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a> </td></tr>
+    <tr><td class="paramname">msgId</td><td>消息 ID。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页获取群消息已读回执的条数。 </td></tr>
+    <tr><td class="paramname">startAckId</td><td>已读回执的 ID，如果为空，从最新的回执向前开始获取。 </td></tr>
+    <tr><td class="paramname">callBack</td><td>结果回调，成功执行 <a class="el" href="">EMValueCallBack#onSuccess(Object)</a>，失败执行 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -459,15 +472,16 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从服务器获取历史消息 分页获取</p>
-<p >异步方法</p>
+<p >从服务器获取历史消息。</p>
+<p >分页获取。</p>
+<p >异步方法。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conversationId</td><td>会话ID </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型，详见<a class="el" href="">EMConversationType</a> </td></tr>
-    <tr><td class="paramname">pageSize</td><td>每次获取的条数 </td></tr>
-    <tr><td class="paramname">startMsgId</td><td>漫游消息的开始消息id，如果为空，从最新的消息向前开始获取 </td></tr>
-    <tr><td class="paramname">callBack</td><td>结果回调，成功执行<a class="el" href="">EMValueCallBack#onSuccess(Object)</a>, 返回消息列表和用于继续获取历史消息的Cursor; 失败执行<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a> </td></tr>
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型，详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页获取的条数。 </td></tr>
+    <tr><td class="paramname">startMsgId</td><td>漫游消息的开始消息 ID，如果为空，从最新的消息向前开始获取。 </td></tr>
+    <tr><td class="paramname">callBack</td><td>结果回调，成功则执行 <a class="el" href="">EMValueCallBack#onSuccess(Object)</a>, 返回消息列表和用于继续获取历史消息的 Cursor; 失败则执行 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -499,12 +513,12 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >撤回发送成功的消息</p>
-<p >异步方法</p>
+<p >撤回发送成功的消息。</p>
+<p >异步方法。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">message</td><td>消息对象 </td></tr>
-    <tr><td class="paramname">callback</td><td>发送回调，详见<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> </td></tr>
+    <tr><td class="paramname">message</td><td>消息对象。 </td></tr>
+    <tr><td class="paramname">callback</td><td>一个 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> 类型的对象，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -536,15 +550,81 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >删除指定ID的对话和本地的聊天记录 如果将deleteMessages设为true，删除会话的同时也会删除本地的聊天记录</p>
+<p >删除指定 ID 的对话和本地的聊天记录。 如果将 <code>deleteMessages</code> 设为 <code>true</code>，删除会话的同时也会删除本地的聊天记录。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">username</td><td>会话ID </td></tr>
-    <tr><td class="paramname">deleteMessages</td><td>是否同时删除本地的聊天记录 </td></tr>
+    <tr><td class="paramname">username</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">deleteMessages</td><td>是否同时删除本地的聊天记录。<code><ul>
+<li>true 表示删除；</li>
+<li><code>false</code> 表示不删除。 </li>
+</ul>
+</code></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>删除会话结果。true代表删除成功，false代表删除失败 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd><code> 删除会话结果。<ul>
+<li><code>true</code> 代表删除成功；</li>
+<li><code>false</code> 代表删除失败。 </li>
+</ul>
+</code></dd></dl>
+
+</div>
+</div>
+<a id="a345e81b9caf2658c8796855fe63fe752" name="a345e81b9caf2658c8796855fe63fe752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a345e81b9caf2658c8796855fe63fe752">&#9670;&nbsp;</a></span>deleteConversationFromServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMChatManager.deleteConversationFromServer </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_conversation_type.html">EMConversationType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>isDeleteServerMessages</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>&#160;</td>
+          <td class="paramname"><em>deleteCallBack</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >删除服务端的指定 ID 的对话和聊天记录，内部异步操作。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型 <a class="el" href="">EMConversationType</a> </td></tr>
+    <tr><td class="paramname">isDeleteServerMessages</td><td>是否同时删除服务端的聊天记录。<ul>
+<li><code>true</code>：删除服务端会话的同时也会删除服务端的聊天记录。</li>
+<li><code>false</code> 表示删除服务端会话的同时不删除服务端的聊天记录。 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">deleteCallBack</td><td>删除服务端会话与记录成功与否的回调。<ul>
+<li><code>true</code> 代表删除成功；</li>
+<li><code>false</code> 代表删除失败。 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -573,11 +653,11 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >删除时间戳之前的本地消息记录</p>
+<p >删除时间戳之前的本地消息记录。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">timeStamp</td><td>时间戳 </td></tr>
-    <tr><td class="paramname">callback</td><td>删除结果回调，详见<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> </td></tr>
+    <tr><td class="paramname">timeStamp</td><td>Unix 时间戳，单位为毫秒。 </td></tr>
+    <tr><td class="paramname">callback</td><td>删除结果回调，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -599,10 +679,11 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >下载消息的附件 未成功下载的附件，可调用此方法再次下载</p>
+<p >下载消息的附件。</p>
+<p >未成功下载的附件，可调用此方法再次下载。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">msg</td><td>要下载附件的消息 </td></tr>
+    <tr><td class="paramname">msg</td><td>要下载附件的消息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -646,17 +727,17 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从服务器下载文件</p>
+<p >从服务器下载文件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">remoteUrl</td><td>服务器上的远程文件路径 </td></tr>
-    <tr><td class="paramname">localFilePath</td><td>本地要生成的文件路径 </td></tr>
-    <tr><td class="paramname">headers</td><td>请求头 </td></tr>
-    <tr><td class="paramname">callback</td><td>下载结果回调，详见<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a></td></tr>
+    <tr><td class="paramname">remoteUrl</td><td>服务器上的远程文件路径。 </td></tr>
+    <tr><td class="paramname">localFilePath</td><td>本地要生成的文件路径。 </td></tr>
+    <tr><td class="paramname">headers</td><td>请求头。 </td></tr>
+    <tr><td class="paramname">callback</td><td>下载结果回调，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1a938a579e8e5e07518d1e5008f9241d">downloadAttachment(EMMessage)</a> 代替</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1a938a579e8e5e07518d1e5008f9241d">downloadAttachment(EMMessage)</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -675,10 +756,10 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >下载消息的缩略图</p>
+<p >下载消息的缩略图。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">msg</td><td>要下载缩略图的消息，一般是图片消息和视频消息 </td></tr>
+    <tr><td class="paramname">msg</td><td>要下载缩略图的消息，一般图片消息和视频消息有缩略图。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -699,9 +780,9 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从服务器获取会话列表 默认最多返回100条数据</p>
-<p >同步方法，会阻塞当前线程</p>
-<dl class="section return"><dt>返回</dt><dd>返回当前用户的会话列表 </dd></dl>
+<p >从服务器获取会话列表。 默认最多返回 100 条数据。</p>
+<p >同步方法，会阻塞当前线程。</p>
+<dl class="section return"><dt>返回</dt><dd>返回当前用户的会话列表。 </dd></dl>
 
 </div>
 </div>
@@ -736,20 +817,22 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从服务器获取群组消息回执详情 分页获取 发送群组消息回执，详见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a></p>
-<p >同步方法，会阻塞当前线程</p>
+<p >从服务器获取群组消息回执详情。</p>
+<p >分页获取。</p>
+<p >参考： 发送群组消息回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a>。</p>
+<p >同步方法，会阻塞当前线程。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">msgId</td><td>需要获取回执的消息id </td></tr>
-    <tr><td class="paramname">pageSize</td><td>每次获取群消息已读回执的条数 </td></tr>
-    <tr><td class="paramname">startAckId</td><td>已读回执的id，可以为空。如果为空，从最新的回执向前开始获取 </td></tr>
+    <tr><td class="paramname">msgId</td><td>需要获取回执的消息 ID。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每次获取群消息已读回执的条数。 </td></tr>
+    <tr><td class="paramname">startAckId</td><td>已读回执的 ID，可以为空。如果为空，从最新的回执向前开始获取。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>返回消息列表和用于继续获取群消息回执的Cursor </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>返回消息列表和用于继续获取群消息回执的 Cursor。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>错误码详见<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a> </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -793,21 +876,22 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从服务器获取历史消息 分页获取</p>
-<p >同步方法，会阻塞当前线程</p>
+<p >从服务器获取历史消息。</p>
+<p >分页获取。</p>
+<p >同步方法，会阻塞当前线程。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conversationId</td><td>会话ID </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型, 详见<a class="el" href="">EMConversationType</a> </td></tr>
-    <tr><td class="paramname">pageSize</td><td>每次获取的条数 </td></tr>
-    <tr><td class="paramname">startMsgId</td><td>漫游消息的开始消息id，如果为空，从最新的消息向前开始获取 </td></tr>
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型, 详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页获取的条数。 </td></tr>
+    <tr><td class="paramname">startMsgId</td><td>漫游消息的开始消息 ID，如果为空，从最新的消息向前开始获取。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>返回消息列表和用于继续获取历史消息的Cursor </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>返回消息列表和用于继续获取历史消息的 Cursor。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>错误码详见<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a> </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -828,8 +912,9 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从本地获取当前所有的会话 先从内存中加载，如果内存中没有再从数据库中加载</p>
-<dl class="section return"><dt>返回</dt><dd>返回本地内存或者数据库中所有的会话 </dd></dl>
+<p >从本地获取当前所有的会话。</p>
+<p >先从内存中加载，如果内存中没有再从数据库中加载。</p>
+<dl class="section return"><dt>返回</dt><dd>返回本地内存或者数据库中所有的会话。 </dd></dl>
 
 </div>
 </div>
@@ -848,13 +933,15 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取定义ID的会话对象 没有找到返回空 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取定义 ID 的会话对象。</p>
+<p >没有找到会返回空值。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>会话ID </td></tr>
+    <tr><td class="paramname">id</td><td>会话 ID。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>根据指定ID找到的会话对象，有可能返回空 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>根据指定会话 ID 找到的会话对象，如果没有找到会返回空值。 </dd></dl>
 
 </div>
 </div>
@@ -883,15 +970,16 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据会话ID以及会话类型获取会话 没有找到返回空</p>
+<p >根据会话 ID 以及会话类型获取会话。</p>
+<p >没有找到返回空值。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>会话ID </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型 </td></tr>
+    <tr><td class="paramname">id</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>根据指定ID以及会话类型找到的会话对象，有可能返回空 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>根据指定 ID 以及会话类型找到的会话对象，没有找到会返回空值。 </dd></dl>
 
 </div>
 </div>
@@ -926,16 +1014,21 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据用户或群组id以及会话类型获取会话 没有找到的话，根据createIfNotExists的值返回一个新建对象或者空对象</p>
+<p >根据用户或群组 ID 以及会话类型获取会话。</p>
+<p >没有找到的话，可以根据 createIfNotExists 的值返回一个新建对象或者空对象。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">username</td><td>会话ID </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型 </td></tr>
-    <tr><td class="paramname">createIfNotExists</td><td>没找到相应会话时是否自动创建 </td></tr>
+    <tr><td class="paramname">username</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型。 </td></tr>
+    <tr><td class="paramname">createIfNotExists</td><td>没找到相应会话时是否自动创建。<ul>
+<li><code>true</code> 表示没有找到相应会话时会自动创建会话；</li>
+<li><code>false</code> 表示没有找到相应会话时不创建会话。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>根据指定ID以及会话类型找到的会话对象，有可能返回空 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>根据指定 ID 以及会话类型找到的会话对象，如果没有找到会返回空值。 </dd></dl>
 
 </div>
 </div>
@@ -954,14 +1047,14 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取指定会话类型所有的会话</p>
+<p >获取指定会话类型所有的会话。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>会话类型，详见<a class="el" href="">EMConversationType</a> </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型，详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>返回指定会话类型的会话列表 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>返回指定会话类型的会话列表。 </dd></dl>
 
 </div>
 </div>
@@ -980,14 +1073,14 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取指定ID 的消息对象</p>
+<p >获取指定 ID 的消息对象。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">messageId</td><td>消息ID </td></tr>
+    <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>根据指定ID获取的消息对象，有可能为空 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>根据指定 ID 获取的消息对象，如果消息不存在会返回空值。 </dd></dl>
 
 </div>
 </div>
@@ -1005,7 +1098,7 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取未读消息数 </p><dl class="section return"><dt>返回</dt><dd>未读消息数 </dd></dl>
+<p >获取未读消息数。 </p><dl class="section return"><dt>返回</dt><dd>未读消息数。 </dd></dl>
 
 </div>
 </div>
@@ -1023,8 +1116,8 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取未读消息数 </p><dl class="section return"><dt>返回</dt><dd>未读消息数</dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a64396e28c58a54a879e9d246362af58f">EMChatManager#getUnreadMessageCount()</a> 替代</dd></dl>
+<p >获取未读消息数。 </p><dl class="section return"><dt>返回</dt><dd>未读消息数。</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a64396e28c58a54a879e9d246362af58f">EMChatManager#getUnreadMessageCount()</a> 替代。</dd></dl>
 
 </div>
 </div>
@@ -1043,10 +1136,10 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >向消息数据库导入多条聊天记录 在调用次函数时要保证，消息的发送方或者接收方是当前用户 已经对函数做过速度优化， 推荐一次导入1000条数据</p>
+<p >向消息数据库导入多条聊天记录。 在调用此函数时要保证，消息的发送方或者接收方是当前用户。 已经对函数做过速度优化，推荐一次导入 1,000 条以内的数据。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">msgs</td><td>需要导入数据库的消息 </td></tr>
+    <tr><td class="paramname">msgs</td><td>需要导入数据库的消息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1067,7 +1160,7 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从数据库加载本地所有的会话到内存中 一般在登录成功后使用此方法，可以加快会话列表的加载速度 </p>
+<p >从数据库加载本地所有的会话到内存中。 一般在登录成功后使用此方法，可以加快会话列表的加载速度。 </p>
 
 </div>
 </div>
@@ -1085,7 +1178,8 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >把所有的会话都设成已读 针对的是本地会话 </p>
+<p >把所有的会话都设成已读。</p>
+<p >这里针对的是本地会话。 </p>
 
 </div>
 </div>
@@ -1104,17 +1198,17 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >撤回发送成功的消息</p>
-<p >同步方法，会阻塞当前线程</p>
+<p >撤回发送成功的消息。</p>
+<p >同步方法，会阻塞当前线程。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">message</td><td>消息对象</td></tr>
+    <tr><td class="paramname">message</td><td>消息对象。</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>错误信息详见<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a> </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1136,10 +1230,11 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >移除会话监听 需要添加<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ace81b019cf17b0449b4eddd7aeffe19d">addConversationListener(EMConversationListener)</a> 后调用此方法进行移除</p>
+<p >移除会话监听。</p>
+<p >如果想要移除会话监听，需要先添加 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ace81b019cf17b0449b4eddd7aeffe19d">addConversationListener(EMConversationListener)</a> 后调用此方法进行移除。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">listener</td><td>需要移除的会话监听，详见<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html">EMConversationListener</a> </td></tr>
+    <tr><td class="paramname">listener</td><td>准备移除的会话监听，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html">EMConversationListener</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1161,10 +1256,11 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >移除消息监听 添加<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a923a569276cc251b85fd541d23432a4f">addMessageListener(EMMessageListener)</a> 后需要调用本方法</p>
+<p >移除消息监听。</p>
+<p >需要先添加 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a923a569276cc251b85fd541d23432a4f">addMessageListener(EMMessageListener)</a> 监听，再调用本方法。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">listener</td><td>要移除的监听，详见<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a> </td></tr>
+    <tr><td class="paramname">listener</td><td>要移除的监听，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1186,10 +1282,11 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >保存消息到本地 比如系统提示消息会存到内存中的会话和数据库 CMD类型数据不保存在本地</p>
+<p >保存消息到本地。 比如系统提示消息会存到内存中的会话和数据库。</p>
+<p >注意： CMD 类型数据不保存在本地。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">message</td><td>待存储的消息 </td></tr>
+    <tr><td class="paramname">message</td><td>待存储的消息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1239,17 +1336,18 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据传入的参数从本地存储中搜索指定数量的消息 注意：当maxCount非常大时，需要考虑内存消耗，目前限制一次最多搜索400条数据</p>
+<p >根据传入的参数从本地存储中搜索指定数量的消息。</p>
+<p >注意：当 maxCount 非常大时，需要考虑内存消耗，目前限制一次最多搜索 400 条数据。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>消息类型，文本、图片、语音等，详见<a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html">EMMessage.Type</a> </td></tr>
-    <tr><td class="paramname">timeStamp</td><td>搜索消息的时间点 </td></tr>
-    <tr><td class="paramname">maxCount</td><td>搜索结果的最大条数 </td></tr>
-    <tr><td class="paramname">from</td><td>搜索来自某人或者某群的消息，一般是指会话ID </td></tr>
+    <tr><td class="paramname">type</td><td>消息类型，文本、图片、语音、视频等，详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html">EMMessage.Type</a>。 </td></tr>
+    <tr><td class="paramname">timeStamp</td><td>搜索消息的时间点，Unix 时间戳。 </td></tr>
+    <tr><td class="paramname">maxCount</td><td>搜索结果的最大条数。 </td></tr>
+    <tr><td class="paramname">from</td><td>搜索来自某人或者某群的消息，一般是指会话 ID。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>消息列表 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表。 </dd></dl>
 
 </div>
 </div>
@@ -1296,17 +1394,18 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据传入的参数从本地存储中搜索指定数量的消息 注意：当maxCount非常大时，需要考虑内存消耗，目前限制一次最多搜索400条数据</p>
+<p >根据传入的参数从本地存储中搜索指定数量的消息。</p>
+<p >注意：当 maxCount 非常大时，需要考虑内存消耗，目前限制一次最多搜索 400 条数据。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">keywords</td><td>搜索消息中的关键词 </td></tr>
-    <tr><td class="paramname">timeStamp</td><td>搜索消息的时间点 </td></tr>
-    <tr><td class="paramname">maxCount</td><td>搜索结果的最大条数 </td></tr>
-    <tr><td class="paramname">from</td><td>搜索来自某人或者某群的消息，一般是指会话ID </td></tr>
+    <tr><td class="paramname">keywords</td><td>搜索消息中的关键词。 </td></tr>
+    <tr><td class="paramname">timeStamp</td><td>搜索消息的时间点。 </td></tr>
+    <tr><td class="paramname">maxCount</td><td>一次搜索结果的最大条数。 </td></tr>
+    <tr><td class="paramname">from</td><td>搜索来自某人或者某群的消息，一般是指会话 ID。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>消息列表 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表。 </dd></dl>
 
 </div>
 </div>
@@ -1325,10 +1424,12 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >发送消息 如果是语音，图片类等有附件的消息，SDK会自动上传附件 可以通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a6e9a1ee0a82e8f3d7c70115cb4b9b4c2">EMOptions#setAutoTransferMessageAttachments(boolean)</a> 设置是否上传到聊天服务器，默认为true 发送消息的状态，可以通过设置 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ac6fd24b05850f7f8e680c0caf1ea3f50">EMMessage#setMessageStatusCallback(EMCallBack)</a> 进行监听，这里需要注意的是 需要将抓过状态监听设置在sendMessage()方法调用之前，否则设置的监听有可能会被系统回收</p>
+<p >发送消息。</p>
+<p >参考： 如果是语音，图片类等有附件的消息，SDK 会自动上传附件。 可以通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a6e9a1ee0a82e8f3d7c70115cb4b9b4c2">EMOptions#setAutoTransferMessageAttachments(boolean)</a> 设置是否上传到聊天服务器。</p>
+<p >发送消息的状态，可以通过设置 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ac6fd24b05850f7f8e680c0caf1ea3f50">EMMessage#setMessageStatusCallback(EMCallBack)</a> 进行监听。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">msg</td><td>待发送消息对象，不能为空 </td></tr>
+    <tr><td class="paramname">msg</td><td>待发送消息对象，不能为空。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1350,14 +1451,14 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >将消息设置为已听，一般用于语音消息</p>
+<p >将消息设置为已听。 一般用于语音消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">message</td><td>要设置的消息对象 </td></tr>
+    <tr><td class="paramname">message</td><td>要设置的消息对象。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ae0566e4dc9fb52205ddd8b5d9e0eedba">EMChatManager#setVoiceMessageListened(EMMessage)</a>替代</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">弃用:</a></b></dt><dd>请使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ae0566e4dc9fb52205ddd8b5d9e0eedba">EMChatManager#setVoiceMessageListened(EMMessage)</a> 替代。</dd></dl>
 
 </div>
 </div>
@@ -1376,10 +1477,10 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >将消息设置为已听，一般用于语音消息</p>
+<p >将消息设置为已听。 一般用于语音消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">message</td><td>要设置的消息对象 </td></tr>
+    <tr><td class="paramname">message</td><td>要设置的消息对象。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1401,10 +1502,11 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >更新本地消息 会更新本地内存和数据库</p>
+<p >更新本地消息。</p>
+<p >会更新本地内存和数据库。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">message</td><td>要更新的消息对象 </td></tr>
+    <tr><td class="paramname">message</td><td>要更新的消息对象。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1436,15 +1538,17 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >将数据库中的某个联系人相关信息变更成另外一个联系人 与变更相关的表单包含消息表单，会话表单，联系人表单，黑名单表单 注意：该操作不会更新内存中数据</p>
+<p >将数据库中的某个联系人相关信息变更成另外一个联系人。</p>
+<p >与变更相关的表单包含消息表单，会话表单，联系人表单，黑名单表单。</p>
+<p >注意：该操作不会更新内存中数据。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">from</td><td>更换前的用户ID </td></tr>
-    <tr><td class="paramname">changeTo</td><td>更换后的用户ID </td></tr>
+    <tr><td class="paramname">from</td><td>更换前的用户 ID。 </td></tr>
+    <tr><td class="paramname">changeTo</td><td>更换后的用户 ID。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>返回更新结果，任何表单更新失败，都会返回false </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>返回更新结果，任何表单更新失败，都会返回 <code>false</code>。 </dd></dl>
 
 </div>
 </div>

@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.8.9</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -94,12 +94,15 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ace19daddc9be9709f285e6b1a001e445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >消息监听接口 可以用来监听消息接收情况，成功发送到对方手机后会有回执（需要开启了送达回执，见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a806f3d93bec9e86e37cc863fbf172b46">com.hyphenate.chat.EMOptions#setRequireDeliveryAck(boolean)</a>）， 对方阅读了这条消息也会收到回执（需要开启了允许已读回执，见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">com.hyphenate.chat.EMOptions#setRequireAck(boolean)</a>） 发送消息过程中，消息的ID会发生改变，由最初本地生成的一个UUID，变更为服务器端生成的全局唯一的ID，这个ID在所有使用SDK的设备上都是唯一的 应用需要实现此接口来监听消息变更状态 </p><pre>
-    添加消息监听：
-    EMClient.getInstance().chatManager().addMessageListener(mMessageListener);
+<div class="textblock"><p >消息事件监听器。 用于监听消息接收情况，消息成功发送到对方手机后会有回执（需开启送达回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a806f3d93bec9e86e37cc863fbf172b46">com.hyphenate.chat.EMOptions#setRequireDeliveryAck(boolean)</a>）。 对方阅读了这条消息也会收到回执（需开启允许已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">com.hyphenate.chat.EMOptions#setRequireAck(boolean)</a>）。 发送消息过程中，消息 ID 会从最初本地生成的 uuid 变更为服务器端生成的全局唯一 ID，该 ID 在使用 SDK 的所有设备上均唯一。 应用需实现此接口监听消息变更状态。 </p><pre class="fragment">添加消息监听：
+```java
+EMClient.getInstance().chatManager().addMessageListener(mMessageListener);
+```
 
-    移除消息监听：
-    EMClient.getInstance().chatManager().removeMessageListener(mMessageListener);
+移除消息监听：
+```java
+EMClient.getInstance().chatManager().removeMessageListener(mMessageListener);
+```
 </pre> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="ad57975619d18941cf78a64441e36bbfd" name="ad57975619d18941cf78a64441e36bbfd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad57975619d18941cf78a64441e36bbfd">&#9670;&nbsp;</a></span>onCmdMessageReceived()</h2>
@@ -116,7 +119,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >接收CMD消息 区别于<a class="el" href="">onMessageReceived(List)</a>, 这个回调只包含命令的消息体，包含命令的消息体通常不对用户展示 </p>
+<p >收到命令消息。 与 <a class="el" href="">onMessageReceived(List)</a> 不同, 这个回调只包含命令的消息，命令消息通常不对用户展示。 </p>
 
 </div>
 </div>
@@ -135,7 +138,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >接受到群组消息体的已读回执, 消息的接收方已经阅读此消息。 </p>
+<p >收到群组消息的已读回执。 </p>
 
 </div>
 </div>
@@ -164,14 +167,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >接受消息发生改变的通知，包括消息ID的改变。消息是改变后的消息 </p><dl class="params"><dt>参数</dt><dd>
+<p >收到消息变化通知，包括消息 ID 的变化。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">message</td><td>发生改变的消息 </td></tr>
-    <tr><td class="paramname">change</td><td></td></tr>
+    <tr><td class="paramname">message</td><td>修改后的消息。 </td></tr>
+    <tr><td class="paramname">change</td><td>消息的变化。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">弃用:</a></b></dt><dd>消息的变化，使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ac6fd24b05850f7f8e680c0caf1ea3f50">EMMessage#setMessageStatusCallback(EMCallBack)</a></dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">弃用:</a></b></dt><dd>已废弃，请用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ac6fd24b05850f7f8e680c0caf1ea3f50">EMMessage#setMessageStatusCallback(EMCallBack)</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -190,7 +193,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >收到消息体的发送回执，消息体已经成功发送到对方设备 </p>
+<p >收到消息的送达回执。 </p>
 
 </div>
 </div>
@@ -209,7 +212,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >接受到消息体的已读回执，消息的接收方已经阅读此消息 </p>
+<p >收到消息的已读回执。 </p>
 
 </div>
 </div>
@@ -228,7 +231,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >收到消息体的撤回回调，消息体已经成功撤回 </p>
+<p >撤回收到的消息。 </p>
 
 </div>
 </div>
@@ -247,7 +250,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >接收消息 在接收到文本，图片，视频，语音，地理位置，文件这些消息的时候，会通过此回调通知用户 </p>
+<p >收到消息。 在收到文本、图片、视频、语音、地理位置和文件等消息时，通过此回调通知用户。 </p>
 
 </div>
 </div>
@@ -265,7 +268,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >接受到群组消息体的已读数据更新 </p>
+<p >收到群组消息的读取状态更新。 </p>
 
 </div>
 </div>

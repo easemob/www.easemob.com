@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.8.9</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -194,7 +194,7 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:af3d9fd7bbb4258fc6cbc91b52d94599c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >提供SDK聊天相关的设置 用户可以用来配置SDK的各种参数，选项 比如，发送消息加密，是否自动接受加好友邀请 </p>
+<div class="textblock"><p >提供 SDK 聊天相关的设置。 用户可以用来配置 SDK 的各种参数、选项， 比如，发送消息加密，是否自动接受加好友邀请。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a896bbe5021287c11bf2ca2719cc72dad" name="a896bbe5021287c11bf2ca2719cc72dad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a896bbe5021287c11bf2ca2719cc72dad">&#9670;&nbsp;</a></span>allowChatroomOwnerLeave()</h2>
@@ -211,9 +211,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置是否允许聊天室owner离开并删除会话记录 设置为true后owner不再接受任何消息 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置是否允许聊天室所有者离开并删除会话记录。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">allowed</td><td>是否允许聊天室owner离开 </td></tr>
+    <tr><td class="paramname">allowed</td><td>是否允许聊天室所有者离开。<ul>
+<li>（默认） <code>true</code>：允许聊天室所有者离开；</li>
+<li><code>false</code>：不允许聊天室所有者离开，聊天室所有者离开时不再接收任何消息并删除会话记录。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -234,7 +239,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取是否自动接受加群邀请 </p><dl class="section return"><dt>返回</dt><dd>返回是否自动接受加群邀请 </dd></dl>
+<p >获取是否自动接受加群邀请。</p>
+<dl class="section return"><dt>返回</dt><dd>返回是否自动接受加群邀请。<ul>
+<li>（默认） <code>true</code>：自动接受加群邀请；</li>
+<li><code>false</code>：不自动接受加群邀请。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -252,7 +262,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取是否允许聊天室owner离开 </p><dl class="section return"><dt>返回</dt><dd>true：离开并不保留会话记录；false：离开保留会话记录 </dd></dl>
+<p >获取是否允许聊天室所有者离开。 </p><dl class="section return"><dt>返回</dt><dd>- （默认）<code>true</code>：离开并不保留会话记录；<ul>
+<li><code>false</code>：离开保留会话记录。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -270,7 +283,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取退出(主动和被动退出)聊天室时是否删除聊天消息 </p><dl class="section return"><dt>返回</dt><dd>返回true表示删除群组相关消息记录，默认为true </dd></dl>
+<p >获取退出(主动和被动退出)聊天室时是否删除聊天消息。 </p><dl class="section return"><dt>返回</dt><dd>-（默认）<code>true</code>：退出聊天室时删除聊天室相关消息记录。<ul>
+<li><code>false</code>：离开聊天室时保留会话记录。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -288,7 +304,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取退出(主动和被动退出)群组时是否删除聊天消息 </p><dl class="section return"><dt>返回</dt><dd>true为删除群组相关消息 </dd></dl>
+<p >获取退出(主动和被动退出)群组时是否删除聊天消息。</p>
+<dl class="section return"><dt>返回</dt><dd>- （默认）<code>true</code>: 退出群组时删除群组消息。<ul>
+<li><code>false</code>: 退出群组时不删除群组消息。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -307,10 +327,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置是否关闭DNS 默认为true，私有云部署需要关闭</p>
+<p >设置是否关闭 DNS。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enable</td><td>是否关闭DNS </td></tr>
+    <tr><td class="paramname">enable</td><td>是否关闭 DNS。<ul>
+<li>（默认）<code>true</code>：关闭 DNS，私有云部署需要关闭；</li>
+<li><code>false</code>：不关闭 DNS。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -331,8 +355,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取是否自动接受加好友邀请，缺省值为true</p>
-<dl class="section return"><dt>返回</dt><dd>是否自动接受加好友邀请 </dd></dl>
+<p >获取是否自动接受加好友邀请。</p>
+<dl class="section return"><dt>返回</dt><dd>是否自动接受加好友邀请。<ul>
+<li>（默认）<code>true</code>：自动接受好友邀请。</li>
+<li><code>false</code>：不自动接收好友邀请。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -350,8 +378,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取本地保存的访问令牌</p>
-<dl class="section return"><dt>返回</dt><dd>访问令牌 </dd></dl>
+<p >获取本地保存的访问 token。</p>
+<dl class="section return"><dt>返回</dt><dd>访问 token。 </dd></dl>
 
 </div>
 </div>
@@ -370,13 +398,17 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >是否从服务器获取访问令牌 </p><dl class="params"><dt>参数</dt><dd>
+<p >是否从服务器获取访问 token。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">b</td><td>是否从服务器获取 </td></tr>
+    <tr><td class="paramname">b</td><td>是否从服务器获取。<ul>
+<li><code>true</code>：从服务器获取访问 token；</li>
+<li><code>false</code>：不从服务器获取访问 token。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>访问令牌 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>访问 token。 </dd></dl>
 
 </div>
 </div>
@@ -394,7 +426,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取appkey </p>
+<p >获取 app key。 </p>
 
 </div>
 </div>
@@ -412,7 +444,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取是否自动下载缩略图，默认为true </p><dl class="section return"><dt>返回</dt><dd>是否自动下载缩略图 </dd></dl>
+<p >获取是否自动下载缩略图。</p>
+<dl class="section return"><dt>返回</dt><dd>是否自动下载缩略图。<ul>
+<li>（默认）<code>true</code>：自动下载；</li>
+<li><code>false</code>：不自动下载。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -430,7 +467,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取是否自动登录 </p><dl class="section return"><dt>返回</dt><dd>返回true表示已设置为自动登录 </dd></dl>
+<p >获取是否开启了自动登录。 </p><dl class="section return"><dt>返回</dt><dd>- （默认）<code>true</code>：已设置为自动登录；<ul>
+<li><code>false</code>：未设置为自动登录。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -448,8 +488,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取是否使用Chat服务器进行上传下载，默认值是true</p>
-<dl class="section return"><dt>返回</dt><dd>布尔值，是否上传到Chat服务器 </dd></dl>
+<p >获取是否使用 Chat 服务器进行上传下载。</p>
+<dl class="section return"><dt>返回</dt><dd>是否自动使用 Chat 服务器进行上传下载。<ul>
+<li>（默认）<code>true</code>：自动使用 Chat 服务器进行上传下载；</li>
+<li><code>false</code>：不自动使用 Chat 服务器上传下载，自定义上传下载路径。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -467,7 +511,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取dns地址 </p><dl class="section return"><dt>返回</dt><dd>dns 地址 </dd></dl>
+<p >获取 DNS 地址。 </p><dl class="section return"><dt>返回</dt><dd>DNS 地址。 </dd></dl>
 
 </div>
 </div>
@@ -485,8 +529,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取是否关闭DNS，默认为true</p>
-<dl class="section return"><dt>返回</dt><dd>返回是否关闭DNS </dd></dl>
+<p >获取是否关闭 DNS。</p>
+<dl class="section return"><dt>返回</dt><dd>返回是否关闭 DNS。<ul>
+<li>（默认）<code>true</code>：关闭 DNS。</li>
+<li><code>false</code>：不关闭 DNS。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -504,8 +552,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取FCM（GCM升级版-&gt;FCM）推送id</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_config.html#ae04b605a8ba40b9b3fd62a67bd7de7fa">EMPushConfig#getFcmSenderId()</a> 代替</dd></dl>
+<p >获取 FCM（GCM 升级版-&gt;FCM）推送 ID。</p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_config.html#ae04b605a8ba40b9b3fd62a67bd7de7fa">EMPushConfig#getFcmSenderId()</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -523,7 +571,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取固定的心跳间隔 </p><dl class="section return"><dt>返回</dt><dd>心跳时间间隔，单位为秒 </dd></dl>
+<p >获取固定的心跳间隔。 </p><dl class="section return"><dt>返回</dt><dd>心跳时间间隔，单位为秒。 </dd></dl>
 
 </div>
 </div>
@@ -541,7 +589,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取设置的im 服务器端口号 </p><dl class="section return"><dt>返回</dt><dd>端口号 </dd></dl>
+<p >获取设置的 im 消息服务器端口号，一般为私有部署服务，在开发者想实现数据隔离、特别注重数据安全时使用，如有需求请联系商务。 </p><dl class="section return"><dt>返回</dt><dd>端口号。 </dd></dl>
 
 </div>
 </div>
@@ -559,7 +607,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取设置的im 服务器地址 </p><dl class="section return"><dt>返回</dt><dd>im服务器地址 </dd></dl>
+<p >获取设置的 im 消息服务器地址，一般为私有部署服务，在开发者想实现数据隔离、特别注重数据安全时使用，如有需求请联系商务。 </p><dl class="section return"><dt>返回</dt><dd>im 消息服务器地址。 </dd></dl>
 
 </div>
 </div>
@@ -577,8 +625,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取用于小米推送的appid和appkey</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_config.html#ad9786e8198814f3ed4f9879d86ebbdcb">EMPushConfig#getMiAppId()</a> 代替</dd></dl>
+<p >获取用于小米推送的 App ID 和 app key。</p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_config.html#ad9786e8198814f3ed4f9879d86ebbdcb">EMPushConfig#getMiAppId()</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -596,8 +644,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取用户设置的推送相关配置</p>
-<dl class="section return"><dt>返回</dt><dd>推送配置 </dd></dl>
+<p >获取用户设置的推送相关配置。</p>
+<dl class="section return"><dt>返回</dt><dd>推送配置。 </dd></dl>
 
 </div>
 </div>
@@ -615,7 +663,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取设置的数据上报服务器地址 </p><dl class="section return"><dt>返回</dt><dd>数据上报服务器地址，有可能为空 </dd></dl>
+<p >获取设置的数据上报服务器地址，一般为私有部署服务，在开发者想实现数据隔离、特别注重数据安全时使用，如有需求请联系商务。 </p><dl class="section return"><dt>返回</dt><dd>数据上报服务器地址，有可能为空。 </dd></dl>
 
 </div>
 </div>
@@ -633,8 +681,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取已读确认设置，缺省值为true 如果设为true，会要求消息的接受方发送已读回执。</p>
-<dl class="section return"><dt>返回</dt><dd>是否要求消息的接收方发送已读回执 </dd></dl>
+<p >获取是否需要消息接收方发送已读回执的设置。</p>
+<dl class="section return"><dt>返回</dt><dd>是否要求消息的接收方发送已读回执。<ul>
+<li>（默认）<code>true</code>：需要已读回执；</li>
+<li>`false：不需要已读回执。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -652,8 +704,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取送达确认设置，缺省值为false 如果设为true，会要求消息的接受方发送送达回执</p>
-<dl class="section return"><dt>返回</dt><dd>是否需要送达回执 </dd></dl>
+<p >获取送达回执设置。</p>
+<dl class="section return"><dt>返回</dt><dd>是否需要送达回执。<ul>
+<li>（默认）<code>true</code>：要求消息的接受方发送送达回执；</li>
+<li><code>false</code>： 不要求消息的接受方发送送达回执。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -671,7 +727,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取设置的rest 服务器地址 </p><dl class="section return"><dt>返回</dt><dd>rest服务器地址 </dd></dl>
+<p >获取设置的 REST 服务器地址，一般为私有部署服务，在开发者想实现数据隔离、特别注重数据安全时使用，如有需求请联系商务。 </p><dl class="section return"><dt>返回</dt><dd>REST 服务器地址。 </dd></dl>
 
 </div>
 </div>
@@ -689,8 +745,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取是否只使用https进行REST操作，默认值是false</p>
-<dl class="section return"><dt>返回</dt><dd>是否只使用https </dd></dl>
+<p >获取是否只使用 HTTPS 进行 REST 操作。</p>
+<dl class="section return"><dt>返回</dt><dd>是否只使用 HTTPS。<ul>
+<li>（默认）<code>true</code> 只使用 HTTPS 进行 REST 操作；</li>
+<li><code>false</code> 可以使用 HTTPS 和 HTTP 进行 REST 操作。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -708,7 +768,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取SDK版本号 </p><dl class="section return"><dt>返回</dt><dd>SDK版本号 </dd></dl>
+<p >获取 SDK 版本号。 </p><dl class="section return"><dt>返回</dt><dd>SDK 版本号。 </dd></dl>
 
 </div>
 </div>
@@ -726,8 +786,13 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取是否自动接受加群邀请 </p><dl class="section return"><dt>返回</dt><dd>返回是否自动接受加群邀请 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a07b8689b0a651604cced1a7bc1ae7d4c">EMOptions#autoAcceptGroupInvitations()</a>替代</dd></dl>
+<p >获取是否自动接受加群邀请。</p>
+<dl class="section return"><dt>返回</dt><dd>返回是否自动接受加群邀请。<ul>
+<li>（默认） <code>true</code>：自动接受加群邀请；</li>
+<li><code>false</code>：不自动接受加群邀请。</li>
+</ul>
+</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a07b8689b0a651604cced1a7bc1ae7d4c">EMOptions#autoAcceptGroupInvitations()</a> 替代。</dd></dl>
 
 </div>
 </div>
@@ -745,8 +810,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取是否允许聊天室owner离开 </p><dl class="section return"><dt>返回</dt><dd>true：离开并不保留会话记录；false：离开保留会话记录 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ae10cb8431e5822a5f03fda1d3a91bed8">EMOptions#canChatroomOwnerLeave()</a>替代</dd></dl>
+<p >获取是否允许聊天室所有者离开。 </p><dl class="section return"><dt>返回</dt><dd>- （默认）<code>true</code>：离开时不保留会话；<ul>
+<li><code>false</code>：离开保留会话。 </li>
+</ul>
+</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ae10cb8431e5822a5f03fda1d3a91bed8">EMOptions#canChatroomOwnerLeave()</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -764,8 +832,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取退出(主动和被动退出)聊天室时是否删除聊天消息 </p><dl class="section return"><dt>返回</dt><dd>返回true表示删除群组相关消息记录，默认为true </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ac0e1424893151f1365792108b5a1a1be">EMOptions#deleteMessagesOnLeaveChatroom()</a>替代</dd></dl>
+<p >获取退出(主动和被动退出)聊天室时是否删除聊天消息。</p>
+<dl class="section return"><dt>返回</dt><dd>- （默认）<code>true</code>：退出聊天室时删除聊天室相关消息记录。<ul>
+<li><code>false</code>：离开聊天室时保留会话记录。</li>
+</ul>
+</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ac0e1424893151f1365792108b5a1a1be">EMOptions#deleteMessagesOnLeaveChatroom()</a> 替代。</dd></dl>
 
 </div>
 </div>
@@ -783,8 +855,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取退出(主动和被动退出)群组时是否删除聊天消息 </p><dl class="section return"><dt>返回</dt><dd>true为删除群组相关消息 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a8d03e187af2852f441c0aff39dd8a3f4">EMOptions#deleteMessagesOnLeaveGroup()</a>替代</dd></dl>
+<p >获取退出(主动和被动退出)群组时是否删除聊天消息。</p>
+<dl class="section return"><dt>返回</dt><dd>- （默认）<code>true</code>: 退出群组时删除群组消息。<ul>
+<li><code>false</code>: 退出群组时不删除群组消息。</li>
+</ul>
+</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a8d03e187af2852f441c0aff39dd8a3f4">EMOptions#deleteMessagesOnLeaveGroup()</a> 替代。</dd></dl>
 
 </div>
 </div>
@@ -802,8 +878,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >是否启动统计</p>
-<dl class="section return"><dt>返回</dt><dd>布尔值 </dd></dl>
+<p >获取是否启动统计。</p>
+<dl class="section return"><dt>返回</dt><dd>- （默认）<code>true</code>：启用统计；<ul>
+<li><code>false</code>：不启用统计。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -821,7 +900,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >是否按照服务器收到时间进行排序，默认是false </p><dl class="section return"><dt>返回</dt><dd>返回是否按照服务器收到的时间排序 </dd></dl>
+<p >获取是否按照服务器收到时间进行排序。 </p><dl class="section return"><dt>返回</dt><dd>返回是否按照服务器收到的时间排序。<ul>
+<li>（默认）<code>true</code>：按服务器收到消息时间进行排序；</li>
+<li><code>false</code>：不按服务器收到消息时间进行排序。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -839,8 +922,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取是否使用谷歌FCM推送</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">弃用:</a></b></dt><dd>FCM推送转移到应用层，不再需要此api</dd></dl>
+<p >获取是否使用谷歌 FCM 推送。</p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">弃用:</a></b></dt><dd>FCM 推送转移到应用层，不再需要此 API。</dd></dl>
 
 </div>
 </div>
@@ -859,10 +942,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置是否自动接受加好友邀请</p>
+<p >设置是否自动接受加好友邀请。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>是否自动接受加好友邀请 </td></tr>
+    <tr><td class="paramname">value</td><td>是否自动接受加好友邀请。<ul>
+<li>（默认）<code>true</code>：自动接受好友邀请。</li>
+<li><code>false</code>：不自动接收好友邀请。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -884,9 +971,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置appkey </p><dl class="params"><dt>参数</dt><dd>
+<p >设置 app key。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">appkey</td><td></td></tr>
+    <tr><td class="paramname">appkey</td><td>创建 app 时在 console 后台上注册的 app 唯一识别符。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -908,9 +995,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置是否自动接受加群邀请 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置是否自动接受加群邀请。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td></td></tr>
+    <tr><td class="paramname">value</td><td>是否自动接受加群邀请。<ul>
+<li>（默认）<code>true</code>：自动接受加群申请；</li>
+<li><code>false</code>: 不自动接受加群申请。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -932,9 +1024,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >是否自动下载缩略图 默认是true，自动下载 </p><dl class="params"><dt>参数</dt><dd>
+<p >是否自动下载缩略图。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">autodownload</td><td>布尔值，是否自动下载缩略图 </td></tr>
+    <tr><td class="paramname">autodownload</td><td>是否自动下载缩略图。<ul>
+<li>（默认）<code>true</code>：自动下载；</li>
+<li><code>false</code>：不自动下载。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -956,9 +1053,13 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置自动登录 </p><dl class="params"><dt>参数</dt><dd>
+<p >开启/关闭自动登录。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">autoLogin</td><td></td></tr>
+    <tr><td class="paramname">autoLogin</td><td><ul>
+<li>（默认）<code>true</code>：自动登录；</li>
+<li><code>false</code>：不自动登录。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -980,9 +1081,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >是否自动将消息附件上传到Chat服务器 默认为true，使用Chat服务器上传下载 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置是否自动将消息附件上传到 Chat 服务器。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">transfer</td><td>是否上传到Chat服务器 </td></tr>
+    <tr><td class="paramname">transfer</td><td>是否自动上传到 Chat 服务器。<ul>
+<li>（默认）<code>true</code>：自动使用 Chat 服务器上传下载；</li>
+<li><code>false</code>：不自动使用 Chat 服务器上传下载，自定义上传下载路径。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1004,9 +1110,13 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置退出(主动和被动退出)聊天室时是否删除聊天消息 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置退出(主动和被动退出)聊天室时是否删除聊天消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">delete</td><td>true为删除聊天室相关消息记录 </td></tr>
+    <tr><td class="paramname">delete</td><td>- （默认）<code>true</code>：退出聊天室时删除聊天室相关消息记录。<ul>
+<li><code>false</code>：离开聊天室时保留会话记录。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1028,10 +1138,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置退出(主动和被动退出)群组时是否删除聊天消息</p>
+<p >设置退出(主动和被动退出)群组时是否删除聊天消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">delete</td><td>True为删除群组相关消息，默认值为true </td></tr>
+    <tr><td class="paramname">delete</td><td><ul>
+<li>（默认）<code>true</code>: 退出群组时删除群组消息。</li>
+<li><code>false</code>: 退出群组时不删除群组消息。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1053,9 +1167,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置dns地址 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置 DNS 地址。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dnsUrl</td><td></td></tr>
+    <tr><td class="paramname">dnsUrl</td><td>DNS 地址。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1077,10 +1191,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置是否启用统计</p>
+<p >设置是否启用统计。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enableStatistics</td><td></td></tr>
+    <tr><td class="paramname">enableStatistics</td><td>是否启用统计。<ul>
+<li>（默认）<code>true</code>：启用统计；</li>
+<li><code>false</code>：不启用统计。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1102,14 +1220,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置FCM（GCM升级版-&gt;FCM）推送id</p>
+<p >设置 FCM（GCM 升级版-&gt;FCM）推送 ID。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">number</td><td>FCM 推送ID</td></tr>
+    <tr><td class="paramname">number</td><td>FCM 推送 ID。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushConfig.Builder#enableFCM(String)</a> 代替</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushConfig.Builder#enableFCM(String)</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -1128,9 +1246,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置固定的心跳间隔，不设置时会自动探测最佳心跳间隔 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置固定的心跳间隔，不设置时会自动探测最佳心跳间隔。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">interval</td><td>心跳时间间隔，单位为秒，建议范围为30s~300s之间 </td></tr>
+    <tr><td class="paramname">interval</td><td>心跳时间间隔，单位为秒，建议范围为 30s~300s 之间。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1152,9 +1270,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置im 服务器端口号 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置 im 消息服务器端口号，一般为私有部署服务，在开发者想实现数据隔离、特别注重数据安全时使用，如有需求请联系商务。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">imPort</td><td>端口号 </td></tr>
+    <tr><td class="paramname">imPort</td><td>端口号。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1176,9 +1294,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置im服务器地址 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置 im 消息服务器地址，一般为私有部署服务，在开发者想实现数据隔离、特别注重数据安全时使用，如有需求请联系商务。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">imServer</td><td></td></tr>
+    <tr><td class="paramname">imServer</td><td>im 消息服务器地址。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1210,14 +1328,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置用于小米推送的appid和appkey </p><dl class="params"><dt>参数</dt><dd>
+<p >设置用于小米推送的 App ID 和 app key。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mipushAppid</td><td>小米推送的appid </td></tr>
-    <tr><td class="paramname">mipushAppkey</td><td>小米推送的appkey</td></tr>
+    <tr><td class="paramname">mipushAppid</td><td>小米推送的 App ID。 </td></tr>
+    <tr><td class="paramname">mipushAppkey</td><td>小米推送的 app key。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushConfig.Builder#enableMiPush(String, String)</a> 代替</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushConfig.Builder#enableMiPush(String, String)</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -1236,10 +1354,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置推送相关配置</p>
+<p >设置推送相关配置。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pushConfig</td><td>推送相关配置 </td></tr>
+    <tr><td class="paramname">pushConfig</td><td>推送相关配置。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1261,9 +1379,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置数据上报服务器地址 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置数据上报服务器地址，一般为私有部署服务，在开发者想实现数据隔离、特别注重数据安全时使用，如有需求请联系商务。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">reportServer</td><td>数据上报服务器地址 </td></tr>
+    <tr><td class="paramname">reportServer</td><td>数据上报服务器地址。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1285,10 +1403,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置是否需要接受方已读确认</p>
+<p >设置是否需要接受方发送已读回执。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">requireAck</td><td>是否需要已读回执 </td></tr>
+    <tr><td class="paramname">requireAck</td><td>是否需要接收方发送已读回执。<ul>
+<li>（默认）<code>true</code>：需要发送已读回执；</li>
+<li><code>false</code>：不需要发送已读回执。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1310,10 +1432,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置是否需要接受方送达确认,默认false</p>
+<p >设置是否需要接受方发送送达回执。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">requireDeliveryAck</td><td>是否需要送达确认 </td></tr>
+    <tr><td class="paramname">requireDeliveryAck</td><td>是否需要送达回执。<ul>
+<li>（默认）<code>true</code>：需要送达回执。</li>
+<li><code>false</code>：不需要发送送达回执。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1335,9 +1461,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置rest 服务器地址 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置 REST 服务器地址，一般在开发者想实现数据隔离、特别注重数据安全时使用，如有需求请联系商务获取指定的服务器地址。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">restServer</td><td></td></tr>
+    <tr><td class="paramname">restServer</td><td>REST 服务器地址。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1359,9 +1485,13 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置是否按照服务器收到的时间对消息进行排序 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置是否按照服务器收到的时间对消息进行排序。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sortByServerTime</td><td></td></tr>
+    <tr><td class="paramname">sortByServerTime</td><td>是否按照服务器收到的时间对消息进行排序。<ul>
+<li>（默认）<code>true</code>：按服务器收到消息时间进行排序；</li>
+<li><code>false</code>：不按服务器收到消息时间进行排序。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1383,14 +1513,17 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置是否开启谷歌FCM推送</p>
+<p >设置是否开启谷歌 FCM 推送。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">useFCM</td><td>谷歌FCM推送开关</td></tr>
+    <tr><td class="paramname">useFCM</td><td>- <code>true</code>：开启谷歌 FCM 推送；<ul>
+<li><code>false</code>：不开启谷歌 FCM 推送。</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">弃用:</a></b></dt><dd>FCM推送转移到应用层，不再需要此api</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">弃用:</a></b></dt><dd>FCM 推送转移到应用层，不再需要此 API。</dd></dl>
 
 </div>
 </div>
@@ -1409,13 +1542,17 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >允许使用https协议，默认值是true </p><dl class="params"><dt>参数</dt><dd>
+<p >设置是否只允许使用 HTTPS 协议。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_useHttps</td><td>是否使用https协议</td></tr>
+    <tr><td class="paramname">_useHttps</td><td>是否允许使用 HTTPS 协议。<ul>
+<li>（默认）<code>true</code>：只允许使用 HTTPS 进行 REST 操作；</li>
+<li><code>false</code>：允许使用 HTTP 和 HTTPS 进行 REST 操作。</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#acf81e94e11f74cd4acaaaf3e65a09314">setUsingHttpsOnly(boolean)</a> 代替</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#acf81e94e11f74cd4acaaaf3e65a09314">setUsingHttpsOnly(boolean)</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -1434,9 +1571,13 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >只使用https进行REST操作 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置只使用 HTTPS 进行 REST 操作。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_usingHttpsOnly</td><td>是否只使用https </td></tr>
+    <tr><td class="paramname">_usingHttpsOnly</td><td>是否只使用 HTTPS。<ul>
+<li>（默认）<code>true</code>：只使用 HTTPS 进行 REST 操作；</li>
+<li><code>false</code>：可以使用 HTTPS 和 HTTP 进行 REST 操作。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>

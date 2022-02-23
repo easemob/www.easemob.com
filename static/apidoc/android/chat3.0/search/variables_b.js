@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['push_5fbind_5ffailed_0',['PUSH_BIND_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a727d04b5dcb8051239d3b4bea8a83ce9',1,'com::hyphenate::EMError']]],
-  ['push_5fnot_5fsupport_1',['PUSH_NOT_SUPPORT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a016634ad37ef538c6562d24c2f08b423',1,'com::hyphenate::EMError']]],
-  ['push_5freport_5faction_5ffailed_2',['PUSH_REPORT_ACTION_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a6285f4d26f3ec2f9210fb90522999261',1,'com::hyphenate::EMError']]],
-  ['push_5funbind_5ffailed_3',['PUSH_UNBIND_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a68c79ea1effad987e7a7a09233818f3b',1,'com::hyphenate::EMError']]]
+  ['network_5ferror_0',['NETWORK_ERROR',['../classcom_1_1hyphenate_1_1_e_m_error.html#a53f03b9faef49cc12ee5c3bca387d3e6',1,'com::hyphenate::EMError']]],
+  ['nickname_1',['NICKNAME',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_1_1_e_m_user_info_type.html#aea9799de95a7353c78cb21af4f1d2c59',1,'com::hyphenate::chat::EMUserInfo::EMUserInfoType']]],
+  ['none_2',['none',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_1_1_e_m_chat_room_permission_type.html#aa06545c7becfcb4e72693a531b049482',1,'com.hyphenate.chat.EMChatRoom.EMChatRoomPermissionType.none()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_1_1_e_m_group_permission_type.html#a29cca8593d13b32ad42f3af4749a87e9',1,'com.hyphenate.chat.EMGroup.EMGroupPermissionType.none()']]],
+  ['normal_3',['NORMAL',['../enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html#a26cb3793fe4155ab4d8c77904b7d882a',1,'com::hyphenate::push::EMPushType']]]
 ];

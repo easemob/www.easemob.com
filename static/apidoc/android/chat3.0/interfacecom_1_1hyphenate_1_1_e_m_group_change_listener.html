@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.8.9</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -122,13 +122,11 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aad9148480725369c1417c92691b07f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >群组事件监听器口 监听群组相关的事件，例如加群申请，群主同意或者拒绝加群，被踢群等事件 </p><pre>
-    注册群组事件监听：
-    EMClient.getInstance().groupManager().addGroupChangeListener(mGroupChangeListener);
-
-    解注册群组事件监听：
-    EMClient.getInstance().groupManager().removeGroupChangeListener(mGroupChangeListener);
-</pre> </div><h2 class="groupheader">成员函数说明</h2>
+<div class="textblock"><p >群组事件监听器。 监听群组相关的事件，例如，加群申请，群主同意或者拒绝加群，被踢群等事件。 </p><pre class="fragment">注册群组事件监听：
+</pre> <div class="fragment"><div class="line">EMClient.getInstance().groupManager().addGroupChangeListener(mGroupChangeListener);</div>
+</div><!-- fragment --> <pre class="fragment"> 解注册群组事件监听：
+</pre> <div class="fragment"><div class="line">EMClient.getInstance().groupManager().removeGroupChangeListener(mGroupChangeListener);</div>
+</div><!-- fragment --> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="adab9e9524768c4a3347dc0b13cbb618a" name="adab9e9524768c4a3347dc0b13cbb618a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adab9e9524768c4a3347dc0b13cbb618a">&#9670;&nbsp;</a></span>onAdminAdded()</h2>
 
@@ -154,11 +152,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >有成员被添加管理员权限</p>
+<p >成员设置为管理员回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>添加管理员权限对应的群组 </td></tr>
-    <tr><td class="paramname">administrator</td><td>被添加为管理员的成员 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">administrator</td><td>设置为管理员的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -190,10 +188,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >取消某管理员权限 </p><dl class="params"><dt>参数</dt><dd>
+<p >取消成员的管理员权限回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>取消管理员权限事件发生的群id </td></tr>
-    <tr><td class="paramname">administrator</td><td>被取消管理员权限的成员 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">administrator</td><td>被取消管理员权限的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -225,11 +223,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >全员禁言状态的改变</p>
+<p >全员禁言状态变化回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">isMuted</td><td>是否开启了全员禁言 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">isMuted</td><td>是否开启了全员禁言。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -261,10 +259,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >群公告更改事件 </p><dl class="params"><dt>参数</dt><dd>
+<p >群公告更新回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">announcement</td><td>更新的公告内容 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">announcement</td><td>更新后的公告内容。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -302,12 +300,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >自动同意加入群组 SDK会先加入这个群组，并通过此回调通知应用 具体设置，参考<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ac7232ad21e382485031be1a2c8a3ce2f">com.hyphenate.chat.EMOptions#setAutoAcceptGroupInvitation(boolean value)</a></p>
+<p >自动同意入群申请回调。 SDK 会先加入这个群组，并通过此回调通知应用。 具体设置，参考 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ac7232ad21e382485031be1a2c8a3ce2f">com.hyphenate.chat.EMOptions#setAutoAcceptGroupInvitation(boolean value)</a>。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">inviter</td><td>邀请人id </td></tr>
-    <tr><td class="paramname">inviteMessage</td><td>邀请信息 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">inviter</td><td>邀请者 ID。 </td></tr>
+    <tr><td class="paramname">inviteMessage</td><td>邀请信息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -339,10 +337,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >群组被解散 SDK会先删除本地的这个群组，之后通过此回调通知应用，此群组被删除了 </p><dl class="params"><dt>参数</dt><dd>
+<p >群组解散回调。 SDK 会先删除本地的这个群组，然后通过此回调通知应用此群组被删除。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组的ID </td></tr>
-    <tr><td class="paramname">groupName</td><td>群组的名称 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">groupName</td><td>群组名称。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -380,10 +378,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >群组邀请被接受 </p><dl class="params"><dt>参数</dt><dd>
+<p >接受入群邀请回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">invitee</td><td>被邀请人id </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">invitee</td><td>受邀人 ID。 </td></tr>
     <tr><td class="paramname">reason</td><td>接受理由 </td></tr>
   </table>
   </dd>
@@ -422,11 +420,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >群组邀请被拒绝 </p><dl class="params"><dt>参数</dt><dd>
+<p >拒绝群组邀请回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">invitee</td><td>被邀请人id </td></tr>
-    <tr><td class="paramname">reason</td><td>拒绝理由 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">invitee</td><td>受邀人 ID。 </td></tr>
+    <tr><td class="paramname">reason</td><td>拒绝理由。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -470,12 +468,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户收到加入群组邀请 </p><dl class="params"><dt>参数</dt><dd>
+<p >用户收到入群邀请的回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>要加入的群id </td></tr>
-    <tr><td class="paramname">groupName</td><td>要加入的群名称 </td></tr>
-    <tr><td class="paramname">inviter</td><td>邀请人的id </td></tr>
-    <tr><td class="paramname">reason</td><td>邀请加入的理由 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">groupName</td><td>群组名称。 </td></tr>
+    <tr><td class="paramname">inviter</td><td>邀请人 ID。 </td></tr>
+    <tr><td class="paramname">reason</td><td>邀请原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -507,11 +505,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >群组成员主动退出事件</p>
+<p >群组成员主动退出回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">member</td><td>退出的成员的id </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">member</td><td>退群的成员 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -543,11 +541,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >群组加入新成员事件</p>
+<p >新成员加入群组回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">member</td><td>新成员id </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">member</td><td>新成员 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -585,11 +583,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >有成员被禁言 此处不同于黑名单</p>
+<p >有成员被禁言。 注意：禁言不同于加入黑名单。用户禁言后，将无法在群中发送消息，但可查看群组中的消息，而黑名单中的用户无法查看和发送群组消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>产生禁言的群组id </td></tr>
-    <tr><td class="paramname">mutes</td><td>被禁言的成员列表 Map.entry.key 是禁言的成员id，Map.entry.value是禁言动作存在的时间 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">mutes</td><td>禁言的成员列表。 Map.entry.key 是禁言成员 ID，Map.entry.value 是禁言时长。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -621,11 +619,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >有成员从禁言列表中移除，恢复发言权限 此处不同于blacklist</p>
+<p >有成员被解除禁言。 注意：禁言不同于加入黑名单。用户禁言后，将无法在群中发送消息，但可查看群组中的消息，而黑名单中的用户无法查看和发送群组消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>产生禁言的群组id </td></tr>
-    <tr><td class="paramname">mutes</td><td>有成员从群组禁言列表中移除 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">mutes</td><td>有成员从群组禁言列表中移除。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -663,11 +661,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >转移群组所有者权限 </p><dl class="params"><dt>参数</dt><dd>
+<p >转移群主权限回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>转移群组所有者权限的群id </td></tr>
-    <tr><td class="paramname">newOwner</td><td>新的群组所有者 </td></tr>
-    <tr><td class="paramname">oldOwner</td><td>原群组所有者 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">newOwner</td><td>新群主。 </td></tr>
+    <tr><td class="paramname">oldOwner</td><td>原群主。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -705,11 +703,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >加群申请被对方接受 </p><dl class="params"><dt>参数</dt><dd>
+<p >接受入群申请回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">groupName</td><td>群组名字 </td></tr>
-    <tr><td class="paramname">accepter</td><td>接受人id </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">groupName</td><td>群组名称。 </td></tr>
+    <tr><td class="paramname">accepter</td><td>接受人 ID. </td></tr>
   </table>
   </dd>
 </dl>
@@ -753,11 +751,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >加群申请被拒绝 </p><dl class="params"><dt>参数</dt><dd>
+<p >拒绝入群申请回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">groupName</td><td>群组名字 </td></tr>
-    <tr><td class="paramname">decliner</td><td>拒绝人id </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">groupName</td><td>群组名称。 </td></tr>
+    <tr><td class="paramname">decliner</td><td>拒绝人 ID。 </td></tr>
     <tr><td class="paramname">reason</td><td>拒绝理由 </td></tr>
   </table>
   </dd>
@@ -802,12 +800,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >用户申请加入群 </p><dl class="params"><dt>参数</dt><dd>
+<p >用户申请入群回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>要加入的群id </td></tr>
-    <tr><td class="paramname">groupName</td><td>要加入的群名称 </td></tr>
-    <tr><td class="paramname">applicant</td><td>申请人id </td></tr>
-    <tr><td class="paramname">reason</td><td>申请加入的理由 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">groupName</td><td>群组名称。 </td></tr>
+    <tr><td class="paramname">applicant</td><td>申请人 ID。 </td></tr>
+    <tr><td class="paramname">reason</td><td>申请加入原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -839,10 +837,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >群组增加共享文件事件 </p><dl class="params"><dt>参数</dt><dd>
+<p >群组添加共享文件回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">sharedFile</td><td>增加的文件 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">sharedFile</td><td>添加的共享文件。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -874,10 +872,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >群组删除共享文件事件 </p><dl class="params"><dt>参数</dt><dd>
+<p >群组删除共享文件回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">fileId</td><td>删除文件的id </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">fileId</td><td>删除的共享文件的 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -909,10 +907,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前登录用户被管理员移除出群组 </p><dl class="params"><dt>参数</dt><dd>
+<p >当前登录用户被管理员移出群组回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">groupName</td><td>群组名字 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">groupName</td><td>群组名称。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -944,11 +942,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >白名单成员增加</p>
+<p >添加白名单回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">whitelist</td><td>白名单中增加的成员名单 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">whitelist</td><td>要添加的成员列表。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -980,11 +978,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >白名单成员减少</p>
+<p >移除白名单回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">groupId</td><td>群组id </td></tr>
-    <tr><td class="paramname">whitelist</td><td>白名单中移除的成员名单 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">whitelist</td><td>从白名单中移除的成员列表 </td></tr>
   </table>
   </dd>
 </dl>
