@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['binddevicetoken_3a_752',['bindDeviceToken:',['../interface_e_m_client.html#a9c9c332ea31acc6ea6355673e0b8d1bb',1,'EMClient']]],
-  ['bindpushkittoken_3a_753',['bindPushKitToken:',['../interface_e_m_client.html#a2451fb7f515af1e0a37929df2aa90e9d',1,'EMClient']]],
-  ['blockgroup_3acompletion_3a_754',['blockGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a144ec7bf1a37e98a5cec1567a5cccc33',1,'IEMGroupManager-p']]],
-  ['blockgroup_3aerror_3a_755',['blockGroup:error:',['../protocol_i_e_m_group_manager-p.html#abe0ce6d22dc617c8125e4b17e4502374',1,'IEMGroupManager-p']]],
-  ['blockmembers_3afromchatroom_3acompletion_3a_756',['blockMembers:fromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#af2e3aa1d496b75690e6d2c07ce5befc7',1,'IEMChatroomManager-p']]],
-  ['blockmembers_3afromchatroom_3aerror_3a_757',['blockMembers:fromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a1917e97cceb0eed029c4f6366fec125a',1,'IEMChatroomManager-p']]],
-  ['blockmembers_3afromgroup_3acompletion_3a_758',['blockMembers:fromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a91b72db931b6a1e125396b1ef2a9bcb8',1,'IEMGroupManager-p']]],
-  ['blockoccupants_3afromgroup_3aerror_3a_759',['blockOccupants:fromGroup:error:',['../protocol_i_e_m_group_manager-p.html#a3c0de93e0076385e1f7a597310f60542',1,'IEMGroupManager-p']]]
+  ['binddevicetoken_3a_786',['bindDeviceToken:',['../interface_e_m_client.html#a9c9c332ea31acc6ea6355673e0b8d1bb',1,'EMClient']]],
+  ['bindpushkittoken_3a_787',['bindPushKitToken:',['../interface_e_m_client.html#a2451fb7f515af1e0a37929df2aa90e9d',1,'EMClient']]],
+  ['blockgroup_3acompletion_3a_788',['blockGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a144ec7bf1a37e98a5cec1567a5cccc33',1,'IEMGroupManager-p']]],
+  ['blockgroup_3aerror_3a_789',['blockGroup:error:',['../protocol_i_e_m_group_manager-p.html#abe0ce6d22dc617c8125e4b17e4502374',1,'IEMGroupManager-p']]],
+  ['blockmembers_3afromchatroom_3acompletion_3a_790',['blockMembers:fromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#af2e3aa1d496b75690e6d2c07ce5befc7',1,'IEMChatroomManager-p']]],
+  ['blockmembers_3afromchatroom_3aerror_3a_791',['blockMembers:fromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a1917e97cceb0eed029c4f6366fec125a',1,'IEMChatroomManager-p']]],
+  ['blockmembers_3afromgroup_3acompletion_3a_792',['blockMembers:fromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a91b72db931b6a1e125396b1ef2a9bcb8',1,'IEMGroupManager-p']]],
+  ['blockoccupants_3afromgroup_3aerror_3a_793',['blockOccupants:fromGroup:error:',['../protocol_i_e_m_group_manager-p.html#a3c0de93e0076385e1f7a597310f60542',1,'IEMGroupManager-p']]]
 ];
