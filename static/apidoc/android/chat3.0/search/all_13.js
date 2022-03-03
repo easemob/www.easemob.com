@@ -41,10 +41,11 @@ var searchData=
   ['user_5fname_5ftoo_5flong_38',['USER_NAME_TOO_LONG',['../classcom_1_1hyphenate_1_1_e_m_error.html#a0e113321443d45cef07a09bbab37c891',1,'com::hyphenate::EMError']]],
   ['user_5fnot_5ffound_39',['USER_NOT_FOUND',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa9d032148aaddfd11774265eb34fe5d8',1,'com::hyphenate::EMError']]],
   ['user_5fnot_5flogin_40',['USER_NOT_LOGIN',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa498f83d523127e5314b53348df0e31b',1,'com::hyphenate::EMError']]],
-  ['user_5fpermission_5fdenied_41',['USER_PERMISSION_DENIED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ad937d38bbcf93ba7ad938c04430d27ca',1,'com::hyphenate::EMError']]],
-  ['user_5freg_5ffailed_42',['USER_REG_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a817cfd3c08a073afa353fac3f5027473',1,'com::hyphenate::EMError']]],
-  ['user_5fremoved_43',['USER_REMOVED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac17ad534d9a04bca878e21a469bb6535',1,'com::hyphenate::EMError']]],
-  ['user_5funbind_5fdevicetoken_5ffailed_44',['USER_UNBIND_DEVICETOKEN_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ab1e3e56332d5b4dcc4381d931997983c',1,'com::hyphenate::EMError']]],
-  ['user_5fupdateinfo_5ffailed_45',['USER_UPDATEINFO_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a398f514f3df0ab0d9f07b83098cfbd69',1,'com::hyphenate::EMError']]],
-  ['userinfomanager_46',['userInfoManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a46d3cec05dd7855d5eb02d600614bcef',1,'com::hyphenate::chat::EMClient']]]
+  ['user_5fnot_5fon_5froster_41',['USER_NOT_ON_ROSTER',['../classcom_1_1hyphenate_1_1_e_m_error.html#ad9eb23db0bd65530966565d2454cd459',1,'com::hyphenate::EMError']]],
+  ['user_5fpermission_5fdenied_42',['USER_PERMISSION_DENIED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ad937d38bbcf93ba7ad938c04430d27ca',1,'com::hyphenate::EMError']]],
+  ['user_5freg_5ffailed_43',['USER_REG_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a817cfd3c08a073afa353fac3f5027473',1,'com::hyphenate::EMError']]],
+  ['user_5fremoved_44',['USER_REMOVED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac17ad534d9a04bca878e21a469bb6535',1,'com::hyphenate::EMError']]],
+  ['user_5funbind_5fdevicetoken_5ffailed_45',['USER_UNBIND_DEVICETOKEN_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ab1e3e56332d5b4dcc4381d931997983c',1,'com::hyphenate::EMError']]],
+  ['user_5fupdateinfo_5ffailed_46',['USER_UPDATEINFO_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a398f514f3df0ab0d9f07b83098cfbd69',1,'com::hyphenate::EMError']]],
+  ['userinfomanager_47',['userInfoManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a46d3cec05dd7855d5eb02d600614bcef',1,'com::hyphenate::chat::EMClient']]]
 ];

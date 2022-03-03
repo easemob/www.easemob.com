@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['token_5fexpired_0',['TOKEN_EXPIRED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a1dcdc1692f3aa39d7a0bedffc4af9a65',1,'com::hyphenate::EMError']]],
-  ['token_5fwill_5fexpire_1',['TOKEN_WILL_EXPIRE',['../classcom_1_1hyphenate_1_1_e_m_error.html#ace7fe70f89fa7e1c341158fef66a7033',1,'com::hyphenate::EMError']]],
-  ['translate_5ffail_2',['TRANSLATE_FAIL',['../classcom_1_1hyphenate_1_1_e_m_error.html#af5d24a48d3019ca6ccebdd11fca39ba6',1,'com::hyphenate::EMError']]],
-  ['translate_5finvalid_5fparams_3',['TRANSLATE_INVALID_PARAMS',['../classcom_1_1hyphenate_1_1_e_m_error.html#a5812c23cb3f9aec98a1448427717c710',1,'com::hyphenate::EMError']]],
-  ['translate_5fnot_5finit_4',['TRANSLATE_NOT_INIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac524c307fb64373228a38851a2e0f594',1,'com::hyphenate::EMError']]]
+  ['pending_0',['PENDING',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body_1_1_e_m_download_status.html#af5b856a4e2a0438911fd4475a817afaa',1,'com::hyphenate::chat::EMFileMessageBody::EMDownloadStatus']]],
+  ['phone_1',['PHONE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_1_1_e_m_user_info_type.html#a74cc2f7de45efe1cdae6ba36a2d604d8',1,'com::hyphenate::chat::EMUserInfo::EMUserInfoType']]],
+  ['push_5fbind_5ffailed_2',['PUSH_BIND_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a727d04b5dcb8051239d3b4bea8a83ce9',1,'com::hyphenate::EMError']]],
+  ['push_5fnot_5fsupport_3',['PUSH_NOT_SUPPORT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a016634ad37ef538c6562d24c2f08b423',1,'com::hyphenate::EMError']]],
+  ['push_5freport_5faction_5ffailed_4',['PUSH_REPORT_ACTION_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a6285f4d26f3ec2f9210fb90522999261',1,'com::hyphenate::EMError']]],
+  ['push_5funbind_5ffailed_5',['PUSH_UNBIND_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a68c79ea1effad987e7a7a09233818f3b',1,'com::hyphenate::EMError']]]
 ];

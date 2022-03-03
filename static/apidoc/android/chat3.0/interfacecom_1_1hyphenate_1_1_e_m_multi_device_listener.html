@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.8.9</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -137,13 +137,11 @@ Public 属性</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >Created by linan on 17/4/17.</p>
-<p >多端多设备事件监听 监听其他设备上当前用户的事件回调，包括联系人变化和群组变化 </p><pre>
-    注册监听：
-    EMClient.getInstance().addMultiDeviceListener(mMultiDeviceListener);
-
-    解注册监听：
-    EMClient.getInstance().removeMultiDeviceListener(mMultiDeviceListener);
-</pre> </div><h2 class="groupheader">成员函数说明</h2>
+<p >多端多设备事件监听器。 监听其他设备上当前用户的事件回调，包括联系人变化和群组变化。 </p><pre class="fragment">注册监听：
+</pre> <div class="fragment"><div class="line">EMClient.getInstance().addMultiDeviceListener(mMultiDeviceListener);</div>
+</div><!-- fragment --><p> 解注册监听：</p>
+<div class="fragment"><div class="line">EMClient.getInstance().removeMultiDeviceListener(mMultiDeviceListener);</div>
+</div><!-- fragment --> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a54f0162e902a313349ac59c4caea67f5" name="a54f0162e902a313349ac59c4caea67f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54f0162e902a313349ac59c4caea67f5">&#9670;&nbsp;</a></span>onContactEvent()</h2>
 
@@ -175,11 +173,11 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >多端多设备联系人事件 </p><dl class="params"><dt>参数</dt><dd>
+<p >多端多设备联系人事件。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>事件，详见上方的常量 </td></tr>
-    <tr><td class="paramname">target</td><td>联系人id </td></tr>
-    <tr><td class="paramname">ext</td><td>扩展信息 </td></tr>
+    <tr><td class="paramname">event</td><td>联系人事件，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a>。 </td></tr>
+    <tr><td class="paramname">target</td><td>联系人 ID。 </td></tr>
+    <tr><td class="paramname">ext</td><td>扩展信息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -217,11 +215,11 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >多端多设备群组事件 </p><dl class="params"><dt>参数</dt><dd>
+<p >多端多设备群组事件。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>事件，详见上方常量 </td></tr>
-    <tr><td class="paramname">target</td><td>群组id </td></tr>
-    <tr><td class="paramname">usernames</td><td>操作目标id集合 </td></tr>
+    <tr><td class="paramname">event</td><td>群组事件，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a>。 </td></tr>
+    <tr><td class="paramname">target</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">usernames</td><td>操作目标 ID 列表。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -240,7 +238,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >好友请求已经在其他设备上被同意 </p>
+<p >当前用户在其他设备上接受好友请求。 </p>
 
 </div>
 </div>
@@ -255,7 +253,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >好友在其他设备被移出黑名单 </p>
+<p >当前用户在其他设备上将好友移出黑名单。 </p>
 
 </div>
 </div>
@@ -270,7 +268,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备加某人进入黑名单 </p>
+<p >当前用户在其他设备上将好友加入黑名单。 </p>
 
 </div>
 </div>
@@ -285,7 +283,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >好友请求已经在其他设备上被拒绝 </p>
+<p >当前用户在其他设备上拒绝好友请求。 </p>
 
 </div>
 </div>
@@ -300,7 +298,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >好友已经在其他设备上被移除 </p>
+<p >当前用户在其他设备上删除好友。 </p>
 
 </div>
 </div>
@@ -315,7 +313,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备添加管理员 </p>
+<p >当前用户在其他设备上添加管理员。 </p>
 
 </div>
 </div>
@@ -330,7 +328,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备禁言用户 </p>
+<p >当前用户在其他设备上禁言成员。 </p>
 
 </div>
 </div>
@@ -345,7 +343,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备将成员移除群组黑名单 </p>
+<p >当前用户在其他设备上将成员移除群组黑名单。 </p>
 
 </div>
 </div>
@@ -360,7 +358,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备发起了群组申请 </p>
+<p >当前用户在其他设备上申请加入群组。 </p>
 
 </div>
 </div>
@@ -375,7 +373,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备同意了群组申请 </p>
+<p >当前用户在其他设备接受入群申请。 </p>
 
 </div>
 </div>
@@ -390,7 +388,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备拒绝了群组申请 </p>
+<p >当前用户在其他设备上拒绝入群申请。 </p>
 
 </div>
 </div>
@@ -405,7 +403,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备转移群主 </p>
+<p >当前用户在其他设备上转移群组所有权。 </p>
 
 </div>
 </div>
@@ -420,7 +418,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备将成员加入群组黑名单 </p>
+<p >当前用户在其他设备上将成员加入群组黑名单。 </p>
 
 </div>
 </div>
@@ -435,7 +433,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备屏蔽群组 </p>
+<p >当前用户在其他设备上屏蔽群组。 </p>
 
 </div>
 </div>
@@ -450,7 +448,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备创建了群组 </p>
+<p >当前用户在其他设备上创建群组。 </p>
 
 </div>
 </div>
@@ -465,7 +463,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备销毁了群组 </p>
+<p >当前用户在其他设备上解散群组。 </p>
 
 </div>
 </div>
@@ -480,7 +478,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备邀请了群成员 </p>
+<p >当前用户在其他设备上邀请用户入群。 </p>
 
 </div>
 </div>
@@ -495,7 +493,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备同意了群组邀请 </p>
+<p >当前用户在其他设备上接受了入群邀请。 </p>
 
 </div>
 </div>
@@ -510,7 +508,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备拒绝了群组邀请 </p>
+<p >当前用户在其他设备上拒绝了入群邀请。 </p>
 
 </div>
 </div>
@@ -525,7 +523,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备已经加入群组 </p>
+<p >当前用户在其他设备上加入群组。 </p>
 
 </div>
 </div>
@@ -540,7 +538,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备将某人踢出群 </p>
+<p >当前用户在其他设备上将成员踢出群。 </p>
 
 </div>
 </div>
@@ -555,7 +553,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备已经离开群组 </p>
+<p >当前用户在其他设备离开群组。 </p>
 
 </div>
 </div>
@@ -570,7 +568,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备移除管理员 </p>
+<p >当前用户在其他设备上移除管理员。 </p>
 
 </div>
 </div>
@@ -585,7 +583,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备移除禁言 </p>
+<p >当前用户在其他设备上解除禁言。 </p>
 
 </div>
 </div>
@@ -600,7 +598,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备取消群组屏蔽 </p>
+<p >当前用户在其他设备上取消群组屏蔽。 </p>
 
 </div>
 </div>

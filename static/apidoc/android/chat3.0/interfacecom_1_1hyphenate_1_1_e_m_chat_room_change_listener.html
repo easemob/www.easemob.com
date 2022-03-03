@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.8.9</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -104,14 +104,18 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a21189b87ef1b2970e2df303fc554ac44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >聊天室事件监听接口 通过<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html">com.hyphenate.chat.EMChatRoomManager</a>进行注册和解注册 </p><pre>
-    注册聊天室事件监听：
-    EMChatRoomManager manager = EMClient.getInstance().chatroomManager();
-    manager.addChatRoomChangeListener(mChatRoomChangeListener);
+<div class="textblock"><p >聊天室事件监听接口。</p>
+<p >通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html">com.hyphenate.chat.EMChatRoomManager</a> 进行注册和解注册，具体如下： </p><pre class="fragment">注册聊天室事件监听：
+```java
+EMChatRoomManager manager = EMClient.getInstance().chatroomManager();
+manager.addChatRoomChangeListener(mChatRoomChangeListener);
+```
 
-    解注册聊天室事件监听
-    EMChatRoomManager manager = EMClient.getInstance().chatroomManager();
-    manager.removeChatRoomListener(mChatRoomChangeListener);
+解注册聊天室事件监听：
+```java
+EMChatRoomManager manager = EMClient.getInstance().chatroomManager();
+manager.removeChatRoomListener(mChatRoomChangeListener);
+```
 </pre> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="aaf28d38aac3956e9c016e40241f13f13" name="aaf28d38aac3956e9c016e40241f13f13"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf28d38aac3956e9c016e40241f13f13">&#9670;&nbsp;</a></span>onAdminAdded()</h2>
@@ -138,11 +142,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >有成员提升为管理员权限</p>
+<p >有成员提升为管理员权限。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatRoomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">admin</td><td>提升的管理员 </td></tr>
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">admin</td><td>被提升管理员的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -174,11 +178,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >移除管理员权限</p>
+<p >移除管理员权限。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatRoomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">admin</td><td>被移除的管理员 </td></tr>
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">admin</td><td>被移除的管理员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -210,11 +214,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >全员禁言状态的改变</p>
+<p >全员禁言状态的改变。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatRoomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">isMuted</td><td>是否开启了全员禁言 </td></tr>
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">isMuted</td><td>是否开启了全员禁言。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -246,10 +250,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室公告更改事件 </p><dl class="params"><dt>参数</dt><dd>
+<p >聊天室公告更改事件。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatRoomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">announcement</td><td>更新的公告内容 </td></tr>
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">announcement</td><td>更新的公告内容。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -281,11 +285,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室被解散</p>
+<p >聊天室被解散。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">roomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">roomName</td><td>聊天室名称 </td></tr>
+    <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">roomName</td><td>聊天室名称。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -323,12 +327,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室成员主动退出事件</p>
+<p >聊天室成员主动退出事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">roomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">roomName</td><td>聊天室名字 </td></tr>
-    <tr><td class="paramname">participant</td><td>退出的成员ID </td></tr>
+    <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">roomName</td><td>聊天室名字。 </td></tr>
+    <tr><td class="paramname">participant</td><td>退出的成员 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -360,11 +364,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室加入新成员事件</p>
+<p >聊天室加入新成员事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">roomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">participant</td><td>新成员username </td></tr>
+    <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">participant</td><td>新成员 username。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -402,12 +406,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >有成员被禁言 禁言期间成员不能发送发消息</p>
+<p >有成员被禁言。 禁言期间成员不能发送发消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatRoomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">mutes</td><td>禁言的成员 </td></tr>
-    <tr><td class="paramname">expireTime</td><td>禁言有效期，单位是毫秒 </td></tr>
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">mutes</td><td>禁言的成员。 </td></tr>
+    <tr><td class="paramname">expireTime</td><td>禁言有效期，单位是毫秒。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -439,11 +443,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >成员从禁言列表中移除</p>
+<p >有成员从禁言列表中移除。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatRoomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">mutes</td><td>从禁言列表中移除的成员名单 </td></tr>
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">mutes</td><td>从禁言列表中移除的成员名单。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -481,12 +485,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >转移聊天室拥有者</p>
+<p >转移聊天室拥有者。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatRoomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">newOwner</td><td>新所有者 </td></tr>
-    <tr><td class="paramname">oldOwner</td><td>原聊天室所有者 </td></tr>
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">newOwner</td><td>新所有者。 </td></tr>
+    <tr><td class="paramname">oldOwner</td><td>原聊天室所有者。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -530,13 +534,17 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室人员被移除</p>
+<p >聊天室人员被移除。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">reason</td><td>被聊天室管理员移除或由于当前设备断网被服务器移出聊天室 <a class="el" href="">com.hyphenate.chat.adapter.EMAChatRoomManagerListener#BE_KICKED</a> <a class="el" href="">com.hyphenate.chat.adapter.EMAChatRoomManagerListener#BE_KICKED_FOR_OFFLINE</a> </td></tr>
-    <tr><td class="paramname">roomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">roomName</td><td>聊天室名字 </td></tr>
-    <tr><td class="paramname">participant</td><td>被移除人员ID </td></tr>
+    <tr><td class="paramname">reason</td><td>用户被移出聊天室的原因：<ul>
+<li>xxx BE_KICKED：该用户被聊天室管理员移除；</li>
+<li>xxxBE_LICKED)FOR_OFFLINE：该用户由于当前设备断网被服务器移出聊天室。</li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">roomName</td><td>聊天室名字。 </td></tr>
+    <tr><td class="paramname">participant</td><td>被移除人员 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -568,11 +576,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >白名单成员增加</p>
+<p >白名单成员增加。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatRoomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">whitelist</td><td>白名单中增加的成员名单 </td></tr>
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">whitelist</td><td>白名单中增加的成员名单。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -604,11 +612,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >白名单成员减少</p>
+<p >白名单成员减少。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatRoomId</td><td>聊天室id </td></tr>
-    <tr><td class="paramname">whitelist</td><td>白名单中移除的成员名单 </td></tr>
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">whitelist</td><td>白名单中移除的成员名单。 </td></tr>
   </table>
   </dd>
 </dl>

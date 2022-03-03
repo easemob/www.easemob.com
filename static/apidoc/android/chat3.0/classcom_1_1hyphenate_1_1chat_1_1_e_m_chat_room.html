@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.8.9</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -129,7 +129,7 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aeb03243d8617008dc64dd0ed3f12f5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >聊天室对象类 </p>
+<div class="textblock"><p >聊天室类型。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a2e79b00cc6ad1b66a6af671dddda268e" name="a2e79b00cc6ad1b66a6af671dddda268e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2e79b00cc6ad1b66a6af671dddda268e">&#9670;&nbsp;</a></span>getAdminList()</h2>
@@ -145,7 +145,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取聊天室的管理员列表 如果没有获取聊天室详情，返回可能为空 获取聊天室详情见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#abe65c32b2b9c856a70501418bea203ce">EMChatRoomManager#fetchChatRoomFromServer(String)</a> </p><dl class="section return"><dt>返回</dt><dd>管理员id集合 </dd></dl>
+<p >获取聊天室的管理员列表。 获取聊天室详情见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#abe65c32b2b9c856a70501418bea203ce">EMChatRoomManager#fetchChatRoomFromServer(String)</a>。 </p><dl class="section return"><dt>返回</dt><dd>管理员 ID 列表。如果返回的值未空，表示未获取到聊天室管理员列表。 </dd></dl>
 
 </div>
 </div>
@@ -163,7 +163,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取聊天室公告 如果没有获取聊天室公告，返回的值为空 获取聊天室公告，可调用<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a7b9f6b24c9f73e39ff6b2d0041726897">EMChatRoomManager#fetchChatRoomAnnouncement(String)</a>, 也可调用其异步方法<a class="el" href="">EMChatRoomManager#asyncFetchChatRoomAnnouncement(String, EMValueCallBack)</a> </p><dl class="section return"><dt>返回</dt><dd>公告 </dd></dl>
+<p >获取聊天室公告。 获取聊天室公告，可调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a7b9f6b24c9f73e39ff6b2d0041726897">EMChatRoomManager#fetchChatRoomAnnouncement(String)</a>, 也可调用其异步方法 <a class="el" href="">EMChatRoomManager#asyncFetchChatRoomAnnouncement(String, EMValueCallBack)</a>。 </p><dl class="section return"><dt>返回</dt><dd>聊天室公告。如果返回的值为空，表示未获取聊天室公告。 </dd></dl>
 
 </div>
 </div>
@@ -181,8 +181,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >返回聊天室黑名单 如果没有获取黑名单列表，返回的列表可能为空 获取黑名单可调用<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#ae1e7281abcf8c9ec433826b74d01ad38">EMChatRoomManager#fetchChatRoomBlackList(String, int, int)</a>, 调用这个方法需要聊天室所有者或者管理员身份，也可通过它的异步方法进行调用 <a class="el" href="">EMChatRoomManager#asyncFetchChatRoomBlackList(String, int, int, EMValueCallBack)</a> </p><dl class="section return"><dt>返回</dt><dd>返回黑名单列表 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html#a9f31a418af2b250950a4c4212bd7f44c">EMChatRoom#getBlacklist()</a>替代</dd></dl>
+<p >返回聊天室黑名单。</p>
+<p >获取黑名单可调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#ae1e7281abcf8c9ec433826b74d01ad38">EMChatRoomManager#fetchChatRoomBlackList(String, int, int)</a>, 调用该方法需要聊天室所有者或者管理员身份，也可调用其异步方法实现。 <a class="el" href="">EMChatRoomManager#asyncFetchChatRoomBlackList(String, int, int, EMValueCallBack)</a> </p><dl class="section return"><dt>返回</dt><dd>返回黑名单列表。如果返回的列表为空，表示未获取到黑名单列表。 </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">弃用:</a></b></dt><dd>已废弃，请用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html#a9f31a418af2b250950a4c4212bd7f44c">EMChatRoom#getBlacklist()</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -200,7 +201,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >返回聊天室黑名单 如果没有获取黑名单列表，返回的列表可能为空 获取黑名单可调用<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#ae1e7281abcf8c9ec433826b74d01ad38">EMChatRoomManager#fetchChatRoomBlackList(String, int, int)</a>, 调用这个方法需要聊天室所有者或者管理员身份，也可通过它的异步方法进行调用 <a class="el" href="">EMChatRoomManager#asyncFetchChatRoomBlackList(String, int, int, EMValueCallBack)</a> </p><dl class="section return"><dt>返回</dt><dd>返回黑名单列表 </dd></dl>
+<p >返回聊天室黑名单。 获取黑名单可调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#ae1e7281abcf8c9ec433826b74d01ad38">EMChatRoomManager#fetchChatRoomBlackList(String, int, int)</a>。 调用这个方法需要聊天室所有者或者管理员身份，也可调用其异步方法实现。 <a class="el" href="">EMChatRoomManager#asyncFetchChatRoomBlackList(String, int, int, EMValueCallBack)</a> </p><dl class="section return"><dt>返回</dt><dd>返回黑聊天室名单列表。如果返回的列表为空，表示未获取到黑名单列表。 </dd></dl>
 
 </div>
 </div>
@@ -218,7 +219,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取当前用户在群中的角色 </p><dl class="section return"><dt>返回</dt><dd><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_1_1_e_m_chat_room_permission_type.html">EMChatRoomPermissionType</a> </dd></dl>
+<p >获取当前用户在群中的角色。 </p><dl class="section return"><dt>返回</dt><dd>当前用户在群中的角色，见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_1_1_e_m_chat_room_permission_type.html">EMChatRoomPermissionType</a>。 </dd></dl>
 
 </div>
 </div>
@@ -236,7 +237,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取聊天室描述 </p><dl class="section return"><dt>返回</dt><dd>聊天室描述 </dd></dl>
+<p >获取聊天室描述。 </p><dl class="section return"><dt>返回</dt><dd>聊天室描述。 </dd></dl>
 
 </div>
 </div>
@@ -254,8 +255,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取聊天室id</p>
-<dl class="section return"><dt>返回</dt><dd>聊天室id </dd></dl>
+<p >获取聊天室 ID。</p>
+<dl class="section return"><dt>返回</dt><dd>聊天室 ID。 </dd></dl>
 
 </div>
 </div>
@@ -273,7 +274,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取聊天室最大成员数，在创建时确定 需要获取聊天室详情才能拿到正确的结果，如果没有获取则返回0 </p><dl class="section return"><dt>返回</dt><dd>聊天室最大成员数 </dd></dl>
+<p >获取聊天室最大成员数，在创建时确定。 需要获取聊天室详情才能得到正确结果。 </p><dl class="section return"><dt>返回</dt><dd>聊天室最大成员数。如果未获取聊天室最大成员数，则返回 0。 </dd></dl>
 
 </div>
 </div>
@@ -291,7 +292,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >返回在线成员人数 </p><dl class="section return"><dt>返回</dt><dd>在线成员数 </dd></dl>
+<p >返回在线成员数。 </p><dl class="section return"><dt>返回</dt><dd>在线成员数。 </dd></dl>
 
 </div>
 </div>
@@ -309,7 +310,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >返回成员列表 如果没有获取成员列表，返回的列表可能为空 获取成员有如下方式： （1）成员人数少于200人时，可通过<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a7576492c348f89ede237f3cc8ef0df86">EMChatRoomManager#fetchChatRoomFromServer(String, boolean)</a>, 第二个参数传入true，可获取最多200个成员 （2）通过<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#aff0630d6b4115fa61100b132df7e819a">EMChatRoomManager#fetchChatRoomMembers(String, String, int)</a>分页获取，也可通过其异步方法 <a class="el" href="">EMChatRoomManager#asyncFetchChatRoomMembers(String, String, int, EMValueCallBack)</a>获取 </p><dl class="section return"><dt>返回</dt><dd>成员id集合 </dd></dl>
+<p >返回成员列表。 可通过如下方式获取成员列表：</p><ul>
+<li>成员数少于 200 时，可通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a7576492c348f89ede237f3cc8ef0df86">EMChatRoomManager#fetchChatRoomFromServer(String, boolean)</a>, 第二个参数传入 true，最多可获取 200 个成员。</li>
+<li>通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#aff0630d6b4115fa61100b132df7e819a">EMChatRoomManager#fetchChatRoomMembers(String, String, int)</a> 分页获取，也可通过其异步方法 <a class="el" href="">EMChatRoomManager#asyncFetchChatRoomMembers(String, String, int, EMValueCallBack)</a> 获取. <dl class="section return"><dt>返回</dt><dd>成员 ID 列表。如果返回的列表为空，表示未获取成员列表。 </dd></dl>
+</li>
+</ul>
 
 </div>
 </div>
@@ -327,8 +332,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >返回禁言列表 如果没有获取禁言列表，返回的列表可能为空 获取禁言列表可调用<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a13032a1b408713a38cac343194fb3e89">EMChatRoomManager#fetchChatRoomMuteList(String, int, int)</a>, 调用这个方法需要聊天室所有者或者管理员身份，也可通过它的异步方法进行调用 <a class="el" href="">EMChatRoomManager#asyncFetchChatRoomMuteList(String, int, int, EMValueCallBack)</a></p>
-<dl class="section return"><dt>返回</dt><dd>返回禁言列表，Map.entry.key 是禁言的成员id，Map.entry.value是禁言动作存在的时间，单位是毫秒 </dd></dl>
+<p >返回禁言列表。</p>
+<p >获取禁言列表可调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a13032a1b408713a38cac343194fb3e89">EMChatRoomManager#fetchChatRoomMuteList(String, int, int)</a>。 调用这个方法需要聊天室所有者或者管理员身份，也可调用其异步方法实现 <a class="el" href="">EMChatRoomManager#asyncFetchChatRoomMuteList(String, int, int, EMValueCallBack)</a>。</p>
+<dl class="section return"><dt>返回</dt><dd>返回禁言列表，Map.entry.key 是禁言的成员 ID，Map.entry.value 是禁言动作存在的时间，单位是毫秒。 如果返回的 map 为空，表示未获取到禁言列表。 </dd></dl>
 
 </div>
 </div>
@@ -346,7 +352,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取聊天室名称 </p><dl class="section return"><dt>返回</dt><dd>聊天室名称 </dd></dl>
+<p >获取聊天室名称。 </p><dl class="section return"><dt>返回</dt><dd>聊天室名称。 </dd></dl>
 
 </div>
 </div>
@@ -364,7 +370,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取聊天室的所有者 如果没有获取聊天室详情，返回可能为空 获取聊天室详情见<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#abe65c32b2b9c856a70501418bea203ce">EMChatRoomManager#fetchChatRoomFromServer(String)</a> </p><dl class="section return"><dt>返回</dt><dd>聊天室所有者id </dd></dl>
+<p >获取聊天室所有者。 获取聊天室详情见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#abe65c32b2b9c856a70501418bea203ce">EMChatRoomManager#fetchChatRoomFromServer(String)</a>。 </p><dl class="section return"><dt>返回</dt><dd>聊天室所有者 ID。如果返回的值为空，表示未获取到聊天室所有者。 </dd></dl>
 
 </div>
 </div>
@@ -382,9 +388,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >返回白名单列表 如果没有获取白名单列表，返回的列表可能为空 获取白名单可调用<a class="el" href="">EMChatRoomManager#fetchChatRoomWhiteList(String, EMValueCallBack)</a>, 调用这个方法需要聊天室所有者或者管理员身份</p>
-<dl class="section return"><dt>返回</dt><dd>白名单列表 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html#a709610da5acea24c47fc75692ee58d20">EMChatRoom#getWhitelist()</a>替代</dd></dl>
+<p >返回白名单列表。 获取白名单可调用 <a class="el" href="">EMChatRoomManager#fetchChatRoomWhiteList(String, EMValueCallBack)</a>。 调用这个方法需要聊天室所有者或者管理员身份。</p>
+<dl class="section return"><dt>返回</dt><dd>白名单列表。如果返回的列表为空，表示未获取到白名单列表。 </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">弃用:</a></b></dt><dd>已废弃，请用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html#a709610da5acea24c47fc75692ee58d20">EMChatRoom#getWhitelist()</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -402,8 +408,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >返回白名单列表 如果没有获取白名单列表，返回的列表可能为空 获取白名单可调用<a class="el" href="">EMChatRoomManager#fetchChatRoomWhiteList(String, EMValueCallBack)</a>, 调用这个方法需要聊天室所有者或者管理员身份</p>
-<dl class="section return"><dt>返回</dt><dd>白名单列表 </dd></dl>
+<p >返回白名单列表。 获取白名单可调用 <a class="el" href="">EMChatRoomManager#fetchChatRoomWhiteList(String, EMValueCallBack)</a>。 调用这个方法需要聊天室所有者或者管理员身份。 </p><dl class="section return"><dt>返回</dt><dd>白名单列表。如果返回的列表为空，表示未获取到白名单列表。 </dd></dl>
 
 </div>
 </div>
@@ -421,7 +426,15 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >返回是否全员禁言 此方法有使用局限性，建议慎重使用 使用此方法需要注意使用的时机： （1）加入聊天室后，接收到一键禁言/取消禁言的回调后，该状态会被更新，此时使用该方法获取的状态是正确的 （2）从聊天室退出后，再进入聊天室，从该方法获取到的状态是不可信的 </p><dl class="section return"><dt>返回</dt><dd>boolean </dd></dl>
+<p >检查是否全员禁言。 此方法存在使用局限性，建议谨慎使用。 使用此方法需注意以下两点：</p><ul>
+<li>加入聊天室后，接收到一键禁言/取消禁言的回调后，该状态会被更新，此时使用该方法获取的状态是正确的。</li>
+<li>从聊天室退出后再进入聊天室，利用该方法获取的状态不可信。 <dl class="section return"><dt>返回</dt><dd>返回是否全员禁言。<ul>
+<li><code>true</code>：已全员禁言。</li>
+<li><code>false</code>：未设置全员禁言。 </li>
+</ul>
+</dd></dl>
+</li>
+</ul>
 
 </div>
 </div>

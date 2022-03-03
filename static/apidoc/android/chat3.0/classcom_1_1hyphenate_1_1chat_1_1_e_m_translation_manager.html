@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.8.9</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -109,7 +109,7 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
 <tr class="separator:ae17502eab9fc866a03324ee4711703fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >翻译信息管理类，负责增删改查本地保存的翻译信息 </p>
+<div class="textblock"><p >翻译信息管理类，负责对 SDK 本地数据库中保存的翻译信息进行查找、增加、修改和删除。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a722f121007404a1aea5ded5a7deffcec" name="a722f121007404a1aea5ded5a7deffcec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a722f121007404a1aea5ded5a7deffcec">&#9670;&nbsp;</a></span>clearTranslations()</h2>
@@ -125,7 +125,7 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >删除所有的翻译结果 </p>
+<p >删除所有的翻译记录。 </p>
 
 </div>
 </div>
@@ -143,8 +143,8 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取支持翻译的语言列表</p>
-<dl class="section return"><dt>返回</dt><dd>List&lt;EMLanguage&gt; </dd></dl>
+<p >获取支持翻译的语言列表。</p>
+<dl class="section return"><dt>返回</dt><dd>支持翻译的语言列表。 </dd></dl>
 
 </div>
 </div>
@@ -163,10 +163,10 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据消息id获取翻译结果</p>
+<p >根据消息 ID 获取翻译记录。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">messageId</td><td>消息id </td></tr>
+    <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -188,10 +188,10 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >初始化翻译参数</p>
+<p >初始化翻译参数。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">params</td><td>参数对象 </td></tr>
+    <tr><td class="paramname">params</td><td>参数对象。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -212,8 +212,11 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >是否初始化完成</p>
-<dl class="section return"><dt>返回</dt><dd>boolean </dd></dl>
+<p >初始化是否完成。</p>
+<dl class="section return"><dt>返回</dt><dd>boolean - <code>true</code>：是；<ul>
+<li><code>false</code>：否。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -232,10 +235,10 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >判断缓存里是否有翻译结果</p>
+<p >判断缓存里是否有翻译记录。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">messageId</td><td>消息id </td></tr>
+    <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -256,7 +259,7 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >重置参数，清空缓存 </p>
+<p >重置参数，清空缓存。 </p>
 
 </div>
 </div>
@@ -275,10 +278,10 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据会话id删除翻译结果</p>
+<p >根据会话 ID 删除翻译记录。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">messageId</td><td>消息id </td></tr>
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -300,10 +303,10 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据消息id删除翻译结果</p>
+<p >根据消息 ID 删除翻译记录。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">messageId</td><td>消息id </td></tr>
+    <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -325,10 +328,10 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据消息id批量删除翻译结果</p>
+<p >根据消息 ID 批量删除翻译记录。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">messageIds</td><td>消息id数组 </td></tr>
+    <tr><td class="paramname">messageIds</td><td>消息 ID 数组。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -378,16 +381,17 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >翻译文本</p>
+<p >翻译文本。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">messageId</td><td>消息id </td></tr>
-    <tr><td class="paramname">conversationId</td><td>会话id </td></tr>
-    <tr><td class="paramname">messageText</td><td>需要翻译的文本 </td></tr>
-    <tr><td class="paramname">targetLanguageCode</td><td>翻译语言对应的code </td></tr>
+    <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">messageText</td><td>需要翻译的文本。 </td></tr>
+    <tr><td class="paramname">targetLanguageCode</td><td>微软翻译目标语言对应的 code。</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>返回</dt><dd>翻译记录。 </dd></dl>
 
 </div>
 </div>
@@ -406,10 +410,10 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxTransl
         </tr>
       </table>
 </div><div class="memdoc">
-<p >更新翻译结果</p>
+<p >更新翻译记录。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">result</td><td>翻译结果对象 </td></tr>
+    <tr><td class="paramname">result</td><td>翻译记录对象。 </td></tr>
   </table>
   </dd>
 </dl>

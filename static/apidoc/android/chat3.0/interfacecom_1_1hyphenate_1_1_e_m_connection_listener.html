@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.8.9</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -88,15 +88,11 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a73e122f60782ed9eb687965166fa3792"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >即时通讯状态连接监听器 如果遇到弱网掉线情况，应用收到onDisconnected，此时不需要处理重连操作，SDK在底层自动处理重连 回调函数只有onConnected, onDisconnected, 无需考虑连接中，断开中一类的中间状态</p>
-<p >注意：应用不要在这两个回调函数中更新界面，这两个现成属于工作线程，直接更新界面会导致界面的并发错误。也不要在这两个回调函数中 做大量的耗时操作，这可能会影响其他监听器处理连接事件</p>
-<pre>
-    注册：
-    EMClient.getInstance().addConnectionListener(mConnectionListener);
-
-    解注册：
-    EMClient.getInstance().removeConnectionListener(mConnectionListener);
-</pre> </div><h2 class="groupheader">成员函数说明</h2>
+<div class="textblock"><p >即时通讯状态连接监听器。 如果遇到弱网掉线情况，应用收到 onDisconnected，此时不需要处理重连操作，SDK 在底层自动处理重连。 回调函数只有 onConnected 和 onDisconnected 无需考虑连接中，断开中一类的中间状态。</p>
+<p >注意：应用不要在这两个回调函数中更新界面，这两个现成属于工作线程，直接更新界面会导致界面的并发错误。也不要在这两个回调函数中 做大量的耗时操作，这可能会影响其他监听器处理连接事件。</p>
+<p >示例代码如下： 注册： ```java EMClient.getInstance().addConnectionListener(mConnectionListener); ```</p>
+<p >解注册： ```java EMClient.getInstance().removeConnectionListener(mConnectionListener); ``` </p>
+</div><h2 class="groupheader">成员函数说明</h2>
 <a id="a4bbce5c21524f7b44d7922ebd35d9986" name="a4bbce5c21524f7b44d7922ebd35d9986"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bbce5c21524f7b44d7922ebd35d9986">&#9670;&nbsp;</a></span>onConnected()</h2>
 
@@ -111,7 +107,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >成功连接到chat服务器时触发 </p>
+<p >成功连接到 chat 服务器时触发。 </p>
 
 </div>
 </div>
@@ -130,7 +126,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >和chat服务器断开连接时触发，注意断开连接时底层不一定会logout 常见错误码有：<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#ac17ad534d9a04bca878e21a469bb6535">EMError#USER_REMOVED</a>，<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#ae31d425e256946618f4d1ea66ab03c09">EMError#USER_LOGIN_ANOTHER_DEVICE</a>， <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#a8b258f5de26370c55891d52e72101411">EMError#SERVER_SERVICE_RESTRICTED</a>，<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa09fbbdf7a4441a7bd2205ff7c878591">EMError#USER_KICKED_BY_CHANGE_PASSWORD</a>及 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#a18c8cae32449e804f73fc46a260d8fae">EMError#USER_KICKED_BY_OTHER_DEVICE</a> </p>
+<p >和 chat 服务器断开连接时触发，注意断开连接时底层不一定会 logout。</p>
+<p >常见错误码有： <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#ac17ad534d9a04bca878e21a469bb6535">EMError#USER_REMOVED</a>，<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#ae31d425e256946618f4d1ea66ab03c09">EMError#USER_LOGIN_ANOTHER_DEVICE</a>， <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#a8b258f5de26370c55891d52e72101411">EMError#SERVER_SERVICE_RESTRICTED</a>，<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa09fbbdf7a4441a7bd2205ff7c878591">EMError#USER_KICKED_BY_CHANGE_PASSWORD</a>及 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#a18c8cae32449e804f73fc46a260d8fae">EMError#USER_KICKED_BY_OTHER_DEVICE</a> </p>
 
 </div>
 </div>
@@ -149,7 +146,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >sdk退出登陆时触发 常见错误码有：<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#ae31d425e256946618f4d1ea66ab03c09">EMError#USER_LOGIN_ANOTHER_DEVICE</a>，<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#ac17ad534d9a04bca878e21a469bb6535">EMError#USER_REMOVED</a>， <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#a9110bf27a3678ee8eef4a24fe8b1efcd">EMError#USER_BIND_ANOTHER_DEVICE</a>，<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#a8b258f5de26370c55891d52e72101411">EMError#SERVER_SERVICE_RESTRICTED</a>， <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa1826648b8ee67734df6f460b5d18fba">EMError#USER_LOGIN_TOO_MANY_DEVICES</a>，<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa09fbbdf7a4441a7bd2205ff7c878591">EMError#USER_KICKED_BY_CHANGE_PASSWORD</a>， <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#a18c8cae32449e804f73fc46a260d8fae">EMError#USER_KICKED_BY_OTHER_DEVICE</a> </p>
+<p >SDK 退出登陆时触发。</p>
+<p >常见错误码有： <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#ae31d425e256946618f4d1ea66ab03c09">EMError#USER_LOGIN_ANOTHER_DEVICE</a>，<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#ac17ad534d9a04bca878e21a469bb6535">EMError#USER_REMOVED</a>， <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#a9110bf27a3678ee8eef4a24fe8b1efcd">EMError#USER_BIND_ANOTHER_DEVICE</a>，<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#a8b258f5de26370c55891d52e72101411">EMError#SERVER_SERVICE_RESTRICTED</a>， <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa1826648b8ee67734df6f460b5d18fba">EMError#USER_LOGIN_TOO_MANY_DEVICES</a>，<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa09fbbdf7a4441a7bd2205ff7c878591">EMError#USER_KICKED_BY_CHANGE_PASSWORD</a>， <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#a18c8cae32449e804f73fc46a260d8fae">EMError#USER_KICKED_BY_OTHER_DEVICE</a> </p>
 
 </div>
 </div>
@@ -167,7 +165,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >token已过期时触发 </p>
+<p >token 已过期时触发。 </p>
 
 </div>
 </div>
@@ -185,7 +183,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >token即将过期时触发 </p>
+<p >token 即将过期时触发。 </p>
 
 </div>
 </div>
