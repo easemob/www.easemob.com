@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">3.9.0</span>
+   &#160;<span id="projectnumber">3.9.1</span>
    </div>
   </td>
  </tr>
@@ -136,6 +136,10 @@ $(function() {
 <tr class="separator:a306f51d896b378d2e4eec48dcc67993a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab67f3b7050de815caafdddf6529d3e4d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#ab67f3b7050de815caafdddf6529d3e4d">deleteMessagesBefore:completion:</a></td></tr>
 <tr class="separator:ab67f3b7050de815caafdddf6529d3e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac127e5120187844685cb7b6e1ea7a8a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#aac127e5120187844685cb7b6e1ea7a8a">translateMessage:targetLanguages:completion:</a></td></tr>
+<tr class="separator:aac127e5120187844685cb7b6e1ea7a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad79a281f0e4122f32a219af52f5244d0"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#ad79a281f0e4122f32a219af52f5244d0">fetchSupportedLangurages:</a></td></tr>
+<tr class="separator:ad79a281f0e4122f32a219af52f5244d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5204dd3591595e38bf57acd0d8024e03"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a5204dd3591595e38bf57acd0d8024e03">addDelegate:</a></td></tr>
 <tr class="separator:a5204dd3591595e38bf57acd0d8024e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2903f40951c68a06f8f0323c339867ea"><td class="memItemLeft" align="right" valign="top">(&quot;Use -<a class="el" href="protocol_i_e_m_chat_manager-p.html#aba39ab25aa4a5b58623ae97cf6e05b96">getAllConversations</a> instead&quot;)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a2903f40951c68a06f8f0323c339867ea">__deprecated_msg</a></td></tr>
@@ -509,7 +513,7 @@ $(function() {
     <tr><td class="paramname">aGroupId</td><td>要获取回执对应的群 ID。 </td></tr>
     <tr><td class="paramname">aGroupAckId</td><td>要获取的群回执 ID。 </td></tr>
     <tr><td class="paramname">aPageSize</td><td>获取消息条数。 </td></tr>
-    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>EMCursorResult&lt;EMGroupMessageAck&gt; 该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1188,6 +1192,38 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>获取的消息内容列表。 </dd></dl>
+
+</div>
+</div>
+<a id="ad79a281f0e4122f32a219af52f5244d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad79a281f0e4122f32a219af52f5244d0">&#9670;&nbsp;</a></span>fetchSupportedLangurages:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) fetchSupportedLangurages: </td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSArray&lt; <a class="el" href="interface_e_m_translate_language.html">EMTranslateLanguage</a> * &gt; *_Nullable languages, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable error))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取翻译服务支持的语言 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aCompletionBlock</td><td>完成回调 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2243,6 +2279,57 @@ $(function() {
   <table class="params">
     <tr><td class="paramname">aMessage</td><td>消息 ID。 </td></tr>
     <tr><td class="paramname">aUsername</td><td>已读接收方。 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aac127e5120187844685cb7b6e1ea7a8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac127e5120187844685cb7b6e1ea7a8a">&#9670;&nbsp;</a></span>translateMessage:targetLanguages:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) translateMessage: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> *)&#160;</td>
+          <td class="paramname"><em>aMessage</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">targetLanguages:</td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; NSString * &gt; *)&#160;</td>
+          <td class="paramname"><em>aLanguages</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> *message, <a class="el" href="interface_e_m_error.html">EMError</a> *error))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>翻译消息。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aMessage</td><td>消息对象。 </td></tr>
+    <tr><td class="paramname">aLanguages</td><td>要翻译的目标语言 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
