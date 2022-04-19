@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.0</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.1</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -157,6 +157,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a1e04dc2ab82a5dfa96b79af9d009ecef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8563dfd1dc1255acb9244d801c7b8255"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a8563dfd1dc1255acb9244d801c7b8255">deleteMessagesBeforeTimestamp</a> (long timeStamp, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callback)</td></tr>
 <tr class="separator:a8563dfd1dc1255acb9244d801c7b8255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9255abc560fec3228cbedf87991ffe63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a9255abc560fec3228cbedf87991ffe63">fetchSupportLanguages</a> (<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_language.html">EMLanguage</a> &gt; &gt; callBack)</td></tr>
+<tr class="separator:a9255abc560fec3228cbedf87991ffe63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874391f4ece875fb70893df5b77abb3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a874391f4ece875fb70893df5b77abb3d">translateMessage</a> (<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> message, List&lt; String &gt; languages, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt; callBack)</td></tr>
+<tr class="separator:a874391f4ece875fb70893df5b77abb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 成员函数</h2></td></tr>
@@ -186,8 +190,8 @@ Protected 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >发送会话的已读回执，该方法只针对单聊会话。</p>
-<p >该方法会通知服务器将此会话未读数设置为 0，对话方（包含多端多设备）将会在下面这个回调方法中接收到回调。</p>
-<p ><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html#a57efff3b4e02b0dee090d75951b1a735">EMConversationListener#onConversationRead(String, String)</a></p>
+<p >该方法会通知服务器将此会话未读数设置为 0，对话方（包含多端多设备）将会在下面这个回调方法中接收到回调：</p>
+<p ><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html#a57efff3b4e02b0dee090d75951b1a735">EMConversationListener#onConversationRead(String, String)</a> 。</p>
 <p >参考： 群消息已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a>。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -282,7 +286,7 @@ Protected 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >发送消息的已读回执。</p>
 <p >该方法仅适用于单聊会话。</p>
-<p >前提条件：设置了 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">EMOptions#setRequireAck(boolean)</a>。</p>
+<p >注意：如果设置 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">EMOptions#setRequireAck(boolean)</a> 为 <code>false</code>，当前方法将失效。</p>
 <p >发送群消息已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a>。</p>
 <p >建议：在进入聊天页面的时调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a121387f48448ea38e5b33ea4622e6e86">ackConversationRead(String)</a> ，其他场景再调用此方法，可以大量减少调用此方法的次数。</p>
 <dl class="params"><dt>参数</dt><dd>
@@ -370,7 +374,7 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从服务器获取会话列表。 默认最多返回 100 条数据。</p>
+<p >从服务器获取会话列表。 该功能需联系商务开通，开通后，用户默认可拉取 7 天内的 10 个会话（每个会话包含最新一条历史消息），如需调整会话数量或时间限制请联系商务经理。</p>
 <p >异步方法。</p>
 <dl class="section return"><dt>返回</dt><dd>返回当前用户的会话列表。 </dd></dl>
 
@@ -780,7 +784,7 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从服务器获取会话列表。 默认最多返回 100 条数据。</p>
+<p >从服务器获取会话列表。 该功能需联系商务开通，开通后，用户默认可拉取 7 天内的 10 个会话（每个会话包含最新一条历史消息），如需调整会话数量或时间限制请联系商务经理。</p>
 <p >同步方法，会阻塞当前线程。</p>
 <dl class="section return"><dt>返回</dt><dd>返回当前用户的会话列表。 </dd></dl>
 
@@ -892,6 +896,30 @@ Protected 成员函数</h2></td></tr>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
     <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9255abc560fec3228cbedf87991ffe63" name="a9255abc560fec3228cbedf87991ffe63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9255abc560fec3228cbedf87991ffe63">&#9670;&nbsp;</a></span>fetchSupportLanguages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMChatManager.fetchSupportLanguages </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_language.html">EMLanguage</a> &gt; &gt;&#160;</td>
+          <td class="paramname"><em>callBack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >获取翻译服务支持的语言 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callBack</td><td>完成回调 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1481,6 +1509,48 @@ Protected 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">message</td><td>要设置的消息对象。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a874391f4ece875fb70893df5b77abb3d" name="a874391f4ece875fb70893df5b77abb3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874391f4ece875fb70893df5b77abb3d">&#9670;&nbsp;</a></span>translateMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMChatManager.translateMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a>&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; String &gt;&#160;</td>
+          <td class="paramname"><em>languages</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt;&#160;</td>
+          <td class="paramname"><em>callBack</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >翻译消息 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>消息对象 </td></tr>
+    <tr><td class="paramname">languages</td><td>要翻译的目标语言code列表 </td></tr>
+    <tr><td class="paramname">callBack</td><td>完成回调 </td></tr>
   </table>
   </dd>
 </dl>

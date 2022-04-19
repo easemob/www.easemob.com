@@ -12,6 +12,7 @@ var searchData=
   ['translate_5fnot_5finit_9',['TRANSLATE_NOT_INIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac524c307fb64373228a38851a2e0f594',1,'com::hyphenate::EMError']]],
   ['translatecount_10',['translateCount',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_result.html#a8cd6a5992a50b1433d568a0a98fb7cfb',1,'com::hyphenate::chat::EMTranslationResult']]],
   ['translatedtext_11',['translatedText',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_result.html#ac8603e4382666b7af4c5a082ade660e7',1,'com::hyphenate::chat::EMTranslationResult']]],
-  ['txt_12',['TXT',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a0157bc665bb470f9893a03e7adcf3125',1,'com::hyphenate::chat::EMMessage::Type']]],
-  ['type_13',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html',1,'com::hyphenate::chat::EMMessage']]]
+  ['translatemessage_12',['translateMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a874391f4ece875fb70893df5b77abb3d',1,'com::hyphenate::chat::EMChatManager']]],
+  ['txt_13',['TXT',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a0157bc665bb470f9893a03e7adcf3125',1,'com::hyphenate::chat::EMMessage::Type']]],
+  ['type_14',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html',1,'com::hyphenate::chat::EMMessage']]]
 ];

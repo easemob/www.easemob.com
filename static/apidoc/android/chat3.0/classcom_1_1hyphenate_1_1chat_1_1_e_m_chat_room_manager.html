@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.0</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.1</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -722,7 +722,7 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">pageNum</td><td>当前页码，从 1 开始。 </td></tr>
     <tr><td class="paramname">pageSize</td><td>每页返回的黑名单上的用户数。 </td></tr>
     <tr><td class="paramname">callBack</td><td>结果回调，成功时回调 <a class="el" href="">EMValueCallBack#onSuccess(Object)</a>，返回聊天室黑名单列表； 失败时回调 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a>。 需注意以下两点：<ul>
-<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于 pageSize 的值；</li>
+<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于等于 pageSize 的值；</li>
 <li>pageNum 是当前页码，方便服务器分页查询返回。对于数据量未知且很大的情况，分页获取，服务器会根据每次的 pageSize 和 pageNum 的设置返回数据。 </li>
 </ul>
 </td></tr>
@@ -815,7 +815,7 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">pageSize</td><td>每页返回的成员数。 </td></tr>
     <tr><td class="paramname">callBack</td><td>结果回调，成功时回调 <a class="el" href="">EMValueCallBack#onSuccess(Object)</a>， 失败时回调 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a>。 需注意以下几点：<ul>
 <li>每次调用只返回一页的数据。首次调用 cursor 传空值，从最新数据开始获取；然后根据服务器返回的数据，其中一个字段是 cursor，保存在本地，下次调用接口时，会把更新的 cursor 传入作为获取数据的标志位置。</li>
-<li>pageSize 是这次接口调用期望返回的记录数，如当前在最后一页，返回的数据量小于 pageSize 的值；</li>
+<li>pageSize 是这次接口调用期望返回的记录数，如当前在最后一页，返回的数据量小于等于 pageSize 的值；</li>
 <li>对于数据量未知且很大的情况，分页获取，服务器会根据每次的 pageSize 和 cursor 设置返回数据。 </li>
 </ul>
 </td></tr>
@@ -874,7 +874,7 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <ul>
-<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于 pageSize 的值；</li>
+<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于等于 pageSize 的值；</li>
 <li>pageNum 是当前页码，方便服务器分页查询返回。 对于数据量未知且很大的情况，分页获取，服务器会根据每次的 pageSize 和 pageNum 的设置返回数据。 </li>
 </ul>
 
@@ -918,7 +918,7 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">pageNum</td><td>当前页数，从 1 开始。 </td></tr>
     <tr><td class="paramname">pageSize</td><td>每页返回的记录数。 </td></tr>
     <tr><td class="paramname">callback</td><td>结果回调，成功时回调 <a class="el" href="">EMValueCallBack#onSuccess(Object)</a>， 失败时回调 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a>。 需注意以下两点：<ul>
-<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于 pageSize 的值；</li>
+<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于等于 pageSize 的值；</li>
 <li>pageNum 是当前页码，方便服务器分页查询返回。 对于数据量未知且很大的情况，分页获取，服务器会根据每次的 pageSize 和 pageNum 的设置返回数据。 </li>
 </ul>
 </td></tr>
@@ -1626,7 +1626,7 @@ Public 成员函数</h2></td></tr>
 <p >同步方法，会阻塞当前线程。</p>
 <p >需注意以下两点：</p>
 <ul>
-<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于 pageSize 的值；</li>
+<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于等于 pageSize 的值；</li>
 <li>pageNum 是当前页码，方便服务器分页查询返回。 对于数据量未知且很大的情况，分页获取，服务器会根据每次的 pageSize 和 pageNum 的设置返回数据。</li>
 </ul>
 <dl class="params"><dt>参数</dt><dd>
@@ -1770,7 +1770,7 @@ Public 成员函数</h2></td></tr>
   <table class="exception">
     <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 请注意以下几点：<ul>
 <li>每次调用只返回一页的数据。首次调用 cursor 传空值，从最新数据开始获取； 然后根据服务器返回的数据，其中一个字段是 cursor，保存在本地，下次调用接口时，会把更新的 cursor 传入作为获取数据的标志位置。</li>
-<li>pageSize 是这次接口调用期望返回的数据条目数，如当前在最后一页，返回的数据量小于 pageSize 的值；</li>
+<li>pageSize 是这次接口调用期望返回的数据条目数，如当前在最后一页，返回的数据量小于等于 pageSize 的值；</li>
 <li>对于数据量未知且很大的情况，分页获取，服务器会根据每次的 pageSiz 和 cursor 设置返回数据。 </li>
 </ul>
 </td></tr>
@@ -1830,7 +1830,7 @@ Public 成员函数</h2></td></tr>
 </dl>
 <p>需注意以下两点：</p>
 <ul>
-<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于 pageSize 的值；</li>
+<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于等于 pageSize 的值；</li>
 <li>pageNum 是当前页码，方便服务器分页查询返回。 对于数据量未知且很大的情况，分页获取，服务器会根据每次的 pageSize 和 pageNum 的设置返回数据。 </li>
 </ul>
 
@@ -1915,7 +1915,7 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <p>需注意以下两点：</p><ul>
-<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于 pageSize 的值；</li>
+<li>pageSize 是这次调用期望返回的记录数，如当前在最后一页，返回的数量小于等于 pageSize 的值；</li>
 <li>pageNum 是当前页码，方便服务器分页查询返回。 对于数据量未知且很大的情况，分页获取，服务器会根据每次的 pageSize 和 pageNum 的设置返回数据。 </li>
 </ul>
 
@@ -2288,7 +2288,7 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">members</td><td>要移出的用户列表。 </td></tr>
+    <tr><td class="paramname">members</td><td>要移出聊天室的用户列表。 </td></tr>
   </table>
   </dd>
 </dl>
