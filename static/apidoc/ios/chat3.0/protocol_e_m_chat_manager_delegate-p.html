@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">3.9.1</span>
+   &#160;<span id="projectnumber">3.9.2</span>
    </div>
   </td>
  </tr>
@@ -118,6 +118,8 @@ $(function() {
 <tr class="separator:a81cb276f6da6b6cae1feb6df639bb1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6df24d57484bff114cec75086f4f03a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#ae6df24d57484bff114cec75086f4f03a">didMessageAttachmentsStatusChanged:error:</a></td></tr>
 <tr class="separator:ae6df24d57484bff114cec75086f4f03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba7e3a6eb3368500a2b781ea7389084e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#aba7e3a6eb3368500a2b781ea7389084e">messageReactionDidChange:</a></td></tr>
+<tr class="separator:aba7e3a6eb3368500a2b781ea7389084e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>聊天相关回调的协议类。 </p>
@@ -301,11 +303,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>收到 CMD 消息代理。</p>
+<p>收到命令消息代理。</p>
 <p>已废弃，请用 <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#aa053cba8206700f0635fa3db310a8717">cmdMessagesDidReceive:</a> 代替。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aCmdMessages</td><td>CMD 消息列表。 </td></tr>
+    <tr><td class="paramname">aCmdMessages</td><td>命令消息列表。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -561,6 +563,39 @@ $(function() {
 
 </div>
 </div>
+<a id="aba7e3a6eb3368500a2b781ea7389084e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7e3a6eb3368500a2b781ea7389084e">&#9670;&nbsp;</a></span>messageReactionDidChange:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) messageReactionDidChange: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; <a class="el" href="interface_e_m_message_reaction_change.html">EMMessageReactionChange</a> * &gt; *)&#160;</td>
+          <td class="paramname"><em>changes</em></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reaction 数据发生改变事件回调。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">changes</td><td>发生改变的 Reaction。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aeb655fe7e623359bee76cc6bb6c7b8d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb655fe7e623359bee76cc6bb6c7b8d4">&#9670;&nbsp;</a></span>messagesDidDeliver:</h2>
 
@@ -653,10 +688,11 @@ $(function() {
 <p>收到消息撤回代理。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aMessages</td><td>撤回消息列表&lt;EMChatMessage&gt; </td></tr>
+    <tr><td class="paramname">aMessages</td><td>撤回消息列表。</td></tr>
   </table>
   </dd>
 </dl>
+<p>已废弃，请用 <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a2093fb9c56860656eead222a40c068a9">messagesInfoDidRecall:</a> 代替。 </p>
 
 </div>
 </div>

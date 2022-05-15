@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">3.9.1</span>
+   &#160;<span id="projectnumber">3.9.2</span>
    </div>
   </td>
  </tr>
@@ -81,6 +81,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 构造函数</h2></td></tr>
+<tr class="memitem:ac5cc1977c0ee5224947e993f8ef3c5a0"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_e_m_message_reaction.html">EMMessageReaction</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_chat_message.html#ac5cc1977c0ee5224947e993f8ef3c5a0">getReaction:</a></td></tr>
+<tr class="separator:ac5cc1977c0ee5224947e993f8ef3c5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2359b83a1827280c67d921a06353cd5e"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_chat_message.html#a2359b83a1827280c67d921a06353cd5e">initWithConversationID:from:to:body:ext:</a></td></tr>
 <tr class="separator:a2359b83a1827280c67d921a06353cd5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -118,12 +120,40 @@ $(function() {
 <tr class="separator:ae18c036817544ebb5d30fcbacfdd2df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ce7902ef7c1f9fec79a57eb73fe3a2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_e_m_message_body.html">EMMessageBody</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_chat_message.html#a8ce7902ef7c1f9fec79a57eb73fe3a2a">body</a></td></tr>
 <tr class="separator:a8ce7902ef7c1f9fec79a57eb73fe3a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c0a43c0c1f22f36cbf86671bf1ffeaa"><td class="memItemLeft" align="right" valign="top">NSArray&lt; <a class="el" href="interface_e_m_message_reaction.html">EMMessageReaction</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_chat_message.html#a4c0a43c0c1f22f36cbf86671bf1ffeaa">reactionList</a></td></tr>
+<tr class="separator:a4c0a43c0c1f22f36cbf86671bf1ffeaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2248b061049c55edfc5ce5bd849422"><td class="memItemLeft" align="right" valign="top">NSDictionary *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_chat_message.html#a4c2248b061049c55edfc5ce5bd849422">ext</a></td></tr>
 <tr class="separator:a4c2248b061049c55edfc5ce5bd849422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>聊天消息类。 </p>
 </div><h2 class="groupheader">函数文档</h2>
+<a id="ac5cc1977c0ee5224947e993f8ef3c5a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5cc1977c0ee5224947e993f8ef3c5a0">&#9670;&nbsp;</a></span>getReaction:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_e_m_message_reaction.html">EMMessageReaction</a> *) getReaction: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>reaction</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>根据 Reaction ID 获取 Reaction 内容。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reaction</td><td>Reaction ID。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Reaction 内容。 </dd></dl>
+
+</div>
+</div>
 <a id="a2359b83a1827280c67d921a06353cd5e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2359b83a1827280c67d921a06353cd5e">&#9670;&nbsp;</a></span>initWithConversationID:from:to:body:ext:</h2>
 
@@ -364,9 +394,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>是否已发送或收到消息送达回执。 </p><pre class="fragment">- 如果本地用户为信息的发送方，则该成员表示是否已收到送达回执。
-- 如果本地用户为信息的接收方，则该成员表示是否已发送送达回执。
-</pre><p> 如果你将 <a class="el" href="interface_e_m_options.html">EMOptions</a> 中的 enableDeliveryAck 设为 YES，则 SDK 在收到消息后会自动发送送法回执。 </p>
+<p>是否已发送或收到消息送达回执。 </p><pre class="fragment">- 对于消息发送方，该属性表示是否已收到送达回执。
+- 对于消息接收方，该属性表示是否已发送送达回执。
+</pre><p> 如果你将 <a class="el" href="interface_e_m_options.html">EMOptions</a> 中的 <code>enableDeliveryAck</code> 设为 <code>YES</code>，则 SDK 在收到消息后会自动发送送法回执。 </p>
 
 </div>
 </div>
@@ -389,7 +419,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>语音消息是否已播放。 </p>
+<p>语音消息是否已播放。</p>
+<ul>
+<li><code>YES</code>: 是；</li>
+<li><code>NO</code>: 否。 </li>
+</ul>
 
 </div>
 </div>
@@ -412,7 +446,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>是否需要发送群组已读消息回执。 </p>
+<p>是否需要发送群组已读消息回执。</p>
+<ul>
+<li><code>YES</code>: 是；</li>
+<li><code>NO</code>: 否。 </li>
+</ul>
 
 </div>
 </div>
@@ -435,7 +473,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>信息是否已读。 </p>
+<p>消息是否已读。</p>
+<ul>
+<li><code>YES</code>: 是；</li>
+<li><code>NO</code>: 否。 </li>
+</ul>
 
 </div>
 </div>
@@ -458,7 +500,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>是否已发送（消息接收方）或收到（消息发送方）消息已读回执。 </p>
+<p>是否已发送（消息接收方）或收到（消息发送方）消息已读回执。</p>
+<ul>
+<li><code>YES</code>: 是；</li>
+<li><code>NO</code>: 否。 </li>
+</ul>
 
 </div>
 </div>
@@ -508,6 +554,29 @@ $(function() {
 
 </div>
 </div>
+<a id="a4c0a43c0c1f22f36cbf86671bf1ffeaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c0a43c0c1f22f36cbf86671bf1ffeaa">&#9670;&nbsp;</a></span>reactionList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray&lt;<a class="el" href="interface_e_m_message_reaction.html">EMMessageReaction</a> *&gt;*) reactionList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reaction 列表。 </p>
+
+</div>
+</div>
 <a id="a9bba89066e7b907b8142a8870d553c90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bba89066e7b907b8142a8870d553c90">&#9670;&nbsp;</a></span>status</h2>
 
@@ -527,7 +596,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>消息状态类型。 </p>
+<p>消息发送状态。详见 <a class="el" href="">EMMessageStatus</a>。 </p>
 
 </div>
 </div>
