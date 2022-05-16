@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">3.9.1</span>
+   &#160;<span id="projectnumber">3.9.2</span>
    </div>
   </td>
  </tr>
@@ -130,6 +130,8 @@ $(function() {
 <tr class="separator:a1af4d68285e8decd6dd6140944b64a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d3d1465b422c618421e9febe094c16c"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a0d3d1465b422c618421e9febe094c16c">asyncFetchGroupMessageAcksFromServer:groupId:startGroupAckId:pageSize:completion:</a></td></tr>
 <tr class="separator:a0d3d1465b422c618421e9febe094c16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182c0901657236197fe4b58bc7a7f0b3"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a182c0901657236197fe4b58bc7a7f0b3">reportMessageWithId:tag:reason:completion:</a></td></tr>
+<tr class="separator:a182c0901657236197fe4b58bc7a7f0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ec9f13d6f937f7a77e34514c1bae4f4"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a6ec9f13d6f937f7a77e34514c1bae4f4">sendMessageReadAck:completion:</a></td></tr>
 <tr class="separator:a6ec9f13d6f937f7a77e34514c1bae4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a306f51d896b378d2e4eec48dcc67993a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a306f51d896b378d2e4eec48dcc67993a">recallMessage:completion:</a></td></tr>
@@ -172,6 +174,14 @@ $(function() {
 <tr class="separator:aa7b4ad035eade6563f275aaf00c52a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54441c004d5223ba2a8dec52ea732c66"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a54441c004d5223ba2a8dec52ea732c66">loadMessagesWithKeyword:timestamp:count:fromUser:searchDirection:completion:</a></td></tr>
 <tr class="separator:a54441c004d5223ba2a8dec52ea732c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa933d30242b85a26655c54d81d41ec5a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#aa933d30242b85a26655c54d81d41ec5a">addReaction:toMessage:completion:</a></td></tr>
+<tr class="separator:aa933d30242b85a26655c54d81d41ec5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7b8d6da6577859239cd11174208cc2"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#ada7b8d6da6577859239cd11174208cc2">removeReaction:fromMessage:completion:</a></td></tr>
+<tr class="separator:ada7b8d6da6577859239cd11174208cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0597433d8a0175dfb93d3e9336f7d0af"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a0597433d8a0175dfb93d3e9336f7d0af">getReactionList:groupId:chatType:completion:</a></td></tr>
+<tr class="separator:a0597433d8a0175dfb93d3e9336f7d0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a61731104e7609fcf531b0bdff7a92c"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a3a61731104e7609fcf531b0bdff7a92c">getReactionDetail:reaction:cursor:pageSize:completion:</a></td></tr>
+<tr class="separator:a3a61731104e7609fcf531b0bdff7a92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>聊天相关操作代理协议。 消息都是从本地数据库中加载，不是从服务端加载。 </p>
@@ -346,6 +356,57 @@ $(function() {
 
 </div>
 </div>
+<a id="aa933d30242b85a26655c54d81d41ec5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa933d30242b85a26655c54d81d41ec5a">&#9670;&nbsp;</a></span>addReaction:toMessage:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) addReaction: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>reaction</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">toMessage:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>messageId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(nullable void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable))&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>添加 Reaction。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reaction</td><td>Reaction 内容。 </td></tr>
+    <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
+    <tr><td class="paramname">completion</td><td>该方法完成的回调。如果有错误会包含错误信息。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac43e9aa47561bdaf88c1401949681278"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac43e9aa47561bdaf88c1401949681278">&#9670;&nbsp;</a></span>asyncDownloadMessageAttachments:progress:completion:</h2>
 
@@ -393,7 +454,7 @@ $(function() {
   <table class="params">
     <tr><td class="paramname">aMessage</td><td>消息对象。 </td></tr>
     <tr><td class="paramname">aProgressCompletion</td><td>附件下载进度回调 block。 </td></tr>
-    <tr><td class="paramname">aCompletion</td><td>下载完成回调 block。 </td></tr>
+    <tr><td class="paramname">aCompletion</td><td>该方法完成的回调，如果失败包含错误信息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -513,7 +574,7 @@ $(function() {
     <tr><td class="paramname">aGroupId</td><td>要获取回执对应的群 ID。 </td></tr>
     <tr><td class="paramname">aGroupAckId</td><td>要获取的群回执 ID。 </td></tr>
     <tr><td class="paramname">aPageSize</td><td>获取消息条数。 </td></tr>
-    <tr><td class="paramname">aCompletionBlock</td><td>EMCursorResult&lt;EMGroupMessageAck&gt; 该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -816,7 +877,11 @@ $(function() {
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aConversationId</td><td>会话 ID。 </td></tr>
-    <tr><td class="paramname">aIsDeleteMessages</td><td>是否删除会话中的消息。 </td></tr>
+    <tr><td class="paramname">aIsDeleteMessages</td><td>是否删除会话中的消息。<ul>
+<li><code>YES</code>: 是；</li>
+<li><code>NO</code>: 否。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
@@ -913,7 +978,11 @@ $(function() {
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aConversations</td><td>会话列表。 </td></tr>
-    <tr><td class="paramname">aIsDeleteMessages</td><td>是否删除会话中的消息。 </td></tr>
+    <tr><td class="paramname">aIsDeleteMessages</td><td>是否删除会话中的消息。<ul>
+<li><code>YES</code>: 是；</li>
+<li><code>NO</code>: 否。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
@@ -954,12 +1023,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>删除某个时间点之前的消息</p>
-<p>异步方法</p>
+<p>删除某个时间点之前的消息。</p>
+<p>异步方法。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aTimestamp</td><td>要删除时间点 </td></tr>
-    <tr><td class="paramname">aCompletion</td><td>完成回调 </td></tr>
+    <tr><td class="paramname">aTimestamp</td><td>指定的时间点，Unix 时间戳，单位为毫秒。 </td></tr>
+    <tr><td class="paramname">aCompletion</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1011,13 +1080,17 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>删除服务器会话</p>
+<p>删除服务器会话。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aConversationId</td><td>会话ID </td></tr>
-    <tr><td class="paramname">aConversationType</td><td>会话类型 </td></tr>
-    <tr><td class="paramname">aIsDeleteMessages</td><td>是否删除会话中的消息 </td></tr>
-    <tr><td class="paramname">aCompletionBlock</td><td>完成的回调 </td></tr>
+    <tr><td class="paramname">aConversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">aConversationType</td><td>会话类型。 </td></tr>
+    <tr><td class="paramname">aIsDeleteMessages</td><td>是否同时删除会话中的消息。<ul>
+<li><code>YES</code>: 是；</li>
+<li><code>NO</code>: 否。 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1218,9 +1291,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>获取翻译服务支持的语言 </p><dl class="params"><dt>参数</dt><dd>
+<p>获取翻译服务支持的语言。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aCompletionBlock</td><td>完成回调 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1442,6 +1515,129 @@ $(function() {
 
 </div>
 </div>
+<a id="a3a61731104e7609fcf531b0bdff7a92c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a61731104e7609fcf531b0bdff7a92c">&#9670;&nbsp;</a></span>getReactionDetail:reaction:cursor:pageSize:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) getReactionDetail: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>messageId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">reaction:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>reaction</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">cursor:</td>
+          <td></td>
+          <td class="paramtype">(nullable NSString *)&#160;</td>
+          <td class="paramname"><em>cursor</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">pageSize:</td>
+          <td></td>
+          <td class="paramtype">(uint64_t)&#160;</td>
+          <td class="paramname"><em>pageSize</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_message_reaction.html">EMMessageReaction</a> *, NSString *_Nullable cursor, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable))&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>分页获取群聊消息的 Reaction 详细列表。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
+    <tr><td class="paramname">reaction</td><td>Reaction 内容。 </td></tr>
+    <tr><td class="paramname">cursor</td><td>查询的开始位置。首次调用该方法可传 <code>nil</code> 或 <code>@""</code> 以 Reaction 创建时间的正序获取。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页期望返回的 Reaction 数量。该值不能超过 100。 </td></tr>
+    <tr><td class="paramname">completion</td><td>该方法完成的回调，返回 Reaction 列表和用于继续获取数据的 cursor。当 cursor 为 <code>nil</code> 时表示已获取全部数据。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0597433d8a0175dfb93d3e9336f7d0af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0597433d8a0175dfb93d3e9336f7d0af">&#9670;&nbsp;</a></span>getReactionList:groupId:chatType:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) getReactionList: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; NSString * &gt; *)&#160;</td>
+          <td class="paramname"><em>messageIds</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">groupId:</td>
+          <td></td>
+          <td class="paramtype">(nullable NSString *)&#160;</td>
+          <td class="paramname"><em>groupId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">chatType:</td>
+          <td></td>
+          <td class="paramtype">(EMChatType)&#160;</td>
+          <td class="paramname"><em>chatType</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSDictionary&lt; NSString *, <a class="el" href="interface_e_m_message_reaction.html">EMMessageReaction</a> * &gt; *, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable))&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取消息的 Reaction 列表。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
+    <tr><td class="paramname">groupId</td><td>群组 ID，该参数只在群聊生效。 </td></tr>
+    <tr><td class="paramname">chatType</td><td>会话类型，仅支持单聊（ <a class="el" href="">EMChatTypeChat</a> ）和群聊（<a class="el" href="">EMChatTypeGroupChat</a>）。 </td></tr>
+    <tr><td class="paramname">completion</td><td>该方法完成的回调。如果有错误会包含错误信息。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4f513fb3922b6258d15e526db65f0b2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4f513fb3922b6258d15e526db65f0b2f">&#9670;&nbsp;</a></span>importConversations:</h2>
 
@@ -1660,7 +1856,11 @@ $(function() {
     <tr><td class="paramname">aTimestamp</td><td>参考时间戳。如果该参数设置的时间戳为负数，则从最新消息向前获取。 </td></tr>
     <tr><td class="paramname">aCount</td><td>获取的消息条数。如果设为小于等于 0，SDK 会将该参数作 1 处理。 </td></tr>
     <tr><td class="paramname">aSender</td><td>消息发送方。设为 nil 表示忽略该参数。 </td></tr>
-    <tr><td class="paramname">aDirection</td><td>消息搜索方向。</td></tr>
+    <tr><td class="paramname">aDirection</td><td>消息搜索方向，详见 <a class="el" href="">MessageSearchDirection</a>。<ul>
+<li><code>UP</code>：按时间逆序。</li>
+<li><code>DOWN</code>：按时间顺序。</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1733,7 +1933,11 @@ $(function() {
     <tr><td class="paramname">aTimestamp</td><td>参考时间戳。如果该参数设置的时间戳为负数，则从最新消息向前获取。 </td></tr>
     <tr><td class="paramname">aCount</td><td>获取的消息条数。如果设为小于等于 0，SDK 会将该参数作 1 处理。 </td></tr>
     <tr><td class="paramname">aSender</td><td>消息发送方。设为 nil 表示忽略该参数。 </td></tr>
-    <tr><td class="paramname">aDirection</td><td>消息搜索方向。 </td></tr>
+    <tr><td class="paramname">aDirection</td><td>消息搜索方向，详见 <a class="el" href="">MessageSearchDirection</a>。<ul>
+<li><code>UP</code>：按时间逆序。</li>
+<li><code>DOWN</code>：按时间顺序。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
@@ -1801,7 +2005,11 @@ $(function() {
     <tr><td class="paramname">aTimestamp</td><td>参考时间戳。如果该参数设置的时间戳为负数，则从最新消息向前获取。 </td></tr>
     <tr><td class="paramname">aCount</td><td>获取的消息条数。如果设为小于等于 0，SDK 会将该参数作 1 处理。 </td></tr>
     <tr><td class="paramname">aUsername</td><td>消息发送方。设为 nil 表示忽略该参数。 </td></tr>
-    <tr><td class="paramname">aDirection</td><td>消息搜索方向。</td></tr>
+    <tr><td class="paramname">aDirection</td><td>消息搜索方向，详见 <a class="el" href="">MessageSearchDirection</a>。<ul>
+<li><code>UP</code>：按时间逆序。</li>
+<li><code>DOWN</code>：按时间顺序。</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1874,7 +2082,11 @@ $(function() {
     <tr><td class="paramname">aTimestamp</td><td>参考时间戳。如果该参数设置的时间戳为负数，则从最新消息向前获取。 </td></tr>
     <tr><td class="paramname">aCount</td><td>获取的消息条数。如果设为小于等于 0，SDK 会将该参数作 1 处理。 </td></tr>
     <tr><td class="paramname">aUsername</td><td>消息发送方。设为 nil 表示忽略该参数。 </td></tr>
-    <tr><td class="paramname">aDirection</td><td>消息搜索方向。 </td></tr>
+    <tr><td class="paramname">aDirection</td><td>消息搜索方向，详见 <a class="el" href="">MessageSearchDirection</a>。<ul>
+<li><code>UP</code>：按时间逆序。</li>
+<li><code>DOWN</code>：按时间顺序。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
@@ -2016,6 +2228,116 @@ $(function() {
 
 </div>
 </div>
+<a id="ada7b8d6da6577859239cd11174208cc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7b8d6da6577859239cd11174208cc2">&#9670;&nbsp;</a></span>removeReaction:fromMessage:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) removeReaction: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>reaction</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">fromMessage:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>messageId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(nullable void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable))&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>删除 Reaction。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reaction</td><td>Reaction 内容。 </td></tr>
+    <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
+    <tr><td class="paramname">completion</td><td>该方法完成的回调。如果有错误会包含错误信息。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a182c0901657236197fe4b58bc7a7f0b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182c0901657236197fe4b58bc7a7f0b3">&#9670;&nbsp;</a></span>reportMessageWithId:tag:reason:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) reportMessageWithId: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aMessageId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">tag:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aTag</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">reason:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aReason</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *error))&#160;</td>
+          <td class="paramname"><em>aCompletion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>举报违规消息</p>
+<p>异步方法</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aMessageId</td><td>违规消息id </td></tr>
+    <tr><td class="paramname">aTag</td><td>举报类型 </td></tr>
+    <tr><td class="paramname">aReason</td><td>举报原因 </td></tr>
+    <tr><td class="paramname">aCompletion</td><td>执行上报结果 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aff511642b34e4ac4f17f65b869626b95"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff511642b34e4ac4f17f65b869626b95">&#9670;&nbsp;</a></span>resendMessage:progress:completion:</h2>
 
@@ -2117,7 +2439,7 @@ $(function() {
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aMessageId</td><td>消息 ID。 </td></tr>
-    <tr><td class="paramname">aGroupId</td><td>群 ID。 </td></tr>
+    <tr><td class="paramname">aGroupId</td><td>群组 ID。 </td></tr>
     <tr><td class="paramname">aContent</td><td>消息内容。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
@@ -2329,7 +2651,7 @@ $(function() {
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aMessage</td><td>消息对象。 </td></tr>
-    <tr><td class="paramname">aLanguages</td><td>要翻译的目标语言 </td></tr>
+    <tr><td class="paramname">aLanguages</td><td>目标语言. </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>

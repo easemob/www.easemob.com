@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['permissiontype_1318',['permissionType',['../interface_e_m_chatroom.html#a88c3a5ddde2cc67aad2bff7ad5c72fa0',1,'EMChatroom::permissionType()'],['../interface_e_m_group.html#aa2c03fbb097e27cd609e75d5e9843c33',1,'EMGroup::permissionType()']]],
-  ['phone_1319',['phone',['../interface_e_m_user_info.html#a4517a2d6732df859580b18f632b23d26',1,'EMUserInfo']]],
-  ['publisher_1320',['publisher',['../interface_e_m_presence.html#a7c2b21512992caa03083c426c7f72061',1,'EMPresence']]],
-  ['pushkitcertname_1321',['pushKitCertName',['../interface_e_m_options.html#a7195f117c6ea75364b7f9cd8b7e13962',1,'EMOptions']]],
-  ['pushmanager_1322',['pushManager',['../interface_e_m_client.html#a8b004890d955e83da2c79a67c7e1f84a',1,'EMClient']]],
-  ['pushoptions_1323',['pushOptions',['../protocol_i_e_m_push_manager-p.html#a88a750e47e4ac2d7099655187ba18dd5',1,'IEMPushManager-p']]]
+  ['occupantscount_1371',['occupantsCount',['../interface_e_m_chatroom.html#a3e807b1af9dbda4beaae8746b209cb19',1,'EMChatroom::occupantsCount()'],['../interface_e_m_group.html#a792fd91c92ef4a043505a95f675e49f5',1,'EMGroup::occupantsCount()']]],
+  ['options_1372',['options',['../interface_e_m_client.html#a3bf3e3165dfdebd0319f9b7378e7a93f',1,'EMClient']]],
+  ['owner_1373',['owner',['../interface_e_m_chatroom.html#aa4c82dc0b6e6bcb3d23c25f9e2ca9930',1,'EMChatroom::owner()'],['../interface_e_m_group.html#ae03a2f19396ee83ed51ef704509edf05',1,'EMGroup::owner()']]]
 ];

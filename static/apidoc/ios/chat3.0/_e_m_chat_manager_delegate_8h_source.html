@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">3.9.1</span>
+   &#160;<span id="projectnumber">3.9.2</span>
    </div>
   </td>
  </tr>
@@ -76,65 +76,70 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_error.html">EMError</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="protocol_e_m_chat_manager_delegate-p.html">   28</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_e_m_chat_manager_delegate-p.html">EMChatManagerDelegate</a> &lt;NSObject&gt;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">@optional</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#pragma mark - Conversation</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;- (void)conversationListDidUpdate:(NSArray *)aConversationList;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#pragma mark - Message</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;- (void)messagesDidReceive:(NSArray *)aMessages;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;- (void)cmdMessagesDidReceive:(NSArray *)aCmdMessages;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;- (void)messagesDidRead:(NSArray *)aMessages;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;- (void)groupMessageDidRead:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                  groupAcks:(NSArray *)aGroupAcks;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;- (void)<a class="code" href="protocol_e_m_chat_manager_delegate-p.html#aa209384b77e33fec99166cd129571b3e">groupMessageAckHasChanged</a>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;- (void)onConversationRead:(NSString *)from to:(NSString *)to;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;- (void)messagesDidDeliver:(NSArray *)aMessages;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;- (void)messagesInfoDidRecall:(NSArray&lt;<a class="code" href="interface_e_m_recall_message_info.html">EMRecallMessageInfo</a> *&gt; *)aRecallMessagesInfo;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;- (void)messageStatusDidChange:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                         error:(<a class="code" href="interface_e_m_error.html">EMError</a> *)aError;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;- (void)messageAttachmentStatusDidChange:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                                   error:(<a class="code" href="interface_e_m_error.html">EMError</a> *)aError;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_message_reaction_change.html">EMMessageReactionChange</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="protocol_e_m_chat_manager_delegate-p.html">   29</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_e_m_chat_manager_delegate-p.html">EMChatManagerDelegate</a> &lt;NSObject&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">@optional</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#pragma mark - Conversation</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;- (void)conversationListDidUpdate:(NSArray *)aConversationList;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#pragma mark - Message</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;- (void)messagesDidReceive:(NSArray *)aMessages;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;- (void)cmdMessagesDidReceive:(NSArray *)aCmdMessages;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;- (void)messagesDidRead:(NSArray *)aMessages;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;- (void)groupMessageDidRead:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                  groupAcks:(NSArray *)aGroupAcks;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;- (void)<a class="code" href="protocol_e_m_chat_manager_delegate-p.html#aa209384b77e33fec99166cd129571b3e">groupMessageAckHasChanged</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;- (void)onConversationRead:(NSString *)from to:(NSString *)to;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;- (void)messagesDidDeliver:(NSArray *)aMessages;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;- (void)messagesInfoDidRecall:(NSArray&lt;<a class="code" href="interface_e_m_recall_message_info.html">EMRecallMessageInfo</a> *&gt; *)aRecallMessagesInfo;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;- (void)messageStatusDidChange:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                         error:(<a class="code" href="interface_e_m_error.html">EMError</a> *)aError;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;- (void)messageAttachmentStatusDidChange:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                                   error:(<a class="code" href="interface_e_m_error.html">EMError</a> *)aError;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">#pragma mark - Deprecated methods</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;- (void)messagesDidRecall:(NSArray *)aMessages __deprecated_msg(&quot;Use -messagesInfoDidRecall: instead&quot;);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;- (void)didUpdateConversationList:(NSArray *)aConversationList __deprecated_msg(&quot;Use -conversationListDidUpdate: instead&quot;);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;- (void)didReceiveMessages:(NSArray *)aMessages __deprecated_msg(&quot;Use -messagesDidReceive: instead&quot;);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;- (void)didReceiveCmdMessages:(NSArray *)aCmdMessages __deprecated_msg(&quot;Use -cmdMessagesDidReceive: instead&quot;);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;- (void)didReceiveHasReadAcks:(NSArray *)aMessages __deprecated_msg(&quot;Use -messagesDidRead: instead&quot;);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;- (void)didReceiveHasDeliveredAcks:(NSArray *)aMessages __deprecated_msg(&quot;Use -messagesDidDeliver: instead&quot;);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;- (void)didMessageStatusChanged:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                          error:(<a class="code" href="interface_e_m_error.html">EMError</a> *)aError __deprecated_msg(&quot;Use -messageStatusDidChange:error: instead&quot;);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;- (void)didMessageAttachmentsStatusChanged:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                                     error:(<a class="code" href="interface_e_m_error.html">EMError</a> *)aError __deprecated_msg(&quot;Use -messageAttachmentStatusDidChange:error: instead&quot;);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="ainterface_e_m_chat_message_html"><div class="ttname"><a href="interface_e_m_chat_message.html">EMChatMessage</a></div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:66</div></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#pragma mark - Deprecated methods</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;- (void)messagesDidRecall:(NSArray *)aMessages __deprecated_msg(&quot;Use -messagesInfoDidRecall: instead&quot;);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;- (void)didUpdateConversationList:(NSArray *)aConversationList __deprecated_msg(&quot;Use -conversationListDidUpdate: instead&quot;);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;- (void)didReceiveMessages:(NSArray *)aMessages __deprecated_msg(&quot;Use -messagesDidReceive: instead&quot;);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;- (void)didReceiveCmdMessages:(NSArray *)aCmdMessages __deprecated_msg(&quot;Use -cmdMessagesDidReceive: instead&quot;);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;- (void)didReceiveHasReadAcks:(NSArray *)aMessages __deprecated_msg(&quot;Use -messagesDidRead: instead&quot;);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;- (void)didReceiveHasDeliveredAcks:(NSArray *)aMessages __deprecated_msg(&quot;Use -messagesDidDeliver: instead&quot;);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;- (void)didMessageStatusChanged:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                          error:(<a class="code" href="interface_e_m_error.html">EMError</a> *)aError __deprecated_msg(&quot;Use -messageStatusDidChange:error: instead&quot;);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;- (void)didMessageAttachmentsStatusChanged:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                                     error:(<a class="code" href="interface_e_m_error.html">EMError</a> *)aError __deprecated_msg(&quot;Use -messageAttachmentStatusDidChange:error: instead&quot;);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;- (void)messageReactionDidChange:(NSArray&lt;<a class="code" href="interface_e_m_message_reaction_change.html">EMMessageReactionChange</a> *&gt;*)changes;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="ainterface_e_m_chat_message_html"><div class="ttname"><a href="interface_e_m_chat_message.html">EMChatMessage</a></div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:67</div></div>
 <div class="ttc" id="ainterface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:27</div></div>
+<div class="ttc" id="ainterface_e_m_message_reaction_change_html"><div class="ttname"><a href="interface_e_m_message_reaction_change.html">EMMessageReactionChange</a></div><div class="ttdef"><b>Definition:</b> EMMessageReactionChange.h:16</div></div>
 <div class="ttc" id="ainterface_e_m_recall_message_info_html"><div class="ttname"><a href="interface_e_m_recall_message_info.html">EMRecallMessageInfo</a></div><div class="ttdef"><b>Definition:</b> EMRecallMessageInfo.h:14</div></div>
-<div class="ttc" id="aprotocol_e_m_chat_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_chat_manager_delegate-p.html">EMChatManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMChatManagerDelegate.h:28</div></div>
+<div class="ttc" id="aprotocol_e_m_chat_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_chat_manager_delegate-p.html">EMChatManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMChatManagerDelegate.h:29</div></div>
 <div class="ttc" id="aprotocol_e_m_chat_manager_delegate-p_html_aa209384b77e33fec99166cd129571b3e"><div class="ttname"><a href="protocol_e_m_chat_manager_delegate-p.html#aa209384b77e33fec99166cd129571b3e">-[EMChatManagerDelegate-p groupMessageAckHasChanged]</a></div><div class="ttdeci">void groupMessageAckHasChanged()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['kickalldeviceswithusername_3apassword_3a_434',['kickAllDevicesWithUsername:password:',['../interface_e_m_client.html#a0bcebc27a58245bd167aa7fd0f7d52cd',1,'EMClient']]],
-  ['kickalldeviceswithusername_3apassword_3acompletion_3a_435',['kickAllDevicesWithUsername:password:completion:',['../interface_e_m_client.html#a14aa695c8f2c868f3fd0adc80256a524',1,'EMClient']]],
-  ['kickdevice_3ausername_3apassword_3a_436',['kickDevice:username:password:',['../interface_e_m_client.html#a1ce62690183be02d433dabc3abb0c39e',1,'EMClient']]],
-  ['kickdevice_3ausername_3apassword_3acompletion_3a_437',['kickDevice:username:password:completion:',['../interface_e_m_client.html#a69e3f2da31de99d59259387eeff9b8b3',1,'EMClient']]],
-  ['kickdevicewithusername_3apassword_3aresource_3a_438',['kickDeviceWithUsername:password:resource:',['../interface_e_m_client.html#a3d73b721df8fd9475cba4c6ec00322b1',1,'EMClient']]],
-  ['kickdevicewithusername_3apassword_3aresource_3acompletion_3a_439',['kickDeviceWithUsername:password:resource:completion:',['../interface_e_m_client.html#a2ea6327d04f7352f9080f5a5253a1c06',1,'EMClient']]]
+  ['joinchatroom_3acompletion_3a_447',['joinChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a96972200755a19944a4fd3edd6e207c3',1,'IEMChatroomManager-p']]],
+  ['joinchatroom_3aerror_3a_448',['joinChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a32a8775b7719f1426e885f864464fb68',1,'IEMChatroomManager-p']]],
+  ['joingrouprequestdidapprove_3a_449',['joinGroupRequestDidApprove:',['../protocol_e_m_group_manager_delegate-p.html#a1a46522e3bda01d100e7d97766301cf3',1,'EMGroupManagerDelegate-p']]],
+  ['joingrouprequestdiddecline_3areason_3a_450',['joinGroupRequestDidDecline:reason:',['../protocol_e_m_group_manager_delegate-p.html#a04c19455375477181825935349cc4842',1,'EMGroupManagerDelegate-p']]],
+  ['joingrouprequestdidreceive_3auser_3areason_3a_451',['joinGroupRequestDidReceive:user:reason:',['../protocol_e_m_group_manager_delegate-p.html#ad7e38106f3c2471827c0831ee2189885',1,'EMGroupManagerDelegate-p']]],
+  ['joinpublicgroup_3acompletion_3a_452',['joinPublicGroup:completion:',['../protocol_i_e_m_group_manager-p.html#aef8fbbdc8cfa36e7d696836d0fddd0ef',1,'IEMGroupManager-p']]],
+  ['joinpublicgroup_3aerror_3a_453',['joinPublicGroup:error:',['../protocol_i_e_m_group_manager-p.html#ab8a4e26cd835e7bf13a9198c20aed1ec',1,'IEMGroupManager-p']]]
 ];
