@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.2</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.3</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -99,6 +99,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a7b647fa38c62bb24c2469a704d3f16d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dbf9754bb2aac24de1e0f313305dbd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a3dbf9754bb2aac24de1e0f313305dbd1">getAllMsgCount</a> ()</td></tr>
 <tr class="separator:a3dbf9754bb2aac24de1e0f313305dbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73bf6706f809747938cd417af8bd13c5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a73bf6706f809747938cd417af8bd13c5">isThread</a> ()</td></tr>
+<tr class="separator:a73bf6706f809747938cd417af8bd13c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86071c8df46550ed28307e2b5d6d6428"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a86071c8df46550ed28307e2b5d6d6428">loadMoreMsgFromDB</a> (String startMsgId, int pageSize)</td></tr>
 <tr class="separator:a86071c8df46550ed28307e2b5d6d6428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65516c8cf79bc61fe7b9676aca99c474"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a65516c8cf79bc61fe7b9676aca99c474">loadMoreMsgFromDB</a> (String startMsgId, int pageSize, <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a> direction)</td></tr>
@@ -293,6 +295,7 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >获取会话扩展字段。</p>
 <p >该字段只保存在本地，不进行网络同步。</p>
+<p >注意：Thread 会话下不会保存扩展字段。</p>
 <dl class="section return"><dt>返回</dt><dd>会话对应扩展字段的内容。 </dd></dl>
 
 </div>
@@ -468,6 +471,24 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >获取是否是群组或者聊天室会话。</p>
 <dl class="section return"><dt>返回</dt><dd>群组和聊天室类型都会返回 <code>true</code>，其他类型返回 <code>false</code>。 </dd></dl>
+
+</div>
+</div>
+<a id="a73bf6706f809747938cd417af8bd13c5" name="a73bf6706f809747938cd417af8bd13c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73bf6706f809747938cd417af8bd13c5">&#9670;&nbsp;</a></span>isThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.hyphenate.chat.EMConversation.isThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >判断当前会话是否是 Thread 会话 </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -972,8 +993,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置会话扩展字段。</p>
-<p >该字段只保存在本地，不进行网络同步。</p>
+<p >设置会话扩展字段。 该字段只保存在本地，不进行网络同步。 注意：Thread 会话下不会保存扩展字段。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">ext</td><td>会话对应扩展字段的内容。 </td></tr>
