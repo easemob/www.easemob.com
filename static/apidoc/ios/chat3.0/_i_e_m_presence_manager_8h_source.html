@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HyphenateChatSDK: HyphenateChat.framework/Headers/IEMPresenceManager.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">HyphenateChatSDK
+   &#160;<span id="projectnumber">3.9.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_11e5af770b5c23905322c5892c4a0475.html">HyphenateChat.framework</a></li><li class="navelem"><a class="el" href="dir_38aa8355931d853954b7e666bc80f215.html">Headers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">IEMPresenceManager.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="protocol_i_e_m_presence_manager-p.html#af16eccd8e3605ba3bd7d3af907167509">    1</a></span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  IEMPresenceManager.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  HyphenateChat</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by lixiaoming on 2022/1/14.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2022 easemob.com. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#import &quot;EMPresenceManagerDelegate.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#import &quot;EMError.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="protocol_i_e_m_presence_manager-p.html">   34</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_i_e_m_presence_manager-p.html">IEMPresenceManager</a> &lt;NSObject&gt;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;- (void) publishPresenceWithDescription:(NSString*)aDescription completion:(<span class="keywordtype">void</span>(^)(<a class="code" href="interface_e_m_error.html">EMError</a>*error))aCompletion;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;- (void) subscribe:(NSArray&lt;NSString*&gt;*)members expiry:(NSInteger)expiry completion:(<span class="keywordtype">void</span>(^)(NSArray&lt;<a class="code" href="interface_e_m_presence.html">EMPresence</a>*&gt;*presences,<a class="code" href="interface_e_m_error.html">EMError</a>*error))aCompletion;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;- (void) unsubscribe:(NSArray&lt;NSString*&gt;*) members completion:(<span class="keywordtype">void</span>(^)(<a class="code" href="interface_e_m_error.html">EMError</a>*error))aCompletion;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;- (void) fetchSubscribedMembersWithPageNum:(NSUInteger)pageNum pageSize:(NSUInteger)pageSize Completion:(<span class="keywordtype">void</span>(^)(NSArray&lt;NSString*&gt;* members,<a class="code" href="interface_e_m_error.html">EMError</a>*error))aCompletion;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;- (void) fetchPresenceStatus:(NSArray&lt;NSString*&gt;*)members completion:(<span class="keywordtype">void</span>(^)(NSArray&lt;<a class="code" href="interface_e_m_presence.html">EMPresence</a>*&gt;* presences,<a class="code" href="interface_e_m_error.html">EMError</a>*error))aCompletion;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;- (void) addDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_presence_manager_delegate-p.html">EMPresenceManagerDelegate</a>&gt;)aDelegate delegateQueue:(dispatch_queue_t)aQueue;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;- (void) removeDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_presence_manager_delegate-p.html">EMPresenceManagerDelegate</a>&gt;)aDelegate;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">/* IEMPresenceManager_h */</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="ttc" id="ainterface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:27</div></div>
+<div class="ttc" id="ainterface_e_m_presence_html"><div class="ttname"><a href="interface_e_m_presence.html">EMPresence</a></div><div class="ttdef"><b>Definition:</b> EMPresence.h:45</div></div>
+<div class="ttc" id="aprotocol_e_m_presence_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_presence_manager_delegate-p.html">EMPresenceManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMPresenceManagerDelegate.h:19</div></div>
+<div class="ttc" id="aprotocol_i_e_m_presence_manager-p_html"><div class="ttname"><a href="protocol_i_e_m_presence_manager-p.html">IEMPresenceManager-p</a></div><div class="ttdef"><b>Definition:</b> IEMPresenceManager.h:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,18 +1,7 @@
 var searchData=
 [
-  ['em_5fno_5ferror',['EM_NO_ERROR',['../classcom_1_1hyphenate_1_1EMError.html#aa7545e1abb745e45ea98288db422d9a4',1,'com::hyphenate::EMError']]],
-  ['emgroupstyleprivatemembercaninvite',['EMGroupStylePrivateMemberCanInvite',['../enumcom_1_1hyphenate_1_1chat_1_1EMGroupManager_1_1EMGroupStyle.html#a1f51e52fae7a25b740ec486282335d30',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
-  ['emgroupstyleprivateonlyownerinvite',['EMGroupStylePrivateOnlyOwnerInvite',['../enumcom_1_1hyphenate_1_1chat_1_1EMGroupManager_1_1EMGroupStyle.html#a059981b5d40681b7f3c42b5aa6ea4967',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
-  ['emgroupstylepublicjoinneedapproval',['EMGroupStylePublicJoinNeedApproval',['../enumcom_1_1hyphenate_1_1chat_1_1EMGroupManager_1_1EMGroupStyle.html#af241f64d82e50c11a644b6bfb221cd0e',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
-  ['emgroupstylepublicopenjoin',['EMGroupStylePublicOpenJoin',['../enumcom_1_1hyphenate_1_1chat_1_1EMGroupManager_1_1EMGroupStyle.html#a7e715664b7cf519ab6a4734f013a619c',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
-  ['enablefixedvideoresolution',['enableFixedVideoResolution',['../classcom_1_1hyphenate_1_1chat_1_1EMStreamParam.html#ab78fe86db5a29cb2548677ecc976ca68',1,'com::hyphenate::chat::EMStreamParam']]],
-  ['error_5fbusy',['ERROR_BUSY',['../enumcom_1_1hyphenate_1_1chat_1_1EMCallStateChangeListener_1_1CallError.html#aabd50d9ec74067b4a02aa9421239912f',1,'com::hyphenate::chat::EMCallStateChangeListener::CallError']]],
-  ['error_5fno_5fdata',['ERROR_NO_DATA',['../enumcom_1_1hyphenate_1_1chat_1_1EMCallStateChangeListener_1_1CallError.html#ac53371aa3c3342b8dab4fea366df51af',1,'com::hyphenate::chat::EMCallStateChangeListener::CallError']]],
-  ['error_5fnone',['ERROR_NONE',['../enumcom_1_1hyphenate_1_1chat_1_1EMCallStateChangeListener_1_1CallError.html#a05e939dde5b09411416d444918cc46df',1,'com::hyphenate::chat::EMCallStateChangeListener::CallError']]],
-  ['error_5fnoresponse',['ERROR_NORESPONSE',['../enumcom_1_1hyphenate_1_1chat_1_1EMCallStateChangeListener_1_1CallError.html#a2cb0e677b1cda5211a70fd67089cf9ff',1,'com::hyphenate::chat::EMCallStateChangeListener::CallError']]],
-  ['error_5ftransport',['ERROR_TRANSPORT',['../enumcom_1_1hyphenate_1_1chat_1_1EMCallStateChangeListener_1_1CallError.html#a9d445232fbf19ab6b97999ecf3432c0b',1,'com::hyphenate::chat::EMCallStateChangeListener::CallError']]],
-  ['error_5funavailable',['ERROR_UNAVAILABLE',['../enumcom_1_1hyphenate_1_1chat_1_1EMCallStateChangeListener_1_1CallError.html#ad9aa8a289a588b0c4ecea5ceb81bd047',1,'com::hyphenate::chat::EMCallStateChangeListener::CallError']]],
-  ['exceed_5fservice_5flimit',['EXCEED_SERVICE_LIMIT',['../classcom_1_1hyphenate_1_1EMError.html#a86230c3342586028bbe73b36aba0934c',1,'com::hyphenate::EMError']]],
-  ['extension',['extension',['../classcom_1_1hyphenate_1_1chat_1_1EMStreamParam.html#a65daa3acf8e0fc0b0e5b684b4265df77',1,'com::hyphenate::chat::EMStreamParam']]],
-  ['extfield',['extField',['../classcom_1_1hyphenate_1_1chat_1_1EMGroupOptions.html#a4eff1fc24b638e768b1ae00395f60b37',1,'com::hyphenate::chat::EMGroupOptions']]]
+  ['database_5ferror_0',['DATABASE_ERROR',['../classcom_1_1hyphenate_1_1_e_m_error.html#a9387c4a987c8d09552549ca59004bb3d',1,'com::hyphenate::EMError']]],
+  ['delete_1',['DELETE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_chat_thread_event_1_1_t_y_p_e.html#aed9bbdf80504c52ade5b5b52881b54dd',1,'com::hyphenate::chat::EMChatThreadEvent::TYPE']]],
+  ['discussiongroup_2',['DiscussionGroup',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_conversation_type.html#ae7ed9cfbd6afc1893d8c225e2310d7bf',1,'com::hyphenate::chat::EMConversation::EMConversationType']]],
+  ['down_3',['DOWN',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html#a81600c9b26032731d06e4c41bf405a58',1,'com::hyphenate::chat::EMConversation::EMSearchDirection']]]
 ];

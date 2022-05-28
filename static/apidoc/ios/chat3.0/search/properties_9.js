@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['mail_1157',['mail',['../interface_e_m_user_info.html#a987a594dc2d648866b5a261a34310d9a',1,'EMUserInfo']]],
-  ['maxoccupantscount_1158',['maxOccupantsCount',['../interface_e_m_chatroom.html#a1be7d7507769472b119c8c0c09bb2ba3',1,'EMChatroom']]],
-  ['maxuserscount_1159',['maxUsersCount',['../interface_e_m_chatroom_options.html#a0440ab078134a82d3b503959f72bbc36',1,'EMChatroomOptions::maxUsersCount()'],['../interface_e_m_group_options.html#a363499589cbb9040619c9a64c2ad27e9',1,'EMGroupOptions::maxUsersCount()']]],
-  ['memberlist_1160',['memberList',['../interface_e_m_chatroom.html#a34d173b5832db084d87cc79bc0056354',1,'EMChatroom::memberList()'],['../interface_e_m_group.html#a8b2008daad5e5dd62d95028efc69a18e',1,'EMGroup::memberList()']]],
-  ['messageid_1161',['messageId',['../interface_e_m_message.html#a3a85be4426c1f17888b8cb614c9e537c',1,'EMMessage']]],
-  ['mutelist_1162',['muteList',['../interface_e_m_chatroom.html#a707571b53e6156c353f128109e76d733',1,'EMChatroom::muteList()'],['../interface_e_m_group.html#adbe83d0dd7bf3b5e863ec416a8c55869',1,'EMGroup::muteList()']]]
+  ['languagecode_1349',['languageCode',['../interface_e_m_translate_language.html#a68b039445044f80276d2d4ea67df7ca9',1,'EMTranslateLanguage']]],
+  ['languagename_1350',['languageName',['../interface_e_m_translate_language.html#a5fa6b69fa7ff8e4ff2ae1f33b236e82e',1,'EMTranslateLanguage']]],
+  ['languagenativename_1351',['languageNativeName',['../interface_e_m_translate_language.html#aa8522612111f6574106f4e4019b6e956',1,'EMTranslateLanguage']]],
+  ['lasttime_1352',['lastTime',['../interface_e_m_presence.html#af2777db98efea4d29abaae850efd979a',1,'EMPresence']]],
+  ['latestmessage_1353',['latestMessage',['../interface_e_m_conversation.html#a6f0b08d0ed19fe13d1e3fa2743c0a779',1,'EMConversation']]],
+  ['latitude_1354',['latitude',['../interface_e_m_location_message_body.html#a250f22dfc88010c5243ba0f2f389d0e2',1,'EMLocationMessageBody']]],
+  ['list_1355',['list',['../interface_e_m_cursor_result.html#abf5113042bfaf11657f1fe8ad7120cb9',1,'EMCursorResult::list()'],['../interface_e_m_page_result.html#a98428683dcf514814854c995c975940e',1,'EMPageResult::list()']]],
+  ['localpath_1356',['localPath',['../interface_e_m_file_message_body.html#aa109e9466c919f0fe5c1c9ef37b5386d',1,'EMFileMessageBody']]],
+  ['localtime_1357',['localTime',['../interface_e_m_chat_message.html#a873ef9768ea4b79fa2f7423cd5d89e15',1,'EMChatMessage']]],
+  ['loglevel_1358',['logLevel',['../interface_e_m_options.html#a0532bf2756002f639f403bed4c8a589e',1,'EMOptions']]],
+  ['longitude_1359',['longitude',['../interface_e_m_location_message_body.html#a803a3f6cd011398d9f3125092359ce67',1,'EMLocationMessageBody']]]
 ];

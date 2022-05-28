@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['file_5fcontent_5fimproper',['FILE_CONTENT_IMPROPER',['../classcom_1_1hyphenate_1_1EMError.html#a20058bcfa7597e743d456ae39cc2e24c',1,'com::hyphenate::EMError']]],
-  ['file_5fdelete_5ffailed',['FILE_DELETE_FAILED',['../classcom_1_1hyphenate_1_1EMError.html#a62a0b701ddfeff5b28cf5cf2fa1f090a',1,'com::hyphenate::EMError']]],
-  ['file_5fdownload_5ffailed',['FILE_DOWNLOAD_FAILED',['../classcom_1_1hyphenate_1_1EMError.html#a0ed081a4d17b21982d4427da8dff8ecb',1,'com::hyphenate::EMError']]],
-  ['file_5finvalid',['FILE_INVALID',['../classcom_1_1hyphenate_1_1EMError.html#a9a2d473a2ef681dc3d27a7b5a74cd006',1,'com::hyphenate::EMError']]],
-  ['file_5fnot_5ffound',['FILE_NOT_FOUND',['../classcom_1_1hyphenate_1_1EMError.html#a789d29bfbc18af52b711103af9e2a2d3',1,'com::hyphenate::EMError']]],
-  ['file_5ftoo_5flarge',['FILE_TOO_LARGE',['../classcom_1_1hyphenate_1_1EMError.html#a08657b1c59175bb226403244d6409307',1,'com::hyphenate::EMError']]],
-  ['file_5fupload_5ffailed',['FILE_UPLOAD_FAILED',['../classcom_1_1hyphenate_1_1EMError.html#ad2311cd2907213d8df4d3292ef6aa296',1,'com::hyphenate::EMError']]]
+  ['em_5fno_5ferror_0',['EM_NO_ERROR',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa7545e1abb745e45ea98288db422d9a4',1,'com::hyphenate::EMError']]],
+  ['email_1',['EMAIL',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_1_1_e_m_user_info_type.html#ae7c433afe939b7d1d87993f049a934bf',1,'com::hyphenate::chat::EMUserInfo::EMUserInfoType']]],
+  ['emgroupstyleprivatemembercaninvite_2',['EMGroupStylePrivateMemberCanInvite',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#a1f51e52fae7a25b740ec486282335d30',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
+  ['emgroupstyleprivateonlyownerinvite_3',['EMGroupStylePrivateOnlyOwnerInvite',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#a059981b5d40681b7f3c42b5aa6ea4967',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
+  ['emgroupstylepublicjoinneedapproval_4',['EMGroupStylePublicJoinNeedApproval',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#af241f64d82e50c11a644b6bfb221cd0e',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
+  ['emgroupstylepublicopenjoin_5',['EMGroupStylePublicOpenJoin',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#a7e715664b7cf519ab6a4734f013a619c',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
+  ['exceed_5fservice_5flimit_6',['EXCEED_SERVICE_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a86230c3342586028bbe73b36aba0934c',1,'com::hyphenate::EMError']]],
+  ['ext_7',['EXT',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_1_1_e_m_user_info_type.html#a2351a2ccb4a17a93db785b170ab79276',1,'com::hyphenate::chat::EMUserInfo::EMUserInfoType']]],
+  ['extfield_8',['extField',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_options.html#a4eff1fc24b638e768b1ae00395f60b37',1,'com::hyphenate::chat::EMGroupOptions']]]
 ];
