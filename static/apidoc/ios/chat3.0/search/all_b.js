@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['kickalldeviceswithusername_3apassword_3a_454',['kickAllDevicesWithUsername:password:',['../interface_e_m_client.html#a0bcebc27a58245bd167aa7fd0f7d52cd',1,'EMClient']]],
-  ['kickalldeviceswithusername_3apassword_3acompletion_3a_455',['kickAllDevicesWithUsername:password:completion:',['../interface_e_m_client.html#a14aa695c8f2c868f3fd0adc80256a524',1,'EMClient']]],
-  ['kickdevice_3ausername_3apassword_3a_456',['kickDevice:username:password:',['../interface_e_m_client.html#a1ce62690183be02d433dabc3abb0c39e',1,'EMClient']]],
-  ['kickdevice_3ausername_3apassword_3acompletion_3a_457',['kickDevice:username:password:completion:',['../interface_e_m_client.html#a69e3f2da31de99d59259387eeff9b8b3',1,'EMClient']]],
-  ['kickdevicewithusername_3apassword_3aresource_3a_458',['kickDeviceWithUsername:password:resource:',['../interface_e_m_client.html#a3d73b721df8fd9475cba4c6ec00322b1',1,'EMClient']]],
-  ['kickdevicewithusername_3apassword_3aresource_3acompletion_3a_459',['kickDeviceWithUsername:password:resource:completion:',['../interface_e_m_client.html#a2ea6327d04f7352f9080f5a5253a1c06',1,'EMClient']]]
+  ['kickalldeviceswithusername_3apassword_3a',['kickAllDevicesWithUsername:password:',['../interface_e_m_client.html#a0bcebc27a58245bd167aa7fd0f7d52cd',1,'EMClient']]],
+  ['kickalldeviceswithusername_3apassword_3acompletion_3a',['kickAllDevicesWithUsername:password:completion:',['../interface_e_m_client.html#ae1eb5c87797533154e8648cc71412519',1,'EMClient']]],
+  ['kickdevice_3ausername_3apassword_3a',['kickDevice:username:password:',['../interface_e_m_client.html#a36cc86ab94efba16ec851260fb17605b',1,'EMClient']]],
+  ['kickdevice_3ausername_3apassword_3acompletion_3a',['kickDevice:username:password:completion:',['../interface_e_m_client.html#a20f75458d48493dd7dd26dd7c0576324',1,'EMClient']]],
+  ['kickdevicewithusername_3apassword_3aresource_3a',['kickDeviceWithUsername:password:resource:',['../interface_e_m_client.html#a3d73b721df8fd9475cba4c6ec00322b1',1,'EMClient']]],
+  ['kickdevicewithusername_3apassword_3aresource_3acompletion_3a',['kickDeviceWithUsername:password:resource:completion:',['../interface_e_m_client.html#a2625a66dd81facb24f0fcf48d6ad8b29',1,'EMClient']]]
 ];
