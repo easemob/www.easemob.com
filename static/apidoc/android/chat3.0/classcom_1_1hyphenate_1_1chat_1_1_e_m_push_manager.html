@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.3</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.4</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -128,6 +128,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ae7e7d8c046fa5cfffb091b806e5ae85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29f5a678f67932e2b151693b8689521e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a29f5a678f67932e2b151693b8689521e">getPreferredNotificationLanguage</a> (<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; String &gt; callBack)</td></tr>
 <tr class="separator:a29f5a678f67932e2b151693b8689521e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c49e8245c25954b2cc1a13e93b57e0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a3c49e8245c25954b2cc1a13e93b57e0f">bindDeviceToken</a> (String notifierName, String deviceToken, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callBack)</td></tr>
+<tr class="separator:a3c49e8245c25954b2cc1a13e93b57e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b854ee0ed036d9fb618e4326cb84b66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a6b854ee0ed036d9fb618e4326cb84b66">setPushTemplate</a> (String templateName, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callBack)</td></tr>
+<tr class="separator:a6b854ee0ed036d9fb618e4326cb84b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96fdf6f8942eeee919b5a516b9f3902"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#ac96fdf6f8942eeee919b5a516b9f3902">getPushTemplate</a> (<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; String &gt; callBack)</td></tr>
+<tr class="separator:ac96fdf6f8942eeee919b5a516b9f3902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >离线消息推送管理类，针对 GCM、小米、华为等离线推送以及 APNS。 </p>
@@ -258,6 +264,48 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="a3c49e8245c25954b2cc1a13e93b57e0f" name="a3c49e8245c25954b2cc1a13e93b57e0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c49e8245c25954b2cc1a13e93b57e0f">&#9670;&nbsp;</a></span>bindDeviceToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMPushManager.bindDeviceToken </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>notifierName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>deviceToken</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>&#160;</td>
+          <td class="paramname"><em>callBack</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >绑定设备token到环信服务器。 当deviceToken为空时，表示从环信服务器解绑当前设备的deviceToken </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notifierName</td><td>表示当前设备的ID，具体如下： FCM - Sender ID; 华为 - App ID; 小米 - App ID; 魅族 - App ID; OPPO - App Key; Vivo - App ID + "#" + App Key; </td></tr>
+    <tr><td class="paramname">deviceToken</td><td>当前设备返回的设备 Token . </td></tr>
+    <tr><td class="paramname">callBack</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4959c384aea0353056e9f281b7c81952" name="a4959c384aea0353056e9f281b7c81952"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4959c384aea0353056e9f281b7c81952">&#9670;&nbsp;</a></span>clearRemindTypeForConversation()</h2>
 
@@ -340,7 +388,7 @@ Public 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#setSilentModeForAll(EMSilentModeParam, EMValueCallBack)</a> 替代。</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000034">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#setSilentModeForAll(EMSilentModeParam, EMValueCallBack)</a> 替代。</dd></dl>
 
 </div>
 </div>
@@ -366,7 +414,7 @@ Public 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000032">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#setSilentModeForAll(EMSilentModeParam, EMValueCallBack)</a> 替代。</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#setSilentModeForAll(EMSilentModeParam, EMValueCallBack)</a> 替代。</dd></dl>
 
 </div>
 </div>
@@ -387,7 +435,7 @@ Public 成员函数</h2></td></tr>
 <p >获取关闭了离线消息推送的群组。</p>
 <p >同步方法，会阻塞当前线程。</p>
 <dl class="section return"><dt>返回</dt><dd>群组列表。 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000036">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#getSilentModeForConversation(String, EMConversation.EMConversationType, EMValueCallBack)</a> 替代，获取每个会话的免打扰设置来判断。</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000037">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#getSilentModeForConversation(String, EMConversation.EMConversationType, EMValueCallBack)</a> 替代，获取每个会话的免打扰设置来判断。</dd></dl>
 
 </div>
 </div>
@@ -407,7 +455,7 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >从缓存中获取关闭了离线消息推送的用户。</p>
 <p >注意： 如果需要获取最新的数据可先调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a0a17acea895200b8b3751d98bb295971">EMPushManager#getPushConfigsFromServer()</a> 后，再调用本方法。 </p><dl class="section return"><dt>返回</dt><dd>关闭了离线消息推送的用户列表。 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000037">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#getSilentModeForConversation(String, EMConversation.EMConversationType, EMValueCallBack)</a> 替代，获取每个会话的免打扰设置来判断。</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000038">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#getSilentModeForConversation(String, EMConversation.EMConversationType, EMValueCallBack)</a> 替代，获取每个会话的免打扰设置来判断。</dd></dl>
 
 </div>
 </div>
@@ -473,6 +521,30 @@ Public 成员函数</h2></td></tr>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
     <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含异常原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac96fdf6f8942eeee919b5a516b9f3902" name="ac96fdf6f8942eeee919b5a516b9f3902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac96fdf6f8942eeee919b5a516b9f3902">&#9670;&nbsp;</a></span>getPushTemplate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMPushManager.getPushTemplate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; String &gt;&#160;</td>
+          <td class="paramname"><em>callBack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >获取设置的离线推送模版。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callBack</td><td>完成回调。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -608,6 +680,41 @@ Public 成员函数</h2></td></tr>
 <p >设置用户推送翻译语言。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">languageCode</td><td>语言code。 </td></tr>
+    <tr><td class="paramname">callBack</td><td>完成回调。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6b854ee0ed036d9fb618e4326cb84b66" name="a6b854ee0ed036d9fb618e4326cb84b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b854ee0ed036d9fb618e4326cb84b66">&#9670;&nbsp;</a></span>setPushTemplate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMPushManager.setPushTemplate </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>templateName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>&#160;</td>
+          <td class="paramname"><em>callBack</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >设置离线推送的推送模版。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">templateName</td><td>模版名称。 </td></tr>
     <tr><td class="paramname">callBack</td><td>完成回调。 </td></tr>
   </table>
   </dd>
@@ -796,7 +903,7 @@ Public 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000034">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#setSilentModeForConversation(String, EMConversation.EMConversationType, EMSilentModeParam, EMValueCallBack)</a> 替代，设置每个会话的免打扰设置。</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#setSilentModeForConversation(String, EMConversation.EMConversationType, EMSilentModeParam, EMValueCallBack)</a> 替代，设置每个会话的免打扰设置。</dd></dl>
 
 </div>
 </div>
@@ -841,7 +948,7 @@ Public 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#setSilentModeForConversation(String, EMConversation.EMConversationType, EMSilentModeParam, EMValueCallBack)</a> 替代，设置每个会话的免打扰设置。</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000036">弃用:</a></b></dt><dd>使用 <a class="el" href="">EMPushManager#setSilentModeForConversation(String, EMConversation.EMConversationType, EMSilentModeParam, EMValueCallBack)</a> 替代，设置每个会话的免打扰设置。</dd></dl>
 
 </div>
 </div>
