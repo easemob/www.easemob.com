@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.3</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.4</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -86,11 +86,11 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:acd7609a32227d87b8bc09b265124ce5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >子区事件监听接口。 监听子区相关的事件，例如子区的创建及退出等事件。 </p><pre>
-    注册子区事件监听：
+<div class="textblock"><p >子区事件监听接口，监听子区相关事件，例如子区的创建及退出等事件。 </p><pre>
+    注册子区事件监听器：
     EMClient.getInstance().chatThreadManager().addChatThreadChangeListener(mChatThreadChangeListener);
 
-    解注册子区事件监听：
+    移除子区事件监听器：
     EMClient.getInstance().chatThreadManager().removeChatThreadChangeListener(mChatThreadChangeListener);
 </pre> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a5becbc17bdab97c20ce21330e135c2ef" name="a5becbc17bdab97c20ce21330e135c2ef"></a>
@@ -108,7 +108,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >子区创建通知。 全体群成员均可收到。 </p>
+<p >子区创建回调。</p>
+<p >子区所属群组的所有成员均可收到该回调。 </p>
 
 </div>
 </div>
@@ -127,7 +128,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >子区解散通知。 全体群成员均可收到。 </p>
+<p >子区解散回调。</p>
+<p >子区所属群组的所有成员均可收到该回调。 </p>
 
 </div>
 </div>
@@ -146,7 +148,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >子区更新通知，包括：子区名称更新，子区消息更新。 全体群成员均可收到。 </p>
+<p >子区更新回调。</p>
+<p >修改子区名称或子区中添加或撤销回复消息时会触发该回调。</p>
+<p >子区所属群组的所有成员均可收到该回调。 </p>
 
 </div>
 </div>
@@ -165,7 +169,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前登录用户被管理员移除出子区。 </p>
+<p >当前登录用户被群主或群管理员移出子区。 </p>
 
 </div>
 </div>
