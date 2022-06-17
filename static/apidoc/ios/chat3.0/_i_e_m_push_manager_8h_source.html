@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">3.9.3</span>
+   &#160;<span id="projectnumber">3.9.4</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;NS_ASSUME_NONNULL_BEGIN</div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="protocol_i_e_m_push_manager-p.html">   31</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_i_e_m_push_manager-p.html">IEMPushManager</a> &lt;NSObject&gt;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="protocol_i_e_m_push_manager-p.html#a88a750e47e4ac2d7099655187ba18dd5">   41</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) <a class="code" href="interface_e_m_push_options.html">EMPushOptions</a> *<a class="code" href="protocol_i_e_m_push_manager-p.html#a88a750e47e4ac2d7099655187ba18dd5">pushOptions</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="protocol_i_e_m_push_manager-p.html#a106aeb482017a639eb19535a1d41b576">   41</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) <a class="code" href="interface_e_m_push_options.html">EMPushOptions</a> *_Nullable <a class="code" href="protocol_i_e_m_push_manager-p.html#a106aeb482017a639eb19535a1d41b576">pushOptions</a>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly) NSArray *noPushUIds</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="protocol_i_e_m_push_manager-p.html#a4c8fde910a3ca2fc7e860202a6ea9bc5">EM_DEPRECATED_IOS</a>(3_8_4, 3_9_1, <span class="stringliteral">&quot;Use -getSilentModeForConversations:completion: instead&quot;</span>);</div>
@@ -147,49 +147,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    completion:(nonnull <span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> * aError))aCompletionBlock;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;- (<a class="code" href="interface_e_m_error.html">EMError</a> *)updatePushDisplayName:(NSString *)aDisplayName;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;- (<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable )updatePushDisplayName:(NSString * _Nonnull)aDisplayName;</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;- (void)updatePushDisplayName:(NSString * _Nonnull)aDisplayName</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                   completion:(<span class="keywordtype">void</span> (^)(NSString * _Nonnull aDisplayName, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;- (<a class="code" href="interface_e_m_push_options.html">EMPushOptions</a> *)getPushOptionsFromServerWithError:(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable *_Nullable)pError;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;- (<a class="code" href="interface_e_m_push_options.html">EMPushOptions</a> *_Nullable )getPushOptionsFromServerWithError:(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable *_Nullable)pError;</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;- (void)getPushNotificationOptionsFromServerWithCompletion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_push_options.html">EMPushOptions</a> *aOptions, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;- (void)getPushNotificationOptionsFromServerWithCompletion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_push_options.html">EMPushOptions</a> *_Nullable aOptions, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;- (void)setSilentModeForAll:(<a class="code" href="interface_e_m_silent_mode_param.html">EMSilentModeParam</a>*)aParam completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a> *aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;- (void)setSilentModeForAll:(<a class="code" href="interface_e_m_silent_mode_param.html">EMSilentModeParam</a>*_Nullable )aParam completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a> *_Nullable aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;-(void)getSilentModeForAllWithCompletion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a> *aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;-(void)getSilentModeForAllWithCompletion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a> *_Nullable aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;- (void)setSilentModeForConversation:(NSString*)aConversationId</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;- (void)setSilentModeForConversation:(NSString*_Nonnull)aConversationId</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                    conversationType:(EMConversationType)aConversationType</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                              params:(<a class="code" href="interface_e_m_silent_mode_param.html">EMSilentModeParam</a>*)aParam</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                          completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a> *aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;- (void)getSilentModeForConversation:(NSString*)aConversationId</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                              params:(<a class="code" href="interface_e_m_silent_mode_param.html">EMSilentModeParam</a>*_Nullable )aParam</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                          completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a> *_Nullable aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;- (void)getSilentModeForConversation:(NSString*_Nonnull)aConversationId</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                    conversationType:(EMConversationType)aConversationType</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                          completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a> *aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                          completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a> *_Nullable aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;- (void)clearRemindTypeForConversation:(NSString*)aConversationId</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;- (void)clearRemindTypeForConversation:(NSString*_Nonnull)aConversationId</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                      conversationType:(EMConversationType)aConversationType</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                            completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a> *aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                            completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a> *_Nullable aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;- (void)getSilentModeForConversations:(NSArray&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a>*&gt;*)aConversationArray</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                           completion:(<span class="keywordtype">void</span> (^)(NSDictionary&lt;NSString*,<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a>*&gt;*aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;- (void)getSilentModeForConversations:(NSArray&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *&gt;*_Nonnull)aConversationArray</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                           completion:(<span class="keywordtype">void</span> (^_Nullable )(NSDictionary&lt;NSString*,<a class="code" href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a>*&gt;*_Nullable aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;- (void)setPreferredNotificationLanguage:(NSString*)aLaguangeCode</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                              completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;- (void)getPreferredNotificationLanguageCompletion:(<span class="keywordtype">void</span> (^)(NSString *aLaguangeCode,<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;- (void)setPreferredNotificationLanguage:(NSString*_Nullable)aLaguangeCode</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                              completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;- (void)getPreferredNotificationLanguageCompletion:(<span class="keywordtype">void</span> (^_Nullable )(NSString *_Nullable aLaguangeCode,<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;NS_ASSUME_NONNULL_END</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;- (void)setPushTemplate:(NSString* _Nullable)aPushTemplateName</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;             completion:(<span class="keywordtype">void</span> (^ _Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;- (void)getPushTemplate:(<span class="keywordtype">void</span> (^ _Nullable)(NSString *_Nullable aPushTemplateName, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;NS_ASSUME_NONNULL_END</div>
 <div class="ttc" id="interface_e_m_push_options_html"><div class="ttname"><a href="interface_e_m_push_options.html">EMPushOptions</a></div><div class="ttdef"><b>Definition:</b> EMPushOptions.h:57</div></div>
 <div class="ttc" id="interface_e_m_conversation_html"><div class="ttname"><a href="interface_e_m_conversation.html">EMConversation</a></div><div class="ttdef"><b>Definition:</b> EMConversation.h:54</div></div>
+<div class="ttc" id="protocol_i_e_m_push_manager-p_html_a106aeb482017a639eb19535a1d41b576"><div class="ttname"><a href="protocol_i_e_m_push_manager-p.html#a106aeb482017a639eb19535a1d41b576">IEMPushManager-p::pushOptions</a></div><div class="ttdeci">EMPushOptions *_Nullable pushOptions</div><div class="ttdef"><b>Definition:</b> IEMPushManager.h:41</div></div>
 <div class="ttc" id="interface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:26</div></div>
-<div class="ttc" id="protocol_i_e_m_push_manager-p_html_a88a750e47e4ac2d7099655187ba18dd5"><div class="ttname"><a href="protocol_i_e_m_push_manager-p.html#a88a750e47e4ac2d7099655187ba18dd5">IEMPushManager-p::pushOptions</a></div><div class="ttdeci">EMPushOptions * pushOptions</div><div class="ttdef"><b>Definition:</b> IEMPushManager.h:41</div></div>
 <div class="ttc" id="protocol_i_e_m_push_manager-p_html_a4c8fde910a3ca2fc7e860202a6ea9bc5"><div class="ttname"><a href="protocol_i_e_m_push_manager-p.html#a4c8fde910a3ca2fc7e860202a6ea9bc5">-[IEMPushManager-p EM_DEPRECATED_IOS]</a></div><div class="ttdeci">3_7_3, 3_9_1,&quot;Use -setSilentModeForAll:completion: instead&quot; EM_DEPRECATED_IOS()</div></div>
 <div class="ttc" id="interface_e_m_silent_mode_result_html"><div class="ttname"><a href="interface_e_m_silent_mode_result.html">EMSilentModeResult</a></div><div class="ttdef"><b>Definition:</b> EMSilentModeResult.h:14</div></div>
 <div class="ttc" id="protocol_i_e_m_push_manager-p_html"><div class="ttname"><a href="protocol_i_e_m_push_manager-p.html">IEMPushManager-p</a></div><div class="ttdef"><b>Definition:</b> IEMPushManager.h:31</div></div>

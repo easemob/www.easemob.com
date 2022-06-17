@@ -7,7 +7,7 @@ var searchData=
   ['emchatroommanagerdelegate_2dp',['EMChatroomManagerDelegate-p',['../protocol_e_m_chatroom_manager_delegate-p.html',1,'']]],
   ['emchatroomoptions',['EMChatroomOptions',['../interface_e_m_chatroom_options.html',1,'']]],
   ['emchatthread',['EMChatThread',['../interface_e_m_chat_thread.html',1,'']]],
-  ['emchatthreadinfo',['EMChatThreadInfo',['../interface_e_m_chat_thread_info.html',1,'']]],
+  ['emchatthreadevent',['EMChatThreadEvent',['../interface_e_m_chat_thread_event.html',1,'']]],
   ['emchatthreadmanager',['EMChatThreadManager',['../interface_e_m_chat_thread_manager.html',1,'']]],
   ['emclient',['EMClient',['../interface_e_m_client.html',1,'']]],
   ['emclientdelegate_2dp',['EMClientDelegate-p',['../protocol_e_m_client_delegate-p.html',1,'']]],
@@ -46,7 +46,6 @@ var searchData=
   ['emsilentmoderesult',['EMSilentModeResult',['../interface_e_m_silent_mode_result.html',1,'']]],
   ['emsilentmodetime',['EMSilentModeTime',['../interface_e_m_silent_mode_time.html',1,'']]],
   ['emtextmessagebody',['EMTextMessageBody',['../interface_e_m_text_message_body.html',1,'']]],
-  ['emthreadevent',['EMThreadEvent',['../interface_e_m_thread_event.html',1,'']]],
   ['emthreadmanagerdelegate_2dp',['EMThreadManagerDelegate-p',['../protocol_e_m_thread_manager_delegate-p.html',1,'']]],
   ['emtranslatelanguage',['EMTranslateLanguage',['../interface_e_m_translate_language.html',1,'']]],
   ['emtranslationresult',['EMTranslationResult',['../interface_e_m_translation_result.html',1,'']]],
@@ -62,9 +61,9 @@ var searchData=
   ['enablefpa',['enableFpa',['../interface_e_m_options.html#a4d50ca70c321761d8b20436c6167ae28',1,'EMOptions']]],
   ['enablerequirereadack',['enableRequireReadAck',['../interface_e_m_options.html#adcd508269b083b742ab8dc3989a41c87',1,'EMOptions']]],
   ['errordescription',['errorDescription',['../interface_e_m_error.html#ac85262b511e0fd3c33dde07c991d0637',1,'EMError']]],
-  ['errorwithdescription_3acode_3a',['errorWithDescription:code:',['../interface_e_m_error.html#a6fd5e6492c94100feb0220444201380a',1,'EMError']]],
+  ['errorwithdescription_3acode_3a',['errorWithDescription:code:',['../interface_e_m_error.html#a3f671a1b07cac31293d01fa344fea3f4',1,'EMError']]],
   ['event',['event',['../interface_e_m_custom_message_body.html#ac86ff37b0c70d3795787fdfbe2321f92',1,'EMCustomMessageBody']]],
   ['expiretimestamp',['expireTimestamp',['../interface_e_m_silent_mode_result.html#a0cf446ebf8c119d8d2306546a1a115e2',1,'EMSilentModeResult']]],
   ['expirytime',['expirytime',['../interface_e_m_presence.html#a53007547fdfb3c7a3de53cd54973886f',1,'EMPresence']]],
-  ['ext',['ext',['../interface_e_m_chat_message.html#a4c2248b061049c55edfc5ce5bd849422',1,'EMChatMessage::ext()'],['../interface_e_m_conversation.html#a164480add35abfde2c733d264373388a',1,'EMConversation::ext()'],['../interface_e_m_group_options.html#a123965087ce79b1c78bcdaa7faa7dbd5',1,'EMGroupOptions::ext()'],['../interface_e_m_user_info.html#a9e63e98edf6cde47dabd8fb79fbe55fe',1,'EMUserInfo::ext()']]]
+  ['ext',['ext',['../interface_e_m_chat_message.html#a425b7aa39f5d611a4080df0b4994eec4',1,'EMChatMessage::ext()'],['../interface_e_m_conversation.html#a164480add35abfde2c733d264373388a',1,'EMConversation::ext()'],['../interface_e_m_group_options.html#a123965087ce79b1c78bcdaa7faa7dbd5',1,'EMGroupOptions::ext()'],['../interface_e_m_user_info.html#abc43756e417b0eb25c168c46c7909316',1,'EMUserInfo::ext()']]]
 ];
