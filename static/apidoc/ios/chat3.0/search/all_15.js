@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['version',['version',['../interface_e_m_client.html#ae0806b1523e5b49381660594a26d4fdf',1,'EMClient']]]
+  ['version_0',['version',['../interface_e_m_client.html#a6f456f10c1dce367f322feca1bb100f8',1,'EMClient::version()'],['../interface_e_m_client.html#acff90f1655e88f4acbad4b82dc93147e',1,'EMClient::version()']]]
 ];
