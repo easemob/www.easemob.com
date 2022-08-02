@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.4</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.5</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -122,6 +122,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aad9148480725369c1417c92691b07f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36b586d6857af51a6c58447de9e836c0"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a36b586d6857af51a6c58447de9e836c0">onSpecificationChanged</a> (<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html">EMGroup</a> group)</td></tr>
 <tr class="separator:a36b586d6857af51a6c58447de9e836c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a47736657c7f17f8e4534cb53e3e1b"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a51a47736657c7f17f8e4534cb53e3e1b">onStateChanged</a> (<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html">EMGroup</a> group, boolean isDisabled)</td></tr>
+<tr class="separator:a51a47736657c7f17f8e4534cb53e3e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >群组事件监听器。 监听群组相关的事件，例如，加群申请，群主同意或者拒绝加群，被踢群等事件。 </p><pre class="fragment">注册群组事件监听：
@@ -899,9 +901,44 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >群组信息更新回调。 </p><dl class="params"><dt>参数</dt><dd>
+<p >群组详情更新回调，需调用<a class="el" href="">com.hyphenate.chat.EMGroupManager#asyncGetGroupFromServer(String, EMValueCallBack)</a>获取最新群组信息。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">group</td><td>群组。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a51a47736657c7f17f8e4534cb53e3e1b" name="a51a47736657c7f17f8e4534cb53e3e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a47736657c7f17f8e4534cb53e3e1b">&#9670;&nbsp;</a></span>onStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMGroupChangeListener.onStateChanged </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html">EMGroup</a>&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>isDisabled</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >群组禁用或启动状态回调。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>群组。 </td></tr>
+    <tr><td class="paramname">isDisabled</td><td>是否禁用。 </td></tr>
   </table>
   </dd>
 </dl>
