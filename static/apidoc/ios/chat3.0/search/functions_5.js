@@ -6,5 +6,5 @@ var searchData=
   ['emusernotificationcenter_3adidreceivenotificationresponse_3awithcompletionhandler_3a',['emuserNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:',['../protocol_e_m_local_notification_delegate-p.html#abbb04f2197b864d812cbd213218f8811',1,'EMLocalNotificationDelegate-p']]],
   ['emusernotificationcenter_3aopensettingsfornotification_3a',['emuserNotificationCenter:openSettingsForNotification:',['../protocol_e_m_local_notification_delegate-p.html#ac8c15584349b2ee74015acf0e0d39b33',1,'EMLocalNotificationDelegate-p']]],
   ['emusernotificationcenter_3awillpresentnotification_3awithcompletionhandler_3a',['emuserNotificationCenter:willPresentNotification:withCompletionHandler:',['../protocol_e_m_local_notification_delegate-p.html#a9b8a94154cdadeaded95dd652720a871',1,'EMLocalNotificationDelegate-p']]],
-  ['errorwithdescription_3acode_3a',['errorWithDescription:code:',['../interface_e_m_error.html#a6fd5e6492c94100feb0220444201380a',1,'EMError']]]
+  ['errorwithdescription_3acode_3a',['errorWithDescription:code:',['../interface_e_m_error.html#a3f671a1b07cac31293d01fa344fea3f4',1,'EMError']]]
 ];
