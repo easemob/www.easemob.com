@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['pagecount_0',['PageCount',['../class_chat_s_d_k_1_1_page_result.html#a57c1f7e5a42330aa52f5e912c05a5100',1,'ChatSDK::PageResult']]],
+  ['pageresult_1',['PageResult',['../class_chat_s_d_k_1_1_page_result.html',1,'ChatSDK']]],
+  ['parentid_2',['ParentId',['../class_chat_s_d_k_1_1_chat_thread.html#ad2baacd51641dfc1ede3f6e54155f5e6',1,'ChatSDK::ChatThread']]],
+  ['pending_3',['PENDING',['../namespace_chat_s_d_k_1_1_message_body.html#aaf726446361a27af5fce4c80cdb499c2ac69f06e1a9b016d133907b4e5f5864d2',1,'ChatSDK::MessageBody']]],
+  ['permissiontype_4',['PermissionType',['../class_chat_s_d_k_1_1_group.html#aae9357197fd38f37dbe088bdbe41130b',1,'ChatSDK.Group.PermissionType()'],['../class_chat_s_d_k_1_1_room.html#a85c3bf2168f50329c19b2c9cceb39570',1,'ChatSDK.Room.PermissionType()']]],
+  ['phone_5',['PHONE',['../namespace_chat_s_d_k.html#aa90ecb15684d863fa25d0b3e84b241fcaf9dd946cc89c1f3b41a0edbe0f36931d',1,'ChatSDK']]],
+  ['phonenumber_6',['phoneNumber',['../class_chat_s_d_k_1_1_user_info.html#a62f085c7cc5e03eb47af6a02da06550c',1,'ChatSDK::UserInfo']]],
+  ['presence_7',['Presence',['../class_chat_s_d_k_1_1_presence.html',1,'ChatSDK']]],
+  ['presencedevicestatus_8',['PresenceDeviceStatus',['../class_chat_s_d_k_1_1_presence_device_status.html',1,'ChatSDK']]],
+  ['presencemanager_9',['PresenceManager',['../class_chat_s_d_k_1_1_s_d_k_client.html#ade4af7321c34cebcaed3942acb5aee12',1,'ChatSDK::SDKClient']]],
+  ['privatemembercaninvite_10',['PrivateMemberCanInvite',['../namespace_chat_s_d_k.html#a8c0efa51be2875eb9f6c95586ab7a48ea0c8440eea815539a303c6fd2e13a43b5',1,'ChatSDK']]],
+  ['privateonlyownerinvite_11',['PrivateOnlyOwnerInvite',['../namespace_chat_s_d_k.html#a8c0efa51be2875eb9f6c95586ab7a48eab7972563204619b46325c42085fbf966',1,'ChatSDK']]],
+  ['progress_12',['Progress',['../class_chat_s_d_k_1_1_call_back.html#ad1d93282cf3223ef1d43680e6fc5b623',1,'ChatSDK::CallBack']]],
+  ['progress_13',['PROGRESS',['../namespace_chat_s_d_k.html#a1be1a33b581b95d9a8e084a1e27a3c29aee88634543eb5c2b123bab1abd32c497',1,'ChatSDK']]],
+  ['publicjoinneedapproval_14',['PublicJoinNeedApproval',['../namespace_chat_s_d_k.html#a8c0efa51be2875eb9f6c95586ab7a48ea142af479e670a52cc352878005123164',1,'ChatSDK']]],
+  ['publicopenjoin_15',['PublicOpenJoin',['../namespace_chat_s_d_k.html#a8c0efa51be2875eb9f6c95586ab7a48eaef55941d4eb818852baf30de41820b9a',1,'ChatSDK']]],
+  ['publisher_16',['Publisher',['../class_chat_s_d_k_1_1_presence.html#a65b12f2a209ca0fd9bdfaa27c67daa2f',1,'ChatSDK::Presence']]],
+  ['publishpresence_17',['PublishPresence',['../class_chat_s_d_k_1_1_i_presence_manager.html#aafd0f77292f7175bdb1116192e24bdf7',1,'ChatSDK::IPresenceManager']]],
+  ['pushremindtype_18',['PushRemindType',['../namespace_chat_s_d_k.html#a1f60833baa96e55ac550f37fd1505c0e',1,'ChatSDK']]],
+  ['pushstyle_19',['PushStyle',['../namespace_chat_s_d_k.html#ab78e75b7fb64a0f18cb81df57e2be88b',1,'ChatSDK']]]
+];
