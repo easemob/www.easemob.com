@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['ichatmanager_0',['IChatManager',['../class_chat_s_d_k_1_1_i_chat_manager.html',1,'ChatSDK']]],
+  ['ichatmanagerdelegate_1',['IChatManagerDelegate',['../interface_chat_s_d_k_1_1_i_chat_manager_delegate.html',1,'ChatSDK']]],
+  ['ichatthreadmanager_2',['IChatThreadManager',['../class_chat_s_d_k_1_1_i_chat_thread_manager.html',1,'ChatSDK']]],
+  ['ichatthreadmanagerdelegate_3',['IChatThreadManagerDelegate',['../interface_chat_s_d_k_1_1_i_chat_thread_manager_delegate.html',1,'ChatSDK']]],
+  ['iconnectiondelegate_4',['IConnectionDelegate',['../interface_chat_s_d_k_1_1_i_connection_delegate.html',1,'ChatSDK']]],
+  ['icontactmanager_5',['IContactManager',['../class_chat_s_d_k_1_1_i_contact_manager.html',1,'ChatSDK']]],
+  ['icontactmanagerdelegate_6',['IContactManagerDelegate',['../interface_chat_s_d_k_1_1_i_contact_manager_delegate.html',1,'ChatSDK']]],
+  ['igroupmanager_7',['IGroupManager',['../class_chat_s_d_k_1_1_i_group_manager.html',1,'ChatSDK']]],
+  ['igroupmanagerdelegate_8',['IGroupManagerDelegate',['../interface_chat_s_d_k_1_1_i_group_manager_delegate.html',1,'ChatSDK']]],
+  ['imagebody_9',['ImageBody',['../class_chat_s_d_k_1_1_message_body_1_1_image_body.html',1,'ChatSDK::MessageBody']]],
+  ['imessagebody_10',['IMessageBody',['../class_chat_s_d_k_1_1_i_message_body.html',1,'ChatSDK']]],
+  ['imultidevicedelegate_11',['IMultiDeviceDelegate',['../interface_chat_s_d_k_1_1_i_multi_device_delegate.html',1,'ChatSDK']]],
+  ['ipresencemanager_12',['IPresenceManager',['../class_chat_s_d_k_1_1_i_presence_manager.html',1,'ChatSDK']]],
+  ['ipresencemanagerdelegate_13',['IPresenceManagerDelegate',['../interface_chat_s_d_k_1_1_i_presence_manager_delegate.html',1,'ChatSDK']]],
+  ['iroommanager_14',['IRoomManager',['../class_chat_s_d_k_1_1_i_room_manager.html',1,'ChatSDK']]],
+  ['iroommanagerdelegate_15',['IRoomManagerDelegate',['../interface_chat_s_d_k_1_1_i_room_manager_delegate.html',1,'ChatSDK']]],
+  ['iuserinfomanager_16',['IUserInfoManager',['../class_chat_s_d_k_1_1_i_user_info_manager.html',1,'ChatSDK']]]
+];

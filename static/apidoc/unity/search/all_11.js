@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['targetlanguages_0',['TargetLanguages',['../class_chat_s_d_k_1_1_message_body_1_1_text_body.html#a37e2803886f30cbb54a8ad165c2b2955',1,'ChatSDK::MessageBody::TextBody']]],
+  ['text_1',['Text',['../class_chat_s_d_k_1_1_message_body_1_1_text_body.html#aec604affdd4741dc1badb1bf835083e0',1,'ChatSDK::MessageBody::TextBody']]],
+  ['textbody_2',['TextBody',['../class_chat_s_d_k_1_1_message_body_1_1_text_body.html',1,'ChatSDK.MessageBody.TextBody'],['../class_chat_s_d_k_1_1_message_body_1_1_text_body.html#a38ae64dbabd6b211bf894c3aad24a62f',1,'ChatSDK.MessageBody.TextBody.TextBody()']]],
+  ['thread_5fcreate_3',['THREAD_CREATE',['../namespace_chat_s_d_k.html#ae6be5ab350036c9da8ae5d76acc24e99ae41412584e633105840eb080f691ad63',1,'ChatSDK']]],
+  ['thread_5fdestroy_4',['THREAD_DESTROY',['../namespace_chat_s_d_k.html#ae6be5ab350036c9da8ae5d76acc24e99a3f70653411fc6c66cf8420e14ed30d43',1,'ChatSDK']]],
+  ['thread_5fjoin_5',['THREAD_JOIN',['../namespace_chat_s_d_k.html#ae6be5ab350036c9da8ae5d76acc24e99a6713ce8cb6b8d55c2683015ff7b5577f',1,'ChatSDK']]],
+  ['thread_5fkick_6',['THREAD_KICK',['../namespace_chat_s_d_k.html#ae6be5ab350036c9da8ae5d76acc24e99aaf7afd57e7e9ddabf13663ec65039c3e',1,'ChatSDK']]],
+  ['thread_5fleave_7',['THREAD_LEAVE',['../namespace_chat_s_d_k.html#ae6be5ab350036c9da8ae5d76acc24e99ae7e1699aadb1f48d7f25d560259a0641',1,'ChatSDK']]],
+  ['thread_5fupdate_8',['THREAD_UPDATE',['../namespace_chat_s_d_k.html#ae6be5ab350036c9da8ae5d76acc24e99af86276d13f07d5cd115e0fbb20e20aca',1,'ChatSDK']]],
+  ['threadmanager_9',['ThreadManager',['../class_chat_s_d_k_1_1_s_d_k_client.html#a6ce9c19732ddb7cea53e081198901945',1,'ChatSDK::SDKClient']]],
+  ['thumbnaidownstatus_10',['ThumbnaiDownStatus',['../class_chat_s_d_k_1_1_message_body_1_1_image_body.html#a357d787262454a714c9c98f2a132b3f6',1,'ChatSDK::MessageBody::ImageBody']]],
+  ['thumbnaillocalpath_11',['ThumbnailLocalPath',['../class_chat_s_d_k_1_1_message_body_1_1_image_body.html#a52ad95d239a989a9d39bae4a9c439a7d',1,'ChatSDK::MessageBody::ImageBody']]],
+  ['thumbnailocationpath_12',['ThumbnaiLocationPath',['../class_chat_s_d_k_1_1_message_body_1_1_video_body.html#a775eb20c496935d117cc70b02e41b966',1,'ChatSDK::MessageBody::VideoBody']]],
+  ['thumbnairemotepath_13',['ThumbnaiRemotePath',['../class_chat_s_d_k_1_1_message_body_1_1_image_body.html#aafb830943f73cc5ed1157931ea7a3ab5',1,'ChatSDK.MessageBody.ImageBody.ThumbnaiRemotePath()'],['../class_chat_s_d_k_1_1_message_body_1_1_video_body.html#ab98292f5553d05a05c81bd90a97d8887',1,'ChatSDK.MessageBody.VideoBody.ThumbnaiRemotePath()']]],
+  ['thumbnaisecret_14',['ThumbnaiSecret',['../class_chat_s_d_k_1_1_message_body_1_1_image_body.html#a8b14bbb88ee12a7d7f46d48313e5f65c',1,'ChatSDK.MessageBody.ImageBody.ThumbnaiSecret()'],['../class_chat_s_d_k_1_1_message_body_1_1_video_body.html#a6c67d314d5542b31aea839630e38121f',1,'ChatSDK.MessageBody.VideoBody.ThumbnaiSecret()']]],
+  ['tid_15',['Tid',['../class_chat_s_d_k_1_1_chat_thread.html#a594fd34f895b989e4fa36ba13e16d634',1,'ChatSDK::ChatThread']]],
+  ['timestamp_16',['Timestamp',['../class_chat_s_d_k_1_1_group_read_ack.html#a5153d122078f5647063ecb8c48509f8a',1,'ChatSDK::GroupReadAck']]],
+  ['to_17',['To',['../class_chat_s_d_k_1_1_message.html#ac44ba053d3e5fd9a644c4be03d24dba0',1,'ChatSDK::Message']]],
+  ['translatemessage_18',['TranslateMessage',['../class_chat_s_d_k_1_1_i_chat_manager.html#a4dbd226d5332c6163f7c9a410cd08072',1,'ChatSDK::IChatManager']]],
+  ['translations_19',['Translations',['../class_chat_s_d_k_1_1_message_body_1_1_text_body.html#a56094e8883d3cd536564cf59359d6397',1,'ChatSDK::MessageBody::TextBody']]],
+  ['txt_20',['TXT',['../namespace_chat_s_d_k.html#a11049e06d0233c64227ccb87dc9587eaa5956a437e724cdfc8b1c70dc7bdeebcb',1,'ChatSDK']]],
+  ['type_21',['Type',['../class_chat_s_d_k_1_1_conversation.html#a885033f6074f8bf2fbff62160f73753f',1,'ChatSDK::Conversation']]]
+];

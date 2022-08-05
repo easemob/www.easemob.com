@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['acceptgroupinvitation_0',['AcceptGroupInvitation',['../class_chat_s_d_k_1_1_i_group_manager.html#a389d91524aec937367963b1bcef94dc0',1,'ChatSDK::IGroupManager']]],
+  ['acceptgroupjoinapplication_1',['AcceptGroupJoinApplication',['../class_chat_s_d_k_1_1_i_group_manager.html#a970818b3dc94d0b835480bc4b738b341',1,'ChatSDK::IGroupManager']]],
+  ['acceptinvitation_2',['AcceptInvitation',['../class_chat_s_d_k_1_1_i_contact_manager.html#afe0a00318328e40a601b1a30f385b70e',1,'ChatSDK::IContactManager']]],
+  ['addchatmanagerdelegate_3',['AddChatManagerDelegate',['../class_chat_s_d_k_1_1_i_chat_manager.html#a3c2a429ac840f74cd2d2b28e1f00cf5b',1,'ChatSDK::IChatManager']]],
+  ['addconnectiondelegate_4',['AddConnectionDelegate',['../class_chat_s_d_k_1_1_s_d_k_client.html#a33b1dc4b5ce38186699309416883372c',1,'ChatSDK::SDKClient']]],
+  ['addcontact_5',['AddContact',['../class_chat_s_d_k_1_1_i_contact_manager.html#a51dd2b93fe5c2669d5f880480c61c54d',1,'ChatSDK::IContactManager']]],
+  ['addcontactmanagerdelegate_6',['AddContactManagerDelegate',['../class_chat_s_d_k_1_1_i_contact_manager.html#ab0490bbcc6f7bf7dca9f82ef2cd35fa4',1,'ChatSDK::IContactManager']]],
+  ['addgroupadmin_7',['AddGroupAdmin',['../class_chat_s_d_k_1_1_i_group_manager.html#a018adfae1a6af67f7d708a1d4686637f',1,'ChatSDK::IGroupManager']]],
+  ['addgroupmanagerdelegate_8',['AddGroupManagerDelegate',['../class_chat_s_d_k_1_1_i_group_manager.html#afaca60ab6f2d7a4cb35ce662401a2c59',1,'ChatSDK::IGroupManager']]],
+  ['addgroupmembers_9',['AddGroupMembers',['../class_chat_s_d_k_1_1_i_group_manager.html#a40ea38ce637404af53177ccc6c350571',1,'ChatSDK::IGroupManager']]],
+  ['addgroupwhitelist_10',['AddGroupWhiteList',['../class_chat_s_d_k_1_1_i_group_manager.html#a3c1f83cae2badccdc6b7e61b71403a49',1,'ChatSDK::IGroupManager']]],
+  ['addmultidevicedelegate_11',['AddMultiDeviceDelegate',['../class_chat_s_d_k_1_1_s_d_k_client.html#aa66c180a7d9d1b4a138f0bed4d6901eb',1,'ChatSDK::SDKClient']]],
+  ['addpresencemanagerdelegate_12',['AddPresenceManagerDelegate',['../class_chat_s_d_k_1_1_i_presence_manager.html#a1c0eb249fed4b90a8e2d1d7eeba9be3b',1,'ChatSDK::IPresenceManager']]],
+  ['addreaction_13',['AddReaction',['../class_chat_s_d_k_1_1_i_chat_manager.html#a1e65e9e04598bf4981b9bc10166f6bf7',1,'ChatSDK::IChatManager']]],
+  ['addroomadmin_14',['AddRoomAdmin',['../class_chat_s_d_k_1_1_i_room_manager.html#a5ac30295e5658b161122ef25376851ee',1,'ChatSDK::IRoomManager']]],
+  ['addroommanagerdelegate_15',['AddRoomManagerDelegate',['../class_chat_s_d_k_1_1_i_room_manager.html#acd137e8d129fe7223931d3810d4615b8',1,'ChatSDK::IRoomManager']]],
+  ['addthreadmanagerdelegate_16',['AddThreadManagerDelegate',['../class_chat_s_d_k_1_1_i_chat_thread_manager.html#ab32cd27f26dd4b3962ea9caae09088d2',1,'ChatSDK::IChatThreadManager']]],
+  ['addusertoblocklist_17',['AddUserToBlockList',['../class_chat_s_d_k_1_1_i_contact_manager.html#a647fd5847f56a6e93a9156ef5ab36398',1,'ChatSDK::IContactManager']]],
+  ['addwhitelistmembers_18',['AddWhiteListMembers',['../class_chat_s_d_k_1_1_i_room_manager.html#ab74d69101d6b92ccd64390a9a21f7d63',1,'ChatSDK::IRoomManager']]],
+  ['appendmessage_19',['AppendMessage',['../class_chat_s_d_k_1_1_conversation.html#acc184f88a39ac7f235e68516a739fdcc',1,'ChatSDK::Conversation']]],
+  ['applyjointogroup_20',['applyJoinToGroup',['../class_chat_s_d_k_1_1_i_group_manager.html#aa5f709fae95057600ec05e983cfd53a6',1,'ChatSDK::IGroupManager']]]
+];

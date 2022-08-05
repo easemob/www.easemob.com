@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['declinegroupinvitation_0',['DeclineGroupInvitation',['../class_chat_s_d_k_1_1_i_group_manager.html#a54e403692be978a0eab78298d574569f',1,'ChatSDK::IGroupManager']]],
+  ['declinegroupjoinapplication_1',['DeclineGroupJoinApplication',['../class_chat_s_d_k_1_1_i_group_manager.html#a172276cdc7b4a3362668f2d5e7524dd6',1,'ChatSDK::IGroupManager']]],
+  ['declineinvitation_2',['DeclineInvitation',['../class_chat_s_d_k_1_1_i_contact_manager.html#ab6bc7172d3d1c44fbbca141dd315ad91',1,'ChatSDK::IContactManager']]],
+  ['deleteallmessages_3',['DeleteAllMessages',['../class_chat_s_d_k_1_1_conversation.html#af3fd725c7e76617828490fe6bb774f50',1,'ChatSDK::Conversation']]],
+  ['deleteconnectiondelegate_4',['DeleteConnectionDelegate',['../class_chat_s_d_k_1_1_s_d_k_client.html#a86a4da5b325f01c8644dcf12c17fdd1a',1,'ChatSDK::SDKClient']]],
+  ['deletecontact_5',['DeleteContact',['../class_chat_s_d_k_1_1_i_contact_manager.html#ab6804a50d6c4c4569ff4d6e9014062d1',1,'ChatSDK::IContactManager']]],
+  ['deleteconversation_6',['DeleteConversation',['../class_chat_s_d_k_1_1_i_chat_manager.html#ab9f405380ba58bef5585e2e76af3e7ea',1,'ChatSDK::IChatManager']]],
+  ['deleteconversationfromserver_7',['DeleteConversationFromServer',['../class_chat_s_d_k_1_1_i_chat_manager.html#a5c53dfa00856fc6420a48056c47cbd34',1,'ChatSDK::IChatManager']]],
+  ['deletegroupmembers_8',['DeleteGroupMembers',['../class_chat_s_d_k_1_1_i_group_manager.html#a43145fff8ec5ea88799ad08cdf4283a6',1,'ChatSDK::IGroupManager']]],
+  ['deletegroupsharedfile_9',['DeleteGroupSharedFile',['../class_chat_s_d_k_1_1_i_group_manager.html#a9fafb8236511e401e4a3e186459eba11',1,'ChatSDK::IGroupManager']]],
+  ['deletemessage_10',['DeleteMessage',['../class_chat_s_d_k_1_1_conversation.html#a985003a3fbed5825b6c87d7bd6ede8f7',1,'ChatSDK::Conversation']]],
+  ['deletemultidevicedelegate_11',['DeleteMultiDeviceDelegate',['../class_chat_s_d_k_1_1_s_d_k_client.html#af9a773cc3ead3b3f5aa442e912391d86',1,'ChatSDK::SDKClient']]],
+  ['deleteroommembers_12',['DeleteRoomMembers',['../class_chat_s_d_k_1_1_i_room_manager.html#a46ab221c623e7280b580facf690dedfa',1,'ChatSDK::IRoomManager']]],
+  ['destroygroup_13',['DestroyGroup',['../class_chat_s_d_k_1_1_i_group_manager.html#a697258fdbaa5420aef80dca349f30aa9',1,'ChatSDK::IGroupManager']]],
+  ['destroyroom_14',['DestroyRoom',['../class_chat_s_d_k_1_1_i_room_manager.html#a2d3e7309e97db291cfd1ffbaa1bd39bb',1,'ChatSDK::IRoomManager']]],
+  ['destroythread_15',['DestroyThread',['../class_chat_s_d_k_1_1_i_chat_thread_manager.html#a8dc3b4eced7eb9a18cf31caeace7790a',1,'ChatSDK::IChatThreadManager']]],
+  ['downloadattachment_16',['DownloadAttachment',['../class_chat_s_d_k_1_1_i_chat_manager.html#a1e89a0b6e59961dbbc0c0050dec1f34e',1,'ChatSDK::IChatManager']]],
+  ['downloadgroupsharedfile_17',['DownloadGroupSharedFile',['../class_chat_s_d_k_1_1_i_group_manager.html#aed84db20befc32f25f43d5fbc614f76d',1,'ChatSDK::IGroupManager']]],
+  ['downloadthumbnail_18',['DownloadThumbnail',['../class_chat_s_d_k_1_1_i_chat_manager.html#a6b04995610c29c4b90dc9f038d6d78fe',1,'ChatSDK::IChatManager']]]
+];

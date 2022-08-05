@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['getallcontactsfromdb_0',['GetAllContactsFromDB',['../class_chat_s_d_k_1_1_i_contact_manager.html#af4906d4239ce8778aef32f815f6f42a6',1,'ChatSDK::IContactManager']]],
+  ['getallcontactsfromserver_1',['GetAllContactsFromServer',['../class_chat_s_d_k_1_1_i_contact_manager.html#ab153a897d5787204300137d383718020',1,'ChatSDK::IContactManager']]],
+  ['getattributevalue_3c_20t_20_3e_2',['GetAttributeValue&lt; T &gt;',['../class_chat_s_d_k_1_1_message.html#aff2e9094112aa34ec3537458c89f85c2',1,'ChatSDK.Message.GetAttributeValue&lt; T &gt;(AttributeValue value, out bool found)'],['../class_chat_s_d_k_1_1_message.html#a898c2d254b3e99c9f843dfdb1c0d8972',1,'ChatSDK.Message.GetAttributeValue&lt; T &gt;(Dictionary&lt; string, AttributeValue &gt; arriMap, string key, out bool found)']]],
+  ['getattributevaluetype_3',['GetAttributeValueType',['../class_chat_s_d_k_1_1_message.html#ae9bf332b92b073a9a7fa13a0cd1a2be5',1,'ChatSDK::Message']]],
+  ['getblocklistfromserver_4',['GetBlockListFromServer',['../class_chat_s_d_k_1_1_i_contact_manager.html#a80c649411933211e1711c6d3cda4ac9a',1,'ChatSDK::IContactManager']]],
+  ['getconversation_5',['GetConversation',['../class_chat_s_d_k_1_1_i_chat_manager.html#a3c70e21d8e4393227b3a0d5bb0e59f63',1,'ChatSDK::IChatManager']]],
+  ['getconversationsfromserver_6',['GetConversationsFromServer',['../class_chat_s_d_k_1_1_i_chat_manager.html#af693d23b5a31ede84b6c684447cdd730',1,'ChatSDK::IChatManager']]],
+  ['getgroupannouncementfromserver_7',['GetGroupAnnouncementFromServer',['../class_chat_s_d_k_1_1_i_group_manager.html#a016b068cb554f39d5bf075b1886b35a8',1,'ChatSDK::IGroupManager']]],
+  ['getgroupblocklistfromserver_8',['GetGroupBlockListFromServer',['../class_chat_s_d_k_1_1_i_group_manager.html#aa577b73f1e98b1853defbb1bab10262e',1,'ChatSDK::IGroupManager']]],
+  ['getgroupfilelistfromserver_9',['GetGroupFileListFromServer',['../class_chat_s_d_k_1_1_i_group_manager.html#a9f73c584d79b36653ca92eef3b42f174',1,'ChatSDK::IGroupManager']]],
+  ['getgroupmemberlistfromserver_10',['GetGroupMemberListFromServer',['../class_chat_s_d_k_1_1_i_group_manager.html#a9438da6a8a0eb577009883a785a046fa',1,'ChatSDK::IGroupManager']]],
+  ['getgroupmutelistfromserver_11',['GetGroupMuteListFromServer',['../class_chat_s_d_k_1_1_i_group_manager.html#aa748d349aca598f3af6722fd6a80961c',1,'ChatSDK::IGroupManager']]],
+  ['getgroupspecificationfromserver_12',['GetGroupSpecificationFromServer',['../class_chat_s_d_k_1_1_i_group_manager.html#a2c5682430808a8e101a10ba31b1da7e6',1,'ChatSDK::IGroupManager']]],
+  ['getgroupwhitelistfromserver_13',['GetGroupWhiteListFromServer',['../class_chat_s_d_k_1_1_i_group_manager.html#a79119d0018c295b5287208d58c48e02c',1,'ChatSDK::IGroupManager']]],
+  ['getgroupwithid_14',['GetGroupWithId',['../class_chat_s_d_k_1_1_i_group_manager.html#a8c9b29feb6081b9a9ad32d424409cdf8',1,'ChatSDK::IGroupManager']]],
+  ['getjoinedgroups_15',['GetJoinedGroups',['../class_chat_s_d_k_1_1_i_group_manager.html#ac29309995cc8e4de95e07913e0cd6088',1,'ChatSDK::IGroupManager']]],
+  ['getlastmessageaccordingthreads_16',['GetLastMessageAccordingThreads',['../class_chat_s_d_k_1_1_i_chat_thread_manager.html#af737e4ddd57a79b72335cf2d1210a2eb',1,'ChatSDK::IChatThreadManager']]],
+  ['getreactiondetail_17',['GetReactionDetail',['../class_chat_s_d_k_1_1_i_chat_manager.html#a38b190eb26079e2451cd6d905c7f9a0d',1,'ChatSDK::IChatManager']]],
+  ['getreactionlist_18',['GetReactionList',['../class_chat_s_d_k_1_1_i_chat_manager.html#a66b97c51139387e9d33963a65b738d55',1,'ChatSDK::IChatManager']]],
+  ['getselfidsonotherplatform_19',['GetSelfIdsOnOtherPlatform',['../class_chat_s_d_k_1_1_i_contact_manager.html#a81eccb8505f9d1de3192a4c2e6a86e84',1,'ChatSDK::IContactManager']]],
+  ['getthreadconversation_20',['GetThreadConversation',['../class_chat_s_d_k_1_1_i_chat_manager.html#aaf6ff3882f0bb3d8cd7a045d1d1c8b0a',1,'ChatSDK::IChatManager']]],
+  ['getthreaddetail_21',['GetThreadDetail',['../class_chat_s_d_k_1_1_i_chat_thread_manager.html#a1b51099ff5e6895e4d0109da4d393a4a',1,'ChatSDK::IChatThreadManager']]],
+  ['getunreadmessagecount_22',['GetUnreadMessageCount',['../class_chat_s_d_k_1_1_i_chat_manager.html#ae0b51ca3f81dee6cede208d46815e9cb',1,'ChatSDK::IChatManager']]],
+  ['groupoptions_23',['GroupOptions',['../class_chat_s_d_k_1_1_group_options.html#a8c4cb0d0b8ff1471b70cd022b1dc6e5d',1,'ChatSDK::GroupOptions']]]
+];
