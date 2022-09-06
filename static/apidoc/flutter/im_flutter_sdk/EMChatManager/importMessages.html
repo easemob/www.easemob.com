@@ -64,7 +64,7 @@
 <p>只能将当前用户发送或接收的消息导入本地数据库。
 已经对函数做过速度优化，推荐一次导入 1,000 条以内的数据。</p>
 <p>Param <code>messages</code> 需要导入数据库的消息。</p>
-<p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 {@link EMError}。</p>
+<p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
 </section>
 
 
@@ -77,8 +77,8 @@
     list.add(element.toJson());
   });
   Map req = {&quot;messages&quot;: list};
-  Map result = await EMMethodChannel.ChatManager.invokeMethod(
-      ChatMethodKeys.importMessages, req);
+  Map result =
+      await ChatChannel.invokeMethod(ChatMethodKeys.importMessages, req);
   try {
     EMError.hasErrorFromResult(result);
   } on EMError catch (e) {
@@ -117,10 +117,11 @@
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
 
     <li class="section-title"><a href="../../im_flutter_sdk/EMChatManager-class.html#instance-methods">Methods</a></li>
-    <li><a href="../../im_flutter_sdk/EMChatManager/addChatManagerListener.html">addChatManagerListener</a></li>
+    <li><a href="../../im_flutter_sdk/EMChatManager/addEventHandler.html">addEventHandler</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/addReaction.html">addReaction</a></li>
-    <li><a href="../../im_flutter_sdk/EMChatManager/clearAllChatManagerListeners.html">clearAllChatManagerListeners</a></li>
+    <li><a href="../../im_flutter_sdk/EMChatManager/clearEventHandlers.html">clearEventHandlers</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/deleteConversation.html">deleteConversation</a></li>
+    <li><a href="../../im_flutter_sdk/EMChatManager/deleteMessagesBefore.html">deleteMessagesBefore</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/deleteRemoteConversation.html">deleteRemoteConversation</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/downloadAttachment.html">downloadAttachment</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/downloadThumbnail.html">downloadThumbnail</a></li>
@@ -131,6 +132,8 @@
     <li><a href="../../im_flutter_sdk/EMChatManager/fetchSupportedLanguages.html">fetchSupportedLanguages</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/getConversation.html">getConversation</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/getConversationsFromServer.html">getConversationsFromServer</a></li>
+    <li><a href="../../im_flutter_sdk/EMChatManager/getEventHandler.html">getEventHandler</a></li>
+    <li><a href="../../im_flutter_sdk/EMChatManager/getThreadConversation.html">getThreadConversation</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/getUnreadMessageCount.html">getUnreadMessageCount</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/importMessages.html">importMessages</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/loadAllConversations.html">loadAllConversations</a></li>
@@ -138,7 +141,7 @@
     <li><a href="../../im_flutter_sdk/EMChatManager/markAllConversationsAsRead.html">markAllConversationsAsRead</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/recallMessage.html">recallMessage</a></li>
-    <li><a href="../../im_flutter_sdk/EMChatManager/removeChatManagerListener.html">removeChatManagerListener</a></li>
+    <li><a href="../../im_flutter_sdk/EMChatManager/removeEventHandler.html">removeEventHandler</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/removeReaction.html">removeReaction</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/reportMessage.html">reportMessage</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager/resendMessage.html">resendMessage</a></li>
@@ -169,7 +172,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.4+3
+      3.9.5
   </span>
 
   

@@ -61,6 +61,22 @@
 </section>
 
 
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+
+        <dt>Available Extensions</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="../im_flutter_sdk/ChatRoomManagerDeprecated.html">ChatRoomManagerDeprecated</a></li>
+        </ul></dd>
+
+        
+      </dl>
+    </section>
 
     
 
@@ -112,16 +128,15 @@
 
 </dd>
 
-        <dt id="addChatRoomManagerListener" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/addChatRoomManagerListener.html">addChatRoomManagerListener</a></span><span class="signature">(<wbr><span class="parameter" id="addChatRoomManagerListener-param-listener"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatRoomManagerListener-class.html">EMChatRoomManagerListener</a></span> <span class="parameter-name">listener</span></span>)
+        <dt id="addEventHandler" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/addEventHandler.html">addEventHandler</a></span><span class="signature">(<wbr><span class="parameter" id="addEventHandler-param-identifier"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">identifier</span>, </span><span class="parameter" id="addEventHandler-param-handler"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a></span> <span class="parameter-name">handler</span></span>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd>
-  注册聊天室事件监听对象。
-聊天室被销毁、成员的加入和退出、禁言和加入白名单等操作均可通过设置 {@link EMChatRoomManagerListener} 进行监听。
+  添加 <a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a> 。
   
 
 </dd>
@@ -191,15 +206,15 @@
 
 </dd>
 
-        <dt id="clearAllChatRoomManagerListeners" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/clearAllChatRoomManagerListeners.html">clearAllChatRoomManagerListeners</a></span><span class="signature">(<wbr>)
+        <dt id="clearEventHandlers" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/clearEventHandlers.html">clearEventHandlers</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd>
-  移除所有聊天室事件监听对象。
+  清除所有的 <a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a> 。
   
 
 </dd>
@@ -334,6 +349,19 @@
 
 </dd>
 
+        <dt id="getEventHandler" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/getEventHandler.html">getEventHandler</a></span><span class="signature">(<wbr><span class="parameter" id="getEventHandler-param-identifier"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">identifier</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取 <a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a> 。
+  
+
+</dd>
+
         <dt id="isMemberInChatRoomAllowList" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/isMemberInChatRoomAllowList.html">isMemberInChatRoomAllowList</a></span><span class="signature">(<wbr><span class="parameter" id="isMemberInChatRoomAllowList-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
@@ -425,20 +453,6 @@
 
 </dd>
 
-        <dt id="removeChatRoomManagerListener" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/removeChatRoomManagerListener.html">removeChatRoomManagerListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeChatRoomManagerListener-param-listener"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatRoomManagerListener-class.html">EMChatRoomManagerListener</a></span> <span class="parameter-name">listener</span></span>)
-    <span class="returntype parameter">&#8594; void</span>
-  </span>
-  
-
-</dt>
-<dd>
-  移除聊天室事件监听对象。
-调用 {@link #addChatRoomManagerListener(EMChatRoomManagerListener)} 注册聊天室事件监听对象后，可调用本方法将其移除。
-  
-
-</dd>
-
         <dt id="removeChatRoomMembers" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/removeChatRoomMembers.html">removeChatRoomMembers</a></span><span class="signature">(<wbr><span class="parameter" id="removeChatRoomMembers-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="removeChatRoomMembers-param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
@@ -448,6 +462,19 @@
 </dt>
 <dd>
   将成员移出聊天室。
+  
+
+</dd>
+
+        <dt id="removeEventHandler" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/removeEventHandler.html">removeEventHandler</a></span><span class="signature">(<wbr><span class="parameter" id="removeEventHandler-param-identifier"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">identifier</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  移除 <a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a> 。
   
 
 </dd>
@@ -580,29 +607,35 @@
   <li><a href="../im_flutter_sdk/ChatSilentModeParam-class.html">ChatSilentModeParam</a></li>
   <li><a href="../im_flutter_sdk/ChatSilentModeResult-class.html">ChatSilentModeResult</a></li>
   <li><a href="../im_flutter_sdk/ChatSilentModeTime-class.html">ChatSilentModeTime</a></li>
+  <li><a href="../im_flutter_sdk/EMChatEventHandler-class.html">EMChatEventHandler</a></li>
   <li><a href="../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
-  <li><a href="../im_flutter_sdk/EMChatManagerListener-class.html">EMChatManagerListener</a></li>
+  <li><a class="deprecated" href="../im_flutter_sdk/EMChatManagerListener-class.html">EMChatManagerListener</a></li>
   <li><a href="../im_flutter_sdk/EMChatRoom-class.html">EMChatRoom</a></li>
+  <li><a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a></li>
   <li><a href="../im_flutter_sdk/EMChatRoomManager-class.html">EMChatRoomManager</a></li>
-  <li><a href="../im_flutter_sdk/EMChatRoomManagerListener-class.html">EMChatRoomManagerListener</a></li>
+  <li><a class="deprecated" href="../im_flutter_sdk/EMChatRoomManagerListener-class.html">EMChatRoomManagerListener</a></li>
   <li><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></li>
   <li><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></li>
+  <li><a href="../im_flutter_sdk/EMChatThreadEventHandler-class.html">EMChatThreadEventHandler</a></li>
   <li><a href="../im_flutter_sdk/EMChatThreadManager-class.html">EMChatThreadManager</a></li>
-  <li><a href="../im_flutter_sdk/EMChatThreadManagerListener-class.html">EMChatThreadManagerListener</a></li>
+  <li><a class="deprecated" href="../im_flutter_sdk/EMChatThreadManagerListener-class.html">EMChatThreadManagerListener</a></li>
   <li><a href="../im_flutter_sdk/EMClient-class.html">EMClient</a></li>
   <li><a href="../im_flutter_sdk/EMCmdMessageBody-class.html">EMCmdMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMConnectionListener-class.html">EMConnectionListener</a></li>
+  <li><a href="../im_flutter_sdk/EMConnectionEventHandler-class.html">EMConnectionEventHandler</a></li>
+  <li><a class="deprecated" href="../im_flutter_sdk/EMConnectionListener-class.html">EMConnectionListener</a></li>
+  <li><a href="../im_flutter_sdk/EMContactEventHandler-class.html">EMContactEventHandler</a></li>
   <li><a href="../im_flutter_sdk/EMContactManager-class.html">EMContactManager</a></li>
-  <li><a href="../im_flutter_sdk/EMContactManagerListener-class.html">EMContactManagerListener</a></li>
+  <li><a class="deprecated" href="../im_flutter_sdk/EMContactManagerListener-class.html">EMContactManagerListener</a></li>
   <li><a href="../im_flutter_sdk/EMConversation-class.html">EMConversation</a></li>
   <li><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a></li>
-  <li><a href="../im_flutter_sdk/EMCustomListener-class.html">EMCustomListener</a></li>
+  <li><a class="deprecated" href="../im_flutter_sdk/EMCustomListener-class.html">EMCustomListener</a></li>
   <li><a href="../im_flutter_sdk/EMCustomMessageBody-class.html">EMCustomMessageBody</a></li>
   <li><a href="../im_flutter_sdk/EMDeviceInfo-class.html">EMDeviceInfo</a></li>
   <li><a href="../im_flutter_sdk/EMDownloadCallback-class.html">EMDownloadCallback</a></li>
   <li><a href="../im_flutter_sdk/EMError-class.html">EMError</a></li>
   <li><a href="../im_flutter_sdk/EMFileMessageBody-class.html">EMFileMessageBody</a></li>
   <li><a href="../im_flutter_sdk/EMGroup-class.html">EMGroup</a></li>
+  <li><a href="../im_flutter_sdk/EMGroupEventHandler-class.html">EMGroupEventHandler</a></li>
   <li><a href="../im_flutter_sdk/EMGroupInfo-class.html">EMGroupInfo</a></li>
   <li><a href="../im_flutter_sdk/EMGroupManager-class.html">EMGroupManager</a></li>
   <li><a href="../im_flutter_sdk/EMGroupManagerListener-class.html">EMGroupManagerListener</a></li>
@@ -614,12 +647,14 @@
   <li><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></li>
   <li><a href="../im_flutter_sdk/EMMessageReaction-class.html">EMMessageReaction</a></li>
   <li><a href="../im_flutter_sdk/EMMessageReactionEvent-class.html">EMMessageReactionEvent</a></li>
-  <li><a href="../im_flutter_sdk/EMMultiDeviceListener-class.html">EMMultiDeviceListener</a></li>
+  <li><a href="../im_flutter_sdk/EMMultiDeviceEventHandler-class.html">EMMultiDeviceEventHandler</a></li>
+  <li><a class="deprecated" href="../im_flutter_sdk/EMMultiDeviceListener-class.html">EMMultiDeviceListener</a></li>
   <li><a href="../im_flutter_sdk/EMOptions-class.html">EMOptions</a></li>
   <li><a href="../im_flutter_sdk/EMPageResult-class.html">EMPageResult</a></li>
   <li><a href="../im_flutter_sdk/EMPresence-class.html">EMPresence</a></li>
+  <li><a href="../im_flutter_sdk/EMPresenceEventHandler-class.html">EMPresenceEventHandler</a></li>
   <li><a href="../im_flutter_sdk/EMPresenceManager-class.html">EMPresenceManager</a></li>
-  <li><a href="../im_flutter_sdk/EMPresenceManagerListener-class.html">EMPresenceManagerListener</a></li>
+  <li><a class="deprecated" href="../im_flutter_sdk/EMPresenceManagerListener-class.html">EMPresenceManagerListener</a></li>
   <li><a href="../im_flutter_sdk/EMPushConfigs-class.html">EMPushConfigs</a></li>
   <li><a href="../im_flutter_sdk/EMPushManager-class.html">EMPushManager</a></li>
   <li><a href="../im_flutter_sdk/EMTextMessageBody-class.html">EMTextMessageBody</a></li>
@@ -630,6 +665,15 @@
   <li><a href="../im_flutter_sdk/EMVoiceMessageBody-class.html">EMVoiceMessageBody</a></li>
   <li><a href="../im_flutter_sdk/MessageStatusCallBack-class.html">MessageStatusCallBack</a></li>
 
+  <li class="section-title"><a href="../im_flutter_sdk/im_flutter_sdk-library.html#extensions">Extensions</a></li>
+  <li><a href="../im_flutter_sdk/ChatManagerDeprecated.html">ChatManagerDeprecated</a></li>
+  <li><a href="../im_flutter_sdk/ChatRoomManagerDeprecated.html">ChatRoomManagerDeprecated</a></li>
+  <li><a href="../im_flutter_sdk/ChatThreadManagerDeprecated.html">ChatThreadManagerDeprecated</a></li>
+  <li><a href="../im_flutter_sdk/EMClientDeprecated.html">EMClientDeprecated</a></li>
+  <li><a href="../im_flutter_sdk/EMContactManagerDeprecated.html">EMContactManagerDeprecated</a></li>
+  <li><a href="../im_flutter_sdk/EMGroupManagerDeprecated.html">EMGroupManagerDeprecated</a></li>
+  <li><a href="../im_flutter_sdk/EMPushManagerDeprecated.html">EMPushManagerDeprecated</a></li>
+  <li><a href="../im_flutter_sdk/PresenceDeprecated.html">PresenceDeprecated</a></li>
 
 
 
@@ -670,13 +714,13 @@
 
     <li class="section-title"><a href="../im_flutter_sdk/EMChatRoomManager-class.html#instance-methods">Methods</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/addChatRoomAdmin.html">addChatRoomAdmin</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/addChatRoomManagerListener.html">addChatRoomManagerListener</a></li>
+    <li><a href="../im_flutter_sdk/EMChatRoomManager/addEventHandler.html">addEventHandler</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/addMembersToChatRoomAllowList.html">addMembersToChatRoomAllowList</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/blockChatRoomMembers.html">blockChatRoomMembers</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/changeChatRoomDescription.html">changeChatRoomDescription</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/changeChatRoomName.html">changeChatRoomName</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/changeOwner.html">changeOwner</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/clearAllChatRoomManagerListeners.html">clearAllChatRoomManagerListeners</a></li>
+    <li><a href="../im_flutter_sdk/EMChatRoomManager/clearEventHandlers.html">clearEventHandlers</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/createChatRoom.html">createChatRoom</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/destroyChatRoom.html">destroyChatRoom</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomAllowListFromServer.html">fetchChatRoomAllowListFromServer</a></li>
@@ -687,6 +731,7 @@
     <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomMuteList.html">fetchChatRoomMuteList</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchPublicChatRoomsFromServer.html">fetchPublicChatRoomsFromServer</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/getChatRoomWithId.html">getChatRoomWithId</a></li>
+    <li><a href="../im_flutter_sdk/EMChatRoomManager/getEventHandler.html">getEventHandler</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/isMemberInChatRoomAllowList.html">isMemberInChatRoomAllowList</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/joinChatRoom.html">joinChatRoom</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/leaveChatRoom.html">leaveChatRoom</a></li>
@@ -694,8 +739,8 @@
     <li><a href="../im_flutter_sdk/EMChatRoomManager/muteChatRoomMembers.html">muteChatRoomMembers</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/removeChatRoomAdmin.html">removeChatRoomAdmin</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/removeChatRoomManagerListener.html">removeChatRoomManagerListener</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/removeChatRoomMembers.html">removeChatRoomMembers</a></li>
+    <li><a href="../im_flutter_sdk/EMChatRoomManager/removeEventHandler.html">removeEventHandler</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/removeMembersFromChatRoomAllowList.html">removeMembersFromChatRoomAllowList</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/unBlockChatRoomMembers.html">unBlockChatRoomMembers</a></li>
@@ -718,7 +763,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.4+3
+      3.9.5
   </span>
 
   

@@ -52,7 +52,7 @@
       
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
-<span class="name ">loginWithAgoraToken</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="loginWithAgoraToken-param-username"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">username</span>, </span></li>
+<span class="name ">loginWithAgoraToken</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="loginWithAgoraToken-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span></li>
 <li><span class="parameter" id="loginWithAgoraToken-param-agoraToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">agoraToken</span></span></li>
 </ol>)
 
@@ -63,27 +63,27 @@
 <section class="desc markdown">
   <p>用声网 Token 登录服务器，该方法支持自动登录。</p>
 <p><strong>Note</strong>
-通过 token 登录服务器的方法见 {@link #login(String, String, bool)}。</p>
-<p>Param <code>username</code> 用户 ID。</p>
+通过 token 登录服务器的方法见 <a href="../../im_flutter_sdk/EMClient/login.html">login</a>。</p>
+<p>Param <code>userId</code> 用户 ID。</p>
 <p>Param <code>agoraToken</code> 声网 Token。</p>
-<p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 {@link EMError}。</p>
+<p><strong>Throws</strong> 如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a> 。</p>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; loginWithAgoraToken(String username, String agoraToken) async {
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; loginWithAgoraToken(String userId, String agoraToken) async {
   Map req = {
-    &quot;username&quot;: username,
+    &quot;username&quot;: userId,
     &quot;agora_token&quot;: agoraToken,
   };
 
-  Map result =
-      await _channel.invokeMethod(ChatMethodKeys.loginWithAgoraToken, req);
+  Map result = await ClientChannel.invokeMethod(
+      ChatMethodKeys.loginWithAgoraToken, req);
   try {
     EMError.hasErrorFromResult(result);
-    _currentUsername = username;
+    _currentUserId = userId;
   } on EMError catch (e) {
     throw e;
   }
@@ -120,7 +120,9 @@
     <li><a href="../../im_flutter_sdk/EMClient/chatRoomManager.html">chatRoomManager</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/chatThreadManager.html">chatThreadManager</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/contactManager.html">contactManager</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/currentUsername.html">currentUsername</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/currentUserId.html">currentUserId</a></li>
+    <li><a class="deprecated" href="../../im_flutter_sdk/EMClient/currentUsername.html">currentUsername</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/customEventHandler.html">customEventHandler</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/groupManager.html">groupManager</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/options.html">options</a></li>
@@ -130,18 +132,18 @@
     <li><a href="../../im_flutter_sdk/EMClient/userInfoManager.html">userInfoManager</a></li>
 
     <li class="section-title"><a href="../../im_flutter_sdk/EMClient-class.html#instance-methods">Methods</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/addConnectionListener.html">addConnectionListener</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/addCustomListener.html">addCustomListener</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/addMultiDeviceListener.html">addMultiDeviceListener</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/addConnectionEventHandler.html">addConnectionEventHandler</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/addMultiDeviceEventHandler.html">addMultiDeviceEventHandler</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/changeAppKey.html">changeAppKey</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/clearAllConnectionListeners.html">clearAllConnectionListeners</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/clearAllCustomListeners.html">clearAllCustomListeners</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/clearAllMultiDeviceListeners.html">clearAllMultiDeviceListeners</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/clearConnectionEventHandles.html">clearConnectionEventHandles</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/clearMultiDeviceEventHandles.html">clearMultiDeviceEventHandles</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/compressLogs.html">compressLogs</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/createAccount.html">createAccount</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/getAccessToken.html">getAccessToken</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/getCurrentUsername.html">getCurrentUsername</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/getConnectionEventHandler.html">getConnectionEventHandler</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/getCurrentUserId.html">getCurrentUserId</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/getLoggedInDevicesFromServer.html">getLoggedInDevicesFromServer</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/getMultiDeviceEventHandler.html">getMultiDeviceEventHandler</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/init.html">init</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/isConnected.html">isConnected</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/isLoginBefore.html">isLoginBefore</a></li>
@@ -151,9 +153,8 @@
     <li><a href="../../im_flutter_sdk/EMClient/loginWithAgoraToken.html">loginWithAgoraToken</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/logout.html">logout</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/removeConnectionListener.html">removeConnectionListener</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/removeCustomListener.html">removeCustomListener</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/removeMultiDeviceListener.html">removeMultiDeviceListener</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/removeConnectionEventHandler.html">removeConnectionEventHandler</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/removeMultiDeviceEventHandler.html">removeMultiDeviceEventHandler</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/renewAgoraToken.html">renewAgoraToken</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/startCallback.html">startCallback</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
@@ -178,7 +179,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.4+3
+      3.9.5
   </span>
 
   
