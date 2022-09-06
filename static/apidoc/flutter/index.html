@@ -29,7 +29,7 @@
 <header id="title">
   <button id="sidenav-left-toggle" type="button">&nbsp;</button>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
-    <li><a href="http://www.easemob.com/product/im">im_flutter_sdk package</a></li>
+    <li><a href="https://www.easemob.com/product/im">im_flutter_sdk package</a></li>
   </ol>
   <div class="self-name">im_flutter_sdk</div>
   <form class="search navbar-right" role="search">
@@ -46,7 +46,7 @@
   <h1 id="-im_flutter_sdk-">环信即时通讯 im_flutter_sdk 快速入门</h1>
 <p>通过本文可以实现一个集成聊天 SDK 的简单 app。</p>
 <h2 id="">实现原理</h2>
-<p>下图展示在客户端发送和接收一对一文本消息的工作流程。</p><img src="https://docs-im.easemob.com/_media/ccim/web/sendandreceivemsg.png" width="100%">
+<p>下图展示在客户端发送和接收一对一文本消息的工作流程。</p><img src="https://docs-im.easemob.com/_media/ccim/web/sendandreceivemsg.png" width="80%">
 <p>如上图所示，发送和接收单聊消息的步骤如下：</p>
 <ol>
 <li>客户端向你的应用服务器请求 Token，你的应用服务器返回 Token。</li>
@@ -57,20 +57,13 @@
 <h2 id="-2">前提条件</h2>
 <p>如果你的目标平台是iOS，你需要满足一下要求：</p>
 <ul>
-<li>Flutter 2.10 或 以上版本；</li>
-<li>Dart 2.16 或 以上版本；</li>
-<li>macOS;</li>
-<li>Xcode 12.4 或 以上版本；</li>
-<li>CocoaPods；</li>
-<li>iOS 10 或以上版本模拟器或真机。</li>
-</ul>
-<p>如果你的目标平台是Android，需要满足以下要求：</p>
-<ul>
-<li>Flutter 2.10 或 以上版本；</li>
-<li>Dart 2.16 或 以上版本；</li>
-<li>macOS 或 windows;</li>
-<li>Android Studio 4.0 或以上版本，包括 JDK 1.8 或以上版本;</li>
+<li>Xcode 12.4 或以上版本，包括命令行工具;</li>
+<li>iOS 10 或以上版本;</li>
 <li>Android SDK API 等级 21 或以上版本；</li>
+<li>Android Studio 4.0 或以上版本，包括 JDK 1.8 或以上版本;</li>
+<li>CocoaPods 包管理工具;</li>
+<li>Flutter 2.10 或以上版本;</li>
+<li>Dart 2.16 或以上版本;</li>
 </ul>
 <p><a href="https://docs.flutter.dev/get-started/install">配置开发或者运行环境如果遇到问题，请参考这里</a></p>
 <ul>
@@ -115,8 +108,6 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 </code></pre>
 <p>修改 <code>_MyHomePageState</code> 代码：</p>
 <pre class="language-dart"><code class="language-dart">class _MyHomePageState extends State&lt;MyHomePage&gt; {
-  // 测试用 Appkey
-  final String appKey = "easemob-demo#easeim";
   ScrollController scrollController = ScrollController();
   String _username = "";
   String _password = "";
@@ -261,11 +252,11 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 <p>在 <code>_initSDK</code> 方法中添加 SDK 初始化：</p>
 <pre class="language-dart"><code class="language-dart">  void _initSDK() async {
     EMOptions options = EMOptions(
-      appKey: appKey,
+      appKey: "&lt;#Your AppKey#&gt;",
       autoLogin: false,
     );
     await EMClient.getInstance.init(options);
-    // 告诉sdk ui已经准备好，执行后才会收到`EMChatRoomManagerListener`, `EMContactManagerListener`, `EMGroupManagerListener` 回调。
+    // 通知sdk ui已经准备好，执行后才会收到`EMChatRoomEventHandler`, `EMContactEventHandler`, `EMGroupEventHandler` 回调。
     await EMClient.getInstance.startCallback();
   }
 </code></pre>
@@ -290,29 +281,19 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 </code></pre>
 <h3 id="-6">添加登录</h3>
 <p>在 <code>_signIn</code> 方法中添加登录代码。</p>
-<pre class="language-dart"><code class="language-dart">  void _signIn() async {
-    if (_username.isEmpty || _password.isEmpty) {
-      _addLogToConsole("username or password is null");
-      return;
-    }
-
-    String? agoraToken = await HttpRequestManager.loginToAppServer(
-      username: _username,
-      password: _password,
-    );
-    if (agoraToken != null) {
-      _addLogToConsole("fetch agora token succeed, begin login");
-      try {
-        await EMClient.getInstance.loginWithAgoraToken(_username, agoraToken);
-        _addLogToConsole("login succeed, username: $_username");
-      } on EMError catch (e) {
-        _addLogToConsole(
-            "login failed, code: ${e.code}, desc: ${e.description}");
-      }
-    } else {
-      _addLogToConsole("fetch agora token failed");
-    }
+<pre class="language-dart"><code class="language-dart">void _signIn() async {
+  if (_userId.isEmpty || _password.isEmpty) {
+    _addLogToConsole("username or password is null");
+    return;
   }
+
+  try {
+    await EMClient.getInstance.login(_userId, _password);
+    _addLogToConsole("sign in succeed, username: $_userId");
+  } on EMError catch (e) {
+    _addLogToConsole("sign in failed, e: ${e.code} , ${e.description}");
+  }
+}
 </code></pre>
 <h3 id="-7">添加退出</h3>
 <p>在 <code>_signOut</code> 方法中添加退出代码。</p>
@@ -353,115 +334,85 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 </code></pre>
 <h3 id="-9">添加收消息监听</h3>
 <p>在 <code>_addChatListener</code> 方法中添加代码。</p>
-<pre class="language-dart"><code class="language-dart">  void _addChatListener() {
-    EMClient.getInstance.chatManager.addChatManagerListener(this);
-  }
-</code></pre>
-<h3 id="-10">移除消息监听</h3>
-<p>在 <code>iniState</code> 方法下方添加代码移除监听：</p>
-<pre class="language-dart"><code class="language-dart">  @override
-  void dispose() {
-    EMClient.getInstance.chatManager.removeChatManagerListener(this);
-    super.dispose();
-  }
-</code></pre>
-<h3 id="-11">接收消息</h3>
-<p>接收消息需要对象继承 <code>EMChatManagerDelegate</code> 并实现相关的回调方法，同时将对象加入到监听列表中。</p>
-<p>示例代码如下：</p>
-<pre class="language-dart"><code class="language-dart">class _MyHomePageState extends State&lt;MyHomePage&gt;
-    implements EMChatManagerListener {
-
-  ...
-
-@override
-  void onCmdMessagesReceived(List&lt;EMMessage&gt; messages) {}
-
-  @override
-  void onConversationRead(String from, String to) {}
-
-  @override
-  void onConversationsUpdate() {}
-
-  @override
-  void onGroupMessageRead(List&lt;EMGroupMessageAck&gt; groupMessageAcks) {}
-
-  @override
-  void onMessagesDelivered(List&lt;EMMessage&gt; messages) {}
-
-  @override
-  void onMessagesRead(List&lt;EMMessage&gt; messages) {}
-
-  @override
-  void onMessagesRecalled(List&lt;EMMessage&gt; messages) {}
-
-  @override
-  void onMessageReactionDidChange(List&lt;EMMessageReactionEvent&gt; list) {}
-  
-  @override
-  void onMessagesReceived(List&lt;EMMessage&gt; messages) {
-    for (var msg in messages) {
-      switch (msg.body.type) {
-        case MessageType.TXT:
-          {
-            EMTextMessageBody body = msg.body as EMTextMessageBody;
-            _addLogToConsole(
-              "receive text message: ${body.content}, from: ${msg.from}",
-            );
+<pre class="language-dart"><code class="language-dart">void _addChatListener() {
+  EMClient.getInstance.chatManager.addEventHandler(
+    // EMChatEventHandle 对应的 key。
+    "UNIQUE_HANDLER_ID",
+    EMChatEventHandler(
+      onMessagesReceived: (messages) {
+        for (var msg in messages) {
+          switch (msg.body.type) {
+            case MessageType.TXT:
+              {
+                EMTextMessageBody body = msg.body as EMTextMessageBody;
+                _addLogToConsole(
+                  "receive text message: ${body.content}, from: ${msg.from}",
+                );
+              }
+              break;
+            case MessageType.IMAGE:
+              {
+                _addLogToConsole(
+                  "receive image message, from: ${msg.from}",
+                );
+              }
+              break;
+            case MessageType.VIDEO:
+              {
+                _addLogToConsole(
+                  "receive video message, from: ${msg.from}",
+                );
+              }
+              break;
+            case MessageType.LOCATION:
+              {
+                _addLogToConsole(
+                  "receive location message, from: ${msg.from}",
+                );
+              }
+              break;
+            case MessageType.VOICE:
+              {
+                _addLogToConsole(
+                  "receive voice message, from: ${msg.from}",
+                );
+              }
+              break;
+            case MessageType.FILE:
+              {
+                _addLogToConsole(
+                  "receive image message, from: ${msg.from}",
+                );
+              }
+              break;
+            case MessageType.CUSTOM:
+              {
+                _addLogToConsole(
+                  "receive custom message, from: ${msg.from}",
+                );
+              }
+              break;
+            case MessageType.CMD:
+              {
+                // 当前回调中不会有 CMD 类型消息，CMD 类型消息通过 `EMChatEventHandler#onCmdMessagesReceived` 回调接收
+              }
+              break;
           }
-          break;
-        case MessageType.IMAGE:
-          {
-            _addLogToConsole(
-              "receive image message, from: ${msg.from}",
-            );
-          }
-          break;
-        case MessageType.VIDEO:
-          {
-            _addLogToConsole(
-              "receive video message, from: ${msg.from}",
-            );
-          }
-          break;
-        case MessageType.LOCATION:
-          {
-            _addLogToConsole(
-              "receive location message, from: ${msg.from}",
-            );
-          }
-          break;
-        case MessageType.VOICE:
-          {
-            _addLogToConsole(
-              "receive voice message, from: ${msg.from}",
-            );
-          }
-          break;
-        case MessageType.FILE:
-          {
-            _addLogToConsole(
-              "receive image message, from: ${msg.from}",
-            );
-          }
-          break;
-        case MessageType.CUSTOM:
-          {
-            _addLogToConsole(
-              "receive custom message, from: ${msg.from}",
-            );
-          }
-          break;
-        case MessageType.CMD:
-          {
-            // 当前回调中不会有 CMD 类型消息，CMD 类型消息通过 `EMChatManagerListener#onCmdMessagesReceived` 回调接收
-          }
-          break;
-      }
-    }
-  }
+        }
+      },
+    ),
+  );
 }
 </code></pre>
-<h2 id="-12">运行项目</h2>
+<h3 id="-10">移除消息监听</h3>
+<p>在 <code>dispose</code> 方法中添加代码移除监听：</p>
+<pre class="language-dart"><code class="language-dart">@override
+void dispose() {
+  EMClient.getInstance.chatManager.removeEventHandler("UNIQUE_HANDLER_ID");
+  super.dispose();
+}
+</code></pre>
+<h2 id="-11">运行项目</h2>
 <p>以 iOS 为例，首先打开模拟器，之后在终端输入。</p>
 <pre class="language-bash"><code class="language-bash">flutter run
 </code></pre>
@@ -491,7 +442,7 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="http://www.easemob.com/product/im">im_flutter_sdk package</a></li>
+  <li><a href="https://www.easemob.com/product/im">im_flutter_sdk package</a></li>
 </ol>
 
 
@@ -511,7 +462,7 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.4+3
+      3.9.5
   </span>
 
   

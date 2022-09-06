@@ -60,7 +60,8 @@
     
 <section class="desc markdown">
   <p>启动回调。该方法用于启动通讯录，群组，聊天室的回调。</p>
-<p>app 启动后，界面准备好后需要调用该方法，调用后 <code>EMContactManagerListener</code>、<code>EMGroupManagerListener</code> 和 <code>EMChatRoomManagerListener</code> 才会开始执行。</p>
+<p>Reference:
+app 启动后，界面准备好后需要调用该方法，调用后 <a href="../../im_flutter_sdk/EMContactEventHandler-class.html">EMContactEventHandler</a>、<a href="../../im_flutter_sdk/EMGroupEventHandler-class.html">EMGroupEventHandler</a> 和 <a href="../../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a> 才会开始执行。</p>
 </section>
 
 
@@ -68,7 +69,7 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; startCallback() async {
-  Map result = await _channel.invokeMethod(ChatMethodKeys.startCallback);
+  Map result = await ClientChannel.invokeMethod(ChatMethodKeys.startCallback);
   try {
     EMError.hasErrorFromResult(result);
   } on EMError catch (e) {
@@ -107,7 +108,9 @@
     <li><a href="../../im_flutter_sdk/EMClient/chatRoomManager.html">chatRoomManager</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/chatThreadManager.html">chatThreadManager</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/contactManager.html">contactManager</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/currentUsername.html">currentUsername</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/currentUserId.html">currentUserId</a></li>
+    <li><a class="deprecated" href="../../im_flutter_sdk/EMClient/currentUsername.html">currentUsername</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/customEventHandler.html">customEventHandler</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/groupManager.html">groupManager</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/options.html">options</a></li>
@@ -117,18 +120,18 @@
     <li><a href="../../im_flutter_sdk/EMClient/userInfoManager.html">userInfoManager</a></li>
 
     <li class="section-title"><a href="../../im_flutter_sdk/EMClient-class.html#instance-methods">Methods</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/addConnectionListener.html">addConnectionListener</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/addCustomListener.html">addCustomListener</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/addMultiDeviceListener.html">addMultiDeviceListener</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/addConnectionEventHandler.html">addConnectionEventHandler</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/addMultiDeviceEventHandler.html">addMultiDeviceEventHandler</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/changeAppKey.html">changeAppKey</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/clearAllConnectionListeners.html">clearAllConnectionListeners</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/clearAllCustomListeners.html">clearAllCustomListeners</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/clearAllMultiDeviceListeners.html">clearAllMultiDeviceListeners</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/clearConnectionEventHandles.html">clearConnectionEventHandles</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/clearMultiDeviceEventHandles.html">clearMultiDeviceEventHandles</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/compressLogs.html">compressLogs</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/createAccount.html">createAccount</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/getAccessToken.html">getAccessToken</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/getCurrentUsername.html">getCurrentUsername</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/getConnectionEventHandler.html">getConnectionEventHandler</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/getCurrentUserId.html">getCurrentUserId</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/getLoggedInDevicesFromServer.html">getLoggedInDevicesFromServer</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/getMultiDeviceEventHandler.html">getMultiDeviceEventHandler</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/init.html">init</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/isConnected.html">isConnected</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/isLoginBefore.html">isLoginBefore</a></li>
@@ -138,9 +141,8 @@
     <li><a href="../../im_flutter_sdk/EMClient/loginWithAgoraToken.html">loginWithAgoraToken</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/logout.html">logout</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/removeConnectionListener.html">removeConnectionListener</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/removeCustomListener.html">removeCustomListener</a></li>
-    <li><a href="../../im_flutter_sdk/EMClient/removeMultiDeviceListener.html">removeMultiDeviceListener</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/removeConnectionEventHandler.html">removeConnectionEventHandler</a></li>
+    <li><a href="../../im_flutter_sdk/EMClient/removeMultiDeviceEventHandler.html">removeMultiDeviceEventHandler</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/renewAgoraToken.html">renewAgoraToken</a></li>
     <li><a href="../../im_flutter_sdk/EMClient/startCallback.html">startCallback</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
@@ -165,7 +167,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.4+3
+      3.9.5
   </span>
 
   
