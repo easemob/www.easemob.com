@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>hyphenate_SDK3.0: com.hyphenate.EMMultiDeviceListener接口 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,9 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.5</span>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.6</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.5 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -159,13 +166,14 @@ Public 属性</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >Created by linan on 17/4/17.</p>
-<p >多端多设备事件监听器。 监听其他设备上当前用户的事件回调，包括联系人变化和群组变化。 </p><pre class="fragment">注册监听：
+<p >多端多设备事件监听器。</p>
+<p >该监听器用于监听其他设备上当前用户的事件回调，包括联系人变化和群组变化。 </p><pre class="fragment">注册监听器：
 </pre> <div class="fragment"><div class="line">EMClient.getInstance().addMultiDeviceListener(mMultiDeviceListener);</div>
-</div><!-- fragment --><p> 解注册监听：</p>
+</div><!-- fragment --><p> 移除监听器：</p>
 <div class="fragment"><div class="line">EMClient.getInstance().removeMultiDeviceListener(mMultiDeviceListener);</div>
 </div><!-- fragment --> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a218d2927da921328cc8add478554f463" name="a218d2927da921328cc8add478554f463"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a218d2927da921328cc8add478554f463">&#9670;&nbsp;</a></span>onChatThreadEvent()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a218d2927da921328cc8add478554f463">&#9670;&#160;</a></span>onChatThreadEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,10 +203,11 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >多端多设备 Thread 事件。 </p><dl class="params"><dt>参数</dt><dd>
+<p >多端多设备子区事件。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>Thread 事件，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a>。 </td></tr>
-    <tr><td class="paramname">target</td><td>Thread ID。 </td></tr>
+    <tr><td class="paramname">event</td><td>子区事件，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a></code>。 </td></tr>
+    <tr><td class="paramname">target</td><td>子区 ID。 </td></tr>
     <tr><td class="paramname">usernames</td><td>操作目标 ID 列表。 </td></tr>
   </table>
   </dd>
@@ -207,7 +216,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a54f0162e902a313349ac59c4caea67f5" name="a54f0162e902a313349ac59c4caea67f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54f0162e902a313349ac59c4caea67f5">&#9670;&nbsp;</a></span>onContactEvent()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f0162e902a313349ac59c4caea67f5">&#9670;&#160;</a></span>onContactEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,9 +246,10 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >多端多设备联系人事件。 </p><dl class="params"><dt>参数</dt><dd>
+<p >多端多设备联系人事件。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>联系人事件，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a>。 </td></tr>
+    <tr><td class="paramname">event</td><td>联系人事件，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a></code>。 </td></tr>
     <tr><td class="paramname">target</td><td>联系人 ID。 </td></tr>
     <tr><td class="paramname">ext</td><td>扩展信息。 </td></tr>
   </table>
@@ -249,7 +259,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="aefc187cf5c0883d11dc48ceefec7f0a8" name="aefc187cf5c0883d11dc48ceefec7f0a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefc187cf5c0883d11dc48ceefec7f0a8">&#9670;&nbsp;</a></span>onGroupEvent()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aefc187cf5c0883d11dc48ceefec7f0a8">&#9670;&#160;</a></span>onGroupEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,9 +289,10 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >多端多设备群组事件。 </p><dl class="params"><dt>参数</dt><dd>
+<p >多端多设备群组事件。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>群组事件，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a>。 </td></tr>
+    <tr><td class="paramname">event</td><td>群组事件，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a></code>。 </td></tr>
     <tr><td class="paramname">target</td><td>群组 ID。 </td></tr>
     <tr><td class="paramname">usernames</td><td>操作目标 ID 列表。 </td></tr>
   </table>
@@ -292,7 +303,7 @@ Public 属性</h2></td></tr>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
 <a id="a21d54476baea13c8e7bc827aefc5df83" name="a21d54476baea13c8e7bc827aefc5df83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21d54476baea13c8e7bc827aefc5df83">&#9670;&nbsp;</a></span>CONTACT_ACCEPT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a21d54476baea13c8e7bc827aefc5df83">&#9670;&#160;</a></span>CONTACT_ACCEPT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,7 +318,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a120054fabc90dc78c9283fd3c1e9ff0b" name="a120054fabc90dc78c9283fd3c1e9ff0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a120054fabc90dc78c9283fd3c1e9ff0b">&#9670;&nbsp;</a></span>CONTACT_ALLOW</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a120054fabc90dc78c9283fd3c1e9ff0b">&#9670;&#160;</a></span>CONTACT_ALLOW</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,7 +333,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a48d3d602fa9be557c52a4e34e9a318ba" name="a48d3d602fa9be557c52a4e34e9a318ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48d3d602fa9be557c52a4e34e9a318ba">&#9670;&nbsp;</a></span>CONTACT_BAN</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d3d602fa9be557c52a4e34e9a318ba">&#9670;&#160;</a></span>CONTACT_BAN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +348,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a41974a1e4b91d9ee0ef2c0dad014b4c4" name="a41974a1e4b91d9ee0ef2c0dad014b4c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41974a1e4b91d9ee0ef2c0dad014b4c4">&#9670;&nbsp;</a></span>CONTACT_DECLINE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a41974a1e4b91d9ee0ef2c0dad014b4c4">&#9670;&#160;</a></span>CONTACT_DECLINE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +363,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a41c7f4d6a2354b1e76eb3fdb436d01c6" name="a41c7f4d6a2354b1e76eb3fdb436d01c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41c7f4d6a2354b1e76eb3fdb436d01c6">&#9670;&nbsp;</a></span>CONTACT_REMOVE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a41c7f4d6a2354b1e76eb3fdb436d01c6">&#9670;&#160;</a></span>CONTACT_REMOVE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,7 +378,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="ab77752c8a922a6d7aff3bcf7c585ff68" name="ab77752c8a922a6d7aff3bcf7c585ff68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab77752c8a922a6d7aff3bcf7c585ff68">&#9670;&nbsp;</a></span>GROUP_ADD_ADMIN</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab77752c8a922a6d7aff3bcf7c585ff68">&#9670;&#160;</a></span>GROUP_ADD_ADMIN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,7 +393,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a0e5d6437745631293843400f7099f514" name="a0e5d6437745631293843400f7099f514"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e5d6437745631293843400f7099f514">&#9670;&nbsp;</a></span>GROUP_ADD_MUTE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e5d6437745631293843400f7099f514">&#9670;&#160;</a></span>GROUP_ADD_MUTE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -397,7 +408,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a72c8bbceeb2655977e25bbaf16a163e7" name="a72c8bbceeb2655977e25bbaf16a163e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72c8bbceeb2655977e25bbaf16a163e7">&#9670;&nbsp;</a></span>GROUP_ADD_USER_WHITE_LIST</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c8bbceeb2655977e25bbaf16a163e7">&#9670;&#160;</a></span>GROUP_ADD_USER_WHITE_LIST</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -412,7 +423,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a5ccb568d457ae244dc3c0f8252e4213a" name="a5ccb568d457ae244dc3c0f8252e4213a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ccb568d457ae244dc3c0f8252e4213a">&#9670;&nbsp;</a></span>GROUP_ALL_BAN</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ccb568d457ae244dc3c0f8252e4213a">&#9670;&#160;</a></span>GROUP_ALL_BAN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,12 +433,12 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备将群组设置为禁言。 </p>
+<p >当前用户在其他设备将全部群组成员禁言。 </p>
 
 </div>
 </div>
 <a id="a698039b0b204e17fd74b94d7336c34ea" name="a698039b0b204e17fd74b94d7336c34ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a698039b0b204e17fd74b94d7336c34ea">&#9670;&nbsp;</a></span>GROUP_ALLOW</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a698039b0b204e17fd74b94d7336c34ea">&#9670;&#160;</a></span>GROUP_ALLOW</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,7 +453,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="ab9b9dee6b0a12b16d1c9c4683a625e1a" name="ab9b9dee6b0a12b16d1c9c4683a625e1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9b9dee6b0a12b16d1c9c4683a625e1a">&#9670;&nbsp;</a></span>GROUP_APPLY</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b9dee6b0a12b16d1c9c4683a625e1a">&#9670;&#160;</a></span>GROUP_APPLY</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -457,7 +468,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a8b4d9e491efb3090e46baa995ebc18d7" name="a8b4d9e491efb3090e46baa995ebc18d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b4d9e491efb3090e46baa995ebc18d7">&#9670;&nbsp;</a></span>GROUP_APPLY_ACCEPT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b4d9e491efb3090e46baa995ebc18d7">&#9670;&#160;</a></span>GROUP_APPLY_ACCEPT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -472,7 +483,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="ab013db4c34957f70b9af68954faa9568" name="ab013db4c34957f70b9af68954faa9568"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab013db4c34957f70b9af68954faa9568">&#9670;&nbsp;</a></span>GROUP_APPLY_DECLINE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab013db4c34957f70b9af68954faa9568">&#9670;&#160;</a></span>GROUP_APPLY_DECLINE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,7 +498,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a20681286cdb921135b2f96bec57d2f5f" name="a20681286cdb921135b2f96bec57d2f5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20681286cdb921135b2f96bec57d2f5f">&#9670;&nbsp;</a></span>GROUP_ASSIGN_OWNER</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a20681286cdb921135b2f96bec57d2f5f">&#9670;&#160;</a></span>GROUP_ASSIGN_OWNER</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,7 +513,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="aa6984d76f82de83a0da3a34720836f52" name="aa6984d76f82de83a0da3a34720836f52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6984d76f82de83a0da3a34720836f52">&#9670;&nbsp;</a></span>GROUP_BAN</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6984d76f82de83a0da3a34720836f52">&#9670;&#160;</a></span>GROUP_BAN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,7 +528,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="afe4b84da0289e030d85c0c33733fc338" name="afe4b84da0289e030d85c0c33733fc338"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe4b84da0289e030d85c0c33733fc338">&#9670;&nbsp;</a></span>GROUP_BLOCK</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4b84da0289e030d85c0c33733fc338">&#9670;&#160;</a></span>GROUP_BLOCK</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -532,7 +543,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a240734c5ebd43a9d5a78e551ca575988" name="a240734c5ebd43a9d5a78e551ca575988"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a240734c5ebd43a9d5a78e551ca575988">&#9670;&nbsp;</a></span>GROUP_CREATE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a240734c5ebd43a9d5a78e551ca575988">&#9670;&#160;</a></span>GROUP_CREATE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -547,7 +558,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="ad8b2fd21ed1995ea8acc8040da8f4796" name="ad8b2fd21ed1995ea8acc8040da8f4796"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8b2fd21ed1995ea8acc8040da8f4796">&#9670;&nbsp;</a></span>GROUP_DESTROY</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b2fd21ed1995ea8acc8040da8f4796">&#9670;&#160;</a></span>GROUP_DESTROY</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -562,7 +573,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="ac3c0feefb2fc09f56ec371ca8c36ca2b" name="ac3c0feefb2fc09f56ec371ca8c36ca2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3c0feefb2fc09f56ec371ca8c36ca2b">&#9670;&nbsp;</a></span>GROUP_INVITE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3c0feefb2fc09f56ec371ca8c36ca2b">&#9670;&#160;</a></span>GROUP_INVITE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -577,7 +588,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a229e12ad44ea7083aaf71a1d94093c09" name="a229e12ad44ea7083aaf71a1d94093c09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a229e12ad44ea7083aaf71a1d94093c09">&#9670;&nbsp;</a></span>GROUP_INVITE_ACCEPT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a229e12ad44ea7083aaf71a1d94093c09">&#9670;&#160;</a></span>GROUP_INVITE_ACCEPT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -592,7 +603,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="ac0eac92393ce85dd6a6faaa30dd30cb0" name="ac0eac92393ce85dd6a6faaa30dd30cb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0eac92393ce85dd6a6faaa30dd30cb0">&#9670;&nbsp;</a></span>GROUP_INVITE_DECLINE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0eac92393ce85dd6a6faaa30dd30cb0">&#9670;&#160;</a></span>GROUP_INVITE_DECLINE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -607,7 +618,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a76890b745fe47b86bb29dd7f62e7fe24" name="a76890b745fe47b86bb29dd7f62e7fe24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76890b745fe47b86bb29dd7f62e7fe24">&#9670;&nbsp;</a></span>GROUP_JOIN</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a76890b745fe47b86bb29dd7f62e7fe24">&#9670;&#160;</a></span>GROUP_JOIN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -622,7 +633,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a0af80a4b797d5649323f873971b7da1a" name="a0af80a4b797d5649323f873971b7da1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0af80a4b797d5649323f873971b7da1a">&#9670;&nbsp;</a></span>GROUP_KICK</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af80a4b797d5649323f873971b7da1a">&#9670;&#160;</a></span>GROUP_KICK</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -637,7 +648,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a6d939f69120bd1b7148e5c7ef3d97131" name="a6d939f69120bd1b7148e5c7ef3d97131"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d939f69120bd1b7148e5c7ef3d97131">&#9670;&nbsp;</a></span>GROUP_LEAVE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d939f69120bd1b7148e5c7ef3d97131">&#9670;&#160;</a></span>GROUP_LEAVE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -652,7 +663,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a636222b83d90a757d6bc2546e3a4aef9" name="a636222b83d90a757d6bc2546e3a4aef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a636222b83d90a757d6bc2546e3a4aef9">&#9670;&nbsp;</a></span>GROUP_REMOVE_ADMIN</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a636222b83d90a757d6bc2546e3a4aef9">&#9670;&#160;</a></span>GROUP_REMOVE_ADMIN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -667,7 +678,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a668394271a4fcc8e8955769d9b7892d4" name="a668394271a4fcc8e8955769d9b7892d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a668394271a4fcc8e8955769d9b7892d4">&#9670;&nbsp;</a></span>GROUP_REMOVE_ALL_BAN</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a668394271a4fcc8e8955769d9b7892d4">&#9670;&#160;</a></span>GROUP_REMOVE_ALL_BAN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -677,12 +688,12 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备将群组禁言解禁。 </p>
+<p >当前用户在其他设备将群组成员解除禁言。 </p>
 
 </div>
 </div>
 <a id="a2a3ed3e8ab7f3b84f598438c3e76b2c0" name="a2a3ed3e8ab7f3b84f598438c3e76b2c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a3ed3e8ab7f3b84f598438c3e76b2c0">&#9670;&nbsp;</a></span>GROUP_REMOVE_MUTE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3ed3e8ab7f3b84f598438c3e76b2c0">&#9670;&#160;</a></span>GROUP_REMOVE_MUTE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -697,7 +708,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a80f3b482fdf6a29ab77b6064e8dbc7c0" name="a80f3b482fdf6a29ab77b6064e8dbc7c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80f3b482fdf6a29ab77b6064e8dbc7c0">&#9670;&nbsp;</a></span>GROUP_REMOVE_USER_WHITE_LIST</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f3b482fdf6a29ab77b6064e8dbc7c0">&#9670;&#160;</a></span>GROUP_REMOVE_USER_WHITE_LIST</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -712,7 +723,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a95537d129a1a6df71f6e3850b398f360" name="a95537d129a1a6df71f6e3850b398f360"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95537d129a1a6df71f6e3850b398f360">&#9670;&nbsp;</a></span>GROUP_UNBLOCK</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a95537d129a1a6df71f6e3850b398f360">&#9670;&#160;</a></span>GROUP_UNBLOCK</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -727,7 +738,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a013dd937bd504fe24269426da0813b11" name="a013dd937bd504fe24269426da0813b11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a013dd937bd504fe24269426da0813b11">&#9670;&nbsp;</a></span>THREAD_CREATE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a013dd937bd504fe24269426da0813b11">&#9670;&#160;</a></span>THREAD_CREATE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -742,7 +753,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a9a5702ff29f392e62a5ebb04a2a3112f" name="a9a5702ff29f392e62a5ebb04a2a3112f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a5702ff29f392e62a5ebb04a2a3112f">&#9670;&nbsp;</a></span>THREAD_DESTROY</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a5702ff29f392e62a5ebb04a2a3112f">&#9670;&#160;</a></span>THREAD_DESTROY</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -757,7 +768,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="ace5243f3a87ca289e29452e8592304ff" name="ace5243f3a87ca289e29452e8592304ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace5243f3a87ca289e29452e8592304ff">&#9670;&nbsp;</a></span>THREAD_JOIN</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ace5243f3a87ca289e29452e8592304ff">&#9670;&#160;</a></span>THREAD_JOIN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -772,7 +783,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a3518b56475c2fdc9fe523189aa005b7b" name="a3518b56475c2fdc9fe523189aa005b7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3518b56475c2fdc9fe523189aa005b7b">&#9670;&nbsp;</a></span>THREAD_KICK</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3518b56475c2fdc9fe523189aa005b7b">&#9670;&#160;</a></span>THREAD_KICK</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -787,7 +798,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a512e4af2f38a046fcf3b2e20956bd834" name="a512e4af2f38a046fcf3b2e20956bd834"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a512e4af2f38a046fcf3b2e20956bd834">&#9670;&nbsp;</a></span>THREAD_LEAVE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a512e4af2f38a046fcf3b2e20956bd834">&#9670;&#160;</a></span>THREAD_LEAVE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -802,7 +813,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="afc663af53efaee55fd87d45d290f86d7" name="afc663af53efaee55fd87d45d290f86d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc663af53efaee55fd87d45d290f86d7">&#9670;&nbsp;</a></span>THREAD_UPDATE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afc663af53efaee55fd87d45d290f86d7">&#9670;&#160;</a></span>THREAD_UPDATE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -817,12 +828,12 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <hr/>该接口的文档由以下文件生成:<ul>
-<li>hyphenatechatsdk/src/com/hyphenate/EMMultiDeviceListener.java</li>
+<li>com/hyphenate/EMMultiDeviceListener.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

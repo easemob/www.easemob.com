@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>hyphenate_SDK3.0: com.hyphenate.EMChatRoomChangeListener接口 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,9 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.5</span>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.6</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.5 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -104,23 +111,21 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a21189b87ef1b2970e2df303fc554ac44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f74ca5192e14380ccf34b6f8935c138"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#a2f74ca5192e14380ccf34b6f8935c138">onSpecificationChanged</a> (<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html">EMChatRoom</a> chatRoom)</td></tr>
 <tr class="separator:a2f74ca5192e14380ccf34b6f8935c138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a7e06c1deec0d8fa6993a5fcb7c4dc0"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#a6a7e06c1deec0d8fa6993a5fcb7c4dc0">onAttributesUpdate</a> (String chatRoomId, Map&lt; String, String &gt; attributeMap, String from)</td></tr>
+<tr class="separator:a6a7e06c1deec0d8fa6993a5fcb7c4dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7de4254b4a8f2f2176b1dfa83d6397b2"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#a7de4254b4a8f2f2176b1dfa83d6397b2">onAttributesRemoved</a> (String chatRoomId, Map&lt; String, String &gt; attributeMap, String from)</td></tr>
+<tr class="separator:a7de4254b4a8f2f2176b1dfa83d6397b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >聊天室事件监听接口。</p>
-<p >通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html">com.hyphenate.chat.EMChatRoomManager</a> 进行注册和解注册，具体如下： </p><pre class="fragment">注册聊天室事件监听：
-```java
-EMChatRoomManager manager = EMClient.getInstance().chatroomManager();
-manager.addChatRoomChangeListener(mChatRoomChangeListener);
-```
-
-解注册聊天室事件监听：
-```java
-EMChatRoomManager manager = EMClient.getInstance().chatroomManager();
-manager.removeChatRoomListener(mChatRoomChangeListener);
-```
-</pre> </div><h2 class="groupheader">成员函数说明</h2>
+<p >可通过 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html">com.hyphenate.chat.EMChatRoomManager</a></code> 添加或移除聊天室事件监听器。</p>
+<p >添加聊天室事件监听器： </p><div class="fragment"><div class="line">EMChatRoomManager manager = EMClient.getInstance().chatroomManager();</div>
+<div class="line">manager.addChatRoomChangeListener(mChatRoomChangeListener);</div>
+</div><!-- fragment --><p >移除聊天室事件监听器： </p><div class="fragment"><div class="line">EMChatRoomManager manager = EMClient.getInstance().chatroomManager();</div>
+<div class="line">manager.removeChatRoomListener(mChatRoomChangeListener);</div>
+</div><!-- fragment --> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="aaf28d38aac3956e9c016e40241f13f13" name="aaf28d38aac3956e9c016e40241f13f13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf28d38aac3956e9c016e40241f13f13">&#9670;&nbsp;</a></span>onAdminAdded()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf28d38aac3956e9c016e40241f13f13">&#9670;&#160;</a></span>onAdminAdded()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,11 +149,12 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >有成员提升为管理员权限。</p>
+<p >有成员被设置为管理员。</p>
+<p >被添加的管理员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">admin</td><td>被提升管理员的成员。 </td></tr>
+    <tr><td class="paramname">admin</td><td>被设置为管理员的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -156,7 +162,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="a37e956220a2b4ac2981dfaeb8f4108e4" name="a37e956220a2b4ac2981dfaeb8f4108e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37e956220a2b4ac2981dfaeb8f4108e4">&#9670;&nbsp;</a></span>onAdminRemoved()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a37e956220a2b4ac2981dfaeb8f4108e4">&#9670;&#160;</a></span>onAdminRemoved()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,11 +186,12 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >移除管理员权限。</p>
+<p >有成员被移出管理员列表。</p>
+<p >被移出的管理员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">admin</td><td>被移除的管理员。 </td></tr>
+    <tr><td class="paramname">admin</td><td>被移出管理员列表的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -192,7 +199,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="a3e66ceb00766773bf93e06fc55de19ee" name="a3e66ceb00766773bf93e06fc55de19ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e66ceb00766773bf93e06fc55de19ee">&#9670;&nbsp;</a></span>onAllMemberMuteStateChanged()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e66ceb00766773bf93e06fc55de19ee">&#9670;&#160;</a></span>onAllMemberMuteStateChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +223,8 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >全员禁言状态的改变。</p>
+<p >全员禁言状态有变更。</p>
+<p >聊天室所有成员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
@@ -228,7 +236,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="a21189b87ef1b2970e2df303fc554ac44" name="a21189b87ef1b2970e2df303fc554ac44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21189b87ef1b2970e2df303fc554ac44">&#9670;&nbsp;</a></span>onAnnouncementChanged()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a21189b87ef1b2970e2df303fc554ac44">&#9670;&#160;</a></span>onAnnouncementChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,7 +260,9 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室公告更改事件。 </p><dl class="params"><dt>参数</dt><dd>
+<p >聊天室公告有变更。</p>
+<p >聊天室的所有成员会收到该事件。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
     <tr><td class="paramname">announcement</td><td>更新的公告内容。 </td></tr>
@@ -262,8 +272,96 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 
 </div>
 </div>
+<a id="a7de4254b4a8f2f2176b1dfa83d6397b2" name="a7de4254b4a8f2f2176b1dfa83d6397b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7de4254b4a8f2f2176b1dfa83d6397b2">&#9670;&#160;</a></span>onAttributesRemoved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMChatRoomChangeListener.onAttributesRemoved </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>chatRoomId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Map&lt; String, String &gt;&#160;</td>
+          <td class="paramname"><em>attributeMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >聊天室自定义属性被移除。</p>
+<p >聊天室所有成员会收到该事件。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">attributeMap</td><td>聊天室自定义属性。 </td></tr>
+    <tr><td class="paramname">from</td><td>操作者用户 ID。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6a7e06c1deec0d8fa6993a5fcb7c4dc0" name="a6a7e06c1deec0d8fa6993a5fcb7c4dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a7e06c1deec0d8fa6993a5fcb7c4dc0">&#9670;&#160;</a></span>onAttributesUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMChatRoomChangeListener.onAttributesUpdate </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>chatRoomId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Map&lt; String, String &gt;&#160;</td>
+          <td class="paramname"><em>attributeMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >聊天室自定义属性（key-value）有更新。</p>
+<p >聊天室所有成员会收到该事件。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">attributeMap</td><td>聊天室自定义属性。 </td></tr>
+    <tr><td class="paramname">from</td><td>操作者的用户 ID。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a14897af2def0c7c48bde357deccbd79d" name="a14897af2def0c7c48bde357deccbd79d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14897af2def0c7c48bde357deccbd79d">&#9670;&nbsp;</a></span>onChatRoomDestroyed()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a14897af2def0c7c48bde357deccbd79d">&#9670;&#160;</a></span>onChatRoomDestroyed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,6 +386,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
       </table>
 </div><div class="memdoc">
 <p >聊天室被解散。</p>
+<p >聊天室的所有成员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
@@ -299,7 +398,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="a6666c85ec1d5a1894ac754798c9dafad" name="a6666c85ec1d5a1894ac754798c9dafad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6666c85ec1d5a1894ac754798c9dafad">&#9670;&nbsp;</a></span>onMemberExited()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6666c85ec1d5a1894ac754798c9dafad">&#9670;&#160;</a></span>onMemberExited()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,12 +428,13 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室成员主动退出事件。</p>
+<p >有成员主动退出聊天室。</p>
+<p >聊天室的所有成员（除退出的成员）会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">roomName</td><td>聊天室名字。 </td></tr>
-    <tr><td class="paramname">participant</td><td>退出的成员 ID。 </td></tr>
+    <tr><td class="paramname">roomName</td><td>聊天室名称。 </td></tr>
+    <tr><td class="paramname">participant</td><td>退出的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -342,7 +442,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="af8bf93fb8e560f2a1b21b43b0b1c7cfd" name="af8bf93fb8e560f2a1b21b43b0b1c7cfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8bf93fb8e560f2a1b21b43b0b1c7cfd">&#9670;&nbsp;</a></span>onMemberJoined()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af8bf93fb8e560f2a1b21b43b0b1c7cfd">&#9670;&#160;</a></span>onMemberJoined()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,11 +466,12 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室加入新成员事件。</p>
+<p >有新成员加入聊天室。</p>
+<p >聊天室的所有成员（除新成员外）会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">participant</td><td>新成员 username。 </td></tr>
+    <tr><td class="paramname">participant</td><td>新成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -378,7 +479,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="a02b81de93cea6f36fc0fd424d0cea08a" name="a02b81de93cea6f36fc0fd424d0cea08a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02b81de93cea6f36fc0fd424d0cea08a">&#9670;&nbsp;</a></span>onMuteListAdded()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b81de93cea6f36fc0fd424d0cea08a">&#9670;&#160;</a></span>onMuteListAdded()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,12 +509,13 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >有成员被禁言。 禁言期间成员不能发送发消息。</p>
+<p >有成员被禁言。</p>
+<p >被添加的成员收到该事件。禁言期间成员不能发送发消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">mutes</td><td>禁言的成员。 </td></tr>
-    <tr><td class="paramname">expireTime</td><td>禁言有效期，单位是毫秒。 </td></tr>
+    <tr><td class="paramname">mutes</td><td>被禁言的成员。 </td></tr>
+    <tr><td class="paramname">expireTime</td><td>禁言失效的 Unix 时间戳，单位为毫秒。预留参数。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -421,7 +523,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="aa0295de02e3495010903bcb7d67ca9ea" name="aa0295de02e3495010903bcb7d67ca9ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0295de02e3495010903bcb7d67ca9ea">&#9670;&nbsp;</a></span>onMuteListRemoved()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0295de02e3495010903bcb7d67ca9ea">&#9670;&#160;</a></span>onMuteListRemoved()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -446,6 +548,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
       </table>
 </div><div class="memdoc">
 <p >有成员从禁言列表中移除。</p>
+<p >被解除禁言的成员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
@@ -457,7 +560,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="a67e227081920e605d1cf979b2e1ad0cc" name="a67e227081920e605d1cf979b2e1ad0cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67e227081920e605d1cf979b2e1ad0cc">&#9670;&nbsp;</a></span>onOwnerChanged()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e227081920e605d1cf979b2e1ad0cc">&#9670;&#160;</a></span>onOwnerChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,11 +590,12 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >转移聊天室拥有者。</p>
+<p >聊天室所有者变更。</p>
+<p >聊天室所有成员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">newOwner</td><td>新所有者。 </td></tr>
+    <tr><td class="paramname">newOwner</td><td>新的聊天室所有者。 </td></tr>
     <tr><td class="paramname">oldOwner</td><td>原聊天室所有者。 </td></tr>
   </table>
   </dd>
@@ -500,7 +604,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="ab9607f8e781363ed5e229aadc78e4f1e" name="ab9607f8e781363ed5e229aadc78e4f1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9607f8e781363ed5e229aadc78e4f1e">&#9670;&nbsp;</a></span>onRemovedFromChatRoom()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9607f8e781363ed5e229aadc78e4f1e">&#9670;&#160;</a></span>onRemovedFromChatRoom()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -536,17 +640,18 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室人员被移除。</p>
+<p >有成员被移出聊天室。</p>
+<p >被移出的成员收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">reason</td><td>用户被移出聊天室的原因：<ul>
+    <tr><td class="paramname">reason</td><td>成员被移出聊天室的原因：<ul>
 <li>xxx BE_KICKED：该用户被聊天室管理员移除；</li>
-<li>xxxBE_LICKED)FOR_OFFLINE：该用户由于当前设备断网被服务器移出聊天室。</li>
+<li>xxx BE_KICKED_FOR_OFFLINE：该用户由于当前设备断网被服务器移出聊天室。</li>
 </ul>
 </td></tr>
     <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">roomName</td><td>聊天室名字。 </td></tr>
-    <tr><td class="paramname">participant</td><td>被移除人员 ID。 </td></tr>
+    <tr><td class="paramname">roomName</td><td>聊天室名称。 </td></tr>
+    <tr><td class="paramname">participant</td><td>被移除人员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -554,7 +659,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="a2f74ca5192e14380ccf34b6f8935c138" name="a2f74ca5192e14380ccf34b6f8935c138"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f74ca5192e14380ccf34b6f8935c138">&#9670;&nbsp;</a></span>onSpecificationChanged()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f74ca5192e14380ccf34b6f8935c138">&#9670;&#160;</a></span>onSpecificationChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -568,9 +673,11 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室信息更新回调。 </p><dl class="params"><dt>参数</dt><dd>
+<p >聊天室信息有更新。</p>
+<p >聊天室的所有成员会收到该事件。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatRoom</td><td>聊天室。 </td></tr>
+    <tr><td class="paramname">chatRoom</td><td>聊天室对象。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -578,7 +685,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="a0c596ff30cc51503d47cb728dcf36fd6" name="a0c596ff30cc51503d47cb728dcf36fd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c596ff30cc51503d47cb728dcf36fd6">&#9670;&nbsp;</a></span>onWhiteListAdded()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c596ff30cc51503d47cb728dcf36fd6">&#9670;&#160;</a></span>onWhiteListAdded()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -602,7 +709,8 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >白名单成员增加。</p>
+<p >有成员加入白名单。</p>
+<p >被添加的成员收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
@@ -614,7 +722,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <a id="a5274fb3b91326c2789faa9f18b07c8cd" name="a5274fb3b91326c2789faa9f18b07c8cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5274fb3b91326c2789faa9f18b07c8cd">&#9670;&nbsp;</a></span>onWhiteListRemoved()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5274fb3b91326c2789faa9f18b07c8cd">&#9670;&#160;</a></span>onWhiteListRemoved()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -638,11 +746,12 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >白名单成员减少。</p>
+<p >有成员被移出白名单。</p>
+<p >被移出白名单的成员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">whitelist</td><td>白名单中移除的成员名单。 </td></tr>
+    <tr><td class="paramname">whitelist</td><td>移出白名单的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -650,12 +759,12 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <hr/>该接口的文档由以下文件生成:<ul>
-<li>hyphenatechatsdk/src/com/hyphenate/EMChatRoomChangeListener.java</li>
+<li>com/hyphenate/EMChatRoomChangeListener.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

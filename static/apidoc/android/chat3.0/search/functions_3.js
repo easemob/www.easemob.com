@@ -18,8 +18,7 @@ var searchData=
   ['disableofflinepush_15',['disableOfflinePush',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a5eefa3153a879aec8482805c9617dce8',1,'com::hyphenate::chat::EMPushManager']]],
   ['displayname_16',['displayName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body.html#a9e7248bec1e9a1d1077c6e5a5c8ac272',1,'com::hyphenate::chat::EMFileMessageBody']]],
   ['downloadattachment_17',['downloadAttachment',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1a938a579e8e5e07518d1e5008f9241d',1,'com::hyphenate::chat::EMChatManager']]],
-  ['downloadfile_18',['downloadFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#af39b20828a22e8a13ace18a8335ac50a',1,'com::hyphenate::chat::EMChatManager']]],
-  ['downloadgroupsharedfile_19',['downloadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a9f6c882d4a43ea0ff78bb5fb0c77ceea',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['downloadstatus_20',['downloadStatus',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body.html#a216a0e482c9482669c36ef2eb281feed',1,'com::hyphenate::chat::EMFileMessageBody']]],
-  ['downloadthumbnail_21',['downloadThumbnail',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4c4f426c7cb00d44fee5d550a7eea5ce',1,'com::hyphenate::chat::EMChatManager']]]
+  ['downloadgroupsharedfile_18',['downloadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a9f6c882d4a43ea0ff78bb5fb0c77ceea',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['downloadstatus_19',['downloadStatus',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body.html#a216a0e482c9482669c36ef2eb281feed',1,'com::hyphenate::chat::EMFileMessageBody']]],
+  ['downloadthumbnail_20',['downloadThumbnail',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4c4f426c7cb00d44fee5d550a7eea5ce',1,'com::hyphenate::chat::EMChatManager']]]
 ];
