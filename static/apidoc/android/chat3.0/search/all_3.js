@@ -24,8 +24,7 @@ var searchData=
   ['displaystyle_21',['DisplayStyle',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager_1_1_display_style.html',1,'com::hyphenate::chat::EMPushManager']]],
   ['down_22',['DOWN',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html#a81600c9b26032731d06e4c41bf405a58',1,'com::hyphenate::chat::EMConversation::EMSearchDirection']]],
   ['downloadattachment_23',['downloadAttachment',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1a938a579e8e5e07518d1e5008f9241d',1,'com::hyphenate::chat::EMChatManager']]],
-  ['downloadfile_24',['downloadFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#af39b20828a22e8a13ace18a8335ac50a',1,'com::hyphenate::chat::EMChatManager']]],
-  ['downloadgroupsharedfile_25',['downloadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a9f6c882d4a43ea0ff78bb5fb0c77ceea',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['downloadstatus_26',['downloadStatus',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body.html#a216a0e482c9482669c36ef2eb281feed',1,'com::hyphenate::chat::EMFileMessageBody']]],
-  ['downloadthumbnail_27',['downloadThumbnail',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4c4f426c7cb00d44fee5d550a7eea5ce',1,'com::hyphenate::chat::EMChatManager']]]
+  ['downloadgroupsharedfile_24',['downloadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a9f6c882d4a43ea0ff78bb5fb0c77ceea',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['downloadstatus_25',['downloadStatus',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body.html#a216a0e482c9482669c36ef2eb281feed',1,'com::hyphenate::chat::EMFileMessageBody']]],
+  ['downloadthumbnail_26',['downloadThumbnail',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4c4f426c7cb00d44fee5d550a7eea5ce',1,'com::hyphenate::chat::EMChatManager']]]
 ];
