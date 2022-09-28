@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['fetchgroupreadacks_0',['FetchGroupReadAcks',['../class_chat_s_d_k_1_1_i_chat_manager.html#a10bb1ef43a250c72004a72f724dfb617',1,'ChatSDK::IChatManager']]],
+  ['fetchhistorymessagesfromserver_1',['FetchHistoryMessagesFromServer',['../class_chat_s_d_k_1_1_i_chat_manager.html#a0cdb418d52a5e550955caf104049c993',1,'ChatSDK::IChatManager']]],
+  ['fetchjoinedgroupsfromserver_2',['FetchJoinedGroupsFromServer',['../class_chat_s_d_k_1_1_i_group_manager.html#a71a81d688521897b7457e557e9d203c0',1,'ChatSDK::IGroupManager']]],
+  ['fetchminejoinedthreadlist_3',['FetchMineJoinedThreadList',['../class_chat_s_d_k_1_1_i_chat_thread_manager.html#a9def36cb687649295104d5dbb59b0f86',1,'ChatSDK::IChatThreadManager']]],
+  ['fetchpresencestatus_4',['FetchPresenceStatus',['../class_chat_s_d_k_1_1_i_presence_manager.html#ac73e4c6848bba319a0ff426418ad676f',1,'ChatSDK::IPresenceManager']]],
+  ['fetchpublicgroupsfromserver_5',['FetchPublicGroupsFromServer',['../class_chat_s_d_k_1_1_i_group_manager.html#ab29251adf18f932e31b02bc836d23232',1,'ChatSDK::IGroupManager']]],
+  ['fetchpublicroomsfromserver_6',['FetchPublicRoomsFromServer',['../class_chat_s_d_k_1_1_i_room_manager.html#abc658e734ffd3046b90d21f84e97ee1d',1,'ChatSDK::IRoomManager']]],
+  ['fetchroomannouncement_7',['FetchRoomAnnouncement',['../class_chat_s_d_k_1_1_i_room_manager.html#aba32a7b68fb05ec712e348bd5bbfb4c2',1,'ChatSDK::IRoomManager']]],
+  ['fetchroomblocklist_8',['FetchRoomBlockList',['../class_chat_s_d_k_1_1_i_room_manager.html#a8bab36d554e969e8f90370474361b5d8',1,'ChatSDK::IRoomManager']]],
+  ['fetchroominfofromserver_9',['FetchRoomInfoFromServer',['../class_chat_s_d_k_1_1_i_room_manager.html#a4c02424549f18fb51473cb31c2c466a6',1,'ChatSDK::IRoomManager']]],
+  ['fetchroommembers_10',['FetchRoomMembers',['../class_chat_s_d_k_1_1_i_room_manager.html#a7e695bd9d68e925556458edca99077cb',1,'ChatSDK::IRoomManager']]],
+  ['fetchroommutelist_11',['FetchRoomMuteList',['../class_chat_s_d_k_1_1_i_room_manager.html#a723a43588accbf29c3385a4f7c63d77d',1,'ChatSDK::IRoomManager']]],
+  ['fetchsubscribedmembers_12',['FetchSubscribedMembers',['../class_chat_s_d_k_1_1_i_presence_manager.html#a47d25870aa3206cdbe80ce341c816a23',1,'ChatSDK::IPresenceManager']]],
+  ['fetchsupportlanguages_13',['FetchSupportLanguages',['../class_chat_s_d_k_1_1_i_chat_manager.html#ab214be6c3c33d671202813160229398a',1,'ChatSDK::IChatManager']]],
+  ['fetchthreadlistofgroup_14',['FetchThreadListOfGroup',['../class_chat_s_d_k_1_1_i_chat_thread_manager.html#ab5e5a08243a85e64cde8769263ee3529',1,'ChatSDK::IChatThreadManager']]],
+  ['fetchthreadmembers_15',['FetchThreadMembers',['../class_chat_s_d_k_1_1_i_chat_thread_manager.html#a274e618e835d5856848f984326f27eb5',1,'ChatSDK::IChatThreadManager']]],
+  ['fetchuserinfobyuserid_16',['FetchUserInfoByUserId',['../class_chat_s_d_k_1_1_i_user_info_manager.html#ae0ba66d3b34485cf4f5b079e464c0138',1,'ChatSDK::IUserInfoManager']]],
+  ['filebody_17',['FileBody',['../class_chat_s_d_k_1_1_message_body_1_1_file_body.html#ac66e02014d63546756c50f96ee0d379f',1,'ChatSDK::MessageBody::FileBody']]]
+];
