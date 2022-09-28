@@ -7,8 +7,9 @@ var searchData=
   ['announcement_4',['announcement',['../interface_e_m_chatroom.html#ab82c203fa0342ba69ea61caa74fd1f3a',1,'EMChatroom::announcement()'],['../interface_e_m_group.html#a1ae69e0c6fdc8a63a9e0fbafa0779805',1,'EMGroup::announcement()']]],
   ['apnscertname_5',['apnsCertName',['../interface_e_m_options.html#a0bc4133a846b0c769ec6f47277473dc5',1,'EMOptions']]],
   ['appkey_6',['appkey',['../interface_e_m_options.html#a3a691b8da310dbbeaffd87f1e00c56eb',1,'EMOptions']]],
-  ['autoacceptfriendinvitation_7',['autoAcceptFriendInvitation',['../interface_e_m_options.html#a813f374c2a7a91817e28e4296f81f199',1,'EMOptions']]],
-  ['autoacceptgroupinvitation_8',['autoAcceptGroupInvitation',['../interface_e_m_options.html#a627c9f7933d3e78fa168cdff82119897',1,'EMOptions']]],
-  ['autodownloadthumbnail_9',['autoDownloadThumbnail',['../interface_e_m_options.html#a23c293667dd658b23b5497c80243c198',1,'EMOptions']]],
-  ['avatarurl_10',['avatarUrl',['../interface_e_m_user_info.html#ae21848d71c809557e22ffc59121e6dd1',1,'EMUserInfo']]]
+  ['area_7',['area',['../interface_e_m_options.html#a9f0d7242cdcee3ab31ca95c9bcbd346f',1,'EMOptions']]],
+  ['autoacceptfriendinvitation_8',['autoAcceptFriendInvitation',['../interface_e_m_options.html#a813f374c2a7a91817e28e4296f81f199',1,'EMOptions']]],
+  ['autoacceptgroupinvitation_9',['autoAcceptGroupInvitation',['../interface_e_m_options.html#a627c9f7933d3e78fa168cdff82119897',1,'EMOptions']]],
+  ['autodownloadthumbnail_10',['autoDownloadThumbnail',['../interface_e_m_options.html#a23c293667dd658b23b5497c80243c198',1,'EMOptions']]],
+  ['avatarurl_11',['avatarUrl',['../interface_e_m_user_info.html#ae21848d71c809557e22ffc59121e6dd1',1,'EMUserInfo']]]
 ];

@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['fetchchatroominfo_3aincludememberslist_3aerror_3a_0',['fetchChatroomInfo:includeMembersList:error:',['../protocol_i_e_m_chatroom_manager-p.html#ae225923598502f4d35ed672d13c38a09',1,'IEMChatroomManager-p']]],
-  ['fetchgroupbanslist_3aerror_3a_1',['fetchGroupBansList:error:',['../protocol_i_e_m_group_manager-p.html#a6705eda1527551eba6191d90420a9595',1,'IEMGroupManager-p']]],
-  ['fetchgroupinfo_3aincludememberslist_3aerror_3a_2',['fetchGroupInfo:includeMembersList:error:',['../protocol_i_e_m_group_manager-p.html#a6cc2ccc47a784e889a42fb93d4f4f8e3',1,'IEMGroupManager-p']]],
+  ['fetchchatroomallattributes_3acompletion_3a_0',['fetchChatroomAllAttributes:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a7bed1ef805c229f454032e2cae482d69',1,'IEMChatroomManager-p']]],
+  ['fetchchatroomattributes_3akeys_3acompletion_3a_1',['fetchChatroomAttributes:keys:completion:',['../protocol_i_e_m_chatroom_manager-p.html#af5a0f5ae86fa425819481d3578356d2d',1,'IEMChatroomManager-p']]],
+  ['fetchchatroominfo_3aincludememberslist_3aerror_3a_2',['fetchChatroomInfo:includeMembersList:error:',['../protocol_i_e_m_chatroom_manager-p.html#ae225923598502f4d35ed672d13c38a09',1,'IEMChatroomManager-p']]],
   ['fetchgroupmutelistfromserverwithid_3apagenumber_3apagesize_3acompletion_3a_3',['fetchGroupMuteListFromServerWithId:pageNumber:pageSize:completion:',['../protocol_i_e_m_group_manager-p.html#a45e39155746d33af2a2bdbffaac112f0',1,'IEMGroupManager-p']]],
   ['fetchhistorymessagesfromserver_3aconversationtype_3astartmessageid_3afetchdirection_3apagesize_3aerror_3a_4',['fetchHistoryMessagesFromServer:conversationType:startMessageId:fetchDirection:pageSize:error:',['../protocol_i_e_m_chat_manager-p.html#a59fb61835b4c49338cd5f25841420719',1,'IEMChatManager-p']]],
   ['fetchhistorymessagesfromserver_3aconversationtype_3astartmessageid_3apagesize_3aerror_3a_5',['fetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:error:',['../protocol_i_e_m_chat_manager-p.html#abd94afc1c5fadf9c9cf2496020355daa',1,'IEMChatManager-p']]],
