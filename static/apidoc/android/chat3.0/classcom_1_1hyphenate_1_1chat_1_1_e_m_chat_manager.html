@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>hyphenate_SDK3.0: com.hyphenate.chat.EMChatManager类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,9 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.6.1</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.7</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.5 -->
+<!-- 制作者 Doxygen 1.9.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,16 +56,9 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">载入中...</div>
-<div class="SRStatus" id="Searching">搜索中...</div>
-<div class="SRStatus" id="NoMatches">未找到</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -198,15 +191,11 @@ Protected 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >聊天管理类，该类负责管理会话（加载，删除等）、发送消息、下载消息附件等。</p>
 <p >发送文文本消息示例如下：</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> message = <a class="code hl_class" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a>.<a class="code hl_function" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ada043cb0f1512242d016c54e4352eccc">createTxtSendMessage</a>(content, toChatUsername);</div>
-<div class="line">   <a class="code hl_class" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html">EMClient</a>.getInstance().chatManager().<a class="code hl_function" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ad50be7183f088c415b9507bc7ce792e6">sendMessage</a>(message);</div>
-<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager_html_ad50be7183f088c415b9507bc7ce792e6"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ad50be7183f088c415b9507bc7ce792e6">com.hyphenate.chat.EMChatManager.sendMessage</a></div><div class="ttdeci">void sendMessage(final EMMessage msg)</div><div class="ttdef"><b>Definition:</b> EMChatManager.java:462</div></div>
-<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_client_html"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html">com.hyphenate.chat.EMClient</a></div><div class="ttdef"><b>Definition:</b> EMClient.java:96</div></div>
-<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_message_html"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">com.hyphenate.chat.EMMessage</a></div><div class="ttdef"><b>Definition:</b> EMMessage.java:93</div></div>
-<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_message_html_ada043cb0f1512242d016c54e4352eccc"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ada043cb0f1512242d016c54e4352eccc">com.hyphenate.chat.EMMessage.createTxtSendMessage</a></div><div class="ttdeci">static EMMessage createTxtSendMessage(String content, String username)</div><div class="ttdef"><b>Definition:</b> EMMessage.java:639</div></div>
+<div class="fragment"><div class="line">EMMessage message = EMMessage.createTxtSendMessage(content, toChatUsername);</div>
+<div class="line">   EMClient.getInstance().chatManager().sendMessage(message);</div>
 </div><!-- fragment --> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a121387f48448ea38e5b33ea4622e6e86" name="a121387f48448ea38e5b33ea4622e6e86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a121387f48448ea38e5b33ea4622e6e86">&#9670;&#160;</a></span>ackConversationRead()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a121387f48448ea38e5b33ea4622e6e86">&#9670;&nbsp;</a></span>ackConversationRead()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,8 +210,8 @@ Protected 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >发送会话的已读回执，该方法只针对单聊会话。</p>
-<p >该方法会通知服务器将此会话未读数设置为 0，消息发送方将会收到 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html#a57efff3b4e02b0dee090d75951b1a735">EMConversationListener#onConversationRead(String, String)</a></code> 回调。 在多端多设备登录下，接收方的其他设备也会收到该回调。</p>
-<p >群消息已读回执，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a></code>。</p>
+<p >该方法会通知服务器将此会话未读数设置为 0，消息发送方将会收到 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html#a57efff3b4e02b0dee090d75951b1a735">EMConversationListener#onConversationRead(String, String)</a> 回调。 在多端多设备登录下，接收方的其他设备也会收到该回调。</p>
+<p >群消息已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a>。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
@@ -231,7 +220,7 @@ Protected 成员函数</h2></td></tr>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>可能抛出以下异常：<code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa498f83d523127e5314b53348df0e31b">EMError#USER_NOT_LOGIN</a></code>、<code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa3d81fcde062618d9f81c1cb3e00ad11">EMError#SERVER_NOT_REACHABLE</a></code>、 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#afea45a5fbac3a4a40f3a2d24d092aecb">EMError#MESSAGE_INVALID</a></code> 等，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a></code>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>可能抛出以下异常：<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa498f83d523127e5314b53348df0e31b">EMError#USER_NOT_LOGIN</a>、<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#aa3d81fcde062618d9f81c1cb3e00ad11">EMError#SERVER_NOT_REACHABLE</a>、 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#afea45a5fbac3a4a40f3a2d24d092aecb">EMError#MESSAGE_INVALID</a> 等，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -239,7 +228,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a29f61eed62d21af08728f0a577787598" name="a29f61eed62d21af08728f0a577787598"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29f61eed62d21af08728f0a577787598">&#9670;&#160;</a></span>ackGroupMessageRead()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f61eed62d21af08728f0a577787598">&#9670;&nbsp;</a></span>ackGroupMessageRead()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,9 +260,9 @@ Protected 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >发送群消息已读回执。</p>
 <p ><b>注意</b></p>
-<p >设置了 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">EMOptions#setRequireAck(boolean)</a></code> 和 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a8249b1722b5ac217f27584b223ad52c6">EMMessage#setIsNeedGroupAck(boolean)</a></code> 后才能调用该方法。</p>
-<p >发送单聊消息已读回执，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a79f4f361c996e464e54105776fffe44d">ackMessageRead(String, String)</a></code></p>
-<p >会话已读回执，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a121387f48448ea38e5b33ea4622e6e86">ackConversationRead(String)</a></code>。</p>
+<p >设置了 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">EMOptions#setRequireAck(boolean)</a> 和 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a8249b1722b5ac217f27584b223ad52c6">EMMessage#setIsNeedGroupAck(boolean)</a> 后才能调用该方法。</p>
+<p >发送单聊消息已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a79f4f361c996e464e54105776fffe44d">ackMessageRead(String, String)</a></p>
+<p >会话已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a121387f48448ea38e5b33ea4622e6e86">ackConversationRead(String)</a>。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">to</td><td>会话 ID。 </td></tr>
@@ -284,7 +273,7 @@ Protected 成员函数</h2></td></tr>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a></code>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -292,7 +281,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a79f4f361c996e464e54105776fffe44d" name="a79f4f361c996e464e54105776fffe44d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79f4f361c996e464e54105776fffe44d">&#9670;&#160;</a></span>ackMessageRead()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a79f4f361c996e464e54105776fffe44d">&#9670;&nbsp;</a></span>ackMessageRead()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,9 +306,9 @@ Protected 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >发送消息的已读回执。</p>
-<p >该方法仅适用于单聊会话，仅在 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">EMOptions#setRequireAck(boolean)</a></code> 为 <code>true</code> 时生效。</p>
-<p >发送群消息已读回执，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a></code>。</p>
-<p >推荐进入聊天页面的时调用 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a121387f48448ea38e5b33ea4622e6e86">ackConversationRead(String)</a></code> ，其他情况下调用该方法以减少调用频率。</p>
+<p >该方法仅适用于单聊会话，仅在 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">EMOptions#setRequireAck(boolean)</a> 为 <code>true</code> 时生效。</p>
+<p >发送群消息已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a>。</p>
+<p >推荐进入聊天页面的时调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a121387f48448ea38e5b33ea4622e6e86">ackConversationRead(String)</a> ，其他情况下调用该方法以减少调用频率。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">to</td><td>接收方的用户 ID。 </td></tr>
@@ -329,7 +318,7 @@ Protected 成员函数</h2></td></tr>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a></code>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -337,7 +326,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ace81b019cf17b0449b4eddd7aeffe19d" name="ace81b019cf17b0449b4eddd7aeffe19d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace81b019cf17b0449b4eddd7aeffe19d">&#9670;&#160;</a></span>addConversationListener()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ace81b019cf17b0449b4eddd7aeffe19d">&#9670;&nbsp;</a></span>addConversationListener()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,10 +342,10 @@ Protected 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >注册会话监听器。</p>
 <p >会话监听器可监听会话变化及会话已读回执。</p>
-<p >在不需要会话监听器时，可调用 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a0a8fb4720890a1d25cc909804312a6f8">removeConversationListener(EMConversationListener)</a></code> 方法移除。</p>
+<p >在不需要会话监听器时，可调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a0a8fb4720890a1d25cc909804312a6f8">removeConversationListener(EMConversationListener)</a> 方法移除。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">listener</td><td>要添加的会话监听，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html">EMConversationListener</a></code>。 </td></tr>
+    <tr><td class="paramname">listener</td><td>要添加的会话监听，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html">EMConversationListener</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -364,7 +353,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a923a569276cc251b85fd541d23432a4f" name="a923a569276cc251b85fd541d23432a4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a923a569276cc251b85fd541d23432a4f">&#9670;&#160;</a></span>addMessageListener()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a923a569276cc251b85fd541d23432a4f">&#9670;&nbsp;</a></span>addMessageListener()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -380,10 +369,10 @@ Protected 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >注册消息监听器。</p>
 <p >接收到新消息等回调可以通过设置此方法进行监听。</p>
-<p >在不需要消息监听器时，可调用 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a072e93b97c5859ea2780c1a898c37873">removeMessageListener(EMMessageListener)</a></code> 方法将其移除。</p>
+<p >在不需要消息监听器时，可调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a072e93b97c5859ea2780c1a898c37873">removeMessageListener(EMMessageListener)</a> 方法将其移除。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">listener</td><td>要注册的消息监听，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a></code>。 </td></tr>
+    <tr><td class="paramname">listener</td><td>要注册的消息监听，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -391,7 +380,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a33cc33f86747097e93f826eb7b8e693f" name="a33cc33f86747097e93f826eb7b8e693f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33cc33f86747097e93f826eb7b8e693f">&#9670;&#160;</a></span>addReaction()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a33cc33f86747097e93f826eb7b8e693f">&#9670;&nbsp;</a></span>addReaction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +415,7 @@ Protected 成员函数</h2></td></tr>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a></code>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -434,7 +423,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ae7a74073bc6c9c9534f1fde04a07428c" name="ae7a74073bc6c9c9534f1fde04a07428c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7a74073bc6c9c9534f1fde04a07428c">&#9670;&#160;</a></span>asyncAddReaction()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a74073bc6c9c9534f1fde04a07428c">&#9670;&nbsp;</a></span>asyncAddReaction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -470,7 +459,7 @@ Protected 成员函数</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
     <tr><td class="paramname">reaction</td><td>要添加的消息 Reaction。 </td></tr>
-    <tr><td class="paramname">callback</td><td>处理结果回调，失败会返回失败原因。详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a></code>。 </td></tr>
+    <tr><td class="paramname">callback</td><td>处理结果回调，失败会返回失败原因。详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -478,7 +467,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ab8197f641638122a0382179a4e99347b" name="ab8197f641638122a0382179a4e99347b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8197f641638122a0382179a4e99347b">&#9670;&#160;</a></span>asyncFetchConversationsFromServer()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8197f641638122a0382179a4e99347b">&#9670;&nbsp;</a></span>asyncFetchConversationsFromServer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -500,7 +489,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a755f6ba3a2b3137a5a43217280d5791e" name="a755f6ba3a2b3137a5a43217280d5791e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a755f6ba3a2b3137a5a43217280d5791e">&#9670;&#160;</a></span>asyncFetchGroupReadAcks()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a755f6ba3a2b3137a5a43217280d5791e">&#9670;&nbsp;</a></span>asyncFetchGroupReadAcks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -537,7 +526,7 @@ Protected 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >从服务器分页获取群组消息已读回执详情。</p>
-<p >发送群组消息回执，可调用 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a></code>。</p>
+<p >发送群组消息回执，可调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a>。</p>
 <p >异步方法。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -545,8 +534,8 @@ Protected 成员函数</h2></td></tr>
     <tr><td class="paramname">pageSize</td><td>每页获取的群消息已读回执数。取值范围为 [1,50]。 </td></tr>
     <tr><td class="paramname">startAckId</td><td>查询起始的已读回执 ID。该参数设置后，SDK 从指定的已读回执 ID 开始，按服务器接收已读回执的时间的逆序获取。 若该参数为空，SDK 从最新的已读回执开始按服务器接收回执时间的逆序获取。 </td></tr>
     <tr><td class="paramname">callBack</td><td>结果回调。<ul>
-<li>调用成功，触发 <code><a class="el" href="">EMValueCallBack#onSuccess(Object)</a></code> 回调，返回查询的已读回执列表（不包含查询起始 ID 的已读回执）和下次查询的 cursor。</li>
-<li>调用失败，触发 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a></code> 回调报错。 </li>
+<li>调用成功，触发 <a class="el" href="">EMValueCallBack#onSuccess(Object)</a> 回调，返回查询的已读回执列表（不包含查询起始 ID 的已读回执）和下次查询的 cursor。</li>
+<li>调用失败，触发 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a> 回调报错。 </li>
 </ul>
 </td></tr>
   </table>
@@ -556,7 +545,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ad000d0ea5983ed53ce7ea9d8c102b360" name="ad000d0ea5983ed53ce7ea9d8c102b360"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad000d0ea5983ed53ce7ea9d8c102b360">&#9670;&#160;</a></span>asyncFetchHistoryMessage() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad000d0ea5983ed53ce7ea9d8c102b360">&#9670;&nbsp;</a></span>asyncFetchHistoryMessage() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -609,14 +598,14 @@ Protected 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型，详见 <code><a class="el" href="">EMConversationType</a></code>。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型，详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
     <tr><td class="paramname">pageSize</td><td>每页期望获取的消息数。取值范围为 [1,50]。 </td></tr>
     <tr><td class="paramname">startMsgId</td><td>查询的起始消息 ID。该参数设置后，SDK 从指定的消息 ID 开始，按消息搜索方向获取。 如果传入消息的 ID 为空，SDK 忽略该参数，按搜索方向查询消息。<ul>
 <li>若 <code>direction</code> 为 <code>UP</code>，SDK 从最新消息开始，按照服务器接收消息时间的逆序获取；</li>
 <li>若 <code>direction</code> 为 <code>DOWN</code>，SDK 从最早消息开始，按照服务器接收消息时间的正序获取。 </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a></code>。<ul>
+    <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a>。<ul>
 <li><code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
 <li><code>DOWN</code>：按照消息中的时间戳的正序查询； </li>
 </ul>
@@ -624,8 +613,8 @@ Protected 成员函数</h2></td></tr>
 </ul>
 </td></tr>
     <tr><td class="paramname">callBack</td><td>结果回调：<ul>
-<li>调用成功，触发 <code><a class="el" href="">EMValueCallBack#onSuccess(Object)</a></code>，返回消息列表（不包含查询起始 ID 的消息）和下次查询的 cursor；</li>
-<li>调用失败，触发 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a></code> 报错。 </li>
+<li>调用成功，触发 <a class="el" href="">EMValueCallBack#onSuccess(Object)</a>，返回消息列表（不包含查询起始 ID 的消息）和下次查询的 cursor；</li>
+<li>调用失败，触发 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a> 报错。 </li>
 </ul>
 </td></tr>
   </table>
@@ -635,7 +624,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ade20eed11014f70888bf34f8b38ebc24" name="ade20eed11014f70888bf34f8b38ebc24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade20eed11014f70888bf34f8b38ebc24">&#9670;&#160;</a></span>asyncFetchHistoryMessage() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ade20eed11014f70888bf34f8b38ebc24">&#9670;&nbsp;</a></span>asyncFetchHistoryMessage() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -682,10 +671,10 @@ Protected 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型，详见 <code><a class="el" href="">EMConversationType</a></code>。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型，详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
     <tr><td class="paramname">pageSize</td><td>每页期望获取的消息条数。取值范围为 [1,50]。 </td></tr>
     <tr><td class="paramname">startMsgId</td><td>查询的起始消息 ID。该参数设置后，SDK 从指定的消息 ID 开始，按服务器接收消息的时间的逆序获取。 若该参数为空，SDK 从最新的消息开始，按服务器接收消息的时间的逆序获取。 </td></tr>
-    <tr><td class="paramname">callBack</td><td>结果回调，成功则执行 <code><a class="el" href="">EMValueCallBack#onSuccess(Object)</a></code>，返回消息列表（不包含查询起始 ID 的消息）和下次查询的 cursor； 失败则执行 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a></code>。 </td></tr>
+    <tr><td class="paramname">callBack</td><td>结果回调，成功则执行 <a class="el" href="">EMValueCallBack#onSuccess(Object)</a>，返回消息列表（不包含查询起始 ID 的消息）和下次查询的 cursor； 失败则执行 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -693,7 +682,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a192b476f12be324e57d8b36e4a7b46e9" name="a192b476f12be324e57d8b36e4a7b46e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a192b476f12be324e57d8b36e4a7b46e9">&#9670;&#160;</a></span>asyncGetReactionDetail()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a192b476f12be324e57d8b36e4a7b46e9">&#9670;&nbsp;</a></span>asyncGetReactionDetail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -751,7 +740,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="afa876567f3e1c9069ef3b6a237f3815b" name="afa876567f3e1c9069ef3b6a237f3815b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa876567f3e1c9069ef3b6a237f3815b">&#9670;&#160;</a></span>asyncGetReactionList()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afa876567f3e1c9069ef3b6a237f3815b">&#9670;&nbsp;</a></span>asyncGetReactionList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -792,7 +781,7 @@ Protected 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">messageIdList</td><td>消息 ID。 </td></tr>
-    <tr><td class="paramname">chatType</td><td>会话类型，仅支持单聊（<code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#a160bb0aa31d02b25444da9b0eb83250c">EMMessage.ChatType#Chat</a></code> ）和群聊（<code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#aa83280ce79df6f5aa49f7a5223498cad">EMMessage.ChatType#GroupChat</a></code>）。 </td></tr>
+    <tr><td class="paramname">chatType</td><td>会话类型，仅支持单聊（<a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#a160bb0aa31d02b25444da9b0eb83250c">EMMessage.ChatType#Chat</a> ）和群聊（<a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#aa83280ce79df6f5aa49f7a5223498cad">EMMessage.ChatType#GroupChat</a>）。 </td></tr>
     <tr><td class="paramname">groupId</td><td>群组 ID，该参数只对群聊生效。 </td></tr>
     <tr><td class="paramname">callback</td><td>处理结果回调，包含消息 ID 对应的 Reaction 列表（EMMessageReaction 的用户列表 <code>UserList</code> 为概要数据，只包含前三个用户信息）。 </td></tr>
   </table>
@@ -802,7 +791,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a9765878b927857688326c192135e2cad" name="a9765878b927857688326c192135e2cad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9765878b927857688326c192135e2cad">&#9670;&#160;</a></span>asyncRemoveReaction()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9765878b927857688326c192135e2cad">&#9670;&nbsp;</a></span>asyncRemoveReaction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -838,7 +827,7 @@ Protected 成员函数</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
     <tr><td class="paramname">reaction</td><td>要删除的 Reaction。 </td></tr>
-    <tr><td class="paramname">callback</td><td>处理结果回调，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a></code>。 </td></tr>
+    <tr><td class="paramname">callback</td><td>处理结果回调，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -846,7 +835,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="afb775c9bcc9d2613a4642971301b756f" name="afb775c9bcc9d2613a4642971301b756f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb775c9bcc9d2613a4642971301b756f">&#9670;&#160;</a></span>asyncReportMessage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afb775c9bcc9d2613a4642971301b756f">&#9670;&nbsp;</a></span>asyncReportMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -889,9 +878,9 @@ Protected 成员函数</h2></td></tr>
     <tr><td class="paramname">msgId</td><td>非法消息的 ID。 </td></tr>
     <tr><td class="paramname">reportTarget</td><td>非法消息标签，如涉政或涉恐。 </td></tr>
     <tr><td class="paramname">reportReason</td><td>举报原因。 </td></tr>
-    <tr><td class="paramname">callBack</td><td>结果回调，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a></code>：<ul>
-<li>调用成功，触发 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa819895b47f578c0bc25b8c7eca9fe45">EMCallBack#onSuccess()</a></code> 回调；</li>
-<li>调用失败，触发 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#a26e40e77141d471fec8ff69ea7ebbfce">EMCallBack#onError(int, String)</a></code> 回调。 </li>
+    <tr><td class="paramname">callBack</td><td>结果回调，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>：<ul>
+<li>调用成功，触发 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa819895b47f578c0bc25b8c7eca9fe45">EMCallBack#onSuccess()</a> 回调；</li>
+<li>调用失败，触发 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#a26e40e77141d471fec8ff69ea7ebbfce">EMCallBack#onError(int, String)</a> 回调。 </li>
 </ul>
 </td></tr>
   </table>
@@ -901,7 +890,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="adcd9ebd42f61dd8ea65d4711d64db2b5" name="adcd9ebd42f61dd8ea65d4711d64db2b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcd9ebd42f61dd8ea65d4711d64db2b5">&#9670;&#160;</a></span>aysncRecallMessage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd9ebd42f61dd8ea65d4711d64db2b5">&#9670;&nbsp;</a></span>aysncRecallMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -930,7 +919,7 @@ Protected 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">message</td><td>消息对象。 </td></tr>
-    <tr><td class="paramname">callback</td><td><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> 类的对象，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a></code>。 </td></tr>
+    <tr><td class="paramname">callback</td><td><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> 类的对象，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -938,7 +927,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ae00d3eb41e070546b6b7dc1c3e0750c3" name="ae00d3eb41e070546b6b7dc1c3e0750c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae00d3eb41e070546b6b7dc1c3e0750c3">&#9670;&#160;</a></span>deleteConversation()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00d3eb41e070546b6b7dc1c3e0750c3">&#9670;&nbsp;</a></span>deleteConversation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -983,7 +972,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a345e81b9caf2658c8796855fe63fe752" name="a345e81b9caf2658c8796855fe63fe752"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a345e81b9caf2658c8796855fe63fe752">&#9670;&#160;</a></span>deleteConversationFromServer()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a345e81b9caf2658c8796855fe63fe752">&#9670;&nbsp;</a></span>deleteConversationFromServer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1024,7 +1013,7 @@ Protected 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>会话 ID。 </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型，详见 <code><a class="el" href="">EMConversationType</a></code>。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型，详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
     <tr><td class="paramname">isDeleteServerMessages</td><td>删除会话时是否同时删除历史消息。<ul>
 <li><code>true</code>：是；</li>
 <li><code>false</code>: 否。 </li>
@@ -1042,7 +1031,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a8563dfd1dc1255acb9244d801c7b8255" name="a8563dfd1dc1255acb9244d801c7b8255"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8563dfd1dc1255acb9244d801c7b8255">&#9670;&#160;</a></span>deleteMessagesBeforeTimestamp()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8563dfd1dc1255acb9244d801c7b8255">&#9670;&nbsp;</a></span>deleteMessagesBeforeTimestamp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1070,7 +1059,7 @@ Protected 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">timeStamp</td><td>查询的消息的起始 Unix 时间戳，单位为毫秒。 </td></tr>
-    <tr><td class="paramname">callback</td><td>删除结果回调，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a></code>。 </td></tr>
+    <tr><td class="paramname">callback</td><td>删除结果回调，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1078,7 +1067,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a1a938a579e8e5e07518d1e5008f9241d" name="a1a938a579e8e5e07518d1e5008f9241d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a938a579e8e5e07518d1e5008f9241d">&#9670;&#160;</a></span>downloadAttachment()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a938a579e8e5e07518d1e5008f9241d">&#9670;&nbsp;</a></span>downloadAttachment()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1104,7 +1093,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a4c4f426c7cb00d44fee5d550a7eea5ce" name="a4c4f426c7cb00d44fee5d550a7eea5ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c4f426c7cb00d44fee5d550a7eea5ce">&#9670;&#160;</a></span>downloadThumbnail()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c4f426c7cb00d44fee5d550a7eea5ce">&#9670;&nbsp;</a></span>downloadThumbnail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1129,7 +1118,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a93b61df61598d918eedadfd067acfb35" name="a93b61df61598d918eedadfd067acfb35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93b61df61598d918eedadfd067acfb35">&#9670;&#160;</a></span>fetchConversationsFromServer()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b61df61598d918eedadfd067acfb35">&#9670;&nbsp;</a></span>fetchConversationsFromServer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1150,7 +1139,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a50c608c38a9790b8b62fc9fba1e4b653" name="a50c608c38a9790b8b62fc9fba1e4b653"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50c608c38a9790b8b62fc9fba1e4b653">&#9670;&#160;</a></span>fetchGroupReadAcks()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c608c38a9790b8b62fc9fba1e4b653">&#9670;&nbsp;</a></span>fetchGroupReadAcks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1181,7 +1170,7 @@ Protected 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >从服务器分页获取群组消息已读回执详情。</p>
-<p >发送群组消息回执，可调用 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a></code>。</p>
+<p >发送群组消息回执，可调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a29f61eed62d21af08728f0a577787598">ackGroupMessageRead(String, String, String)</a>。</p>
 <p >同步方法，会阻塞当前线程。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -1194,7 +1183,7 @@ Protected 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回消息列表（不包含查询起始 ID 的已读回执）和用于继续获取群消息回执的 cursor。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a></code>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1202,7 +1191,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a460711c8ebbf7452d42a87bb6b6ca72e" name="a460711c8ebbf7452d42a87bb6b6ca72e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a460711c8ebbf7452d42a87bb6b6ca72e">&#9670;&#160;</a></span>fetchHistoryMessages() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a460711c8ebbf7452d42a87bb6b6ca72e">&#9670;&nbsp;</a></span>fetchHistoryMessages() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1243,7 +1232,7 @@ Protected 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型, 详见 <code><a class="el" href="">EMConversationType</a></code>。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型, 详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
     <tr><td class="paramname">pageSize</td><td>每页期望获取的消息条数。取值范围为 [1,50]。 </td></tr>
     <tr><td class="paramname">startMsgId</td><td>开始获取的消息 ID。该参数设置后，SDK 从指定的消息 ID 开始，按服务器接收消息的时间的逆序获取。 若该参数为空，SDK 从最新的消息开始，按服务器接收消息的时间的逆序获取。 </td></tr>
   </table>
@@ -1252,7 +1241,7 @@ Protected 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>消息列表（不包含查询起始 ID 的消息）和下次查询的 cursor。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a></code>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1260,7 +1249,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a0b61640cefe684872c198f97ba9696c5" name="a0b61640cefe684872c198f97ba9696c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b61640cefe684872c198f97ba9696c5">&#9670;&#160;</a></span>fetchHistoryMessages() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b61640cefe684872c198f97ba9696c5">&#9670;&nbsp;</a></span>fetchHistoryMessages() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1307,14 +1296,14 @@ Protected 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型, 详见 <code><a class="el" href="">EMConversationType</a></code>。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型, 详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
     <tr><td class="paramname">pageSize</td><td>每页期望获取的消息条数。取值范围为 [1,50]。 </td></tr>
     <tr><td class="paramname">startMsgId</td><td>查询的起始消息 ID。该参数设置后，SDK 从指定的消息 ID 开始，按消息检索方向获取。如果传入消息的 ID 为空，SDK 忽略该参数，按搜索方向查询消息。<ul>
 <li>若 <code>direction</code> 为 <code>UP</code>，SDK 从最新消息开始，按照服务器接收消息时间的逆序获取；</li>
 <li>若 <code>direction</code> 为 <code>DOWN</code>，SDK 从最早消息开始，按照服务器接收消息时间的正序获取。 </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">direction</td><td>消息检索方向。详见 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a></code>。<ul>
+    <tr><td class="paramname">direction</td><td>消息检索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a>。<ul>
 <li>（默认）<code>UP</code>：按照服务器接收消息时间的逆序获取；</li>
 <li><code>DOWN</code>：按照服务器接收消息时间的正序获取。 </li>
 </ul>
@@ -1325,7 +1314,7 @@ Protected 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>消息列表（不包含查询起始 ID 的消息）和下次查询的 cursor。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a></code>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1333,7 +1322,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a9255abc560fec3228cbedf87991ffe63" name="a9255abc560fec3228cbedf87991ffe63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9255abc560fec3228cbedf87991ffe63">&#9670;&#160;</a></span>fetchSupportLanguages()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9255abc560fec3228cbedf87991ffe63">&#9670;&nbsp;</a></span>fetchSupportLanguages()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1350,9 +1339,9 @@ Protected 成员函数</h2></td></tr>
 <p >获取翻译服务支持的语言。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">callBack</td><td>结果回调，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a></code>。<ul>
-<li>调用成功，触发 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa819895b47f578c0bc25b8c7eca9fe45">EMCallBack#onSuccess()</a></code> 返回获取的语言；</li>
-<li>调用失败，触发 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#a26e40e77141d471fec8ff69ea7ebbfce">EMCallBack#onError(int, String)</a></code> 报错。 </li>
+    <tr><td class="paramname">callBack</td><td>结果回调，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。<ul>
+<li>调用成功，触发 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa819895b47f578c0bc25b8c7eca9fe45">EMCallBack#onSuccess()</a> 返回获取的语言；</li>
+<li>调用失败，触发 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#a26e40e77141d471fec8ff69ea7ebbfce">EMCallBack#onError(int, String)</a> 报错。 </li>
 </ul>
 </td></tr>
   </table>
@@ -1362,7 +1351,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="adee778f8f5d39f240a7482444a64011e" name="adee778f8f5d39f240a7482444a64011e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adee778f8f5d39f240a7482444a64011e">&#9670;&#160;</a></span>getAllConversations()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adee778f8f5d39f240a7482444a64011e">&#9670;&nbsp;</a></span>getAllConversations()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1382,7 +1371,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="aa18a33432d743061e642f229cc218b83" name="aa18a33432d743061e642f229cc218b83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa18a33432d743061e642f229cc218b83">&#9670;&#160;</a></span>getConversation() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa18a33432d743061e642f229cc218b83">&#9670;&nbsp;</a></span>getConversation() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1408,7 +1397,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="abb6f18106222b524b31bddd35054185a" name="abb6f18106222b524b31bddd35054185a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb6f18106222b524b31bddd35054185a">&#9670;&#160;</a></span>getConversation() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abb6f18106222b524b31bddd35054185a">&#9670;&nbsp;</a></span>getConversation() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1443,7 +1432,7 @@ Protected 成员函数</h2></td></tr>
 <li>子区：子区 ID。 </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型，详见 <code><a class="el" href="">EMConversationType</a></code>。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型，详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1452,7 +1441,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="af1b1cc81c610462ff35d15ab8b54cd61" name="af1b1cc81c610462ff35d15ab8b54cd61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1b1cc81c610462ff35d15ab8b54cd61">&#9670;&#160;</a></span>getConversation() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b1cc81c610462ff35d15ab8b54cd61">&#9670;&nbsp;</a></span>getConversation() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1492,7 +1481,7 @@ Protected 成员函数</h2></td></tr>
 <li>子区：子区 ID。 </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型，详见 <code><a class="el" href="">EMConversationType</a></code>。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型，详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
     <tr><td class="paramname">createIfNotExists</td><td>未找到指定会话时是否创建一个新会话。<ul>
 <li><code>true</code>：是；</li>
 <li><code>false</code>：否。 </li>
@@ -1506,7 +1495,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a77a7bc57679306a76afc463f7521ed43" name="a77a7bc57679306a76afc463f7521ed43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77a7bc57679306a76afc463f7521ed43">&#9670;&#160;</a></span>getConversation() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a77a7bc57679306a76afc463f7521ed43">&#9670;&nbsp;</a></span>getConversation() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1552,7 +1541,7 @@ Protected 成员函数</h2></td></tr>
 <li>子区：子区 ID。 </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">type</td><td>会话类型，详见 <code><a class="el" href="">EMConversationType</a></code>。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型，详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
     <tr><td class="paramname">createIfNotExists</td><td>未找到指定会话时是否创建一个新会话。<ul>
 <li><code>true</code>：是；<ul>
 <li><code>false</code>：否。 </li>
@@ -1575,7 +1564,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ad4cbe4c6c9fe77f5f0deab797da17db9" name="ad4cbe4c6c9fe77f5f0deab797da17db9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4cbe4c6c9fe77f5f0deab797da17db9">&#9670;&#160;</a></span>getConversationsByType()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4cbe4c6c9fe77f5f0deab797da17db9">&#9670;&nbsp;</a></span>getConversationsByType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1592,7 +1581,7 @@ Protected 成员函数</h2></td></tr>
 <p >获取指定类型的所有会话。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>会话类型，详见 <code><a class="el" href="">EMConversationType</a></code>。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型，详见 <a class="el" href="">EMConversationType</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1601,7 +1590,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a02cf8e1a43810b97f496198eecaba746" name="a02cf8e1a43810b97f496198eecaba746"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02cf8e1a43810b97f496198eecaba746">&#9670;&#160;</a></span>getMessage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a02cf8e1a43810b97f496198eecaba746">&#9670;&nbsp;</a></span>getMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1627,7 +1616,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a38f0b30672f827f4180e0c94baf3aa54" name="a38f0b30672f827f4180e0c94baf3aa54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38f0b30672f827f4180e0c94baf3aa54">&#9670;&#160;</a></span>getReactionDetail()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f0b30672f827f4180e0c94baf3aa54">&#9670;&nbsp;</a></span>getReactionDetail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1674,12 +1663,12 @@ Protected 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>获取结果 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_cursor_result.html">EMCursorResult</a></code>，包含 cursor 和 Reaction 列表。若 <code>cursor</code> 为空表示数据已全部获取。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>获取结果 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_cursor_result.html">EMCursorResult</a>，包含 cursor 和 Reaction 列表。若 <code>cursor</code> 为空表示数据已全部获取。 </dd></dl>
 
 </div>
 </div>
 <a id="a1dcd59c9ccffe0f32834190dca9536ab" name="a1dcd59c9ccffe0f32834190dca9536ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dcd59c9ccffe0f32834190dca9536ab">&#9670;&#160;</a></span>getReactionList()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dcd59c9ccffe0f32834190dca9536ab">&#9670;&nbsp;</a></span>getReactionList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1714,7 +1703,7 @@ Protected 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">messageIdList</td><td>消息 ID。 </td></tr>
-    <tr><td class="paramname">chatType</td><td>会话类型，仅支持单聊（<code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#a160bb0aa31d02b25444da9b0eb83250c">EMMessage.ChatType#Chat</a></code>）和群聊（<code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#aa83280ce79df6f5aa49f7a5223498cad">EMMessage.ChatType#GroupChat</a></code>）。 </td></tr>
+    <tr><td class="paramname">chatType</td><td>会话类型，仅支持单聊（<a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#a160bb0aa31d02b25444da9b0eb83250c">EMMessage.ChatType#Chat</a>）和群聊（<a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#aa83280ce79df6f5aa49f7a5223498cad">EMMessage.ChatType#GroupChat</a>）。 </td></tr>
     <tr><td class="paramname">groupId</td><td>群组 ID，该参数仅对群聊生效。 </td></tr>
   </table>
   </dd>
@@ -1724,7 +1713,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a64396e28c58a54a879e9d246362af58f" name="a64396e28c58a54a879e9d246362af58f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64396e28c58a54a879e9d246362af58f">&#9670;&#160;</a></span>getUnreadMessageCount()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a64396e28c58a54a879e9d246362af58f">&#9670;&nbsp;</a></span>getUnreadMessageCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1743,7 +1732,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="abdd3cb234efac3ecc74e1eabdd5c7a10" name="abdd3cb234efac3ecc74e1eabdd5c7a10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdd3cb234efac3ecc74e1eabdd5c7a10">&#9670;&#160;</a></span>importMessages()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd3cb234efac3ecc74e1eabdd5c7a10">&#9670;&nbsp;</a></span>importMessages()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1770,7 +1759,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ab3db470adf8017018da3f5bc0eeac39f" name="ab3db470adf8017018da3f5bc0eeac39f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3db470adf8017018da3f5bc0eeac39f">&#9670;&#160;</a></span>loadAllConversations()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3db470adf8017018da3f5bc0eeac39f">&#9670;&nbsp;</a></span>loadAllConversations()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1789,7 +1778,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a4f7dbf5b36fadde636db34dfaa7fc41f" name="a4f7dbf5b36fadde636db34dfaa7fc41f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f7dbf5b36fadde636db34dfaa7fc41f">&#9670;&#160;</a></span>markAllConversationsAsRead()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f7dbf5b36fadde636db34dfaa7fc41f">&#9670;&nbsp;</a></span>markAllConversationsAsRead()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1808,7 +1797,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a548025c9fd2d6e91c80ee27418ba5464" name="a548025c9fd2d6e91c80ee27418ba5464"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a548025c9fd2d6e91c80ee27418ba5464">&#9670;&#160;</a></span>recallMessage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a548025c9fd2d6e91c80ee27418ba5464">&#9670;&nbsp;</a></span>recallMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1823,7 +1812,7 @@ Protected 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >撤回发送成功的消息。</p>
-<p >若消息发送和撤回时接收方为离线状态，接收方会收到消息撤回回调 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#aa863f6c970a4c5a2219b4a5e675310f6">EMMessageListener#onMessageRecalled</a></code>，不会收到该消息。</p>
+<p >若消息发送和撤回时接收方为离线状态，接收方会收到消息撤回回调 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#aa863f6c970a4c5a2219b4a5e675310f6">EMMessageListener#onMessageRecalled</a>，不会收到该消息。</p>
 <p >同步方法，会阻塞当前线程。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -1833,7 +1822,7 @@ Protected 成员函数</h2></td></tr>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a></code>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1841,7 +1830,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a0a8fb4720890a1d25cc909804312a6f8" name="a0a8fb4720890a1d25cc909804312a6f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8fb4720890a1d25cc909804312a6f8">&#9670;&#160;</a></span>removeConversationListener()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8fb4720890a1d25cc909804312a6f8">&#9670;&nbsp;</a></span>removeConversationListener()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1856,10 +1845,10 @@ Protected 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >移除会话监听器。</p>
-<p >调用 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ace81b019cf17b0449b4eddd7aeffe19d">addConversationListener(EMConversationListener)</a></code> 添加会话监听器后再调用本方法移除。</p>
+<p >调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ace81b019cf17b0449b4eddd7aeffe19d">addConversationListener(EMConversationListener)</a> 添加会话监听器后再调用本方法移除。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">listener</td><td>要移除的会话监听器，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html">EMConversationListener</a></code>。 </td></tr>
+    <tr><td class="paramname">listener</td><td>要移除的会话监听器，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_conversation_listener.html">EMConversationListener</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1867,7 +1856,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a072e93b97c5859ea2780c1a898c37873" name="a072e93b97c5859ea2780c1a898c37873"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a072e93b97c5859ea2780c1a898c37873">&#9670;&#160;</a></span>removeMessageListener()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a072e93b97c5859ea2780c1a898c37873">&#9670;&nbsp;</a></span>removeMessageListener()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1882,10 +1871,10 @@ Protected 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >移除消息监听器。</p>
-<p >调用 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a923a569276cc251b85fd541d23432a4f">addMessageListener(EMMessageListener)</a></code> 添加消息监听后再调用本方法移除。</p>
+<p >调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a923a569276cc251b85fd541d23432a4f">addMessageListener(EMMessageListener)</a> 添加消息监听后再调用本方法移除。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">listener</td><td>要移除的监听器，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a></code>。 </td></tr>
+    <tr><td class="paramname">listener</td><td>要移除的监听器，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1893,7 +1882,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="aeb6c4c9d71ae4357b9b2395de5641619" name="aeb6c4c9d71ae4357b9b2395de5641619"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb6c4c9d71ae4357b9b2395de5641619">&#9670;&#160;</a></span>removeReaction()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb6c4c9d71ae4357b9b2395de5641619">&#9670;&nbsp;</a></span>removeReaction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1928,7 +1917,7 @@ Protected 成员函数</h2></td></tr>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a></code>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1936,7 +1925,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a8f6d35a56268786e63101501e7d1f7c9" name="a8f6d35a56268786e63101501e7d1f7c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f6d35a56268786e63101501e7d1f7c9">&#9670;&#160;</a></span>reportMessage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f6d35a56268786e63101501e7d1f7c9">&#9670;&nbsp;</a></span>reportMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1978,7 +1967,7 @@ Protected 成员函数</h2></td></tr>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a></code>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1986,7 +1975,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a4a893ff099898b111f4d72c826da186c" name="a4a893ff099898b111f4d72c826da186c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a893ff099898b111f4d72c826da186c">&#9670;&#160;</a></span>saveMessage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a893ff099898b111f4d72c826da186c">&#9670;&nbsp;</a></span>saveMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2001,7 +1990,7 @@ Protected 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >保存消息到内存和本地数据库。</p>
-<p >命令消息（类型见：<code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a96013d0c6ddeea86e7a434e3a8c5caf4">Type#CMD</a></code>，消息体见：<code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_cmd_message_body.html">EMCmdMessageBody</a></code>）不会在本地保存。</p>
+<p >命令消息（类型见：<a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a96013d0c6ddeea86e7a434e3a8c5caf4">Type#CMD</a>，消息体见：<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_cmd_message_body.html">EMCmdMessageBody</a>）不会在本地保存。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">message</td><td>待存储的消息。 </td></tr>
@@ -2012,7 +2001,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a1e04dc2ab82a5dfa96b79af9d009ecef" name="a1e04dc2ab82a5dfa96b79af9d009ecef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e04dc2ab82a5dfa96b79af9d009ecef">&#9670;&#160;</a></span>searchMsgFromDB() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e04dc2ab82a5dfa96b79af9d009ecef">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2061,7 +2050,7 @@ Protected 成员函数</h2></td></tr>
     <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 如果该参数设置为负数，SDK 从当前时间开始搜索。 </td></tr>
     <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
     <tr><td class="paramname">from</td><td>查询来自指定用户或者群组的消息，一般为会话 ID。 </td></tr>
-    <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a></code>。<ul>
+    <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a>。<ul>
 <li><code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
 <li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>
 </ul>
@@ -2076,7 +2065,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ad030d9b0e3199512159594d4ba7bb1a0" name="ad030d9b0e3199512159594d4ba7bb1a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad030d9b0e3199512159594d4ba7bb1a0">&#9670;&#160;</a></span>searchMsgFromDB() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad030d9b0e3199512159594d4ba7bb1a0">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2121,11 +2110,11 @@ Protected 成员函数</h2></td></tr>
 <p >从本地数据库获取指定会话的一定数量的特定类型的消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>消息类型。详见 <code><a class="el" href="">Type</a></code>。 </td></tr>
+    <tr><td class="paramname">type</td><td>消息类型。详见 <a class="el" href="">Type</a>。 </td></tr>
     <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 如果该参数设置为负数，SDK 从当前时间开始搜索。 </td></tr>
     <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
     <tr><td class="paramname">from</td><td>搜索来自指定用户或者群组的消息，一般为会话 ID。 </td></tr>
-    <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a></code>。<ul>
+    <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a>。<ul>
 <li><code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
 <li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>
 </ul>
@@ -2140,7 +2129,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ad50be7183f088c415b9507bc7ce792e6" name="ad50be7183f088c415b9507bc7ce792e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad50be7183f088c415b9507bc7ce792e6">&#9670;&#160;</a></span>sendMessage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad50be7183f088c415b9507bc7ce792e6">&#9670;&nbsp;</a></span>sendMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2156,8 +2145,8 @@ Protected 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >发送消息。</p>
 <p >如果是语音，图片类等有附件的消息，SDK 会自动上传附件。</p>
-<p >可以通过 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a6e9a1ee0a82e8f3d7c70115cb4b9b4c2">EMOptions#setAutoTransferMessageAttachments(boolean)</a></code> 设置是否上传到聊天服务器。</p>
-<p >发送消息的状态，可以通过设置 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ac6fd24b05850f7f8e680c0caf1ea3f50">EMMessage#setMessageStatusCallback(EMCallBack)</a></code> 进行监听。</p>
+<p >可以通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a6e9a1ee0a82e8f3d7c70115cb4b9b4c2">EMOptions#setAutoTransferMessageAttachments(boolean)</a> 设置是否上传到聊天服务器。</p>
+<p >发送消息的状态，可以通过设置 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ac6fd24b05850f7f8e680c0caf1ea3f50">EMMessage#setMessageStatusCallback(EMCallBack)</a> 进行监听。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>要发送的消息，必填。 </td></tr>
@@ -2168,7 +2157,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ae0566e4dc9fb52205ddd8b5d9e0eedba" name="ae0566e4dc9fb52205ddd8b5d9e0eedba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0566e4dc9fb52205ddd8b5d9e0eedba">&#9670;&#160;</a></span>setVoiceMessageListened()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0566e4dc9fb52205ddd8b5d9e0eedba">&#9670;&nbsp;</a></span>setVoiceMessageListened()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2193,7 +2182,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a874391f4ece875fb70893df5b77abb3d" name="a874391f4ece875fb70893df5b77abb3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a874391f4ece875fb70893df5b77abb3d">&#9670;&#160;</a></span>translateMessage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a874391f4ece875fb70893df5b77abb3d">&#9670;&nbsp;</a></span>translateMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2228,9 +2217,9 @@ Protected 成员函数</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">message</td><td>要翻译的消息对象。 </td></tr>
     <tr><td class="paramname">languages</td><td>目标语言代码列表。 </td></tr>
-    <tr><td class="paramname">callBack</td><td>结果回调，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a></code>。<ul>
-<li>调用成功，触发 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa819895b47f578c0bc25b8c7eca9fe45">EMCallBack#onSuccess()</a></code> 返回译文；</li>
-<li>调用失败，触发 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#a26e40e77141d471fec8ff69ea7ebbfce">EMCallBack#onError(int, String)</a></code> 报错。 </li>
+    <tr><td class="paramname">callBack</td><td>结果回调，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。<ul>
+<li>调用成功，触发 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa819895b47f578c0bc25b8c7eca9fe45">EMCallBack#onSuccess()</a> 返回译文；</li>
+<li>调用失败，触发 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#a26e40e77141d471fec8ff69ea7ebbfce">EMCallBack#onError(int, String)</a> 报错。 </li>
 </ul>
 </td></tr>
   </table>
@@ -2240,7 +2229,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="aa2f28f17a8e04067b8fade1ec0fdf7b5" name="aa2f28f17a8e04067b8fade1ec0fdf7b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2f28f17a8e04067b8fade1ec0fdf7b5">&#9670;&#160;</a></span>updateMessage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2f28f17a8e04067b8fade1ec0fdf7b5">&#9670;&nbsp;</a></span>updateMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2266,7 +2255,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a1d06bab9a69824162292d39283bfa3ae" name="a1d06bab9a69824162292d39283bfa3ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d06bab9a69824162292d39283bfa3ae">&#9670;&#160;</a></span>updateParticipant()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d06bab9a69824162292d39283bfa3ae">&#9670;&nbsp;</a></span>updateParticipant()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2312,7 +2301,7 @@ Protected 成员函数</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>
