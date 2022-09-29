@@ -86,7 +86,7 @@ var searchData=
   ['encryptfile_83',['encryptFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_encrypt_utils.html#aaad56797819699858df7aab3afcc453f',1,'com::hyphenate::chat::EMEncryptUtils']]],
   ['event_84',['event',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_custom_message_body.html#af64818a6e5668482bec9c785cf8b3ee0',1,'com::hyphenate::chat::EMCustomMessageBody']]],
   ['exceed_5fservice_5flimit_85',['EXCEED_SERVICE_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a86230c3342586028bbe73b36aba0934c',1,'com::hyphenate::EMError']]],
-  ['ext_86',['EXT',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_1_1_e_m_user_info_type.html#a2351a2ccb4a17a93db785b170ab79276',1,'com::hyphenate::chat::EMUserInfo::EMUserInfoType']]],
-  ['ext_87',['ext',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ad883e679faa0f4350787ab0dbd171051',1,'com::hyphenate::chat::EMMessage']]],
+  ['ext_86',['ext',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ad883e679faa0f4350787ab0dbd171051',1,'com::hyphenate::chat::EMMessage']]],
+  ['ext_87',['EXT',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_1_1_e_m_user_info_type.html#a2351a2ccb4a17a93db785b170ab79276',1,'com::hyphenate::chat::EMUserInfo::EMUserInfoType']]],
   ['extfield_88',['extField',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_options.html#a4eff1fc24b638e768b1ae00395f60b37',1,'com::hyphenate::chat::EMGroupOptions']]]
 ];
