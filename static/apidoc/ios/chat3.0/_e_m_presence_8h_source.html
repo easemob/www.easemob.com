@@ -1,10 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
 <title>HyphenateChatSDK: HyphenateChat.framework/Headers/EMPresence.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -12,6 +11,9 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -19,9 +21,10 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;3.9.7.1</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">HyphenateChatSDK
+   &#160;<span id="projectnumber">3.9.8</span>
    </div>
   </td>
  </tr>
@@ -29,23 +32,38 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.4 -->
+<!-- 制作者 Doxygen 1.8.10 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
-/* @license-end */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -66,44 +84,47 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">EMPresence.h</div></div>
+  <div class="headertitle">
+<div class="title">EMPresence.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//  EMPresence.h</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//  HyphenateChat</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Created by lixiaoming on 2022/1/14.</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  Copyright © 2022 easemob.com. All rights reserved.</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="interface_e_m_presence_status_detail.html">   18</a></span><span class="keyword">@interface </span><a class="code hl_interface" href="interface_e_m_presence_status_detail.html">EMPresenceStatusDetail</a> : NSObject</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="interface_e_m_presence_status_detail.html#a6d33951b1c41d946bbe78bb3be76ab79">   26</a></span><span class="keyword">@property</span> (nonatomic,strong) NSString* _Nonnull <a class="code hl_property" href="interface_e_m_presence_status_detail.html#a6d33951b1c41d946bbe78bb3be76ab79">device</a>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="interface_e_m_presence_status_detail.html#afe902535d58b07c41bd4f02dae12d2b9">   34</a></span><span class="keyword">@property</span> (nonatomic) NSInteger <a class="code hl_property" href="interface_e_m_presence_status_detail.html#afe902535d58b07c41bd4f02dae12d2b9">status</a>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">@end</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html">   44</a></span><span class="keyword">@interface </span><a class="code hl_interface" href="interface_e_m_presence.html">EMPresence</a>: NSObject</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html#a652cb03a49d1635da5964ca5895783a3">   52</a></span><span class="keyword">@property</span> (nonatomic,strong) NSString*_Nonnull publisher;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html#a2f3a87862b14692a3f87f910f5b618c2">   61</a></span><span class="keyword">@property</span> (nonatomic,strong) NSArray&lt;EMPresenceStatusDetail*&gt;*_Nullable statusDetails;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html#a12702b1566a962cd70b2232101ae4ef3">   70</a></span><span class="keyword">@property</span> (nonatomic) NSString*_Nullable statusDescription;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html#af2777db98efea4d29abaae850efd979a">   79</a></span><span class="keyword">@property</span> (nonatomic) NSInteger lastTime;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html#a53007547fdfb3c7a3de53cd54973886f">   88</a></span><span class="keyword">@property</span> (nonatomic) NSInteger expirytime;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">@end</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="ttc" id="ainterface_e_m_presence_html"><div class="ttname"><a href="interface_e_m_presence.html">EMPresence</a></div><div class="ttdef"><b>Definition:</b> EMPresence.h:45</div></div>
-<div class="ttc" id="ainterface_e_m_presence_status_detail_html"><div class="ttname"><a href="interface_e_m_presence_status_detail.html">EMPresenceStatusDetail</a></div><div class="ttdef"><b>Definition:</b> EMPresence.h:19</div></div>
-<div class="ttc" id="ainterface_e_m_presence_status_detail_html_a6d33951b1c41d946bbe78bb3be76ab79"><div class="ttname"><a href="interface_e_m_presence_status_detail.html#a6d33951b1c41d946bbe78bb3be76ab79">EMPresenceStatusDetail::device</a></div><div class="ttdeci">NSString *_Nonnull device</div><div class="ttdef"><b>Definition:</b> EMPresence.h:26</div></div>
-<div class="ttc" id="ainterface_e_m_presence_status_detail_html_afe902535d58b07c41bd4f02dae12d2b9"><div class="ttname"><a href="interface_e_m_presence_status_detail.html#afe902535d58b07c41bd4f02dae12d2b9">EMPresenceStatusDetail::status</a></div><div class="ttdeci">NSInteger status</div><div class="ttdef"><b>Definition:</b> EMPresence.h:34</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  EMPresence.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  HyphenateChat</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by lixiaoming on 2022/1/14.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2022 easemob.com. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="interface_e_m_presence_status_detail.html">   18</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_e_m_presence_status_detail.html">EMPresenceStatusDetail</a> : NSObject</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="interface_e_m_presence_status_detail.html#a6d33951b1c41d946bbe78bb3be76ab79">   26</a></span>&#160;<span class="keyword">@property</span> (nonatomic,strong) NSString* _Nonnull <a class="code" href="interface_e_m_presence_status_detail.html#a6d33951b1c41d946bbe78bb3be76ab79">device</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="interface_e_m_presence_status_detail.html#afe902535d58b07c41bd4f02dae12d2b9">   34</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSInteger <a class="code" href="interface_e_m_presence_status_detail.html#afe902535d58b07c41bd4f02dae12d2b9">status</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html">   44</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_e_m_presence.html">EMPresence</a>: NSObject</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html#a652cb03a49d1635da5964ca5895783a3">   52</a></span>&#160;<span class="keyword">@property</span> (nonatomic,strong) NSString*_Nonnull publisher;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html#a2f3a87862b14692a3f87f910f5b618c2">   61</a></span>&#160;<span class="keyword">@property</span> (nonatomic,strong) NSArray&lt;EMPresenceStatusDetail*&gt;*_Nullable statusDetails;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html#a12702b1566a962cd70b2232101ae4ef3">   70</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString*_Nullable statusDescription;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html#af2777db98efea4d29abaae850efd979a">   79</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSInteger lastTime;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="interface_e_m_presence.html#a53007547fdfb3c7a3de53cd54973886f">   88</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSInteger expirytime;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">@end</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="ttc" id="interface_e_m_presence_status_detail_html_a6d33951b1c41d946bbe78bb3be76ab79"><div class="ttname"><a href="interface_e_m_presence_status_detail.html#a6d33951b1c41d946bbe78bb3be76ab79">EMPresenceStatusDetail::device</a></div><div class="ttdeci">NSString *_Nonnull device</div><div class="ttdef"><b>Definition:</b> EMPresence.h:26</div></div>
+<div class="ttc" id="interface_e_m_presence_status_detail_html_afe902535d58b07c41bd4f02dae12d2b9"><div class="ttname"><a href="interface_e_m_presence_status_detail.html#afe902535d58b07c41bd4f02dae12d2b9">EMPresenceStatusDetail::status</a></div><div class="ttdeci">NSInteger status</div><div class="ttdef"><b>Definition:</b> EMPresence.h:34</div></div>
+<div class="ttc" id="interface_e_m_presence_status_detail_html"><div class="ttname"><a href="interface_e_m_presence_status_detail.html">EMPresenceStatusDetail</a></div><div class="ttdef"><b>Definition:</b> EMPresence.h:18</div></div>
+<div class="ttc" id="interface_e_m_presence_html"><div class="ttname"><a href="interface_e_m_presence.html">EMPresence</a></div><div class="ttdef"><b>Definition:</b> EMPresence.h:44</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
 </small></address>
 </body>
 </html>
