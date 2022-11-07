@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;3.9.5</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;3.9.7.1</span>
    </div>
   </td>
  </tr>
@@ -102,7 +102,7 @@ $(function() {
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="interface_e_m_conversation.html#a5b7776fc532b76ffea1e12dc88848056">  116</a></span><span class="keyword">@property</span> (nonatomic, assign) BOOL <a class="code hl_property" href="interface_e_m_conversation.html#a5b7776fc532b76ffea1e12dc88848056">isChatThread</a>;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="interface_e_m_conversation.html#a17f2e7e15d859468f7ec0f0accbf2e62">  125</a></span><span class="keyword">@property</span> (nonatomic, strong, readonly) <a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *<a class="code hl_property" href="interface_e_m_conversation.html#a6f0b08d0ed19fe13d1e3fa2743c0a779">latestMessage</a>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="interface_e_m_conversation.html#a4bc5383538dafe89cbc8c5b4b33f2a4c">  125</a></span><span class="keyword">@property</span> (nonatomic, strong, readonly) <a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *<a class="code hl_property" href="interface_e_m_conversation.html#a6f0b08d0ed19fe13d1e3fa2743c0a779">latestMessage</a>;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>- (<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> * _Nullable)<a class="code hl_function" href="interface_e_m_conversation.html#afe68caf35b60dc2fcd2ba35b5b19f702">lastReceivedMessage</a>;</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
@@ -188,53 +188,10 @@ $(function() {
 <div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>                   count:(<span class="keywordtype">int</span>)aCount</div>
 <div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>              completion:(<span class="keywordtype">void</span> (^ _Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; * _Nullable aMessages, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
 <div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span> </div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="preprocessor">#pragma mark - Deprecated methods</span></div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span> </div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>- (BOOL)insertMessage:(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage __deprecated_msg(&quot;Use -insertMessage:error: instead&quot;);</div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span> </div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>- (BOOL)appendMessage:(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage __deprecated_msg(&quot;Use -appendMessage:error: instead&quot;);</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span> </div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>- (BOOL)deleteMessageWithId:(NSString *)aMessageId __deprecated_msg(&quot;Use -deleteMessageWithId:error: instead&quot;);</div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span> </div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>- (BOOL)deleteAllMessages <a class="code hl_function" href="interface_e_m_conversation.html#a17f2e7e15d859468f7ec0f0accbf2e62">__deprecated_msg</a>(&quot;Use -deleteAllMessages: instead&quot;);</div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span> </div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>- (BOOL)updateMessage:(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *)aMessage __deprecated_msg(&quot;Use -updateMessageChange:error: instead&quot;);</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span> </div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>- (BOOL)markMessageAsReadWithId:(NSString *)aMessageId __deprecated_msg(&quot;Use -markMessageAsReadWithId:error: instead&quot;);</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span> </div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>- (BOOL)markAllMessagesAsRead <a class="code hl_function" href="interface_e_m_conversation.html#a17f2e7e15d859468f7ec0f0accbf2e62">__deprecated_msg</a>(&quot;Use -markAllMessagesAsRead: instead&quot;);</div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span> </div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>- (BOOL)updateConversationExtToDB <a class="code hl_function" href="interface_e_m_conversation.html#a17f2e7e15d859468f7ec0f0accbf2e62">__deprecated_msg</a>(&quot;setExt: will update extend properties to DB&quot;);</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span> </div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>- (<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *)loadMessageWithId:(NSString *)aMessageId __deprecated_msg(&quot;Use -loadMessageWithId:error: instead&quot;);</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span> </div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>- (NSArray *)loadMoreMessagesFromId:(NSString *)aMessageId</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>                              limit:(<span class="keywordtype">int</span>)aLimit</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>                          direction:(EMMessageSearchDirection)aDirection __deprecated_msg(&quot;Use -loadMessagesStartFromId:count:searchDirection:completion: instead&quot;);</div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span> </div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>- (NSArray *)loadMoreMessagesWithType:(EMMessageBodyType)aType</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>                               before:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>                                limit:(<span class="keywordtype">int</span>)aLimit</div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>                                 from:(NSString*)aSender</div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>                            direction:(EMMessageSearchDirection)aDirection __deprecated_msg(&quot;Use -loadMessagesWithType:timestamp:count:fromUser:searchDirection:completion: instead&quot;);</div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span> </div>
-<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>- (NSArray *)loadMoreMessagesContain:(NSString*)aKeywords</div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>                              before:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
-<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>                               limit:(<span class="keywordtype">int</span>)aLimit</div>
-<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>                                from:(NSString*)aSender</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>                           direction:(EMMessageSearchDirection)aDirection __deprecated_msg(&quot;Use -loadMessagesContainKeywords:timestamp:count:fromUser:searchDirection:completion: instead&quot;);</div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span> </div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>- (NSArray *)loadMoreMessagesFrom:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aStartTimestamp</div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>                               to:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aEndTimestamp</div>
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>                         maxCount:(<span class="keywordtype">int</span>)aMaxCount __deprecated_msg(&quot;Use -loadMessagesFrom:to:count:completion: instead&quot;);</div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span> </div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>- (<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *)latestMessageFromOthers <a class="code hl_function" href="interface_e_m_conversation.html#a17f2e7e15d859468f7ec0f0accbf2e62">__deprecated_msg</a>(&quot;Use -<a class="code hl_function" href="interface_e_m_conversation.html#afe68caf35b60dc2fcd2ba35b5b19f702">lastReceivedMessage</a> instead&quot;);</div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span> </div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="keyword">@end</span></div>
 <div class="ttc" id="ainterface_e_m_chat_message_html"><div class="ttname"><a href="interface_e_m_chat_message.html">EMChatMessage</a></div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:67</div></div>
 <div class="ttc" id="ainterface_e_m_conversation_html"><div class="ttname"><a href="interface_e_m_conversation.html">EMConversation</a></div><div class="ttdef"><b>Definition:</b> EMConversation.h:55</div></div>
 <div class="ttc" id="ainterface_e_m_conversation_html_a164480add35abfde2c733d264373388a"><div class="ttname"><a href="interface_e_m_conversation.html#a164480add35abfde2c733d264373388a">EMConversation::ext</a></div><div class="ttdeci">NSDictionary * ext</div><div class="ttdef"><b>Definition:</b> EMConversation.h:107</div></div>
-<div class="ttc" id="ainterface_e_m_conversation_html_a17f2e7e15d859468f7ec0f0accbf2e62"><div class="ttname"><a href="interface_e_m_conversation.html#a17f2e7e15d859468f7ec0f0accbf2e62">-[EMConversation __deprecated_msg]</a></div><div class="ttdeci">&quot;Use -deleteAllMessages: instead&quot; __deprecated_msg()</div></div>
 <div class="ttc" id="ainterface_e_m_conversation_html_a49ec21b882b40ae12e868978a8ec688d"><div class="ttname"><a href="interface_e_m_conversation.html#a49ec21b882b40ae12e868978a8ec688d">EMConversation::messagesCount</a></div><div class="ttdeci">int messagesCount</div><div class="ttdef"><b>Definition:</b> EMConversation.h:98</div></div>
 <div class="ttc" id="ainterface_e_m_conversation_html_a5b7776fc532b76ffea1e12dc88848056"><div class="ttname"><a href="interface_e_m_conversation.html#a5b7776fc532b76ffea1e12dc88848056">EMConversation::isChatThread</a></div><div class="ttdeci">BOOL isChatThread</div><div class="ttdef"><b>Definition:</b> EMConversation.h:116</div></div>
 <div class="ttc" id="ainterface_e_m_conversation_html_a6f0b08d0ed19fe13d1e3fa2743c0a779"><div class="ttname"><a href="interface_e_m_conversation.html#a6f0b08d0ed19fe13d1e3fa2743c0a779">EMConversation::latestMessage</a></div><div class="ttdeci">EMChatMessage * latestMessage</div><div class="ttdef"><b>Definition:</b> EMConversation.h:125</div></div>

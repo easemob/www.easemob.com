@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;3.9.5</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;3.9.7.1</span>
    </div>
   </td>
  </tr>
@@ -125,20 +125,22 @@ $(function() {
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>- (void)chatroomAnnouncementDidUpdate:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                         announcement:(NSString * _Nullable )aAnnouncement;</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">#pragma mark - Deprecated methods</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>- (void)didReceiveUserJoinedChatroom:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                            username:(NSString *)aUsername __deprecated_msg(&quot;Use -userDidJoinChatroom:user: instead&quot;);</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>- (void)didReceiveUserLeavedChatroom:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                            username:(NSString *)aUsername __deprecated_msg(&quot;Use -userDidLeaveChatroom:reason: instead&quot;);</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>- (void)didReceiveKickedFromChatroom:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                              reason:(EMChatroomBeKickedReason)aReason __deprecated_msg(&quot;Use -didDismissFromChatroom:reason: instead&quot;);</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="keyword">@end</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno"><a class="line" href="protocol_e_m_chatroom_manager_delegate-p.html#a45dd4eabb9179e8320ee0bc6aa3f7f59">  319</a></span>NS_ASSUME_NONNULL_END</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>- (void)chatroomAttributesDidUpdated:( NSString * _Nonnull )roomId attributeMap:(NSDictionary&lt;NSString*,NSString*&gt; * _Nonnull)attributeMap from:(NSString * _Nonnull)fromId;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>- (void)chatroomAttributesDidRemoved:( NSString * _Nonnull )roomId attributes:(NSArray&lt;__kindof NSString*&gt; * _Nonnull)attributes from:(NSString * _Nonnull)fromId;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="preprocessor">#pragma mark - Deprecated methods</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>- (void)didReceiveUserJoinedChatroom:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                            username:(NSString *)aUsername __deprecated_msg(&quot;Use -userDidJoinChatroom:user: instead&quot;);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>- (void)didReceiveUserLeavedChatroom:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                            username:(NSString *)aUsername __deprecated_msg(&quot;Use -userDidLeaveChatroom:reason: instead&quot;);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>- (void)didReceiveKickedFromChatroom:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                              reason:(EMChatroomBeKickedReason)aReason __deprecated_msg(&quot;Use -didDismissFromChatroom:reason: instead&quot;);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno"><a class="line" href="protocol_e_m_chatroom_manager_delegate-p.html#a45dd4eabb9179e8320ee0bc6aa3f7f59">  351</a></span>NS_ASSUME_NONNULL_END</div>
 <div class="ttc" id="ainterface_e_m_chatroom_html"><div class="ttname"><a href="interface_e_m_chatroom.html">EMChatroom</a></div><div class="ttdef"><b>Definition:</b> EMChatroom.h:42</div></div>
 <div class="ttc" id="aprotocol_e_m_chatroom_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMChatroomManagerDelegate.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
