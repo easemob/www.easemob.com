@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['image_0',['IMAGE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a6aaa42c08b50d853f43a9dea5008a25e',1,'com::hyphenate::chat::EMMessage::Type']]],
+  ['image_0',['IMAGE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a6aaa42c08b50d853f43a9dea5008a25e',1,'com.hyphenate.chat.EMMessage.Type.IMAGE()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#a4ae0bb7718878ab897c4572bd6f8b0c1',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.IMAGE()']]],
   ['importmessages_1',['importMessages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#abdd3cb234efac3ecc74e1eabdd5c7a10',1,'com::hyphenate::chat::EMChatManager']]],
   ['init_2',['init',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a739c181ecd146af520cde6076e4b4de4',1,'com.hyphenate.chat.EMClient.init()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_manager.html#a639de3736835b1a2face34d76972d074',1,'com.hyphenate.chat.EMTranslationManager.init()'],['../classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#ab6a24847062d68d3fadb47752c40fc8f',1,'com.hyphenate.push.EMPushHelper.init()']]],
   ['inprogress_3',['INPROGRESS',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html#a7cc16e4e7d15acd8c323852dca1b772f',1,'com::hyphenate::chat::EMMessage::Status']]],
