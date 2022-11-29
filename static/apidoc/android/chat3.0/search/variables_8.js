@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['image_0',['IMAGE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a6aaa42c08b50d853f43a9dea5008a25e',1,'com::hyphenate::chat::EMMessage::Type']]],
+  ['image_0',['IMAGE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a6aaa42c08b50d853f43a9dea5008a25e',1,'com.hyphenate.chat.EMMessage.Type.IMAGE()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#a4ae0bb7718878ab897c4572bd6f8b0c1',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.IMAGE()']]],
   ['inprogress_1',['INPROGRESS',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html#a7cc16e4e7d15acd8c323852dca1b772f',1,'com::hyphenate::chat::EMMessage::Status']]],
   ['invalid_5fapp_5fkey_2',['INVALID_APP_KEY',['../classcom_1_1hyphenate_1_1_e_m_error.html#a5198447a66a45c3a839ce4416ee6fec0',1,'com::hyphenate::EMError']]],
   ['invalid_5fconversation_3',['INVALID_CONVERSATION',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa37caf59205bb436fd3245f35a04cbc8',1,'com::hyphenate::EMError']]],
