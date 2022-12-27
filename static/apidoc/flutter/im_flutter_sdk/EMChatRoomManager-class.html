@@ -115,6 +115,24 @@
       id="instance-methods">
     <h2>Methods</h2>
     <dl class="callables">
+        <dt id="addAttributes" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/addAttributes.html">addAttributes</a></span><span class="signature">(<wbr><span class="parameter" id="addAttributes-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="addAttributes-param-attributes">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">attributes</span>, </span><span class="parameter" id="addAttributes-param-deleteWhenLeft"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">deleteWhenLeft</span> = <span class="default-value">false</span>, </span><span class="parameter" id="addAttributes-param-overwrite"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">overwrite</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span>?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets custom chat room attributes.
+Param <code>roomId</code> The chat room ID.
+Param <code>attributes</code> The chat room attributes to add. The attributes are in key-value format.
+Note:
+In a key-value pair, the key is the attribute name that can contain 128 characters at most; the value is the attribute value that cannot exceed 4096 characters.
+A chat room can have a maximum of 100 custom attributes and the total length of custom chat room attributes cannot exceed 10 GB for each app. Attribute keys support the following character sets:
+  
+
+</dd>
+
         <dt id="addChatRoomAdmin" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/addChatRoomAdmin.html">addChatRoomAdmin</a></span><span class="signature">(<wbr><span class="parameter" id="addChatRoomAdmin-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="addChatRoomAdmin-param-admin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">admin</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
@@ -267,6 +285,23 @@
 </dt>
 <dd>
   从服务器获取聊天室公告内容。
+  
+
+</dd>
+
+        <dt id="fetchChatRoomAttributes" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomAttributes.html">fetchChatRoomAttributes</a></span><span class="signature">(<wbr><span class="parameter" id="fetchChatRoomAttributes-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="fetchChatRoomAttributes-param-keys"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">keys</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Gets the list of custom chat room attributes based on the attribute key list.
+Param <code>roomId</code> The chat room ID.
+Param <code>keys</code> The key list of attributes to get. If you set it as <code>null</code> or leave it empty, this method retrieves all custom attributes.
+<strong>Return</strong> The chat room attributes in key-value pairs.
+<strong>Throws</strong> A description of the exception. See <a href="../im_flutter_sdk/EMError-class.html">EMError</a>.
   
 
 </dd>
@@ -440,6 +475,24 @@
 
 </dd>
 
+        <dt id="removeAttributes" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/removeAttributes.html">removeAttributes</a></span><span class="signature">(<wbr><span class="parameter" id="removeAttributes-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="removeAttributes-param-keys">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">keys</span>, </span><span class="parameter" id="removeAttributes-param-force"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">force</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span>?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes custom chat room attributes.
+Param <code>roomId</code> The chat room ID.
+Param <code>keys</code> The keys of the custom chat room attributes to remove.
+Param <code>force</code> Whether to remove the attributes with same key set by others.
+<strong>Return</strong> <code>failureKeys map</code> is returned in key-value format, where the key is the attribute key and the value is the reason for the failure.
+<strong>Throws</strong> A description of the exception. See <a href="../im_flutter_sdk/EMError-class.html">EMError</a>.
+  
+
+</dd>
+
         <dt id="removeChatRoomAdmin" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/removeChatRoomAdmin.html">removeChatRoomAdmin</a></span><span class="signature">(<wbr><span class="parameter" id="removeChatRoomAdmin-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="removeChatRoomAdmin-param-admin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">admin</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
@@ -604,6 +657,7 @@
     <h5>im_flutter_sdk library</h5>
     <ol>
   <li class="section-title"><a href="../im_flutter_sdk/im_flutter_sdk-library.html#classes">Classes</a></li>
+  <li><a href="../im_flutter_sdk/AreaCode-class.html">AreaCode</a></li>
   <li><a href="../im_flutter_sdk/ChatSilentModeParam-class.html">ChatSilentModeParam</a></li>
   <li><a href="../im_flutter_sdk/ChatSilentModeResult-class.html">ChatSilentModeResult</a></li>
   <li><a href="../im_flutter_sdk/ChatSilentModeTime-class.html">ChatSilentModeTime</a></li>
@@ -713,6 +767,7 @@
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
 
     <li class="section-title"><a href="../im_flutter_sdk/EMChatRoomManager-class.html#instance-methods">Methods</a></li>
+    <li><a href="../im_flutter_sdk/EMChatRoomManager/addAttributes.html">addAttributes</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/addChatRoomAdmin.html">addChatRoomAdmin</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/addEventHandler.html">addEventHandler</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/addMembersToChatRoomAllowList.html">addMembersToChatRoomAllowList</a></li>
@@ -725,6 +780,7 @@
     <li><a href="../im_flutter_sdk/EMChatRoomManager/destroyChatRoom.html">destroyChatRoom</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomAllowListFromServer.html">fetchChatRoomAllowListFromServer</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomAnnouncement.html">fetchChatRoomAnnouncement</a></li>
+    <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomAttributes.html">fetchChatRoomAttributes</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomBlockList.html">fetchChatRoomBlockList</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomInfoFromServer.html">fetchChatRoomInfoFromServer</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomMembers.html">fetchChatRoomMembers</a></li>
@@ -738,6 +794,7 @@
     <li><a href="../im_flutter_sdk/EMChatRoomManager/muteAllChatRoomMembers.html">muteAllChatRoomMembers</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/muteChatRoomMembers.html">muteChatRoomMembers</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li><a href="../im_flutter_sdk/EMChatRoomManager/removeAttributes.html">removeAttributes</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/removeChatRoomAdmin.html">removeChatRoomAdmin</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/removeChatRoomMembers.html">removeChatRoomMembers</a></li>
     <li><a href="../im_flutter_sdk/EMChatRoomManager/removeEventHandler.html">removeEventHandler</a></li>
@@ -763,7 +820,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.5
+      3.9.9
   </span>
 
   
