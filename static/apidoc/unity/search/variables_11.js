@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['userid_0',['userId',['../class_chat_s_d_k_1_1_user_info.html#aba7677024ed3069839a68bbd8411628a',1,'ChatSDK::UserInfo']]],
-  ['userlist_1',['UserList',['../class_chat_s_d_k_1_1_message_reaction.html#a945b89f818a8042fb9241a1a42669181',1,'ChatSDK::MessageReaction']]],
-  ['usinghttpsonly_2',['UsingHttpsOnly',['../class_chat_s_d_k_1_1_options.html#a9a22c1b7fb2d866735f672079f544e80',1,'ChatSDK::Options']]]
+  ['userid_0',['UserId',['../class_agora_chat_1_1_user_info.html#a408c4765e6ce79a022b4c33f3285444b',1,'AgoraChat::UserInfo']]],
+  ['userlist_1',['UserList',['../class_agora_chat_1_1_message_reaction.html#ad60cf8b2101ad55111a03e0c7b4bdf65',1,'AgoraChat::MessageReaction']]],
+  ['usinghttpsonly_2',['UsingHttpsOnly',['../class_agora_chat_1_1_options.html#a647fcd53272428a991805a79489ff638',1,'AgoraChat::Options']]]
 ];

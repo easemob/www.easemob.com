@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['maxusers_0',['MaxUsers',['../class_chat_s_d_k_1_1_room.html#a429f92867df7765a5157905bf4d5720f',1,'ChatSDK::Room']]],
-  ['membercount_1',['MemberCount',['../class_chat_s_d_k_1_1_group.html#a7cd153a90a820c8c6218b22ad6ef68ff',1,'ChatSDK.Group.MemberCount()'],['../class_chat_s_d_k_1_1_room.html#a47b2fb279645fe04986930bea930e5e1',1,'ChatSDK.Room.MemberCount()']]],
-  ['memberlist_2',['MemberList',['../class_chat_s_d_k_1_1_group.html#a2a76643e181b27072a1a4db19dcaac94',1,'ChatSDK.Group.MemberList()'],['../class_chat_s_d_k_1_1_room.html#aa58aa6c518875b8bff48d278e67965f4',1,'ChatSDK.Room.MemberList()']]],
-  ['messageblocked_3',['MessageBlocked',['../class_chat_s_d_k_1_1_group.html#aef85fb3d5904f92cf6e66c646cafd8c5',1,'ChatSDK::Group']]],
-  ['msgid_4',['MsgId',['../class_chat_s_d_k_1_1_group_read_ack.html#adb753912fd8187690bcda448b262a88f',1,'ChatSDK::GroupReadAck']]],
-  ['mutelist_5',['MuteList',['../class_chat_s_d_k_1_1_group.html#a4fd971653c94f6e84691acc3a2b92d2c',1,'ChatSDK.Group.MuteList()'],['../class_chat_s_d_k_1_1_room.html#a1e522983442ad19be665adea4755c60a',1,'ChatSDK.Room.MuteList()']]]
+  ['maxusercount_0',['MaxUserCount',['../class_agora_chat_1_1_group.html#ada18795fc1bb6eba93768b51e87994e9',1,'AgoraChat::Group']]],
+  ['maxusers_1',['MaxUsers',['../class_agora_chat_1_1_room.html#a01876f6cc7bfebb72e1da2803937df66',1,'AgoraChat::Room']]],
+  ['membercount_2',['MemberCount',['../class_agora_chat_1_1_group.html#ae7a461132f05c746b01bd1959ff5a51e',1,'AgoraChat.Group.MemberCount()'],['../class_agora_chat_1_1_room.html#aecb463bd80a7aa393348e55140b65e08',1,'AgoraChat.Room.MemberCount()']]],
+  ['memberlist_3',['MemberList',['../class_agora_chat_1_1_group.html#ae3d8f54431bfd527029484289f4d1f80',1,'AgoraChat.Group.MemberList()'],['../class_agora_chat_1_1_room.html#a96c75c9b229a47fcc2e4258568880c66',1,'AgoraChat.Room.MemberList()']]],
+  ['messageblocked_4',['MessageBlocked',['../class_agora_chat_1_1_group.html#af1e13ab6fd0d7b3029ccde47fe44e902',1,'AgoraChat::Group']]],
+  ['msgid_5',['MsgId',['../class_agora_chat_1_1_group_read_ack.html#aacb026285f6dfc5deb996cfe1ddb37f2',1,'AgoraChat::GroupReadAck']]],
+  ['mutelist_6',['MuteList',['../class_agora_chat_1_1_group.html#a22db19d6c43fa2ad1dfc21cdfdd3259b',1,'AgoraChat.Group.MuteList()'],['../class_agora_chat_1_1_room.html#aea2cc1a952d7600ec8bcab6856a46601',1,'AgoraChat.Room.MuteList()']]]
 ];

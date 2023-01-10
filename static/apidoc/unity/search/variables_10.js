@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['targetlanguages_0',['TargetLanguages',['../class_chat_s_d_k_1_1_message_body_1_1_text_body.html#a37e2803886f30cbb54a8ad165c2b2955',1,'ChatSDK::MessageBody::TextBody']]],
-  ['text_1',['Text',['../class_chat_s_d_k_1_1_message_body_1_1_text_body.html#aec604affdd4741dc1badb1bf835083e0',1,'ChatSDK::MessageBody::TextBody']]],
-  ['thumbnaidownstatus_2',['ThumbnaiDownStatus',['../class_chat_s_d_k_1_1_message_body_1_1_image_body.html#a357d787262454a714c9c98f2a132b3f6',1,'ChatSDK::MessageBody::ImageBody']]],
-  ['thumbnaillocalpath_3',['ThumbnailLocalPath',['../class_chat_s_d_k_1_1_message_body_1_1_image_body.html#a52ad95d239a989a9d39bae4a9c439a7d',1,'ChatSDK::MessageBody::ImageBody']]],
-  ['thumbnailocationpath_4',['ThumbnaiLocationPath',['../class_chat_s_d_k_1_1_message_body_1_1_video_body.html#a775eb20c496935d117cc70b02e41b966',1,'ChatSDK::MessageBody::VideoBody']]],
-  ['thumbnairemotepath_5',['ThumbnaiRemotePath',['../class_chat_s_d_k_1_1_message_body_1_1_image_body.html#aafb830943f73cc5ed1157931ea7a3ab5',1,'ChatSDK.MessageBody.ImageBody.ThumbnaiRemotePath()'],['../class_chat_s_d_k_1_1_message_body_1_1_video_body.html#ab98292f5553d05a05c81bd90a97d8887',1,'ChatSDK.MessageBody.VideoBody.ThumbnaiRemotePath()']]],
-  ['thumbnaisecret_6',['ThumbnaiSecret',['../class_chat_s_d_k_1_1_message_body_1_1_image_body.html#a8b14bbb88ee12a7d7f46d48313e5f65c',1,'ChatSDK.MessageBody.ImageBody.ThumbnaiSecret()'],['../class_chat_s_d_k_1_1_message_body_1_1_video_body.html#a6c67d314d5542b31aea839630e38121f',1,'ChatSDK.MessageBody.VideoBody.ThumbnaiSecret()']]],
-  ['tid_7',['Tid',['../class_chat_s_d_k_1_1_chat_thread.html#a594fd34f895b989e4fa36ba13e16d634',1,'ChatSDK::ChatThread']]],
-  ['to_8',['To',['../class_chat_s_d_k_1_1_message.html#ac44ba053d3e5fd9a644c4be03d24dba0',1,'ChatSDK::Message']]],
-  ['translations_9',['Translations',['../class_chat_s_d_k_1_1_message_body_1_1_text_body.html#a56094e8883d3cd536564cf59359d6397',1,'ChatSDK::MessageBody::TextBody']]]
+  ['targetlanguages_0',['TargetLanguages',['../class_agora_chat_1_1_message_body_1_1_text_body.html#ada909c18640ce9ce17f0591a815371d3',1,'AgoraChat::MessageBody::TextBody']]],
+  ['text_1',['Text',['../class_agora_chat_1_1_message_body_1_1_text_body.html#a4b7adb6388194c412849709f37bc9c22',1,'AgoraChat::MessageBody::TextBody']]],
+  ['thumbnaidownstatus_2',['ThumbnaiDownStatus',['../class_agora_chat_1_1_message_body_1_1_image_body.html#a1dcf0f8c2a8f8e372721767e5716c7fb',1,'AgoraChat.MessageBody.ImageBody.ThumbnaiDownStatus()'],['../class_agora_chat_1_1_message_body_1_1_video_body.html#a41be91f7d2e692b56321c96fa97040c0',1,'AgoraChat.MessageBody.VideoBody.ThumbnaiDownStatus()']]],
+  ['thumbnaillocalpath_3',['ThumbnailLocalPath',['../class_agora_chat_1_1_message_body_1_1_image_body.html#ab79575c0c86eeb903c44861710d76999',1,'AgoraChat::MessageBody::ImageBody']]],
+  ['thumbnailocationpath_4',['ThumbnaiLocationPath',['../class_agora_chat_1_1_message_body_1_1_video_body.html#aea519d8ff9c34111a39de462758bd5a6',1,'AgoraChat::MessageBody::VideoBody']]],
+  ['thumbnairemotepath_5',['ThumbnaiRemotePath',['../class_agora_chat_1_1_message_body_1_1_image_body.html#ac71e29a2f11cc633e34ce5313199a28c',1,'AgoraChat.MessageBody.ImageBody.ThumbnaiRemotePath()'],['../class_agora_chat_1_1_message_body_1_1_video_body.html#a0ad77f83f615212b7bb59a344a5e1f17',1,'AgoraChat.MessageBody.VideoBody.ThumbnaiRemotePath()']]],
+  ['thumbnaisecret_6',['ThumbnaiSecret',['../class_agora_chat_1_1_message_body_1_1_image_body.html#adf1d46e3a2b68577d47bdd0a8bebe027',1,'AgoraChat.MessageBody.ImageBody.ThumbnaiSecret()'],['../class_agora_chat_1_1_message_body_1_1_video_body.html#ae79141299aca043d5806dfd170c2bf44',1,'AgoraChat.MessageBody.VideoBody.ThumbnaiSecret()']]],
+  ['tid_7',['Tid',['../class_agora_chat_1_1_chat_thread.html#a7e903aeff51cba5f4e76bb32791c22fd',1,'AgoraChat::ChatThread']]],
+  ['to_8',['To',['../class_agora_chat_1_1_message.html#aa274c94e2a988c5012c8c4514cd96b0e',1,'AgoraChat::Message']]],
+  ['translations_9',['Translations',['../class_agora_chat_1_1_message_body_1_1_text_body.html#afcc686d1656f6216a9bdd3aee5fe5752',1,'AgoraChat::MessageBody::TextBody']]],
+  ['type_10',['Type',['../class_agora_chat_1_1_conversation.html#af3c36a606d101abb18c7c4948c74533d',1,'AgoraChat::Conversation']]]
 ];

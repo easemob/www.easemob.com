@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['chatsdk_0',['ChatSDK',['../namespace_chat_s_d_k.html',1,'']]],
-  ['messagebody_1',['MessageBody',['../namespace_chat_s_d_k_1_1_message_body.html',1,'ChatSDK']]]
+  ['agorachat_0',['AgoraChat',['../namespace_agora_chat.html',1,'']]],
+  ['messagebody_1',['MessageBody',['../namespace_agora_chat_1_1_message_body.html',1,'AgoraChat']]]
 ];

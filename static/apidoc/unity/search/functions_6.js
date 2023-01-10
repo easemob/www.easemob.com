@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['imagebody_0',['ImageBody',['../class_chat_s_d_k_1_1_message_body_1_1_image_body.html#a578427eebeb4b96c4cf433d3e4755c49',1,'ChatSDK::MessageBody::ImageBody']]],
-  ['importmessages_1',['ImportMessages',['../class_chat_s_d_k_1_1_i_chat_manager.html#a53b9427a9e5ffd7b2244fce52863c07e',1,'ChatSDK::IChatManager']]],
-  ['initwithoptions_2',['InitWithOptions',['../class_chat_s_d_k_1_1_s_d_k_client.html#a443f2a91b0d68faa298ce613476515f5',1,'ChatSDK::SDKClient']]],
-  ['insertmessage_3',['InsertMessage',['../class_chat_s_d_k_1_1_conversation.html#a06093e19e535c04c5bc78901016a1590',1,'ChatSDK::Conversation']]]
+  ['imagebody_0',['ImageBody',['../class_agora_chat_1_1_message_body_1_1_image_body.html#a05a889100c00c89601934859bfb5fc2c',1,'AgoraChat::MessageBody::ImageBody']]],
+  ['importmessages_1',['ImportMessages',['../class_agora_chat_1_1_chat_manager.html#a6259670ab78ecbeec5f5b4c72848e9e0',1,'AgoraChat::ChatManager']]],
+  ['initwithoptions_2',['InitWithOptions',['../class_agora_chat_1_1_s_d_k_client.html#a77b332d22c4a2318a15ea127fa2f66dc',1,'AgoraChat::SDKClient']]],
+  ['insertmessage_3',['InsertMessage',['../class_agora_chat_1_1_conversation.html#a57e11967f955d5995707a948f21bab6a',1,'AgoraChat::Conversation']]]
 ];

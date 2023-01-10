@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Unity and Windows API reference: 首页</title>
+<title>Chat SDK for Unity and Windows: Chat SDK for Unity and Windows</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Unity and Windows API reference
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.0.9</span>
    </div>
   </td>
  </tr>
@@ -61,10 +61,626 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Unity and Windows API reference 文档</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Chat SDK for Unity and Windows </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p ><a class="anchor" id="md_D__workspace_project_doc_temp_unity_api_reference_mainpage"></a> ﻿Agora Chat is a highly reliable global communication platform where your users can chat one-to-one, in groups or in chat rooms. Users communicate with text messages, share images, audios, videos, files, emojis, and locations. Agora Chat supplies typing indicators out-of-the-box.</p>
+<ul>
+<li>The ChatClient class is the entry of the chat SDK. It provides methods to define how to log in to and log out of the chat app, as well as manage the connection between the SDK and the chat server.</li>
+<li>The ChatManager class provides methods to define how to send and receive messages, manage conversations (including loading and deleting conversations), and download attachments.</li>
+<li>The ChatMessage class defines message attributes .</li>
+<li>The Conversation class provides methods to define how to manage conversations.</li>
+<li>The ContactManager class provides methods to define how to manage chat contacts such as adding, retrieving, modifying, and deleting contacts.</li>
+<li>The GroupManager class provides methods for group management, like group creation and destruction and member management.</li>
+<li>The ChatRoomManager class provides methods for chat room management, like joining and leaving the chat room and retrieving the chat room list, and manages member privileges.</li>
+<li>The PresenceManager class provides methods for you to set message push configuration options.</li>
+<li>The ChatThreadManager class provides methods t define how to manage message threads, including message thread creation, destruction, and member management.</li>
+<li>The PushManager class provides methods to define how to manage offline push services.</li>
+<li>The UserInfoManager class provides methods to manage user attributes, including getting and updating user attributes.</li>
+</ul>
+<p >During API calls, the SDK may returns error codes and warning codes. See <a href="../../error_rtc?platform=Android">Error Codes and Warning Codes</a>.</p>
+<h2><a class="anchor" id="autotoc_md0"></a>
+Chat Client</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Method   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a77b332d22c4a2318a15ea127fa2f66dc">InitWithOptions</a></code>   </td><td class="markdownTableBodyLeft">Initializes the SDK.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a66ed705ea3ab6e9af1c410393f297ac0">LoginWithAgoraToken</a></code>   </td><td class="markdownTableBodyLeft">Logs in to the chat server with the user ID and Agora token.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#ae350b53d440d433936ab6fec4cacd749">RenewAgoraToken</a></code>   </td><td class="markdownTableBodyLeft">Renews the Agora token.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a98b67e590dbe9f6253449df9e82dd0c8">Logout</a></code>   </td><td class="markdownTableBodyLeft">Logs out of the chat server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a7e014e5629c9b00bc3c267855e4d3b7f">CurrentUsername</a></code>   </td><td class="markdownTableBodyLeft">Gets the user ID of the current logged-in user.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#aeb930aca88a017664dd3b35716c137f3">IsConnected</a></code>   </td><td class="markdownTableBodyLeft">Checks whether the SDK is connected to the chat server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a7ebb9cd58d17dac47ab6609b7c6742a3">IsLoggedIn</a></code>   </td><td class="markdownTableBodyLeft">Checks whether the user has logged in to the Chat app.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a87f9d72e95f778f9a0fbc7cbbe24f0a8">GetLoggedInDevicesFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets the list of online devices to which you have logged in with a specified account.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a7cc608c31eafdfc579fdfaf605df9677">KickDevice</a></code>   </td><td class="markdownTableBodyLeft">Logs out from a specified account on a device.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#ac34d1478a3b8aa1644f250dd7643ae5a">kickAllDevices</a></code>   </td><td class="markdownTableBodyLeft">Logs out from a specified account on all devices.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a7156cf061b2ac478ebaabb7776c18079">AddConnectionDelegate</a></code>   </td><td class="markdownTableBodyLeft">Adds a connection status listener.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a1c0e8c344f4c197c7cfb75659ab90ba9">GroupManager</a></code>   </td><td class="markdownTableBodyLeft">Gets the <code>GroupManager</code> class.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a573e067d20c24951ee97b801102dc0e2">RoomManager</a></code>   </td><td class="markdownTableBodyLeft">Gets the <code>ChatRoomManager</code> class.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a3e0976d42c6089bafd403a78b39164b5">ChatManager</a></code>}   </td><td class="markdownTableBodyLeft">Gets the <code>ChatManager</code> class.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a9274bfd035fdf3acbc3229f54f96e318">UserInfoManager</a></code>   </td><td class="markdownTableBodyLeft">Gets the <code>UserInfoManager</code> class.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a5c530405f3c5fee875ff59a884266529">ContactManager</a></code>   </td><td class="markdownTableBodyLeft">Gets the <code>ContactManager</code> class.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a209e0006253727d1012e3a9a567e6e73">PresenceManager</a></code>   </td><td class="markdownTableBodyLeft">Gets the <code>ContactManager</code> class.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a71e5e5b3e7e421837a2fbd76f5a49bcc">ThreadManager</a></code>   </td><td class="markdownTableBodyLeft">Gets the <code>ChatThreadManager</code> class.   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Event   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#adf6f1235f8464ab2cc3a10aca16409a7">OnConnected onConnected</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the SDK connects to the chat server successfully.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a317fe463da92a092ef40fec5ed94b5d4">OnDisconnected</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the SDK disconnect from the chat server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a3f535fc04fcc57b89bb374431c3d62bd">OnLoggedOtherDevice</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the current user account logs in to another device.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a51309fd15140ddfd224bb231295b7380">OnRemovedFromServer</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the current user account is removed from the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#ae9f0516e8320ddfc3c682c15ddd32499">OnForbidByServer</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the current user account is banned.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a802c7b36ded2927404107ec80b95cc9e">OnChangedIMPwd</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the current user account is forced to log out because the login password is changed.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a915c4babe2dc0b5a732500473da1036a">OnLoginTooManyDevice</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the user is forced to log out of the current account because he or she reaches the maximum number of devices that the user can log in to with the current account.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#aa9394f95f1c217129b82d3ffdb8b9f85">OnKickedByOtherDevice</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the current account is forced to get offline from the device due to login to another device.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#ad92adcf98e309bb51679518972c0ce62">OnAuthFailed</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the current account is forced to log out due to an authentication failure.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a2286405f7a3cffae753b37c3e5a85ad3">OnTokenExpired</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the token has expired.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a710fb1cff776511fcf12c822657c61d2">OnTokenWillExpire</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the token is about to expire.   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Chat manager</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Method   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">SendMessage</a></code>   </td><td class="markdownTableBodyLeft">Sends a message.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">SendConversationReadAck</a></code>   </td><td class="markdownTableBodyLeft">Sends the conversation read receipt to the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">SendMessageReadAck</a></code>   </td><td class="markdownTableBodyLeft">Sends the read receipt for a message to the server.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">SendReadAckForGroupMessage</a></code>   </td><td class="markdownTableBodyLeft">Sends the read receipt for a group message to the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetConversation</a></code>   </td><td class="markdownTableBodyLeft">Gets the conversation object by conversation ID.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">MarkAllConversationsAsRead</a></code>   </td><td class="markdownTableBodyLeft">Marks all conversations as read.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UpdateMessage</a></code>   </td><td class="markdownTableBodyLeft">Updates the local message.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DownloadAttachment</a></code>   </td><td class="markdownTableBodyLeft">Downloads the message attachment.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DownloadThumbnail</a></code>   </td><td class="markdownTableBodyLeft">Downloads the message thumbnail.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">ImportMessages</a></code>   </td><td class="markdownTableBodyLeft">Imports messages to the local database.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">LoadAllConversations</a></code>   </td><td class="markdownTableBodyLeft">Gets all local conversations.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetConversationsFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets the conversation list from the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DeleteConversation</a></code>   </td><td class="markdownTableBodyLeft">Deletes a conversation and its local messages from the local database.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DeleteConversationFromServer</a></code>   </td><td class="markdownTableBodyLeft">Deletes the specified conversation and its historical messages from the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchGroupReadAcks</a></code>   </td><td class="markdownTableBodyLeft">Uses the pagination to get read receipts for a group message from the server.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">SearchMsgFromDB</a></code>   </td><td class="markdownTableBodyLeft">Retrieves messages of a certain type in the conversation from the local database.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">RemoveMessagesBeforeTimestamp</a></code>   </td><td class="markdownTableBodyLeft">Deletes local historical messages with a Unix timestamp before a specified one.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">ReportMessage</a></code>   </td><td class="markdownTableBodyLeft">Reports an inappropriate message.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchSupportLanguages</a></code>   </td><td class="markdownTableBodyLeft">Gets all languages supported by the translation service.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">TranslateMessage</a></code>   </td><td class="markdownTableBodyLeft">Translates a text message.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddReaction</a></code>   </td><td class="markdownTableBodyLeft">Adds a Reaction.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">RemoveReaction</a></code>   </td><td class="markdownTableBodyLeft">Deletes a Reaction.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetReactionList</a></code>   </td><td class="markdownTableBodyLeft">Gets the list of Reactions.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetReactionDetail</a></code>   </td><td class="markdownTableBodyLeft">Gets the Reaction details.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddChatManagerDelegate</a></code>   </td><td class="markdownTableBodyLeft">Adds the message listener.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">RemoveChatManagerDelegate</a></code>   </td><td class="markdownTableBodyLeft">Remove the conversation listener.   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Event   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#a6c84fbc8006d3855fbe646787594a396">OnMessagesReceived</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a message is received.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#a3dae8b3ee236e0c73257cc8babc0a458">OnCmdMessagesReceived</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a command message is received.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#af54a5de4505f4dc4d39a431cd13b9840">OnMessagesRead</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a read receipt is received for a message.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#a91ce30298b243f184c7c84201d49e36d">OnGroupMessageRead</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a read receipt is received for a group message.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#aee582ff45af0d326f3cde80f78126b88">OnReadAckForGroupMessageUpdated</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the update for the group message read status is received.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#a25f077794d85560dfa99260ecd1b59b4">OnMessagesDelivered</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a delivery receipt is received.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">OnMessagesRecalled</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a received message is recalled.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#ac85aca15e5ae239eb4a9fb861fda8f88">MessageReactionDidChange</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a message Reaction changed.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#adb78c6ce9c32ce67f94dbfb0225ead5d">OnConversationsUpdate</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the conversation is updated.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#adb55abe242cd635437b5e07541c42f4b">OnConversationRead</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the conversation read receipt is received.   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Messages</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Method   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#aa1f61f225fbe590ad64daee69ac184a8">conversationId</a></code>   </td><td class="markdownTableBodyLeft">The conversation ID, which depends on the conversation type.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#abeee905ebb42d325f3fa73558fb4b1f8">UnReadCount</a></code>   </td><td class="markdownTableBodyLeft">Gets the number of unread messages in the conversation.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#aa4fabdb0b7f6adce27d13f9df0736c45">MarkAllMessageAsRead</a></code>   </td><td class="markdownTableBodyLeft">Marks all unread messages as read.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a19e30070920fabe88cc6f9395fd1c472">MessagesCount</a></code>   </td><td class="markdownTableBodyLeft">Gets the number of all unread messages in the conversation in the local database.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a77d4d24a8c27ea68ea324007d67d2722">IsThread</a></code>   </td><td class="markdownTableBodyLeft">Checks whether the current conversation is a thread conversation.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a354260d7b1eaa460c4b0b79df2c78d32">LoadMessages</a></code>   </td><td class="markdownTableBodyLeft">Loads the messages from the local database, starting from a specific message ID.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#aef05c210556e77af8d62ea4e935d6567">LoadMessage</a></code>   </td><td class="markdownTableBodyLeft">Gets the message with message ID.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a96a792f76191983d6f25aae0d73d4c71">MarkMessageAsRead</a></code>   </td><td class="markdownTableBodyLeft">Marks a message as read.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a10097ee181e1d9329aff5a5147f078e8">DeleteMessage</a></code>   </td><td class="markdownTableBodyLeft">Deletes a message in the local database.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a2b1d733eecc63aef30f4466f43032837">LastMessage</a></code>   </td><td class="markdownTableBodyLeft">Gets the latest message in the conversation.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a88695c39a182808da19dfd95b213f3a9">LastReceivedMessage</a></code>   </td><td class="markdownTableBodyLeft">Gets the latest received message in the conversation.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a656da5f7aaea0b9b2575ce2a6da12ad7">DeleteAllMessages</a></code>   </td><td class="markdownTableBodyLeft">Deletes all the messages in the conversation from the memory and local database.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a1c79f00e54bce4763a0e65441b82a5bb">Ext</a></code>   </td><td class="markdownTableBodyLeft">Sets or Gets the extension field of the conversation.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a57e11967f955d5995707a948f21bab6a">InsertMessage</a></code>   </td><td class="markdownTableBodyLeft">Inserts a message to the conversation in the local database。.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a0daec1dad018c8705ff9afb2d32c5f15">AppendMessage</a></code>   </td><td class="markdownTableBodyLeft">Inserts a message to the end of the conversation in the local database.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_conversation.html#a177877bf974c03286569139b87551dc9">UpdateMessage</a></code>   </td><td class="markdownTableBodyLeft">Updates a message in the local database.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#aa918c0bee098ebbb615c7147136fe6d5">Status</a></code>   </td><td class="markdownTableBodyLeft">Gets the message sending or reception status.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a54f78096cd4391425071a5f78081bb39">Body</a></code>   </td><td class="markdownTableBodyLeft">Gets the message body.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a4e61a8da5296a995751e059496dd28ec">ServerTime</a></code>   </td><td class="markdownTableBodyLeft">Gets the Unix timestamp when the server receives the message.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#ad2af02725d4ef999b76b76cac1cc204e">LocalTime</a></code>   </td><td class="markdownTableBodyLeft">Gets the local timestamp of the message.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#ac874c62ac5475dc4c32af2b2cfcc6454">IsThread</a></code>   </td><td class="markdownTableBodyLeft">Sets or Get whether the message is a threaded message.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a07b7531c8dd9fbd60d5e1085bb267db2">ChatThread</a></code>   </td><td class="markdownTableBodyLeft">Gets the overview of the message thread.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a7998b41cf600c7b2e5068d169c5a930f">CreateSendMessage</a></code>   </td><td class="markdownTableBodyLeft">Creates a message instance for sending.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a82d7057c87bff66b459cb195691f2783">CreateReceiveMessage</a></code>   </td><td class="markdownTableBodyLeft">Creates a received message instance.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#aa97fe7e237c0c2c7f2fd22a206985e2b">CreateTextSendMessage</a></code>   </td><td class="markdownTableBodyLeft">Creates a text message for sending.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#ae3306be8d5451ba75366bb90b7dd8a61">CreateVoiceSendMessage</a></code>   </td><td class="markdownTableBodyLeft">Creates a voice message for sending.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#acc36b448a140b4f3d72dff7153c96505">CreateImageSendMessage</a></code>   </td><td class="markdownTableBodyLeft">Creates an image message for sending.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a49c426a40f907623fd3df53dc306907a">CreateVideoSendMessage</a></code>   </td><td class="markdownTableBodyLeft">Creates a video message for sending.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a592a55edfe49529ccab3a1dbba09be69">CreateLocationSendMessage</a></code>   </td><td class="markdownTableBodyLeft">Creates a location message for sending.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#aaa0c2bfed53a72a2808a1b03ac3c96cf">CreateFileSendMessage</a></code>   </td><td class="markdownTableBodyLeft">Creates a file message for sending.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a9d354454d3ab0332b24618349062517f">From</a></code>   </td><td class="markdownTableBodyLeft">Gets or sets the user ID of the message sender.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#aa274c94e2a988c5012c8c4514cd96b0e">To</a></code>   </td><td class="markdownTableBodyLeft">Sets or gets the user ID of the message recipient.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#ac058e1ef3fba34f0cd0ba542c50e25df">MsgId</a></code>   </td><td class="markdownTableBodyLeft">Gets or sets the message ID.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a68bf990a3120b2209e34f1c022993251">SetAttribute</a></code>   </td><td class="markdownTableBodyLeft">Sets a message extension attribute of the String type.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a0b9966a8bfbd23dcce0fe384f85fbdb5">GetAttributeValue</a></code>   </td><td class="markdownTableBodyLeft">Gets a message extension attribute of the String type.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a9c14308a396cdc27846a619de250b93f">HasReadAck</a></code>   </td><td class="markdownTableBodyLeft">Gets whether the message is read.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a8eb699cefe220e7f7b66a80df81e3089">HasDeliverAck</a></code>   </td><td class="markdownTableBodyLeft">Gets whether the message is successfully delivered.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a1eaac37e72fbdc9864ce99b3bd1e6b67">IsRead</a></code>   </td><td class="markdownTableBodyLeft">Checks whether the message is read or not.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#ac8012dece59619560264f2a3f8c56054">ConversationId</a></code>   </td><td class="markdownTableBodyLeft">Gets the conversation ID.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#af55c74aab67ea447d9000d2260102360">ReactionList</a></code>   </td><td class="markdownTableBodyLeft">Gets the list of Reactions.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a5970d530e3d5fd2010e1298874d594da">MessageOnlineState</a></code>   </td><td class="markdownTableBodyLeft">Whether the message gets delivered to an online user.   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Event   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_call_back.html#ac2495c5db6d86c329ba15ddcea98b41d">Success</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the method succeeds.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_call_back.html#a7b207f3ecb7978f2526a8bf43dbd69df">Error</a></code>   </td><td class="markdownTableBodyLeft">Occurs when an error occurs. See <code><a class="el" href="">Error</a></code>.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_call_back.html#a1a3c627c07b9ee90d0033a6faa9505d5">Progress</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the progress updates.   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Contacts</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Method   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddContact</a></code>   </td><td class="markdownTableBodyLeft">Adds a new contact.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DeleteContact</a></code>   </td><td class="markdownTableBodyLeft">Deletes a contact.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetAllContactsFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets all contacts from the server.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddUserToBlockList</a></code>   </td><td class="markdownTableBodyLeft">Adds a user to block list.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">RemoveUserFromBlockList</a></code>   </td><td class="markdownTableBodyLeft">Removes the contact from the block list.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetBlockListFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets the block list from the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DeclineInvitation</a></code>   </td><td class="markdownTableBodyLeft">Declines a friend invitation.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetAllContactsFromDB</a></code>   </td><td class="markdownTableBodyLeft">Gets the contact list from the local database.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetSelfIdsOnOtherPlatform</a></code>   </td><td class="markdownTableBodyLeft">Gets the unique self-ID list of the current user on the other devices.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddContactManagerDelegate</a></code>   </td><td class="markdownTableBodyLeft">Registers a new contact listener.   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Event   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_contact_manager_delegate.html#ad63bff159062f62f0734dc235c3df10a">OnContactAdded</a></code>   </td><td class="markdownTableBodyLeft">Occurs when user is added as a contact by another user.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_contact_manager_delegate.html#a5dfce1228c3bc7aaf1d128366e3a85cc">OnContactDeleted</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a user is removed from the contact list by another user.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_contact_manager_delegate.html#ac9f84a1ca450b0e68160a084afd2bbc1">OnContactInvited</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a user receives a friend request.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_contact_manager_delegate.html#ac583e1fb808f5a706ae253080b76fac1">OnFriendRequestAccepted</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a friend request is approved.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_contact_manager_delegate.html#aad9e7dd72d121d7c9475492aad98fc20">OnFriendRequestDeclined</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a friend request is declined.   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Chat Group</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Method   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">CreateGroup</a></code>   </td><td class="markdownTableBodyLeft">Creates a group instance.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DestroyGroup</a></code>   </td><td class="markdownTableBodyLeft">Destroys the group instance.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">LeaveGroup</a></code>   </td><td class="markdownTableBodyLeft">Leaves a group.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">JoinPublicGroup</a></code>   </td><td class="markdownTableBodyLeft">Joins a public group.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddGroupMembers</a></code>   </td><td class="markdownTableBodyLeft">Adds users to the group.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DeleteGroupMembers</a></code>   </td><td class="markdownTableBodyLeft">Removes members from the group.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetGroupSpecificationFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets group information from the server.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchJoinedGroupsFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets all groups of the current user from the server with pagination.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchPublicGroupsFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets public groups from the server with pagination.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">ChangeGroupName</a></code>   </td><td class="markdownTableBodyLeft">Changes the group name.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">ChangeGroupDescription</a></code>   </td><td class="markdownTableBodyLeft">Changes the group description.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AcceptGroupInvitation</a></code>   </td><td class="markdownTableBodyLeft">Accepts a group invitation.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DeclineGroupInvitation</a></code>   </td><td class="markdownTableBodyLeft">Declines a group invitation.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AcceptGroupInvitation</a></code>   </td><td class="markdownTableBodyLeft">Approves a group request.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DeclineGroupJoinApplication</a></code>   </td><td class="markdownTableBodyLeft">Declines a group request.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">applyJoinToGroup</a></code>   </td><td class="markdownTableBodyLeft">Requests to join a group.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">BlockGroup</a></code>   </td><td class="markdownTableBodyLeft">Blocks group messages.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UnBlockGroup</a></code>   </td><td class="markdownTableBodyLeft">Unblocks group messages.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">BlockGroupMembers</a></code>   </td><td class="markdownTableBodyLeft">Adds the user to the group block list.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UnBlockGroupMembers</a></code>   </td><td class="markdownTableBodyLeft">Removes users from the group block list.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetGroupBlockListFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets the group block list with pagination.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetGroupMemberListFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets the member list of a group with pagination.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">ChangeGroupOwner</a></code>   </td><td class="markdownTableBodyLeft">Transfers the group ownership.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddGroupAdmin</a></code>   </td><td class="markdownTableBodyLeft">Adds a group admin.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">RemoveGroupAdmin</a></code>   </td><td class="markdownTableBodyLeft">Removes a group admin.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UnMuteGroupMembers</a></code>   </td><td class="markdownTableBodyLeft">Mutes group members.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UnMuteGroupMembers</a></code>   </td><td class="markdownTableBodyLeft">Unmutes group members.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetGroupMuteListFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets the mute list of the group from the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetGroupBlockListFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets the block list of group from the server with pagination.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddGroupAllowList</a></code>   </td><td class="markdownTableBodyLeft">Adds members to the allow list.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">RemoveGroupAllowList</a></code>   </td><td class="markdownTableBodyLeft">Removes members from the allow list.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetGroupAllowListFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets the allow list of group from the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UpdateGroupAnnouncement</a></code>   </td><td class="markdownTableBodyLeft">Updates the group announcement.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetGroupAnnouncementFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets the group announcement from the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UploadGroupSharedFile</a></code>   </td><td class="markdownTableBodyLeft">Uploads the shared file to the group.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetGroupFileListFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets the shared file list from the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DeleteGroupSharedFile</a></code>   </td><td class="markdownTableBodyLeft">Removes the shared file of the group.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">CheckIfInGroupAllowList</a></code>   </td><td class="markdownTableBodyLeft">Gets whether the current user is on the allow list of the group.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DownloadGroupSharedFile</a></code>   </td><td class="markdownTableBodyLeft">Downloads the shared file of the group.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddGroupManagerDelegate</a></code>   </td><td class="markdownTableBodyLeft">Registers a group change listener.   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Event   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a0cf5cdff74d036c12704bc98034a191a">OnInvitationReceivedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the user receives a group invitation.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a5c6ffa5da32768a60f0b2ec3e23fde1c">OnRequestToJoinReceivedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the group owner or administrator receives a group request from a user.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a1edeba4af8517764ad09303dd337faca">OnRequestToJoinAcceptedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a group request is accepted.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#ac93ccb7d3a4177ec856ff139dd1ac437">OnRequestToJoinDeclinedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a group request is declined.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a49762900c45e116f326739bcd4cfd4f6">OnInvitationAcceptedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a group invitation is accepted.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a4296ef2f2ddff9f3d8eea5edcc9525e0">OnInvitationDeclinedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a group invitation is declined.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a66c0e77acdd674082e897cf489c2185f">OnUserRemovedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the current user is removed from the group by the group admin.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#aca4103f143df56db658adfa4028f5a52">OnDestroyedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a group is destroyed.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#af3acea0b3b2d3ca7d6a7f780c0147ff7">OnAutoAcceptInvitationFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the group invitation is accepted automatically.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#acce60e54b0d66019e4cfc36d9fb62fd7">OnMuteListAddedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when one or more group members are muted.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#ada68253bf1471c24484f428416437bf6">OnMuteListRemovedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when one or more group members are unmuted.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a197426fc888b7a1354619327d43f73ab">OnAddAllowListMembersFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when one or more group members are added to the allowlist.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a10be64e9afce1e2b9cf4e904d0fde6cf">OnRemoveAllowListMembersFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when one or more members are removed from the allowlist.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a40c6fe754503ae8b921fab4f3b8ce60f">OnAllMemberMuteChangedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when all group members are muted or unmuted.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#ab6c908635a4bf937e80f246cd7f71f2b">OnAdminAddedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a member is set as an admin.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#afe5bd8f250345fac17cb809f3fb1ea7b">OnAdminRemovedFromGroup</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a member's admin privileges are removed.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#acbd3c5c453d0f15520f35f4af1f9e9c6">onOwnerChanged</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the group ownership is transferred.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a8b1fad148c8ca987c87934af5cc587cb">onMemberJoined</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a member joins a group.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a6522d591f4fca610c23d5edf85267a67">onMemberExited</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a member proactively leaves the group.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a407ac5799cbaa3ad995d19147a4b5939">onAnnouncementChanged</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the announcement is updated.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#afa16ec7506d365b7c48f80377f557226">onSharedFileAdded</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a shared file is added to a group.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#acb99793f5c9012e6253e93ea61478165">onSharedFileDeleted</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a shared file is removed from a group.   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Chat Room</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Method   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">CreateRoom</a></code>   </td><td class="markdownTableBodyLeft">Creates a chat room.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DestroyRoom</a></code>   </td><td class="markdownTableBodyLeft">Destroys a chat room.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">JoinRoom</a></code>   </td><td class="markdownTableBodyLeft">Joins a chat room.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">LeaveRoom</a></code>   </td><td class="markdownTableBodyLeft">Exits a chat room.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchPublicRoomsFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets chat room data from the server with pagination.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchRoomInfoFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets details of a chat room from the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">ChangeRoomName</a></code>   </td><td class="markdownTableBodyLeft">Changes the chat room name.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">ChangeRoomDescription</a></code>   </td><td class="markdownTableBodyLeft">Modifies the chat room description.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchRoomMembers</a></code>   </td><td class="markdownTableBodyLeft">Gets the chat room member list.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">MuteRoomMembers</a></code>   </td><td class="markdownTableBodyLeft">Mutes members in a chat room.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UnMuteRoomMembers</a></code>   </td><td class="markdownTableBodyLeft">Unmutes members in a chat room.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddRoomAdmin</a></code>   </td><td class="markdownTableBodyLeft">Adds a chat room admin.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">RemoveRoomAdmin</a></code>   </td><td class="markdownTableBodyLeft">Removes the administrative privilege of a chat room admin.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchRoomMuteList</a></code>   </td><td class="markdownTableBodyLeft">Gets the list of muted chat room members from the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DeleteRoomMembers</a></code>   </td><td class="markdownTableBodyLeft">Removes members from a chat room.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">BlockRoomMembers</a></code>   </td><td class="markdownTableBodyLeft">Adds members to the block list of the chat room.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UnBlockRoomMembers</a></code>   </td><td class="markdownTableBodyLeft">Removes members from the block list of the chat room.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchRoomBlockList</a></code>   </td><td class="markdownTableBodyLeft">Gets the chat room block list with pagination.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddAllowListMembers</a></code>   </td><td class="markdownTableBodyLeft">Adds members to the allow list of the chat room.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">RemoveAllowListMembers</a></code>   </td><td class="markdownTableBodyLeft">Removes members from the chat room block list.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">MuteAllRoomMembers</a></code>   </td><td class="markdownTableBodyLeft">Mutes all members.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UnMuteAllRoomMembers</a></code>   </td><td class="markdownTableBodyLeft">Unmutes all members.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UpdateRoomAnnouncement</a></code>   </td><td class="markdownTableBodyLeft">Updates the chat room announcement.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchRoomAnnouncement</a></code>   </td><td class="markdownTableBodyLeft">Gets the chat room announcement from the server.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddAttributes</a></code>   </td><td class="markdownTableBodyLeft">Adds custom chat room attributes.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchAttributes</a></code>   </td><td class="markdownTableBodyLeft">Gets the list of custom chat room attributes based on the attribute key list.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">RemoveAttributes</a></code>   </td><td class="markdownTableBodyLeft">Removes custom chat room attributes by the attribute key list.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchAllowListFromServer</a></code>   </td><td class="markdownTableBodyLeft">Checks whether the current member is on the chat room block list.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetChatRoom</a></code>   </td><td class="markdownTableBodyLeft">Gets the details of a chat room from the memory.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddRoomManagerDelegate</a></code>   </td><td class="markdownTableBodyLeft">Adds a chat room event listener.   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Event   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#a2fa905ff705355767ab23a353741d8d6">OnDestroyedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the chat room is destroyed.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#a2989b1cdb2805f4d9689ef084db93e77">OnMemberJoinedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a member joins the chat room.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#acf28558473f76820291d1b70188c8870">OnMemberExitedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a member exits the chat room.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#a51edbe46037fbedc11508679752df565">OnRemovedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a member is removed from a chat room.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#a08e1bac6ca8119a7dbe4cff0297928df">OnMuteListAddedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the chat room member(s) is/are added to the mute list.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#abfafdd9bfdd2dbee7597796acaa3d7bc">OnMuteListRemovedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the chat room member(s) is/are removed from the mute list.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#ac5195d4e2b1e174a763c0f5066d747af">OnAdminAddedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a chat room member is set as an admin.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#aaa134a08eb33e1a9e306e97f8202cee3">OnAdminRemovedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the chat room member(s) is/are removed from the admin list.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#ab12284eac14d796c8684c7e48bd9eb19">OnOwnerChangedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the chat room owner is changed.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#a3eaf2040b3be88997181c9644ee0a683">OnAnnouncementChangedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the chat room announcement changes.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#ae146e5272dc06c7ce12b1d6c798e7f37">OnChatroomAttributesChanged</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the custom chat room attribute(s) is/are updated.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#abc34aee895c16015b66bf3bd39bbfd35">OnChatroomAttributesRemoved</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the custom chat room attribute(s) is/are removed.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#a3808f04d8c4076844a04d75141206ecc">OnSpecificationChangedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when specifications of a chat room change.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#a1f44dab68ff6550dc4be26f795d61612">OnAddAllowListMembersFromChatroom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the chat room member(s) is/are added to the allow list of a chat room.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#aa203854c76a6ee464f90e9c92b192fd1">OnRemoveAllowListMembersFromChatroom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the chat room member(s) is/are removed from the allow list of a chat room.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#a268433f2917d2a786ea1a3704898f7e9">OnRemoveFromRoomByOffline</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a member is removed from a chat room because he or she gets offline.   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Presence</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Method   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">PublishPresence</a></code>   </td><td class="markdownTableBodyLeft">Publishes a custom presence state.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">SubscribePresences</a></code>   </td><td class="markdownTableBodyLeft">Subscribes to a user's presence states.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UnsubscribePresences</a></code>   </td><td class="markdownTableBodyLeft">Unsubscribes from a user's presence states.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchSubscribedMembers</a></code>   </td><td class="markdownTableBodyLeft">Uses pagination to get a list of users whose presence states you have subscribed to.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchPresenceStatus</a></code>   </td><td class="markdownTableBodyLeft">Gets the current presence state of users.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddPresenceManagerDelegate</a></code>   </td><td class="markdownTableBodyLeft">Adds a listener.   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Event   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_presence_manager_delegate.html#afd34311d6670f2903f5333f9b0b1c35a">OnPresenceUpdated</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the presence state of the user subscribed is updated.   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Threading</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Method   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">CreateThread</a></code>   </td><td class="markdownTableBodyLeft">Creates a message thread.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">JoinThread</a></code>   </td><td class="markdownTableBodyLeft">Joins a message thread.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">DestroyThread</a></code>   </td><td class="markdownTableBodyLeft">Destroys the message thread.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">LeaveThread</a></code>   </td><td class="markdownTableBodyLeft">Leaves a message thread.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetThreadDetail</a></code>   </td><td class="markdownTableBodyLeft">Gets the details of the message thread from the server.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">ChangeThreadName</a></code>   </td><td class="markdownTableBodyLeft">Changes the name of the message thread.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">RemoveThreadMember</a></code>   </td><td class="markdownTableBodyLeft">Removes a member from the message thread.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchThreadMembers</a></code>   </td><td class="markdownTableBodyLeft">Gets a list of members in the message thread with pagination.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchMineJoinedThreadList</a></code>   </td><td class="markdownTableBodyLeft">Uses the pagination to get the list of message threads that the current user has joined.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchThreadListOfGroup</a></code>   </td><td class="markdownTableBodyLeft">Uses the pagination to get the list of message threads in the specified group.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">GetLastMessageAccordingThreads</a></code>   </td><td class="markdownTableBodyLeft">Gets the last reply in the specified message threads from the server.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">AddThreadManagerDelegate</a></code>   </td><td class="markdownTableBodyLeft">Adds the message thread event listener, which listens for message thread changes, such as the message thread creation and destruction.   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Event   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_thread_manager_delegate.html#ab578588a7074534be9f6bc86f89e7a56">OnChatThreadCreate</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a message thread is created.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_thread_manager_delegate.html#a1ff0b2a35a92fdc807ddef1a6038f4a7">OnChatThreadUpdate</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a message thread is updated.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_thread_manager_delegate.html#a49377d1e8bd35f736ab2a69e6d11ad3a">OnChatThreadDestroy</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a message thread is destroyed.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_thread_manager_delegate.html#a290c685886eda5ae8bd1d78f24439cfc">OnUserKickOutOfChatThread</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the current user is removed from the message thread by the group owner or a group admin to which the message thread belongs.   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md8"></a>
+User Attributes</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Method   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">UpdateOwnInfo</a></code>   </td><td class="markdownTableBodyLeft">Modifies the current user's information.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="">FetchUserInfoByUserId</a></code>   </td><td class="markdownTableBodyLeft">Gets user information with user ID.   </td></tr>
+</table>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

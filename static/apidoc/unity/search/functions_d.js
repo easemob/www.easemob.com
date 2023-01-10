@@ -1,10 +1,23 @@
 var searchData=
 [
-  ['searchmsgfromdb_0',['SearchMsgFromDB',['../class_chat_s_d_k_1_1_i_chat_manager.html#a65fee25d15cff040025a86568498291b',1,'ChatSDK::IChatManager']]],
-  ['sendconversationreadack_1',['SendConversationReadAck',['../class_chat_s_d_k_1_1_i_chat_manager.html#a8ec5f338c74e2cba30f5e6963ea795a6',1,'ChatSDK::IChatManager']]],
-  ['sendmessage_2',['SendMessage',['../class_chat_s_d_k_1_1_i_chat_manager.html#af9dee06f6d2e81e064f73a9cead1122a',1,'ChatSDK::IChatManager']]],
-  ['sendmessagereadack_3',['SendMessageReadAck',['../class_chat_s_d_k_1_1_i_chat_manager.html#a3aced96765363eaad2fed6805b7736fb',1,'ChatSDK::IChatManager']]],
-  ['sendreadackforgroupmessage_4',['SendReadAckForGroupMessage',['../class_chat_s_d_k_1_1_i_chat_manager.html#ad3d185ad97106fe073370c77c9e89379',1,'ChatSDK::IChatManager']]],
-  ['setattribute_5',['SetAttribute',['../class_chat_s_d_k_1_1_message.html#aec2c4d2276cd4b521be05e0e72e8b73e',1,'ChatSDK::Message']]],
-  ['subscribepresences_6',['SubscribePresences',['../class_chat_s_d_k_1_1_i_presence_manager.html#ab946a235cb2d8e7e63059285e2f74260',1,'ChatSDK::IPresenceManager']]]
+  ['reactionlist_0',['ReactionList',['../class_agora_chat_1_1_message.html#af55c74aab67ea447d9000d2260102360',1,'AgoraChat::Message']]],
+  ['recallmessage_1',['RecallMessage',['../class_agora_chat_1_1_chat_manager.html#a751801322e6ed3ac952dc4f25d1bdbfa',1,'AgoraChat::ChatManager']]],
+  ['removeallowlistmembers_2',['RemoveAllowListMembers',['../class_agora_chat_1_1_room_manager.html#a2a5837ac0e2cb859a6a2e67ff402d8d1',1,'AgoraChat::RoomManager']]],
+  ['removeattributes_3',['RemoveAttributes',['../class_agora_chat_1_1_room_manager.html#a0ed5625c64443cf8bab45f4acebf70b6',1,'AgoraChat::RoomManager']]],
+  ['removechatmanagerdelegate_4',['RemoveChatManagerDelegate',['../class_agora_chat_1_1_chat_manager.html#af04896f0b9f6569bbd37d044ec7771bc',1,'AgoraChat::ChatManager']]],
+  ['removecontactmanagerdelegate_5',['RemoveContactManagerDelegate',['../class_agora_chat_1_1_contact_manager.html#a73ba5c9ffbfa6cdf683e9bc793996a10',1,'AgoraChat::ContactManager']]],
+  ['removegroupadmin_6',['RemoveGroupAdmin',['../class_agora_chat_1_1_group_manager.html#a88049306f28942a4658448e5856e70a5',1,'AgoraChat::GroupManager']]],
+  ['removegroupallowlist_7',['RemoveGroupAllowList',['../class_agora_chat_1_1_group_manager.html#a2b9f615c8ad7b6108498a1eb9cbdb3d8',1,'AgoraChat::GroupManager']]],
+  ['removegroupmanagerdelegate_8',['RemoveGroupManagerDelegate',['../class_agora_chat_1_1_group_manager.html#a1377e6639a898d9fd280abd1eb4408d3',1,'AgoraChat::GroupManager']]],
+  ['removemessagesbeforetimestamp_9',['RemoveMessagesBeforeTimestamp',['../class_agora_chat_1_1_chat_manager.html#a27c1d31fec8d425d3f93f43b35835709',1,'AgoraChat::ChatManager']]],
+  ['removepresencemanagerdelegate_10',['RemovePresenceManagerDelegate',['../class_agora_chat_1_1_presence_manager.html#a5e531fd45e0a3d3c5926aa8570b5b1d5',1,'AgoraChat::PresenceManager']]],
+  ['removereaction_11',['RemoveReaction',['../class_agora_chat_1_1_chat_manager.html#a9ecb9a57d11c6a9c47f47bffe575b1af',1,'AgoraChat::ChatManager']]],
+  ['removeroomadmin_12',['RemoveRoomAdmin',['../class_agora_chat_1_1_room_manager.html#a07934372d12232dfb9220e428af17552',1,'AgoraChat::RoomManager']]],
+  ['removeroommanagerdelegate_13',['RemoveRoomManagerDelegate',['../class_agora_chat_1_1_room_manager.html#a9f96e6812b0449acee4df7803b7b34be',1,'AgoraChat::RoomManager']]],
+  ['removethreadmanagerdelegate_14',['RemoveThreadManagerDelegate',['../class_agora_chat_1_1_chat_thread_manager.html#ae4636c286224e8f981d2eea13b65651b',1,'AgoraChat::ChatThreadManager']]],
+  ['removethreadmember_15',['RemoveThreadMember',['../class_agora_chat_1_1_chat_thread_manager.html#a67f2577802ed668d999cbcd6f87caf2e',1,'AgoraChat::ChatThreadManager']]],
+  ['removeuserfromblocklist_16',['RemoveUserFromBlockList',['../class_agora_chat_1_1_contact_manager.html#a64a40abf31e80286aae430507c14cac8',1,'AgoraChat::ContactManager']]],
+  ['renewagoratoken_17',['RenewAgoraToken',['../class_agora_chat_1_1_s_d_k_client.html#ae350b53d440d433936ab6fec4cacd749',1,'AgoraChat::SDKClient']]],
+  ['reportmessage_18',['ReportMessage',['../class_agora_chat_1_1_chat_manager.html#ac8a8e131abf22c1adf74cd34f2669043',1,'AgoraChat::ChatManager']]],
+  ['resendmessage_19',['ResendMessage',['../class_agora_chat_1_1_chat_manager.html#ab588250c9f88a313186430c0fa3619e5',1,'AgoraChat::ChatManager']]]
 ];

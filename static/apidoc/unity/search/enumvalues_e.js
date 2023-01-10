@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['receive_0',['RECEIVE',['../namespace_chat_s_d_k.html#a29a11469c05efe70eebe5277b6e2495da42ddaaef1ffd16ad35901150add8f8f2',1,'ChatSDK']]],
-  ['remindtype_1',['RemindType',['../namespace_chat_s_d_k.html#ab5a3c0a71c43c8b04f41d926432740a3a784740db3c4e9f99c6fdba99d244cac9',1,'ChatSDK']]],
-  ['room_2',['Room',['../namespace_chat_s_d_k.html#ae6a04b86232e3e017b8fbd1c8dc802adacc3abcf4426bff80257d22999d0eda8f',1,'ChatSDK.Room()'],['../namespace_chat_s_d_k.html#a591792e18abbf57e611592001dc214a6acc3abcf4426bff80257d22999d0eda8f',1,'ChatSDK.Room()']]]
+  ['thread_5fcreate_0',['THREAD_CREATE',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68ae41412584e633105840eb080f691ad63',1,'AgoraChat']]],
+  ['thread_5fdestroy_1',['THREAD_DESTROY',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a3f70653411fc6c66cf8420e14ed30d43',1,'AgoraChat']]],
+  ['thread_5fjoin_2',['THREAD_JOIN',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a6713ce8cb6b8d55c2683015ff7b5577f',1,'AgoraChat']]],
+  ['thread_5fkick_3',['THREAD_KICK',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68aaf7afd57e7e9ddabf13663ec65039c3e',1,'AgoraChat']]],
+  ['thread_5fleave_4',['THREAD_LEAVE',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68ae7e1699aadb1f48d7f25d560259a0641',1,'AgoraChat']]],
+  ['thread_5fupdate_5',['THREAD_UPDATE',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68af86276d13f07d5cd115e0fbb20e20aca',1,'AgoraChat']]],
+  ['txt_6',['TXT',['../namespace_agora_chat.html#a8d167e073ca67f4f12657a2dde388df1a5956a437e724cdfc8b1c70dc7bdeebcb',1,'AgoraChat']]]
 ];

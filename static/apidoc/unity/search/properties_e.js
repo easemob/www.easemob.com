@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sdkversion_0',['SdkVersion',['../class_chat_s_d_k_1_1_s_d_k_client.html#ace6e7143315baee6cec3f19e5314ae20',1,'ChatSDK::SDKClient']]],
-  ['statusdescription_1',['statusDescription',['../class_chat_s_d_k_1_1_presence.html#aefa7479c9d74dd8b05c9e478dbd198dc',1,'ChatSDK::Presence']]],
-  ['statuslist_2',['StatusList',['../class_chat_s_d_k_1_1_presence.html#a45956635cf58b97c69aa88f5d9bef2e8',1,'ChatSDK::Presence']]]
+  ['sdkversion_0',['SdkVersion',['../class_agora_chat_1_1_s_d_k_client.html#a1e1b0f65f4b85046af03eaf8cdbe4019',1,'AgoraChat::SDKClient']]],
+  ['statusdescription_1',['StatusDescription',['../class_agora_chat_1_1_presence.html#a03483733389f0ea8c1499644c78e037b',1,'AgoraChat::Presence']]],
+  ['statuslist_2',['StatusList',['../class_agora_chat_1_1_presence.html#a4ef6abcdc1e668e546e8d49587121b37',1,'AgoraChat::Presence']]]
 ];

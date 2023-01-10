@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['attributevaluetype_0',['AttributeValueType',['../namespace_chat_s_d_k.html#ac58a4e58367b8c13c2d3df9c89b5bda5',1,'ChatSDK']]]
+  ['areacode_0',['AreaCode',['../namespace_agora_chat.html#a25cdb64c624892d782adc29654d51c0d',1,'AgoraChat']]],
+  ['attributevaluetype_1',['AttributeValueType',['../namespace_agora_chat.html#a292bc538f956ba5bf2976941df4b469b',1,'AgoraChat']]]
 ];

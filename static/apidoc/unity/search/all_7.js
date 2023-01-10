@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hasdeliverack_0',['HasDeliverAck',['../class_chat_s_d_k_1_1_message.html#aef4fdad64ff64e5cec6cfc87de12039b',1,'ChatSDK::Message']]],
-  ['hasreadack_1',['HasReadAck',['../class_chat_s_d_k_1_1_message.html#a9600c51a55f64f0f88fbb7dcfb571d88',1,'ChatSDK::Message']]],
-  ['height_2',['Height',['../class_chat_s_d_k_1_1_message_body_1_1_image_body.html#af757c4906ddef5af752fd88e426c2885',1,'ChatSDK.MessageBody.ImageBody.Height()'],['../class_chat_s_d_k_1_1_message_body_1_1_video_body.html#a8a8e4a25f43c7255b4276d57ea45bb70',1,'ChatSDK.MessageBody.VideoBody.Height()']]]
+  ['hasdeliverack_0',['HasDeliverAck',['../class_agora_chat_1_1_message.html#a8eb699cefe220e7f7b66a80df81e3089',1,'AgoraChat::Message']]],
+  ['hasreadack_1',['HasReadAck',['../class_agora_chat_1_1_message.html#a9c14308a396cdc27846a619de250b93f',1,'AgoraChat::Message']]],
+  ['height_2',['Height',['../class_agora_chat_1_1_message_body_1_1_image_body.html#a2a446d79ce8bc8da17284f2c4124398b',1,'AgoraChat.MessageBody.ImageBody.Height()'],['../class_agora_chat_1_1_message_body_1_1_video_body.html#ac0516530c89ffecac259b2fa5fc050fe',1,'AgoraChat.MessageBody.VideoBody.Height()']]]
 ];

@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['messagebodytype_0',['MessageBodyType',['../namespace_chat_s_d_k.html#a11049e06d0233c64227ccb87dc9587ea',1,'ChatSDK']]],
-  ['messagedirection_1',['MessageDirection',['../namespace_chat_s_d_k.html#a29a11469c05efe70eebe5277b6e2495d',1,'ChatSDK']]],
-  ['messagesearchdirection_2',['MessageSearchDirection',['../namespace_chat_s_d_k.html#a83ae1e7920a413a1607e74d2bcafbd45',1,'ChatSDK']]],
-  ['messagestatus_3',['MessageStatus',['../namespace_chat_s_d_k.html#a1be1a33b581b95d9a8e084a1e27a3c29',1,'ChatSDK']]],
-  ['messagetype_4',['MessageType',['../namespace_chat_s_d_k.html#ae6a04b86232e3e017b8fbd1c8dc802ad',1,'ChatSDK']]],
-  ['multidevicesoperation_5',['MultiDevicesOperation',['../namespace_chat_s_d_k.html#ae6be5ab350036c9da8ae5d76acc24e99',1,'ChatSDK']]]
+  ['messagebodytype_0',['MessageBodyType',['../namespace_agora_chat.html#a8d167e073ca67f4f12657a2dde388df1',1,'AgoraChat']]],
+  ['messagedirection_1',['MessageDirection',['../namespace_agora_chat.html#ac17636c7a7b633f9c185876d850a44ee',1,'AgoraChat']]],
+  ['messagesearchdirection_2',['MessageSearchDirection',['../namespace_agora_chat.html#a21083e9a15b091e86f3f2cc113bd1b7b',1,'AgoraChat']]],
+  ['messagestatus_3',['MessageStatus',['../namespace_agora_chat.html#a33be8ac1aa48dbbed69d5a7f40ffb131',1,'AgoraChat']]],
+  ['messagetype_4',['MessageType',['../namespace_agora_chat.html#ad281aa6e4c993e9daf9361c5eb87bc22',1,'AgoraChat']]],
+  ['multidevicesoperation_5',['MultiDevicesOperation',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68',1,'AgoraChat']]]
 ];
