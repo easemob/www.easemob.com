@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.5</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.9</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -90,6 +90,8 @@ $(function() {
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_direct.html">Direct</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>EMCallbackHolder</b></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_e_m_chat_room_message_priority.html">EMChatRoomMessagePriority</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html">Status</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,6 +249,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
 <tr class="separator:a4ea4abb7780a8154fa921dc9d6d03b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acda7d83054f842b5208496370a9decaa"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#acda7d83054f842b5208496370a9decaa">isOnlineState</a> ()</td></tr>
 <tr class="separator:acda7d83054f842b5208496370a9decaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace36ca642315a57dfd6dfc96b68c14df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ace36ca642315a57dfd6dfc96b68c14df">setPriority</a> (<a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_e_m_chat_room_message_priority.html">EMChatRoomMessagePriority</a> priority)</td></tr>
+<tr class="separator:ace36ca642315a57dfd6dfc96b68c14df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -287,7 +291,7 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
 <tr class="separator:a723a8bb1523f1a03eba9988784d39075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >消息对象，代表一条发送或接收到的消息。</p>
+<div class="textblock"><p >消息对象，表示一条发送或接收到的消息。</p>
 <p >例如： 构造一条文本发送消息： </p><div class="fragment"><div class="line">EMMessage msg = EMMessage.createSendMessage(EMMessage.Type.TXT);</div>
 <div class="line">msg.setTo(<span class="stringliteral">&quot;user1&quot;</span>);</div>
 <div class="line">TextMessageBody body = <span class="keyword">new</span> TextMessageBody(<span class="stringliteral">&quot;hello from hyphenate sdk&quot;</span>);</div>
@@ -312,7 +316,10 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >添加消息体。与（建议方法）设置消息体 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a1469f5e6bf71543474a99ee1f6aea114">EMMessage#setBody(com.hyphenate.chat.EMMessageBody)</a> 的方法效果一样。 只支持一条消息添加一个消息体。 </p><dl class="params"><dt>参数</dt><dd>
+<p >添加消息体。</p>
+<p >本方法与设置消息体 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a1469f5e6bf71543474a99ee1f6aea114">EMMessage#setBody(EMMessageBody)</a> 的方法效果相同。推荐使用后者。</p>
+<p >只支持一条消息添加一个消息体。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">body</td><td>消息体。 </td></tr>
   </table>
@@ -335,7 +342,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取会话 ID。 </p><dl class="section return"><dt>返回</dt><dd>会话 ID。 </dd></dl>
+<p >获取会话 ID。</p>
+<dl class="section return"><dt>返回</dt><dd>会话 ID。 </dd></dl>
 
 </div>
 </div>
@@ -372,10 +380,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个普通文件发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个普通文件发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">filePath</td><td>文件路径。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -416,10 +425,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个普通文件发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个普通文件发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">filePath</td><td>文件路径。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -466,15 +476,16 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个图片发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个图片发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">filePath</td><td>图片路径。 </td></tr>
-    <tr><td class="paramname">sendOriginalImage</td><td>是否发送原图。<ul>
-<li>(默认）<code>false</code>：大于 100K 的图片 SDK 会进行压缩；</li>
-<li><code>true</code>：发送原图。 </li>
+    <tr><td class="paramname">sendOriginalImage</td><td>是否发送原图：<ul>
+<li><code>true</code>：发送原图。</li>
+<li><code>false</code>：若图片小于 100 KB，发送原图；若图片大于等于 100 KB, 发送压缩后的图片。 </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -521,15 +532,16 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个图片发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个图片发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">imgUri</td><td>图片 URI。 </td></tr>
-    <tr><td class="paramname">sendOriginalImage</td><td>是否发送原图。<ul>
-<li>(默认）<code>false</code>: 大于 100K 的图片 SDK 会进行压缩；</li>
-<li><code>true</code>: 发送原图。 </li>
+    <tr><td class="paramname">sendOriginalImage</td><td>是否发送原图：<ul>
+<li><code>true</code>：发送原图。</li>
+<li><code>false</code>：若图片小于 100 KB，发送原图；若图片大于等于 100 KB, 发送压缩后的图片。 </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -588,13 +600,14 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个位置发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个位置发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">latitude</td><td>纬度。 </td></tr>
     <tr><td class="paramname">longitude</td><td>经度。 </td></tr>
     <tr><td class="paramname">locationAddress</td><td>位置详情。 </td></tr>
     <tr><td class="paramname">buildingName</td><td>建筑物名称。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -647,12 +660,13 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个位置发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个位置发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">latitude</td><td>纬度。 </td></tr>
     <tr><td class="paramname">longitude</td><td>经度。 </td></tr>
     <tr><td class="paramname">locationAddress</td><td>位置详情。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -683,7 +697,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个接收消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个接收消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>消息类型。 </td></tr>
   </table>
@@ -716,7 +731,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>消息类型。 </td></tr>
   </table>
@@ -759,10 +775,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个文本发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个文本发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">content</td><td>文本内容。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收人的用户 ID 或群组 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -803,15 +820,16 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个文本发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个文本发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">content</td><td>文本内容。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收人的用户 ID 或群 ID。 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>消息对象。 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">弃用:</a></b></dt><dd>使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2c3d73d52f3e6febc67933dfa99f9ed2">createTextSendMessage(String, String)</a> 代替。</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">弃用:</a></b></dt><dd>已废弃。请用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2c3d73d52f3e6febc67933dfa99f9ed2">createTextSendMessage(String, String)</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -860,12 +878,13 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个视频发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个视频发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">videofilePath</td><td>视频文件路径。 </td></tr>
     <tr><td class="paramname">imageThumbPath</td><td>视频第一帧图缩略图。 </td></tr>
-    <tr><td class="paramname">timeLength</td><td>视频时间长度(单位秒)。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">timeLength</td><td>视频时间长度，单位为秒。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -918,12 +937,13 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个视频发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个视频发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">videofilePath</td><td>视频文件路径。 </td></tr>
     <tr><td class="paramname">imageThumbPath</td><td>视频第一帧图缩略图。 </td></tr>
-    <tr><td class="paramname">timeLength</td><td>视频时间长度(单位秒)。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">timeLength</td><td>视频时间长度，单位为秒。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -976,12 +996,13 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个视频发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个视频发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">videofilePath</td><td>视频文件路径。 </td></tr>
     <tr><td class="paramname">imageThumbPath</td><td>视频第一帧图缩略图。 </td></tr>
-    <tr><td class="paramname">timeLength</td><td>视频时间长度(单位秒)。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">timeLength</td><td>视频时间长度，单位为秒。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1028,11 +1049,12 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个语音发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个语音发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">filePath</td><td>语音文件路径。 </td></tr>
-    <tr><td class="paramname">timeLength</td><td>语音时间长度(单位秒)。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">timeLength</td><td>语音时间长度，单位为秒。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收人的用户 ID 或群组 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1079,11 +1101,12 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一个语音发送消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >创建一个语音发送消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">filePath</td><td>语音文件 URI。 </td></tr>
-    <tr><td class="paramname">timeLength</td><td>语音时间长度(单位秒)。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人或群 ID。 </td></tr>
+    <tr><td class="paramname">timeLength</td><td>语音时间长度，单位为秒。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收人的用户 ID 或群组 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1105,7 +1128,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >消息方向。 </p><dl class="section return"><dt>返回</dt><dd>发送或接收，详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_direct.html">Direct</a>。 </dd></dl>
+<p >消息方向。</p><ul>
+<li>SEND：该消息是当前用户发送出去的。</li>
+<li>RECEIVE：该消息是当前用户接收到的。</li>
+</ul>
+<dl class="section return"><dt>返回</dt><dd>发送或接收，详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_direct.html">Direct</a>。 </dd></dl>
 
 </div>
 </div>
@@ -1123,8 +1150,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息包含的全部扩展字段，并以 Map&lt;String, Object&gt; 形式返回。</p>
-<dl class="section return"><dt>返回</dt><dd>消息的扩展字段，以 Map 形式返回，返回 Entry.value 的具体类型有 Boolean, Integer, Long, Float, Double, String。 输入 JsonObject 的属性，map 结构返回时属性是 String。 </dd></dl>
+<p >获取消息包含的全部扩展字段。</p>
+<dl class="section return"><dt>返回</dt><dd>消息的全部扩展字段，以 Map&lt;String, Object&gt; 形式返回。返回 Entry.value 的具体类型有 Boolean, Integer, Long, Float, Double, String。 输入 JsonObject 的属性，map 结构返回时属性是 String。 </dd></dl>
 
 </div>
 </div>
@@ -1142,7 +1169,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息体。 </p><dl class="section return"><dt>返回</dt><dd>消息体。 </dd></dl>
+<p >获取消息体。</p>
+<dl class="section return"><dt>返回</dt><dd>消息体。 </dd></dl>
 
 </div>
 </div>
@@ -1161,7 +1189,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 boolean 类型的消息扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取 Bool 类型的消息扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
   </table>
@@ -1170,7 +1199,7 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
 <dl class="section return"><dt>返回</dt><dd>属性值。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1202,10 +1231,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 boolean 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取 Bool 类型的消息扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
-    <tr><td class="paramname">defaultValue</td><td>默认值。 </td></tr>
+    <tr><td class="paramname">defaultValue</td><td>属性的默认值。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1227,8 +1257,9 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取子区概览信息，仅当消息创建子区后携带。 </p><dl class="section return"><dt>返回</dt><dd>子区概览信息。</dd></dl>
-<p>Get Chat Thread overview information, which is carried only after Chat Thread is created in the message. </p><dl class="section return"><dt>返回</dt><dd>Thread overview information. </dd></dl>
+<p >获取子区概览信息。</p>
+<p >子区概览信息仅在创建子区后携带。</p>
+<dl class="section return"><dt>返回</dt><dd>子区概览信息。 </dd></dl>
 
 </div>
 </div>
@@ -1246,7 +1277,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取聊天类型。 </p><dl class="section return"><dt>返回</dt><dd>聊天类型。 </dd></dl>
+<p >获取聊天类型。</p>
+<dl class="section return"><dt>返回</dt><dd>聊天类型。 </dd></dl>
 
 </div>
 </div>
@@ -1265,7 +1297,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 double 类型扩展属性 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 Double 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
   </table>
@@ -1274,7 +1307,7 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
 <dl class="section return"><dt>返回</dt><dd>属性值。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1306,10 +1339,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息的 double 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 Double 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
-    <tr><td class="paramname">defaultValue</td><td>默认值。 </td></tr>
+    <tr><td class="paramname">defaultValue</td><td>属性的默认值。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1332,7 +1366,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 float 类型扩展属性 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 Float 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
   </table>
@@ -1341,7 +1376,7 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
 <dl class="section return"><dt>返回</dt><dd>属性值。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1373,10 +1408,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息的 float 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 Float 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
-    <tr><td class="paramname">defaultValue</td><td>默认值。 </td></tr>
+    <tr><td class="paramname">defaultValue</td><td>属性的默认值。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1398,7 +1434,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息发送者的用户名。 </p><dl class="section return"><dt>返回</dt><dd>用户名。 </dd></dl>
+<p >获取消息发送方的用户 ID。</p>
+<dl class="section return"><dt>返回</dt><dd>用户 ID。 </dd></dl>
 
 </div>
 </div>
@@ -1417,7 +1454,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息的 int 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 Int 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
   </table>
@@ -1426,7 +1464,7 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
 <dl class="section return"><dt>返回</dt><dd>属性值。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1458,7 +1496,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息的 int 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 Int 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
     <tr><td class="paramname">defaultValue</td><td>默认值。 </td></tr>
@@ -1484,7 +1523,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 JSONArray 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 JSONArray 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
   </table>
@@ -1493,7 +1533,7 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
 <dl class="section return"><dt>返回</dt><dd>属性值。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1515,7 +1555,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 JSONObject 类型扩展属性 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 JSONObject 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
   </table>
@@ -1524,7 +1565,7 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
 <dl class="section return"><dt>返回</dt><dd>属性值。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1546,7 +1587,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 long 类型扩展属性 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 Long 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
   </table>
@@ -1555,7 +1597,7 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
 <dl class="section return"><dt>返回</dt><dd>属性值。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1587,10 +1629,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息的 long 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 Long 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
-    <tr><td class="paramname">defaultValue</td><td>默认值。 </td></tr>
+    <tr><td class="paramname">defaultValue</td><td>属性的默认值。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1612,7 +1655,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 Reaction 列表。 </p><dl class="section return"><dt>返回</dt><dd>Reaction 列表。 </dd></dl>
+<p >获取 Reaction 列表。</p>
+<dl class="section return"><dt>返回</dt><dd>Reaction 列表。 </dd></dl>
 
 </div>
 </div>
@@ -1630,7 +1674,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息的 ID。 </p><dl class="section return"><dt>返回</dt><dd>消息的 ID。 </dd></dl>
+<p >获取消息的 ID。</p>
+<dl class="section return"><dt>返回</dt><dd>消息 ID。 </dd></dl>
 
 </div>
 </div>
@@ -1648,7 +1693,9 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息的时间戳(服务器时间)。 </p><dl class="section return"><dt>返回</dt><dd>消息的时间戳(服务器时间)。 </dd></dl>
+<p >获取消息的服务器时间戳。</p>
+<p >该时间戳为服务器接收消息的时间。</p>
+<dl class="section return"><dt>返回</dt><dd>服务器接收消息的时间戳。 </dd></dl>
 
 </div>
 </div>
@@ -1666,7 +1713,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息撤回者的用户 ID。 </p><dl class="section return"><dt>返回</dt><dd>撤回者用户 ID。 </dd></dl>
+<p >获取消息撤回者的用户 ID。</p>
+<dl class="section return"><dt>返回</dt><dd>撤回者用户 ID。 </dd></dl>
 
 </div>
 </div>
@@ -1685,7 +1733,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 String 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 String 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
   </table>
@@ -1694,7 +1743,7 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
 <dl class="section return"><dt>返回</dt><dd>属性值。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和异常原因。详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1726,7 +1775,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 String 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >获取消息的 String 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
     <tr><td class="paramname">defaultValue</td><td>默认值。 </td></tr>
@@ -1751,7 +1801,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息接收者的用户名。 </p><dl class="section return"><dt>返回</dt><dd>接收者的用户名。 </dd></dl>
+<p >获取消息接收者的用户名。</p>
+<dl class="section return"><dt>返回</dt><dd>接收者的用户名。 </dd></dl>
 
 </div>
 </div>
@@ -1769,7 +1820,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >\chinese 获取消息类型。 </p><dl class="section return"><dt>返回</dt><dd>消息类型。 </dd></dl>
+<p >获取消息类型。</p>
+<dl class="section return"><dt>返回</dt><dd>消息类型。 </dd></dl>
 
 </div>
 </div>
@@ -1787,7 +1839,12 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取通话对象的用户 ID。 </p><dl class="section return"><dt>返回</dt><dd>对方的用户 ID。 </dd></dl>
+<p >获取对端用户的 ID：</p><ul>
+<li>单聊：对端用户的 ID；</li>
+<li>群聊：群组 ID；</li>
+<li>聊天室：聊天室 ID。</li>
+</ul>
+<dl class="section return"><dt>返回</dt><dd>对端用户的 ID。 </dd></dl>
 
 </div>
 </div>
@@ -1805,7 +1862,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >群消息已读人数。 </p><dl class="section return"><dt>返回</dt><dd>消息已读人数。 </dd></dl>
+<p >群消息已读人数。</p>
+<dl class="section return"><dt>返回</dt><dd>消息已读人数。 </dd></dl>
 
 </div>
 </div>
@@ -1823,7 +1881,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取对方是否已读。 </p><dl class="section return"><dt>返回</dt><dd>是否已读。 -<code>true</code> 表示已读。 </dd></dl>
+<p >获取对方是否已读。</p>
+<dl class="section return"><dt>返回</dt><dd>消息是否已读： -<code>true</code>：已读。 -<code>false</code>：未读。 </dd></dl>
 
 </div>
 </div>
@@ -1841,7 +1900,12 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息是否是 Thread 消息 </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+<p >获取消息是否是子区消息。</p>
+<dl class="section return"><dt>返回</dt><dd>返回是否是子区消息的结果。<ul>
+<li><code>true</code>表示是子区消息；</li>
+<li><code>false</code>表示不是子区消息。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -1859,7 +1923,12 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息是否已到达对方。 </p><dl class="section return"><dt>返回</dt><dd>消息是否已到达对方。- <code>true</code>:已送达。 </dd></dl>
+<p >获取消息是否成功送达。</p>
+<dl class="section return"><dt>返回</dt><dd>消息是否成功送达。<ul>
+<li><code>true</code>：已送达。</li>
+<li><code>false</code>：未送达。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -1877,8 +1946,10 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取语音是否已听。 </p><dl class="section return"><dt>返回</dt><dd>- <code>true</code>：消息已听。<ul>
-<li><code>false</code>：消息未听。 </li>
+<p >获取语音消息是否已听。</p>
+<dl class="section return"><dt>返回</dt><dd>语音是否已听：<ul>
+<li><code>true</code>：已听；</li>
+<li><code>false</code>：未听。 </li>
 </ul>
 </dd></dl>
 
@@ -1898,7 +1969,9 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >消息是否需要群组已读回执。 </p><dl class="section return"><dt>返回</dt><dd>- <code>true</code>：需要已读回执；<ul>
+<p >消息是否需要群组已读回执。</p>
+<dl class="section return"><dt>返回</dt><dd>消息是否需要群组已读回执<ul>
+<li><code>true</code>：需要已读回执；</li>
 <li><code>false</code>：不需要已读回执。 </li>
 </ul>
 </dd></dl>
@@ -1944,9 +2017,10 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >检查消息是否未读。 </p><dl class="section return"><dt>返回</dt><dd>消息是否未读。<ul>
-<li><code>true</code>: 消息未读；</li>
-<li><code>false</code>: 消息已读。 </li>
+<p >检查消息是否未读。</p>
+<dl class="section return"><dt>返回</dt><dd>消息是否未读。<ul>
+<li><code>true</code>: 未读；</li>
+<li><code>false</code>: 已读。 </li>
 </ul>
 </dd></dl>
 
@@ -1966,7 +2040,9 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息的本地时间戳。 </p><dl class="section return"><dt>返回</dt><dd>消息的本地时间戳。 </dd></dl>
+<p >获取消息的本地时间戳。</p>
+<p >该时间戳为消息的本地创建时间戳。</p>
+<dl class="section return"><dt>返回</dt><dd>消息的本地时间戳。 </dd></dl>
 
 </div>
 </div>
@@ -1984,7 +2060,9 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >消息包含附件的上传或者下载进度，值的范围 0-100。 消息附件的缩略图不涉及进度信息。 </p><dl class="section return"><dt>返回</dt><dd>进度值。 </dd></dl>
+<p >消息中的附件的上传或者下载进度。</p>
+<p >消息附件的缩略图不涉及进度信息。</p>
+<dl class="section return"><dt>返回</dt><dd>消息中的附件的上传或者下载进度，取值范围为 [0,100]。 </dd></dl>
 
 </div>
 </div>
@@ -2003,9 +2081,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置对方是否已读。 开发者不应该调用此方法，由 SDK 进行调用。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置对方是否已读。</p>
+<p >该方法由 SDK 调用，而非开发者。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">isAcked</td><td>-<code>true</code>: 消息已读。 </td></tr>
+    <tr><td class="paramname">isAcked</td><td>消息是否已读： -<code>true</code>：已读。 -<code>false</code>：未读。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2037,7 +2117,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的 boolean 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息的 Bool 类型的扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
     <tr><td class="paramname">value</td><td>属性值。 </td></tr>
@@ -2072,7 +2153,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的 double 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息的 Double 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
     <tr><td class="paramname">value</td><td>属性值。 </td></tr>
@@ -2107,7 +2189,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的 float 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息的 Float 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
     <tr><td class="paramname">value</td><td>属性值。 </td></tr>
@@ -2142,7 +2225,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的 int 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息的 Int 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
     <tr><td class="paramname">value</td><td>属性值。 </td></tr>
@@ -2177,7 +2261,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的 JSONArray 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息的 JSONArray 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
     <tr><td class="paramname">value</td><td>属性值。 </td></tr>
@@ -2212,7 +2297,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的 JSONObject 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息的 JSONObject 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
     <tr><td class="paramname">value</td><td>属性值。 </td></tr>
@@ -2247,7 +2333,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的 long 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息的 Long 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
     <tr><td class="paramname">value</td><td>属性值。 </td></tr>
@@ -2282,7 +2369,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的 string 类型扩展属性。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息的 String 类型扩展属性。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
     <tr><td class="paramname">value</td><td>属性值。 </td></tr>
@@ -2307,7 +2395,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >（建议方法）设置消息体。 </p><dl class="params"><dt>参数</dt><dd>
+<p >（建议方法）设置消息体。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">body</td><td>消息体。 </td></tr>
   </table>
@@ -2331,9 +2420,10 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置聊天类型。 默认为单聊 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html#a160bb0aa31d02b25444da9b0eb83250c">ChatType#Chat</a>。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置聊天类型。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatType</td><td>聊天类型，详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html">ChatType</a>。 </td></tr>
+    <tr><td class="paramname">chatType</td><td>聊天类型，默认为单聊。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_chat_type.html">ChatType</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2355,9 +2445,12 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息已送达标记。 开发者不要调用，由 SDK 内部调用。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息已送达标记。</p>
+<p >开发者不要调用，由 SDK 内部调用。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">isDeliverAcked</td><td>- <code>true</code>：消息已送达。<ul>
+    <tr><td class="paramname">isDeliverAcked</td><td><ul>
+<li><code>true</code>：消息已送达。</li>
 <li><code>false</code>：消息未送达。 </li>
 </ul>
 </td></tr>
@@ -2382,9 +2475,15 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息是否已经送达对方。 开发者不要调用，由 SDK 内部调用。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息是否成功送达。</p>
+<p >该方法由 SDK 调用，而非开发者。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">isDelivered</td><td>- <code>true</code>: 已送达。 </td></tr>
+    <tr><td class="paramname">isDelivered</td><td>消息是否成功送达。<ul>
+<li><code>true</code>：已送达。</li>
+<li><code>false</code>：未送达。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -2406,7 +2505,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的方向。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息方向。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">dir</td><td>消息的方向，详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_direct.html">Direct</a>。 </td></tr>
   </table>
@@ -2430,9 +2530,10 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息发送者 ID。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息发送方的用户 ID。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">from</td><td>发送者 ID。 </td></tr>
+    <tr><td class="paramname">from</td><td>发送方的用户 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2454,7 +2555,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置群消息已读人数。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置群消息已读人数。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">count</td><td>群消息已读人数。 </td></tr>
   </table>
@@ -2478,9 +2580,13 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置是否是 Thread 消息 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息是否是子区消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">isChatThreadMessage</td><td></td></tr>
+    <tr><td class="paramname">isChatThreadMessage</td><td>- <code>true</code>表示设置成子区消息；<ul>
+<li><code>false</code>表示不设置为子区消息。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -2502,9 +2608,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息是否需要群组已读回执。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置群组消息是否需要已读回执。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">need</td><td>- <code>true</code>：需要已读回执；<ul>
+    <tr><td class="paramname">need</td><td>群组消息是否需要已读回执:<ul>
+<li><code>true</code>：需要；</li>
 <li><code>false</code>：不需要。 </li>
 </ul>
 </td></tr>
@@ -2529,12 +2637,13 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置语音是否已听。</p>
-<p >开发者不要调用，由 SDK 内部调用。</p>
+<p >设置语音消息是否已听。</p>
+<p >该方法由 SDK 调用，而非开发者。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">isListened</td><td>- <code>true</code>：设置消息为已听。<ul>
-<li><code>false</code>：设置消息为未听。 </li>
+    <tr><td class="paramname">isListened</td><td>语音消息是否已听：<ul>
+<li><code>true</code>：已听。</li>
+<li><code>false</code>：未听。 </li>
 </ul>
 </td></tr>
   </table>
@@ -2558,7 +2667,9 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的本地时间戳。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息的本地时间戳。</p>
+<p >该时间戳为消息的本地创建时间戳。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">serverTime</td><td>消息的本地时间戳。 </td></tr>
   </table>
@@ -2582,7 +2693,9 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息状态改变的回调。 设置消息状态回调，以便刷新界面。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息状态变化的回调。</p>
+<p >设置消息状态回调，以便刷新界面。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">callback</td><td>消息状态改变的回调。 </td></tr>
   </table>
@@ -2606,7 +2719,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置本地消息 ID。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置本地消息 ID。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">msgId</td><td>消息 ID。 </td></tr>
   </table>
@@ -2630,9 +2744,35 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的时间戳(服务器时间)。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息的服务器时间戳。</p>
+<p >该时间戳为服务器接收消息的时间。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">msgTime</td><td>消息的时间戳(服务器时间)。 </td></tr>
+    <tr><td class="paramname">msgTime</td><td>服务器接收消息的时间戳。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ace36ca642315a57dfd6dfc96b68c14df" name="ace36ca642315a57dfd6dfc96b68c14df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace36ca642315a57dfd6dfc96b68c14df">&#9670;&nbsp;</a></span>setPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMMessage.setPriority </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_e_m_chat_room_message_priority.html">EMChatRoomMessagePriority</a>&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >设置消息优先级 chatroom message priority </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -2654,9 +2794,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息包含附件的上传或者下载进度，值的范围 0-100。 对于 app 开发者来说，通常不需要主动设置进度。参考：<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a8aaf92c33b8e761a792e37fd97fb1bf5">EMMessage#progress()</a> </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息中的附件的上传或者下载进度。</p>
+<p >对于 app 开发者来说，通常不需要主动设置进度。详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a8aaf92c33b8e761a792e37fd97fb1bf5">EMMessage#progress()</a>。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">progress</td><td>上传或者下载进度。 </td></tr>
+    <tr><td class="paramname">progress</td><td>消息中的附件的上传或者下载进度，取值范围为 [0,100]。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2678,7 +2820,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息发送或接收的状态。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息发送或接收的状态。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">status</td><td>消息的状态。 </td></tr>
   </table>
@@ -2702,9 +2845,10 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的接收者用户 ID。 </p><dl class="params"><dt>参数</dt><dd>
+<p >设置消息的接收方的用户 ID。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">to</td><td>消息接收者用户 ID。 </td></tr>
+    <tr><td class="paramname">to</td><td>消息接收方的用户 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2726,11 +2870,11 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息为未读。</p>
-<p >参考： 建议在会话中，使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a7b647fa38c62bb24c2469a704d3f16d5">EMConversation#markAllMessagesAsRead()</a>。</p>
+<p >设置消息是否未读。</p>
+<p >建议在会话中，使用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a7b647fa38c62bb24c2469a704d3f16d5">EMConversation#markAllMessagesAsRead()</a>。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">unread</td><td><ul>
+    <tr><td class="paramname">unread</td><td>消息是否未读：<ul>
 <li><code>true</code>:设置消息为未读；</li>
 <li><code>false</code>:设置消息为已读。 </li>
 </ul>
@@ -2755,7 +2899,8 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息的发送/接收状态。 </p><dl class="section return"><dt>返回</dt><dd>消息的发送/接收状态。 </dd></dl>
+<p >获取消息的发送/接收状态。</p>
+<dl class="section return"><dt>返回</dt><dd>消息的发送/接收状态。 </dd></dl>
 
 </div>
 </div>
@@ -2798,7 +2943,7 @@ Object&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()  throw
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>hyphenatechatsdk/src/com/hyphenate/chat/EMMessage.java</li>
+<li>com/hyphenate/chat/EMMessage.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

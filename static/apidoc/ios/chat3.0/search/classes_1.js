@@ -6,7 +6,8 @@ var searchData=
   ['iemgroupmanager_2dp_3',['IEMGroupManager-p',['../protocol_i_e_m_group_manager-p.html',1,'']]],
   ['iempresencemanager_2dp_4',['IEMPresenceManager-p',['../protocol_i_e_m_presence_manager-p.html',1,'']]],
   ['iempushmanager_2dp_5',['IEMPushManager-p',['../protocol_i_e_m_push_manager-p.html',1,'']]],
-  ['iemthreadmanager_2dp_6',['IEMThreadManager-p',['../protocol_i_e_m_thread_manager-p.html',1,'']]],
-  ['iemtranslatemanager_2dp_7',['IEMTranslateManager-p',['../protocol_i_e_m_translate_manager-p.html',1,'']]],
-  ['iemuserinfomanager_2dp_8',['IEMUserInfoManager-p',['../protocol_i_e_m_user_info_manager-p.html',1,'']]]
+  ['iemstatisticsmanager_2dp_6',['IEMStatisticsManager-p',['../protocol_i_e_m_statistics_manager-p.html',1,'']]],
+  ['iemthreadmanager_2dp_7',['IEMThreadManager-p',['../protocol_i_e_m_thread_manager-p.html',1,'']]],
+  ['iemtranslatemanager_2dp_8',['IEMTranslateManager-p',['../protocol_i_e_m_translate_manager-p.html',1,'']]],
+  ['iemuserinfomanager_2dp_9',['IEMUserInfoManager-p',['../protocol_i_e_m_user_info_manager-p.html',1,'']]]
 ];

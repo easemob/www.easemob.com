@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.5</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.9</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -83,6 +83,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aefc187cf5c0883d11dc48ceefec7f0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a218d2927da921328cc8add478554f463"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a218d2927da921328cc8add478554f463">onChatThreadEvent</a> (int event, String target, List&lt; String &gt; usernames)</td></tr>
 <tr class="separator:a218d2927da921328cc8add478554f463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3574a98eac3499ff42fdb73bf2699243"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a3574a98eac3499ff42fdb73bf2699243">onMessageRemoved</a> (String conversationId, String deviceId)</td></tr>
+<tr class="separator:a3574a98eac3499ff42fdb73bf2699243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
@@ -159,9 +161,10 @@ Public 属性</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >Created by linan on 17/4/17.</p>
-<p >多端多设备事件监听器。 监听其他设备上当前用户的事件回调，包括联系人变化和群组变化。 </p><pre class="fragment">注册监听：
+<p >多端多设备事件监听器。</p>
+<p >该监听器用于监听其他设备上当前用户的事件回调，包括联系人变化和群组变化。 </p><pre class="fragment">注册监听器：
 </pre> <div class="fragment"><div class="line">EMClient.getInstance().addMultiDeviceListener(mMultiDeviceListener);</div>
-</div><!-- fragment --><p> 解注册监听：</p>
+</div><!-- fragment --><p> 移除监听器：</p>
 <div class="fragment"><div class="line">EMClient.getInstance().removeMultiDeviceListener(mMultiDeviceListener);</div>
 </div><!-- fragment --> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a218d2927da921328cc8add478554f463" name="a218d2927da921328cc8add478554f463"></a>
@@ -195,10 +198,11 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >多端多设备 Thread 事件。 </p><dl class="params"><dt>参数</dt><dd>
+<p >多端多设备子区事件。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>Thread 事件，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a>。 </td></tr>
-    <tr><td class="paramname">target</td><td>Thread ID。 </td></tr>
+    <tr><td class="paramname">event</td><td>子区事件，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a>。 </td></tr>
+    <tr><td class="paramname">target</td><td>子区 ID。 </td></tr>
     <tr><td class="paramname">usernames</td><td>操作目标 ID 列表。 </td></tr>
   </table>
   </dd>
@@ -237,7 +241,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >多端多设备联系人事件。 </p><dl class="params"><dt>参数</dt><dd>
+<p >多端多设备联系人事件。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>联系人事件，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a>。 </td></tr>
     <tr><td class="paramname">target</td><td>联系人 ID。 </td></tr>
@@ -279,11 +284,47 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >多端多设备群组事件。 </p><dl class="params"><dt>参数</dt><dd>
+<p >多端多设备群组事件。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>群组事件，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a>。 </td></tr>
     <tr><td class="paramname">target</td><td>群组 ID。 </td></tr>
     <tr><td class="paramname">usernames</td><td>操作目标 ID 列表。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3574a98eac3499ff42fdb73bf2699243" name="a3574a98eac3499ff42fdb73bf2699243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3574a98eac3499ff42fdb73bf2699243">&#9670;&nbsp;</a></span>onMessageRemoved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMMultiDeviceListener.onMessageRemoved </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>conversationId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>deviceId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >多设备同步漫游删除通知 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conversationId</td><td>会话id </td></tr>
+    <tr><td class="paramname">deviceId</td><td>设备id </td></tr>
   </table>
   </dd>
 </dl>
@@ -422,7 +463,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备将群组设置为禁言。 </p>
+<p >当前用户在其他设备将全部群组成员禁言。 </p>
 
 </div>
 </div>
@@ -677,7 +718,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前用户在其他设备将群组禁言解禁。 </p>
+<p >当前用户在其他设备将群组成员解除禁言。 </p>
 
 </div>
 </div>
@@ -817,7 +858,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <hr/>该接口的文档由以下文件生成:<ul>
-<li>hyphenatechatsdk/src/com/hyphenate/EMMultiDeviceListener.java</li>
+<li>com/hyphenate/EMMultiDeviceListener.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

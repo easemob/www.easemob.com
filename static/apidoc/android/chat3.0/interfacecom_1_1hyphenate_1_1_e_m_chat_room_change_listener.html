@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.5</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.9</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -104,21 +104,19 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a21189b87ef1b2970e2df303fc554ac44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f74ca5192e14380ccf34b6f8935c138"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#a2f74ca5192e14380ccf34b6f8935c138">onSpecificationChanged</a> (<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html">EMChatRoom</a> chatRoom)</td></tr>
 <tr class="separator:a2f74ca5192e14380ccf34b6f8935c138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a7e06c1deec0d8fa6993a5fcb7c4dc0"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#a6a7e06c1deec0d8fa6993a5fcb7c4dc0">onAttributesUpdate</a> (String chatRoomId, Map&lt; String, String &gt; attributeMap, String from)</td></tr>
+<tr class="separator:a6a7e06c1deec0d8fa6993a5fcb7c4dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84a6da55a4289e9b4aa38c2ae13ed443"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#a84a6da55a4289e9b4aa38c2ae13ed443">onAttributesRemoved</a> (String chatRoomId, List&lt; String &gt; keyList, String from)</td></tr>
+<tr class="separator:a84a6da55a4289e9b4aa38c2ae13ed443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >聊天室事件监听接口。</p>
-<p >通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html">com.hyphenate.chat.EMChatRoomManager</a> 进行注册和解注册，具体如下： </p><pre class="fragment">注册聊天室事件监听：
-```java
-EMChatRoomManager manager = EMClient.getInstance().chatroomManager();
-manager.addChatRoomChangeListener(mChatRoomChangeListener);
-```
-
-解注册聊天室事件监听：
-```java
-EMChatRoomManager manager = EMClient.getInstance().chatroomManager();
-manager.removeChatRoomListener(mChatRoomChangeListener);
-```
-</pre> </div><h2 class="groupheader">成员函数说明</h2>
+<p >可通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html">com.hyphenate.chat.EMChatRoomManager</a> 添加或移除聊天室事件监听器。</p>
+<p >添加聊天室事件监听器： </p><div class="fragment"><div class="line">EMChatRoomManager manager = EMClient.getInstance().chatroomManager();</div>
+<div class="line">manager.addChatRoomChangeListener(mChatRoomChangeListener);</div>
+</div><!-- fragment --><p >移除聊天室事件监听器： </p><div class="fragment"><div class="line">EMChatRoomManager manager = EMClient.getInstance().chatroomManager();</div>
+<div class="line">manager.removeChatRoomListener(mChatRoomChangeListener);</div>
+</div><!-- fragment --> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="aaf28d38aac3956e9c016e40241f13f13" name="aaf28d38aac3956e9c016e40241f13f13"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf28d38aac3956e9c016e40241f13f13">&#9670;&nbsp;</a></span>onAdminAdded()</h2>
 
@@ -144,11 +142,12 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >有成员提升为管理员权限。</p>
+<p >有成员被设置为管理员。</p>
+<p >被添加的管理员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">admin</td><td>被提升管理员的成员。 </td></tr>
+    <tr><td class="paramname">admin</td><td>被设置为管理员的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -180,11 +179,12 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >移除管理员权限。</p>
+<p >有成员被移出管理员列表。</p>
+<p >被移出的管理员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">admin</td><td>被移除的管理员。 </td></tr>
+    <tr><td class="paramname">admin</td><td>被移出管理员列表的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -216,7 +216,8 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >全员禁言状态的改变。</p>
+<p >全员禁言状态有变更。</p>
+<p >聊天室所有成员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
@@ -252,10 +253,100 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室公告更改事件。 </p><dl class="params"><dt>参数</dt><dd>
+<p >聊天室公告有变更。</p>
+<p >聊天室的所有成员会收到该事件。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
     <tr><td class="paramname">announcement</td><td>更新的公告内容。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a84a6da55a4289e9b4aa38c2ae13ed443" name="a84a6da55a4289e9b4aa38c2ae13ed443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84a6da55a4289e9b4aa38c2ae13ed443">&#9670;&nbsp;</a></span>onAttributesRemoved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMChatRoomChangeListener.onAttributesRemoved </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>chatRoomId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; String &gt;&#160;</td>
+          <td class="paramname"><em>keyList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >聊天室自定义属性被移除。</p>
+<p >聊天室所有成员会收到该事件。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">keyList</td><td>聊天室自定义属性 key 列表。 </td></tr>
+    <tr><td class="paramname">from</td><td>操作者用户 ID。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6a7e06c1deec0d8fa6993a5fcb7c4dc0" name="a6a7e06c1deec0d8fa6993a5fcb7c4dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a7e06c1deec0d8fa6993a5fcb7c4dc0">&#9670;&nbsp;</a></span>onAttributesUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMChatRoomChangeListener.onAttributesUpdate </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>chatRoomId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Map&lt; String, String &gt;&#160;</td>
+          <td class="paramname"><em>attributeMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >聊天室自定义属性（key-value）有更新。</p>
+<p >聊天室所有成员会收到该事件。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">attributeMap</td><td>聊天室自定义属性。 </td></tr>
+    <tr><td class="paramname">from</td><td>操作者的用户 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -288,6 +379,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
       </table>
 </div><div class="memdoc">
 <p >聊天室被解散。</p>
+<p >聊天室的所有成员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
@@ -329,12 +421,13 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室成员主动退出事件。</p>
+<p >有成员主动退出聊天室。</p>
+<p >聊天室的所有成员（除退出的成员）会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">roomName</td><td>聊天室名字。 </td></tr>
-    <tr><td class="paramname">participant</td><td>退出的成员 ID。 </td></tr>
+    <tr><td class="paramname">roomName</td><td>聊天室名称。 </td></tr>
+    <tr><td class="paramname">participant</td><td>退出的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -366,11 +459,12 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室加入新成员事件。</p>
+<p >有新成员加入聊天室。</p>
+<p >聊天室的所有成员（除新成员外）会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">participant</td><td>新成员 username。 </td></tr>
+    <tr><td class="paramname">participant</td><td>新成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -408,12 +502,13 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >有成员被禁言。 禁言期间成员不能发送发消息。</p>
+<p >有成员被禁言。</p>
+<p >被添加的成员收到该事件。禁言期间成员不能发送发消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">mutes</td><td>禁言的成员。 </td></tr>
-    <tr><td class="paramname">expireTime</td><td>禁言有效期，单位是毫秒。 </td></tr>
+    <tr><td class="paramname">mutes</td><td>被禁言的成员。 </td></tr>
+    <tr><td class="paramname">expireTime</td><td>禁言失效的 Unix 时间戳，单位为毫秒。预留参数。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -446,6 +541,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
       </table>
 </div><div class="memdoc">
 <p >有成员从禁言列表中移除。</p>
+<p >被解除禁言的成员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
@@ -487,11 +583,12 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >转移聊天室拥有者。</p>
+<p >聊天室所有者变更。</p>
+<p >聊天室所有成员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">newOwner</td><td>新所有者。 </td></tr>
+    <tr><td class="paramname">newOwner</td><td>新的聊天室所有者。 </td></tr>
     <tr><td class="paramname">oldOwner</td><td>原聊天室所有者。 </td></tr>
   </table>
   </dd>
@@ -536,17 +633,18 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室人员被移除。</p>
+<p >有成员被移出聊天室。</p>
+<p >被移出的成员收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">reason</td><td>用户被移出聊天室的原因：<ul>
+    <tr><td class="paramname">reason</td><td>成员被移出聊天室的原因：<ul>
 <li>xxx BE_KICKED：该用户被聊天室管理员移除；</li>
-<li>xxxBE_LICKED)FOR_OFFLINE：该用户由于当前设备断网被服务器移出聊天室。</li>
+<li>xxx BE_KICKED_FOR_OFFLINE：该用户由于当前设备断网被服务器移出聊天室。</li>
 </ul>
 </td></tr>
     <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">roomName</td><td>聊天室名字。 </td></tr>
-    <tr><td class="paramname">participant</td><td>被移除人员 ID。 </td></tr>
+    <tr><td class="paramname">roomName</td><td>聊天室名称。 </td></tr>
+    <tr><td class="paramname">participant</td><td>被移除人员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -568,9 +666,11 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >聊天室信息更新回调。 </p><dl class="params"><dt>参数</dt><dd>
+<p >聊天室信息有更新。</p>
+<p >聊天室的所有成员会收到该事件。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatRoom</td><td>聊天室。 </td></tr>
+    <tr><td class="paramname">chatRoom</td><td>聊天室对象。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -602,7 +702,8 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >白名单成员增加。</p>
+<p >有成员加入白名单。</p>
+<p >被添加的成员收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
@@ -638,11 +739,12 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >白名单成员减少。</p>
+<p >有成员被移出白名单。</p>
+<p >被移出白名单的成员会收到该事件。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
-    <tr><td class="paramname">whitelist</td><td>白名单中移除的成员名单。 </td></tr>
+    <tr><td class="paramname">whitelist</td><td>移出白名单的成员。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -650,7 +752,7 @@ manager.removeChatRoomListener(mChatRoomChangeListener);
 </div>
 </div>
 <hr/>该接口的文档由以下文件生成:<ul>
-<li>hyphenatechatsdk/src/com/hyphenate/EMChatRoomChangeListener.java</li>
+<li>com/hyphenate/EMChatRoomChangeListener.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

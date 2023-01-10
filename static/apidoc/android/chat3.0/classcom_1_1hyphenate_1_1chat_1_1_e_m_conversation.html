@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.5</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.9</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -117,8 +117,6 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:af175a7366873c2cd906d35a95208fe86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaab722487466ceddfa43b01cce8b1f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#aaaab722487466ceddfa43b01cce8b1f8">getMessage</a> (String messageId, boolean markAsRead)</td></tr>
 <tr class="separator:aaaab722487466ceddfa43b01cce8b1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3e9b72c96d5c842eec85bef6e2fac2e"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#ac3e9b72c96d5c842eec85bef6e2fac2e">loadMessages</a> (List&lt; String &gt; msgIds)</td></tr>
-<tr class="separator:ac3e9b72c96d5c842eec85bef6e2fac2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e542e10f41e0c7f84d9fac97d03b3fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a9e542e10f41e0c7f84d9fac97d03b3fd">markMessageAsRead</a> (String messageId)</td></tr>
 <tr class="separator:a9e542e10f41e0c7f84d9fac97d03b3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5482db46052c03f30de813e31ab607c1"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a5482db46052c03f30de813e31ab607c1">getAllMessages</a> ()</td></tr>
@@ -147,6 +145,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a2c83f7b450834a04447f265d9b65089d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af147e532c3683643a174efcbd2e1880b"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#af147e532c3683643a174efcbd2e1880b">getMessageAttachmentPath</a> ()</td></tr>
 <tr class="separator:af147e532c3683643a174efcbd2e1880b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d4b3fa46b08ef3ebbe7d77c959b2b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a25d4b3fa46b08ef3ebbe7d77c959b2b0">removeMessagesFromServer</a> (List&lt; String &gt; msgIdList, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callBack)</td></tr>
+<tr class="separator:a25d4b3fa46b08ef3ebbe7d77c959b2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a1bccfc37c186b6a52f5b92d98fd27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#aa3a1bccfc37c186b6a52f5b92d98fd27">removeMessagesFromServer</a> (long beforeTimeStamp, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callBack)</td></tr>
+<tr class="separator:aa3a1bccfc37c186b6a52f5b92d98fd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -154,11 +156,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a2af3c651b5402f316fea84d97bf5e1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >会话类，表示和一个用户/群组/聊天室的对话，包含发送和接收的消息。</p>
+<div class="textblock"><p >会话类，用于定义单聊会话、群聊会话和聊天室会话。</p>
+<p >每类会话中包含发送和接收的消息。</p>
 <p >例如，从会话中获取未读消息数： </p><div class="fragment"><div class="line"><span class="comment">// conversationId 可以为聊天的另一方 ID，群组 ID 或者聊天室 ID。</span></div>
 <div class="line">EMConversation conversation = EMClient.getInstance().chatManager().getConversation(<a class="code hl_function" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43">conversationId</a>);</div>
 <div class="line"><span class="keywordtype">int</span> unread = conversation.getUnreadMsgCount();</div>
-<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_conversation_html_a0f576d0db622fd389c56b6b0fa53fa43"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43">com.hyphenate.chat.EMConversation.conversationId</a></div><div class="ttdeci">String conversationId()</div><div class="ttdef"><b>Definition:</b> EMConversation.java:164</div></div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_conversation_html_a0f576d0db622fd389c56b6b0fa53fa43"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43">com.hyphenate.chat.EMConversation.conversationId</a></div><div class="ttdeci">String conversationId()</div><div class="ttdef"><b>Definition:</b> EMConversation.java:180</div></div>
 </div><!-- fragment --> <dl class="section version"><dt>版本</dt><dd>3.0 </dd></dl>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a70be686d1827304f25835b57cfda5d8a" name="a70be686d1827304f25835b57cfda5d8a"></a>
@@ -176,8 +179,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >插入一条消息到会话尾部。</p>
-<p >消息的 conversationId 应该和会话的 conversationId 一致，消息会被插入 SDK 本地数据库，并且更新会话的 latestMessage 等属性。</p>
+<p >在本地数据库中会话的尾部插入一条消息。</p>
+<p >消息的会话 ID 应与会话的 ID 一致。</p>
+<p >消息插入后，SDK 会自动更新会话的 <code>latestMessage</code> 等属性。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>消息实例。 </td></tr>
@@ -201,8 +205,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >清除对话中的所有消息。</p>
-<p >只清除内存的，不清除本地数据库的消息。 在退出会话的时候清除内存缓存，减小内存消耗。 </p>
+<p >清除会话中的所有消息。</p>
+<p >只清除内存的，不清除本地数据库的消息。</p>
+<p >在退出会话的时候清除内存缓存，减小内存消耗。 </p>
 
 </div>
 </div>
@@ -220,7 +225,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >删除会话中所有消息，同时清除内存和数据库中的消息。 </p>
+<p >清除内存和数据库中指定会话中的消息。 </p>
 
 </div>
 </div>
@@ -238,7 +243,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >会话 ID。 对于单聊类型，会话 ID 同时也是对方用户的名称。 对于群聊类型，会话 ID 同时也是对方群组的 ID，并不同于群组的名称。 对于聊天室类型，会话 ID 同时也是聊天室的 ID，并不同于聊天室的名称。 对于 HelpDesk 类型，会话 ID 与单聊类型相同，是对方用户的名称。 </p><dl class="section return"><dt>返回</dt><dd>会话 ID。 </dd></dl>
+<p >会话 ID，取决于会话类型。</p><ul>
+<li>单聊/help desk：会话 ID 为对方的用户 ID。</li>
+<li>群聊：会话 ID 为群组 ID。</li>
+<li>聊天室：会话 ID 为聊天室的 ID。</li>
+</ul>
+<dl class="section return"><dt>返回</dt><dd>会话 ID。 </dd></dl>
 
 </div>
 </div>
@@ -256,7 +266,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取此 conversation 当前内存所有的 message。 如果内存中为空，再从本地数据库中加载最近的一条消息。</p>
+<p >获取该会话当前内存中的所有消息。</p>
+<p >如果内存中为空，SDK 再从本地数据库中加载最近一条消息。</p>
 <dl class="section return"><dt>返回</dt><dd>消息列表。 </dd></dl>
 
 </div>
@@ -275,7 +286,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 SDK 本地数据库中会话的全部消息数目。 </p><dl class="section return"><dt>返回</dt><dd>会话的全部消息数量。 </dd></dl>
+<p >获取 SDK 本地数据库中会话的全部消息数。</p>
+<dl class="section return"><dt>返回</dt><dd>会话的全部消息数量。 </dd></dl>
 
 </div>
 </div>
@@ -293,10 +305,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取会话扩展字段。</p>
-<p >该字段只保存在本地，不进行网络同步。</p>
-<p >注意：Thread 会话下不会保存扩展字段。</p>
-<dl class="section return"><dt>返回</dt><dd>会话对应扩展字段的内容。 </dd></dl>
+<p >获取会话的扩展字段。</p>
+<p >扩展字段只在本地数据库中保存，不同步到服务器。</p>
+<p >子区会话的扩展字段不在本地数据库中保存。</p>
+<dl class="section return"><dt>返回</dt><dd>会话的扩展字段。 </dd></dl>
 
 </div>
 </div>
@@ -314,7 +326,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息队列中的最后一条消息。 此操作不会改变未读消息计数。 优先从缓存中获取，如果缓存中没有，则从数据库中加载最近的一条消息。</p>
+<p >获取会话中的最新一条消息。</p>
+<p >此操作不会改变未读消息计数。</p>
+<p >SDK 首先在内存中查找消息，若在内存中未找到，SDK 会在本地数据库查询并加载。</p>
 <dl class="section return"><dt>返回</dt><dd>消息。 </dd></dl>
 
 </div>
@@ -333,7 +347,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取会话接收到的最后一条消息。 </p><dl class="section return"><dt>返回</dt><dd>消息。 </dd></dl>
+<p >获取会话中收到的最新一条消息。</p>
+<dl class="section return"><dt>返回</dt><dd>消息。 </dd></dl>
 
 </div>
 </div>
@@ -362,11 +377,16 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据 messageId 获取已读的消息。 优先从内存中加载，如果内存中没有则从数据库中加载，并将其插入到内存中。</p>
+<p >根据消息 ID 获取已读的消息。</p>
+<p >SDK 首先在内存中查找消息，若在内存中未找到，SDK 会在本地数据库查询并加载。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
-    <tr><td class="paramname">markAsRead</td><td>是否获取消息的同时标记消息为已读，如果标记为已读，则会发送已读标记到服务器。 </td></tr>
+    <tr><td class="paramname">markAsRead</td><td>是否将获取的消息标为已读。<ul>
+<li><code>true</code>：是。</li>
+<li><code>false</code>：否 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -388,9 +408,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >返回会话对应的附件在 sdcard 中的存储路径。</p>
-<p >该方法适用于清理该会话磁盘存储，不确保该路径一定存在，请在删除对应路径前加以判断，并加上异常保护。</p>
-<dl class="section return"><dt>返回</dt><dd>Sdcard 中的附件存储路径。 </dd></dl>
+<p >获取会话对应的附件的存储路径。</p>
+<p >该方法适用于清理会话数据前，如果不确定该路径一定存在，请调用该方法前查询路径。如有必要，添加异常保护。</p>
+<dl class="section return"><dt>返回</dt><dd>附件存储路径。 </dd></dl>
 
 </div>
 </div>
@@ -408,7 +428,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取会话类型。 </p><dl class="section return"><dt>返回</dt><dd>会话类型。 </dd></dl>
+<p >获取会话类型。</p>
+<dl class="section return"><dt>返回</dt><dd>会话类型。 </dd></dl>
 
 </div>
 </div>
@@ -426,7 +447,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取此对话中未读的消息数量。 </p><dl class="section return"><dt>返回</dt><dd>未读的消息数量。 </dd></dl>
+<p >获取会话中未读的消息数量。</p>
+<dl class="section return"><dt>返回</dt><dd>未读的消息数量。 </dd></dl>
 
 </div>
 </div>
@@ -445,7 +467,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >插入一条消息在 SDK 本地数据库，消息的 conversation ID 应该和会话的 conversation ID 一致，消息会根据消息里的时间戳被插入 SDK 本地数据库，并且更新会话的 latestMessage 等属性。</p>
+<p >在本地数据库的会话中插入一条消息。</p>
+<p >消息的会话 ID 应与会话的 ID 一致。</p>
+<p >消息会根据消息里的 Unix 时间戳插入本地数据库，SDK 会更新会话的 <code>latestMessage</code> 等属性。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>消息实例。 </td></tr>
@@ -469,7 +493,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >判断当前会话是否是 Thread 会话 </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+<p >查看当前会话是否是子区会话。</p>
+<dl class="section return"><dt>返回</dt><dd>返回是否是子区会话的结果。<ul>
+<li><code>true</code> 表示是子区会话。</li>
+<li><code>false</code> 表示不是子区会话。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -489,32 +518,6 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >获取是否是群组或者聊天室会话。</p>
 <dl class="section return"><dt>返回</dt><dd>群组和聊天室类型都会返回 <code>true</code>，其他类型返回 <code>false</code>。 </dd></dl>
-
-</div>
-</div>
-<a id="ac3e9b72c96d5c842eec85bef6e2fac2e" name="ac3e9b72c96d5c842eec85bef6e2fac2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3e9b72c96d5c842eec85bef6e2fac2e">&#9670;&nbsp;</a></span>loadMessages()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt; com.hyphenate.chat.EMConversation.loadMessages </td>
-          <td>(</td>
-          <td class="paramtype">List&lt; String &gt;&#160;</td>
-          <td class="paramname"><em>msgIds</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >加载一组消息。 如果缓存不存在会去本地数据库查询并加载。</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">msgIds</td><td>一组消息 ID。 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>返回一组消息，如果找不到返回 null。 </dd></dl>
 
 </div>
 </div>
@@ -543,15 +546,16 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从 SDK 本地数据库中加载更多消息。 根据传入的参数从本地数据库加载 startMsgId 之前(存储顺序)指定数量的消息， 加载到的 messages 会加入到当前会话的缓存中，通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a5482db46052c03f30de813e31ab607c1">getAllMessages()</a> 将会返回所有加载的消息。</p>
+<p >从 SDK 本地数据库中分页加载消息。</p>
+<p >加载的消息会基于消息中的时间戳放入当前会话的缓存中，调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a5482db46052c03f30de813e31ab607c1">getAllMessages()</a> 时会返回所有加载的消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">startMsgId</td><td>加载这个 ID 之前的 message，如果传入""或者 null，将从最近的消息开始加载。 </td></tr>
-    <tr><td class="paramname">pageSize</td><td>一页加载的条数。 </td></tr>
+    <tr><td class="paramname">startMsgId</td><td>查询的起始消息 ID。SDK 从该消息 ID 开始按消息时间戳的逆序加载。如果传入消息的 ID 为空，SDK 从最新消息开始按消息时间戳的逆序获取。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页期望加载的消息数。取值范围为 [1,400]。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>消息列表。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表（不包含查询起始 ID 的消息）。 </dd></dl>
 
 </div>
 </div>
@@ -586,16 +590,27 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据传入的参数从 SDK 本地数据库加载 startMsgId 之前或之后(存储顺序)指定数量的 message， 加载到的 messages 会加入到当前 conversation 的 messages 里。</p>
+<p >从指定消息 ID 开始分页加载数据库中的消息。</p>
+<p >加载到的消息会加入到当前会话的消息中。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">startMsgId</td><td>加载这个 ID 之前的 message，即作为起始点的 message。 </td></tr>
-    <tr><td class="paramname">pageSize</td><td>每页加载多少条。 </td></tr>
-    <tr><td class="paramname">direction</td><td>消息加载的方向。 </td></tr>
+    <tr><td class="paramname">startMsgId</td><td>查询的起始消息 ID。该参数设置后，SDK 从指定的消息 ID 开始按消息检索方向加载。 如果传入消息的 ID 为空，SDK 忽略该参数，按搜索方向查询消息：<ul>
+<li>若 <code>direction</code> 为 <code>UP</code>，SDK 从最新消息开始，按消息时间戳的倒序获取；</li>
+<li>若 <code>direction</code> 为 <code>DOWN</code>，SDK 从最早消息开始，按消息时间戳的正序获取。 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页期望加载的消息数。取值范围为 [1,40]。 </td></tr>
+    <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a>。<ul>
+<li><code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
+<li><code>DOWN</code>：按照消息中的时间戳的正序查询； </li>
+</ul>
+</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>消息列表。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表（不包含查询起始时间戳对应的消息）。 </dd></dl>
 
 </div>
 </div>
@@ -632,8 +647,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置指定的消息为已读。</p>
-<p >将消息置为已读，也可用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a0856c0c61d59cd1c411101d553e40192">EMMessage#setUnread(boolean)</a>。</p>
+<p >设置指定消息为已读。</p>
+<p >也可调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a0856c0c61d59cd1c411101d553e40192">EMMessage#setUnread(boolean)</a> 将消息置为已读。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
@@ -676,10 +691,10 @@ Public 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >从消息类型到会话类型的转化。</p>
+<p >将消息类型转化为会话类型。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>消息 ID，用来区分客服和单聊，对于其他类型，这个参数没有影响。 </td></tr>
+    <tr><td class="paramname">id</td><td>消息 ID。 </td></tr>
     <tr><td class="paramname">type</td><td>消息类型。 </td></tr>
   </table>
   </dd>
@@ -703,10 +718,82 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >删除一条指定的消息。 注：只会对本地数据进行操作。</p>
+<p >删除本地数据库中的一条指定消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">messageId</td><td>待删除消息的 ID。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a25d4b3fa46b08ef3ebbe7d77c959b2b0" name="a25d4b3fa46b08ef3ebbe7d77c959b2b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25d4b3fa46b08ef3ebbe7d77c959b2b0">&#9670;&nbsp;</a></span>removeMessagesFromServer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMConversation.removeMessagesFromServer </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; String &gt;&#160;</td>
+          <td class="paramname"><em>msgIdList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>&#160;</td>
+          <td class="paramname"><em>callBack</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >单向删除漫游消息（根据msgId删除）</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msgIdList</td><td>msgId列表 </td></tr>
+    <tr><td class="paramname">callBack</td><td>处理结果回调,详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa3a1bccfc37c186b6a52f5b92d98fd27" name="aa3a1bccfc37c186b6a52f5b92d98fd27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a1bccfc37c186b6a52f5b92d98fd27">&#9670;&nbsp;</a></span>removeMessagesFromServer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMConversation.removeMessagesFromServer </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>beforeTimeStamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>&#160;</td>
+          <td class="paramname"><em>callBack</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >单向删除漫游消息（根据时间节点删除 只支持按开始时间 向上删除）</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">beforeTimeStamp</td><td>开始时间 单位毫秒 </td></tr>
+    <tr><td class="paramname">callBack</td><td>处理结果回调,详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -756,19 +843,18 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据搜索消息中的关键词、搜索消息的时间点、搜索结果的最大条数、搜索来源和搜索方向从 SDK 本地数据库中搜索自定义消息中指定数量的消息。</p>
-<p >注意：当 maxCount 非常大时，需要考虑内存消耗。</p>
+<p >从本地数据库获取会话中的指定用户发送的包含特定关键词的自定义消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">keywords</td><td>搜索消息中的关键词。 </td></tr>
-    <tr><td class="paramname">timeStamp</td><td>搜索消息的时间点。 </td></tr>
-    <tr><td class="paramname">maxCount</td><td>搜索结果的最大条数。 </td></tr>
-    <tr><td class="paramname">from</td><td>搜索来自某人的消息，也可用于搜索群组里的消息。 </td></tr>
-    <tr><td class="paramname">direction</td><td>消息加载的方向。 </td></tr>
+    <tr><td class="paramname">keywords</td><td>搜索的关键词。 </td></tr>
+    <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 如果该参数设置为负数，SDK 从当前时间开始搜索。 </td></tr>
+    <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
+    <tr><td class="paramname">from</td><td>搜索来自指定用户或者群组的消息，一般为会话 ID。 </td></tr>
+    <tr><td class="paramname">direction</td><td>消息加载方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a>。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>消息列表。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表（不包含查询起始时间戳对应的消息）。 </dd></dl>
 
 </div>
 </div>
@@ -815,19 +901,24 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据消息类型、搜索消息的时间点、搜索结果的最大条数、搜索来源和搜索方向从 SDK 本地数据库中搜索指定数量的消息。</p>
-<p >注意：当 maxCount 非常大时，需要考虑内存消耗。</p>
+<p >从本地数据库获取指定会话的一定数量的特定类型的消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>消息类型，文本、图片、语音等等。 </td></tr>
-    <tr><td class="paramname">timeStamp</td><td>搜索消息的时间点。 </td></tr>
-    <tr><td class="paramname">maxCount</td><td>搜索结果的最大条数。 </td></tr>
-    <tr><td class="paramname">from</td><td>搜索来自某人的消息，也可用于搜索群组里的消息。 </td></tr>
-    <tr><td class="paramname">direction</td><td>消息加载的方向。 </td></tr>
+    <tr><td class="paramname">type</td><td>消息类型。详见 <a class="el" href="">Type</a>。 </td></tr>
+    <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 </td></tr>
+    <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
+    <tr><td class="paramname">from</td><td>搜索来自指定用户或者群组的消息，一般为会话 ID。 </td></tr>
+    <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a>。<ul>
+<li><code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
+<li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>
+</ul>
+</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>消息列表。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表（不包含查询起始时间戳对应的消息）。 </dd></dl>
 
 </div>
 </div>
@@ -862,16 +953,16 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从 SDK 本地数据库中搜索指定时间段内指定数量的消息。 注意：当 maxCount 非常大时，需要考虑内存消耗。</p>
+<p >从本地数据库中搜索指定时间段内发送或接收的一定数量的消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">startTimeStamp</td><td>搜索的起始时间。 </td></tr>
-    <tr><td class="paramname">endTimeStamp</td><td>搜索的结束时间。 </td></tr>
-    <tr><td class="paramname">maxCount</td><td>搜索结果的最大条数。 </td></tr>
+    <tr><td class="paramname">startTimeStamp</td><td>搜索的起始时间戳。单位为毫秒。详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a2dd97f19253ce7d3c6cbb23defa38d0e">EMOptions#setSortMessageByServerTime</a>。 </td></tr>
+    <tr><td class="paramname">endTimeStamp</td><td>搜索的结束时间戳。单位为毫秒。详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a2dd97f19253ce7d3c6cbb23defa38d0e">EMOptions#setSortMessageByServerTime</a>。 </td></tr>
+    <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数量。取值范围为 [1,400]。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>消息列表。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表（不包含搜索起始时间戳和结束时间戳对应的消息）。 </dd></dl>
 
 </div>
 </div>
@@ -906,17 +997,22 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据搜索消息时间点、一次搜索结果的最大条数和搜索方向从 SDK 本地数据库中搜索指定数量的消息。</p>
-<p >注意：当 maxCount 非常大时，需要考虑内存消耗。</p>
+<p >基于 Unix 时间戳搜索本地数据库中的消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">timeStamp</td><td>搜索消息的时间点。 </td></tr>
-    <tr><td class="paramname">maxCount</td><td>一次搜索结果的最大条数。 </td></tr>
-    <tr><td class="paramname">direction</td><td>消息加载的方向。 </td></tr>
+    <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 如果该参数设置为负数，SDK 从最新消息获取。 </td></tr>
+    <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
+    <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a>。<ul>
+<li><code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
+<li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>
+</ul>
+</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>消息列表。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表（不包含查询起始时间戳对应的消息）。 </dd></dl>
 
 </div>
 </div>
@@ -963,18 +1059,24 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >根据消息中的关键词、搜索消息的时间点、搜索结果的最大条数、搜索来源和搜索方向从 SDK 本地数据库中搜索指定数量的消息。 注意：当 maxCount 非常大时，需要考虑内存消耗。</p>
+<p >从本地数据库获取会话中的指定用户发送的包含特定关键词的消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">keywords</td><td>搜索消息中的关键词。 </td></tr>
-    <tr><td class="paramname">timeStamp</td><td>搜索消息的时间点。 </td></tr>
-    <tr><td class="paramname">maxCount</td><td>搜索结果的最大条数。 </td></tr>
-    <tr><td class="paramname">from</td><td>搜索来自某人的消息，也可用于搜索群组里的消息。 </td></tr>
-    <tr><td class="paramname">direction</td><td>消息加载的方向。 </td></tr>
+    <tr><td class="paramname">keywords</td><td>查询的关键字。 </td></tr>
+    <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 如果该参数设置为负数，SDK 从当前时间开始搜索。 </td></tr>
+    <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
+    <tr><td class="paramname">from</td><td>搜索来自指定用户或者群组的消息，一般为会话 ID。 </td></tr>
+    <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a>。<ul>
+<li><code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
+<li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>
+</ul>
+</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>消息列表。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表（不包含查询起始时间戳对应的消息）。 </dd></dl>
 
 </div>
 </div>
@@ -993,10 +1095,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置会话扩展字段。 该字段只保存在本地，不进行网络同步。 注意：Thread 会话下不会保存扩展字段。</p>
+<p >设置会话的扩展字段。</p>
+<p >扩展字段只在本地数据库中保存，不同步到服务器。</p>
+<p >子区会话的扩展字段不在本地数据库中保存。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ext</td><td>会话对应扩展字段的内容。 </td></tr>
+    <tr><td class="paramname">ext</td><td>会话的扩展字段。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1018,7 +1122,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >更新 SDK 本地数据库的消息。 不能更新消息 ID，消息更新后，会话的 latestMessage 等属性进行相应更新。</p>
+<p >更新本地数据库的指定消息。</p>
+<p >消息更新时，消息 ID 不会修改。</p>
+<p >消息更新后，SDK 会自动更新会话的 <code>latestMessage</code> 等属性。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>要更新的消息。 </td></tr>
@@ -1029,7 +1135,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>hyphenatechatsdk/src/com/hyphenate/chat/EMConversation.java</li>
+<li>com/hyphenate/chat/EMConversation.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
