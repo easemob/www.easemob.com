@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['grouppermissiontype_0',['GroupPermissionType',['../namespace_chat_s_d_k.html#a7d579c793be57c02f64795e231508682',1,'ChatSDK']]],
-  ['groupstyle_1',['GroupStyle',['../namespace_chat_s_d_k.html#a8c0efa51be2875eb9f6c95586ab7a48e',1,'ChatSDK']]]
+  ['grouppermissiontype_0',['GroupPermissionType',['../namespace_agora_chat.html#ad237b6d2eb1d74494a9edf19c66fed61',1,'AgoraChat']]],
+  ['groupstyle_1',['GroupStyle',['../namespace_agora_chat.html#a78c8dcc8960a647beb75fb8dd1ebfa1c',1,'AgoraChat']]]
 ];

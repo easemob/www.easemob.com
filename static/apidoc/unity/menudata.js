@@ -24,6 +24,7 @@
 */
 var menudata={children:[
 {text:"首页",url:"index.html"},
+{text:"相关页面",url:"pages.html"},
 {text:"类",url:"annotated.html",children:[
 {text:"类列表",url:"annotated.html"},
 {text:"类索引",url:"classes.html"},
@@ -40,6 +41,7 @@ var menudata={children:[
 {text:"h",url:"functions_h.html#index_h"},
 {text:"i",url:"functions_i.html#index_i"},
 {text:"j",url:"functions_j.html#index_j"},
+{text:"k",url:"functions_k.html#index_k"},
 {text:"l",url:"functions_l.html#index_l"},
 {text:"m",url:"functions_m.html#index_m"},
 {text:"n",url:"functions_n.html#index_n"},
@@ -59,6 +61,7 @@ var menudata={children:[
 {text:"g",url:"functions_func_g.html#index_g"},
 {text:"i",url:"functions_func_i.html#index_i"},
 {text:"j",url:"functions_func_j.html#index_j"},
+{text:"k",url:"functions_func_k.html#index_k"},
 {text:"l",url:"functions_func_l.html#index_l"},
 {text:"m",url:"functions_func_m.html#index_m"},
 {text:"o",url:"functions_func_o.html#index_o"},

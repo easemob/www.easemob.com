@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['send_0',['SEND',['../namespace_chat_s_d_k.html#a29a11469c05efe70eebe5277b6e2495da548e51fa67d541384e9585adf0db95dc',1,'ChatSDK']]],
-  ['sign_1',['SIGN',['../namespace_chat_s_d_k.html#aa90ecb15684d863fa25d0b3e84b241fca65b164db371ec78984e24bc8f858c0d1',1,'ChatSDK']]],
-  ['simple_2',['Simple',['../namespace_chat_s_d_k.html#ab78e75b7fb64a0f18cb81df57e2be88ba1fbb1e3943c2c6c560247ac8f9289780',1,'ChatSDK']]],
-  ['string_3',['STRING',['../namespace_chat_s_d_k.html#ac58a4e58367b8c13c2d3df9c89b5bda5a63b588d5559f64f89a416e656880b949',1,'ChatSDK']]],
-  ['success_4',['SUCCESS',['../namespace_chat_s_d_k.html#a1be1a33b581b95d9a8e084a1e27a3c29ad0749aaba8b833466dfcbb0428e4f89c',1,'ChatSDK.SUCCESS()'],['../namespace_chat_s_d_k_1_1_message_body.html#aaf726446361a27af5fce4c80cdb499c2ad0749aaba8b833466dfcbb0428e4f89c',1,'ChatSDK.MessageBody.SUCCESS()']]],
-  ['summary_5',['Summary',['../namespace_chat_s_d_k.html#ab78e75b7fb64a0f18cb81df57e2be88ba290612199861c31d1036b185b4e69b75',1,'ChatSDK']]]
+  ['uint32_0',['UINT32',['../namespace_agora_chat.html#a292bc538f956ba5bf2976941df4b469ba17266551181f69a1b4a3ad5c9e270afc',1,'AgoraChat']]],
+  ['unknown_1',['Unknown',['../namespace_agora_chat.html#ad237b6d2eb1d74494a9edf19c66fed61a88183b946cc5f0e8c96b2e66e1c74a7e',1,'AgoraChat.Unknown()'],['../namespace_agora_chat.html#a2b6f39a7c115fd66eb10ef26f8c9cb76a88183b946cc5f0e8c96b2e66e1c74a7e',1,'AgoraChat.Unknown()']]],
+  ['unknown_2',['UnKnown',['../namespace_agora_chat.html#a73fcc9c0dc4ba4c315e94b09839977d2a57891b9a1f036c63cca954e2f03683b7',1,'AgoraChat']]],
+  ['up_3',['UP',['../namespace_agora_chat.html#a21083e9a15b091e86f3f2cc113bd1b7bafbaedde498cdead4f2780217646e9ba1',1,'AgoraChat']]],
+  ['update_4',['Update',['../namespace_agora_chat.html#a73fcc9c0dc4ba4c315e94b09839977d2a06933067aafd48425d67bcb01bba5cb6',1,'AgoraChat']]],
+  ['update_5fmsg_5',['Update_Msg',['../namespace_agora_chat.html#a73fcc9c0dc4ba4c315e94b09839977d2a1c95c9ce7e577475f8d39c049bd0fa37',1,'AgoraChat']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['blocklist_0',['BlockList',['../class_chat_s_d_k_1_1_group.html#ab6b4049872a088a3f9dcf5708b13f309',1,'ChatSDK.Group.BlockList()'],['../class_chat_s_d_k_1_1_room.html#a8945ebd414e1a628c72613585c76a696',1,'ChatSDK.Room.BlockList()']]]
+  ['blocklist_0',['BlockList',['../class_agora_chat_1_1_group.html#ad62725a163606c68a45a6dcb80f620c9',1,'AgoraChat.Group.BlockList()'],['../class_agora_chat_1_1_room.html#a8e76d5bba1f783a60c49a1a46de7cb68',1,'AgoraChat.Room.BlockList()']]]
 ];

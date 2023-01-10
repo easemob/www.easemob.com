@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['filesize_0',['FileSize',['../class_chat_s_d_k_1_1_message_body_1_1_file_body.html#a8330fc6a0071f07eec937fe020399f7f',1,'ChatSDK::MessageBody::FileBody']]],
-  ['from_1',['From',['../class_chat_s_d_k_1_1_message.html#a5bb7306d57c1b6817c8f6f08a849ef78',1,'ChatSDK::Message']]]
+  ['filesize_0',['FileSize',['../class_agora_chat_1_1_message_body_1_1_file_body.html#a0278da9fe26e8dbb024f0871eef034ac',1,'AgoraChat::MessageBody::FileBody']]],
+  ['from_1',['From',['../class_agora_chat_1_1_message.html#a9d354454d3ab0332b24618349062517f',1,'AgoraChat::Message']]]
 ];

@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['textbody_0',['TextBody',['../class_chat_s_d_k_1_1_message_body_1_1_text_body.html#a38ae64dbabd6b211bf894c3aad24a62f',1,'ChatSDK::MessageBody::TextBody']]],
-  ['translatemessage_1',['TranslateMessage',['../class_chat_s_d_k_1_1_i_chat_manager.html#a4dbd226d5332c6163f7c9a410cd08072',1,'ChatSDK::IChatManager']]]
+  ['searchmsgfromdb_0',['SearchMsgFromDB',['../class_agora_chat_1_1_chat_manager.html#a2fdc34f1aa0f1abe52743e9d39440bdc',1,'AgoraChat::ChatManager']]],
+  ['sendconversationreadack_1',['SendConversationReadAck',['../class_agora_chat_1_1_chat_manager.html#a0253a40f83cc6c9805067621e0d7c818',1,'AgoraChat::ChatManager']]],
+  ['sendmessage_2',['SendMessage',['../class_agora_chat_1_1_chat_manager.html#af9f598e16100bebd4b035d8335262e2b',1,'AgoraChat::ChatManager']]],
+  ['sendmessagereadack_3',['SendMessageReadAck',['../class_agora_chat_1_1_chat_manager.html#af9cca4dff53384c723789d3fda294238',1,'AgoraChat::ChatManager']]],
+  ['sendreadackforgroupmessage_4',['SendReadAckForGroupMessage',['../class_agora_chat_1_1_chat_manager.html#a4da90d42232684a08d5e95d8251812b3',1,'AgoraChat::ChatManager']]],
+  ['setattribute_5',['SetAttribute',['../class_agora_chat_1_1_message.html#a68bf990a3120b2209e34f1c022993251',1,'AgoraChat::Message']]],
+  ['subscribepresences_6',['SubscribePresences',['../class_agora_chat_1_1_presence_manager.html#a45d352f595e5f8fcabfaa1a8650cc5a0',1,'AgoraChat::PresenceManager']]]
 ];

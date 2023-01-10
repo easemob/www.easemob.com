@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['member_0',['Member',['../namespace_chat_s_d_k.html#a7d579c793be57c02f64795e231508682a858ba4765e53c712ef672a9570474b1d',1,'ChatSDK.Member()'],['../namespace_chat_s_d_k.html#ad93344bbb0cf5a9e570214bb3288c97ea858ba4765e53c712ef672a9570474b1d',1,'ChatSDK.Member()']]],
-  ['mentiononly_1',['MentionOnly',['../namespace_chat_s_d_k.html#a1f60833baa96e55ac550f37fd1505c0ea50cebc0d499ad8d25d1dba1aefd926a6',1,'ChatSDK']]]
+  ['owner_0',['Owner',['../namespace_agora_chat.html#ad237b6d2eb1d74494a9edf19c66fed61ab6f4a2ec6356bbd56d49f2096bf9d3d3',1,'AgoraChat.Owner()'],['../namespace_agora_chat.html#a2b6f39a7c115fd66eb10ef26f8c9cb76ab6f4a2ec6356bbd56d49f2096bf9d3d3',1,'AgoraChat.Owner()']]]
 ];
