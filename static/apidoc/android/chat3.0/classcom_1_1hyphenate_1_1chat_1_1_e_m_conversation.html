@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.9</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;4.0.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -161,7 +161,7 @@ Public 成员函数</h2></td></tr>
 <p >例如，从会话中获取未读消息数： </p><div class="fragment"><div class="line"><span class="comment">// conversationId 可以为聊天的另一方 ID，群组 ID 或者聊天室 ID。</span></div>
 <div class="line">EMConversation conversation = EMClient.getInstance().chatManager().getConversation(<a class="code hl_function" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43">conversationId</a>);</div>
 <div class="line"><span class="keywordtype">int</span> unread = conversation.getUnreadMsgCount();</div>
-<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_conversation_html_a0f576d0db622fd389c56b6b0fa53fa43"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43">com.hyphenate.chat.EMConversation.conversationId</a></div><div class="ttdeci">String conversationId()</div><div class="ttdef"><b>Definition:</b> EMConversation.java:180</div></div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_conversation_html_a0f576d0db622fd389c56b6b0fa53fa43"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43">com.hyphenate.chat.EMConversation.conversationId</a></div><div class="ttdeci">String conversationId()</div><div class="ttdef"><b>Definition:</b> EMConversation.java:179</div></div>
 </div><!-- fragment --> <dl class="section version"><dt>版本</dt><dd>3.0 </dd></dl>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a70be686d1827304f25835b57cfda5d8a" name="a70be686d1827304f25835b57cfda5d8a"></a>
@@ -849,7 +849,7 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">keywords</td><td>搜索的关键词。 </td></tr>
     <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 如果该参数设置为负数，SDK 从当前时间开始搜索。 </td></tr>
     <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
-    <tr><td class="paramname">from</td><td>搜索来自指定用户或者群组的消息，一般为会话 ID。 </td></tr>
+    <tr><td class="paramname">from</td><td>单聊或群聊中的消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，SDK 将在整个会话中搜索消息。 </td></tr>
     <tr><td class="paramname">direction</td><td>消息加载方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a>。 </td></tr>
   </table>
   </dd>
@@ -907,7 +907,7 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">type</td><td>消息类型。详见 <a class="el" href="">Type</a>。 </td></tr>
     <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 </td></tr>
     <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
-    <tr><td class="paramname">from</td><td>搜索来自指定用户或者群组的消息，一般为会话 ID。 </td></tr>
+    <tr><td class="paramname">from</td><td>单聊或群聊中的消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，SDK 将在整个会话中搜索消息。 </td></tr>
     <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a>。<ul>
 <li><code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
 <li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>
@@ -1065,7 +1065,7 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">keywords</td><td>查询的关键字。 </td></tr>
     <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 如果该参数设置为负数，SDK 从当前时间开始搜索。 </td></tr>
     <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
-    <tr><td class="paramname">from</td><td>搜索来自指定用户或者群组的消息，一般为会话 ID。 </td></tr>
+    <tr><td class="paramname">from</td><td>单聊或群聊中的消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，SDK 将在整个会话中搜索消息。 </td></tr>
     <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a>。<ul>
 <li><code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
 <li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>
