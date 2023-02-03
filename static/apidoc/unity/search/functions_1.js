@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['blockgroup_0',['BlockGroup',['../class_chat_s_d_k_1_1_i_group_manager.html#a444396150453693265884d24b60d0c70',1,'ChatSDK::IGroupManager']]],
-  ['blockgroupmembers_1',['BlockGroupMembers',['../class_chat_s_d_k_1_1_i_group_manager.html#ad71fdd2c26c42347c7714414729a7740',1,'ChatSDK::IGroupManager']]],
-  ['blockroommembers_2',['BlockRoomMembers',['../class_chat_s_d_k_1_1_i_room_manager.html#a6173a9f6eaa1b0406f48ff11046c3d2a',1,'ChatSDK::IRoomManager']]]
+  ['blockgroup_0',['BlockGroup',['../class_agora_chat_1_1_group_manager.html#a63fa55e7c57831fa54d5e8e716cfabb5',1,'AgoraChat::GroupManager']]],
+  ['blockgroupmembers_1',['BlockGroupMembers',['../class_agora_chat_1_1_group_manager.html#a4a724345647afadb39f43aa1724e77db',1,'AgoraChat::GroupManager']]],
+  ['blockroommembers_2',['BlockRoomMembers',['../class_agora_chat_1_1_room_manager.html#a02097b33464e047003d5b6de0e3088d3',1,'AgoraChat::RoomManager']]]
 ];

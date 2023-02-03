@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['email_0',['email',['../class_chat_s_d_k_1_1_user_info.html#acf6f6e8489fc36bb24a0efc442890807',1,'ChatSDK::UserInfo']]],
-  ['email_1',['EMAIL',['../namespace_chat_s_d_k.html#aa90ecb15684d863fa25d0b3e84b241fca61a649a33f2869e5e35fbb7aff3a80d9',1,'ChatSDK']]],
-  ['enablednsconfig_2',['EnableDNSConfig',['../class_chat_s_d_k_1_1_options.html#a389a1f1550f6778d15f49cc07050cbc8',1,'ChatSDK::Options']]],
-  ['error_3',['Error',['../class_chat_s_d_k_1_1_error.html',1,'ChatSDK.Error'],['../class_chat_s_d_k_1_1_call_back.html#a80ba70db6b5c74ead2416b3e343da428',1,'ChatSDK.CallBack.Error()']]],
-  ['expirytime_4',['ExpiryTime',['../class_chat_s_d_k_1_1_presence.html#ad5392f93dc72dc826b09d93e57f1116a',1,'ChatSDK::Presence']]],
-  ['ext_5',['ext',['../class_chat_s_d_k_1_1_user_info.html#a135ecac4ca91b873c5cf9c443cc23859',1,'ChatSDK::UserInfo']]],
-  ['ext_6',['Ext',['../class_chat_s_d_k_1_1_conversation.html#a2063bb4561b5669843e052fff1fb5283',1,'ChatSDK.Conversation.Ext()'],['../class_chat_s_d_k_1_1_group_options.html#a9bde581272f7fd171a77cf79382c633d',1,'ChatSDK.GroupOptions.Ext()']]],
-  ['ext_7',['EXT',['../namespace_chat_s_d_k.html#aa90ecb15684d863fa25d0b3e84b241fcaefd472d9664cd3e8c9e924f35e3f6c88',1,'ChatSDK']]]
+  ['email_0',['Email',['../class_agora_chat_1_1_user_info.html#a677d160a3af115aed1d044ee7332b303',1,'AgoraChat::UserInfo']]],
+  ['enablednsconfig_1',['EnableDNSConfig',['../class_agora_chat_1_1_options.html#ae3259f9d061929ec9e1cde14916355e5',1,'AgoraChat::Options']]],
+  ['error_2',['Error',['../class_agora_chat_1_1_error.html',1,'AgoraChat.Error'],['../class_agora_chat_1_1_call_back.html#a7b207f3ecb7978f2526a8bf43dbd69df',1,'AgoraChat.CallBack.Error()']]],
+  ['expirytime_3',['ExpiryTime',['../class_agora_chat_1_1_presence.html#a5a3f1bd73ef3ede58f55bd65efa5e387',1,'AgoraChat::Presence']]],
+  ['ext_4',['Ext',['../class_agora_chat_1_1_conversation.html#a1c79f00e54bce4763a0e65441b82a5bb',1,'AgoraChat.Conversation.Ext()'],['../class_agora_chat_1_1_group.html#ad78bb2e86eed925f55187cd24609d92b',1,'AgoraChat.Group.Ext()'],['../class_agora_chat_1_1_group_options.html#a4d162e297cbb29bafed47a72a0de1ca8',1,'AgoraChat.GroupOptions.Ext()'],['../class_agora_chat_1_1_user_info.html#a0e8123db6b018c444980a390a185fb14',1,'AgoraChat.UserInfo.Ext()']]]
 ];

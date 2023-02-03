@@ -1,12 +1,16 @@
 var searchData=
 [
-  ['markallconversationsasread_0',['MarkAllConversationsAsRead',['../class_chat_s_d_k_1_1_i_chat_manager.html#ad28f6809a6fec8cae4846df4b3abf679',1,'ChatSDK::IChatManager']]],
-  ['markallmessageasread_1',['MarkAllMessageAsRead',['../class_chat_s_d_k_1_1_conversation.html#ac84a04ade3666db24fc2310c7b475a0f',1,'ChatSDK::Conversation']]],
-  ['markmessageasread_2',['MarkMessageAsRead',['../class_chat_s_d_k_1_1_conversation.html#a2220fc9c5160aa126a8490ba4a72cb10',1,'ChatSDK::Conversation']]],
-  ['messagereactiondidchange_3',['MessageReactionDidChange',['../interface_chat_s_d_k_1_1_i_chat_manager_delegate.html#a9e64f102abde71fdaad02e6b2df5cc70',1,'ChatSDK::IChatManagerDelegate']]],
-  ['messagescount_4',['MessagesCount',['../class_chat_s_d_k_1_1_conversation.html#ae22abdfffb75dcab49821ba406dd7528',1,'ChatSDK::Conversation']]],
-  ['muteallroommembers_5',['MuteAllRoomMembers',['../class_chat_s_d_k_1_1_i_room_manager.html#a24f98215ed88b15818b774864f657d89',1,'ChatSDK::IRoomManager']]],
-  ['mutegroupallmembers_6',['MuteGroupAllMembers',['../class_chat_s_d_k_1_1_i_group_manager.html#a8c5078f00d6514ab995d251e06b00716',1,'ChatSDK::IGroupManager']]],
-  ['mutegroupmembers_7',['MuteGroupMembers',['../class_chat_s_d_k_1_1_i_group_manager.html#ae85a9b3d10063b991ae489c301de3c14',1,'ChatSDK::IGroupManager']]],
-  ['muteroommembers_8',['MuteRoomMembers',['../class_chat_s_d_k_1_1_i_room_manager.html#adc14ae1d355e0b99c3e6a6443beda274',1,'ChatSDK::IRoomManager']]]
+  ['leavegroup_0',['LeaveGroup',['../class_agora_chat_1_1_group_manager.html#a43e775ab4c7cd3d3df50d969695c86b6',1,'AgoraChat::GroupManager']]],
+  ['leaveroom_1',['LeaveRoom',['../class_agora_chat_1_1_room_manager.html#aac1cb6b779e6111d32aa3b18549c3767',1,'AgoraChat::RoomManager']]],
+  ['leavethread_2',['LeaveThread',['../class_agora_chat_1_1_chat_thread_manager.html#ae1ec5c38e466499b45761129a9325d9e',1,'AgoraChat::ChatThreadManager']]],
+  ['loadallconversations_3',['LoadAllConversations',['../class_agora_chat_1_1_chat_manager.html#ad642bb7b0ff01b41f1f1c2951109593b',1,'AgoraChat::ChatManager']]],
+  ['loadmessage_4',['LoadMessage',['../class_agora_chat_1_1_chat_manager.html#aa5bb1a2cbeb7206aca8766ec18ba9261',1,'AgoraChat.ChatManager.LoadMessage()'],['../class_agora_chat_1_1_conversation.html#aef05c210556e77af8d62ea4e935d6567',1,'AgoraChat.Conversation.LoadMessage(string messageId)']]],
+  ['loadmessages_5',['LoadMessages',['../class_agora_chat_1_1_conversation.html#a354260d7b1eaa460c4b0b79df2c78d32',1,'AgoraChat::Conversation']]],
+  ['loadmessageswithkeyword_6',['LoadMessagesWithKeyword',['../class_agora_chat_1_1_conversation.html#a7de617098b4dbb8387e9db84b853b1d6',1,'AgoraChat::Conversation']]],
+  ['loadmessageswithmsgtype_7',['LoadMessagesWithMsgType',['../class_agora_chat_1_1_conversation.html#ac4f9f2ae3b89b2be2a1733472ad81573',1,'AgoraChat::Conversation']]],
+  ['loadmessageswithtime_8',['LoadMessagesWithTime',['../class_agora_chat_1_1_conversation.html#af332546d9b72fba10b9c0bb678b1bf73',1,'AgoraChat::Conversation']]],
+  ['locationbody_9',['LocationBody',['../class_agora_chat_1_1_message_body_1_1_location_body.html#a351b3f8e88026be6f9af2a0d6840dfb1',1,'AgoraChat::MessageBody::LocationBody']]],
+  ['login_10',['Login',['../class_agora_chat_1_1_s_d_k_client.html#a8c981ed00939c299fe475a8a7af17d7e',1,'AgoraChat::SDKClient']]],
+  ['loginwithagoratoken_11',['LoginWithAgoraToken',['../class_agora_chat_1_1_s_d_k_client.html#a66ed705ea3ab6e9af1c410393f297ac0',1,'AgoraChat::SDKClient']]],
+  ['logout_12',['Logout',['../class_agora_chat_1_1_s_d_k_client.html#a98b67e590dbe9f6253449df9e82dd0c8',1,'AgoraChat::SDKClient']]]
 ];

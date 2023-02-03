@@ -52,8 +52,10 @@
       
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMGroup-class.html">EMGroup</a></span>&gt;</span></span>&gt;</span></span>
-<span class="name ">fetchJoinedGroupsFromServer</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fetchJoinedGroupsFromServer-param-pageSize">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageSize</span> = <span class="default-value">200</span>, </span></li>
-<li><span class="parameter" id="fetchJoinedGroupsFromServer-param-pageNum"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageNum</span> = <span class="default-value">1</span>}</span></li>
+<span class="name ">fetchJoinedGroupsFromServer</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fetchJoinedGroupsFromServer-param-pageSize">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageSize</span> = <span class="default-value">20</span>, </span></li>
+<li><span class="parameter" id="fetchJoinedGroupsFromServer-param-pageNum"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageNum</span> = <span class="default-value">0</span>, </span></li>
+<li><span class="parameter" id="fetchJoinedGroupsFromServer-param-needMemberCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">needMemberCount</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="fetchJoinedGroupsFromServer-param-needRole"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">needRole</span> = <span class="default-value">false</span>}</span></li>
 </ol>)
 
       
@@ -72,10 +74,17 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">Future&lt;List&lt;EMGroup&gt;&gt; fetchJoinedGroupsFromServer({
-  int pageSize = 200,
-  int pageNum = 1,
+  int pageSize = 20,
+  int pageNum = 0,
+  bool needMemberCount = false,
+  bool needRole = false,
 }) async {
-  Map req = {&#39;pageSize&#39;: pageSize, &#39;pageNum&#39;: pageNum};
+  Map req = {
+    &#39;pageSize&#39;: pageSize,
+    &#39;pageNum&#39;: pageNum,
+    &quot;needMemberCount&quot;: needMemberCount,
+    &quot;needRole&quot;: needRole,
+  };
   Map result = await _channel.invokeMethod(
       ChatMethodKeys.getJoinedGroupsFromServer, req);
   try {
@@ -190,7 +199,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.5
+      3.9.9
   </span>
 
   

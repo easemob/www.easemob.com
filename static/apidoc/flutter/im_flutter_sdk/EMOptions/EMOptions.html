@@ -67,7 +67,8 @@
 <li><span class="parameter" id="-param-dnsUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dnsUrl</span>, </span></li>
 <li><span class="parameter" id="-param-restServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">restServer</span>, </span></li>
 <li><span class="parameter" id="-param-imPort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">imPort</span>, </span></li>
-<li><span class="parameter" id="-param-imServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">imServer</span>}</span></li>
+<li><span class="parameter" id="-param-imServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">imServer</span>, </span></li>
+<li><span class="parameter" id="-param-areaCode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">areaCode</span> = <span class="default-value">AreaCode.GLOB</span>}</span></li>
 </ol>)
     </section>
 
@@ -149,13 +150,81 @@
 <p>Param <a href="../../im_flutter_sdk/EMOptions/restServer.html">restServer</a> 私有部署时的 REST 服务器地址。</p>
 <p>Param <a href="../../im_flutter_sdk/EMOptions/imPort.html">imPort</a> 私有部署时的 IM 服务器端口。</p>
 <p>Param <a href="../../im_flutter_sdk/EMOptions/imServer.html">imServer</a> 私有部署时的 IM 服务器地址。</p>
+<p>Param <a href="../../im_flutter_sdk/EMOptions/areaCode.html">areaCode</a> 设置链接区域，默认是AreaCodeGLOB。</p>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">EMOptions({
+  <pre class="language-dart"><code class="language-dart">&#47;&#47;&#47; Param [appKey] 创建 app 时在 console 后台上注册的 app 唯一识别符。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [autoLogin] 是否开启自动登录。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [debugModel] 是否输出调试信息，在 EMClient 初始化完成后调用，详见 {@link #init(Context, EMOptions)}。
+&#47;&#47;&#47; - `true`：SDK 会在 log 里输出调试信息；
+&#47;&#47;&#47; - （默认）`false`：不会输出调试信息。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [acceptInvitationAlways] 是否自动接受加好友邀请。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [autoAcceptGroupInvitation] 是否自动接受群组邀请。
+&#47;&#47;&#47; - `true`：是；
+&#47;&#47;&#47; - （默认）`false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [requireAck] 是否发送已读回执。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [requireDeliveryAck] 是否发送已送达回执。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [deleteMessagesAsExitGroup] 是否在离开群组时删除群组历史消息。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [deleteMessagesAsExitChatRoom] 是否在离开聊天室时删除聊天历史消息。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [isChatRoomOwnerLeaveAllowed] 是否允许聊天室所有者离开聊天室。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [sortMessageByServerTime] 是否根据服务器收到消息的时间对消息进行排序。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [usingHttpsOnly] 是否只使用 HTTPS。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [serverTransfer] 是否自动将消息附件上传到聊天服务器。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [isAutoDownloadThumbnail] 是否自动下载缩略图。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [enableDNSConfig] 设置是否开启 DNS。
+&#47;&#47;&#47; - （默认）`true`：是；
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [dnsUrl] DNS 地址。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [restServer] 私有部署时的 REST 服务器地址。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [imPort] 私有部署时的 IM 服务器端口。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [imServer] 私有部署时的 IM 服务器地址。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [areaCode] 设置链接区域，默认是AreaCodeGLOB。
+EMOptions({
   required this.appKey,
   this.autoLogin = true,
   this.debugModel = false,
@@ -175,6 +244,7 @@
   this.restServer,
   this.imPort,
   this.imServer,
+  this.areaCode = AreaCode.GLOB,
 });</code></pre>
 </section>
 
@@ -208,6 +278,7 @@
     </li>
     <li><a href="../../im_flutter_sdk/EMOptions/acceptInvitationAlways.html">acceptInvitationAlways</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions/appKey.html">appKey</a></li>
+    <li><a href="../../im_flutter_sdk/EMOptions/areaCode.html">areaCode</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions/autoAcceptGroupInvitation.html">autoAcceptGroupInvitation</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions/autoLogin.html">autoLogin</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions/debugModel.html">debugModel</a></li>
@@ -232,6 +303,7 @@
     <li><a href="../../im_flutter_sdk/EMOptions/enableAPNs.html">enableAPNs</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions/enableFCM.html">enableFCM</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions/enableHWPush.html">enableHWPush</a></li>
+    <li><a href="../../im_flutter_sdk/EMOptions/enableMeiZuPush.html">enableMeiZuPush</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions/enableMiPush.html">enableMiPush</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions/enableOppoPush.html">enableOppoPush</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions/enableVivoPush.html">enableVivoPush</a></li>
@@ -256,7 +328,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.5
+      3.9.9
   </span>
 
   

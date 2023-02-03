@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['reactionlist_0',['ReactionList',['../class_chat_s_d_k_1_1_message.html#afc8cfd0df255a338378c3756f88bcb30',1,'ChatSDK::Message']]],
-  ['resource_1',['Resource',['../class_chat_s_d_k_1_1_device_info.html#a1ac88145b7a23cbe5cb2d87d2aecef5b',1,'ChatSDK::DeviceInfo']]],
-  ['roomid_2',['RoomId',['../class_chat_s_d_k_1_1_room.html#aff22c5a11804ae2c82ef99c769624e83',1,'ChatSDK::Room']]],
-  ['roommanager_3',['RoomManager',['../class_chat_s_d_k_1_1_s_d_k_client.html#a6ecf15493dfa2fbef93f946f0c690309',1,'ChatSDK::SDKClient']]]
+  ['resource_0',['Resource',['../class_agora_chat_1_1_device_info.html#a0dc613a9a6933610b7ec1b3650d2897d',1,'AgoraChat::DeviceInfo']]],
+  ['roomid_1',['RoomId',['../class_agora_chat_1_1_room.html#a4d6ec54428e0f4a0fdc0fa36e5e3cd6d',1,'AgoraChat::Room']]],
+  ['roommanager_2',['RoomManager',['../class_agora_chat_1_1_s_d_k_client.html#a573e067d20c24951ee97b801102dc0e2',1,'AgoraChat::SDKClient']]]
 ];
