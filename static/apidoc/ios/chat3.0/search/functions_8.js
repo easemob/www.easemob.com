@@ -18,8 +18,9 @@ var searchData=
   ['initwithlocalpath_3adisplayname_3a_15',['initWithLocalPath:displayName:',['../interface_e_m_file_message_body.html#a68a80450a57a84f021f3511f8c7f816b',1,'EMFileMessageBody']]],
   ['initwithtext_3a_16',['initWithText:',['../interface_e_m_text_message_body.html#a2027db773e47672d6a0be1c960181f69',1,'EMTextMessageBody']]],
   ['insertmessage_3aerror_3a_17',['insertMessage:error:',['../interface_e_m_conversation.html#a61c633ede303968a9d66661be6c6dd6e',1,'EMConversation']]],
-  ['ismemberinwhitelistfromserverwithchatroomid_3acompletion_3a_18',['isMemberInWhiteListFromServerWithChatroomId:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a6575c5e7ee5272420b2d50ceffe9092c',1,'IEMChatroomManager-p']]],
-  ['ismemberinwhitelistfromserverwithchatroomid_3aerror_3a_19',['isMemberInWhiteListFromServerWithChatroomId:error:',['../protocol_i_e_m_chatroom_manager-p.html#ac55911468a25a6b9fdc971b770dfa8ed',1,'IEMChatroomManager-p']]],
-  ['ismemberinwhitelistfromserverwithgroupid_3acompletion_3a_20',['isMemberInWhiteListFromServerWithGroupId:completion:',['../protocol_i_e_m_group_manager-p.html#a939b632150e3d8bf0a71ee804cd521ea',1,'IEMGroupManager-p']]],
-  ['ismemberinwhitelistfromserverwithgroupid_3aerror_3a_21',['isMemberInWhiteListFromServerWithGroupId:error:',['../protocol_i_e_m_group_manager-p.html#ab30fd4b303a77ab79bf7498b9a7e3b83',1,'IEMGroupManager-p']]]
+  ['ismemberinmutelistfromserverwithchatroomid_3acompletion_3a_18',['isMemberInMuteListFromServerWithChatroomId:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a2ac05d39ca48c03687c97ddd3f1ca657',1,'IEMChatroomManager-p']]],
+  ['ismemberinwhitelistfromserverwithchatroomid_3acompletion_3a_19',['isMemberInWhiteListFromServerWithChatroomId:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a6575c5e7ee5272420b2d50ceffe9092c',1,'IEMChatroomManager-p']]],
+  ['ismemberinwhitelistfromserverwithchatroomid_3aerror_3a_20',['isMemberInWhiteListFromServerWithChatroomId:error:',['../protocol_i_e_m_chatroom_manager-p.html#ac55911468a25a6b9fdc971b770dfa8ed',1,'IEMChatroomManager-p']]],
+  ['ismemberinwhitelistfromserverwithgroupid_3acompletion_3a_21',['isMemberInWhiteListFromServerWithGroupId:completion:',['../protocol_i_e_m_group_manager-p.html#a939b632150e3d8bf0a71ee804cd521ea',1,'IEMGroupManager-p']]],
+  ['ismemberinwhitelistfromserverwithgroupid_3aerror_3a_22',['isMemberInWhiteListFromServerWithGroupId:error:',['../protocol_i_e_m_group_manager-p.html#ab30fd4b303a77ab79bf7498b9a7e3b83',1,'IEMGroupManager-p']]]
 ];
