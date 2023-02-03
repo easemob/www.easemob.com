@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;3.9.9</span>
+   <div id="projectname">hyphenate_SDK3.0<span id="projectnumber">&#160;4.0.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -173,6 +173,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a35f14aac09be4365b70c9619c2d7fe21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b13a309c8833c45378506f55d0282c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a8b13a309c8833c45378506f55d0282c9">checkIfInChatRoomWhiteList</a> (final String chatRoomId, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; Boolean &gt; callBack)</td></tr>
 <tr class="separator:a8b13a309c8833c45378506f55d0282c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fbe13696cea47a6a5b8e83a4774ced9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a2fbe13696cea47a6a5b8e83a4774ced9">asyncCheckIfInMuteList</a> (final String chatRoomId, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; Boolean &gt; callBack)</td></tr>
+<tr class="separator:a2fbe13696cea47a6a5b8e83a4774ced9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4984651879287a70f364b5617079c2a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a4984651879287a70f364b5617079c2a5">fetchChatRoomWhiteList</a> (final String chatRoomId, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; List&lt; String &gt; &gt; callBack)</td></tr>
 <tr class="separator:a4984651879287a70f364b5617079c2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1da9ddb7b1c417d10d82ab6271ad17cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a1da9ddb7b1c417d10d82ab6271ad17cd">muteAllMembers</a> (final String chatRoomId, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html">EMChatRoom</a> &gt; callBack)</td></tr>
@@ -259,7 +261,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回修改后的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -567,6 +569,43 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
     <tr><td class="paramname">newOwner</td><td>聊天室的新所有者。 </td></tr>
     <tr><td class="paramname">callBack</td><td>结果回调，成功时回调 <a class="el" href="">EMValueCallBack#onSuccess(Object)</a>， 失败时回调 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a>。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2fbe13696cea47a6a5b8e83a4774ced9" name="a2fbe13696cea47a6a5b8e83a4774ced9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fbe13696cea47a6a5b8e83a4774ced9">&#9670;&nbsp;</a></span>asyncCheckIfInMuteList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMChatRoomManager.asyncCheckIfInMuteList </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>chatRoomId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; Boolean &gt;&#160;</td>
+          <td class="paramname"><em>callBack</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >检查成员自己是否被禁言。</p>
+<p >异步方法。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">callBack</td><td>结果回调，成功时回调 <a class="el" href="">EMValueCallBack#onSuccess(Object)</a>，返回是否被禁言中； 失败时回调 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1840,7 +1879,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回修改后的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1886,7 +1925,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>修改后的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见<a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1932,7 +1971,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回修改后的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1978,7 +2017,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回修改后的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2081,7 +2120,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html">EMChatRoom</a> 创建成功的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2115,7 +2154,7 @@ Public 成员函数</h2></td></tr>
 </dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2202,7 +2241,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回聊天室黑名单列表。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2237,7 +2276,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html">EMChatRoom</a> 返回聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，错误码详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，错误码详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2282,7 +2321,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html">EMChatRoom</a> 返回的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2335,7 +2374,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>聊天室成员列表和用于下次获取的 cursor。详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_cursor_result.html">EMCursorResult</a>。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2388,7 +2427,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回的包含禁言成员 ID 及其禁言时长的 Map，其中每一项的 key 是禁言的成员 ID，value 是禁言时长，单位是毫秒。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2471,7 +2510,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>分页获取结果 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_page_result.html">EMPageResult</a>。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2517,7 +2556,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>分页获取结果 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_cursor_result.html">EMCursorResult</a>。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2724,7 +2763,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回修改后的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2770,7 +2809,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回修改后的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2869,7 +2908,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回修改后的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2961,7 +3000,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回修改后的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -3045,7 +3084,7 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>返回修改后的聊天室对象。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">com.hyphenate.EMError</a>。 </td></tr>
+    <tr><td class="paramname">HyphenateException</td><td>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
   </table>
   </dd>
 </dl>
