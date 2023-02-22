@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="generator" content="made with love by dartdoc 5.1.2">
+  <meta name="generator" content="made with love by dartdoc 6.1.5">
   <meta name="description" content="im_flutter_sdk API docs, for the Dart programming language.">
   <title>im_flutter_sdk - Dart API docs</title>
 
@@ -12,7 +12,7 @@
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
   
   <link rel="stylesheet" href="static-assets/github.css?v1">
   <link rel="stylesheet" href="static-assets/styles.css?v1">
@@ -22,12 +22,12 @@
 </head>
 
 
-<body data-base-href="" data-using-base-href="false">
+<body data-base-href="" data-using-base-href="false" class="light-theme">
 
 <div id="overlay-under-drawer"></div>
 
 <header id="title">
-  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="https://www.easemob.com/product/im">im_flutter_sdk package</a></li>
   </ol>
@@ -35,10 +35,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
 </header>
-
 <main>
-
 
   <div id="dartdoc-main-content" class="main-content">
       
@@ -319,22 +325,33 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
       targetId: _chatId,
       content: _messageContent,
     );
-    msg.setMessageStatusCallBack(MessageStatusCallBack(
-      onSuccess: () {
-        _addLogToConsole("send message succeed");
-      },
-      onError: (e) {
-        _addLogToConsole(
-          "send message failed, code: ${e.code}, desc: ${e.description}",
-        );
-      },
-    ));
+
     EMClient.getInstance.chatManager.sendMessage(msg);
   }
 </code></pre>
 <h3 id="-9">添加收消息监听</h3>
 <p>在 <code>_addChatListener</code> 方法中添加代码。</p>
 <pre class="language-dart"><code class="language-dart">void _addChatListener() {
+
+  // 添加消息状态变更监听
+  EMClient.getInstance.chatManager.addMessageEvent(
+      // ChatMessageEvent 对应的 key。
+        "UNIQUE_HANDLER_ID",
+        ChatMessageEvent(
+          onSuccess: (msgId, msg) {
+            _addLogToConsole("send message succeed");
+          },
+          onProgress: (msgId, progress) {
+            _addLogToConsole("send message succeed");
+          },
+          onError: (msgId, msg, error) {
+            _addLogToConsole(
+              "send message failed, code: ${error.code}, desc: ${error.description}",
+            );
+          },
+        ));
+
+  // 添加收消息监听
   EMClient.getInstance.chatManager.addEventHandler(
     // EMChatEventHandle 对应的 key。
     "UNIQUE_HANDLER_ID",
@@ -394,7 +411,7 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
               break;
             case MessageType.CMD:
               {
-                // 当前回调中不会有 CMD 类型消息，CMD 类型消息通过 `EMChatEventHandler#onCmdMessagesReceived` 回调接收
+                // 当前回调中不会有 CMD 类型消息，CMD 类型消息通过 [EMChatEventHandler.onCmdMessagesReceived] 回调接收
               }
               break;
           }
@@ -408,6 +425,7 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 <p>在 <code>dispose</code> 方法中添加代码移除监听：</p>
 <pre class="language-dart"><code class="language-dart">@override
 void dispose() {
+  EMClient.getInstance.chatManager.removeMessageEvent("UNIQUE_HANDLER_ID");
   EMClient.getInstance.chatManager.removeEventHandler("UNIQUE_HANDLER_ID");
   super.dispose();
 }
@@ -462,7 +480,7 @@ void dispose() {
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.9
+      4.0.0
   </span>
 
   
