@@ -16,7 +16,7 @@ var searchData=
   ['isdeletemessagesasexitchatroom_13',['isDeleteMessagesAsExitChatRoom',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#afdfb24fa7dc651e4e8510785b9a73db8',1,'com::hyphenate::chat::EMOptions']]],
   ['isdeletemessagesasexitgroup_14',['isDeleteMessagesAsExitGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aff62ff3e07a0f9bb49e126b708d35655',1,'com::hyphenate::chat::EMOptions']]],
   ['isdelivered_15',['isDelivered',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#afed061098bc21cccb66cb8cf49d04521',1,'com::hyphenate::chat::EMMessage']]],
-  ['isdeliveronlineonly_16',['isDeliverOnlineOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_cmd_message_body.html#a690ca0aa64827a3ae07b2f16908f8fba',1,'com::hyphenate::chat::EMCmdMessageBody']]],
+  ['isdeliveronlineonly_16',['isDeliverOnlineOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_cmd_message_body.html#a690ca0aa64827a3ae07b2f16908f8fba',1,'com.hyphenate.chat.EMCmdMessageBody.isDeliverOnlineOnly()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ad6cbc1f58145f8506f63ec971c67c7b8',1,'com.hyphenate.chat.EMMessage.isDeliverOnlineOnly()']]],
   ['isdisabled_17',['isDisabled',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#acd072d7fc16e6ff89110173979ed318b',1,'com::hyphenate::chat::EMGroup']]],
   ['isenablestatistics_18',['isEnableStatistics',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a684c2b3058a2eb5a64e268f204e86f70',1,'com::hyphenate::chat::EMOptions']]],
   ['isfcmavailable_19',['isFCMAvailable',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#ac8c45f1fc1e59179555edc447d7c65fd',1,'com::hyphenate::chat::EMClient']]],
