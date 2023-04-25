@@ -28,6 +28,5 @@ var searchData=
   ['translatedtext_25',['translatedText',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_result.html#ac8603e4382666b7af4c5a082ade660e7',1,'com::hyphenate::chat::EMTranslationResult']]],
   ['translatemessage_26',['translateMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a874391f4ece875fb70893df5b77abb3d',1,'com::hyphenate::chat::EMChatManager']]],
   ['txt_27',['TXT',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#af46942dc98601c6c9e59c8ecd861a5c7',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.TXT()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a0157bc665bb470f9893a03e7adcf3125',1,'com.hyphenate.chat.EMMessage.Type.TXT()']]],
-  ['type_28',['TYPE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_chat_thread_event_1_1_t_y_p_e.html',1,'com::hyphenate::chat::EMChatThreadEvent']]],
-  ['type_29',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html',1,'com::hyphenate::chat::EMMessage']]]
+  ['type_28',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html',1,'com::hyphenate::chat::EMMessage']]]
 ];
