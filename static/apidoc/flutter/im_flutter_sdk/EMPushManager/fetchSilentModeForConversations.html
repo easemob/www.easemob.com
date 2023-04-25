@@ -11,7 +11,7 @@
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
   
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
@@ -21,12 +21,12 @@
 </head>
 
 
-<body data-base-href="../../" data-using-base-href="false">
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
 
 <div id="overlay-under-drawer"></div>
 
 <header id="title">
-  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
@@ -37,10 +37,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
 </header>
-
 <main>
-
 
   <div id="dartdoc-main-content" class="main-content">
       <div>
@@ -60,10 +66,9 @@
     </section>
     
 <section class="desc markdown">
-  <p>获取多个会话免打扰数据设置。</p>
-<p>注意：一次最多20条数据。如果没设置过或者设置失效，则结果Map中不会返回该条数据。</p>
-<p>Param <code>conversations</code>  会话数组。</p>
-<p><strong>Return</strong> 获取结果。</p>
+  <p>批量获取指定会话的免打扰设置。</p>
+<p>Param <code>conversations</code> 会话列表。</p>
+<p><strong>Return</strong> 键为会话id，值为免打扰设置。</p>
 <p><strong>Throws</strong> 如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
 </section>
 
@@ -125,34 +130,37 @@
           <li><a href="../../im_flutter_sdk/EMPushManager/EMPushManager.html">EMPushManager</a></li>
 
 
-    <li class="section-title inherited">
-      <a href="../../im_flutter_sdk/EMPushManager-class.html#instance-properties">Properties</a>
-    </li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+        <li class="section-title inherited">
+          <a href="../../im_flutter_sdk/EMPushManager-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
 
-    <li class="section-title"><a href="../../im_flutter_sdk/EMPushManager-class.html#instance-methods">Methods</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/fetchConversationSilentMode.html">fetchConversationSilentMode</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/fetchPreferredNotificationLanguage.html">fetchPreferredNotificationLanguage</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/fetchPushConfigsFromServer.html">fetchPushConfigsFromServer</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/fetchSilentModeForAll.html">fetchSilentModeForAll</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/fetchSilentModeForConversations.html">fetchSilentModeForConversations</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/getPushTemplate.html">getPushTemplate</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/removeConversationSilentMode.html">removeConversationSilentMode</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/setConversationSilentMode.html">setConversationSilentMode</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/setPreferredNotificationLanguage.html">setPreferredNotificationLanguage</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/setPushTemplate.html">setPushTemplate</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/setSilentModeForAll.html">setSilentModeForAll</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/updateAPNsDeviceToken.html">updateAPNsDeviceToken</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/updateFCMPushToken.html">updateFCMPushToken</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/updateHMSPushToken.html">updateHMSPushToken</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/updatePushDisplayStyle.html">updatePushDisplayStyle</a></li>
-    <li><a href="../../im_flutter_sdk/EMPushManager/updatePushNickname.html">updatePushNickname</a></li>
+        <li class="section-title"><a href="../../im_flutter_sdk/EMPushManager-class.html#instance-methods">Methods</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/fetchConversationSilentMode.html">fetchConversationSilentMode</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/fetchPreferredNotificationLanguage.html">fetchPreferredNotificationLanguage</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/fetchPushConfigsFromServer.html">fetchPushConfigsFromServer</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/fetchSilentModeForAll.html">fetchSilentModeForAll</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/fetchSilentModeForConversations.html">fetchSilentModeForConversations</a></li>
+          <li><a class="deprecated" href="../../im_flutter_sdk/EMPushManager/getNoPushUsersFromCache.html">getNoPushUsersFromCache</a></li>
+          <li><a class="deprecated" href="../../im_flutter_sdk/EMPushManager/getPushConfigsFromCache.html">getPushConfigsFromCache</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/getPushTemplate.html">getPushTemplate</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/removeConversationSilentMode.html">removeConversationSilentMode</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/setConversationSilentMode.html">setConversationSilentMode</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/setPreferredNotificationLanguage.html">setPreferredNotificationLanguage</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/setPushTemplate.html">setPushTemplate</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/setSilentModeForAll.html">setSilentModeForAll</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/updateAPNsDeviceToken.html">updateAPNsDeviceToken</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/updateFCMPushToken.html">updateFCMPushToken</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/updateHMSPushToken.html">updateHMSPushToken</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/updatePushDisplayStyle.html">updatePushDisplayStyle</a></li>
+          <li><a href="../../im_flutter_sdk/EMPushManager/updatePushNickname.html">updatePushNickname</a></li>
+          <li><a class="deprecated" href="../../im_flutter_sdk/EMPushManager/updatePushServiceForGroup.html">updatePushServiceForGroup</a></li>
 
-    <li class="section-title inherited"><a href="../../im_flutter_sdk/EMPushManager-class.html#operators">Operators</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+        <li class="section-title inherited"><a href="../../im_flutter_sdk/EMPushManager-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
 
 
 
@@ -169,7 +177,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.9
+      4.0.0
   </span>
 
   

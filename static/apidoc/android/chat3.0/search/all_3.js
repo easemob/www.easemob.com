@@ -12,7 +12,7 @@ var searchData=
   ['deletemessagesbeforetimestamp_9',['deleteMessagesBeforeTimestamp',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a8563dfd1dc1255acb9244d801c7b8255',1,'com::hyphenate::chat::EMChatManager']]],
   ['deletemessagesonleavechatroom_10',['deleteMessagesOnLeaveChatroom',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ac0e1424893151f1365792108b5a1a1be',1,'com::hyphenate::chat::EMOptions']]],
   ['deletemessagesonleavegroup_11',['deleteMessagesOnLeaveGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a8d03e187af2852f441c0aff39dd8a3f4',1,'com::hyphenate::chat::EMOptions']]],
-  ['deliveronlineonly_12',['deliverOnlineOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_cmd_message_body.html#abc16fb60850ec28f40250aeab3472a3a',1,'com::hyphenate::chat::EMCmdMessageBody']]],
+  ['deliveronlineonly_12',['deliverOnlineOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_cmd_message_body.html#abc16fb60850ec28f40250aeab3472a3a',1,'com.hyphenate.chat.EMCmdMessageBody.deliverOnlineOnly()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a9f025a6d42cd1aff9c96019921ed82c3',1,'com.hyphenate.chat.EMMessage.deliverOnlineOnly()']]],
   ['destroychatroom_13',['destroyChatRoom',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a3fd3cf731688c16383100825bc6ee827',1,'com::hyphenate::chat::EMChatRoomManager']]],
   ['destroychatthread_14',['destroyChatThread',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_thread_manager.html#a5a2ab0d2f7334d81e7216607ed1dd3be',1,'com::hyphenate::chat::EMChatThreadManager']]],
   ['destroygroup_15',['destroyGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a860a34ecd342b1e15d3e6be7e31879be',1,'com::hyphenate::chat::EMGroupManager']]],

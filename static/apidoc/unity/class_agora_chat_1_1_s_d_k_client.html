@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.0.9</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.1.0</span>
    </div>
   </td>
  </tr>
@@ -76,8 +76,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a77b332d22c4a2318a15ea127fa2f66dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a77b332d22c4a2318a15ea127fa2f66dc">InitWithOptions</a> (<a class="el" href="class_agora_chat_1_1_options.html">Options</a> options)</td></tr>
-<tr class="separator:a77b332d22c4a2318a15ea127fa2f66dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab716d5121a18e495f042ad15ca66e79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#aab716d5121a18e495f042ad15ca66e79">InitWithOptions</a> (<a class="el" href="class_agora_chat_1_1_options.html">Options</a> options)</td></tr>
+<tr class="separator:aab716d5121a18e495f042ad15ca66e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad57ac88e25300033bee874601687f685"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#ad57ac88e25300033bee874601687f685">CreateAccount</a> (string username, string password, <a class="el" href="class_agora_chat_1_1_call_back.html">CallBack</a> callback=null)</td></tr>
 <tr class="separator:ad57ac88e25300033bee874601687f685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c981ed00939c299fe475a8a7af17d7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_s_d_k_client.html#a8c981ed00939c299fe475a8a7af17d7e">Login</a> (string username, string pwdOrToken, bool isToken=false, <a class="el" href="class_agora_chat_1_1_call_back.html">CallBack</a> callback=null)</td></tr>
@@ -136,14 +136,14 @@ static <a class="el" href="class_agora_chat_1_1_s_d_k_client.html">SDKClient</a>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >SDK 客户端类是 Chat SDK 的入口，负责登录、登出及管理 SDK 与 chat 服务器之间的连接。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a77b332d22c4a2318a15ea127fa2f66dc" name="a77b332d22c4a2318a15ea127fa2f66dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77b332d22c4a2318a15ea127fa2f66dc">&#9670;&nbsp;</a></span>InitWithOptions()</h2>
+<a id="aab716d5121a18e495f042ad15ca66e79" name="aab716d5121a18e495f042ad15ca66e79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab716d5121a18e495f042ad15ca66e79">&#9670;&nbsp;</a></span>InitWithOptions()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AgoraChat.SDKClient.InitWithOptions </td>
+          <td class="memname">int AgoraChat.SDKClient.InitWithOptions </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_agora_chat_1_1_options.html">Options</a>&#160;</td>
           <td class="paramname"><em>options</em></td><td>)</td>
@@ -155,10 +155,15 @@ static <a class="el" href="class_agora_chat_1_1_s_d_k_client.html">SDKClient</a>
 <p >请确保调用其他方法前，完成 SDK 初始化。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">options</td><td>SDK 初始化选项，必填，请参见 <code><a class="el" href="class_agora_chat_1_1_options.html">Options</a></code>。 </td></tr>
+    <tr><td class="paramname">options</td><td>SDK 初始化选项，必填，详见 <code><a class="el" href="class_agora_chat_1_1_options.html">Options</a></code>。 </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>返回</dt><dd>返回初始化结果：<ul>
+<li><code>0</code>：成功；</li>
+<li><code>100</code>：App Key 不合法。 </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
