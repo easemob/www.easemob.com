@@ -10,12 +10,13 @@ var searchData=
   ['setchatroomattributeforced_3akey_3avalue_3aautodelete_3acompletionblock_3a_7',['setChatroomAttributeForced:key:value:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#a7ba3bc575b969ac173acea06a686e374',1,'IEMChatroomManager-p']]],
   ['setchatroomattributes_3aattributes_3aautodelete_3acompletionblock_3a_8',['setChatroomAttributes:attributes:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#ac4c2220c3d82da71b282bb05252372ec',1,'IEMChatroomManager-p']]],
   ['setchatroomattributesforced_3aattributes_3aautodelete_3acompletionblock_3a_9',['setChatroomAttributesForced:attributes:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#a20e972353eeb9836dd2ae71e6d16f73d',1,'IEMChatroomManager-p']]],
-  ['setpreferrednotificationlanguage_3acompletion_3a_10',['setPreferredNotificationLanguage:completion:',['../protocol_i_e_m_push_manager-p.html#a039a883f549fb703356f3ec7e0c99574',1,'IEMPushManager-p']]],
-  ['setpushtemplate_3acompletion_3a_11',['setPushTemplate:completion:',['../protocol_i_e_m_push_manager-p.html#a8c15445a0bf1cd78bb3f8b3319d4187b',1,'IEMPushManager-p']]],
-  ['setsilentmodeforall_3acompletion_3a_12',['setSilentModeForAll:completion:',['../protocol_i_e_m_push_manager-p.html#aeb688ae0c8ddd64f2c2457f55ffc3891',1,'IEMPushManager-p']]],
-  ['setsilentmodeforconversation_3aconversationtype_3aparams_3acompletion_3a_13',['setSilentModeForConversation:conversationType:params:completion:',['../protocol_i_e_m_push_manager-p.html#a6d88ec018a1997ec5184b2ef6e408b6b',1,'IEMPushManager-p']]],
-  ['sharedclient_14',['sharedClient',['../interface_e_m_client.html#a9e4da8a88c2cb50245c9a675b0cf6a34',1,'EMClient']]],
-  ['sharedfilewithid_3a_15',['sharedFileWithId:',['../interface_e_m_group_shared_file.html#ac6b00368e3575cd5392913f278eba3ad',1,'EMGroupSharedFile']]],
-  ['sharedmanager_16',['sharedManager',['../interface_e_m_local_notification_manager.html#a13dae8749df020c38b0d562923fa2bf7',1,'EMLocalNotificationManager']]],
-  ['subscribe_3aexpiry_3acompletion_3a_17',['subscribe:expiry:completion:',['../protocol_i_e_m_presence_manager-p.html#ab6d03351191dc2c558aa5069c33cc25c',1,'IEMPresenceManager-p']]]
+  ['setmemberattribute_3auserid_3aattributes_3acompletion_3a_10',['setMemberAttribute:userId:attributes:completion:',['../protocol_i_e_m_group_manager-p.html#aff388c3cdbf8d11fc97c6f26c51166a4',1,'IEMGroupManager-p']]],
+  ['setpreferrednotificationlanguage_3acompletion_3a_11',['setPreferredNotificationLanguage:completion:',['../protocol_i_e_m_push_manager-p.html#a039a883f549fb703356f3ec7e0c99574',1,'IEMPushManager-p']]],
+  ['setpushtemplate_3acompletion_3a_12',['setPushTemplate:completion:',['../protocol_i_e_m_push_manager-p.html#a8c15445a0bf1cd78bb3f8b3319d4187b',1,'IEMPushManager-p']]],
+  ['setsilentmodeforall_3acompletion_3a_13',['setSilentModeForAll:completion:',['../protocol_i_e_m_push_manager-p.html#aeb688ae0c8ddd64f2c2457f55ffc3891',1,'IEMPushManager-p']]],
+  ['setsilentmodeforconversation_3aconversationtype_3aparams_3acompletion_3a_14',['setSilentModeForConversation:conversationType:params:completion:',['../protocol_i_e_m_push_manager-p.html#a6d88ec018a1997ec5184b2ef6e408b6b',1,'IEMPushManager-p']]],
+  ['sharedclient_15',['sharedClient',['../interface_e_m_client.html#a9e4da8a88c2cb50245c9a675b0cf6a34',1,'EMClient']]],
+  ['sharedfilewithid_3a_16',['sharedFileWithId:',['../interface_e_m_group_shared_file.html#ac6b00368e3575cd5392913f278eba3ad',1,'EMGroupSharedFile']]],
+  ['sharedmanager_17',['sharedManager',['../interface_e_m_local_notification_manager.html#a13dae8749df020c38b0d562923fa2bf7',1,'EMLocalNotificationManager']]],
+  ['subscribe_3aexpiry_3acompletion_3a_18',['subscribe:expiry:completion:',['../protocol_i_e_m_presence_manager-p.html#ab6d03351191dc2c558aa5069c33cc25c',1,'IEMPresenceManager-p']]]
 ];

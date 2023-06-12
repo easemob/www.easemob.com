@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['reaction_0',['reaction',['../interface_e_m_message_reaction.html#a13fe6608919a84053c1a136bb2d01ceb',1,'EMMessageReaction']]],
+  ['reaction_0',['reaction',['../interface_e_m_message_reaction.html#a13fe6608919a84053c1a136bb2d01ceb',1,'EMMessageReaction::reaction()'],['../interface_e_m_message_reaction_operation.html#a6e24eb2e669202c1f42ce59130d11dbf',1,'EMMessageReactionOperation::reaction()']]],
   ['reactionlist_1',['reactionList',['../interface_e_m_chat_message.html#a03ba884426a50597c2ec9f0dcb2fb3de',1,'EMChatMessage']]],
   ['reactions_2',['reactions',['../interface_e_m_message_reaction_change.html#aad264719f7eabc8c0bea616102e0567c',1,'EMMessageReactionChange']]],
   ['readackid_3',['readAckId',['../interface_e_m_group_message_ack.html#a265d6729061b07df27dab629b40bcbd3',1,'EMGroupMessageAck']]],

@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.2</span>
    </div>
   </td>
  </tr>
@@ -165,6 +165,8 @@ $(function() {
 <tr class="separator:a7e3d20aaff25363f19d7c0d803f49c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a61731104e7609fcf531b0bdff7a92c"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a3a61731104e7609fcf531b0bdff7a92c">getReactionDetail:reaction:cursor:pageSize:completion:</a></td></tr>
 <tr class="separator:a3a61731104e7609fcf531b0bdff7a92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10cb84d7a8240d932ab65b3402ed3a73"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a10cb84d7a8240d932ab65b3402ed3a73">fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion:</a></td></tr>
+<tr class="separator:a10cb84d7a8240d932ab65b3402ed3a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >聊天相关操作代理协议。</p>
@@ -829,7 +831,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >下载缩略图（图片消息的缩略图或视频消息的第一帧图片）。</p>
+<p >下载缩略图（图片缩略图或视频的第一帧图片）。</p>
 <p >SDK 会自动下载缩略图。如果自动下载失败，你可以调用该方法下载缩略图。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -981,6 +983,78 @@ $(function() {
 
 </div>
 </div>
+<a id="a10cb84d7a8240d932ab65b3402ed3a73" name="a10cb84d7a8240d932ab65b3402ed3a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10cb84d7a8240d932ab65b3402ed3a73">&#9670;&nbsp;</a></span>fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) fetchMessagesFromServerBy: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>conversationId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">conversationType:</td>
+          <td></td>
+          <td class="paramtype">(EMConversationType)&#160;</td>
+          <td class="paramname"><em>type</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">cursor:</td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nullable)&#160;</td>
+          <td class="paramname"><em>cursor</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">pageSize:</td>
+          <td></td>
+          <td class="paramtype">(NSUInteger)&#160;</td>
+          <td class="paramname"><em>pageSize</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">option:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_fetch_server_messages_option.html">EMFetchServerMessagesOption</a> *_Nullable)&#160;</td>
+          <td class="paramname"><em>option</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt; <a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> * &gt; *_Nullable result, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >根据消息拉取参数配置接口（<code><a class="el" href="interface_e_m_fetch_server_messages_option.html">EMFetchServerMessagesOption</a></code>）从服务器分页获取指定会话的历史消息。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型，只支持单聊（<code>EMConversationTypeChat</code>）和群组（<code>EMConversationTypeGroupChat</code>）。 </td></tr>
+    <tr><td class="paramname">cursor</td><td>查询的起始游标位置。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页期望获取的消息条数。取值范围为 [1,50]。 </td></tr>
+    <tr><td class="paramname">option</td><td>查询历史消息的参数配置接口，详见 <code><a class="el" href="interface_e_m_fetch_server_messages_option.html">EMFetchServerMessagesOption</a></code>。 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a1b4ffe09737822fb665cfa16713433a1" name="a1b4ffe09737822fb665cfa16713433a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b4ffe09737822fb665cfa16713433a1">&#9670;&nbsp;</a></span>fetchSupportedLanguages:</h2>
 
@@ -1085,7 +1159,11 @@ $(function() {
   <table class="params">
     <tr><td class="paramname">aConversationId</td><td>会话 ID。 </td></tr>
     <tr><td class="paramname">aType</td><td>会话类型。 </td></tr>
-    <tr><td class="paramname">aIfCreate</td><td>若该会话不存在是否创建。</td></tr>
+    <tr><td class="paramname">aIfCreate</td><td>若该会话不存在是否创建：<ul>
+<li><code>YES</code>：是；</li>
+<li><code>NO</code>：否。</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1143,7 +1221,11 @@ $(function() {
   <table class="params">
     <tr><td class="paramname">aConversationId</td><td>会话 ID。 </td></tr>
     <tr><td class="paramname">aType</td><td>会话类型。 </td></tr>
-    <tr><td class="paramname">aIfCreate</td><td>若该会话不存在是否创建。 </td></tr>
+    <tr><td class="paramname">aIfCreate</td><td>若该会话不存在是否创建。<ul>
+<li><code>YES</code>：是；</li>
+<li><code>NO</code>：否。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">isThread</td><td>是否是子区会话，即是否为 <code>threadChat</code> 类型的会话。<ul>
 <li><code>YES</code>: 是；</li>
 <li><code>NO</code>: 否。 </li>
@@ -1231,8 +1313,8 @@ $(function() {
 <p >从服务器分页获取所有会话。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pageNumber</td><td>当前页码，从1开始 </td></tr>
-    <tr><td class="paramname">pageSize</td><td>每页的会话个数 </td></tr>
+    <tr><td class="paramname">pageNumber</td><td>当前页码，从 1 开始。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页获取的的会话数。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
