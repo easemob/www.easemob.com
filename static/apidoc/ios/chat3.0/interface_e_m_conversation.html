@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.2</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.3</span>
    </div>
   </td>
  </tr>
@@ -139,6 +139,10 @@ $(function() {
 <tr class="separator:a164480add35abfde2c733d264373388a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b7776fc532b76ffea1e12dc88848056"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_conversation.html#a5b7776fc532b76ffea1e12dc88848056">isChatThread</a></td></tr>
 <tr class="separator:a5b7776fc532b76ffea1e12dc88848056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe6aeee1ee55fc05e89ad72d67164360"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_conversation.html#abe6aeee1ee55fc05e89ad72d67164360">isPinned</a></td></tr>
+<tr class="separator:abe6aeee1ee55fc05e89ad72d67164360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34dd43054df46dfb30fe06316d645535"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_conversation.html#a34dd43054df46dfb30fe06316d645535">pinnedTime</a></td></tr>
+<tr class="separator:a34dd43054df46dfb30fe06316d645535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f0b08d0ed19fe13d1e3fa2743c0a779"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_conversation.html#a6f0b08d0ed19fe13d1e3fa2743c0a779">latestMessage</a></td></tr>
 <tr class="separator:a6f0b08d0ed19fe13d1e3fa2743c0a779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -1195,6 +1199,32 @@ $(function() {
 
 </div>
 </div>
+<a id="abe6aeee1ee55fc05e89ad72d67164360" name="abe6aeee1ee55fc05e89ad72d67164360"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe6aeee1ee55fc05e89ad72d67164360">&#9670;&nbsp;</a></span>isPinned</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isPinned</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >是否为置顶会话：</p><ul>
+<li><code>YES</code>：是</li>
+<li><code>NO</code>：否 </li>
+</ul>
+
+</div>
+</div>
 <a id="a6f0b08d0ed19fe13d1e3fa2743c0a779" name="a6f0b08d0ed19fe13d1e3fa2743c0a779"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f0b08d0ed19fe13d1e3fa2743c0a779">&#9670;&nbsp;</a></span>latestMessage</h2>
 
@@ -1238,6 +1268,29 @@ $(function() {
 </table>
 </div><div class="memdoc">
 <p >会话中的消息数量。 </p>
+
+</div>
+</div>
+<a id="a34dd43054df46dfb30fe06316d645535" name="a34dd43054df46dfb30fe06316d645535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34dd43054df46dfb30fe06316d645535">&#9670;&nbsp;</a></span>pinnedTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int64_t) pinnedTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >会话置顶的 UNIX 时间戳，单位为毫秒。未置顶时值为 <code>0</code>。 </p>
 
 </div>
 </div>
