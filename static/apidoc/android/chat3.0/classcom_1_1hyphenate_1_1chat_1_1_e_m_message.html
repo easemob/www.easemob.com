@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.0.2</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.0.3</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -221,6 +221,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ae2bf997a10bb10863c1a66ebb2023778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad883e679faa0f4350787ab0dbd171051"><td class="memItemLeft" align="right" valign="top">Map&lt; String, Object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ad883e679faa0f4350787ab0dbd171051">ext</a> ()</td></tr>
 <tr class="separator:ad883e679faa0f4350787ab0dbd171051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d00de42486fddad2aab1e33e558835a"><td class="memItemLeft" align="right" valign="top">Map&lt; String, Object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a3d00de42486fddad2aab1e33e558835a">getAttributes</a> ()</td></tr>
+<tr class="separator:a3d00de42486fddad2aab1e33e558835a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ea4abb7780a8154fa921dc9d6d03b47"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message_reaction.html">EMMessageReaction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a4ea4abb7780a8154fa921dc9d6d03b47">getMessageReaction</a> ()</td></tr>
 <tr class="separator:a4ea4abb7780a8154fa921dc9d6d03b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acda7d83054f842b5208496370a9decaa"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#acda7d83054f842b5208496370a9decaa">isOnlineState</a> ()</td></tr>
@@ -231,6 +233,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ad6cbc1f58145f8506f63ec971c67c7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f025a6d42cd1aff9c96019921ed82c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a9f025a6d42cd1aff9c96019921ed82c3">deliverOnlineOnly</a> (boolean onlineOnly)</td></tr>
 <tr class="separator:a9f025a6d42cd1aff9c96019921ed82c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403c20e6d7db93de14f7ca694c8d6f7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a403c20e6d7db93de14f7ca694c8d6f7a">setReceiverList</a> (List&lt; String &gt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a9d0381e1c301d91f968ff471b431b192">receiverList</a>)</td></tr>
+<tr class="separator:a403c20e6d7db93de14f7ca694c8d6f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d0381e1c301d91f968ff471b431b192"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a9d0381e1c301d91f968ff471b431b192">receiverList</a> ()</td></tr>
+<tr class="separator:a9d0381e1c301d91f968ff471b431b192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -359,7 +365,13 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">filePath</td><td>文件路径。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -404,7 +416,13 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">filePath</td><td>文件路径。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -460,7 +478,13 @@ Public 成员函数</h2></td></tr>
 <li><code>false</code>：若图片小于 100 KB，发送原图；若图片大于等于 100 KB, 发送压缩后的图片。 </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -516,7 +540,13 @@ Public 成员函数</h2></td></tr>
 <li><code>false</code>：若图片小于 100 KB，发送原图；若图片大于等于 100 KB, 发送压缩后的图片。 </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -582,7 +612,13 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">longitude</td><td>经度。 </td></tr>
     <tr><td class="paramname">locationAddress</td><td>位置详情。 </td></tr>
     <tr><td class="paramname">buildingName</td><td>建筑物名称。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -641,7 +677,13 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">latitude</td><td>纬度。 </td></tr>
     <tr><td class="paramname">longitude</td><td>经度。 </td></tr>
     <tr><td class="paramname">locationAddress</td><td>位置详情。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -754,7 +796,13 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">content</td><td>文本内容。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -799,12 +847,18 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">content</td><td>文本内容。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人的用户 ID 或群 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>消息对象。 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">弃用:</a></b></dt><dd>已废弃。请用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2c3d73d52f3e6febc67933dfa99f9ed2">createTextSendMessage(String, String)</a> 代替。</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">弃用:</a></b></dt><dd>已废弃。请用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2c3d73d52f3e6febc67933dfa99f9ed2">createTextSendMessage(String, String)</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -859,7 +913,13 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">videofilePath</td><td>视频文件路径。 </td></tr>
     <tr><td class="paramname">imageThumbPath</td><td>视频第一帧图缩略图。 </td></tr>
     <tr><td class="paramname">timeLength</td><td>视频时间长度，单位为秒。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -918,7 +978,13 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">videofilePath</td><td>视频文件路径。 </td></tr>
     <tr><td class="paramname">imageThumbPath</td><td>视频第一帧图缩略图。 </td></tr>
     <tr><td class="paramname">timeLength</td><td>视频时间长度，单位为秒。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -977,7 +1043,13 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">videofilePath</td><td>视频文件路径。 </td></tr>
     <tr><td class="paramname">imageThumbPath</td><td>视频第一帧图缩略图。 </td></tr>
     <tr><td class="paramname">timeLength</td><td>视频时间长度，单位为秒。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收方的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1029,7 +1101,13 @@ Public 成员函数</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">filePath</td><td>语音文件路径。 </td></tr>
     <tr><td class="paramname">timeLength</td><td>语音时间长度，单位为秒。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1081,7 +1159,13 @@ Public 成员函数</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">filePath</td><td>语音文件 URI。 </td></tr>
     <tr><td class="paramname">timeLength</td><td>语音时间长度，单位为秒。 </td></tr>
-    <tr><td class="paramname">username</td><td>消息接收人的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">username</td><td>消息接收方的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1104,12 +1188,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置当前消息是否只投递在线用户。</p>
+<p >设置消息是否只投递给在线用户。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">onlineOnly</td><td>是否只投递给在线用户。<ul>
-<li>（默认） <code>false</code>：投递所有用户；</li>
-<li><code>true</code> ：只投递在线用户，这样离线用户上线时不会收到该消息。 </li>
+    <tr><td class="paramname">onlineOnly</td><td>消息是否只投递给在线用户：<ul>
+<li><code>true</code>：只有消息接收方在线时才能投递成功。若接收方离线，则消息会被丢弃。</li>
+<li><code>false</code>（默认）：如果用户在线，则直接投递；如果用户离线，消息会在用户上线时投递。 </li>
 </ul>
 </td></tr>
   </table>
@@ -1156,6 +1240,25 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >获取消息包含的全部扩展字段。</p>
 <dl class="section return"><dt>返回</dt><dd>消息的全部扩展字段，以 Map&lt;String, Object&gt; 形式返回。返回 Entry.value 的具体类型有 Boolean, Integer, Long, Float, Double, String。 输入 JsonObject 的属性，map 结构返回时属性是 String。 </dd></dl>
+
+</div>
+</div>
+<a id="a3d00de42486fddad2aab1e33e558835a" name="a3d00de42486fddad2aab1e33e558835a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d00de42486fddad2aab1e33e558835a">&#9670;&nbsp;</a></span>getAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map&lt; String, Object &gt; com.hyphenate.chat.EMMessage.getAttributes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >获取消息包含的全部扩展字段。</p>
+<dl class="section return"><dt>返回</dt><dd>消息的全部扩展字段，以 Map&lt;String, Object&gt; 形式返回，其中 Entry.value 可为 Boolean、Integer、Long、Float、Double、String、JsonObject、或 JsonArray 类型。 </dd></dl>
 
 </div>
 </div>
@@ -1846,6 +1949,7 @@ Public 成员函数</h2></td></tr>
 <p >获取对端用户的 ID：</p><ul>
 <li>单聊：对端用户的 ID；</li>
 <li>群聊：群组 ID；</li>
+<li>子区会话：子区 ID;</li>
 <li>聊天室：聊天室 ID。</li>
 </ul>
 <dl class="section return"><dt>返回</dt><dd>对端用户的 ID。 </dd></dl>
@@ -1950,7 +2054,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >判断消息是否只投递在线用户。 </p><dl class="section return"><dt>返回</dt><dd>- <code>true</code>：只投递在线用户。<ul>
+<p >判断消息是否只投递在线用户。</p>
+<dl class="section return"><dt>返回</dt><dd>- <code>true</code>：只投递在线用户。<ul>
 <li><code>false</code>：投递所有用户。 </li>
 </ul>
 </dd></dl>
@@ -2088,6 +2193,25 @@ Public 成员函数</h2></td></tr>
 <p >消息中的附件的上传或者下载进度。</p>
 <p >消息附件的缩略图不涉及进度信息。</p>
 <dl class="section return"><dt>返回</dt><dd>消息中的附件的上传或者下载进度，取值范围为 [0,100]。 </dd></dl>
+
+</div>
+</div>
+<a id="a9d0381e1c301d91f968ff471b431b192" name="a9d0381e1c301d91f968ff471b431b192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d0381e1c301d91f968ff471b431b192">&#9670;&nbsp;</a></span>receiverList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; String &gt; com.hyphenate.chat.EMMessage.receiverList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >定向消息的接收方。</p>
+<dl class="section return"><dt>返回</dt><dd>定向消息的接收方。 </dd></dl>
 
 </div>
 </div>
@@ -2824,6 +2948,32 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">progress</td><td>消息中的附件的上传或者下载进度，取值范围为 [0,100]。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a403c20e6d7db93de14f7ca694c8d6f7a" name="a403c20e6d7db93de14f7ca694c8d6f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a403c20e6d7db93de14f7ca694c8d6f7a">&#9670;&nbsp;</a></span>setReceiverList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMMessage.setReceiverList </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; String &gt;&#160;</td>
+          <td class="paramname"><em>receiverList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >设置定向消息接收方。</p>
+<p >该方法适用于群组和聊天室。若创建消息后不调用该方法，则消息发送给群组或聊天室的所有成员。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">receiverList</td><td>定向消息接收方。若传入 <code>null</code>，则消息发送给群组或聊天室的所有成员。 </td></tr>
   </table>
   </dd>
 </dl>

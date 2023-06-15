@@ -19,6 +19,9 @@ var searchData=
   ['contact_5freach_5flimit_16',['CONTACT_REACH_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#aeb94c3644ce8e9734208dbc0d53bc95f',1,'com::hyphenate::EMError']]],
   ['contact_5freach_5flimit_5fpeer_17',['CONTACT_REACH_LIMIT_PEER',['../classcom_1_1hyphenate_1_1_e_m_error.html#aee324c3eb0f94dc982ecbef977bba4c9',1,'com::hyphenate::EMError']]],
   ['contact_5fremove_18',['CONTACT_REMOVE',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a41c7f4d6a2354b1e76eb3fdb436d01c6',1,'com::hyphenate::EMMultiDeviceListener']]],
-  ['create_19',['CREATE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html#ab0dffdf422c25295a97d0738f71a83c9',1,'com::hyphenate::chat::EMMessage::Status']]],
-  ['custom_20',['CUSTOM',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a49c31f5a9905ab959da12181b5c85096',1,'com.hyphenate.chat.EMMessage.Type.CUSTOM()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#ad265043ee988c74a8f577a8a1a042084',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.CUSTOM()']]]
+  ['conversation_5fdeleted_19',['CONVERSATION_DELETED',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a038fb2a1a0426320129cda4cfd5bda51',1,'com::hyphenate::EMMultiDeviceListener']]],
+  ['conversation_5fpinned_20',['CONVERSATION_PINNED',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a4891909d0e551b5e3aa003e89ab5c335',1,'com::hyphenate::EMMultiDeviceListener']]],
+  ['conversation_5funpinned_21',['CONVERSATION_UNPINNED',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a9ad689ecbb6b4c3fb221228825a81a93',1,'com::hyphenate::EMMultiDeviceListener']]],
+  ['create_22',['CREATE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html#ab0dffdf422c25295a97d0738f71a83c9',1,'com::hyphenate::chat::EMMessage::Status']]],
+  ['custom_23',['CUSTOM',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a49c31f5a9905ab959da12181b5c85096',1,'com.hyphenate.chat.EMMessage.Type.CUSTOM()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#ad265043ee988c74a8f577a8a1a042084',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.CUSTOM()']]]
 ];
