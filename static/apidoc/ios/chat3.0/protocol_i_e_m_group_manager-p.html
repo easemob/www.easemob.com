@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.3</span>
    </div>
   </td>
  </tr>
@@ -265,6 +265,12 @@ $(function() {
 <tr class="separator:ad8b6d97e352429804c8a80f2573d0889"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbe7247ad40aa2786c247d36753a2f3a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_group_manager-p.html#afbe7247ad40aa2786c247d36753a2f3a">updatePushServiceForGroups:isPushEnabled:completion:</a></td></tr>
 <tr class="separator:afbe7247ad40aa2786c247d36753a2f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff388c3cdbf8d11fc97c6f26c51166a4"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_group_manager-p.html#aff388c3cdbf8d11fc97c6f26c51166a4">setMemberAttribute:userId:attributes:completion:</a></td></tr>
+<tr class="separator:aff388c3cdbf8d11fc97c6f26c51166a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bea277b9b6a3815be0103ace83af95"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_group_manager-p.html#ad3bea277b9b6a3815be0103ace83af95">fetchMemberAttribute:userId:completion:</a></td></tr>
+<tr class="separator:ad3bea277b9b6a3815be0103ace83af95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5320474ede27dda1f58b4aa786c6d6ad"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_group_manager-p.html#a5320474ede27dda1f58b4aa786c6d6ad">fetchMembersAttributes:userIds:keys:completion:</a></td></tr>
+<tr class="separator:a5320474ede27dda1f58b4aa786c6d6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a766496a14d4dd5c3cd2d06f8ed8802e8"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_group_manager-p.html#a766496a14d4dd5c3cd2d06f8ed8802e8">getJoinedGroupsFromServerWithPage:pageSize:completion:</a></td></tr>
 <tr class="separator:a766496a14d4dd5c3cd2d06f8ed8802e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -1784,6 +1790,125 @@ $(function() {
     <tr><td class="paramname">aPageNum</td><td>获取第几页。 </td></tr>
     <tr><td class="paramname">aPageSize</td><td>获取多少条。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad3bea277b9b6a3815be0103ace83af95" name="ad3bea277b9b6a3815be0103ace83af95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3bea277b9b6a3815be0103ace83af95">&#9670;&nbsp;</a></span>fetchMemberAttribute:userId:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) fetchMemberAttribute: </td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nonnull)&#160;</td>
+          <td class="paramname"><em>groupId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">userId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nonnull)&#160;</td>
+          <td class="paramname"><em>userId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSDictionary&lt; NSString *, NSString * &gt; *_Nullable, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable))&#160;</td>
+          <td class="paramname"><em>completionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >获取单个群成员所有自定义属性。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">userId</td><td>要获取的自定义属性的群成员的用户 ID。 </td></tr>
+    <tr><td class="paramname">completion</td><td>该方法完成调用的回调，返回错误 <a class="el" href="interface_e_m_error.html">EMError</a> 和获取的属性的 Map。<ul>
+<li>若该方法调用成功，返回获取的属性的 Map，包含获取的所有键值对，此时 <a class="el" href="interface_e_m_error.html">EMError</a> 为空。</li>
+<li>如果该方法调用失败，返回调用失败的原因，即 EMError，此时属性的 Map 为空。</li>
+<li>若获取的属性的 Map 为空，而且 <a class="el" href="interface_e_m_error.html">EMError</a> 也为空，表示该群成员未设置任何属性。 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5320474ede27dda1f58b4aa786c6d6ad" name="a5320474ede27dda1f58b4aa786c6d6ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5320474ede27dda1f58b4aa786c6d6ad">&#9670;&nbsp;</a></span>fetchMembersAttributes:userIds:keys:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) fetchMembersAttributes: </td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nonnull)&#160;</td>
+          <td class="paramname"><em>groupId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">userIds:</td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; __kindof NSString * &gt; *_Nonnull)&#160;</td>
+          <td class="paramname"><em>userIds</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">keys:</td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; __kindof NSString * &gt; *_Nonnull)&#160;</td>
+          <td class="paramname"><em>keys</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSDictionary&lt; NSString *, NSDictionary&lt; NSString *, NSString * &gt; * &gt; *_Nullable attributes, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable error))&#160;</td>
+          <td class="paramname"><em>completionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >根据指定的属性 key 获取多个群成员的自定义属性</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">userIds</td><td>要获取自定义属性的群成员的用户 ID 数组。（最多10个，多则报错） </td></tr>
+    <tr><td class="paramname">keys</td><td>要获取自定义属性的 key 的数组。 </td></tr>
+    <tr><td class="paramname">completion</td><td>该方法完成调用的回调，返回错误 <a class="el" href="interface_e_m_error.html">EMError</a> 和获取的属性的 Map。<ul>
+<li>若该方法调用成功，返回获取的属性的 Map，包含获取的所有键值对，此时 <a class="el" href="interface_e_m_error.html">EMError</a> 为空。若某个群成员未设置自定义属性，其属性的 Map 为空。</li>
+<li>如果该方法调用失败，会包含调用失败的原因，此时属性的 Map 为空。</li>
+<li>若获取这些群成员的属性的 Map 为空，而且 <a class="el" href="interface_e_m_error.html">EMError</a> 也为空，表示这些群成员未设置任何属性。 </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -4213,6 +4338,64 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>搜索到的群组&#x2408;。 </dd></dl>
+
+</div>
+</div>
+<a id="aff388c3cdbf8d11fc97c6f26c51166a4" name="aff388c3cdbf8d11fc97c6f26c51166a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff388c3cdbf8d11fc97c6f26c51166a4">&#9670;&nbsp;</a></span>setMemberAttribute:userId:attributes:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setMemberAttribute: </td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nonnull)&#160;</td>
+          <td class="paramname"><em>groupId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">userId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nonnull)&#160;</td>
+          <td class="paramname"><em>userId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">attributes:</td>
+          <td></td>
+          <td class="paramtype">(NSDictionary&lt; NSString *, NSString * &gt; *_Nonnull)&#160;</td>
+          <td class="paramname"><em>attributes</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable error))&#160;</td>
+          <td class="paramname"><em>completionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >设置群成员自定义属性。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">userId</td><td>要设置自定义属性的群成员的用户 ID。 </td></tr>
+    <tr><td class="paramname">attributes</td><td>要设置的群成员自定义属性的 map，为 key-value 格式。对于一个 key-value 键值对，若 value 设置空字符串即删除该自定义属性。 </td></tr>
+    <tr><td class="paramname">completion</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

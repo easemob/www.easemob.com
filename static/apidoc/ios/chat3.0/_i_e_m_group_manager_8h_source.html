@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.3</span>
    </div>
   </td>
  </tr>
@@ -478,15 +478,20 @@ $(function() {
 <div class="line"><a id="l02495" name="l02495"></a><span class="lineno"> 2495</span>                     isPushEnabled:(BOOL)aIsEnable</div>
 <div class="line"><a id="l02496" name="l02496"></a><span class="lineno"> 2496</span>                        completion:(<span class="keywordtype">void</span> (^)(NSArray *groups, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_3_2, 3_8_3, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_push_manager-p.html">IEMPushManager</a>::updatePushServiceForGroups:disablePush:completion:&quot;);</div>
 <div class="line"><a id="l02497" name="l02497"></a><span class="lineno"> 2497</span> </div>
-<div class="line"><a id="l02498" name="l02498"></a><span class="lineno"> 2498</span><span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS  3.8.8</span></div>
-<div class="line"><a id="l02499" name="l02499"></a><span class="lineno"> 2499</span> </div>
-<div class="line"><a id="l02500" name="l02500"></a><span class="lineno"> 2500</span> </div>
-<div class="line"><a id="l02526" name="l02526"></a><span class="lineno"> 2526</span>- (void)getJoinedGroupsFromServerWithPage:(NSInteger)aPageNum</div>
-<div class="line"><a id="l02527" name="l02527"></a><span class="lineno"> 2527</span>                                 pageSize:(NSInteger)aPageSize</div>
-<div class="line"><a id="l02528" name="l02528"></a><span class="lineno"> 2528</span>                               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *&gt; *aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock</div>
-<div class="line"><a id="l02529" name="l02529"></a><span class="lineno"> 2529</span>                                __deprecated_msg(&quot;Use -getJoinedGroupsFromServerWithPage:pageSize:needMemberCount:needRole:error:completion: instead&quot;);</div>
-<div class="line"><a id="l02530" name="l02530"></a><span class="lineno"> 2530</span> </div>
-<div class="line"><a id="l02531" name="l02531"></a><span class="lineno"> 2531</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l02498" name="l02498"></a><span class="lineno"> 2498</span><span class="preprocessor">#pragma mark - Group member attributes</span></div>
+<div class="line"><a id="l02516" name="l02516"></a><span class="lineno"> 2516</span>- (void)setMemberAttribute:(NSString *_Nonnull)groupId userId:(NSString *_Nonnull)userId attributes:(NSDictionary&lt;NSString*,NSString*&gt; *_Nonnull)attributes completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error))completionBlock;</div>
+<div class="line"><a id="l02517" name="l02517"></a><span class="lineno"> 2517</span> </div>
+<div class="line"><a id="l02539" name="l02539"></a><span class="lineno"> 2539</span>- (void)fetchMemberAttribute:(NSString *_Nonnull)groupId userId:(NSString *_Nonnull)userId completion:(<span class="keywordtype">void</span> (^ _Nullable)(NSDictionary&lt;NSString *,NSString *&gt; * _Nullable, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable))completionBlock;</div>
+<div class="line"><a id="l02564" name="l02564"></a><span class="lineno"> 2564</span>- (void)fetchMembersAttributes:(NSString *_Nonnull)groupId userIds:(NSArray&lt;__kindof NSString *&gt; *_Nonnull)userIds keys:(NSArray&lt;__kindof NSString *&gt; *_Nonnull)keys completion:(<span class="keywordtype">void</span> (^_Nullable)(NSDictionary&lt;NSString*,NSDictionary&lt;NSString*,NSString*&gt;*&gt; *_Nullable attributes, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error))completionBlock;</div>
+<div class="line"><a id="l02565" name="l02565"></a><span class="lineno"> 2565</span> </div>
+<div class="line"><a id="l02566" name="l02566"></a><span class="lineno"> 2566</span><span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS  3.8.8</span></div>
+<div class="line"><a id="l02567" name="l02567"></a><span class="lineno"> 2567</span> </div>
+<div class="line"><a id="l02593" name="l02593"></a><span class="lineno"> 2593</span>- (void)getJoinedGroupsFromServerWithPage:(NSInteger)aPageNum</div>
+<div class="line"><a id="l02594" name="l02594"></a><span class="lineno"> 2594</span>                                 pageSize:(NSInteger)aPageSize</div>
+<div class="line"><a id="l02595" name="l02595"></a><span class="lineno"> 2595</span>                               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *&gt; *aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock</div>
+<div class="line"><a id="l02596" name="l02596"></a><span class="lineno"> 2596</span>                                __deprecated_msg(&quot;Use -getJoinedGroupsFromServerWithPage:pageSize:needMemberCount:needRole:error:completion: instead&quot;);</div>
+<div class="line"><a id="l02597" name="l02597"></a><span class="lineno"> 2597</span> </div>
+<div class="line"><a id="l02598" name="l02598"></a><span class="lineno"> 2598</span><span class="keyword">@end</span></div>
 <div class="ttc" id="ainterface_e_m_cursor_result_html"><div class="ttname"><a href="interface_e_m_cursor_result.html">EMCursorResult</a></div><div class="ttdef"><b>Definition:</b> EMCursorResult.h:27</div></div>
 <div class="ttc" id="ainterface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:27</div></div>
 <div class="ttc" id="ainterface_e_m_group_html"><div class="ttname"><a href="interface_e_m_group.html">EMGroup</a></div><div class="ttdef"><b>Definition:</b> EMGroup.h:43</div></div>

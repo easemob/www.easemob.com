@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.3</span>
    </div>
   </td>
  </tr>
@@ -87,6 +87,8 @@ $(function() {
 <tr class="separator:a425cb38a2cee579e946ec6a74417b5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc7c27e5f2296370e086e5929f5634e6"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_multi_devices_delegate-p.html#abc7c27e5f2296370e086e5929f5634e6">multiDevicesMessageBeRemoved:deviceId:</a></td></tr>
 <tr class="separator:abc7c27e5f2296370e086e5929f5634e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b78c308894c326f4ce66667161221ca"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_multi_devices_delegate-p.html#a5b78c308894c326f4ce66667161221ca">multiDevicesConversationEvent:conversationId:conversationType:</a></td></tr>
+<tr class="separator:a5b78c308894c326f4ce66667161221ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数文档</h2>
 <a id="a49782dc721be231cd301d7f0c1f44f6e" name="a49782dc721be231cd301d7f0c1f44f6e"></a>
@@ -128,12 +130,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >thread多设备事件回调</p>
+<p >多设备子区事件回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aEvent</td><td>多设备事件类型 </td></tr>
-    <tr><td class="paramname">aThreadId</td><td>子区id </td></tr>
-    <tr><td class="paramname">aExt</td><td>扩展信息 </td></tr>
+    <tr><td class="paramname">aEvent</td><td>多设备事件类型。 </td></tr>
+    <tr><td class="paramname">aThreadId</td><td>子区 ID。 </td></tr>
+    <tr><td class="paramname">aExt</td><td>扩展信息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -179,12 +181,63 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >开通多设备同步后，好友操作的多设备事件回调。</p>
+<p >多设备好友事件回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aEvent</td><td>多设备事件类型。 </td></tr>
     <tr><td class="paramname">aUsername</td><td>用户名。 </td></tr>
     <tr><td class="paramname">aExt</td><td>扩展信息。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b78c308894c326f4ce66667161221ca" name="a5b78c308894c326f4ce66667161221ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b78c308894c326f4ce66667161221ca">&#9670;&nbsp;</a></span>multiDevicesConversationEvent:conversationId:conversationType:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) multiDevicesConversationEvent: </td>
+          <td></td>
+          <td class="paramtype">(EMMultiDevicesEvent)&#160;</td>
+          <td class="paramname"><em>event</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">conversationId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nonnull)&#160;</td>
+          <td class="paramname"><em>conversationId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">conversationType:</td>
+          <td></td>
+          <td class="paramtype">(EMConversationType)&#160;</td>
+          <td class="paramname"><em>conversationType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >单个会话操作的多设备事件回调。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>事件类型。 </td></tr>
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">conversationType</td><td>会话类型。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -230,7 +283,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >群组多设备事件回调。</p>
+<p >多设备群组事件回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aEvent</td><td>多设备事件类型。 </td></tr>
@@ -275,11 +328,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >开启多设备后对单个会话删除漫游消息后对其他设备的回调</p>
+<p >单个会话删除漫游消息的多设备事件回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conversationId</td><td>会话id </td></tr>
-    <tr><td class="paramname">deviceId</td><td>设备id </td></tr>
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">deviceId</td><td>设备 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -309,10 +362,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >开启多设备后对单个会话设置免打扰后对其他设备的回调</p>
+<p >单个会话设置免打扰的多设备事件回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">undisturbData</td><td>扩展信息 </td></tr>
+    <tr><td class="paramname">undisturbData</td><td>扩展信息。 </td></tr>
   </table>
   </dd>
 </dl>

@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.0.9</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.1.0</span>
    </div>
   </td>
  </tr>
@@ -141,6 +141,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a88cd0affad00b2a1e5058ed4aeb9e4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add844be4a1d53d0f3e47715c87dc3815"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_chat_manager.html#add844be4a1d53d0f3e47715c87dc3815">GetReactionDetail</a> (string messageId, string reaction, string cursor=null, int pageSize=20, <a class="el" href="class_agora_chat_1_1_value_call_back.html">ValueCallBack</a>&lt; <a class="el" href="class_agora_chat_1_1_cursor_result.html">CursorResult</a>&lt; <a class="el" href="class_agora_chat_1_1_message_reaction.html">MessageReaction</a> &gt; &gt; callback=null)</td></tr>
 <tr class="separator:add844be4a1d53d0f3e47715c87dc3815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f643bdfd0845a7cc55d01bc66df23a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_chat_manager.html#aa6f643bdfd0845a7cc55d01bc66df23a">GetConversationsFromServerWithPage</a> (int pageNum, int pageSize, <a class="el" href="class_agora_chat_1_1_value_call_back.html">ValueCallBack</a>&lt; List&lt; <a class="el" href="class_agora_chat_1_1_conversation.html">Conversation</a> &gt; &gt; callback=null)</td></tr>
+<tr class="separator:aa6f643bdfd0845a7cc55d01bc66df23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a628c9d3b8933c39db63b88ee74d344f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_chat_manager.html#a628c9d3b8933c39db63b88ee74d344f0">RemoveMessagesFromServer</a> (string conversationId, <a class="el" href="namespace_agora_chat.html#abebfeb274ae77efacf1738a6c9733dab">ConversationType</a> conversationType, List&lt; string &gt; messageIdList, <a class="el" href="class_agora_chat_1_1_call_back.html">CallBack</a> callback=null)</td></tr>
+<tr class="separator:a628c9d3b8933c39db63b88ee74d344f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab74c2f745d9f1047539916953cb917a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_chat_manager.html#ab74c2f745d9f1047539916953cb917a8">RemoveMessagesFromServer</a> (string conversationId, <a class="el" href="namespace_agora_chat.html#abebfeb274ae77efacf1738a6c9733dab">ConversationType</a> conversationType, long timeStamp, <a class="el" href="class_agora_chat_1_1_call_back.html">CallBack</a> callback=null)</td></tr>
+<tr class="separator:ab74c2f745d9f1047539916953cb917a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad82fe37433d576cbf96af1fe9ad381db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_chat_manager.html#ad82fe37433d576cbf96af1fe9ad381db">AddChatManagerDelegate</a> (<a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html">IChatManagerDelegate</a> chatManagerDelegate)</td></tr>
 <tr class="separator:ad82fe37433d576cbf96af1fe9ad381db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af04896f0b9f6569bbd37d044ec7771bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_chat_manager.html#af04896f0b9f6569bbd37d044ec7771bc">RemoveChatManagerDelegate</a> (<a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html">IChatManagerDelegate</a> chatManagerDelegate)</td></tr>
@@ -1355,6 +1361,152 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname">cursor</td><td>查询 cursor。 </td></tr>
     <tr><td class="paramname">pageSize</td><td>每页获取的 Reaction 条数。 </td></tr>
     <tr><td class="paramname">callback</td><td>处理结果回调，包含 cursor 和 <a class="el" href="class_agora_chat_1_1_message_reaction.html">MessageReaction</a> 列表（仅使用该列表第一个数据即可）。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa6f643bdfd0845a7cc55d01bc66df23a" name="aa6f643bdfd0845a7cc55d01bc66df23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6f643bdfd0845a7cc55d01bc66df23a">&#9670;&nbsp;</a></span>GetConversationsFromServerWithPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.ChatManager.GetConversationsFromServerWithPage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pageNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pageSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_agora_chat_1_1_value_call_back.html">ValueCallBack</a>&lt; List&lt; <a class="el" href="class_agora_chat_1_1_conversation.html">Conversation</a> &gt; &gt;&#160;</td>
+          <td class="paramname"><em>callback</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >从服务器获取指定数目的会话对象。</p>
+<p >未找到任何会话对象返回的列表为空。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pageNum</td><td>当前页码。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页期望返回的会话数。 </td></tr>
+    <tr><td class="paramname">callback</td><td>获取的会话列表，详见 <code><a class="el" href="class_agora_chat_1_1_value_call_back.html">ValueCallBack</a></code>。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a628c9d3b8933c39db63b88ee74d344f0" name="a628c9d3b8933c39db63b88ee74d344f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a628c9d3b8933c39db63b88ee74d344f0">&#9670;&nbsp;</a></span>RemoveMessagesFromServer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.ChatManager.RemoveMessagesFromServer </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>conversationId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_agora_chat.html#abebfeb274ae77efacf1738a6c9733dab">ConversationType</a>&#160;</td>
+          <td class="paramname"><em>conversationType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>messageIdList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_agora_chat_1_1_call_back.html">CallBack</a>&#160;</td>
+          <td class="paramname"><em>callback</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >从会话中删除消息（包括本地存储和服务器存储）。</p>
+<p >异步方法。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">conversationType</td><td>会话类型，详见 <code><a class="el" href="namespace_agora_chat.html#abebfeb274ae77efacf1738a6c9733dab">ConversationType</a></code>。 </td></tr>
+    <tr><td class="paramname">messageIdList</td><td>要移除的消息的 ID 列表。 </td></tr>
+    <tr><td class="paramname">callback</td><td>处理结果回调，详见 <code><a class="el" href="class_agora_chat_1_1_call_back.html">CallBack</a></code>。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab74c2f745d9f1047539916953cb917a8" name="ab74c2f745d9f1047539916953cb917a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab74c2f745d9f1047539916953cb917a8">&#9670;&nbsp;</a></span>RemoveMessagesFromServer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.ChatManager.RemoveMessagesFromServer </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>conversationId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_agora_chat.html#abebfeb274ae77efacf1738a6c9733dab">ConversationType</a>&#160;</td>
+          <td class="paramname"><em>conversationType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>timeStamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_agora_chat_1_1_call_back.html">CallBack</a>&#160;</td>
+          <td class="paramname"><em>callback</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >从会话中删除消息（包括本地存储和服务器存储）。</p>
+<p >异步方法。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">conversationType</td><td>会话类型，详见 <code><a class="el" href="namespace_agora_chat.html#abebfeb274ae77efacf1738a6c9733dab">ConversationType</a></code>。 </td></tr>
+    <tr><td class="paramname">timeStamp</td><td>指定的时间戳, 单位为毫秒。该时间戳之前的消息会被删除。 </td></tr>
+    <tr><td class="paramname">callback</td><td>处理结果回调，详见 <code><a class="el" href="class_agora_chat_1_1_call_back.html">CallBack</a></code>。 </td></tr>
   </table>
   </dd>
 </dl>
