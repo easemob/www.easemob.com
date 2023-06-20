@@ -68,19 +68,16 @@
     
 <section class="desc markdown">
   <p>创建账号。</p>
-<p>Param <code>userId</code> 用户 ID，长度不超过 64 个字符。请确保你对该参数设值。支持的字符包括英文字母（a-z），数字（0-9），下划线（_），英文横线（-），英文句号（.）。该参数不区分大小写，大写字母会被自动转为小写字母。如果使用正则表达式设置该参数，则可以将表达式写为：^<code>a-zA-Z0-9_-</code>+$。请确保同一个 app 下，userId 唯一；<code>userId</code> 用户 ID 是会公开的信息，请勿使用 UUID、邮箱地址、手机号等敏感信息。
-Param <code>password</code> 密码，长度不超过 64 个字符。请确保你对该参数设值。</p>
-<p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 {@link EMError}。</p>
+<p>Param <code>userId</code> 用户 ID，长度不超过 64 个字符。请确保你对该参数设值。支持的字符包括英文字母（a-z），数字（0-9），下划线（_），英文横线（-），英文句号（.）。该参数不区分大小写，大写字母会被自动转为小写字母。如果使用正则表达式设置该参数，则可以将表达式写为：^<code>a-zA-Z0-9_-</code>+$。请确保同一个 app 下，userId 唯一；<code>userId</code> 用户 ID 是会公开的信息，请勿使用 UUID、邮箱地址、手机号等敏感信息。</p>
+<p>Param <code>password</code> 密码，长度不超过 64 个字符。请确保你对该参数设值。</p>
+<p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; createAccount(
-  String userId,
-  String password,
-) async {
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; createAccount(String userId, String password) async {
   EMLog.v(&#39;create account: $userId : $password&#39;);
   Map req = {&#39;username&#39;: userId, &#39;password&#39;: password};
   Map result =
@@ -181,7 +178,7 @@ Param <code>password</code> 密码，长度不超过 64 个字符。请确保你
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.0.0
+      4.0.2
   </span>
 
   
