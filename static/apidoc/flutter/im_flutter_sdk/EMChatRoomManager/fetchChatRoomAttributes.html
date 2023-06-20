@@ -58,8 +58,8 @@
       
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span>&gt;</span></span>
-<span class="name ">fetchChatRoomAttributes</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fetchChatRoomAttributes-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span></li>
-<li><span class="parameter" id="fetchChatRoomAttributes-param-keys"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">keys</span></span></li>
+<span class="name ">fetchChatRoomAttributes</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fetchChatRoomAttributes-param-roomId">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span></li>
+<li><span class="parameter" id="fetchChatRoomAttributes-param-keys"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">keys</span>}</span></li>
 </ol>)
 
       
@@ -67,25 +67,28 @@
     </section>
     
 <section class="desc markdown">
-  <p>根据属性键列表获取自定义聊天室属性的列表。
-Param <code>roomId</code> 聊天室 ID》
-Param <code>keys</code> 要获取的属性的键列表。如果将其设置为“null”或留空，此方法将检索所有自定义属性。
-<strong>Return</strong> 键值对应的聊天室属性。
-<strong>Throws</strong> 如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
+  <p>根据属性键列表获取自定义聊天室属性的列表。</p>
+<p>Param <code>roomId</code> 聊天室 ID。</p>
+<p>Param <code>keys</code> 要获取的属性的键列表。如果将其设置为“null”或留空，此方法将检索所有自定义属性。</p>
+<p><strong>Return</strong> 键值对应的聊天室属性。</p>
+<p><strong>Throws</strong> 如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;Map&lt;String, String&gt;?&gt; fetchChatRoomAttributes(
-  String roomId,
+  <pre class="language-dart"><code class="language-dart">Future&lt;Map&lt;String, String&gt;?&gt; fetchChatRoomAttributes({
+  required String roomId,
   List&lt;String&gt;? keys,
-) async {
+}) async {
   Map req = {
     &quot;roomId&quot;: roomId,
-    &quot;keys&quot;: keys,
   };
+
+  if (keys != null) {
+    req[&#39;keys&#39;] = keys;
+  }
 
   Map result = await _channel.invokeMethod(
     ChatMethodKeys.fetchChatRoomAttributes,
@@ -187,7 +190,7 @@ Param <code>keys</code> 要获取的属性的键列表。如果将其设置为�
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.0.0
+      4.0.2
   </span>
 
   
