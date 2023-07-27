@@ -35,6 +35,6 @@ var searchData=
   ['removeuserfromgroup_32',['removeUserFromGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a3de6c01858f77f44f1641189b4ab19fa',1,'com::hyphenate::chat::EMGroupManager']]],
   ['removeusersfromgroup_33',['removeUsersFromGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a811991793cd6469e79f789d21e107015',1,'com::hyphenate::chat::EMGroupManager']]],
   ['renewtoken_34',['renewToken',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a65a8082ee2d7fb2be0821859bc56ef4b',1,'com::hyphenate::chat::EMClient']]],
-  ['reportmessage_35',['reportMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a8f6d35a56268786e63101501e7d1f7c9',1,'com::hyphenate::chat::EMChatManager']]],
+  ['reportmessage_35',['reportMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a8c72e83666578d35c6f6256de5504b30',1,'com::hyphenate::chat::EMChatManager']]],
   ['reportpushaction_36',['reportPushAction',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#ab0b598bea39e6ea743230da5823287ed',1,'com::hyphenate::chat::EMPushManager']]]
 ];
