@@ -35,5 +35,6 @@ var searchData=
   ['statusdetails_32',['statusDetails',['../interface_e_m_presence.html#a2f3a87862b14692a3f87f910f5b618c2',1,'EMPresence']]],
   ['style_33',['style',['../interface_e_m_group_options.html#a620cfb9f0308ae836185dd7d9b539adf',1,'EMGroupOptions']]],
   ['subject_34',['subject',['../interface_e_m_chatroom.html#a325880df0c461ee38a4ead0fecbfbd28',1,'EMChatroom']]],
-  ['subscribe_3aexpiry_3acompletion_3a_35',['subscribe:expiry:completion:',['../protocol_i_e_m_presence_manager-p.html#ab6d03351191dc2c558aa5069c33cc25c',1,'IEMPresenceManager-p']]]
+  ['subscribe_3aexpiry_3acompletion_3a_35',['subscribe:expiry:completion:',['../protocol_i_e_m_presence_manager-p.html#ab6d03351191dc2c558aa5069c33cc25c',1,'IEMPresenceManager-p']]],
+  ['summary_36',['summary',['../interface_e_m_combine_message_body.html#ad67486e446eb4de9c36421e1fe0f29ee',1,'EMCombineMessageBody']]]
 ];
