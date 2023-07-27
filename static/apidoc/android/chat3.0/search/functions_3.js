@@ -16,8 +16,9 @@ var searchData=
   ['direct_13',['direct',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a63a9692bdcc9c7da476e42141c338c84',1,'com::hyphenate::chat::EMMessage']]],
   ['disableofflinepush_14',['disableOfflinePush',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a5eefa3153a879aec8482805c9617dce8',1,'com::hyphenate::chat::EMPushManager']]],
   ['displayname_15',['displayName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body.html#a9e7248bec1e9a1d1077c6e5a5c8ac272',1,'com::hyphenate::chat::EMFileMessageBody']]],
-  ['downloadattachment_16',['downloadAttachment',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1a938a579e8e5e07518d1e5008f9241d',1,'com::hyphenate::chat::EMChatManager']]],
-  ['downloadgroupsharedfile_17',['downloadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a9f6c882d4a43ea0ff78bb5fb0c77ceea',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['downloadstatus_18',['downloadStatus',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body.html#a216a0e482c9482669c36ef2eb281feed',1,'com::hyphenate::chat::EMFileMessageBody']]],
-  ['downloadthumbnail_19',['downloadThumbnail',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4c4f426c7cb00d44fee5d550a7eea5ce',1,'com::hyphenate::chat::EMChatManager']]]
+  ['downloadandparsecombinemessage_16',['downloadAndParseCombineMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a5dce6945f5b710205ff99f21328cafff',1,'com::hyphenate::chat::EMChatManager']]],
+  ['downloadattachment_17',['downloadAttachment',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1a938a579e8e5e07518d1e5008f9241d',1,'com::hyphenate::chat::EMChatManager']]],
+  ['downloadgroupsharedfile_18',['downloadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a9f6c882d4a43ea0ff78bb5fb0c77ceea',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['downloadstatus_19',['downloadStatus',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body.html#a216a0e482c9482669c36ef2eb281feed',1,'com::hyphenate::chat::EMFileMessageBody']]],
+  ['downloadthumbnail_20',['downloadThumbnail',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4c4f426c7cb00d44fee5d550a7eea5ce',1,'com::hyphenate::chat::EMChatManager']]]
 ];

@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.0.3</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.1.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -94,6 +94,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ace19daddc9be9709f285e6b1a001e445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaac1a4b3ea5742d8ca77481f98f40b20"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#aaac1a4b3ea5742d8ca77481f98f40b20">onReactionChanged</a> (List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message_reaction_change.html">EMMessageReactionChange</a> &gt; messageReactionChangeList)</td></tr>
 <tr class="separator:aaac1a4b3ea5742d8ca77481f98f40b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3342ed15150a66ac5d781fa1ce667dc2"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#a3342ed15150a66ac5d781fa1ce667dc2">onMessageContentChanged</a> (<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> messageModified, String operatorId, long operationTime)</td></tr>
+<tr class="separator:a3342ed15150a66ac5d781fa1ce667dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >消息事件监听器。 用于监听消息接收情况，消息成功发送到对方手机后会有回执（需开启送达回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a806f3d93bec9e86e37cc863fbf172b46">com.hyphenate.chat.EMOptions#setRequireDeliveryAck(boolean)</a>）。 对方阅读了这条消息也会收到回执（需开启允许已读回执，详见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012">com.hyphenate.chat.EMOptions#setRequireAck(boolean)</a>）。 发送消息过程中，消息 ID 会从最初本地生成的 uuid 变更为服务器端生成的全局唯一 ID，该 ID 在使用 SDK 的所有设备上均唯一。 应用需实现此接口监听消息变更状态。 </p><pre class="fragment">添加消息监听：
@@ -169,14 +171,58 @@ EMClient.getInstance().chatManager().removeMessageListener(mMessageListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >收到消息变化通知，包括消息 ID 的变化。 </p><dl class="params"><dt>参数</dt><dd>
+<p >收到消息变化，包括消息 ID 的变化。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">message</td><td>修改后的消息。 </td></tr>
     <tr><td class="paramname">change</td><td>消息的变化。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000037">弃用:</a></b></dt><dd>已废弃，请用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ac6fd24b05850f7f8e680c0caf1ea3f50">EMMessage#setMessageStatusCallback(EMCallBack)</a> 代替。</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000038">弃用:</a></b></dt><dd>已废弃，请用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ac6fd24b05850f7f8e680c0caf1ea3f50">EMMessage#setMessageStatusCallback(EMCallBack)</a> 代替。</dd></dl>
+
+</div>
+</div>
+<a id="a3342ed15150a66ac5d781fa1ce667dc2" name="a3342ed15150a66ac5d781fa1ce667dc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3342ed15150a66ac5d781fa1ce667dc2">&#9670;&nbsp;</a></span>onMessageContentChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMMessageListener.onMessageContentChanged </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a>&#160;</td>
+          <td class="paramname"><em>messageModified</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>operatorId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>operationTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >收到消息内容变化。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">messageModified</td><td>修改的消息对象，其中的 message body 包含消息修改次数、最后一次修改的操作者、最后一次修改时间等信息。 你也可通过 <code>onMessageContentChanged</code> 回调获得最后一次修改的操作者和最后一次修改时间等信息。 </td></tr>
+    <tr><td class="paramname">operatorId</td><td>最后一次修改消息的用户。 </td></tr>
+    <tr><td class="paramname">operationTime</td><td>消息的最后一次修改时间戳，单位为毫秒。 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -271,7 +317,7 @@ EMClient.getInstance().chatManager().removeMessageListener(mMessageListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >收到 Reaction 变更消息。 在收到 Reaction 变更事件时，通过此回调通知用户。 </p>
+<p >收到 Reaction 变更消息。 </p>
 
 </div>
 </div>

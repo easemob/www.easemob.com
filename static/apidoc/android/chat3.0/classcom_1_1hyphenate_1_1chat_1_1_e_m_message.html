@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.0.3</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.1.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -270,6 +270,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a0e862ad404ea67f4a8a465ccb55b0b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a641537cbcb3f60c1451d93e2e22bb48a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a641537cbcb3f60c1451d93e2e22bb48a">createFileSendMessage</a> (Uri filePath, String username)</td></tr>
 <tr class="separator:a641537cbcb3f60c1451d93e2e22bb48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada07a6883f11861e1e6ae2dde2792998"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ada07a6883f11861e1e6ae2dde2792998">createCombinedSendMessage</a> (String title, String summary, String compatibleText, List&lt; String &gt; messageIdList, String userId)</td></tr>
+<tr class="separator:ada07a6883f11861e1e6ae2dde2792998"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >消息对象，表示一条发送或接收到的消息。</p>
@@ -325,6 +327,79 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >获取会话 ID。</p>
 <dl class="section return"><dt>返回</dt><dd>会话 ID。 </dd></dl>
+
+</div>
+</div>
+<a id="ada07a6883f11861e1e6ae2dde2792998" name="ada07a6883f11861e1e6ae2dde2792998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada07a6883f11861e1e6ae2dde2792998">&#9670;&nbsp;</a></span>createCombinedSendMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> com.hyphenate.chat.EMMessage.createCombinedSendMessage </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>summary</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>compatibleText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; String &gt;&#160;</td>
+          <td class="paramname"><em>messageIdList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>userId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >创建一个合并转发消息的发送消息。</p>
+<p >对于不支持合并转发消息的 SDK 版本，该类消息会被解析为文本 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a0157bc665bb470f9893a03e7adcf3125">Type#TXT</a> 消息，消息内容为 <code>compatibleText</code> 携带的内容，其他字段会被忽略。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>合并消息的标题。该字段可以设置为 <code>null</code> 或者空字符串。 </td></tr>
+    <tr><td class="paramname">summary</td><td>合并消息的概要。该字段可以设置为 <code>null</code> 或者空字符串。 </td></tr>
+    <tr><td class="paramname">compatibleText</td><td>合并消息的兼容信息。该字段可以设置为 <code>null</code> 或者空字符串。该字段用于需要兼容不支持合并转发消息的版本。 </td></tr>
+    <tr><td class="paramname">messageIdList</td><td>合并消息的消息 ID 列表。列表不可为<code>null</code>或者空，最多可包含 300 个消息 ID。调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ad50be7183f088c415b9507bc7ce792e6">EMChatManager#sendMessage(EMMessage)</a> 方法发送消息会检查该字段的设置。 </td></tr>
+    <tr><td class="paramname">userId</td><td>消息接收方。该字段的设置取决于会话类型：<ul>
+<li>单聊：对方用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>子区会话：子区 ID。</li>
+<li>聊天室聊天：聊天室 ID。 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>合并转发消息对象。 </dd></dl>
 
 </div>
 </div>
