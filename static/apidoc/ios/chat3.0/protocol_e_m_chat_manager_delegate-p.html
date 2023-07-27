@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.3</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.1.0</span>
    </div>
   </td>
  </tr>
@@ -101,6 +101,8 @@ $(function() {
 <tr class="separator:a40302a2c17f714a89286c23de8adbcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38dc747a5de5966f694534716ab45f92"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a38dc747a5de5966f694534716ab45f92">messageAttachmentStatusDidChange:error:</a></td></tr>
 <tr class="separator:a38dc747a5de5966f694534716ab45f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0153377b22e44dc156b4077b26d9c6e0"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a0153377b22e44dc156b4077b26d9c6e0">onMessageContentChanged:operatorId:operationTime:</a></td></tr>
+<tr class="separator:a0153377b22e44dc156b4077b26d9c6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59900ff402a79db041e129afb14d866a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a59900ff402a79db041e129afb14d866a">messagesDidRecall:</a></td></tr>
 <tr class="separator:a59900ff402a79db041e129afb14d866a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c3cf638f30c14f8ed69eb0c70d2025d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a5c3cf638f30c14f8ed69eb0c70d2025d">messageReactionDidChange:</a></td></tr>
@@ -574,6 +576,57 @@ $(function() {
   </dd>
 </dl>
 <p>发送会话已读的是我方多设备： 则 from 参数值是“我方登录” ID，to 参数值是“会话方”会话 ID，此会话“会话方”发送的消息会全部置为已读 isRead 为 YES。 发送会话已读的是会话方： 则 from 参数值是“会话方”会话 ID，to 参数值是“我方登录” ID，此会话“我方”发送的消息的 isReadAck 会全部置为 YES。 注：此会话既会话方 ID 所代表的会话。 </p>
+
+</div>
+</div>
+<a id="a0153377b22e44dc156b4077b26d9c6e0" name="a0153377b22e44dc156b4077b26d9c6e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0153377b22e44dc156b4077b26d9c6e0">&#9670;&nbsp;</a></span>onMessageContentChanged:operatorId:operationTime:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) onMessageContentChanged: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)&#160;</td>
+          <td class="paramname"><em>message</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">operatorId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nonnull)&#160;</td>
+          <td class="paramname"><em>operatorId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">operationTime:</td>
+          <td></td>
+          <td class="paramtype">(NSUInteger)&#160;</td>
+          <td class="paramname"><em>operationTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >收到消息内容变化。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>修改的消息对象，其中的 message body 包含消息修改次数、最后一次修改的操作者、最后一次修改时间等信息。 </td></tr>
+    <tr><td class="paramname">operatorId</td><td>最后一次修改消息的用户。 </td></tr>
+    <tr><td class="paramname">operationTime</td><td>消息的最后一次修改时间戳，单位为毫秒。 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -53,7 +53,7 @@ var searchData=
   ['uploadgroupsharedfilewithid_3afilepath_3aprogress_3acompletion_3a_50',['uploadGroupSharedFileWithId:filePath:progress:completion:',['../protocol_i_e_m_group_manager-p.html#a10fe8d97ef09193418f8ddbf88700cfa',1,'IEMGroupManager-p']]],
   ['uploadlogtoserver_51',['uploadLogToServer',['../interface_e_m_client.html#a8bb8b214a9013f2d95ca579d0320cf8d',1,'EMClient']]],
   ['useraccountdidforcedtologout_3a_52',['userAccountDidForcedToLogout:',['../protocol_e_m_client_delegate-p.html#ad9b7e4392bc20f2b0ff44be222dba526',1,'EMClientDelegate-p']]],
-  ['useraccountdidloginfromotherdevice_53',['userAccountDidLoginFromOtherDevice',['../protocol_e_m_client_delegate-p.html#ab05f37bdd26ba94f97f2d7d077091f8d',1,'EMClientDelegate-p']]],
+  ['useraccountdidloginfromotherdevice_3a_53',['userAccountDidLoginFromOtherDevice:',['../protocol_e_m_client_delegate-p.html#a7a4065face58741bfefbb30bb596a8ed',1,'EMClientDelegate-p']]],
   ['useraccountdidremovefromserver_54',['userAccountDidRemoveFromServer',['../protocol_e_m_client_delegate-p.html#a973d8544232a05da9068dd5535e396e8',1,'EMClientDelegate-p']]],
   ['userdidforbidbyserver_55',['userDidForbidByServer',['../protocol_e_m_client_delegate-p.html#a4cbb63f33783bd5cdea2295e091da904',1,'EMClientDelegate-p']]],
   ['userdidjoinchatroom_3auser_3a_56',['userDidJoinChatroom:user:',['../protocol_e_m_chatroom_manager_delegate-p.html#ae6c83f7f739bc6133bbfa7e6079c0e84',1,'EMChatroomManagerDelegate-p']]],

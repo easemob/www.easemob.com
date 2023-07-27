@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.0.3</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.1.0</span>
    </div>
   </td>
  </tr>
@@ -94,207 +94,223 @@ $(function() {
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#import &quot;EMTranslationResult.h&quot;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#import &quot;EMLogDelegate.h&quot;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">typedef</span> NS_ENUM(NSInteger, EMServerCheckType) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  EMServerCheckAccountValidation = 0, </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  EMServerCheckGetDNSListFromServer,  </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  EMServerCheckGetTokenFromServer,    </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  EMServerCheckDoLogin,               </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  EMServerCheckDoLogout,              </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="interface_e_m_client.html">   57</a></span><span class="keyword">@interface </span><a class="code hl_interface" href="interface_e_m_client.html">EMClient</a> : NSObject</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>{</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_interface" href="interface_e_m_push_options.html">EMPushOptions</a> *_pushOptions;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a6f456f10c1dce367f322feca1bb100f8">   69</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) NSString * _Nonnull version;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a83d84fbc4487b6f4d277bd9332ad5cb1">   78</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) NSString * _Nullable currentUsername;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#aa36d939c93553e13d926ed010b64a550">   87</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) <a class="code hl_interface" href="interface_e_m_options.html">EMOptions</a> * _Nonnull options;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a5937280632184b7bb8d09e3e8893387d">   96</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) id&lt;IEMChatManager&gt; _Nullable chatManager;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a866a36a426b9beb111786cde83d83e1e">  105</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) id&lt;IEMContactManager&gt; _Nullable contactManager;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a69fb00ce1c36adee9b98c10585ccaca6">  114</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) id&lt;IEMGroupManager&gt; _Nullable groupManager;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#ab45e474ff0134ecfa576f909895aa132">  124</a></span><span class="keyword">@property</span> (nonatomic, strong, readonly) id&lt;IEMThreadManager&gt; _Nullable threadManager;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a4452e4b2d78d5ed52bc202b46dfdb1c5">  133</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) id&lt;IEMChatroomManager&gt; _Nullable roomManager;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#ab787a96812c78cc27d2c82e73b73dd0e">  142</a></span><span class="keyword">@property</span> (nonatomic, strong, readonly) id&lt;IEMPushManager&gt; _Nullable pushManager;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#ae50fe6b04f44098399b6522abbb89849">  152</a></span><span class="keyword">@property</span>(nonatomic, readonly) BOOL isAutoLogin;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a980267158808e32dee8981bb854eb9d4">  161</a></span><span class="keyword">@property</span>(nonatomic, readonly) BOOL isLoggedIn;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#adc6613f8c69c7aba0b1540c114800125">  170</a></span><span class="keyword">@property</span>(nonatomic, readonly) BOOL isConnected;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a2fa34ffc2d955950651534a97cf269e3">  179</a></span><span class="keyword">@property</span>(nonatomic, readonly) NSString * _Nullable accessUserToken;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a6b2c243e87ee7e86ef1af863c1f90681">  188</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) id&lt;IEMUserInfoManager&gt; _Nullable userInfoManager;</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a2fdfa5e3248eeca729f83c5e243a7b4f">  197</a></span><span class="keyword">@property</span> (nonatomic, strong, readonly) id&lt;IEMPresenceManager&gt; _Nullable presenceManager;</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#ac3ae9e0afb9240a66ca9609a07837b8b">  206</a></span><span class="keyword">@property</span> (nonatomic, strong, readonly) id&lt;IEMStatisticsManager&gt; _Nullable statisticsManager;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>+ (instancetype _Nonnull )sharedClient;</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>- (NSString *)version;</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="preprocessor">#pragma mark - Delegate</span></div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>- (void)addDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_client_delegate-p.html">EMClientDelegate</a>&gt;_Nonnull)aDelegate</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      delegateQueue:(dispatch_queue_t _Nullable )aQueue;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">typedef</span> NS_ENUM(NSInteger, EMServerCheckType) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  EMServerCheckAccountValidation = 0, </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  EMServerCheckGetDNSListFromServer,  </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  EMServerCheckGetTokenFromServer,    </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  EMServerCheckDoLogin,               </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  EMServerCheckDoLogout,              </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="interface_e_m_client.html">   63</a></span><span class="keyword">@interface </span><a class="code hl_interface" href="interface_e_m_client.html">EMClient</a> : NSObject</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <a class="code hl_interface" href="interface_e_m_push_options.html">EMPushOptions</a> *_pushOptions;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a6f456f10c1dce367f322feca1bb100f8">   75</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) NSString * _Nonnull version;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a83d84fbc4487b6f4d277bd9332ad5cb1">   84</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) NSString * _Nullable currentUsername;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#aa36d939c93553e13d926ed010b64a550">   93</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) <a class="code hl_interface" href="interface_e_m_options.html">EMOptions</a> * _Nonnull options;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a5937280632184b7bb8d09e3e8893387d">  102</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) id&lt;IEMChatManager&gt; _Nullable chatManager;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a866a36a426b9beb111786cde83d83e1e">  111</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) id&lt;IEMContactManager&gt; _Nullable contactManager;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a69fb00ce1c36adee9b98c10585ccaca6">  120</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) id&lt;IEMGroupManager&gt; _Nullable groupManager;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#ab45e474ff0134ecfa576f909895aa132">  129</a></span><span class="keyword">@property</span> (nonatomic, strong, readonly) id&lt;IEMThreadManager&gt; _Nullable threadManager;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a4452e4b2d78d5ed52bc202b46dfdb1c5">  138</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) id&lt;IEMChatroomManager&gt; _Nullable roomManager;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#ab787a96812c78cc27d2c82e73b73dd0e">  147</a></span><span class="keyword">@property</span> (nonatomic, strong, readonly) id&lt;IEMPushManager&gt; _Nullable pushManager;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#ae50fe6b04f44098399b6522abbb89849">  167</a></span><span class="keyword">@property</span>(nonatomic, readonly) BOOL isAutoLogin;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a980267158808e32dee8981bb854eb9d4">  180</a></span><span class="keyword">@property</span>(nonatomic, readonly) BOOL isLoggedIn;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#adc6613f8c69c7aba0b1540c114800125">  192</a></span><span class="keyword">@property</span>(nonatomic, readonly) BOOL isConnected;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a2fa34ffc2d955950651534a97cf269e3">  205</a></span><span class="keyword">@property</span>(nonatomic, readonly) NSString * _Nullable accessUserToken;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a6b2c243e87ee7e86ef1af863c1f90681">  214</a></span><span class="keyword">@property</span>(nonatomic, strong, readonly) id&lt;IEMUserInfoManager&gt; _Nullable userInfoManager;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#a2fdfa5e3248eeca729f83c5e243a7b4f">  223</a></span><span class="keyword">@property</span> (nonatomic, strong, readonly) id&lt;IEMPresenceManager&gt; _Nullable presenceManager;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="interface_e_m_client.html#ac3ae9e0afb9240a66ca9609a07837b8b">  232</a></span><span class="keyword">@property</span> (nonatomic, strong, readonly) id&lt;IEMStatisticsManager&gt; _Nullable statisticsManager;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>+ (instancetype _Nonnull )sharedClient;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>- (void)removeDelegate:(<span class="keywordtype">id</span> _Nonnull )aDelegate;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>- (void)addMultiDevicesDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_multi_devices_delegate-p.html">EMMultiDevicesDelegate</a>&gt;_Nonnull)aDelegate</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                  delegateQueue:(dispatch_queue_t _Nullable )aQueue NS_SWIFT_NAME(addMultiDevices(delegate:queue:));</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>- (void)removeMultiDevicesDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_multi_devices_delegate-p.html">EMMultiDevicesDelegate</a>&gt;_Nonnull)aDelegate;</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="preprocessor">#pragma mark - Initialize SDK</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)initializeSDKWithOptions:(<a class="code hl_interface" href="interface_e_m_options.html">EMOptions</a> * _Nonnull )aOptions;</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="preprocessor">#pragma mark - Change AppKey</span></div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)changeAppkey:(NSString * _Nonnull)aAppkey;</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="preprocessor">#pragma mark - User Registeration</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)registerWithUsername:(NSString * _Nonnull)aUsername</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                                  password:(NSString * _Nonnull)aPassword;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>- (NSString *)version;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">#pragma mark - Delegate  </span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>- (void)addDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_client_delegate-p.html">EMClientDelegate</a>&gt;_Nonnull)aDelegate</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      delegateQueue:(dispatch_queue_t _Nullable )aQueue;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>- (void)removeDelegate:(<span class="keywordtype">id</span> _Nonnull )aDelegate;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>- (void)addMultiDevicesDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_multi_devices_delegate-p.html">EMMultiDevicesDelegate</a>&gt;_Nonnull)aDelegate</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                  delegateQueue:(dispatch_queue_t _Nullable )aQueue NS_SWIFT_NAME(addMultiDevices(delegate:queue:));</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>- (void)removeMultiDevicesDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_multi_devices_delegate-p.html">EMMultiDevicesDelegate</a>&gt;_Nonnull)aDelegate;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="preprocessor">#pragma mark - Initialize SDK</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)initializeSDKWithOptions:(<a class="code hl_interface" href="interface_e_m_options.html">EMOptions</a> * _Nonnull )aOptions;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="preprocessor">#pragma mark - Change AppKey</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)changeAppkey:(NSString * _Nonnull)aAppkey;</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>- (void)registerWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                    password:(NSString *_Nonnull)aPassword</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                  completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nonnull aUsername, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="preprocessor">#pragma mark - User Registration </span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)registerWithUsername:(NSString * _Nonnull)aUsername</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                                  password:(NSString * _Nonnull)aPassword;</div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="preprocessor">#pragma mark - Login</span></div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>- (void)fetchTokenWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                      password:(NSString *_Nonnull)aPassword</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                    completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nullable aToken, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span> </div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)loginWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>                               password:(NSString *_Nonnull)aPassword;</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>- (void)registerWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                    password:(NSString *_Nonnull)aPassword</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                  completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nonnull aUsername, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span> </div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span><span class="preprocessor">#pragma mark - Login</span></div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span> </div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>- (void)fetchTokenWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>                      password:(NSString *_Nonnull)aPassword</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>                    completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nullable aToken, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span> </div>
-<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>- (void)loginWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>                 password:(NSString *_Nonnull)aPassword</div>
-<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nonnull aUsername, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)loginWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>                               password:(NSString *_Nonnull)aPassword;</div>
 <div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span> </div>
-<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)loginWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>                                  token:(NSString *_Nonnull)aToken;</div>
-<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span> </div>
-<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>- (void)loginWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>                    token:(NSString *_Nonnull)aToken</div>
-<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nonnull aUsername, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span> </div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)loginWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                             agoraToken:(NSString *_Nonnull)aAgoraToken;</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span> </div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>- (void)loginWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>               agoraToken:(NSString *_Nonnull)aAgoraToken</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nonnull aUsername, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span> </div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)renewToken:(NSString *_Nonnull)newAgoraToken;</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span> </div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="preprocessor">#pragma mark - Logout</span></div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span> </div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)logout:(BOOL)aIsUnbindDeviceToken;</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span> </div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>- (void)logout:(BOOL)aIsUnbindDeviceToken</div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>    completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span> </div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span><span class="preprocessor">#pragma mark - PushKit</span></div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span> </div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)bindPushKitToken:(NSData *_Nullable)aPushToken;</div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span> </div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>- (void)registerPushKitToken:(NSData *_Nullable)aPushToken</div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>                  completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span> </div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)unBindPushKitToken;</div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span> </div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>- (void)unRegisterPushKitTokenWithCompletion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span> </div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span><span class="preprocessor">#pragma mark - APNs</span></div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span> </div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)bindDeviceToken:(NSData *_Nonnull)aDeviceToken;</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span> </div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>- (void)registerForRemoteNotificationsWithDeviceToken:(NSData *_Nonnull)aDeviceToken</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>                                           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span> </div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span><span class="preprocessor">#pragma mark - Log</span></div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span> </div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)uploadLogToServer;</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span> </div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>- (void)uploadDebugLogToServerWithCompletion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span> </div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>- (NSString *_Nullable)getLogFilesPath:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span> </div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>- (void)getLogFilesPathWithCompletion:(<span class="keywordtype">void</span> (^_Nullable)(NSString *_Nullable aPath, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span> </div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>- (void)log:(NSString *_Nonnull)aLog;</div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span> </div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>- (void)addLogDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_log_delegate-p.html">EMLogDelegate</a>&gt;_Nonnull)aDelegate</div>
-<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>         delegateQueue:(dispatch_queue_t _Nullable )aQueue NS_SWIFT_NAME(addLog(delegate:queue:));</div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span> </div>
-<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>- (void)removeLogDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_log_delegate-p.html">EMLogDelegate</a>&gt;_Nonnull)aDelegate NS_SWIFT_NAME(removeLog(delegate:));</div>
-<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span> </div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span><span class="preprocessor">#pragma mark - Multi Devices</span></div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span> </div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>- (NSArray&lt;<a class="code hl_interface" href="interface_e_m_device_config.html">EMDeviceConfig</a>*&gt; *_Nullable)getLoggedInDevicesFromServerWithUsername:(NSString * _Nonnull)aUsername</div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>                                                                       password:(NSString * _Nonnull)aPassword</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>                                                                          error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> ** _Nullable)pError;</div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span> </div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>- (void)getLoggedInDevicesFromServerWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>                                        password:(NSString *_Nonnull)aPassword</div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>                                      completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_device_config.html">EMDeviceConfig</a>*&gt; * _Nullable aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span> </div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)kickDeviceWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>                                    password:(NSString *_Nonnull)aPassword</div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>                                    resource:(NSString *_Nonnull)aResource;</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span> </div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>- (void)kickDeviceWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>                      password:(NSString *_Nonnull)aPassword</div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>                      resource:(NSString *_Nonnull)aResource</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>                    completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span> </div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)kickAllDevicesWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>                                        password:(NSString *_Nonnull)aPassword;</div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span> </div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>- (void)kickAllDevicesWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>                          password:(NSString *_Nonnull)aPassword</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>                        completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span> </div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>- (<a class="code hl_interface" href="interface_e_m_device_config.html">EMDeviceConfig</a> *)getDeviceConfig:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **)pError;</div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span> </div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span><span class="preprocessor">#pragma mark - iOS</span></div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span> </div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span> </div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>- (void)applicationDidEnterBackground:(<span class="keywordtype">id</span> _Nonnull )aApplication;</div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span> </div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>- (void)applicationWillEnterForeground:(<span class="keywordtype">id</span> _Nonnull )aApplication;</div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span> </div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>- (void)application:(<span class="keywordtype">id</span> _Nonnull)application didReceiveRemoteNotification:(NSDictionary * _Nullable)userInfo;</div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span> </div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span><span class="preprocessor">#pragma mark - Service Check</span></div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>- (void)loginWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>                 password:(NSString *_Nonnull)aPassword</div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nonnull aUsername, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span> </div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)loginWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>                                  token:(NSString *_Nonnull)aToken;</div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span> </div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>- (void)loginWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                    token:(NSString *_Nonnull)aToken</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nonnull aUsername, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span> </div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)loginWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>                             agoraToken:(NSString *_Nonnull)aAgoraToken;</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span> </div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>- (void)loginWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>               agoraToken:(NSString *_Nonnull)aAgoraToken</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nonnull aUsername, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span> </div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)renewToken:(NSString *_Nonnull)newAgoraToken;</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span> </div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span><span class="preprocessor">#pragma mark - Logout</span></div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span> </div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)logout:(BOOL)aIsUnbindDeviceToken;</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span> </div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>- (void)logout:(BOOL)aIsUnbindDeviceToken</div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>    completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span> </div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span><span class="preprocessor">#pragma mark - PushKit</span></div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span> </div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)bindPushKitToken:(NSData *_Nullable)aPushToken;</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span> </div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>- (void)registerPushKitToken:(NSData *_Nullable)aPushToken</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>                  completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span> </div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)unBindPushKitToken;</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span> </div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>- (void)unRegisterPushKitTokenWithCompletion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span> </div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span><span class="preprocessor">#pragma mark - APNs</span></div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span> </div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)bindDeviceToken:(NSData *_Nonnull)aDeviceToken;</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span> </div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>- (void)registerForRemoteNotificationsWithDeviceToken:(NSData *_Nonnull)aDeviceToken</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>                                           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span> </div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>- (void)bindFCMToken:(NSString* _Nonnull)aFCMToken</div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>          completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span> </div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span><span class="preprocessor">#pragma mark - Log</span></div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span> </div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)uploadLogToServer;</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span> </div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>- (void)uploadDebugLogToServerWithCompletion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span> </div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>- (NSString *_Nullable)getLogFilesPath:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span> </div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>- (void)getLogFilesPathWithCompletion:(<span class="keywordtype">void</span> (^_Nullable)(NSString *_Nullable aPath, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span> </div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>- (void)log:(NSString *_Nonnull)aLog;</div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span> </div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>- (void)addLogDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_log_delegate-p.html">EMLogDelegate</a>&gt;_Nonnull)aDelegate</div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>         delegateQueue:(dispatch_queue_t _Nullable )aQueue NS_SWIFT_NAME(addLog(delegate:queue:));</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span> </div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>- (void)removeLogDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_log_delegate-p.html">EMLogDelegate</a>&gt;_Nonnull)aDelegate NS_SWIFT_NAME(removeLog(delegate:));</div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span> </div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span><span class="preprocessor">#pragma mark - Multi Devices</span></div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span> </div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>- (NSArray&lt;<a class="code hl_interface" href="interface_e_m_device_config.html">EMDeviceConfig</a>*&gt; *_Nullable)getLoggedInDevicesFromServerWithUsername:(NSString * _Nonnull)aUsername</div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>                                                                       password:(NSString * _Nonnull)aPassword</div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>                                                                          error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> ** _Nullable)pError;</div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span> </div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>- (void)getLoggedInDevicesFromServerWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>                                        password:(NSString *_Nonnull)aPassword</div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>                                      completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_device_config.html">EMDeviceConfig</a>*&gt; * _Nullable aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span> </div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>- (void)getLoggedInDevicesFromServerWithUserId:(NSString *_Nonnull)aUserID</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>                                         token:(NSString *_Nonnull)aToken</div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>                                    completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_device_config.html">EMDeviceConfig</a>*&gt; * _Nullable aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span> </div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)kickDeviceWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>                                    password:(NSString *_Nonnull)aPassword</div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>                                    resource:(NSString *_Nonnull)aResource;</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span> </div>
 <div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span> </div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>- (void)serviceCheckWithUsername:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>                        password:(NSString *_Nonnull)aPassword</div>
-<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>                      completion:(<span class="keywordtype">void</span> (^_Nullable)(EMServerCheckType aType, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span> </div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span><span class="keyword">@property</span> (nonatomic, strong, readonly) id&lt;IEMTranslateManager&gt; _Nonnull translateManager EM_DEPRECATED_IOS(3_8_9, 3_9_5,<span class="stringliteral">&quot;Use -IEMChatManager translateMessage: instead&quot;</span>);</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span><span class="keyword">@end</span></div>
-<div class="ttc" id="ainterface_e_m_client_html"><div class="ttname"><a href="interface_e_m_client.html">EMClient</a></div><div class="ttdef"><b>Definition:</b> EMClient.h:58</div></div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>- (void)kickDeviceWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>                      password:(NSString *_Nonnull)aPassword</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>                      resource:(NSString *_Nonnull)aResource</div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>                    completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span> </div>
+<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>- (void)kickDeviceWithUserId:(NSString *_Nonnull)aUserID</div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>                       token:(NSString *_Nonnull)aToken</div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>                    resource:(NSString *_Nonnull)aResource</div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>                  completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span> </div>
+<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>- (void)kickAllDevicesWithUserId:(NSString *_Nonnull)aUserID</div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>                           token:(NSString *_Nonnull)aToken</div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>                      completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span> </div>
+<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)kickAllDevicesWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>                                        password:(NSString *_Nonnull)aPassword;</div>
+<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span> </div>
+<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>- (void)kickAllDevicesWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>                          password:(NSString *_Nonnull)aPassword</div>
+<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>                        completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span> </div>
+<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>- (<a class="code hl_interface" href="interface_e_m_device_config.html">EMDeviceConfig</a> *)getDeviceConfig:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **)pError;</div>
+<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span> </div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span><span class="preprocessor">#pragma mark - iOS</span></div>
+<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span> </div>
+<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span> </div>
+<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>- (void)applicationDidEnterBackground:(<span class="keywordtype">id</span> _Nonnull )aApplication;</div>
+<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span> </div>
+<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>- (void)applicationWillEnterForeground:(<span class="keywordtype">id</span> _Nonnull )aApplication;</div>
+<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span> </div>
+<div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>- (void)application:(<span class="keywordtype">id</span> _Nonnull)application didReceiveRemoteNotification:(NSDictionary * _Nullable)userInfo;</div>
+<div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span> </div>
+<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span><span class="preprocessor">#pragma mark - Service Check</span></div>
+<div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span> </div>
+<div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span>- (void)serviceCheckWithUsername:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l01317" name="l01317"></a><span class="lineno"> 1317</span>                        password:(NSString *_Nonnull)aPassword</div>
+<div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span>                      completion:(<span class="keywordtype">void</span> (^_Nullable)(EMServerCheckType aType, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span> </div>
+<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span><span class="keyword">@property</span> (nonatomic, strong, readonly) id&lt;IEMTranslateManager&gt; _Nonnull translateManager EM_DEPRECATED_IOS(3_8_9, 3_9_5,<span class="stringliteral">&quot;Use -IEMChatManager translateMessage: instead&quot;</span>);</div>
+<div class="line"><a id="l01321" name="l01321"></a><span class="lineno"> 1321</span><span class="keyword">@end</span></div>
+<div class="ttc" id="ainterface_e_m_client_html"><div class="ttname"><a href="interface_e_m_client.html">EMClient</a></div><div class="ttdef"><b>Definition:</b> EMClient.h:64</div></div>
 <div class="ttc" id="ainterface_e_m_device_config_html"><div class="ttname"><a href="interface_e_m_device_config.html">EMDeviceConfig</a></div><div class="ttdef"><b>Definition:</b> EMDeviceConfig.h:25</div></div>
 <div class="ttc" id="ainterface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:27</div></div>
 <div class="ttc" id="ainterface_e_m_options_html"><div class="ttname"><a href="interface_e_m_options.html">EMOptions</a></div><div class="ttdef"><b>Definition:</b> EMOptions.h:52</div></div>
 <div class="ttc" id="ainterface_e_m_push_options_html"><div class="ttname"><a href="interface_e_m_push_options.html">EMPushOptions</a></div><div class="ttdef"><b>Definition:</b> EMPushOptions.h:58</div></div>
-<div class="ttc" id="aprotocol_e_m_client_delegate-p_html"><div class="ttname"><a href="protocol_e_m_client_delegate-p.html">EMClientDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMClientDelegate.h:45</div></div>
+<div class="ttc" id="aprotocol_e_m_client_delegate-p_html"><div class="ttname"><a href="protocol_e_m_client_delegate-p.html">EMClientDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMClientDelegate.h:46</div></div>
 <div class="ttc" id="aprotocol_e_m_log_delegate-p_html"><div class="ttname"><a href="protocol_e_m_log_delegate-p.html">EMLogDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMLogDelegate.h:18</div></div>
 <div class="ttc" id="aprotocol_e_m_multi_devices_delegate-p_html"><div class="ttname"><a href="protocol_e_m_multi_devices_delegate-p.html">EMMultiDevicesDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMMultiDevicesDelegate.h:78</div></div>
 </div><!-- fragment --></div><!-- contents -->
