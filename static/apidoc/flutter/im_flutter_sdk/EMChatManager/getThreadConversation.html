@@ -63,7 +63,7 @@
     <section class="multi-line-signature">
       
 
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMConversation-class.html">EMConversation</a></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMConversation-class.html">EMConversation</a>?</span>&gt;</span></span>
 <span class="name ">getThreadConversation</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="getThreadConversation-param-threadId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">threadId</span></span></li>
 </ol>)
 
@@ -82,16 +82,20 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;EMConversation&gt; getThreadConversation(String threadId) async {
+  <pre class="language-dart"><code class="language-dart">Future&lt;EMConversation?&gt; getThreadConversation(String threadId) async {
   Map result = await ChatChannel.invokeMethod(
     ChatMethodKeys.getThreadConversation,
-    {&quot;convId&quot;, threadId},
+    {&quot;convId&quot;: threadId},
   );
 
   try {
+    EMConversation? ret;
     EMError.hasErrorFromResult(result);
-    return EMConversation.fromJson(
-        result[ChatMethodKeys.getThreadConversation]);
+    if (result[ChatMethodKeys.getThreadConversation] != null) {
+      ret = EMConversation.fromJson(
+          result[ChatMethodKeys.getThreadConversation]);
+    }
+    return ret;
   } on EMError catch (e) {
     throw e;
   }
@@ -128,7 +132,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.1.0
+      4.1.3
   </span>
 
   

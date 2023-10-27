@@ -64,18 +64,7 @@
       
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>
-<span class="name ">sendMessage</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="sendMessage-param-message"><span class="type-annotation"><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span> <span class="parameter-name">message</span>, </span></li>
-<li><span class="parameter" id="sendMessage-param-callback">{<span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<ol class="parameter-list"><li><span class="parameter" id="param-onSuccess"><span class="type-annotation">void</span> <span class="parameter-name">onSuccess</span>(<ol class="parameter-list"><li><span class="parameter" id="param-"><span class="type-annotation"><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span></span></li>
-</ol>
-)?, </span></li>
-<li><span class="parameter" id="param-onError"><span class="type-annotation">void</span> <span class="parameter-name">onError</span>(<ol class="parameter-list"><li><span class="parameter" id="param-"><span class="type-annotation"><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span></span></li>
-</ol>
-)?, </span></li>
-<li><span class="parameter" id="param-onProgress"><span class="type-annotation">void</span> <span class="parameter-name">onProgress</span>(<ol class="parameter-list"><li><span class="parameter" id="param-"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span></span></li>
-</ol>
-)?</span></li>
-</ol>
-)?}</span></li>
+<span class="name ">sendMessage</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="sendMessage-param-message"><span class="type-annotation"><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span> <span class="parameter-name">message</span></span></li>
 </ol>)
 
       
@@ -96,14 +85,7 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;EMMessage&gt; sendMessage(
-  EMMessage message, {
-  void Function(
-    void Function(EMMessage)? onSuccess,
-    void Function(EMMessage)? onError,
-    void Function(int)? onProgress,
-  )? callback,
-}) async {
+  <pre class="language-dart"><code class="language-dart">Future&lt;EMMessage&gt; sendMessage(EMMessage message) async {
   message.status = MessageStatus.PROGRESS;
   Map result = await ChatChannel.invokeMethod(
       ChatMethodKeys.sendMessage, message.toJson());
@@ -150,7 +132,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.1.0
+      4.1.3
   </span>
 
   

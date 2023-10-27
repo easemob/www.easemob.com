@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the blockChatRoomMembers method from the EMChatRoomManager class, for the Dart programming language.">
-  <title>blockChatRoomMembers method - EMChatRoomManager class - im_flutter_sdk library - Dart API</title>
+  <meta name="description" content="API docs for the enableHonorPush method from the EMOptions class, for the Dart programming language.">
+  <title>enableHonorPush method - EMOptions class - im_flutter_sdk library - Dart API</title>
 
 
   
@@ -30,10 +30,10 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/EMChatRoomManager-class.html">EMChatRoomManager</a></li>
-    <li class="self-crumb">blockChatRoomMembers method</li>
+    <li><a href="../../im_flutter_sdk/EMOptions-class.html">EMOptions</a></li>
+    <li class="self-crumb">enableHonorPush method</li>
   </ol>
-  <div class="self-name">blockChatRoomMembers</div>
+  <div class="self-name">enableHonorPush</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -54,54 +54,32 @@
   <div
       id="dartdoc-main-content"
       class="main-content"
-      data-above-sidebar="im_flutter_sdk&#47;EMChatRoomManager-class-sidebar.html"
+      data-above-sidebar="im_flutter_sdk&#47;EMOptions-class-sidebar.html"
       data-below-sidebar="">
       <div>
-<h1><span class="kind-method">blockChatRoomMembers</span> method 
+<h1><span class="kind-method">enableHonorPush</span> method 
 </h1></div>
 
     <section class="multi-line-signature">
       
 
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
-<span class="name ">blockChatRoomMembers</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="blockChatRoomMembers-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span></li>
-<li><span class="parameter" id="blockChatRoomMembers-param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span></li>
-</ol>)
+<span class="returntype">void</span>
+<span class="name ">enableHonorPush</span>(<wbr>)
 
       
 
     </section>
     
 <section class="desc markdown">
-  <p>将成员添加到聊天室黑名单。</p>
-<p>仅聊天室所有者和管理员可调用此方法。</p>
-<p>对于添加到聊天室黑名单的成员，请注意以下几点：</p>
-<ol>
-<li>成员添加到黑名单的同时，将被服务器移出聊天室。</li>
-<li>可通过 <a href="../../im_flutter_sdk/EMChatRoomEventHandler/onRemovedFromChatRoom.html">EMChatRoomEventHandler.onRemovedFromChatRoom</a> 回调通知。</li>
-<li>添加到黑名单的成员禁止再次加入到聊天室。</li>
-</ol>
-<p>Param <code>roomId</code> 聊天室 ID。</p>
-<p>Param <code>members</code> 要加入黑名单的成员列表。</p>
-<p><strong>Throws</strong> 如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
+  <p>开启 荣耀 推送。</p>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; blockChatRoomMembers(
-  String roomId,
-  List&lt;String&gt; members,
-) async {
-  Map req = {&quot;roomId&quot;: roomId, &quot;members&quot;: members};
-  Map result =
-      await _channel.invokeMethod(ChatMethodKeys.blockChatRoomMembers, req);
-  try {
-    EMError.hasErrorFromResult(result);
-  } on EMError catch (e) {
-    throw e;
-  }
+  <pre class="language-dart"><code class="language-dart">void enableHonorPush() {
+  _pushConfig.enableHonorPush = true;
 }</code></pre>
 </section>
 
@@ -119,12 +97,12 @@
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/EMChatRoomManager-class.html">EMChatRoomManager</a></li>
-    <li class="self-crumb">blockChatRoomMembers method</li>
+    <li><a href="../../im_flutter_sdk/EMOptions-class.html">EMOptions</a></li>
+    <li class="self-crumb">enableHonorPush method</li>
 </ol>
 
 
-    <h5>EMChatRoomManager class</h5>
+    <h5>EMOptions class</h5>
   </div><!--/.sidebar-offcanvas-->
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
