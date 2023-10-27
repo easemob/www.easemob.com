@@ -63,7 +63,7 @@
     <section class="multi-line-signature">
       
 
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">fetchChatThreadMembers</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fetchChatThreadMembers-param-chatThreadId">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span>, </span></li>
 <li><span class="parameter" id="fetchChatThreadMembers-param-cursor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span></li>
 <li><span class="parameter" id="fetchChatThreadMembers-param-limit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">limit</span> = <span class="default-value">20</span>}</span></li>
@@ -80,7 +80,7 @@
 <p>Param <code>chatThreadId</code> 子区 ID。</p>
 <p>Param <code>cursor</code> 开始获取数据的游标位置，首次调用方法时传 <code>null</code> 或空字符串，按成员加入子区时间的正序获取数据。</p>
 <p>Param <code>limit</code> 每页期望返回的成员数。取值范围为 <code>1,50</code>。</p>
-<p><strong>Return</strong> 若调用成功，返回子区成员列表；失败则抛出异常。</p>
+<p><strong>Return</strong> 若调用成功，返回子区成员 <code>EMCursorResult</code>；失败则抛出异常。</p>
 <p><strong>Throws</strong> 如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
 </section>
 
@@ -88,7 +88,7 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;List&lt;String&gt;&gt; fetchChatThreadMembers({
+  <pre class="language-dart"><code class="language-dart">Future&lt;EMCursorResult&lt;String&gt;&gt; fetchChatThreadMembers({
   required String chatThreadId,
   String? cursor,
   int limit = 20,
@@ -104,13 +104,9 @@
   );
   try {
     EMError.hasErrorFromResult(result);
-    List&lt;String&gt; list = [];
-    result[ChatMethodKeys.fetchChatThreadMember]?.forEach((element) {
-      if (element is String) {
-        list.add(element);
-      }
-    });
-    return list;
+    return EMCursorResult&lt;String&gt;.fromJson(
+        result[ChatMethodKeys.fetchChatThreadMember],
+        dataItemCallback: (obj) =&gt; obj);
   } on EMError catch (e) {
     throw e;
   }
@@ -147,7 +143,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.1.0
+      4.1.3
   </span>
 
   
