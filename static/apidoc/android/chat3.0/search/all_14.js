@@ -50,5 +50,6 @@ var searchData=
   ['user_5fupdateinfo_5ffailed_47',['USER_UPDATEINFO_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a398f514f3df0ab0d9f07b83098cfbd69',1,'com::hyphenate::EMError']]],
   ['userinfo_5fdatalength_5fexceed_48',['USERINFO_DATALENGTH_EXCEED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a877fdc49314f8ce76c7bee0e10ca8692',1,'com::hyphenate::EMError']]],
   ['userinfo_5fusercount_5fexceed_49',['USERINFO_USERCOUNT_EXCEED',['../classcom_1_1hyphenate_1_1_e_m_error.html#adc7c765d869aa3c5df7c62d5193f1603',1,'com::hyphenate::EMError']]],
-  ['userinfomanager_50',['userInfoManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a46d3cec05dd7855d5eb02d600614bcef',1,'com::hyphenate::chat::EMClient']]]
+  ['userinfomanager_50',['userInfoManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a46d3cec05dd7855d5eb02d600614bcef',1,'com::hyphenate::chat::EMClient']]],
+  ['username_51',['username',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact.html#a7e6de215c10138628f2ce8e75e987d6c',1,'com::hyphenate::chat::EMContact']]]
 ];

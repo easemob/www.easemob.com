@@ -25,5 +25,6 @@ var searchData=
   ['user_5funbind_5fdevicetoken_5ffailed_22',['USER_UNBIND_DEVICETOKEN_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ab1e3e56332d5b4dcc4381d931997983c',1,'com::hyphenate::EMError']]],
   ['user_5fupdateinfo_5ffailed_23',['USER_UPDATEINFO_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a398f514f3df0ab0d9f07b83098cfbd69',1,'com::hyphenate::EMError']]],
   ['userinfo_5fdatalength_5fexceed_24',['USERINFO_DATALENGTH_EXCEED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a877fdc49314f8ce76c7bee0e10ca8692',1,'com::hyphenate::EMError']]],
-  ['userinfo_5fusercount_5fexceed_25',['USERINFO_USERCOUNT_EXCEED',['../classcom_1_1hyphenate_1_1_e_m_error.html#adc7c765d869aa3c5df7c62d5193f1603',1,'com::hyphenate::EMError']]]
+  ['userinfo_5fusercount_5fexceed_25',['USERINFO_USERCOUNT_EXCEED',['../classcom_1_1hyphenate_1_1_e_m_error.html#adc7c765d869aa3c5df7c62d5193f1603',1,'com::hyphenate::EMError']]],
+  ['username_26',['username',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_contact.html#a7e6de215c10138628f2ce8e75e987d6c',1,'com::hyphenate::chat::EMContact']]]
 ];

@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.1.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.2.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -90,6 +90,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a7a5abfa9b233dcec2b495f0062181c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65a8082ee2d7fb2be0821859bc56ef4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a65a8082ee2d7fb2be0821859bc56ef4b">renewToken</a> (String newAgoraToken)</td></tr>
 <tr class="separator:a65a8082ee2d7fb2be0821859bc56ef4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af53bcd44f0f93d48d2863ea4342aa308"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#af53bcd44f0f93d48d2863ea4342aa308">renewToken</a> (String newToken, @NonNull <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callback)</td></tr>
+<tr class="separator:af53bcd44f0f93d48d2863ea4342aa308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab23103df03af2f0466ff0832c2a750d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#ab23103df03af2f0466ff0832c2a750d3">logout</a> (boolean unbindToken)</td></tr>
 <tr class="separator:ab23103df03af2f0466ff0832c2a750d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aa23ca8fef294ea64ef85532a829b9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a7aa23ca8fef294ea64ef85532a829b9c">logout</a> (final boolean unbindToken, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callback)</td></tr>
@@ -570,7 +572,7 @@ Public 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>在线设备列表。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>在线登录设备列表。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
     <tr><td class="paramname">HyphenateException</td><td>具体错误详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
@@ -610,11 +612,11 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>用户 ID。 </td></tr>
-    <tr><td class="paramname">token</td><td>token。 </td></tr>
+    <tr><td class="paramname">token</td><td>用户 token。 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>在线设备列表。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>在线登录设备列表。 </dd></dl>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
     <tr><td class="paramname">HyphenateException</td><td>具体错误详见 <a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html">EMError</a>。 </td></tr>
@@ -943,7 +945,7 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>用户 ID。 </td></tr>
-    <tr><td class="paramname">token</td><td>token。 </td></tr>
+    <tr><td class="paramname">token</td><td>用户 token。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -987,7 +989,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >将指定账号登录的指定设备踢下线。</p>
+<p >将指定账号从登录的指定设备踢下线。</p>
 <p >可通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_device_info.html#ad5148a8821b548c133d0789c87c9408a">EMDeviceInfo#getResource()</a> 方法获取设备 ID。</p>
 <p >同步方法，会阻塞当前线程。</p>
 <dl class="params"><dt>参数</dt><dd>
@@ -1038,13 +1040,13 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >将指定账号登录的指定设备踢下线。</p>
+<p >将指定账号从登录的指定设备踢下线。</p>
 <p >可通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_device_info.html#ad5148a8821b548c133d0789c87c9408a">EMDeviceInfo#getResource()</a> 方法获取设备 ID。</p>
 <p >同步方法，会阻塞当前线程。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>用户 ID。 </td></tr>
-    <tr><td class="paramname">token</td><td>用户的token。 </td></tr>
+    <tr><td class="paramname">token</td><td>用户 token。 </td></tr>
     <tr><td class="paramname">resource</td><td>设备 ID, 见 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_device_info.html#ad5148a8821b548c133d0789c87c9408a">EMDeviceInfo#getResource()</a>。 </td></tr>
   </table>
   </dd>
@@ -1146,6 +1148,7 @@ Public 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">弃用:</a></b></dt><dd>已废弃，请使用 <a class="el" href="">loginWithToken(String, String, EMCallBack)</a> 替代.</dd></dl>
 
 </div>
 </div>
@@ -1395,7 +1398,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a65a8082ee2d7fb2be0821859bc56ef4b" name="a65a8082ee2d7fb2be0821859bc56ef4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65a8082ee2d7fb2be0821859bc56ef4b">&#9670;&nbsp;</a></span>renewToken()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a8082ee2d7fb2be0821859bc56ef4b">&#9670;&nbsp;</a></span>renewToken() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1414,6 +1417,44 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">newAgoraToken</td><td>声网 token。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">弃用:</a></b></dt><dd>已废弃，请使用 <a class="el" href="">renewToken(String, EMCallBack)</a> 替代.</dd></dl>
+
+</div>
+</div>
+<a id="af53bcd44f0f93d48d2863ea4342aa308" name="af53bcd44f0f93d48d2863ea4342aa308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af53bcd44f0f93d48d2863ea4342aa308">&#9670;&nbsp;</a></span>renewToken() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMClient.renewToken </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>newToken</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">@NonNull <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >更新 token。</p>
+<p >当用户利用 token 登录的情况下在 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_connection_listener.html">EMConnectionListener</a> 类中收到 token 即将过期事件的回调通知时，可调用该方法更新 token，避免因 token 失效产生的未知问题。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newToken</td><td>新token。 </td></tr>
+    <tr><td class="paramname">callback</td><td>EMCallback 回调函数,不能为空，更新token的结果将通过callback返回 </td></tr>
   </table>
   </dd>
 </dl>
