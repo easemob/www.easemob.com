@@ -38,8 +38,9 @@ var searchData=
   ['removewhitelistmembers_3afromchatroom_3aerror_3a_35',['removeWhiteListMembers:fromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#ad3b503db3693c0ccdf3ef2f22b81038b',1,'IEMChatroomManager-p']]],
   ['removewhitelistmembers_3afromgroup_3acompletion_3a_36',['removeWhiteListMembers:fromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a2acb3ccb85795f609896f370c180f78c',1,'IEMGroupManager-p']]],
   ['removewhitelistmembers_3afromgroup_3aerror_3a_37',['removeWhiteListMembers:fromGroup:error:',['../protocol_i_e_m_group_manager-p.html#a1a21fb6d8b3f8778f769fdbfdd1bb3ea',1,'IEMGroupManager-p']]],
-  ['renewtoken_3a_38',['renewToken:',['../interface_e_m_client.html#a98bb59170e1bc13af5093a2604e77e16',1,'EMClient']]],
-  ['reportmessagewithid_3atag_3areason_3acompletion_3a_39',['reportMessageWithId:tag:reason:completion:',['../protocol_i_e_m_chat_manager-p.html#a9db077be049b56849ec606de147d0f11',1,'IEMChatManager-p']]],
-  ['requesttojoinpublicgroup_3amessage_3acompletion_3a_40',['requestToJoinPublicGroup:message:completion:',['../protocol_i_e_m_group_manager-p.html#af1a96b745295f3ef01b5745079384106',1,'IEMGroupManager-p']]],
-  ['resendmessage_3aprogress_3acompletion_3a_41',['resendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#a50bac38b79c7015fd6a3e6db7e768b6a',1,'IEMChatManager-p']]]
+  ['renewtoken_3a_38',['renewToken:',['../interface_e_m_client.html#a5f9d08d4026d8f12020efc331753c386',1,'EMClient']]],
+  ['renewtoken_3acompletion_3a_39',['renewToken:completion:',['../interface_e_m_client.html#aa069628a16739d446bc66186e485bd41',1,'EMClient']]],
+  ['reportmessagewithid_3atag_3areason_3acompletion_3a_40',['reportMessageWithId:tag:reason:completion:',['../protocol_i_e_m_chat_manager-p.html#a9db077be049b56849ec606de147d0f11',1,'IEMChatManager-p']]],
+  ['requesttojoinpublicgroup_3amessage_3acompletion_3a_41',['requestToJoinPublicGroup:message:completion:',['../protocol_i_e_m_group_manager-p.html#af1a96b745295f3ef01b5745079384106',1,'IEMGroupManager-p']]],
+  ['resendmessage_3aprogress_3acompletion_3a_42',['resendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#a50bac38b79c7015fd6a3e6db7e768b6a',1,'IEMChatManager-p']]]
 ];
