@@ -61,7 +61,7 @@ var searchData=
   ['userdidjoingroup_3auser_3a_58',['userDidJoinGroup:user:',['../protocol_e_m_group_manager_delegate-p.html#a04f6d088bcc47056f80ad9d133dc9c59',1,'EMGroupManagerDelegate-p']]],
   ['userdidleavechatroom_3auser_3a_59',['userDidLeaveChatroom:user:',['../protocol_e_m_chatroom_manager_delegate-p.html#acd5c334bf17fde779940f077b58ed547',1,'EMChatroomManagerDelegate-p']]],
   ['userdidleavegroup_3auser_3a_60',['userDidLeaveGroup:user:',['../protocol_e_m_group_manager_delegate-p.html#a724340821f29143bd19b915c7d2ba201',1,'EMGroupManagerDelegate-p']]],
-  ['userid_61',['userId',['../interface_e_m_message_reaction_operation.html#af749bde26da11da15d048d7e68686b0c',1,'EMMessageReactionOperation::userId()'],['../interface_e_m_user_info.html#a426b190ce3d0bcadb19816b969d039b2',1,'EMUserInfo::userId()']]],
+  ['userid_61',['userId',['../interface_e_m_contact.html#a7dedadb80ed46163d2c59a0c3b6f28cb',1,'EMContact::userId()'],['../interface_e_m_message_reaction_operation.html#af749bde26da11da15d048d7e68686b0c',1,'EMMessageReactionOperation::userId()'],['../interface_e_m_user_info.html#a426b190ce3d0bcadb19816b969d039b2',1,'EMUserInfo::userId()']]],
   ['userinfomanager_62',['userInfoManager',['../interface_e_m_client.html#a6b2c243e87ee7e86ef1af863c1f90681',1,'EMClient']]],
   ['userlist_63',['userList',['../interface_e_m_message_reaction.html#aa9924364c1ecc875367d5c5fd079a12c',1,'EMMessageReaction']]],
   ['usernotificationcenter_3adidreceivenotificationresponse_3awithcompletionhandler_3a_64',['userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:',['../interface_e_m_local_notification_manager.html#a8b62afe6d50e92508e0fb23dbe84b3cf',1,'EMLocalNotificationManager']]],

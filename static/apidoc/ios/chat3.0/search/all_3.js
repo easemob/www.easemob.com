@@ -36,7 +36,7 @@ var searchData=
   ['conversationlistdidupdate_3a_33',['conversationListDidUpdate:',['../protocol_e_m_chat_manager_delegate-p.html#aefe59b13d208725ba348c6a9e2e1af85',1,'EMChatManagerDelegate-p']]],
   ['conversationtype_34',['conversationType',['../interface_e_m_silent_mode_result.html#a7a398c2a27d1d9c57c95364b29db9037',1,'EMSilentModeResult']]],
   ['count_35',['count',['../interface_e_m_message_reaction.html#aebfcd84ca0c4cb14396e2e8583f3f94d',1,'EMMessageReaction::count()'],['../interface_e_m_page_result.html#a6f275137b861de012056edf0986a3908',1,'EMPageResult::count()']]],
-  ['createat_36',['createAt',['../interface_e_m_chat_thread.html#a084d26335d04808dc2d51a92426e2d86',1,'EMChatThread']]],
+  ['createat_36',['createAt',['../interface_e_m_chat_thread.html#a8dc591885f2ec97e15d59bc53fb3c952',1,'EMChatThread']]],
   ['createchatroomwithsubject_3adescription_3ainvitees_3amessage_3amaxmemberscount_3acompletion_3a_37',['createChatroomWithSubject:description:invitees:message:maxMembersCount:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a9a9e6002fc9b18e5608246ac7a68af2c',1,'IEMChatroomManager-p']]],
   ['createchatroomwithsubject_3adescription_3ainvitees_3amessage_3amaxmemberscount_3aerror_3a_38',['createChatroomWithSubject:description:invitees:message:maxMembersCount:error:',['../protocol_i_e_m_chatroom_manager-p.html#af0a1c68e882cbbd81defb3d988f7f427',1,'IEMChatroomManager-p']]],
   ['createchatthread_3amessageid_3aparentid_3acompletion_3a_39',['createChatThread:messageId:parentId:completion:',['../protocol_i_e_m_thread_manager-p.html#a37d9a0e16c76bd9430ba32715ea76666',1,'IEMThreadManager-p']]],
