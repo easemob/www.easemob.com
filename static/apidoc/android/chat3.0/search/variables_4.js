@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['fail_0',['FAIL',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html#accc338930c5e91b3a32b1aa895ec6518',1,'com::hyphenate::chat::EMMessage::Status']]],
-  ['failed_1',['FAILED',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body_1_1_e_m_download_status.html#a47b5a25870732ccbc1d88d4b51329fe7',1,'com::hyphenate::chat::EMFileMessageBody::EMDownloadStatus']]],
-  ['file_2',['FILE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a3342887dd01c4f0b431637fc9ccb1f50',1,'com.hyphenate.chat.EMMessage.Type.FILE()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#a152fc789b6a8b330397b1bf54fe92c3f',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.FILE()']]],
-  ['file_5fcontent_5fimproper_3',['FILE_CONTENT_IMPROPER',['../classcom_1_1hyphenate_1_1_e_m_error.html#a20058bcfa7597e743d456ae39cc2e24c',1,'com::hyphenate::EMError']]],
-  ['file_5fdelete_5ffailed_4',['FILE_DELETE_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a62a0b701ddfeff5b28cf5cf2fa1f090a',1,'com::hyphenate::EMError']]],
-  ['file_5fdownload_5ffailed_5',['FILE_DOWNLOAD_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a0ed081a4d17b21982d4427da8dff8ecb',1,'com::hyphenate::EMError']]],
-  ['file_5finvalid_6',['FILE_INVALID',['../classcom_1_1hyphenate_1_1_e_m_error.html#a9a2d473a2ef681dc3d27a7b5a74cd006',1,'com::hyphenate::EMError']]],
-  ['file_5fnot_5ffound_7',['FILE_NOT_FOUND',['../classcom_1_1hyphenate_1_1_e_m_error.html#a789d29bfbc18af52b711103af9e2a2d3',1,'com::hyphenate::EMError']]],
-  ['file_5ftoo_5flarge_8',['FILE_TOO_LARGE',['../classcom_1_1hyphenate_1_1_e_m_error.html#a08657b1c59175bb226403244d6409307',1,'com::hyphenate::EMError']]],
-  ['file_5fupload_5ffailed_9',['FILE_UPLOAD_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ad2311cd2907213d8df4d3292ef6aa296',1,'com::hyphenate::EMError']]]
+  ['em_5fno_5ferror_0',['EM_NO_ERROR',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa7545e1abb745e45ea98288db422d9a4',1,'com::hyphenate::EMError']]],
+  ['emgroupstyleprivatemembercaninvite_1',['EMGroupStylePrivateMemberCanInvite',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#a1f51e52fae7a25b740ec486282335d30',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
+  ['emgroupstyleprivateonlyownerinvite_2',['EMGroupStylePrivateOnlyOwnerInvite',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#a059981b5d40681b7f3c42b5aa6ea4967',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
+  ['emgroupstylepublicjoinneedapproval_3',['EMGroupStylePublicJoinNeedApproval',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#af241f64d82e50c11a644b6bfb221cd0e',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
+  ['emgroupstylepublicopenjoin_4',['EMGroupStylePublicOpenJoin',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#a7e715664b7cf519ab6a4734f013a619c',1,'com::hyphenate::chat::EMGroupManager::EMGroupStyle']]],
+  ['exceed_5fservice_5flimit_5',['EXCEED_SERVICE_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a86230c3342586028bbe73b36aba0934c',1,'com::hyphenate::EMError']]],
+  ['extfield_6',['extField',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_options.html#a4eff1fc24b638e768b1ae00395f60b37',1,'com::hyphenate::chat::EMGroupOptions']]]
 ];
