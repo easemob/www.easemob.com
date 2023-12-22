@@ -12,5 +12,6 @@ var searchData=
   ['blockmembers_3afromgroup_3acompletion_3a_9',['blockMembers:fromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a048543934a19754b79ed05f3f21a135b',1,'IEMGroupManager-p']]],
   ['blockoccupants_3afromgroup_3aerror_3a_10',['blockOccupants:fromGroup:error:',['../protocol_i_e_m_group_manager-p.html#a1c57b4922c8419458be961dd1fd34344',1,'IEMGroupManager-p']]],
   ['body_11',['body',['../interface_e_m_chat_message.html#afa78db9d43f69fd65879aa902115455f',1,'EMChatMessage']]],
-  ['buildingname_12',['buildingName',['../interface_e_m_location_message_body.html#a809d3ba9da893b3275707bc0fec93f4b',1,'EMLocationMessageBody']]]
+  ['broadcast_12',['broadcast',['../interface_e_m_chat_message.html#ae270c2da86b6797658fe447ec33dc304',1,'EMChatMessage']]],
+  ['buildingname_13',['buildingName',['../interface_e_m_location_message_body.html#a809d3ba9da893b3275707bc0fec93f4b',1,'EMLocationMessageBody']]]
 ];

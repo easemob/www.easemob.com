@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.2.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.3.0</span>
    </div>
   </td>
  </tr>
@@ -179,6 +179,12 @@ $(function() {
 <tr class="separator:a3a61731104e7609fcf531b0bdff7a92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10cb84d7a8240d932ab65b3402ed3a73"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a10cb84d7a8240d932ab65b3402ed3a73">fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion:</a></td></tr>
 <tr class="separator:a10cb84d7a8240d932ab65b3402ed3a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e33319b36aad99f98994f08bcb490c8"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a0e33319b36aad99f98994f08bcb490c8">addConversationMark:mark:completion:</a></td></tr>
+<tr class="separator:a0e33319b36aad99f98994f08bcb490c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e5144febac439d392700fdabc827a1"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a82e5144febac439d392700fdabc827a1">removeConversationMark:mark:completion:</a></td></tr>
+<tr class="separator:a82e5144febac439d392700fdabc827a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0dfccc5ece53e7260cb774fafb7e11f"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#ac0dfccc5ece53e7260cb774fafb7e11f">getConversationsFromServerWithCursor:filter:completion:</a></td></tr>
+<tr class="separator:ac0dfccc5ece53e7260cb774fafb7e11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >聊天相关操作代理协议。</p>
@@ -226,6 +232,58 @@ $(function() {
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0e33319b36aad99f98994f08bcb490c8" name="a0e33319b36aad99f98994f08bcb490c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e33319b36aad99f98994f08bcb490c8">&#9670;&nbsp;</a></span>addConversationMark:mark:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) addConversationMark: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; NSString * &gt; *_Nonnull)&#160;</td>
+          <td class="paramname"><em>conversationIds</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">mark:</td>
+          <td></td>
+          <td class="paramtype">(EMMarkType)&#160;</td>
+          <td class="paramname"><em>mark</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable aError))&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >标记会话。</p>
+<p >调用该方法会同时为本地和服务器端的会话添加标记。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conversationIds</td><td>会话 ID 列表。 </td></tr>
+    <tr><td class="paramname">mark</td><td>要添加的会话标记。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
@@ -1435,6 +1493,57 @@ $(function() {
 
 </div>
 </div>
+<a id="ac0dfccc5ece53e7260cb774fafb7e11f" name="ac0dfccc5ece53e7260cb774fafb7e11f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0dfccc5ece53e7260cb774fafb7e11f">&#9670;&nbsp;</a></span>getConversationsFromServerWithCursor:filter:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) getConversationsFromServerWithCursor: </td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nullable)&#160;</td>
+          <td class="paramname"><em>cursor</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">filter:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_conversation_filter.html">EMConversationFilter</a> *_Nonnull)&#160;</td>
+          <td class="paramname"><em>filter</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(nonnull void(^)(<a class="el" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt; <a class="el" href="interface_e_m_conversation.html">EMConversation</a> * &gt; *_Nullable result, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable error))&#160;</td>
+          <td class="paramname"><em>completionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >根据会话过滤类从服务器分页查询会话列表。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cursor</td><td>查询的开始位置。若传入 <code>nil</code> 或 <code>@""</code>，SDK 从最新标记操作的会话开始获取。 </td></tr>
+    <tr><td class="paramname">filter</td><td>查询选项，包括会话标记和每页获取的会话列表条数。 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成的回调，返回会话列表和用于下一次获取数据的 cursor。当 cursor 为 空字符串时，表示已获取全部数据。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab960513636ad6c85917513f8ec54d8a6" name="ab960513636ad6c85917513f8ec54d8a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab960513636ad6c85917513f8ec54d8a6">&#9670;&nbsp;</a></span>getConversationsFromServerWithCursor:pageSize:completion:</h2>
 
@@ -2296,6 +2405,58 @@ $(function() {
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aMessageId</td><td>消息 ID。 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a82e5144febac439d392700fdabc827a1" name="a82e5144febac439d392700fdabc827a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e5144febac439d392700fdabc827a1">&#9670;&nbsp;</a></span>removeConversationMark:mark:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) removeConversationMark: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; NSString * &gt; *_Nonnull)&#160;</td>
+          <td class="paramname"><em>conversationIds</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">mark:</td>
+          <td></td>
+          <td class="paramtype">(EMMarkType)&#160;</td>
+          <td class="paramname"><em>mark</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable aError))&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >取消标记会话。</p>
+<p >调用该方法会同时取消本地和服务器端的会话标记。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conversationIds</td><td>会话 ID 列表。 </td></tr>
+    <tr><td class="paramname">mark</td><td>要移除的会话标记。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
