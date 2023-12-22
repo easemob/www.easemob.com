@@ -16,13 +16,14 @@ var searchData=
   ['initwithlatitude_3alongitude_3aaddress_3a_13',['initWithLatitude:longitude:address:',['../interface_e_m_location_message_body.html#a6943be3f8bb13f76df306439c9e3e365',1,'EMLocationMessageBody']]],
   ['initwithlatitude_3alongitude_3aaddress_3abuildingname_3a_14',['initWithLatitude:longitude:address:buildingName:',['../interface_e_m_location_message_body.html#ae13d70908b632b69470cb91226c9cc54',1,'EMLocationMessageBody']]],
   ['initwithlocalpath_3adisplayname_3a_15',['initWithLocalPath:displayName:',['../interface_e_m_file_message_body.html#a68a80450a57a84f021f3511f8c7f816b',1,'EMFileMessageBody']]],
-  ['initwithtext_3a_16',['initWithText:',['../interface_e_m_text_message_body.html#a2027db773e47672d6a0be1c960181f69',1,'EMTextMessageBody']]],
-  ['initwithtitle_3asummary_3acompatibletext_3amessageidlist_3a_17',['initWithTitle:summary:compatibleText:messageIdList:',['../interface_e_m_combine_message_body.html#a46147215ef7433601080374d4b58f44a',1,'EMCombineMessageBody']]],
-  ['initwithuserid_3aremark_3a_18',['initWithUserId:remark:',['../interface_e_m_contact.html#a57ae5eb651af157b3ba5b8be58a12de9',1,'EMContact']]],
-  ['insertmessage_3aerror_3a_19',['insertMessage:error:',['../interface_e_m_conversation.html#a61c633ede303968a9d66661be6c6dd6e',1,'EMConversation']]],
-  ['ismemberinmutelistfromserverwithchatroomid_3acompletion_3a_20',['isMemberInMuteListFromServerWithChatroomId:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a2ac05d39ca48c03687c97ddd3f1ca657',1,'IEMChatroomManager-p']]],
-  ['ismemberinwhitelistfromserverwithchatroomid_3acompletion_3a_21',['isMemberInWhiteListFromServerWithChatroomId:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a6575c5e7ee5272420b2d50ceffe9092c',1,'IEMChatroomManager-p']]],
-  ['ismemberinwhitelistfromserverwithchatroomid_3aerror_3a_22',['isMemberInWhiteListFromServerWithChatroomId:error:',['../protocol_i_e_m_chatroom_manager-p.html#ac55911468a25a6b9fdc971b770dfa8ed',1,'IEMChatroomManager-p']]],
-  ['ismemberinwhitelistfromserverwithgroupid_3acompletion_3a_23',['isMemberInWhiteListFromServerWithGroupId:completion:',['../protocol_i_e_m_group_manager-p.html#a939b632150e3d8bf0a71ee804cd521ea',1,'IEMGroupManager-p']]],
-  ['ismemberinwhitelistfromserverwithgroupid_3aerror_3a_24',['isMemberInWhiteListFromServerWithGroupId:error:',['../protocol_i_e_m_group_manager-p.html#ab30fd4b303a77ab79bf7498b9a7e3b83',1,'IEMGroupManager-p']]]
+  ['initwithmark_3apagesize_3a_16',['initWithMark:pageSize:',['../interface_e_m_conversation_filter.html#a2235563d3b1bf7f7c6db9354da2416f8',1,'EMConversationFilter']]],
+  ['initwithtext_3a_17',['initWithText:',['../interface_e_m_text_message_body.html#a2027db773e47672d6a0be1c960181f69',1,'EMTextMessageBody']]],
+  ['initwithtitle_3asummary_3acompatibletext_3amessageidlist_3a_18',['initWithTitle:summary:compatibleText:messageIdList:',['../interface_e_m_combine_message_body.html#a46147215ef7433601080374d4b58f44a',1,'EMCombineMessageBody']]],
+  ['initwithuserid_3aremark_3a_19',['initWithUserId:remark:',['../interface_e_m_contact.html#a57ae5eb651af157b3ba5b8be58a12de9',1,'EMContact']]],
+  ['insertmessage_3aerror_3a_20',['insertMessage:error:',['../interface_e_m_conversation.html#a61c633ede303968a9d66661be6c6dd6e',1,'EMConversation']]],
+  ['ismemberinmutelistfromserverwithchatroomid_3acompletion_3a_21',['isMemberInMuteListFromServerWithChatroomId:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a2ac05d39ca48c03687c97ddd3f1ca657',1,'IEMChatroomManager-p']]],
+  ['ismemberinwhitelistfromserverwithchatroomid_3acompletion_3a_22',['isMemberInWhiteListFromServerWithChatroomId:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a6575c5e7ee5272420b2d50ceffe9092c',1,'IEMChatroomManager-p']]],
+  ['ismemberinwhitelistfromserverwithchatroomid_3aerror_3a_23',['isMemberInWhiteListFromServerWithChatroomId:error:',['../protocol_i_e_m_chatroom_manager-p.html#ac55911468a25a6b9fdc971b770dfa8ed',1,'IEMChatroomManager-p']]],
+  ['ismemberinwhitelistfromserverwithgroupid_3acompletion_3a_24',['isMemberInWhiteListFromServerWithGroupId:completion:',['../protocol_i_e_m_group_manager-p.html#a939b632150e3d8bf0a71ee804cd521ea',1,'IEMGroupManager-p']]],
+  ['ismemberinwhitelistfromserverwithgroupid_3aerror_3a_25',['isMemberInWhiteListFromServerWithGroupId:error:',['../protocol_i_e_m_group_manager-p.html#ab30fd4b303a77ab79bf7498b9a7e3b83',1,'IEMGroupManager-p']]]
 ];
