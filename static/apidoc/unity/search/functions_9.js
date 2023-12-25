@@ -10,7 +10,7 @@ var searchData=
   ['loadmessageswithmsgtype_7',['LoadMessagesWithMsgType',['../class_agora_chat_1_1_conversation.html#ac4f9f2ae3b89b2be2a1733472ad81573',1,'AgoraChat::Conversation']]],
   ['loadmessageswithtime_8',['LoadMessagesWithTime',['../class_agora_chat_1_1_conversation.html#af332546d9b72fba10b9c0bb678b1bf73',1,'AgoraChat::Conversation']]],
   ['locationbody_9',['LocationBody',['../class_agora_chat_1_1_message_body_1_1_location_body.html#a351b3f8e88026be6f9af2a0d6840dfb1',1,'AgoraChat::MessageBody::LocationBody']]],
-  ['login_10',['Login',['../class_agora_chat_1_1_s_d_k_client.html#a8c981ed00939c299fe475a8a7af17d7e',1,'AgoraChat::SDKClient']]],
-  ['loginwithagoratoken_11',['LoginWithAgoraToken',['../class_agora_chat_1_1_s_d_k_client.html#a66ed705ea3ab6e9af1c410393f297ac0',1,'AgoraChat::SDKClient']]],
+  ['login_10',['Login',['../class_agora_chat_1_1_s_d_k_client.html#a1943fdf5f6b195946f8ba8113ffdbdf6',1,'AgoraChat::SDKClient']]],
+  ['loginwithagoratoken_11',['LoginWithAgoraToken',['../class_agora_chat_1_1_s_d_k_client.html#a03d3ac54a4532956de1d2c7718eae099',1,'AgoraChat::SDKClient']]],
   ['logout_12',['Logout',['../class_agora_chat_1_1_s_d_k_client.html#a98b67e590dbe9f6253449df9e82dd0c8',1,'AgoraChat::SDKClient']]]
 ];

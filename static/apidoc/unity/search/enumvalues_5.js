@@ -20,9 +20,10 @@ var searchData=
   ['group_5fjoin_17',['GROUP_JOIN',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68ab083b3206eab66835d963e58457c415d',1,'AgoraChat']]],
   ['group_5fkick_18',['GROUP_KICK',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a68139da03800aead0ea6e2dd16052d7f',1,'AgoraChat']]],
   ['group_5fleave_19',['GROUP_LEAVE',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a58cd701fa74ff4fa649ae70d1c4539d5',1,'AgoraChat']]],
-  ['group_5fremove_5fadmin_20',['GROUP_REMOVE_ADMIN',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a711a4b14b9f52dee0838a48fdc7e45d1',1,'AgoraChat']]],
-  ['group_5fremove_5fall_5fban_21',['GROUP_REMOVE_ALL_BAN',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a8f09d1bbdffbc0b557761165f2ac3c59',1,'AgoraChat']]],
-  ['group_5fremove_5fmute_22',['GROUP_REMOVE_MUTE',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a41e9fa28d4dc6a6472b0c22dbe2d77b6',1,'AgoraChat']]],
-  ['group_5fremove_5fuser_5fwhite_5flist_23',['GROUP_REMOVE_USER_WHITE_LIST',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a421f59e616ad3dc10ee968bef846954e',1,'AgoraChat']]],
-  ['group_5funblock_24',['GROUP_UNBLOCK',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68ae2b46e4516719fc023d009b4b2a0a5fc',1,'AgoraChat']]]
+  ['group_5fmember_5fmetadata_5fchanged_20',['GROUP_MEMBER_METADATA_CHANGED',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68ac7bfb2a1f21df333bcbaa0443ab62cbd',1,'AgoraChat']]],
+  ['group_5fremove_5fadmin_21',['GROUP_REMOVE_ADMIN',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a711a4b14b9f52dee0838a48fdc7e45d1',1,'AgoraChat']]],
+  ['group_5fremove_5fall_5fban_22',['GROUP_REMOVE_ALL_BAN',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a8f09d1bbdffbc0b557761165f2ac3c59',1,'AgoraChat']]],
+  ['group_5fremove_5fmute_23',['GROUP_REMOVE_MUTE',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a41e9fa28d4dc6a6472b0c22dbe2d77b6',1,'AgoraChat']]],
+  ['group_5fremove_5fuser_5fwhite_5flist_24',['GROUP_REMOVE_USER_WHITE_LIST',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a421f59e616ad3dc10ee968bef846954e',1,'AgoraChat']]],
+  ['group_5funblock_25',['GROUP_UNBLOCK',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68ae2b46e4516719fc023d009b4b2a0a5fc',1,'AgoraChat']]]
 ];

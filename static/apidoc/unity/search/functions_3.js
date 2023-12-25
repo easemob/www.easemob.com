@@ -11,12 +11,13 @@ var searchData=
   ['deletegroupmembers_8',['DeleteGroupMembers',['../class_agora_chat_1_1_group_manager.html#a23be4ed5fdac1475a13764f43bccab42',1,'AgoraChat::GroupManager']]],
   ['deletegroupsharedfile_9',['DeleteGroupSharedFile',['../class_agora_chat_1_1_group_manager.html#a974652b09b5b18031d87a87072bf1bbe',1,'AgoraChat::GroupManager']]],
   ['deletemessage_10',['DeleteMessage',['../class_agora_chat_1_1_conversation.html#a10097ee181e1d9329aff5a5147f078e8',1,'AgoraChat::Conversation']]],
-  ['deletemultidevicedelegate_11',['DeleteMultiDeviceDelegate',['../class_agora_chat_1_1_s_d_k_client.html#a5604930318b6d417e3022cf1795a77f1',1,'AgoraChat::SDKClient']]],
-  ['deleteroommembers_12',['DeleteRoomMembers',['../class_agora_chat_1_1_room_manager.html#ab35678817276465e5f38373470ed3b60',1,'AgoraChat::RoomManager']]],
-  ['destroygroup_13',['DestroyGroup',['../class_agora_chat_1_1_group_manager.html#a494e9646b4d7f04f60f908479fa2bd50',1,'AgoraChat::GroupManager']]],
-  ['destroyroom_14',['DestroyRoom',['../class_agora_chat_1_1_room_manager.html#ad450a0d729ef2f7581b059296e3235e9',1,'AgoraChat::RoomManager']]],
-  ['destroythread_15',['DestroyThread',['../class_agora_chat_1_1_chat_thread_manager.html#a1f2c439a6047e06974e9312b201e6409',1,'AgoraChat::ChatThreadManager']]],
-  ['downloadattachment_16',['DownloadAttachment',['../class_agora_chat_1_1_chat_manager.html#a3d4086e93e2e0c2c678bbfc781e64663',1,'AgoraChat::ChatManager']]],
-  ['downloadgroupsharedfile_17',['DownloadGroupSharedFile',['../class_agora_chat_1_1_group_manager.html#a13a99648f3519d0c2266a35f158ea643',1,'AgoraChat::GroupManager']]],
-  ['downloadthumbnail_18',['DownloadThumbnail',['../class_agora_chat_1_1_chat_manager.html#a331c7584be93fe18b46865c1cbab1f31',1,'AgoraChat::ChatManager']]]
+  ['deletemessages_11',['DeleteMessages',['../class_agora_chat_1_1_conversation.html#abfe08ca8cc1c824d095150dec8045e9c',1,'AgoraChat::Conversation']]],
+  ['deletemultidevicedelegate_12',['DeleteMultiDeviceDelegate',['../class_agora_chat_1_1_s_d_k_client.html#a5604930318b6d417e3022cf1795a77f1',1,'AgoraChat::SDKClient']]],
+  ['deleteroommembers_13',['DeleteRoomMembers',['../class_agora_chat_1_1_room_manager.html#ab35678817276465e5f38373470ed3b60',1,'AgoraChat::RoomManager']]],
+  ['destroygroup_14',['DestroyGroup',['../class_agora_chat_1_1_group_manager.html#a494e9646b4d7f04f60f908479fa2bd50',1,'AgoraChat::GroupManager']]],
+  ['destroyroom_15',['DestroyRoom',['../class_agora_chat_1_1_room_manager.html#ad450a0d729ef2f7581b059296e3235e9',1,'AgoraChat::RoomManager']]],
+  ['destroythread_16',['DestroyThread',['../class_agora_chat_1_1_chat_thread_manager.html#a1f2c439a6047e06974e9312b201e6409',1,'AgoraChat::ChatThreadManager']]],
+  ['downloadattachment_17',['DownloadAttachment',['../class_agora_chat_1_1_chat_manager.html#a3d4086e93e2e0c2c678bbfc781e64663',1,'AgoraChat::ChatManager']]],
+  ['downloadgroupsharedfile_18',['DownloadGroupSharedFile',['../class_agora_chat_1_1_group_manager.html#a13a99648f3519d0c2266a35f158ea643',1,'AgoraChat::GroupManager']]],
+  ['downloadthumbnail_19',['DownloadThumbnail',['../class_agora_chat_1_1_chat_manager.html#a331c7584be93fe18b46865c1cbab1f31',1,'AgoraChat::ChatManager']]]
 ];

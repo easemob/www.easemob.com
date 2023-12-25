@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.1.0</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.2.0</span>
    </div>
   </td>
  </tr>
@@ -123,6 +123,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aa5ca626d7f006a23f3b5d813e8f17b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99cf2154375436d0d4075866b2675c81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a99cf2154375436d0d4075866b2675c81">OnSpecificationChangedFromGroup</a> (<a class="el" href="class_agora_chat_1_1_group.html">Group</a> group)</td></tr>
 <tr class="separator:a99cf2154375436d0d4075866b2675c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addab392163b9e1ebc07bd2bacd52bd4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#addab392163b9e1ebc07bd2bacd52bd4e">OnUpdateMemberAttributesFromGroup</a> (string groupId, string userId, Dictionary&lt; string, string &gt; attributes, string from)</td></tr>
+<tr class="separator:addab392163b9e1ebc07bd2bacd52bd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >群组管理器回调接口。 </p>
@@ -1044,10 +1046,61 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >群详情已有改动，需调用获取群详情api <code><a class="el" href="">GetGroupSpecificationFromServer(string, ValueCallBack&lt;Group&gt;)</a></code> 得到最新群信息</p>
+<p >群详情发生了变更。</p>
+<p >需调用获取群详情方法 <code><a class="el" href="">GetGroupSpecificationFromServer(string, ValueCallBack&lt;Group&gt;)</a></code> 从服务器获得最新的群组详情。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">group</td><td>群组实例。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="addab392163b9e1ebc07bd2bacd52bd4e" name="addab392163b9e1ebc07bd2bacd52bd4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addab392163b9e1ebc07bd2bacd52bd4e">&#9670;&nbsp;</a></span>OnUpdateMemberAttributesFromGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.IGroupManagerDelegate.OnUpdateMemberAttributesFromGroup </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>groupId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Dictionary&lt; string, string &gt;&#160;</td>
+          <td class="paramname"><em>attributes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >群成员自定义属性发生了变更。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">userId</td><td>自定义属性变更的群成员的用户 ID。 </td></tr>
+    <tr><td class="paramname">attributes</td><td>修改后的自定义属性。 </td></tr>
+    <tr><td class="paramname">from</td><td>操作者的用户 ID。 </td></tr>
   </table>
   </dd>
 </dl>
