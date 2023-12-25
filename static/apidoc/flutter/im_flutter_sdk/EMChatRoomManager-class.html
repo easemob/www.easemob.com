@@ -11,7 +11,7 @@
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
   
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
@@ -21,12 +21,12 @@
 </head>
 
 
-<body data-base-href="../" data-using-base-href="false">
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
 
 <div id="overlay-under-drawer"></div>
 
 <header id="title">
-  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
     <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
@@ -36,15 +36,27 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
 </header>
-
 <main>
 
-
-  <div id="dartdoc-main-content" class="main-content">
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="im_flutter_sdk&#47;im_flutter_sdk-library-sidebar.html"
+      data-below-sidebar="im_flutter_sdk&#47;EMChatRoomManager-class-sidebar.html">
       <div>
 <h1><span class="kind-class">EMChatRoomManager</span> class 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  
 </h1></div>
 
@@ -52,31 +64,15 @@
 <section class="desc markdown">
   <p>聊天室管理类，负责聊天室加入和退出、聊天室列表获取以及成员权限管理等。
 比如，加入聊天室：</p>
-<pre class="language-dart"><code class="language-dart">    try {
-        await EMClient.getInstance.chatRoomManager.joinChatRoom(chatRoomId);
-    } on EMError catch (e) {
-        debugPrint(e.toString());
-    }
+<pre class="language-dart"><code class="language-dart">  try {
+      await EMClient.getInstance.chatRoomManager.joinChatRoom(chatRoomId);
+  } on EMError catch (e) {
+      debugPrint(e.toString());
+  }
 </code></pre>
 </section>
 
 
-    <section>
-      <dl class="dl-horizontal">
-        
-
-        
-        
-
-
-        <dt>Available Extensions</dt>
-        <dd><ul class="comma-separated clazz-relationships">
-          <li><a href="../im_flutter_sdk/ChatRoomManagerDeprecated.html">ChatRoomManagerDeprecated</a></li>
-        </ul></dd>
-
-        
-      </dl>
-    </section>
 
     
 
@@ -91,7 +87,7 @@
 </dt>
 <dd class="inherited">
   The hash code for this object.
-  <div class="features">read-only, inherited</div>
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -102,7 +98,7 @@
 </dt>
 <dd class="inherited">
   A representation of the runtime type of the object.
-  <div class="features">read-only, inherited</div>
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -123,12 +119,7 @@
 
 </dt>
 <dd>
-  Sets custom chat room attributes.
-Param <code>roomId</code> The chat room ID.
-Param <code>attributes</code> The chat room attributes to add. The attributes are in key-value format.
-Note:
-In a key-value pair, the key is the attribute name that can contain 128 characters at most; the value is the attribute value that cannot exceed 4096 characters.
-A chat room can have a maximum of 100 custom attributes and the total length of custom chat room attributes cannot exceed 10 GB for each app. Attribute keys support the following character sets:
+  设置自定义聊天室属性。
   
 
 </dd>
@@ -154,7 +145,7 @@ A chat room can have a maximum of 100 custom attributes and the total length of 
 
 </dt>
 <dd>
-  添加 <a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a> 。
+  添加房间事件处理程序。调用此方法后，您可以在新的房间事件到达时处理它们。
   
 
 </dd>
@@ -173,7 +164,7 @@ A chat room can have a maximum of 100 custom attributes and the total length of 
 </dd>
 
         <dt id="blockChatRoomMembers" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/blockChatRoomMembers.html">blockChatRoomMembers</a></span><span class="signature">(<wbr><span class="parameter" id="blockChatRoomMembers-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="blockChatRoomMembers-param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a></span> <span class="parameter-name">members</span></span>)
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/blockChatRoomMembers.html">blockChatRoomMembers</a></span><span class="signature">(<wbr><span class="parameter" id="blockChatRoomMembers-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="blockChatRoomMembers-param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
@@ -232,7 +223,7 @@ A chat room can have a maximum of 100 custom attributes and the total length of 
 
 </dt>
 <dd>
-  清除所有的 <a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a> 。
+  清除所有聊天室事件。
   
 
 </dd>
@@ -290,18 +281,14 @@ A chat room can have a maximum of 100 custom attributes and the total length of 
 </dd>
 
         <dt id="fetchChatRoomAttributes" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomAttributes.html">fetchChatRoomAttributes</a></span><span class="signature">(<wbr><span class="parameter" id="fetchChatRoomAttributes-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="fetchChatRoomAttributes-param-keys"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">keys</span></span>)
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomAttributes.html">fetchChatRoomAttributes</a></span><span class="signature">(<wbr><span class="parameter" id="fetchChatRoomAttributes-param-roomId">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="fetchChatRoomAttributes-param-keys"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">keys</span>}</span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  Gets the list of custom chat room attributes based on the attribute key list.
-Param <code>roomId</code> The chat room ID.
-Param <code>keys</code> The key list of attributes to get. If you set it as <code>null</code> or leave it empty, this method retrieves all custom attributes.
-<strong>Return</strong> The chat room attributes in key-value pairs.
-<strong>Throws</strong> A description of the exception. See <a href="../im_flutter_sdk/EMError-class.html">EMError</a>.
+  根据属性键列表获取自定义聊天室属性的列表。
   
 
 </dd>
@@ -392,7 +379,7 @@ Param <code>keys</code> The key list of attributes to get. If you set it as <cod
 
 </dt>
 <dd>
-  获取 <a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a> 。
+  获取聊天室事件。
   
 
 </dd>
@@ -418,7 +405,7 @@ Param <code>keys</code> The key list of attributes to get. If you set it as <cod
 
 </dt>
 <dd>
-  加入聊天室。
+  加入聊天室
   
 
 </dd>
@@ -470,8 +457,8 @@ Param <code>keys</code> The key list of attributes to get. If you set it as <cod
 
 </dt>
 <dd class="inherited">
-  Invoked when a non-existent method or property is accessed.
-  <div class="features">inherited</div>
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -483,12 +470,7 @@ Param <code>keys</code> The key list of attributes to get. If you set it as <cod
 
 </dt>
 <dd>
-  Removes custom chat room attributes.
-Param <code>roomId</code> The chat room ID.
-Param <code>keys</code> The keys of the custom chat room attributes to remove.
-Param <code>force</code> Whether to remove the attributes with same key set by others.
-<strong>Return</strong> <code>failureKeys map</code> is returned in key-value format, where the key is the attribute key and the value is the reason for the failure.
-<strong>Throws</strong> A description of the exception. See <a href="../im_flutter_sdk/EMError-class.html">EMError</a>.
+  删除自定义聊天室属性。
   
 
 </dd>
@@ -527,7 +509,7 @@ Param <code>force</code> Whether to remove the attributes with same key set by o
 
 </dt>
 <dd>
-  移除 <a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a> 。
+  移除聊天室事件
   
 
 </dd>
@@ -554,12 +536,12 @@ Param <code>force</code> Whether to remove the attributes with same key set by o
 </dt>
 <dd class="inherited">
   A string representation of this object.
-  <div class="features">inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
         <dt id="unBlockChatRoomMembers" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/unBlockChatRoomMembers.html">unBlockChatRoomMembers</a></span><span class="signature">(<wbr><span class="parameter" id="unBlockChatRoomMembers-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="unBlockChatRoomMembers-param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a></span> <span class="parameter-name">members</span></span>)
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoomManager/unBlockChatRoomMembers.html">unBlockChatRoomMembers</a></span><span class="signature">(<wbr><span class="parameter" id="unBlockChatRoomMembers-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="unBlockChatRoomMembers-param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
@@ -627,7 +609,7 @@ Param <code>force</code> Whether to remove the attributes with same key set by o
 </dt>
 <dd class="inherited">
   The equality operator.
-  <div class="features">inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -641,178 +623,25 @@ Param <code>force</code> Whether to remove the attributes with same key set by o
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../index.html">im_flutter_sdk</a></li>
-  <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
-  <li class="self-crumb">EMChatRoomManager class</li>
+    <li><a href="../index.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li class="self-crumb">EMChatRoomManager class</li>
 </ol>
 
 
-    <h5>im_flutter_sdk library</h5>
-    <ol>
-  <li class="section-title"><a href="../im_flutter_sdk/im_flutter_sdk-library.html#classes">Classes</a></li>
-  <li><a href="../im_flutter_sdk/AreaCode-class.html">AreaCode</a></li>
-  <li><a href="../im_flutter_sdk/ChatSilentModeParam-class.html">ChatSilentModeParam</a></li>
-  <li><a href="../im_flutter_sdk/ChatSilentModeResult-class.html">ChatSilentModeResult</a></li>
-  <li><a href="../im_flutter_sdk/ChatSilentModeTime-class.html">ChatSilentModeTime</a></li>
-  <li><a href="../im_flutter_sdk/EMChatEventHandler-class.html">EMChatEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMChatManagerListener-class.html">EMChatManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMChatRoom-class.html">EMChatRoom</a></li>
-  <li><a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMChatRoomManager-class.html">EMChatRoomManager</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMChatRoomManagerListener-class.html">EMChatRoomManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></li>
-  <li><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></li>
-  <li><a href="../im_flutter_sdk/EMChatThreadEventHandler-class.html">EMChatThreadEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMChatThreadManager-class.html">EMChatThreadManager</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMChatThreadManagerListener-class.html">EMChatThreadManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMClient-class.html">EMClient</a></li>
-  <li><a href="../im_flutter_sdk/EMCmdMessageBody-class.html">EMCmdMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMConnectionEventHandler-class.html">EMConnectionEventHandler</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMConnectionListener-class.html">EMConnectionListener</a></li>
-  <li><a href="../im_flutter_sdk/EMContactEventHandler-class.html">EMContactEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMContactManager-class.html">EMContactManager</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMContactManagerListener-class.html">EMContactManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMConversation-class.html">EMConversation</a></li>
-  <li><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMCustomListener-class.html">EMCustomListener</a></li>
-  <li><a href="../im_flutter_sdk/EMCustomMessageBody-class.html">EMCustomMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMDeviceInfo-class.html">EMDeviceInfo</a></li>
-  <li><a href="../im_flutter_sdk/EMDownloadCallback-class.html">EMDownloadCallback</a></li>
-  <li><a href="../im_flutter_sdk/EMError-class.html">EMError</a></li>
-  <li><a href="../im_flutter_sdk/EMFileMessageBody-class.html">EMFileMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMGroup-class.html">EMGroup</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupEventHandler-class.html">EMGroupEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupInfo-class.html">EMGroupInfo</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupManager-class.html">EMGroupManager</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupManagerListener-class.html">EMGroupManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupMessageAck-class.html">EMGroupMessageAck</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupOptions-class.html">EMGroupOptions</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupSharedFile-class.html">EMGroupSharedFile</a></li>
-  <li><a href="../im_flutter_sdk/EMImageMessageBody-class.html">EMImageMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMLocationMessageBody-class.html">EMLocationMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></li>
-  <li><a href="../im_flutter_sdk/EMMessageReaction-class.html">EMMessageReaction</a></li>
-  <li><a href="../im_flutter_sdk/EMMessageReactionEvent-class.html">EMMessageReactionEvent</a></li>
-  <li><a href="../im_flutter_sdk/EMMultiDeviceEventHandler-class.html">EMMultiDeviceEventHandler</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMMultiDeviceListener-class.html">EMMultiDeviceListener</a></li>
-  <li><a href="../im_flutter_sdk/EMOptions-class.html">EMOptions</a></li>
-  <li><a href="../im_flutter_sdk/EMPageResult-class.html">EMPageResult</a></li>
-  <li><a href="../im_flutter_sdk/EMPresence-class.html">EMPresence</a></li>
-  <li><a href="../im_flutter_sdk/EMPresenceEventHandler-class.html">EMPresenceEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMPresenceManager-class.html">EMPresenceManager</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMPresenceManagerListener-class.html">EMPresenceManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMPushConfigs-class.html">EMPushConfigs</a></li>
-  <li><a href="../im_flutter_sdk/EMPushManager-class.html">EMPushManager</a></li>
-  <li><a href="../im_flutter_sdk/EMTextMessageBody-class.html">EMTextMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMTranslateLanguage-class.html">EMTranslateLanguage</a></li>
-  <li><a href="../im_flutter_sdk/EMUserInfo-class.html">EMUserInfo</a></li>
-  <li><a href="../im_flutter_sdk/EMUserInfoManager-class.html">EMUserInfoManager</a></li>
-  <li><a href="../im_flutter_sdk/EMVideoMessageBody-class.html">EMVideoMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMVoiceMessageBody-class.html">EMVoiceMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/MessageStatusCallBack-class.html">MessageStatusCallBack</a></li>
-
-  <li class="section-title"><a href="../im_flutter_sdk/im_flutter_sdk-library.html#extensions">Extensions</a></li>
-  <li><a href="../im_flutter_sdk/ChatManagerDeprecated.html">ChatManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/ChatRoomManagerDeprecated.html">ChatRoomManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/ChatThreadManagerDeprecated.html">ChatThreadManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/EMClientDeprecated.html">EMClientDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/EMContactManagerDeprecated.html">EMContactManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupManagerDeprecated.html">EMGroupManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/EMPushManagerDeprecated.html">EMPushManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/PresenceDeprecated.html">PresenceDeprecated</a></li>
-
-
-
-
-
-  <li class="section-title"><a href="../im_flutter_sdk/im_flutter_sdk-library.html#enums">Enums</a></li>
-  <li><a href="../im_flutter_sdk/ChatPushRemindType.html">ChatPushRemindType</a></li>
-  <li><a href="../im_flutter_sdk/ChatSilentModeParamType.html">ChatSilentModeParamType</a></li>
-  <li><a href="../im_flutter_sdk/ChatType.html">ChatType</a></li>
-  <li><a href="../im_flutter_sdk/DisplayStyle.html">DisplayStyle</a></li>
-  <li><a href="../im_flutter_sdk/DownloadStatus.html">DownloadStatus</a></li>
-  <li><a href="../im_flutter_sdk/EMChatRoomPermissionType.html">EMChatRoomPermissionType</a></li>
-  <li><a href="../im_flutter_sdk/EMChatThreadOperation.html">EMChatThreadOperation</a></li>
-  <li><a href="../im_flutter_sdk/EMConversationType.html">EMConversationType</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupPermissionType.html">EMGroupPermissionType</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle</a></li>
-  <li><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></li>
-  <li><a href="../im_flutter_sdk/EMSearchDirection.html">EMSearchDirection</a></li>
-  <li><a href="../im_flutter_sdk/MessageDirection.html">MessageDirection</a></li>
-  <li><a href="../im_flutter_sdk/MessageStatus.html">MessageStatus</a></li>
-  <li><a href="../im_flutter_sdk/MessageType.html">MessageType</a></li>
-
-
-</ol>
-
+    <!--<h5>im_flutter_sdk library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
   </div>
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
-    <ol>
-
-
-
-    <li class="section-title inherited">
-      <a href="../im_flutter_sdk/EMChatRoomManager-class.html#instance-properties">Properties</a>
-    </li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
-
-    <li class="section-title"><a href="../im_flutter_sdk/EMChatRoomManager-class.html#instance-methods">Methods</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/addAttributes.html">addAttributes</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/addChatRoomAdmin.html">addChatRoomAdmin</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/addEventHandler.html">addEventHandler</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/addMembersToChatRoomAllowList.html">addMembersToChatRoomAllowList</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/blockChatRoomMembers.html">blockChatRoomMembers</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/changeChatRoomDescription.html">changeChatRoomDescription</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/changeChatRoomName.html">changeChatRoomName</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/changeOwner.html">changeOwner</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/clearEventHandlers.html">clearEventHandlers</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/createChatRoom.html">createChatRoom</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/destroyChatRoom.html">destroyChatRoom</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomAllowListFromServer.html">fetchChatRoomAllowListFromServer</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomAnnouncement.html">fetchChatRoomAnnouncement</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomAttributes.html">fetchChatRoomAttributes</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomBlockList.html">fetchChatRoomBlockList</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomInfoFromServer.html">fetchChatRoomInfoFromServer</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomMembers.html">fetchChatRoomMembers</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomMuteList.html">fetchChatRoomMuteList</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/fetchPublicChatRoomsFromServer.html">fetchPublicChatRoomsFromServer</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/getChatRoomWithId.html">getChatRoomWithId</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/getEventHandler.html">getEventHandler</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/isMemberInChatRoomAllowList.html">isMemberInChatRoomAllowList</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/joinChatRoom.html">joinChatRoom</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/leaveChatRoom.html">leaveChatRoom</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/muteAllChatRoomMembers.html">muteAllChatRoomMembers</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/muteChatRoomMembers.html">muteChatRoomMembers</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/removeAttributes.html">removeAttributes</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/removeChatRoomAdmin.html">removeChatRoomAdmin</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/removeChatRoomMembers.html">removeChatRoomMembers</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/removeEventHandler.html">removeEventHandler</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/removeMembersFromChatRoomAllowList.html">removeMembersFromChatRoomAllowList</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/unBlockChatRoomMembers.html">unBlockChatRoomMembers</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/unMuteAllChatRoomMembers.html">unMuteAllChatRoomMembers</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/unMuteChatRoomMembers.html">unMuteChatRoomMembers</a></li>
-    <li><a href="../im_flutter_sdk/EMChatRoomManager/updateChatRoomAnnouncement.html">updateChatRoomAnnouncement</a></li>
-
-    <li class="section-title inherited"><a href="../im_flutter_sdk/EMChatRoomManager-class.html#operators">Operators</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
-
-
-
-
-</ol>
-
   </div><!--/.sidebar-offcanvas-->
 
 </main>
@@ -820,7 +649,7 @@ Param <code>force</code> Whether to remove the attributes with same key set by o
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.9
+      4.1.3
   </span>
 
   

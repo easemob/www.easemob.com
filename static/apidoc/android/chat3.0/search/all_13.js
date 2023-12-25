@@ -26,8 +26,7 @@ var searchData=
   ['translate_5fusage_5flimit_23',['TRANSLATE_USAGE_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#ab71ac898621979a21b0e515e15435c5b',1,'com::hyphenate::EMError']]],
   ['translatecount_24',['translateCount',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_result.html#a8cd6a5992a50b1433d568a0a98fb7cfb',1,'com::hyphenate::chat::EMTranslationResult']]],
   ['translatedtext_25',['translatedText',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_result.html#ac8603e4382666b7af4c5a082ade660e7',1,'com::hyphenate::chat::EMTranslationResult']]],
-  ['translatemessage_26',['translateMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a874391f4ece875fb70893df5b77abb3d',1,'com::hyphenate::chat::EMChatManager']]],
+  ['translatemessage_26',['translateMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a456a77a207ba56d75ca7a3e642ae3112',1,'com::hyphenate::chat::EMChatManager']]],
   ['txt_27',['TXT',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#af46942dc98601c6c9e59c8ecd861a5c7',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.TXT()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a0157bc665bb470f9893a03e7adcf3125',1,'com.hyphenate.chat.EMMessage.Type.TXT()']]],
-  ['type_28',['TYPE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_chat_thread_event_1_1_t_y_p_e.html',1,'com::hyphenate::chat::EMChatThreadEvent']]],
-  ['type_29',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html',1,'com::hyphenate::chat::EMMessage']]]
+  ['type_28',['Type',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html',1,'com::hyphenate::chat::EMMessage']]]
 ];

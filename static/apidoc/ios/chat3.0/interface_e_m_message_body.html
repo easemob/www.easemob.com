@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;3.9.9</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.3.0</span>
    </div>
   </td>
  </tr>
@@ -76,14 +76,15 @@ $(function() {
  <div class="center">
   <img src="interface_e_m_message_body.png" usemap="#EMMessageBody_map" alt=""/>
   <map id="EMMessageBody_map" name="EMMessageBody_map">
-<area href="interface_e_m_cmd_message_body.html" alt="EMCmdMessageBody" shape="rect" coords="0,112,159,136"/>
-<area href="interface_e_m_custom_message_body.html" alt="EMCustomMessageBody" shape="rect" coords="169,112,328,136"/>
-<area href="interface_e_m_file_message_body.html" alt="EMFileMessageBody" shape="rect" coords="338,112,497,136"/>
-<area href="interface_e_m_location_message_body.html" alt="EMLocationMessageBody" shape="rect" coords="507,112,666,136"/>
-<area href="interface_e_m_text_message_body.html" alt="EMTextMessageBody" shape="rect" coords="676,112,835,136"/>
-<area href="interface_e_m_image_message_body.html" alt="EMImageMessageBody" shape="rect" coords="169,168,328,192"/>
-<area href="interface_e_m_video_message_body.html" alt="EMVideoMessageBody" shape="rect" coords="338,168,497,192"/>
-<area href="interface_e_m_voice_message_body.html" alt="EMVoiceMessageBody" shape="rect" coords="507,168,666,192"/>
+<area href="interface_e_m_cmd_message_body.html" alt="EMCmdMessageBody" shape="rect" coords="0,112,160,136"/>
+<area href="interface_e_m_custom_message_body.html" alt="EMCustomMessageBody" shape="rect" coords="170,112,330,136"/>
+<area href="interface_e_m_file_message_body.html" alt="EMFileMessageBody" shape="rect" coords="340,112,500,136"/>
+<area href="interface_e_m_location_message_body.html" alt="EMLocationMessageBody" shape="rect" coords="510,112,670,136"/>
+<area href="interface_e_m_text_message_body.html" alt="EMTextMessageBody" shape="rect" coords="680,112,840,136"/>
+<area href="interface_e_m_combine_message_body.html" alt="EMCombineMessageBody" shape="rect" coords="85,168,245,192"/>
+<area href="interface_e_m_image_message_body.html" alt="EMImageMessageBody" shape="rect" coords="255,168,415,192"/>
+<area href="interface_e_m_video_message_body.html" alt="EMVideoMessageBody" shape="rect" coords="425,168,585,192"/>
+<area href="interface_e_m_voice_message_body.html" alt="EMVoiceMessageBody" shape="rect" coords="595,168,755,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -91,10 +92,85 @@ $(function() {
 属性</h2></td></tr>
 <tr class="memitem:a62da57da9e0658c51a69be89a5fe5436"><td class="memItemLeft" align="right" valign="top">EMMessageBodyType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_message_body.html#a62da57da9e0658c51a69be89a5fe5436">type</a></td></tr>
 <tr class="separator:a62da57da9e0658c51a69be89a5fe5436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a31f44f649c97a35c4bc69ebcdaac4"><td class="memItemLeft" align="right" valign="top">NSUInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_message_body.html#a69a31f44f649c97a35c4bc69ebcdaac4">operationTime</a></td></tr>
+<tr class="separator:a69a31f44f649c97a35c4bc69ebcdaac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4cd6ab745f2e1992647cd32163515fa"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_message_body.html#ad4cd6ab745f2e1992647cd32163515fa">operatorId</a></td></tr>
+<tr class="separator:ad4cd6ab745f2e1992647cd32163515fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a7891431c56af2964f27f1016bcfceb"><td class="memItemLeft" align="right" valign="top">NSUInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_message_body.html#a6a7891431c56af2964f27f1016bcfceb">operatorCount</a></td></tr>
+<tr class="separator:a6a7891431c56af2964f27f1016bcfceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >消息体。 不直接使用，由子类继承实现。 </p>
 </div><h2 class="groupheader">属性说明</h2>
+<a id="a69a31f44f649c97a35c4bc69ebcdaac4" name="a69a31f44f649c97a35c4bc69ebcdaac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69a31f44f649c97a35c4bc69ebcdaac4">&#9670;&nbsp;</a></span>operationTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSUInteger) operationTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >获取最后一次消息修改的时间戳，单位为毫秒。。 </p>
+
+</div>
+</div>
+<a id="a6a7891431c56af2964f27f1016bcfceb" name="a6a7891431c56af2964f27f1016bcfceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a7891431c56af2964f27f1016bcfceb">&#9670;&nbsp;</a></span>operatorCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSUInteger) operatorCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >获取消息修改次数。 </p>
+
+</div>
+</div>
+<a id="ad4cd6ab745f2e1992647cd32163515fa" name="ad4cd6ab745f2e1992647cd32163515fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4cd6ab745f2e1992647cd32163515fa">&#9670;&nbsp;</a></span>operatorId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString*) operatorId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >获取最后一次消息修改的操作者的用户 ID。 </p>
+
+</div>
+</div>
 <a id="a62da57da9e0658c51a69be89a5fe5436" name="a62da57da9e0658c51a69be89a5fe5436"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62da57da9e0658c51a69be89a5fe5436">&#9670;&nbsp;</a></span>type</h2>
 

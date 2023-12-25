@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;3.9.9</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.3.0</span>
    </div>
   </td>
  </tr>
@@ -93,16 +93,16 @@ $(function() {
 <tr class="separator:a2cbbd0878d5bfa53fcf36be3576c688c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea0f4afb695dbdc5deba4488b98055e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_chat_thread.html#aea0f4afb695dbdc5deba4488b98055e7">messageCount</a></td></tr>
 <tr class="separator:aea0f4afb695dbdc5deba4488b98055e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a084d26335d04808dc2d51a92426e2d86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_chat_thread.html#a084d26335d04808dc2d51a92426e2d86">createAt</a></td></tr>
-<tr class="separator:a084d26335d04808dc2d51a92426e2d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc591885f2ec97e15d59bc53fb3c952"><td class="memItemLeft" align="right" valign="top">NSInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_chat_thread.html#a8dc591885f2ec97e15d59bc53fb3c952">createAt</a></td></tr>
+<tr class="separator:a8dc591885f2ec97e15d59bc53fb3c952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a873cfbb8b5ef47669b50c52033849262"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_chat_thread.html#a873cfbb8b5ef47669b50c52033849262">lastMessage</a></td></tr>
 <tr class="separator:a873cfbb8b5ef47669b50c52033849262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >子区类 </p>
+<div class="textblock"><p >子区模型类，用于定义子区属性。 </p>
 </div><h2 class="groupheader">属性说明</h2>
-<a id="a084d26335d04808dc2d51a92426e2d86" name="a084d26335d04808dc2d51a92426e2d86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a084d26335d04808dc2d51a92426e2d86">&#9670;&nbsp;</a></span>createAt</h2>
+<a id="a8dc591885f2ec97e15d59bc53fb3c952" name="a8dc591885f2ec97e15d59bc53fb3c952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc591885f2ec97e15d59bc53fb3c952">&#9670;&nbsp;</a></span>createAt</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -111,7 +111,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">- (int) createAt</td>
+          <td class="memname">- (NSInteger) createAt</td>
         </tr>
       </table>
   </td>
@@ -120,7 +120,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >子区创建的时间戳 </p>
+<p >子区创建的 Unix 时间戳，单位为毫秒。 </p>
 
 </div>
 </div>
@@ -143,7 +143,8 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >子区中最后一条消息，为空代表最后一条消息被撤回，不为空代表新消息 </p>
+<p >子区中的最新一条消息。</p>
+<p >若该属性为空，表示最后一条消息被撤回。 </p>
 
 </div>
 </div>
@@ -166,7 +167,8 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >子区的成员列表数目，需要请求获取子区详情接口后当前对象会有这个属性 </p>
+<p >子区成员数量。</p>
+<p >只有获取子区详情 <code><a class="el" href="">IEMChatThread#getChatThreadDetail:</a></code> 后，该属性才存在。 </p>
 
 </div>
 </div>
@@ -189,7 +191,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >子区中的消息数 </p>
+<p >子区中的消息数。 </p>
 
 </div>
 </div>
@@ -212,7 +214,8 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建子区的messageId （可空，因为目前群消息可被撤回） </p>
+<p >子区父消息 ID。</p>
+<p >该属性为空，表示父消息被撤回。 </p>
 
 </div>
 </div>
@@ -235,7 +238,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >子区的创建者,需要请求获取子区详情接口后当前对象会有这个属性 </p>
+<p >子区创建者。 </p>
 
 </div>
 </div>
@@ -258,7 +261,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建子区的会话id </p>
+<p >子区所属的群组 ID。 </p>
 
 </div>
 </div>
@@ -281,7 +284,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >子区id </p>
+<p >子区 ID。 </p>
 
 </div>
 </div>
@@ -304,7 +307,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >子区的名称(请求子区列表与子区详情都会有) </p>
+<p >子区名称。 </p>
 
 </div>
 </div>

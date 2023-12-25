@@ -7,5 +7,5 @@ var searchData=
   ['translate_4',['translate',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_manager.html#ae9663453f776b39249b201e2fe322a20',1,'com::hyphenate::chat::EMTranslationManager']]],
   ['translatecount_5',['translateCount',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_result.html#a8cd6a5992a50b1433d568a0a98fb7cfb',1,'com::hyphenate::chat::EMTranslationResult']]],
   ['translatedtext_6',['translatedText',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_result.html#ac8603e4382666b7af4c5a082ade660e7',1,'com::hyphenate::chat::EMTranslationResult']]],
-  ['translatemessage_7',['translateMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a874391f4ece875fb70893df5b77abb3d',1,'com::hyphenate::chat::EMChatManager']]]
+  ['translatemessage_7',['translateMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a456a77a207ba56d75ca7a3e642ae3112',1,'com::hyphenate::chat::EMChatManager']]]
 ];

@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;3.9.9</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.3.0</span>
    </div>
   </td>
  </tr>
@@ -68,6 +68,8 @@ $(function() {
   <div class="headertitle"><div class="title">&lt;EMThreadManagerDelegate&gt;协议 参考</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#import &lt;<a class="el" href="_e_m_thread_manager_delegate_8h_source.html">EMThreadManagerDelegate.h</a>&gt;</code></p>
 <div class="dynheader">
 类 &lt;EMThreadManagerDelegate&gt; 继承关系图:</div>
 <div class="dyncontent">
@@ -86,7 +88,9 @@ $(function() {
 <tr class="memitem:a8d2d62f155fe494b8b23a2cbbe781bc1"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_thread_manager_delegate-p.html#a8d2d62f155fe494b8b23a2cbbe781bc1">onUserKickOutOfChatThread:</a></td></tr>
 <tr class="separator:a8d2d62f155fe494b8b23a2cbbe781bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">函数文档</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >子区事件回调协议。 </p>
+</div><h2 class="groupheader">函数文档</h2>
 <a id="adc22ca28946196187ab5d9034ae8b4dd" name="adc22ca28946196187ab5d9034ae8b4dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc22ca28946196187ab5d9034ae8b4dd">&#9670;&nbsp;</a></span>onChatThreadCreate:</h2>
 
@@ -110,9 +114,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建子区后收到的回调 </p><dl class="params"><dt>参数</dt><dd>
+<p >子区创建回调。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>EMThreadEvent对象，包含子区信息 </td></tr>
+    <tr><td class="paramname">event</td><td>子区创建事件 <code><a class="el" href="interface_e_m_chat_thread_event.html">EMChatThreadEvent</a></code>，包含子区信息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -142,9 +147,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >销毁子区后收到的回调 </p><dl class="params"><dt>参数</dt><dd>
+<p >子区解散回调。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>EMThreadEvent对象，包含子区信息 </td></tr>
+    <tr><td class="paramname">event</td><td>子区解散事件 <code><a class="el" href="interface_e_m_chat_thread_event.html">EMChatThreadEvent</a></code>，包含子区信息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -174,9 +180,11 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >更新子区后收到的回调（包括更新子区最后一条消息，更新子区名称，撤回子区消息） </p><dl class="params"><dt>参数</dt><dd>
+<p >子区更新回调。</p>
+<p >修改子区名称或在子区中添加或撤销回复消息时触发该回调。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>EMThreadEvent对象，包含子区信息 </td></tr>
+    <tr><td class="paramname">event</td><td>子区更新事件 <code><a class="el" href="interface_e_m_chat_thread_event.html">EMChatThreadEvent</a></code>，包含子区信息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -206,9 +214,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >用户被踢出子区后收到的回调 </p><dl class="params"><dt>参数</dt><dd>
+<p >用户被踢出子区后收到的回调。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>EMThreadEvent对象，包含子区信息 </td></tr>
+    <tr><td class="paramname">event</td><td>用户移除事件 <code><a class="el" href="interface_e_m_chat_thread_event.html">EMChatThreadEvent</a></code>，包含子区信息。 </td></tr>
   </table>
   </dd>
 </dl>

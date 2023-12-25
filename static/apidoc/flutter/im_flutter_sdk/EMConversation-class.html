@@ -11,7 +11,7 @@
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
   
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
@@ -21,12 +21,12 @@
 </head>
 
 
-<body data-base-href="../" data-using-base-href="false">
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
 
 <div id="overlay-under-drawer"></div>
 
 <header id="title">
-  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
     <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
@@ -36,15 +36,27 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
 </header>
-
 <main>
 
-
-  <div id="dartdoc-main-content" class="main-content">
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="im_flutter_sdk&#47;im_flutter_sdk-library-sidebar.html"
+      data-below-sidebar="im_flutter_sdk&#47;EMConversation-class-sidebar.html">
       <div>
 <h1><span class="kind-class">EMConversation</span> class 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  
 </h1></div>
 
@@ -52,7 +64,8 @@
 <section class="desc markdown">
   <p>会话类，用于定义单聊会话、群聊会话和聊天室会话。每类会话中包含发送和接收的消息。</p>
 <p>以下示例代码展示如何从会话中获取未读消息数：</p>
-<pre class="language-dart"><code class="language-dart">  EMConversation? con = await EMClient.getInstance.chatManager.getConversation(conversationId);
+<pre class="language-dart"><code class="language-dart">  // The `ConversationId` can be the other party ID, the group ID, or the chat room ID.
+  EMConversation? con = await EMClient.getInstance.chatManager.getConversation(conversationId);
   int? unreadCount = con?.unreadCount;
 </code></pre>
 </section>
@@ -71,8 +84,8 @@
 
 </dt>
 <dd>
-  
-  <div class="features">read-only</div>
+  获取会话扩展属性。
+  <div class="features"><span class="feature">read-only</span></div>
 
 </dd>
 
@@ -83,7 +96,7 @@
 </dt>
 <dd class="inherited">
   The hash code for this object.
-  <div class="features">read-only, inherited</div>
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -94,7 +107,7 @@
 </dt>
 <dd>
   获取会话 ID。
-  <div class="features">final</div>
+  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
@@ -105,7 +118,29 @@
 </dt>
 <dd>
   是否为子区会话。
-  <div class="features">final</div>
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isPinned" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMConversation/isPinned.html">isPinned</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  是否为置顶会话：
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="pinnedTime" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMConversation/pinnedTime.html">pinnedTime</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  会话置顶的 UNIX 时间戳，单位为毫秒。未置顶时值为 <code>0</code>。
+  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
@@ -116,7 +151,7 @@
 </dt>
 <dd class="inherited">
   A representation of the runtime type of the object.
-  <div class="features">read-only, inherited</div>
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -127,7 +162,7 @@
 </dt>
 <dd>
   会话类型。
-  <div class="features">final</div>
+  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
@@ -179,6 +214,19 @@
 
 </dd>
 
+        <dt id="deleteMessagesWithTs" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMConversation/deleteMessagesWithTs.html">deleteMessagesWithTs</a></span><span class="signature">(<wbr><span class="parameter" id="deleteMessagesWithTs-param-startTs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">startTs</span>, </span><span class="parameter" id="deleteMessagesWithTs-param-endTs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">endTs</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  从本地数据库中删除指定时间段内的消息。
+  
+
+</dd>
+
         <dt id="insertMessage" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/insertMessage.html">insertMessage</a></span><span class="signature">(<wbr><span class="parameter" id="insertMessage-param-message"><span class="type-annotation"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span> <span class="parameter-name">message</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
@@ -187,7 +235,7 @@
 
 </dt>
 <dd>
-  插入一条消息在 SDK 本地数据库，消息的 conversation ID 应该和会话的 conversation ID 一致，消息会根据消息里的时间戳被插入 SDK 本地数据库，并且更新会话的 <a href="../im_flutter_sdk/EMConversation/latestMessage.html">latestMessage</a> 等属性。
+  插入一条消息在 SDK 本地数据库，消息的 conversation ID 应该和会话的 conversation ID 一致，消息会根据消息里的时间戳被插入 SDK 本地数据库，并且更新会话的 <code>latestMessage</code> 等属性。
   
 
 </dd>
@@ -317,7 +365,7 @@
 
 </dt>
 <dd>
-  从本地数据库加载消息数量。
+  会话中的消息数
   
 
 </dd>
@@ -330,8 +378,8 @@
 
 </dt>
 <dd class="inherited">
-  Invoked when a non-existent method or property is accessed.
-  <div class="features">inherited</div>
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -343,7 +391,7 @@
 
 </dt>
 <dd>
-  
+  设置会话扩展属性。
   
 
 </dd>
@@ -357,7 +405,7 @@
 </dt>
 <dd class="inherited">
   A string representation of this object.
-  <div class="features">inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -404,7 +452,7 @@
 </dt>
 <dd class="inherited">
   The equality operator.
-  <div class="features">inherited</div>
+  <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
 
@@ -418,164 +466,25 @@
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../index.html">im_flutter_sdk</a></li>
-  <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
-  <li class="self-crumb">EMConversation class</li>
+    <li><a href="../index.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li class="self-crumb">EMConversation class</li>
 </ol>
 
 
-    <h5>im_flutter_sdk library</h5>
-    <ol>
-  <li class="section-title"><a href="../im_flutter_sdk/im_flutter_sdk-library.html#classes">Classes</a></li>
-  <li><a href="../im_flutter_sdk/AreaCode-class.html">AreaCode</a></li>
-  <li><a href="../im_flutter_sdk/ChatSilentModeParam-class.html">ChatSilentModeParam</a></li>
-  <li><a href="../im_flutter_sdk/ChatSilentModeResult-class.html">ChatSilentModeResult</a></li>
-  <li><a href="../im_flutter_sdk/ChatSilentModeTime-class.html">ChatSilentModeTime</a></li>
-  <li><a href="../im_flutter_sdk/EMChatEventHandler-class.html">EMChatEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMChatManagerListener-class.html">EMChatManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMChatRoom-class.html">EMChatRoom</a></li>
-  <li><a href="../im_flutter_sdk/EMChatRoomEventHandler-class.html">EMChatRoomEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMChatRoomManager-class.html">EMChatRoomManager</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMChatRoomManagerListener-class.html">EMChatRoomManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></li>
-  <li><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></li>
-  <li><a href="../im_flutter_sdk/EMChatThreadEventHandler-class.html">EMChatThreadEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMChatThreadManager-class.html">EMChatThreadManager</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMChatThreadManagerListener-class.html">EMChatThreadManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMClient-class.html">EMClient</a></li>
-  <li><a href="../im_flutter_sdk/EMCmdMessageBody-class.html">EMCmdMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMConnectionEventHandler-class.html">EMConnectionEventHandler</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMConnectionListener-class.html">EMConnectionListener</a></li>
-  <li><a href="../im_flutter_sdk/EMContactEventHandler-class.html">EMContactEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMContactManager-class.html">EMContactManager</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMContactManagerListener-class.html">EMContactManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMConversation-class.html">EMConversation</a></li>
-  <li><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMCustomListener-class.html">EMCustomListener</a></li>
-  <li><a href="../im_flutter_sdk/EMCustomMessageBody-class.html">EMCustomMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMDeviceInfo-class.html">EMDeviceInfo</a></li>
-  <li><a href="../im_flutter_sdk/EMDownloadCallback-class.html">EMDownloadCallback</a></li>
-  <li><a href="../im_flutter_sdk/EMError-class.html">EMError</a></li>
-  <li><a href="../im_flutter_sdk/EMFileMessageBody-class.html">EMFileMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMGroup-class.html">EMGroup</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupEventHandler-class.html">EMGroupEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupInfo-class.html">EMGroupInfo</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupManager-class.html">EMGroupManager</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupManagerListener-class.html">EMGroupManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupMessageAck-class.html">EMGroupMessageAck</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupOptions-class.html">EMGroupOptions</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupSharedFile-class.html">EMGroupSharedFile</a></li>
-  <li><a href="../im_flutter_sdk/EMImageMessageBody-class.html">EMImageMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMLocationMessageBody-class.html">EMLocationMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></li>
-  <li><a href="../im_flutter_sdk/EMMessageReaction-class.html">EMMessageReaction</a></li>
-  <li><a href="../im_flutter_sdk/EMMessageReactionEvent-class.html">EMMessageReactionEvent</a></li>
-  <li><a href="../im_flutter_sdk/EMMultiDeviceEventHandler-class.html">EMMultiDeviceEventHandler</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMMultiDeviceListener-class.html">EMMultiDeviceListener</a></li>
-  <li><a href="../im_flutter_sdk/EMOptions-class.html">EMOptions</a></li>
-  <li><a href="../im_flutter_sdk/EMPageResult-class.html">EMPageResult</a></li>
-  <li><a href="../im_flutter_sdk/EMPresence-class.html">EMPresence</a></li>
-  <li><a href="../im_flutter_sdk/EMPresenceEventHandler-class.html">EMPresenceEventHandler</a></li>
-  <li><a href="../im_flutter_sdk/EMPresenceManager-class.html">EMPresenceManager</a></li>
-  <li><a class="deprecated" href="../im_flutter_sdk/EMPresenceManagerListener-class.html">EMPresenceManagerListener</a></li>
-  <li><a href="../im_flutter_sdk/EMPushConfigs-class.html">EMPushConfigs</a></li>
-  <li><a href="../im_flutter_sdk/EMPushManager-class.html">EMPushManager</a></li>
-  <li><a href="../im_flutter_sdk/EMTextMessageBody-class.html">EMTextMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMTranslateLanguage-class.html">EMTranslateLanguage</a></li>
-  <li><a href="../im_flutter_sdk/EMUserInfo-class.html">EMUserInfo</a></li>
-  <li><a href="../im_flutter_sdk/EMUserInfoManager-class.html">EMUserInfoManager</a></li>
-  <li><a href="../im_flutter_sdk/EMVideoMessageBody-class.html">EMVideoMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/EMVoiceMessageBody-class.html">EMVoiceMessageBody</a></li>
-  <li><a href="../im_flutter_sdk/MessageStatusCallBack-class.html">MessageStatusCallBack</a></li>
-
-  <li class="section-title"><a href="../im_flutter_sdk/im_flutter_sdk-library.html#extensions">Extensions</a></li>
-  <li><a href="../im_flutter_sdk/ChatManagerDeprecated.html">ChatManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/ChatRoomManagerDeprecated.html">ChatRoomManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/ChatThreadManagerDeprecated.html">ChatThreadManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/EMClientDeprecated.html">EMClientDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/EMContactManagerDeprecated.html">EMContactManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupManagerDeprecated.html">EMGroupManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/EMPushManagerDeprecated.html">EMPushManagerDeprecated</a></li>
-  <li><a href="../im_flutter_sdk/PresenceDeprecated.html">PresenceDeprecated</a></li>
-
-
-
-
-
-  <li class="section-title"><a href="../im_flutter_sdk/im_flutter_sdk-library.html#enums">Enums</a></li>
-  <li><a href="../im_flutter_sdk/ChatPushRemindType.html">ChatPushRemindType</a></li>
-  <li><a href="../im_flutter_sdk/ChatSilentModeParamType.html">ChatSilentModeParamType</a></li>
-  <li><a href="../im_flutter_sdk/ChatType.html">ChatType</a></li>
-  <li><a href="../im_flutter_sdk/DisplayStyle.html">DisplayStyle</a></li>
-  <li><a href="../im_flutter_sdk/DownloadStatus.html">DownloadStatus</a></li>
-  <li><a href="../im_flutter_sdk/EMChatRoomPermissionType.html">EMChatRoomPermissionType</a></li>
-  <li><a href="../im_flutter_sdk/EMChatThreadOperation.html">EMChatThreadOperation</a></li>
-  <li><a href="../im_flutter_sdk/EMConversationType.html">EMConversationType</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupPermissionType.html">EMGroupPermissionType</a></li>
-  <li><a href="../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle</a></li>
-  <li><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></li>
-  <li><a href="../im_flutter_sdk/EMSearchDirection.html">EMSearchDirection</a></li>
-  <li><a href="../im_flutter_sdk/MessageDirection.html">MessageDirection</a></li>
-  <li><a href="../im_flutter_sdk/MessageStatus.html">MessageStatus</a></li>
-  <li><a href="../im_flutter_sdk/MessageType.html">MessageType</a></li>
-
-
-</ol>
-
+    <!--<h5>im_flutter_sdk library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
   </div>
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
-    <ol>
-
-
-
-    <li class="section-title">
-      <a href="../im_flutter_sdk/EMConversation-class.html#instance-properties">Properties</a>
-    </li>
-    <li><a href="../im_flutter_sdk/EMConversation/ext.html">ext</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/id.html">id</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/isChatThread.html">isChatThread</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/type.html">type</a></li>
-
-    <li class="section-title"><a href="../im_flutter_sdk/EMConversation-class.html#instance-methods">Methods</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/appendMessage.html">appendMessage</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/deleteAllMessages.html">deleteAllMessages</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/deleteMessage.html">deleteMessage</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/insertMessage.html">insertMessage</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/lastReceivedMessage.html">lastReceivedMessage</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/latestMessage.html">latestMessage</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/loadMessage.html">loadMessage</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/loadMessages.html">loadMessages</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/loadMessagesFromTime.html">loadMessagesFromTime</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/loadMessagesWithKeyword.html">loadMessagesWithKeyword</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/loadMessagesWithMsgType.html">loadMessagesWithMsgType</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/markAllMessagesAsRead.html">markAllMessagesAsRead</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/markMessageAsRead.html">markMessageAsRead</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/messagesCount.html">messagesCount</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/setExt.html">setExt</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/unreadCount.html">unreadCount</a></li>
-    <li><a href="../im_flutter_sdk/EMConversation/updateMessage.html">updateMessage</a></li>
-
-    <li class="section-title inherited"><a href="../im_flutter_sdk/EMConversation-class.html#operators">Operators</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
-
-
-
-
-</ol>
-
   </div><!--/.sidebar-offcanvas-->
 
 </main>
@@ -583,7 +492,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      3.9.9
+      4.1.3
   </span>
 
   
