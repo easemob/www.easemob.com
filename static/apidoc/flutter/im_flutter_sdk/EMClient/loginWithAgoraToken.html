@@ -31,7 +31,7 @@
     <li><a href="../../index.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMClient-class.html">EMClient</a></li>
-    <li class="self-crumb">loginWithAgoraToken method</li>
+    <li class="self-crumb"><span class="deprecated">loginWithAgoraToken</span> method</li>
   </ol>
   <div class="self-name">loginWithAgoraToken</div>
   <form class="search navbar-right" role="search">
@@ -62,9 +62,14 @@
 
     <section class="multi-line-signature">
       
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use [loginWithToken] instead&#39;)</li>
+    </ol>
+  </div>
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
-<span class="name ">loginWithAgoraToken</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="loginWithAgoraToken-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span></li>
+<span class="name deprecated">loginWithAgoraToken</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="loginWithAgoraToken-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span></li>
 <li><span class="parameter" id="loginWithAgoraToken-param-agoraToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">agoraToken</span></span></li>
 </ol>)
 
@@ -85,20 +90,24 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; loginWithAgoraToken(String userId, String agoraToken) async {
-  Map req = {
-    &quot;username&quot;: userId,
-    &quot;agora_token&quot;: agoraToken,
-  };
+  <pre class="language-dart"><code class="language-dart">@Deprecated(&#39;Use [loginWithToken] instead&#39;)
 
-  Map result = await ClientChannel.invokeMethod(
-      ChatMethodKeys.loginWithAgoraToken, req);
-  try {
-    EMError.hasErrorFromResult(result);
-    _currentUserId = userId;
-  } on EMError catch (e) {
-    throw e;
-  }
+&#47;&#47;&#47;
+&#47;&#47;&#47;
+&#47;&#47;&#47;
+&#47;&#47;&#47; 用声网 Token 登录服务器，该方法支持自动登录。
+&#47;&#47;&#47;
+&#47;&#47;&#47; **Note**
+&#47;&#47;&#47; 通过 token 登录服务器的方法见 {@link #login(String, String, bool)}。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [userId] 用户 ID。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [agoraToken] 声网 Token。
+&#47;&#47;&#47;
+&#47;&#47;&#47; **Throws**  如果有异常会在这里抛出，包含错误码和错误描述，详见 [EMError]。
+&#47;&#47;&#47;
+Future&lt;void&gt; loginWithAgoraToken(String userId, String agoraToken) async {
+  return login(userId, agoraToken, false);
 }</code></pre>
 </section>
 
@@ -117,7 +126,7 @@
     <li><a href="../../index.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMClient-class.html">EMClient</a></li>
-    <li class="self-crumb">loginWithAgoraToken method</li>
+    <li class="self-crumb"><span class="deprecated">loginWithAgoraToken</span> method</li>
 </ol>
 
 
@@ -132,7 +141,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.1.3
+      4.2.0
   </span>
 
   
