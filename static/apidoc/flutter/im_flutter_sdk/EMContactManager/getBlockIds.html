@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the debugModel property from the EMOptions class, for the Dart programming language.">
-  <title>debugModel property - EMOptions class - im_flutter_sdk library - Dart API</title>
+  <meta name="description" content="API docs for the getBlockIds method from the EMContactManager class, for the Dart programming language.">
+  <title>getBlockIds method - EMContactManager class - im_flutter_sdk library - Dart API</title>
 
 
   
@@ -30,10 +30,10 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/EMOptions-class.html">EMOptions</a></li>
-    <li class="self-crumb">debugModel property</li>
+    <li><a href="../../im_flutter_sdk/EMContactManager-class.html">EMContactManager</a></li>
+    <li class="self-crumb">getBlockIds method</li>
   </ol>
-  <div class="self-name">debugModel</div>
+  <div class="self-name">getBlockIds</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -54,32 +54,47 @@
   <div
       id="dartdoc-main-content"
       class="main-content"
-      data-above-sidebar="im_flutter_sdk&#47;EMOptions-class-sidebar.html"
+      data-above-sidebar="im_flutter_sdk&#47;EMContactManager-class-sidebar.html"
       data-below-sidebar="">
       <div>
-<h1><span class="kind-property">debugModel</span> property 
+<h1><span class="kind-method">getBlockIds</span> method 
 </h1></div>
 
-        <section class="multi-line-signature">
-          
-          <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>
-          <span class="name ">debugModel</span>
-          <div class="features"><span class="feature">final</span></div>
+    <section class="multi-line-signature">
+      
 
-        </section>
-        
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
+<span class="name ">getBlockIds</span>(<wbr>)
+
+      
+
+    </section>
+    
 <section class="desc markdown">
-  <p>是否输出调试信息，在 EMClient 初始化完成后调用，详见 {@link #init(Context, EMOptions)}。</p>
-<ul>
-<li><code>true</code>：SDK 会在 log 里输出调试信息；</li>
-<li>（默认）<code>false</code>：不会输出调试信息。</li>
-</ul>
+  <p>从本地数据库获取黑名单列表。</p>
+<p><strong>Return</strong> 该方法调用成功会返回黑名单列表。</p>
+<p><strong>Throws</strong>  如果有方法调用的异常会在这里抛出，可以看到具体错误原因。请参见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
 </section>
 
-        
+
+    
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">final bool debugModel;</code></pre>
+  <pre class="language-dart"><code class="language-dart">Future&lt;List&lt;String&gt;&gt; getBlockIds() async {
+  Map result = await _channel.invokeMethod(ChatMethodKeys.getBlockListFromDB);
+  try {
+    EMError.hasErrorFromResult(result);
+    List&lt;String&gt; list = [];
+    result[ChatMethodKeys.getBlockListFromDB]?.forEach((element) {
+      if (element is String) {
+        list.add(element);
+      }
+    });
+    return list;
+  } on EMError catch (e) {
+    throw e;
+  }
+}</code></pre>
 </section>
 
 
@@ -96,12 +111,12 @@
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/EMOptions-class.html">EMOptions</a></li>
-    <li class="self-crumb">debugModel property</li>
+    <li><a href="../../im_flutter_sdk/EMContactManager-class.html">EMContactManager</a></li>
+    <li class="self-crumb">getBlockIds method</li>
 </ol>
 
 
-    <h5>EMOptions class</h5>
+    <h5>EMContactManager class</h5>
   </div><!--/.sidebar-offcanvas-->
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
@@ -112,7 +127,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.1.3
+      4.2.0
   </span>
 
   

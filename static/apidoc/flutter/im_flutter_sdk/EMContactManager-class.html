@@ -105,7 +105,7 @@
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="acceptInvitation" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMContactManager/acceptInvitation.html">acceptInvitation</a></span><span class="signature">(<wbr><span class="parameter" id="acceptInvitation-param-username"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">username</span></span>)
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/acceptInvitation.html">acceptInvitation</a></span><span class="signature">(<wbr><span class="parameter" id="acceptInvitation-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
@@ -144,7 +144,7 @@
 </dd>
 
         <dt id="addUserToBlockList" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMContactManager/addUserToBlockList.html">addUserToBlockList</a></span><span class="signature">(<wbr><span class="parameter" id="addUserToBlockList-param-username"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">username</span></span>)
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/addUserToBlockList.html">addUserToBlockList</a></span><span class="signature">(<wbr><span class="parameter" id="addUserToBlockList-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
@@ -171,7 +171,7 @@
 </dd>
 
         <dt id="declineInvitation" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMContactManager/declineInvitation.html">declineInvitation</a></span><span class="signature">(<wbr><span class="parameter" id="declineInvitation-param-username"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">username</span></span>)
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/declineInvitation.html">declineInvitation</a></span><span class="signature">(<wbr><span class="parameter" id="declineInvitation-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
@@ -184,7 +184,7 @@
 </dd>
 
         <dt id="deleteContact" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMContactManager/deleteContact.html">deleteContact</a></span><span class="signature">(<wbr><span class="parameter" id="deleteContact-param-username"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">username</span>, </span><span class="parameter" id="deleteContact-param-keepConversation">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">keepConversation</span> = <span class="default-value">false</span>}</span>)
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/deleteContact.html">deleteContact</a></span><span class="signature">(<wbr><span class="parameter" id="deleteContact-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="deleteContact-param-keepConversation">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">keepConversation</span> = <span class="default-value">false</span>}</span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
@@ -196,8 +196,86 @@
 
 </dd>
 
+        <dt id="fetchAllContactIds" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/fetchAllContactIds.html">fetchAllContactIds</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  从服务器获取联系人列表。
+  
+
+</dd>
+
+        <dt id="fetchAllContacts" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/fetchAllContacts.html">fetchAllContacts</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMContact-class.html">EMContact</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  从服务器获取所有的好友。
+  
+
+</dd>
+
+        <dt id="fetchBlockIds" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/fetchBlockIds.html">fetchBlockIds</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  从服务器获取黑名单列表。
+  
+
+</dd>
+
+        <dt id="fetchContacts" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/fetchContacts.html">fetchContacts</a></span><span class="signature">(<wbr><span class="parameter" id="fetchContacts-param-cursor">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span><span class="parameter" id="fetchContacts-param-pageSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageSize</span> = <span class="default-value">20</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMContact-class.html">EMContact</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  从服务器分页获取友。
+  
+
+</dd>
+
+        <dt id="getAllContactIds" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/getAllContactIds.html">getAllContactIds</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  从数据库获取好友列表。
+  
+
+</dd>
+
+        <dt id="getAllContacts" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/getAllContacts.html">getAllContacts</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMContact-class.html">EMContact</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取本地存储的所有好友。
+  
+
+</dd>
+
         <dt id="getAllContactsFromDB" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMContactManager/getAllContactsFromDB.html">getAllContactsFromDB</a></span><span class="signature">(<wbr>)
+  <span class="name deprecated"><a class="deprecated" href="../im_flutter_sdk/EMContactManager/getAllContactsFromDB.html">getAllContactsFromDB</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
@@ -210,7 +288,7 @@
 </dd>
 
         <dt id="getAllContactsFromServer" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMContactManager/getAllContactsFromServer.html">getAllContactsFromServer</a></span><span class="signature">(<wbr>)
+  <span class="name deprecated"><a class="deprecated" href="../im_flutter_sdk/EMContactManager/getAllContactsFromServer.html">getAllContactsFromServer</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
@@ -222,8 +300,21 @@
 
 </dd>
 
+        <dt id="getBlockIds" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/getBlockIds.html">getBlockIds</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  从本地数据库获取黑名单列表。
+  
+
+</dd>
+
         <dt id="getBlockListFromDB" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMContactManager/getBlockListFromDB.html">getBlockListFromDB</a></span><span class="signature">(<wbr>)
+  <span class="name deprecated"><a class="deprecated" href="../im_flutter_sdk/EMContactManager/getBlockListFromDB.html">getBlockListFromDB</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
@@ -236,7 +327,7 @@
 </dd>
 
         <dt id="getBlockListFromServer" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMContactManager/getBlockListFromServer.html">getBlockListFromServer</a></span><span class="signature">(<wbr>)
+  <span class="name deprecated"><a class="deprecated" href="../im_flutter_sdk/EMContactManager/getBlockListFromServer.html">getBlockListFromServer</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
@@ -244,6 +335,19 @@
 </dt>
 <dd>
   从服务器获取黑名单列表。
+  
+
+</dd>
+
+        <dt id="getContact" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/getContact.html">getContact</a></span><span class="signature">(<wbr><span class="parameter" id="getContact-param-userId">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMContact-class.html">EMContact</a>?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  获取联系人信息。
   
 
 </dd>
@@ -301,7 +405,7 @@
 </dd>
 
         <dt id="removeUserFromBlockList" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMContactManager/removeUserFromBlockList.html">removeUserFromBlockList</a></span><span class="signature">(<wbr><span class="parameter" id="removeUserFromBlockList-param-username"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">username</span></span>)
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/removeUserFromBlockList.html">removeUserFromBlockList</a></span><span class="signature">(<wbr><span class="parameter" id="removeUserFromBlockList-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
@@ -309,6 +413,19 @@
 </dt>
 <dd>
   将指定用户移除黑名单。
+  
+
+</dd>
+
+        <dt id="setContactRemark" class="callable">
+  <span class="name"><a href="../im_flutter_sdk/EMContactManager/setContactRemark.html">setContactRemark</a></span><span class="signature">(<wbr><span class="parameter" id="setContactRemark-param-userId">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="setContactRemark-param-remark"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">remark</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  设置联系人备注。
   
 
 </dd>
@@ -383,7 +500,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.1.3
+      4.2.0
   </span>
 
   

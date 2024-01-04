@@ -64,7 +64,7 @@
       
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
-<span class="name ">deleteContact</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="deleteContact-param-username"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">username</span>, </span></li>
+<span class="name ">deleteContact</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="deleteContact-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span></li>
 <li><span class="parameter" id="deleteContact-param-keepConversation">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">keepConversation</span> = <span class="default-value">false</span>}</span></li>
 </ol>)
 
@@ -74,7 +74,7 @@
     
 <section class="desc markdown">
   <p>删除联系人及其相关的会话。</p>
-<p>Param <code>username</code> 要删除的联系人用户 ID。</p>
+<p>Param <code>userId</code> 要删除的联系人用户 ID。</p>
 <p>Param <code>keepConversation</code> 是否保留要删除的联系人的会话。</p>
 <ul>
 <li><code>true</code>：是；</li>
@@ -88,10 +88,10 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; deleteContact(
-  String username, {
+  String userId, {
   bool keepConversation = false,
 }) async {
-  Map req = {&#39;username&#39;: username, &#39;keepConversation&#39;: keepConversation};
+  Map req = {&#39;username&#39;: userId, &#39;keepConversation&#39;: keepConversation};
   Map result = await _channel.invokeMethod(ChatMethodKeys.deleteContact, req);
   try {
     EMError.hasErrorFromResult(result);
@@ -131,7 +131,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.1.3
+      4.2.0
   </span>
 
   

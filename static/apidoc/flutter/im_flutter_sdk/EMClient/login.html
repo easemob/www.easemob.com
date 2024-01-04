@@ -31,7 +31,7 @@
     <li><a href="../../index.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMClient-class.html">EMClient</a></li>
-    <li class="self-crumb">login method</li>
+    <li class="self-crumb"><span class="deprecated">login</span> method</li>
   </ol>
   <div class="self-name">login</div>
   <form class="search navbar-right" role="search">
@@ -62,9 +62,14 @@
 
     <section class="multi-line-signature">
       
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use [loginWithToken or loginWithPassword] instead&#39;)</li>
+    </ol>
+  </div>
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
-<span class="name ">login</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="login-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span></li>
+<span class="name deprecated">login</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="login-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span></li>
 <li><span class="parameter" id="login-param-pwdOrToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">pwdOrToken</span>, </span></li>
 <li><span class="parameter" id="login-param-isPassword">[<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isPassword</span> = <span class="default-value">true</span>]</span></li>
 </ol>)
@@ -75,7 +80,9 @@
     
 <section class="desc markdown">
   <p>使用密码或 Token 登录服务器。</p>
-<p>Param <code>userId</code> 用户 ID。</p>
+<p>Param <code>userId</code> 用户 ID，长度不超过 64 个字符。请确保你对该参数设值。
+支持的字符包括英文字母（a-z），数字（0-9），下划线（_），英文横线（-），英文句号（.）。
+该参数不区分大小写，大写字母会被自动转为小写字母。如果使用正则表达式设置该参数，则可以将表达式写为：^<code>a-zA-Z0-9_-</code>+$。</p>
 <p>Param <code>pwdOrToken</code> 登录密码或 Token。</p>
 <p>Param <code>isPassword</code> 是否用密码登录。</p>
 <ul>
@@ -89,8 +96,30 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; login(String userId, String pwdOrToken,
-    [bool isPassword = true]) async {
+  <pre class="language-dart"><code class="language-dart">@Deprecated(&#39;Use [loginWithToken or loginWithPassword] instead&#39;)
+
+&#47;&#47;&#47;
+&#47;&#47;&#47;
+&#47;&#47;&#47;
+&#47;&#47;&#47; 使用密码或 Token 登录服务器。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [userId] 用户 ID，长度不超过 64 个字符。请确保你对该参数设值。
+&#47;&#47;&#47; 支持的字符包括英文字母（a-z），数字（0-9），下划线（_），英文横线（-），英文句号（.）。
+&#47;&#47;&#47; 该参数不区分大小写，大写字母会被自动转为小写字母。如果使用正则表达式设置该参数，则可以将表达式写为：^[a-zA-Z0-9_-]+$。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [pwdOrToken] 登录密码或 Token。
+&#47;&#47;&#47;
+&#47;&#47;&#47; Param [isPassword] 是否用密码登录。
+&#47;&#47;&#47; - （默认）`true`：是。
+&#47;&#47;&#47; - `false`：否。
+&#47;&#47;&#47;
+&#47;&#47;&#47; **Throws**  如果有异常会在这里抛出，包含错误码和错误描述，详见 [EMError]。
+&#47;&#47;&#47;
+Future&lt;void&gt; login(
+  String userId,
+  String pwdOrToken, [
+  bool isPassword = true,
+]) async {
   EMLog.v(&#39;login: $userId : $pwdOrToken, isPassword: $isPassword&#39;);
   Map req = {
     &#39;username&#39;: userId,
@@ -122,7 +151,7 @@
     <li><a href="../../index.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMClient-class.html">EMClient</a></li>
-    <li class="self-crumb">login method</li>
+    <li class="self-crumb"><span class="deprecated">login</span> method</li>
 </ol>
 
 
@@ -137,7 +166,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.1.3
+      4.2.0
   </span>
 
   

@@ -31,7 +31,7 @@
     <li><a href="../../index.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMContactManager-class.html">EMContactManager</a></li>
-    <li class="self-crumb">getAllContactsFromServer method</li>
+    <li class="self-crumb"><span class="deprecated">getAllContactsFromServer</span> method</li>
   </ol>
   <div class="self-name">getAllContactsFromServer</div>
   <form class="search navbar-right" role="search">
@@ -62,9 +62,14 @@
 
     <section class="multi-line-signature">
       
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use fetchAllContactIds instead.&#39;)</li>
+    </ol>
+  </div>
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
-<span class="name ">getAllContactsFromServer</span>(<wbr>)
+<span class="name deprecated">getAllContactsFromServer</span>(<wbr>)
 
       
 
@@ -80,7 +85,18 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;List&lt;String&gt;&gt; getAllContactsFromServer() async {
+  <pre class="language-dart"><code class="language-dart">@Deprecated(&#39;Use fetchAllContactIds instead.&#39;)
+
+&#47;&#47;&#47;
+&#47;&#47;&#47;
+&#47;&#47;&#47;
+&#47;&#47;&#47; 从服务器获取联系人列表。
+&#47;&#47;&#47;
+&#47;&#47;&#47; **Return** 联系人列表。
+&#47;&#47;&#47;
+&#47;&#47;&#47; **Throws**  如果有方法调用的异常会在这里抛出，可以看到具体错误原因。请参见 [EMError]。
+&#47;&#47;&#47;
+Future&lt;List&lt;String&gt;&gt; getAllContactsFromServer() async {
   Map result =
       await _channel.invokeMethod(ChatMethodKeys.getAllContactsFromServer);
   try {
@@ -113,7 +129,7 @@
     <li><a href="../../index.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMContactManager-class.html">EMContactManager</a></li>
-    <li class="self-crumb">getAllContactsFromServer method</li>
+    <li class="self-crumb"><span class="deprecated">getAllContactsFromServer</span> method</li>
 </ol>
 
 
@@ -128,7 +144,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.1.3
+      4.2.0
   </span>
 
   
