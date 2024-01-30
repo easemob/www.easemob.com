@@ -810,12 +810,13 @@ $(function() {
       </table>
 </div><div class="memdoc">
 <p >从本地数据库获取会话中的指定用户发送的包含特定关键词的消息。</p>
+<p >SDK 返回的消息按时间顺序排列。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aKeywords</td><td>关键词。设为 NIL 表示忽略该参数。 </td></tr>
-    <tr><td class="paramname">aTimestamp</td><td>传入的 Unix 时间戳，单位为毫秒。如果该参数设置的时间戳为负数，则从最新消息向前获取。 </td></tr>
+    <tr><td class="paramname">aKeywords</td><td>关键词。设为 <code>nil</code> 表示忽略该参数。 </td></tr>
+    <tr><td class="paramname">aTimestamp</td><td>搜索开始的 Unix 时间戳。单位为毫秒。如果该参数设置的时间戳为负数，则从最新消息向前获取。 </td></tr>
     <tr><td class="paramname">aCount</td><td>每次获取的消息条数。如果设为小于等于 0，SDK 会获取 1 条消息。 </td></tr>
-    <tr><td class="paramname">aSender</td><td>消息发送方。设为 NIL 表示忽略该参数。 </td></tr>
+    <tr><td class="paramname">aSender</td><td>消息发送方。设为 <code>nil</code> 表示忽略该参数。 </td></tr>
     <tr><td class="paramname">aDirection</td><td>消息搜索方向，详见 <code><a class="el" href="">EMMessageSearchDirection</a></code>。 </td></tr>
     <tr><td class="paramname">aScope</td><td>消息搜索范围，详见 <code><a class="el" href="">EMMessageSearchScope</a></code>。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>

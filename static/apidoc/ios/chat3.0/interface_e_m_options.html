@@ -830,7 +830,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >发送成功的消息是否在ChatManagerDelegate中回调 </p>
+<p >发送成功的消息是否在 <code>ChatManagerDelegate#messagesDidReceive</code> 中回调。</p><ul>
+<li>YES：是。</li>
+<li>（默认）NO：否。 </li>
+</ul>
 
 </div>
 </div>
@@ -985,7 +988,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >是否将服务器导入的消息设置为已读。默认为NO </p>
+<p >是否将服务器导入的消息设置为已读：</p><ul>
+<li>YES：已读。会话的未读消息数 <code><a class="el" href="interface_e_m_conversation.html">EMConversation</a>#unreadMessagesCount</code> 不发生变化。</li>
+<li>（默认）NO：未读。<code><a class="el" href="interface_e_m_conversation.html">EMConversation</a>#unreadMessagesCount</code> 的数量会增加。 </li>
+</ul>
 
 </div>
 </div>
@@ -1060,7 +1066,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >当发送的消息内容被Moderation或发送前回调替换时，发送方是否使用替换后的内容。</p>
+<p >当发送的文本消息的内容被文本审核（Moderation）服务替换时，是否需要返回给发送方。</p><ul>
+<li>YES：将内容替换后的消息返回给发送方。</li>
+<li>（默认）NO：将原消息返回给发送方。</li>
+</ul>
 <p >该属性只能在调用 <code>initializeSDKWithOptions</code> 时设置，而且 app 运行过程中不能修改该参数的设置。 </p>
 
 </div>
