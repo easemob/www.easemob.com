@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.1.0</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.2.0</span>
    </div>
   </td>
  </tr>
@@ -95,6 +95,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a177877bf974c03286569139b87551dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10097ee181e1d9329aff5a5147f078e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_conversation.html#a10097ee181e1d9329aff5a5147f078e8">DeleteMessage</a> (string messageId)</td></tr>
 <tr class="separator:a10097ee181e1d9329aff5a5147f078e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe08ca8cc1c824d095150dec8045e9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_conversation.html#abfe08ca8cc1c824d095150dec8045e9c">DeleteMessages</a> (long startTime, long endTime)</td></tr>
+<tr class="separator:abfe08ca8cc1c824d095150dec8045e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a656da5f7aaea0b9b2575ce2a6da12ad7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_conversation.html#a656da5f7aaea0b9b2575ce2a6da12ad7">DeleteAllMessages</a> ()</td></tr>
 <tr class="separator:a656da5f7aaea0b9b2575ce2a6da12ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef05c210556e77af8d62ea4e935d6567"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_agora_chat_1_1_message.html">Message</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_conversation.html#aef05c210556e77af8d62ea4e935d6567">LoadMessage</a> (string messageId)</td></tr>
@@ -118,6 +120,10 @@ Public 属性</h2></td></tr>
 <tr class="separator:af3c36a606d101abb18c7c4948c74533d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77d4d24a8c27ea68ea324007d67d2722"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_conversation.html#a77d4d24a8c27ea68ea324007d67d2722">IsThread</a></td></tr>
 <tr class="separator:a77d4d24a8c27ea68ea324007d67d2722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941607cb3301525d2e479b13f4e0c799"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_conversation.html#a941607cb3301525d2e479b13f4e0c799">IsPinned</a></td></tr>
+<tr class="separator:a941607cb3301525d2e479b13f4e0c799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade0cd5998515cc5fb54721cce5543194"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_conversation.html#ade0cd5998515cc5fb54721cce5543194">PinnedTime</a></td></tr>
+<tr class="separator:ade0cd5998515cc5fb54721cce5543194"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 属性</h2></td></tr>
@@ -289,6 +295,47 @@ Public 属性</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">messageId</td><td>要删除消息的 ID。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>该消息是否成功删除。<ul>
+<li><code>true</code>: 成功；</li>
+<li><code>false</code>: 失败。 </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="abfe08ca8cc1c824d095150dec8045e9c" name="abfe08ca8cc1c824d095150dec8045e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe08ca8cc1c824d095150dec8045e9c">&#9670;&nbsp;</a></span>DeleteMessages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AgoraChat.Conversation.DeleteMessages </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>startTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>endTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >删除本地数据库中指定时间段的消息。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startTime</td><td>删除消息的起始时间。Unix 时间戳，单位为毫秒。 </td></tr>
+    <tr><td class="paramname">endTime</td><td>删除消息的结束时间。Unix 时间戳，单位为毫秒</td></tr>
   </table>
   </dd>
 </dl>
@@ -645,7 +692,44 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >判断该会话是否为子区会话。 </p><dl class="section return"><dt>返回</dt><dd>是否为子区会话。 </dd></dl>
+<p >判断该会话是否为子区会话：</p><ul>
+<li><code>true</code>：是；</li>
+<li><code>false</code>：否。 </li>
+</ul>
+
+</div>
+</div>
+<a id="a941607cb3301525d2e479b13f4e0c799" name="a941607cb3301525d2e479b13f4e0c799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941607cb3301525d2e479b13f4e0c799">&#9670;&nbsp;</a></span>IsPinned</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AgoraChat.Conversation.IsPinned</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >判断该会话是否被置顶。</p><ul>
+<li><code>true</code>：是；</li>
+<li><code>false</code>：否。 </li>
+</ul>
+
+</div>
+</div>
+<a id="ade0cd5998515cc5fb54721cce5543194" name="ade0cd5998515cc5fb54721cce5543194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade0cd5998515cc5fb54721cce5543194">&#9670;&nbsp;</a></span>PinnedTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long AgoraChat.Conversation.PinnedTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >会话置顶时间戳（毫秒）。</p>
+<p >如果 <code>IsPinned</code> 为 <code>false</code>，将返回 <code>0</code>。 </p>
 
 </div>
 </div>

@@ -63,7 +63,7 @@
     <section class="multi-line-signature">
       
 
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
 <span class="name ">sendConversationReadAck</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="sendConversationReadAck-param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span></span></li>
 </ol>)
 
@@ -85,13 +85,12 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;bool&gt; sendConversationReadAck(String conversationId) async {
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; sendConversationReadAck(String conversationId) async {
   Map req = {&quot;convId&quot;: conversationId};
   Map result =
       await ChatChannel.invokeMethod(ChatMethodKeys.ackConversationRead, req);
   try {
     EMError.hasErrorFromResult(result);
-    return result.boolValue(ChatMethodKeys.ackConversationRead);
   } on EMError catch (e) {
     throw e;
   }
@@ -128,7 +127,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.1.3
+      4.2.0
   </span>
 
   

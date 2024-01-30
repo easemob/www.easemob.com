@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.1.0</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.2.0</span>
    </div>
   </td>
  </tr>
@@ -81,6 +81,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a924ccd89e834e1419d2ba30775686051"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaec396ed9266385bff670c91bc5249b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_multi_device_delegate.html#aeaec396ed9266385bff670c91bc5249b">OnThreadMultiDevicesEvent</a> (<a class="el" href="namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68">MultiDevicesOperation</a> operation, string target, List&lt; string &gt; usernames)</td></tr>
 <tr class="separator:aeaec396ed9266385bff670c91bc5249b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75e7236f17e8072705465278091f69e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_multi_device_delegate.html#a75e7236f17e8072705465278091f69e4">OnRoamDeleteMultiDevicesEvent</a> (string conversationId, string deviceId)</td></tr>
+<tr class="separator:a75e7236f17e8072705465278091f69e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612e6ced614b41d6fa052612c0330de2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_multi_device_delegate.html#a612e6ced614b41d6fa052612c0330de2">OnConversationMultiDevicesEvent</a> (<a class="el" href="namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68">MultiDevicesOperation</a> operation, string conversationId, <a class="el" href="namespace_agora_chat.html#abebfeb274ae77efacf1738a6c9733dab">ConversationType</a> type)</td></tr>
+<tr class="separator:a612e6ced614b41d6fa052612c0330de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >多设备回调接口。 </p>
@@ -205,9 +209,88 @@ Public 成员函数</h2></td></tr>
 <p >多端多设备子区事件回调。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">operation</td><td>群组事件，详见 <code><a class="el" href="namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68">MultiDevicesOperation</a></code>。 </td></tr>
-    <tr><td class="paramname">target</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">operation</td><td>子区事件，详见 <code><a class="el" href="namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68">MultiDevicesOperation</a></code>。 </td></tr>
+    <tr><td class="paramname">target</td><td>子区 ID。 </td></tr>
     <tr><td class="paramname">usernames</td><td>操作目标 ID 列表。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a75e7236f17e8072705465278091f69e4" name="a75e7236f17e8072705465278091f69e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75e7236f17e8072705465278091f69e4">&#9670;&nbsp;</a></span>OnRoamDeleteMultiDevicesEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.IMultiDeviceDelegate.OnRoamDeleteMultiDevicesEvent </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>conversationId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>deviceId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >多端多设备单个会话删除漫游消息事件回调。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">deviceId</td><td>设备 ID。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a612e6ced614b41d6fa052612c0330de2" name="a612e6ced614b41d6fa052612c0330de2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612e6ced614b41d6fa052612c0330de2">&#9670;&nbsp;</a></span>OnConversationMultiDevicesEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.IMultiDeviceDelegate.OnConversationMultiDevicesEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68">MultiDevicesOperation</a>&#160;</td>
+          <td class="paramname"><em>operation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>conversationId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_agora_chat.html#abebfeb274ae77efacf1738a6c9733dab">ConversationType</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >多端多设备会话操作事件回调。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operation</td><td>会话事件，详见 <code><a class="el" href="namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68">MultiDevicesOperation</a></code>。 </td></tr>
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">type</td><td>会话类型。 </td></tr>
   </table>
   </dd>
 </dl>

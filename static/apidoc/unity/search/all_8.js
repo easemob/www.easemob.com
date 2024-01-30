@@ -20,7 +20,7 @@ var searchData=
   ['inviteneedconfirm_17',['InviteNeedConfirm',['../class_agora_chat_1_1_group_options.html#aeae3e209a5d624b2fba85f70d3de92b5',1,'AgoraChat::GroupOptions']]],
   ['ipresencemanagerdelegate_18',['IPresenceManagerDelegate',['../interface_agora_chat_1_1_i_presence_manager_delegate.html',1,'AgoraChat']]],
   ['iroommanagerdelegate_19',['IRoomManagerDelegate',['../interface_agora_chat_1_1_i_room_manager_delegate.html',1,'AgoraChat']]],
-  ['isallmembermuted_20',['IsAllMemberMuted',['../class_agora_chat_1_1_group.html#af38faea548242d1274c7a2c6d19dcd75',1,'AgoraChat.Group.IsAllMemberMuted()'],['../class_agora_chat_1_1_room.html#aa61080f72664e92a13b5e5a6c3df0585',1,'AgoraChat.Room.IsAllMemberMuted()']]],
+  ['isallmembermuted_20',['IsAllMemberMuted',['../class_agora_chat_1_1_room.html#aa61080f72664e92a13b5e5a6c3df0585',1,'AgoraChat.Room.IsAllMemberMuted()'],['../class_agora_chat_1_1_group.html#af38faea548242d1274c7a2c6d19dcd75',1,'AgoraChat.Group.IsAllMemberMuted()']]],
   ['isautodownload_21',['IsAutoDownload',['../class_agora_chat_1_1_options.html#aa5f089dbda6f4e8d0ff6555fa3c69226',1,'AgoraChat::Options']]],
   ['isconnected_22',['IsConnected',['../class_agora_chat_1_1_s_d_k_client.html#aeb930aca88a017664dd3b35716c137f3',1,'AgoraChat::SDKClient']]],
   ['isdisabled_23',['IsDisabled',['../class_agora_chat_1_1_group.html#ac43fa079581c317d4da80a48c93c52fe',1,'AgoraChat::Group']]],
@@ -28,7 +28,9 @@ var searchData=
   ['ismemberallowtoinvite_25',['IsMemberAllowToInvite',['../class_agora_chat_1_1_group.html#a1dad8e14df76f946c43a2c436e5e7757',1,'AgoraChat::Group']]],
   ['ismemberonly_26',['IsMemberOnly',['../class_agora_chat_1_1_group.html#a78b63c2fcbf124b6e5ed77f6209e180a',1,'AgoraChat::Group']]],
   ['isneedgroupack_27',['IsNeedGroupAck',['../class_agora_chat_1_1_message.html#a36fbb00a7101a428d8a02c25f2cf3da1',1,'AgoraChat::Message']]],
-  ['isread_28',['IsRead',['../class_agora_chat_1_1_message.html#a1eaac37e72fbdc9864ce99b3bd1e6b67',1,'AgoraChat::Message']]],
-  ['isroomownerleaveallowed_29',['IsRoomOwnerLeaveAllowed',['../class_agora_chat_1_1_options.html#ad5786f9a4803ca04a16fd22a472b565f',1,'AgoraChat::Options']]],
-  ['isthread_30',['IsThread',['../class_agora_chat_1_1_conversation.html#a77d4d24a8c27ea68ea324007d67d2722',1,'AgoraChat.Conversation.IsThread()'],['../class_agora_chat_1_1_message.html#ac874c62ac5475dc4c32af2b2cfcc6454',1,'AgoraChat.Message.IsThread()']]]
+  ['ispinned_28',['IsPinned',['../class_agora_chat_1_1_conversation.html#a941607cb3301525d2e479b13f4e0c799',1,'AgoraChat::Conversation']]],
+  ['isread_29',['IsRead',['../class_agora_chat_1_1_message.html#a1eaac37e72fbdc9864ce99b3bd1e6b67',1,'AgoraChat::Message']]],
+  ['isroomownerleaveallowed_30',['IsRoomOwnerLeaveAllowed',['../class_agora_chat_1_1_options.html#ad5786f9a4803ca04a16fd22a472b565f',1,'AgoraChat::Options']]],
+  ['issave_31',['IsSave',['../class_agora_chat_1_1_fetch_server_messages_option.html#af1400945375978c92d265120bf431b16',1,'AgoraChat::FetchServerMessagesOption']]],
+  ['isthread_32',['IsThread',['../class_agora_chat_1_1_conversation.html#a77d4d24a8c27ea68ea324007d67d2722',1,'AgoraChat.Conversation.IsThread()'],['../class_agora_chat_1_1_message.html#ac874c62ac5475dc4c32af2b2cfcc6454',1,'AgoraChat.Message.IsThread()']]]
 ];

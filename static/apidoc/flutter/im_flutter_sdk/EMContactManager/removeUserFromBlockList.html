@@ -64,7 +64,7 @@
       
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
-<span class="name ">removeUserFromBlockList</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="removeUserFromBlockList-param-username"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">username</span></span></li>
+<span class="name ">removeUserFromBlockList</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="removeUserFromBlockList-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span></li>
 </ol>)
 
       
@@ -73,7 +73,7 @@
     
 <section class="desc markdown">
   <p>将指定用户移除黑名单。</p>
-<p>Param <code>username</code> 要在黑名单中移除的用户 ID。</p>
+<p>Param <code>userId</code> 要在黑名单中移除的用户 ID。</p>
 <p><strong>Throws</strong>  如果有方法调用的异常会在这里抛出，可以看到具体错误原因。请参见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
 </section>
 
@@ -81,8 +81,8 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; removeUserFromBlockList(String username) async {
-  Map req = {&#39;username&#39;: username};
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; removeUserFromBlockList(String userId) async {
+  Map req = {&#39;username&#39;: userId};
   Map result = await _channel.invokeMethod(
       ChatMethodKeys.removeUserFromBlockList, req);
   try {
@@ -123,7 +123,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.1.3
+      4.2.0
   </span>
 
   

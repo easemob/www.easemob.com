@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.1.0</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.2.0</span>
    </div>
   </td>
  </tr>
@@ -79,8 +79,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:adf6f1235f8464ab2cc3a10aca16409a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a317fe463da92a092ef40fec5ed94b5d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a317fe463da92a092ef40fec5ed94b5d4">OnDisconnected</a> ()</td></tr>
 <tr class="separator:a317fe463da92a092ef40fec5ed94b5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f535fc04fcc57b89bb374431c3d62bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a3f535fc04fcc57b89bb374431c3d62bd">OnLoggedOtherDevice</a> ()</td></tr>
-<tr class="separator:a3f535fc04fcc57b89bb374431c3d62bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f3b416dc31a09ecb5368e3cf85786d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a1f3b416dc31a09ecb5368e3cf85786d9">OnLoggedOtherDevice</a> (string deviceName)</td></tr>
+<tr class="separator:a1f3b416dc31a09ecb5368e3cf85786d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51309fd15140ddfd224bb231295b7380"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a51309fd15140ddfd224bb231295b7380">OnRemovedFromServer</a> ()</td></tr>
 <tr class="separator:a51309fd15140ddfd224bb231295b7380"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f0516e8320ddfc3c682c15ddd32499"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#ae9f0516e8320ddfc3c682c15ddd32499">OnForbidByServer</a> ()</td></tr>
@@ -97,6 +97,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a2286405f7a3cffae753b37c3e5a85ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a710fb1cff776511fcf12c822657c61d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a710fb1cff776511fcf12c822657c61d2">OnTokenWillExpire</a> ()</td></tr>
 <tr class="separator:a710fb1cff776511fcf12c822657c61d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485095b148ec0da21339cb0181f9827c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_connection_delegate.html#a485095b148ec0da21339cb0181f9827c">OnAppActiveNumberReachLimitation</a> ()</td></tr>
+<tr class="separator:a485095b148ec0da21339cb0181f9827c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >连接回调接口。 </p>
@@ -138,8 +140,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a3f535fc04fcc57b89bb374431c3d62bd" name="a3f535fc04fcc57b89bb374431c3d62bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f535fc04fcc57b89bb374431c3d62bd">&#9670;&nbsp;</a></span>OnLoggedOtherDevice()</h2>
+<a id="a1f3b416dc31a09ecb5368e3cf85786d9" name="a1f3b416dc31a09ecb5368e3cf85786d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f3b416dc31a09ecb5368e3cf85786d9">&#9670;&nbsp;</a></span>OnLoggedOtherDevice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,12 +149,19 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void AgoraChat.IConnectionDelegate.OnLoggedOtherDevice </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>deviceName</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >当前登录账号在其它设备登录时会接收到此回调。 </p>
+<p >当前登录账号在其它设备登录时会接收到此回调。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceName</td><td>另一个设备的名称。 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -297,6 +306,24 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Token 即将过期回调。 </p>
+
+</div>
+</div>
+<a id="a485095b148ec0da21339cb0181f9827c" name="a485095b148ec0da21339cb0181f9827c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485095b148ec0da21339cb0181f9827c">&#9670;&nbsp;</a></span>OnAppActiveNumberReachLimitation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.IConnectionDelegate.OnAppActiveNumberReachLimitation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >App 激活数量已达到上限值。 </p>
 
 </div>
 </div>
