@@ -21,10 +21,11 @@ var searchData=
   ['contact_5freach_5flimit_18',['CONTACT_REACH_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#aeb94c3644ce8e9734208dbc0d53bc95f',1,'com::hyphenate::EMError']]],
   ['contact_5freach_5flimit_5fpeer_19',['CONTACT_REACH_LIMIT_PEER',['../classcom_1_1hyphenate_1_1_e_m_error.html#aee324c3eb0f94dc982ecbef977bba4c9',1,'com::hyphenate::EMError']]],
   ['contact_5fremove_20',['CONTACT_REMOVE',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a41c7f4d6a2354b1e76eb3fdb436d01c6',1,'com::hyphenate::EMMultiDeviceListener']]],
-  ['conversation_5fdeleted_21',['CONVERSATION_DELETED',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a038fb2a1a0426320129cda4cfd5bda51',1,'com::hyphenate::EMMultiDeviceListener']]],
-  ['conversation_5fmark_5fupdate_22',['CONVERSATION_MARK_UPDATE',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a6eb7dbce9a04e9c0a433078a280fafcf',1,'com::hyphenate::EMMultiDeviceListener']]],
-  ['conversation_5fpinned_23',['CONVERSATION_PINNED',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a4891909d0e551b5e3aa003e89ab5c335',1,'com::hyphenate::EMMultiDeviceListener']]],
-  ['conversation_5funpinned_24',['CONVERSATION_UNPINNED',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a9ad689ecbb6b4c3fb221228825a81a93',1,'com::hyphenate::EMMultiDeviceListener']]],
-  ['create_25',['CREATE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html#ab0dffdf422c25295a97d0738f71a83c9',1,'com::hyphenate::chat::EMMessage::Status']]],
-  ['custom_26',['CUSTOM',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a49c31f5a9905ab959da12181b5c85096',1,'com.hyphenate.chat.EMMessage.Type.CUSTOM()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#ad265043ee988c74a8f577a8a1a042084',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.CUSTOM()']]]
+  ['content_21',['CONTENT',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_message_search_scope.html#a36c3cab31fe1d872b1799bec7075f6f1',1,'com::hyphenate::chat::EMConversation::EMMessageSearchScope']]],
+  ['conversation_5fdeleted_22',['CONVERSATION_DELETED',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a038fb2a1a0426320129cda4cfd5bda51',1,'com::hyphenate::EMMultiDeviceListener']]],
+  ['conversation_5fmark_5fupdate_23',['CONVERSATION_MARK_UPDATE',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a6eb7dbce9a04e9c0a433078a280fafcf',1,'com::hyphenate::EMMultiDeviceListener']]],
+  ['conversation_5fpinned_24',['CONVERSATION_PINNED',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a4891909d0e551b5e3aa003e89ab5c335',1,'com::hyphenate::EMMultiDeviceListener']]],
+  ['conversation_5funpinned_25',['CONVERSATION_UNPINNED',['../interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a9ad689ecbb6b4c3fb221228825a81a93',1,'com::hyphenate::EMMultiDeviceListener']]],
+  ['create_26',['CREATE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html#ab0dffdf422c25295a97d0738f71a83c9',1,'com::hyphenate::chat::EMMessage::Status']]],
+  ['custom_27',['CUSTOM',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a49c31f5a9905ab959da12181b5c85096',1,'com.hyphenate.chat.EMMessage.Type.CUSTOM()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#ad265043ee988c74a8f577a8a1a042084',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.CUSTOM()']]]
 ];
