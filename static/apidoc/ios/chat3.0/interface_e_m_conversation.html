@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.3.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.4.0</span>
    </div>
   </td>
  </tr>
@@ -114,6 +114,8 @@ $(function() {
 <tr class="separator:a9943af99e08cb5a019a7c115306c1a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae68d54527596a552a84c561a7afa6eb1"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_conversation.html#ae68d54527596a552a84c561a7afa6eb1">loadMessagesWithKeyword:timestamp:count:fromUser:searchDirection:completion:</a></td></tr>
 <tr class="separator:ae68d54527596a552a84c561a7afa6eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c1b4748f8ae92cfbcd178967e769b1"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_conversation.html#a61c1b4748f8ae92cfbcd178967e769b1">loadMessagesWithKeyword:timestamp:count:fromUser:searchDirection:scope:completion:</a></td></tr>
+<tr class="separator:a61c1b4748f8ae92cfbcd178967e769b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad51e79685890e92fa6e6ed9d424e9db9"><td class="memItemLeft" align="right" valign="top">(NSArray&lt; <a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> * &gt; *_Nullable)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_conversation.html#ad51e79685890e92fa6e6ed9d424e9db9">loadCustomMsgWithKeyword:timestamp:count:fromUser:searchDirection:</a></td></tr>
 <tr class="separator:ad51e79685890e92fa6e6ed9d424e9db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9630841b9d009cce55dbc4383784a0b"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_conversation.html#ad9630841b9d009cce55dbc4383784a0b">loadCustomMsgWithKeyword:timestamp:count:fromUser:searchDirection:completion:</a></td></tr>
@@ -745,6 +747,78 @@ $(function() {
     <tr><td class="paramname">aCount</td><td>每次获取的消息条数。如果设为小于等于 0，SDK 会获取 1 条消息。 </td></tr>
     <tr><td class="paramname">aSender</td><td>消息发送方。设为 NIL 表示忽略该参数。 </td></tr>
     <tr><td class="paramname">aDirection</td><td>消息搜索方向，详见 <code><a class="el" href="">EMMessageSearchDirection</a></code>。 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a61c1b4748f8ae92cfbcd178967e769b1" name="a61c1b4748f8ae92cfbcd178967e769b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c1b4748f8ae92cfbcd178967e769b1">&#9670;&nbsp;</a></span>loadMessagesWithKeyword:timestamp:count:fromUser:searchDirection:scope:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) loadMessagesWithKeyword: </td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nullable)&#160;</td>
+          <td class="paramname"><em>aKeyword</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(long long)&#160;</td>
+          <td class="paramname"><em>aTimestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">count:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>aCount</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">fromUser:</td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nullable)&#160;</td>
+          <td class="paramname"><em>aSender</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">searchDirection:</td>
+          <td></td>
+          <td class="paramtype">(EMMessageSearchDirection)&#160;</td>
+          <td class="paramname"><em>aDirection</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">scope:</td>
+          <td></td>
+          <td class="paramtype">(EMMessageSearchScope)&#160;</td>
+          <td class="paramname"><em>aScope</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSArray&lt; <a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> * &gt; *_Nullable aMessages, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >从本地数据库获取会话中的指定用户发送的包含特定关键词的消息。</p>
+<p >SDK 返回的消息按时间顺序排列。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aKeywords</td><td>关键词。设为 <code>nil</code> 表示忽略该参数。 </td></tr>
+    <tr><td class="paramname">aTimestamp</td><td>搜索开始的 Unix 时间戳。单位为毫秒。如果该参数设置的时间戳为负数，则从最新消息向前获取。 </td></tr>
+    <tr><td class="paramname">aCount</td><td>每次获取的消息条数。如果设为小于等于 0，SDK 会获取 1 条消息。 </td></tr>
+    <tr><td class="paramname">aSender</td><td>消息发送方。设为 <code>nil</code> 表示忽略该参数。 </td></tr>
+    <tr><td class="paramname">aDirection</td><td>消息搜索方向，详见 <code><a class="el" href="">EMMessageSearchDirection</a></code>。 </td></tr>
+    <tr><td class="paramname">aScope</td><td>消息搜索范围，详见 <code><a class="el" href="">EMMessageSearchScope</a></code>。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>

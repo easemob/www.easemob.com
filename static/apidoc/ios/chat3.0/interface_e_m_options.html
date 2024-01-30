@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.3.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.4.0</span>
    </div>
   </td>
  </tr>
@@ -147,6 +147,10 @@ $(function() {
 <tr class="separator:a8f40d9f090c30ff618a7d509ead6867c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1db02b39360442d3e1771f807a9ace6"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#af1db02b39360442d3e1771f807a9ace6">useReplacedMessageContents</a></td></tr>
 <tr class="separator:af1db02b39360442d3e1771f807a9ace6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29a6d58a232d258689ac9e0c03c5d2c5"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#a29a6d58a232d258689ac9e0c03c5d2c5">includeSendMessageInMessageListener</a></td></tr>
+<tr class="separator:a29a6d58a232d258689ac9e0c03c5d2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06241d12a9c2fb48aff520d2ef03008a"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#a06241d12a9c2fb48aff520d2ef03008a">regardImportMessagesAsRead</a></td></tr>
+<tr class="separator:a06241d12a9c2fb48aff520d2ef03008a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf551f2e0bcf1be8454d42c7eac763f5"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#acf551f2e0bcf1be8454d42c7eac763f5">enableDnsConfig</a></td></tr>
 <tr class="separator:acf551f2e0bcf1be8454d42c7eac763f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add8ffc7906a0b90c66402014173b6e69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#add8ffc7906a0b90c66402014173b6e69">chatPort</a></td></tr>
@@ -807,6 +811,32 @@ $(function() {
 
 </div>
 </div>
+<a id="a29a6d58a232d258689ac9e0c03c5d2c5" name="a29a6d58a232d258689ac9e0c03c5d2c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29a6d58a232d258689ac9e0c03c5d2c5">&#9670;&nbsp;</a></span>includeSendMessageInMessageListener</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) includeSendMessageInMessageListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >发送成功的消息是否在 <code>ChatManagerDelegate#messagesDidReceive</code> 中回调。</p><ul>
+<li>YES：是。</li>
+<li>（默认）NO：否。 </li>
+</ul>
+
+</div>
+</div>
 <a id="a04e53a0ebdbe1cf8716ee65af34c3e77" name="a04e53a0ebdbe1cf8716ee65af34c3e77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04e53a0ebdbe1cf8716ee65af34c3e77">&#9670;&nbsp;</a></span>isAutoLogin</h2>
 
@@ -939,6 +969,32 @@ $(function() {
 
 </div>
 </div>
+<a id="a06241d12a9c2fb48aff520d2ef03008a" name="a06241d12a9c2fb48aff520d2ef03008a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06241d12a9c2fb48aff520d2ef03008a">&#9670;&nbsp;</a></span>regardImportMessagesAsRead</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) regardImportMessagesAsRead</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >是否将服务器导入的消息设置为已读：</p><ul>
+<li>YES：已读。会话的未读消息数 <code><a class="el" href="interface_e_m_conversation.html">EMConversation</a>#unreadMessagesCount</code> 不发生变化。</li>
+<li>（默认）NO：未读。<code><a class="el" href="interface_e_m_conversation.html">EMConversation</a>#unreadMessagesCount</code> 的数量会增加。 </li>
+</ul>
+
+</div>
+</div>
 <a id="a534277c754dd1448227b01fa2401d68d" name="a534277c754dd1448227b01fa2401d68d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a534277c754dd1448227b01fa2401d68d">&#9670;&nbsp;</a></span>restServer</h2>
 
@@ -1010,7 +1066,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >当发送的消息内容被Moderation或发送前回调替换时，发送方是否使用替换后的内容。</p>
+<p >当发送的文本消息的内容被文本审核（Moderation）服务替换时，是否需要返回给发送方。</p><ul>
+<li>YES：将内容替换后的消息返回给发送方。</li>
+<li>（默认）NO：将原消息返回给发送方。</li>
+</ul>
 <p >该属性只能在调用 <code>initializeSDKWithOptions</code> 时设置，而且 app 运行过程中不能修改该参数的设置。 </p>
 
 </div>
