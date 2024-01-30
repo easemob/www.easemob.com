@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.3.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.4.0</span>
    </div>
   </td>
  </tr>
@@ -169,6 +169,8 @@ $(function() {
 <tr class="separator:a8d595d95a93b6bd62d22c765ba3c5a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cb7a8f459b9e9547d7d6f0d31072576"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a6cb7a8f459b9e9547d7d6f0d31072576">loadMessagesWithKeyword:timestamp:count:fromUser:searchDirection:completion:</a></td></tr>
 <tr class="separator:a6cb7a8f459b9e9547d7d6f0d31072576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf69b4f5c710e2bbb4dadcf3fe8364a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#acbf69b4f5c710e2bbb4dadcf3fe8364a">loadMessagesWithKeyword:timestamp:count:fromUser:searchDirection:scope:completion:</a></td></tr>
+<tr class="separator:acbf69b4f5c710e2bbb4dadcf3fe8364a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa933d30242b85a26655c54d81d41ec5a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#aa933d30242b85a26655c54d81d41ec5a">addReaction:toMessage:completion:</a></td></tr>
 <tr class="separator:aa933d30242b85a26655c54d81d41ec5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada7b8d6da6577859239cd11174208cc2"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#ada7b8d6da6577859239cd11174208cc2">removeReaction:fromMessage:completion:</a></td></tr>
@@ -185,6 +187,8 @@ $(function() {
 <tr class="separator:a82e5144febac439d392700fdabc827a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0dfccc5ece53e7260cb774fafb7e11f"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#ac0dfccc5ece53e7260cb774fafb7e11f">getConversationsFromServerWithCursor:filter:completion:</a></td></tr>
 <tr class="separator:ac0dfccc5ece53e7260cb774fafb7e11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e2c1c70e4827e614a1b539b141ee94"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a95e2c1c70e4827e614a1b539b141ee94">deleteAllMessagesAndConversations:completion:</a></td></tr>
+<tr class="separator:a95e2c1c70e4827e614a1b539b141ee94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >聊天相关操作代理协议。</p>
@@ -586,6 +590,50 @@ $(function() {
     <tr><td class="paramname">aStartMessageId</td><td>查询的起始消息 ID。 </td></tr>
     <tr><td class="paramname">aPageSize</td><td>每页期望获取的消息条数。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a95e2c1c70e4827e614a1b539b141ee94" name="a95e2c1c70e4827e614a1b539b141ee94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e2c1c70e4827e614a1b539b141ee94">&#9670;&nbsp;</a></span>deleteAllMessagesAndConversations:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) deleteAllMessagesAndConversations: </td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>clearServerData</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >删除所有消息和会话 异步执行</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clearSeverData</td><td>是否删除服务端所有消息及会话 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2105,6 +2153,90 @@ $(function() {
 <li><code>DOWN</code>：按消息时间戳的顺序获取。 </li>
 </ul>
 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acbf69b4f5c710e2bbb4dadcf3fe8364a" name="acbf69b4f5c710e2bbb4dadcf3fe8364a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbf69b4f5c710e2bbb4dadcf3fe8364a">&#9670;&nbsp;</a></span>loadMessagesWithKeyword:timestamp:count:fromUser:searchDirection:scope:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) loadMessagesWithKeyword: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aKeywords</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(long long)&#160;</td>
+          <td class="paramname"><em>aTimestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">count:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>aCount</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">fromUser:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>aSender</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">searchDirection:</td>
+          <td></td>
+          <td class="paramtype">(EMMessageSearchDirection)&#160;</td>
+          <td class="paramname"><em>aDirection</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">scope:</td>
+          <td></td>
+          <td class="paramtype">(EMMessageSearchScope)&#160;</td>
+          <td class="paramname"><em>aScope</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSArray&lt; <a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> * &gt; *aMessages, <a class="el" href="interface_e_m_error.html">EMError</a> *aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >通过关键词从数据库获取消息。</p>
+<p >该方法返回的消息按时间顺序排列。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aKeywords</td><td>搜索关键词，设为 <code>nil</code> 表示忽略该参数。 </td></tr>
+    <tr><td class="paramname">aTimestamp</td><td>参考时间戳。如果该参数设置的时间戳为负数，则从最新消息向前获取。 </td></tr>
+    <tr><td class="paramname">aCount</td><td>获取的消息条数。如果设为小于等于 0，SDK 会获取一条消息。 </td></tr>
+    <tr><td class="paramname">aSender</td><td>消息发送方。设为 <code>nil</code> 表示忽略该参数。 </td></tr>
+    <tr><td class="paramname">aDirection</td><td>消息搜索方向，详见 <code><a class="el" href="">EMMessageSearchDirection</a></code>。<ul>
+<li><code>UP</code>：按消息时间戳的逆序获取。</li>
+<li><code>DOWN</code>：按消息时间戳的顺序获取。 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">aScope</td><td>消息搜索范围，详见 <code><a class="el" href="">EMMessageSearchScope</a></code>。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
