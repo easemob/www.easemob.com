@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.4.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.5.0</span>
    </div>
   </td>
  </tr>
@@ -103,6 +103,8 @@ $(function() {
 <tr class="separator:a38dc747a5de5966f694534716ab45f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0153377b22e44dc156b4077b26d9c6e0"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a0153377b22e44dc156b4077b26d9c6e0">onMessageContentChanged:operatorId:operationTime:</a></td></tr>
 <tr class="separator:a0153377b22e44dc156b4077b26d9c6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebcc71ce88bbaa09ad23cb6aead7cbc0"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#aebcc71ce88bbaa09ad23cb6aead7cbc0">onMessagePinChanged:conversationId:operation:pinInfo:</a></td></tr>
+<tr class="separator:aebcc71ce88bbaa09ad23cb6aead7cbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59900ff402a79db041e129afb14d866a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a59900ff402a79db041e129afb14d866a">messagesDidRecall:</a></td></tr>
 <tr class="separator:a59900ff402a79db041e129afb14d866a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c3cf638f30c14f8ed69eb0c70d2025d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a5c3cf638f30c14f8ed69eb0c70d2025d">messageReactionDidChange:</a></td></tr>
@@ -624,6 +626,64 @@ $(function() {
     <tr><td class="paramname">message</td><td>修改的消息对象，其中的 message body 包含消息修改次数、最后一次修改的操作者、最后一次修改时间等信息。 </td></tr>
     <tr><td class="paramname">operatorId</td><td>最后一次修改消息的用户。 </td></tr>
     <tr><td class="paramname">operationTime</td><td>消息的最后一次修改时间戳，单位为毫秒。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aebcc71ce88bbaa09ad23cb6aead7cbc0" name="aebcc71ce88bbaa09ad23cb6aead7cbc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebcc71ce88bbaa09ad23cb6aead7cbc0">&#9670;&nbsp;</a></span>onMessagePinChanged:conversationId:operation:pinInfo:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) onMessagePinChanged: </td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nonnull)&#160;</td>
+          <td class="paramname"><em>messageId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">conversationId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nonnull)&#160;</td>
+          <td class="paramname"><em>conversationId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">operation:</td>
+          <td></td>
+          <td class="paramtype">(EMMessagePinOperation)&#160;</td>
+          <td class="paramname"><em>pinOperation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">pinInfo:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_message_pin_info.html">EMMessagePinInfo</a> *_Nonnull)&#160;</td>
+          <td class="paramname"><em>pinInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >收到消息置顶状态变更回调。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">messageId</td><td>置顶状态变更的消息 ID。 </td></tr>
+    <tr><td class="paramname">conversationId</td><td>消息所在会话 ID。 </td></tr>
+    <tr><td class="paramname">pinOperation</td><td>消息置顶或取消置顶操作。 </td></tr>
+    <tr><td class="paramname">pinInfo</td><td>置顶或取消置顶操作信息，包括操作时间，操作者的用户 ID。 </td></tr>
   </table>
   </dd>
 </dl>

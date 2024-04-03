@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.4.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.5.0</span>
    </div>
   </td>
  </tr>
@@ -79,8 +79,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 属性</h2></td></tr>
-<tr class="memitem:a4e47f87ec21de7ba78b33b1fd3331e20"><td class="memItemLeft" align="right" valign="top"><a id="a4e47f87ec21de7ba78b33b1fd3331e20" name="a4e47f87ec21de7ba78b33b1fd3331e20"></a>
-NSString *_Nullable&#160;</td><td class="memItemRight" valign="bottom"><b>from</b></td></tr>
+<tr class="memitem:a4e47f87ec21de7ba78b33b1fd3331e20"><td class="memItemLeft" align="right" valign="top">NSString *_Nullable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_fetch_server_messages_option.html#a4e47f87ec21de7ba78b33b1fd3331e20">from</a></td></tr>
 <tr class="separator:a4e47f87ec21de7ba78b33b1fd3331e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87ae35089eaf61188206c7029930d527"><td class="memItemLeft" align="right" valign="top">NSArray&lt; NSNumber * &gt; *_Nullable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_fetch_server_messages_option.html#a87ae35089eaf61188206c7029930d527">msgTypes</a></td></tr>
 <tr class="separator:a87ae35089eaf61188206c7029930d527"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,7 +114,7 @@ NSString *_Nullable&#160;</td><td class="memItemRight" valign="bottom"><b>from</
   </tr>
 </table>
 </div><div class="memdoc">
-<p >消息查询的结束时间，Unix 时间戳，单位为毫秒。默认为 <code>-1</code>，表示消息查询时会忽略该参数。若起始时间设置为特定时间点，而结束时间采用默认值 <code>-1</code>，则查询起始时间至当前时间的消息。若起始时间采用默认值 <code>-1</code>，而结束时间设置了特定时间，SDK 返回从会话中最早的消息到结束时间点的消息。 </p>
+<p >消息搜索方向。详见 <code><a class="el" href="">EMConversation.EMMessageSearchDirection</a></code>。 </p>
 
 </div>
 </div>
@@ -138,7 +137,30 @@ NSString *_Nullable&#160;</td><td class="memItemRight" valign="bottom"><b>from</
   </tr>
 </table>
 </div><div class="memdoc">
-<p >消息查询的起始时间，Unix 时间戳，单位为毫秒。默认为 <code>-1</code>，表示消息查询时会忽略该参数。若起始时间设置为特定时间点，而结束时间采用默认值 <code>-1</code>，则查询起始时间至当前时间的消息。若起始时间采用默认值 <code>-1</code>，而结束时间设置了特定时间，SDK 返回从会话中最早的消息到结束时间点的消息。 </p>
+<p >消息查询的结束时间，Unix 时间戳，单位为毫秒。默认为 <code>-1</code>，表示消息查询时会忽略该参数。若起始时间设置为特定时间点，而结束时间采用默认值 <code>-1</code>，则查询起始时间至当前时间的消息。若起始时间采用默认值 <code>-1</code>，而结束时间设置了特定时间，SDK 返回从会话中最早的消息到结束时间点的消息。 </p>
+
+</div>
+</div>
+<a id="a4e47f87ec21de7ba78b33b1fd3331e20" name="a4e47f87ec21de7ba78b33b1fd3331e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e47f87ec21de7ba78b33b1fd3331e20">&#9670;&nbsp;</a></span>from</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString* _Nullable) from</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >群组会话中的消息发送方的用户 ID。 </p>
 
 </div>
 </div>
@@ -161,7 +183,7 @@ NSString *_Nullable&#160;</td><td class="memItemRight" valign="bottom"><b>from</
   </tr>
 </table>
 </div><div class="memdoc">
-<p >消息搜索方向。详见 <code><a class="el" href="">EMConversation.EMMessageSearchDirection</a></code>。 </p>
+<p >获取的消息是否保存到数据库：-<code>YES</code>：保存到数据库；-（默认）<code>NO</code>：不保存到数据库。 </p>
 
 </div>
 </div>
@@ -184,7 +206,7 @@ NSString *_Nullable&#160;</td><td class="memItemRight" valign="bottom"><b>from</
   </tr>
 </table>
 </div><div class="memdoc">
-<p >群组会话中的消息发送方的用户 ID。 </p>
+<p >要查询的消息类型数组。默认值为 <code>nil</code>，表示返回所有类型的消息。 </p>
 
 </div>
 </div>
@@ -207,7 +229,7 @@ NSString *_Nullable&#160;</td><td class="memItemRight" valign="bottom"><b>from</
   </tr>
 </table>
 </div><div class="memdoc">
-<p >要查询的消息类型数组。默认值为 <code>nil</code>，表示返回所有类型的消息。 </p>
+<p >消息查询的起始时间，Unix 时间戳，单位为毫秒。默认为 <code>-1</code>，表示消息查询时会忽略该参数。若起始时间设置为特定时间点，而结束时间采用默认值 <code>-1</code>，则查询起始时间至当前时间的消息。若起始时间采用默认值 <code>-1</code>，而结束时间设置了特定时间，SDK 返回从会话中最早的消息到结束时间点的消息。 </p>
 
 </div>
 </div>
