@@ -1,10 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
 <title>HyphenateChatSDK: HyphenateChat.framework/Headers/IEMChatManager.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -12,6 +11,9 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -19,9 +21,10 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.5.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">HyphenateChatSDK
+   &#160;<span id="projectnumber">4.6.0</span>
    </div>
   </td>
  </tr>
@@ -29,23 +32,38 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.4 -->
+<!-- 制作者 Doxygen 1.8.10 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
-/* @license-end */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -66,291 +84,300 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">IEMChatManager.h</div></div>
+  <div class="headertitle">
+<div class="title">IEMChatManager.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#import &quot;EMCommonDefs.h&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#import &quot;EMChatManagerDelegate.h&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#import &quot;EMConversation.h&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#import &quot;EMChatMessage.h&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#import &quot;EMTextMessageBody.h&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#import &quot;EMLocationMessageBody.h&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#import &quot;EMCmdMessageBody.h&quot;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#import &quot;EMFileMessageBody.h&quot;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#import &quot;EMImageMessageBody.h&quot;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#import &quot;EMVoiceMessageBody.h&quot;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#import &quot;EMVideoMessageBody.h&quot;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#import &quot;EMCustomMessageBody.h&quot;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#import &quot;EMCombineMessageBody.h&quot;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#import &quot;EMCursorResult.h&quot;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#import &quot;EMGroupMessageAck.h&quot;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#import &quot;EMTranslateLanguage.h&quot;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#import &quot;EMFetchServerMessagesOption.h&quot;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#import &quot;EMConversationFilter.h&quot;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="protocol_i_e_m_chat_manager-p.html#afe2068deb555d7f5b1ed0e2224f278e0">   45</a></span><span class="keyword">typedef</span> NS_ENUM(NSUInteger, EMMessageFetchHistoryDirection) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    EMMessageFetchHistoryDirectionUp  = 0,    </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    EMMessageFetchHistoryDirectionDown        </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">@class</span> <a class="code hl_interface" href="interface_e_m_error.html">EMError</a>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="protocol_i_e_m_chat_manager-p.html">   65</a></span><span class="keyword">@protocol </span><a class="code hl_protocol" href="protocol_i_e_m_chat_manager-p.html">IEMChatManager</a> &lt;NSObject&gt;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">@required</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#pragma mark - Delegate</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>- (void)addDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_chat_manager_delegate-p.html">EMChatManagerDelegate</a>&gt; _Nullable)aDelegate</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      delegateQueue:(dispatch_queue_t _Nullable)aQueue;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>- (void)removeDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_chat_manager_delegate-p.html">EMChatManagerDelegate</a>&gt; _Nonnull)aDelegate;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#pragma mark - Conversation</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>- (NSArray&lt;<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable)<a class="code hl_function" href="protocol_i_e_m_chat_manager-p.html#a9159a946045d347e01eaeb754491b3c6">getAllConversations</a>;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>- (NSArray&lt;<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable)<a class="code hl_function" href="protocol_i_e_m_chat_manager-p.html#a9159a946045d347e01eaeb754491b3c6">getAllConversations</a>:(BOOL)isSort;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>- (void)getConversationsFromServer:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable aConversations, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock EM_DEPRECATED_IOS(4_0_0, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_chat_manager-p.html">IEMChatManager</a> getConversationsFromServerWithCursor:pageSize:completion&quot;);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>- (void)getConversationsFromServerByPage:(NSUInteger)pageNumber</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                                pageSize:(NSUInteger)pageSize</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                              completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable aConversations, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock EM_DEPRECATED_IOS(4_0_0, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_chat_manager-p.html">IEMChatManager</a> getConversationsFromServerWithCursor:pageSize:completion&quot;);</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>- (void)getConversationsFromServerWithCursor:(nullable NSString *)cursor pageSize:(UInt8)pageSize completion:(nonnull <span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable result, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable error))completionBlock;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>- (void)getPinnedConversationsFromServerWithCursor:(nullable NSString *)cursor pageSize:(UInt8)limit completion:(nonnull <span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable result, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable error))completionBlock;</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>- (void)pinConversation:(nonnull NSString *)conversationId isPinned:(BOOL)isPinned completionBlock:(nullable <span class="keywordtype">void</span>(^)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable error))completionBlock;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>- (<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *_Nullable)getConversationWithConvId:(NSString * _Nullable)aConversationId;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>- (<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *_Nullable)getConversation:(NSString *_Nonnull)aConversationId</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                               type:(EMConversationType)aType</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                   createIfNotExist:(BOOL)aIfCreate;</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>- (<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *_Nullable)getConversation:(NSString *_Nonnull)aConversationId</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                               type:(EMConversationType)aType</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                   createIfNotExist:(BOOL)aIfCreate isThread:(BOOL)isThread;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>- (void)deleteConversation:(NSString * _Nonnull)aConversationId</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>          isDeleteMessages:(BOOL)aIsDeleteMessages</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nullable aConversationId, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> - (void)deleteServerConversation:(NSString * _Nonnull)aConversationId</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                 conversationType:(EMConversationType)aConversationType</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>           isDeleteServerMessages:(BOOL)aIsDeleteServerMessages</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                       completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nullable aConversationId, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>- (void)deleteConversations:(NSArray&lt;<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable)aConversations</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>           isDeleteMessages:(BOOL)aIsDeleteMessages</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                 completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>- (void)importConversations:(NSArray&lt;<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable)aConversations</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>                 completion:(<span class="keywordtype">void</span> (^ _Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span><span class="preprocessor">#pragma mark - Message</span></div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>- (<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> * _Nullable)getMessageWithMessageId:(NSString * _Nonnull)aMessageId;</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span> </div>
-<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>- (NSString * _Nullable)getMessageAttachmentPath:(NSString * _Nonnull)aConversationId;</div>
-<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span> </div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>- (void)importMessages:(NSArray&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; * _Nonnull)aMessages</div>
-<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>            completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span> </div>
-<div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>- (void)updateMessage:(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)aMessage</div>
-<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> * _Nullable aMessage, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>- (void)modifyMessage:(NSString *_Nonnull)messageId body:(<a class="code hl_interface" href="interface_e_m_message_body.html">EMMessageBody</a> *_Nonnull)body completion:(<span class="keywordtype">void</span> (^_Nonnull)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable error,<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message))completionBlock;</div>
-<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span> </div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>- (void)sendMessageReadAck:(NSString * _Nonnull)aMessageId</div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>                    toUser:(NSString * _Nonnull)aUsername</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>                completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span> </div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span> </div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>- (void)sendGroupMessageReadAck:(NSString * _Nonnull)aMessageId</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>                        toGroup:(NSString * _Nonnull)aGroupId</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>                        content:(NSString * _Nullable)aContent</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>                     completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span> </div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>- (void)ackConversationRead:(NSString * _Nonnull)conversationId</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>                 completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span> </div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>- (void)recallMessageWithMessageId:(NSString *_Nonnull)aMessageId</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>                        completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span> </div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span> </div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>- (void)sendMessage:(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)aMessage</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>           progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>         completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error))aCompletionBlock;</div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span> </div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>- (void)resendMessage:(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)aMessage</div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>             progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error))aCompletionBlock;</div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span> </div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>- (void)downloadMessageThumbnail:(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)aMessage</div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>                        progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>                      completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error))aCompletionBlock;</div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span> </div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>- (void)downloadMessageAttachment:(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)aMessage</div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>                         progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>                       completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error))aCompletionBlock;</div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span> </div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>- (void)downloadAndParseCombineMessage:(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a>* _Nonnull)aMessage</div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>                            completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt;*_Nullable messages, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error))aCompletionBlock;</div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span> </div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>- (<a class="code hl_interface" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt; *_Nullable)fetchHistoryMessagesFromServer:(NSString *_Nonnull)aConversationId</div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>                                  conversationType:(EMConversationType)aConversationType</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>                                    startMessageId:(NSString *_Nullable)aStartMessageId</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>                                       fetchDirection:(EMMessageFetchHistoryDirection)direction</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>                                          pageSize:(<span class="keywordtype">int</span>)aPageSize</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>                                             error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError __deprecated_msg(&quot;Use -fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion: instead&quot;);</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>- (<a class="code hl_interface" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt; *_Nullable)fetchHistoryMessagesFromServer:(NSString *_Nonnull)aConversationId</div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>                                  conversationType:(EMConversationType)aConversationType</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>                                    startMessageId:(NSString *_Nullable)aStartMessageId</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>                                          pageSize:(<span class="keywordtype">int</span>)aPageSize</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>                                                                      error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError __deprecated_msg(&quot;Use -fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion: instead&quot;);</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span> </div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span> </div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>- (void)asyncFetchHistoryMessagesFromServer:(NSString *_Nonnull)aConversationId</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>                           conversationType:(EMConversationType)aConversationType</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>                             startMessageId:(NSString *_Nullable)aStartMessageId</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>                                   pageSize:(<span class="keywordtype">int</span>)aPageSize</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>                                 completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt; *_Nullable aResult, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock __deprecated_msg(&quot;Use -fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion: instead&quot;);</div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>- (void)asyncFetchHistoryMessagesFromServer:(NSString *_Nonnull)aConversationId</div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>                           conversationType:(EMConversationType)aConversationType</div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>                             startMessageId:(NSString *_Nullable)aStartMessageId</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>                             fetchDirection:(EMMessageFetchHistoryDirection)direction</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>                                   pageSize:(<span class="keywordtype">int</span>)aPageSize</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>                                 completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt; *_Nullable aResult, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock __deprecated_msg(&quot;Use -fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion: instead&quot;);</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span> </div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span> </div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span> </div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span> </div>
-<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>- (void)asyncFetchGroupMessageAcksFromServer:(NSString *_Nonnull)aMessageId</div>
-<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>                                     groupId:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>                             startGroupAckId:(NSString *_Nonnull)aGroupAckId</div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>                                    pageSize:(<span class="keywordtype">int</span>)aPageSize</div>
-<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>                                  completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code hl_interface" href="interface_e_m_group_message_ack.html">EMGroupMessageAck</a> *&gt; *_Nullable aResult, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error, <span class="keywordtype">int</span> totalCount))aCompletionBlock;</div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span> </div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>- (void)reportMessageWithId:(NSString *_Nonnull )aMessageId</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>                        tag:(NSString *_Nonnull)aTag</div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>                     reason:(NSString *_Nonnull)aReason</div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>                 completion:(<span class="keywordtype">void</span>(^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a>* _Nullable error))aCompletion;</div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span> </div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>- (void)deleteMessagesBefore:(NSUInteger)aTimestamp</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>                  completion:(<span class="keywordtype">void</span>(^)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a>*error))aCompletion;</div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span> </div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span> </div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span> </div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>- (void)removeMessagesFromServerWithConversation:(<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *_Nonnull)conversation messageIds:(NSArray &lt;__kindof NSString*&gt;*_Nonnull)messageIds completion:(<span class="keywordtype">void</span> (^ _Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>- (void)removeMessagesFromServerWithConversation:(<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *_Nonnull)conversation timeStamp:(NSTimeInterval)beforeTimeStamp completion:(<span class="keywordtype">void</span> (^ _Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span> </div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span> </div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>- (void)translateMessage:(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> * _Nonnull)aMessage</div>
-<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>         targetLanguages:(NSArray&lt;NSString*&gt;* _Nonnull)aLanguages</div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>              completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> * _Nullable message, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable error))aCompletionBlock;</div>
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span> </div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>- (void)fetchSupportedLanguages:(<span class="keywordtype">void</span>(^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_translate_language.html">EMTranslateLanguage</a>*&gt;* _Nullable languages,<a class="code hl_interface" href="interface_e_m_error.html">EMError</a>* _Nullable error))aCompletionBlock;</div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span> </div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>- (NSArray&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; * _Nullable)loadMessagesWithType:(EMMessageBodyType)aType</div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>                                                   timestamp:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>                                                       count:(<span class="keywordtype">int</span>)aCount</div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>                                                    fromUser:(NSString* _Nullable)aUsername</div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>                                             searchDirection:(EMMessageSearchDirection)aDirection;</div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span> </div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>- (void)loadMessagesWithType:(EMMessageBodyType)aType</div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>                   timestamp:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>                       count:(<span class="keywordtype">int</span>)aCount</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>                    fromUser:(NSString*)aUsername</div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>             searchDirection:(EMMessageSearchDirection)aDirection</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>                  completion:(<span class="keywordtype">void</span> (^)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; *aMessages, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span> </div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>- (NSArray&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; *)loadMessagesWithKeyword:(NSString*)aKeywords</div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>                      timestamp:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>                          count:(<span class="keywordtype">int</span>)aCount</div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>                       fromUser:(NSString*)aSender</div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>                searchDirection:(EMMessageSearchDirection)aDirection;</div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span> </div>
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>- (void)loadMessagesWithKeyword:(NSString*)aKeywords</div>
-<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>                      timestamp:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>                          count:(<span class="keywordtype">int</span>)aCount</div>
-<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>                       fromUser:(NSString*)aSender</div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>                searchDirection:(EMMessageSearchDirection)aDirection</div>
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>                     completion:(<span class="keywordtype">void</span> (^)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; *aMessages, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span> </div>
-<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>- (void)loadMessagesWithKeyword:(NSString*)aKeywords</div>
-<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>                      timestamp:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
-<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>                          count:(<span class="keywordtype">int</span>)aCount</div>
-<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>                       fromUser:(NSString*)aSender</div>
-<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>                searchDirection:(EMMessageSearchDirection)aDirection</div>
-<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>                          scope:(EMMessageSearchScope)aScope</div>
-<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>                     completion:(<span class="keywordtype">void</span> (^)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; *aMessages, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
-<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span> </div>
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"><a class="line" href="protocol_i_e_m_chat_manager-p.html#a0e33319b36aad99f98994f08bcb490c8"> 1205</a></span>NS_ASSUME_NONNULL_BEGIN</div>
-<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>- (void)addReaction:(NSString *)reaction toMessage:(NSString *)messageId completion:(nullable <span class="keywordtype">void</span>(^)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable))completion;</div>
-<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span> </div>
-<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>- (void)removeReaction:(NSString *)reaction fromMessage:(NSString *)messageId completion:(nullable <span class="keywordtype">void</span>(^)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable))completion;</div>
-<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span> </div>
-<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>- (void)getReactionList:(NSArray &lt;NSString *&gt;*)messageIds</div>
-<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>                groupId:(nullable NSString *)groupId</div>
-<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>               chatType:(EMChatType)chatType</div>
-<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>             completion:(<span class="keywordtype">void</span> (^)(NSDictionary &lt;NSString *, NSArray&lt;<a class="code hl_interface" href="interface_e_m_message_reaction.html">EMMessageReaction</a> *&gt; *&gt; *, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable))completion;</div>
-<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span> </div>
-<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>- (void)getReactionDetail:(NSString *)messageId</div>
-<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span>                 reaction:(NSString *)reaction</div>
-<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span>                    cursor:(nullable NSString *)cursor</div>
-<div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span>                 pageSize:(uint64_t)pageSize</div>
-<div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>               completion:(<span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_message_reaction.html">EMMessageReaction</a> *, NSString * _Nullable cursor, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable))completion;</div>
-<div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span> </div>
-<div class="line"><a id="l01314" name="l01314"></a><span class="lineno"> 1314</span>- (void)fetchMessagesFromServerBy:(NSString* )conversationId</div>
-<div class="line"><a id="l01315" name="l01315"></a><span class="lineno"> 1315</span>                 conversationType:(EMConversationType)type</div>
-<div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span>                           cursor:(NSString* _Nullable)cursor</div>
-<div class="line"><a id="l01317" name="l01317"></a><span class="lineno"> 1317</span>                         pageSize:(NSUInteger)pageSize</div>
-<div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span>                           option:(<a class="code hl_interface" href="interface_e_m_fetch_server_messages_option.html">EMFetchServerMessagesOption</a>* _Nullable)option</div>
-<div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span>                       completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt;* _Nullable result, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a>* _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span> </div>
-<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span>- (void)addConversationMark:(NSArray&lt;NSString*&gt;* _Nonnull)conversationIds mark:(EMMarkType)mark completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a>* _Nullable aError))completion;</div>
-<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span> </div>
-<div class="line"><a id="l01364" name="l01364"></a><span class="lineno"> 1364</span>- (void)removeConversationMark:(NSArray&lt;NSString*&gt;* _Nonnull)conversationIds mark:(EMMarkType)mark completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a>* _Nullable aError))completion;</div>
-<div class="line"><a id="l01365" name="l01365"></a><span class="lineno"> 1365</span> </div>
-<div class="line"><a id="l01382" name="l01382"></a><span class="lineno"> 1382</span>- (void)getConversationsFromServerWithCursor:(NSString * _Nullable)cursor filter:(<a class="code hl_interface" href="interface_e_m_conversation_filter.html">EMConversationFilter</a>* _Nonnull)filter completion:(nonnull <span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code hl_interface" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable result, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable error))completionBlock;</div>
-<div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span> </div>
-<div class="line"><a id="l01406" name="l01406"></a><span class="lineno"> 1406</span>- (void)deleteAllMessagesAndConversations:(BOOL)clearServerData completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01407" name="l01407"></a><span class="lineno"> 1407</span> </div>
-<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>- (void)pinMessage:(NSString* _Nonnull)messageId completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a>* _Nullable message,<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01436" name="l01436"></a><span class="lineno"> 1436</span>- (void)unpinMessage:(NSString* _Nonnull)messageId completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a>* _Nullable message,<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01437" name="l01437"></a><span class="lineno"> 1437</span> </div>
-<div class="line"><a id="l01451" name="l01451"></a><span class="lineno"> 1451</span>- (void)getPinnedMessagesFromServer:(NSString* _Nonnull)conversationId completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt;* _Nullable messages,<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01452" name="l01452"></a><span class="lineno"> 1452</span> </div>
-<div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a>*)<a class="code hl_function" href="protocol_i_e_m_chat_manager-p.html#ae8ec9a1c06372e6c6072bd60eb8aa641">markAllConversationsAsRead</a>;</div>
-<div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span>    </div>
-<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>NS_ASSUME_NONNULL_END</div>
-<div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span> </div>
-<div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span><span class="keyword">@end</span></div>
-<div class="ttc" id="ainterface_e_m_chat_message_html"><div class="ttname"><a href="interface_e_m_chat_message.html">EMChatMessage</a></div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:114</div></div>
-<div class="ttc" id="ainterface_e_m_conversation_filter_html"><div class="ttname"><a href="interface_e_m_conversation_filter.html">EMConversationFilter</a></div><div class="ttdef"><b>Definition:</b> EMConversationFilter.h:22</div></div>
-<div class="ttc" id="ainterface_e_m_conversation_html"><div class="ttname"><a href="interface_e_m_conversation.html">EMConversation</a></div><div class="ttdef"><b>Definition:</b> EMConversation.h:114</div></div>
-<div class="ttc" id="ainterface_e_m_cursor_result_html"><div class="ttname"><a href="interface_e_m_cursor_result.html">EMCursorResult</a></div><div class="ttdef"><b>Definition:</b> EMCursorResult.h:27</div></div>
-<div class="ttc" id="ainterface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:27</div></div>
-<div class="ttc" id="ainterface_e_m_fetch_server_messages_option_html"><div class="ttname"><a href="interface_e_m_fetch_server_messages_option.html">EMFetchServerMessagesOption</a></div><div class="ttdef"><b>Definition:</b> EMFetchServerMessagesOption.h:23</div></div>
-<div class="ttc" id="ainterface_e_m_group_message_ack_html"><div class="ttname"><a href="interface_e_m_group_message_ack.html">EMGroupMessageAck</a></div><div class="ttdef"><b>Definition:</b> EMGroupMessageAck.h:21</div></div>
-<div class="ttc" id="ainterface_e_m_message_body_html"><div class="ttname"><a href="interface_e_m_message_body.html">EMMessageBody</a></div><div class="ttdef"><b>Definition:</b> EMMessageBody.h:46</div></div>
-<div class="ttc" id="ainterface_e_m_message_reaction_html"><div class="ttname"><a href="interface_e_m_message_reaction.html">EMMessageReaction</a></div><div class="ttdef"><b>Definition:</b> EMMessageReaction.h:21</div></div>
-<div class="ttc" id="ainterface_e_m_translate_language_html"><div class="ttname"><a href="interface_e_m_translate_language.html">EMTranslateLanguage</a></div><div class="ttdef"><b>Definition:</b> EMTranslateLanguage.h:20</div></div>
-<div class="ttc" id="aprotocol_e_m_chat_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_chat_manager_delegate-p.html">EMChatManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMChatManagerDelegate.h:31</div></div>
-<div class="ttc" id="aprotocol_i_e_m_chat_manager-p_html"><div class="ttname"><a href="protocol_i_e_m_chat_manager-p.html">IEMChatManager-p</a></div><div class="ttdef"><b>Definition:</b> IEMChatManager.h:65</div></div>
-<div class="ttc" id="aprotocol_i_e_m_chat_manager-p_html_a9159a946045d347e01eaeb754491b3c6"><div class="ttname"><a href="protocol_i_e_m_chat_manager-p.html#a9159a946045d347e01eaeb754491b3c6">-[IEMChatManager-p getAllConversations]</a></div><div class="ttdeci">NSArray&lt; EMConversation * &gt; *_Nullable getAllConversations()</div></div>
-<div class="ttc" id="aprotocol_i_e_m_chat_manager-p_html_ae8ec9a1c06372e6c6072bd60eb8aa641"><div class="ttname"><a href="protocol_i_e_m_chat_manager-p.html#ae8ec9a1c06372e6c6072bd60eb8aa641">-[IEMChatManager-p markAllConversationsAsRead]</a></div><div class="ttdeci">EMError * markAllConversationsAsRead()</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#import &quot;EMCommonDefs.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#import &quot;EMChatManagerDelegate.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;EMConversation.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;EMChatMessage.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#import &quot;EMTextMessageBody.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#import &quot;EMLocationMessageBody.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#import &quot;EMCmdMessageBody.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#import &quot;EMFileMessageBody.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#import &quot;EMImageMessageBody.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#import &quot;EMVoiceMessageBody.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#import &quot;EMVideoMessageBody.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#import &quot;EMCustomMessageBody.h&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#import &quot;EMCombineMessageBody.h&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#import &quot;EMCursorResult.h&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#import &quot;EMGroupMessageAck.h&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#import &quot;EMTranslateLanguage.h&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#import &quot;EMFetchServerMessagesOption.h&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#import &quot;EMConversationFilter.h&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">typedef</span> NS_ENUM(NSUInteger, EMMessageFetchHistoryDirection) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    EMMessageFetchHistoryDirectionUp  = 0,    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    EMMessageFetchHistoryDirectionDown        </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_error.html">EMError</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="protocol_i_e_m_chat_manager-p.html">   65</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_i_e_m_chat_manager-p.html">IEMChatManager</a> &lt;NSObject&gt;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">@required</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#pragma mark - Delegate</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;- (void)addDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_chat_manager_delegate-p.html">EMChatManagerDelegate</a>&gt; _Nullable)aDelegate</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      delegateQueue:(dispatch_queue_t _Nullable)aQueue;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;- (void)removeDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_chat_manager_delegate-p.html">EMChatManagerDelegate</a>&gt; _Nonnull)aDelegate;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#pragma mark - Conversation</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;- (NSArray&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable)<a class="code" href="protocol_i_e_m_chat_manager-p.html#a3dfebe1225558a4db2d3cfb8610447af">getAllConversations</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;- (NSArray&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable)filterConversationsFromDB:(BOOL)cleanMemoryCache filter:(BOOL(^_Nullable)(<a class="code" href="interface_e_m_conversation.html">EMConversation</a> * _Nonnull conversation))filter NS_SWIFT_NAME(filterConversationsFromDB(cleanMemoryCache:filter:));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;- (void)<a class="code" href="protocol_i_e_m_chat_manager-p.html#af434097b6183e3f425f8675fad5272bc">cleanConversationsMemoryCache</a>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;- (NSArray&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable)<a class="code" href="protocol_i_e_m_chat_manager-p.html#a3dfebe1225558a4db2d3cfb8610447af">getAllConversations</a>:(BOOL)isSort;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;- (void)getConversationsFromServer:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable aConversations, <a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock EM_DEPRECATED_IOS(4_0_0, &quot;Use -<a class="code" href="protocol_i_e_m_chat_manager-p.html">IEMChatManager</a> getConversationsFromServerWithCursor:pageSize:completion&quot;);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;- (void)getConversationsFromServerByPage:(NSUInteger)pageNumber</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                                pageSize:(NSUInteger)pageSize</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                              completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable aConversations, <a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock EM_DEPRECATED_IOS(4_0_0, &quot;Use -<a class="code" href="protocol_i_e_m_chat_manager-p.html">IEMChatManager</a> getConversationsFromServerWithCursor:pageSize:completion&quot;);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;- (void)getConversationsFromServerWithCursor:(nullable NSString *)cursor pageSize:(UInt8)pageSize completion:(nonnull <span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable result, <a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable error))completionBlock;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;- (void)getPinnedConversationsFromServerWithCursor:(nullable NSString *)cursor pageSize:(UInt8)limit completion:(nonnull <span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable result, <a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable error))completionBlock;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;- (void)pinConversation:(nonnull NSString *)conversationId isPinned:(BOOL)isPinned completionBlock:(nullable <span class="keywordtype">void</span>(^)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable error))completionBlock;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;- (<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *_Nullable)getConversationWithConvId:(NSString * _Nullable)aConversationId;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;- (<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *_Nullable)getConversation:(NSString *_Nonnull)aConversationId</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                               type:(EMConversationType)aType</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                   createIfNotExist:(BOOL)aIfCreate;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;- (<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *_Nullable)getConversation:(NSString *_Nonnull)aConversationId</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                               type:(EMConversationType)aType</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                   createIfNotExist:(BOOL)aIfCreate isThread:(BOOL)isThread;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;- (void)deleteConversation:(NSString * _Nonnull)aConversationId</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;          isDeleteMessages:(BOOL)aIsDeleteMessages</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nullable aConversationId, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; - (void)deleteServerConversation:(NSString * _Nonnull)aConversationId</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                 conversationType:(EMConversationType)aConversationType</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;           isDeleteServerMessages:(BOOL)aIsDeleteServerMessages</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                       completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString * _Nullable aConversationId, <a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;- (void)deleteConversations:(NSArray&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable)aConversations</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;           isDeleteMessages:(BOOL)aIsDeleteMessages</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                 completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;- (void)importConversations:(NSArray&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable)aConversations</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                 completion:(<span class="keywordtype">void</span> (^ _Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="preprocessor">#pragma mark - Message</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;- (<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> * _Nullable)getMessageWithMessageId:(NSString * _Nonnull)aMessageId;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;- (NSString * _Nullable)getMessageAttachmentPath:(NSString * _Nonnull)aConversationId;</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;- (void)importMessages:(NSArray&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; * _Nonnull)aMessages</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;            completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;- (void)updateMessage:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)aMessage</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> * _Nullable aMessage, <a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;- (void)modifyMessage:(NSString *_Nonnull)messageId body:(<a class="code" href="interface_e_m_message_body.html">EMMessageBody</a> *_Nonnull)body completion:(<span class="keywordtype">void</span> (^_Nonnull)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable error,<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message))completionBlock;</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;- (void)sendMessageReadAck:(NSString * _Nonnull)aMessageId</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                    toUser:(NSString * _Nonnull)aUsername</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;- (void)sendGroupMessageReadAck:(NSString * _Nonnull)aMessageId</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                        toGroup:(NSString * _Nonnull)aGroupId</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                        content:(NSString * _Nullable)aContent</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;                     completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;- (void)ackConversationRead:(NSString * _Nonnull)conversationId</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                 completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;- (void)recallMessageWithMessageId:(NSString *_Nonnull)aMessageId</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;                        completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;- (void)recallMessageWithMessageId:(NSString *_Nonnull)aMessageId ext:(NSString * _Nullable)ext completion:(<span class="keywordtype">void</span> (^_Nonnull)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable))aCompletionBlock;</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;- (void)sendMessage:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)aMessage</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;           progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;         completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable error))aCompletionBlock;</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;- (void)resendMessage:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)aMessage</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;             progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable error))aCompletionBlock;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;- (void)downloadMessageThumbnail:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)aMessage</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;                        progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;                      completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable error))aCompletionBlock;</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;- (void)downloadMessageAttachment:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)aMessage</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                         progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;                       completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable error))aCompletionBlock;</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;- (void)downloadAndParseCombineMessage:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a>* _Nonnull)aMessage</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                            completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt;*_Nullable messages, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable error))aCompletionBlock;</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;- (<a class="code" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt; *_Nullable)fetchHistoryMessagesFromServer:(NSString *_Nonnull)aConversationId</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                                  conversationType:(EMConversationType)aConversationType</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                                    startMessageId:(NSString *_Nullable)aStartMessageId</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;                                       fetchDirection:(EMMessageFetchHistoryDirection)direction</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;                                          pageSize:(<span class="keywordtype">int</span>)aPageSize</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;                                             error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable)pError __deprecated_msg(&quot;Use -fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion: instead&quot;);</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;- (<a class="code" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt; *_Nullable)fetchHistoryMessagesFromServer:(NSString *_Nonnull)aConversationId</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;                                  conversationType:(EMConversationType)aConversationType</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;                                    startMessageId:(NSString *_Nullable)aStartMessageId</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;                                          pageSize:(<span class="keywordtype">int</span>)aPageSize</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;                                                                      error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable)pError __deprecated_msg(&quot;Use -fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion: instead&quot;);</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;- (void)asyncFetchHistoryMessagesFromServer:(NSString *_Nonnull)aConversationId</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;                           conversationType:(EMConversationType)aConversationType</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;                             startMessageId:(NSString *_Nullable)aStartMessageId</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;                                   pageSize:(<span class="keywordtype">int</span>)aPageSize</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;                                 completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt; *_Nullable aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock __deprecated_msg(&quot;Use -fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion: instead&quot;);</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;- (void)asyncFetchHistoryMessagesFromServer:(NSString *_Nonnull)aConversationId</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;                           conversationType:(EMConversationType)aConversationType</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;                             startMessageId:(NSString *_Nullable)aStartMessageId</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;                             fetchDirection:(EMMessageFetchHistoryDirection)direction</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;                                   pageSize:(<span class="keywordtype">int</span>)aPageSize</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;                                 completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt; *_Nullable aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock __deprecated_msg(&quot;Use -fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion: instead&quot;);</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160; </div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;- (void)asyncFetchGroupMessageAcksFromServer:(NSString *_Nonnull)aMessageId</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;                                     groupId:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;                             startGroupAckId:(NSString *_Nonnull)aGroupAckId</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;                                    pageSize:(<span class="keywordtype">int</span>)aPageSize</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;                                  completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code" href="interface_e_m_group_message_ack.html">EMGroupMessageAck</a> *&gt; *_Nullable aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable error, <span class="keywordtype">int</span> totalCount))aCompletionBlock;</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;- (void)reportMessageWithId:(NSString *_Nonnull )aMessageId</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;                        tag:(NSString *_Nonnull)aTag</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;                     reason:(NSString *_Nonnull)aReason</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;                 completion:(<span class="keywordtype">void</span>(^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a>* _Nullable error))aCompletion;</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;- (void)deleteMessagesBefore:(NSUInteger)aTimestamp</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;                  completion:(<span class="keywordtype">void</span>(^)(<a class="code" href="interface_e_m_error.html">EMError</a>*error))aCompletion;</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;</div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;- (void)removeMessagesFromServerWithConversation:(<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *_Nonnull)conversation messageIds:(NSArray &lt;__kindof NSString*&gt;*_Nonnull)messageIds completion:(<span class="keywordtype">void</span> (^ _Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;- (void)removeMessagesFromServerWithConversation:(<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *_Nonnull)conversation timeStamp:(NSTimeInterval)beforeTimeStamp completion:(<span class="keywordtype">void</span> (^ _Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;</div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;- (void)translateMessage:(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> * _Nonnull)aMessage</div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;         targetLanguages:(NSArray&lt;NSString*&gt;* _Nonnull)aLanguages</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;              completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> * _Nullable message, <a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable error))aCompletionBlock;</div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;</div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;- (void)fetchSupportedLanguages:(<span class="keywordtype">void</span>(^_Nullable)(NSArray&lt;<a class="code" href="interface_e_m_translate_language.html">EMTranslateLanguage</a>*&gt;* _Nullable languages,<a class="code" href="interface_e_m_error.html">EMError</a>* _Nullable error))aCompletionBlock;</div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;</div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;- (NSArray&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; * _Nullable)loadMessagesWithType:(EMMessageBodyType)aType</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;                                                   timestamp:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;                                                       count:(<span class="keywordtype">int</span>)aCount</div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;                                                    fromUser:(NSString* _Nullable)aUsername</div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;                                             searchDirection:(EMMessageSearchDirection)aDirection;</div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;</div>
+<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;- (void)loadMessagesWithType:(EMMessageBodyType)aType</div>
+<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;                   timestamp:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;                       count:(<span class="keywordtype">int</span>)aCount</div>
+<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;                    fromUser:(NSString*)aUsername</div>
+<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;             searchDirection:(EMMessageSearchDirection)aDirection</div>
+<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;                  completion:(<span class="keywordtype">void</span> (^)(NSArray&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; *aMessages, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
+<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;</div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;- (NSArray&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; *)loadMessagesWithKeyword:(NSString*)aKeywords</div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;                      timestamp:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;                          count:(<span class="keywordtype">int</span>)aCount</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;                       fromUser:(NSString*)aSender</div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;                searchDirection:(EMMessageSearchDirection)aDirection;</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;- (void)loadMessagesWithKeyword:(NSString*)aKeywords</div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;                      timestamp:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;                          count:(<span class="keywordtype">int</span>)aCount</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;                       fromUser:(NSString*)aSender</div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;                searchDirection:(EMMessageSearchDirection)aDirection</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;                     completion:(<span class="keywordtype">void</span> (^)(NSArray&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; *aMessages, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;</div>
+<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;- (void)loadMessagesWithKeyword:(NSString*)aKeywords</div>
+<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;                      timestamp:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)aTimestamp</div>
+<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;                          count:(<span class="keywordtype">int</span>)aCount</div>
+<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;                       fromUser:(NSString*)aSender</div>
+<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;                searchDirection:(EMMessageSearchDirection)aDirection</div>
+<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;                          scope:(EMMessageSearchScope)aScope</div>
+<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;                     completion:(<span class="keywordtype">void</span> (^)(NSArray&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a> *&gt; *aMessages, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock;</div>
+<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;</div>
+<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;NS_ASSUME_NONNULL_BEGIN</div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;- (void)addReaction:(NSString *)reaction toMessage:(NSString *)messageId completion:(nullable <span class="keywordtype">void</span>(^)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable))completion;</div>
+<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;</div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;- (void)removeReaction:(NSString *)reaction fromMessage:(NSString *)messageId completion:(nullable <span class="keywordtype">void</span>(^)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable))completion;</div>
+<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;</div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;- (void)getReactionList:(NSArray &lt;NSString *&gt;*)messageIds</div>
+<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;                groupId:(nullable NSString *)groupId</div>
+<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;               chatType:(EMChatType)chatType</div>
+<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;             completion:(<span class="keywordtype">void</span> (^)(NSDictionary &lt;NSString *, NSArray&lt;<a class="code" href="interface_e_m_message_reaction.html">EMMessageReaction</a> *&gt; *&gt; *, <a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable))completion;</div>
+<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;</div>
+<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;- (void)getReactionDetail:(NSString *)messageId</div>
+<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;                 reaction:(NSString *)reaction</div>
+<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;                    cursor:(nullable NSString *)cursor</div>
+<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;                 pageSize:(uint64_t)pageSize</div>
+<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;               completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_message_reaction.html">EMMessageReaction</a> *, NSString * _Nullable cursor, <a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable))completion;</div>
+<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;</div>
+<div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;- (void)fetchMessagesFromServerBy:(NSString* )conversationId</div>
+<div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;                 conversationType:(EMConversationType)type</div>
+<div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;                           cursor:(NSString* _Nullable)cursor</div>
+<div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;                         pageSize:(NSUInteger)pageSize</div>
+<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;                           option:(<a class="code" href="interface_e_m_fetch_server_messages_option.html">EMFetchServerMessagesOption</a>* _Nullable)option</div>
+<div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;                       completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt;* _Nullable result, <a class="code" href="interface_e_m_error.html">EMError</a>* _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;</div>
+<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;- (void)addConversationMark:(NSArray&lt;NSString*&gt;* _Nonnull)conversationIds mark:(EMMarkType)mark completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a>* _Nullable aError))completion;</div>
+<div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;</div>
+<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;- (void)removeConversationMark:(NSArray&lt;NSString*&gt;* _Nonnull)conversationIds mark:(EMMarkType)mark completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a>* _Nullable aError))completion;</div>
+<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;</div>
+<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;- (void)getConversationsFromServerWithCursor:(NSString * _Nullable)cursor filter:(<a class="code" href="interface_e_m_conversation_filter.html">EMConversationFilter</a>* _Nonnull)filter completion:(nonnull <span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;<a class="code" href="interface_e_m_conversation.html">EMConversation</a> *&gt; * _Nullable result, <a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable error))completionBlock;</div>
+<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;</div>
+<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;- (void)deleteAllMessagesAndConversations:(BOOL)clearServerData completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;</div>
+<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;- (void)pinMessage:(NSString* _Nonnull)messageId completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a>* _Nullable message,<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;- (void)unpinMessage:(NSString* _Nonnull)messageId completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a>* _Nullable message,<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;</div>
+<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;- (void)getPinnedMessagesFromServer:(NSString* _Nonnull)conversationId completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code" href="interface_e_m_chat_message.html">EMChatMessage</a>*&gt;* _Nullable messages,<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;</div>
+<div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;- (<a class="code" href="interface_e_m_error.html">EMError</a>*)<a class="code" href="protocol_i_e_m_chat_manager-p.html#a36ec9a063d860535a5b151367070bdef">markAllConversationsAsRead</a>;</div>
+<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;    </div>
+<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;NS_ASSUME_NONNULL_END</div>
+<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;</div>
+<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="protocol_i_e_m_chat_manager-p_html_a36ec9a063d860535a5b151367070bdef"><div class="ttname"><a href="protocol_i_e_m_chat_manager-p.html#a36ec9a063d860535a5b151367070bdef">-[IEMChatManager-p markAllConversationsAsRead]</a></div><div class="ttdeci">EMError * markAllConversationsAsRead()</div></div>
+<div class="ttc" id="interface_e_m_conversation_filter_html"><div class="ttname"><a href="interface_e_m_conversation_filter.html">EMConversationFilter</a></div><div class="ttdef"><b>Definition:</b> EMConversationFilter.h:21</div></div>
+<div class="ttc" id="protocol_e_m_chat_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_chat_manager_delegate-p.html">EMChatManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMChatManagerDelegate.h:31</div></div>
+<div class="ttc" id="interface_e_m_conversation_html"><div class="ttname"><a href="interface_e_m_conversation.html">EMConversation</a></div><div class="ttdef"><b>Definition:</b> EMConversation.h:113</div></div>
+<div class="ttc" id="interface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:26</div></div>
+<div class="ttc" id="interface_e_m_message_reaction_html"><div class="ttname"><a href="interface_e_m_message_reaction.html">EMMessageReaction</a></div><div class="ttdef"><b>Definition:</b> EMMessageReaction.h:20</div></div>
+<div class="ttc" id="interface_e_m_message_body_html"><div class="ttname"><a href="interface_e_m_message_body.html">EMMessageBody</a></div><div class="ttdef"><b>Definition:</b> EMMessageBody.h:45</div></div>
+<div class="ttc" id="interface_e_m_chat_message_html"><div class="ttname"><a href="interface_e_m_chat_message.html">EMChatMessage</a></div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:113</div></div>
+<div class="ttc" id="interface_e_m_translate_language_html"><div class="ttname"><a href="interface_e_m_translate_language.html">EMTranslateLanguage</a></div><div class="ttdef"><b>Definition:</b> EMTranslateLanguage.h:19</div></div>
+<div class="ttc" id="protocol_i_e_m_chat_manager-p_html_af434097b6183e3f425f8675fad5272bc"><div class="ttname"><a href="protocol_i_e_m_chat_manager-p.html#af434097b6183e3f425f8675fad5272bc">-[IEMChatManager-p cleanConversationsMemoryCache]</a></div><div class="ttdeci">void cleanConversationsMemoryCache()</div></div>
+<div class="ttc" id="interface_e_m_group_message_ack_html"><div class="ttname"><a href="interface_e_m_group_message_ack.html">EMGroupMessageAck</a></div><div class="ttdef"><b>Definition:</b> EMGroupMessageAck.h:20</div></div>
+<div class="ttc" id="interface_e_m_fetch_server_messages_option_html"><div class="ttname"><a href="interface_e_m_fetch_server_messages_option.html">EMFetchServerMessagesOption</a></div><div class="ttdef"><b>Definition:</b> EMFetchServerMessagesOption.h:22</div></div>
+<div class="ttc" id="interface_e_m_cursor_result_html"><div class="ttname"><a href="interface_e_m_cursor_result.html">EMCursorResult</a></div><div class="ttdef"><b>Definition:</b> EMCursorResult.h:27</div></div>
+<div class="ttc" id="protocol_i_e_m_chat_manager-p_html"><div class="ttname"><a href="protocol_i_e_m_chat_manager-p.html">IEMChatManager-p</a></div><div class="ttdef"><b>Definition:</b> IEMChatManager.h:65</div></div>
+<div class="ttc" id="protocol_i_e_m_chat_manager-p_html_a3dfebe1225558a4db2d3cfb8610447af"><div class="ttname"><a href="protocol_i_e_m_chat_manager-p.html#a3dfebe1225558a4db2d3cfb8610447af">-[IEMChatManager-p getAllConversations]</a></div><div class="ttdeci">NSArray&lt; EMConversation * &gt; *_Nullable getAllConversations()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
 </small></address>
 </body>
 </html>
