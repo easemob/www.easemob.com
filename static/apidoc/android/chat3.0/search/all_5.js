@@ -31,5 +31,6 @@ var searchData=
   ['file_5finvalid_28',['FILE_INVALID',['../classcom_1_1hyphenate_1_1_e_m_error.html#a9a2d473a2ef681dc3d27a7b5a74cd006',1,'com::hyphenate::EMError']]],
   ['file_5fnot_5ffound_29',['FILE_NOT_FOUND',['../classcom_1_1hyphenate_1_1_e_m_error.html#a789d29bfbc18af52b711103af9e2a2d3',1,'com::hyphenate::EMError']]],
   ['file_5ftoo_5flarge_30',['FILE_TOO_LARGE',['../classcom_1_1hyphenate_1_1_e_m_error.html#a08657b1c59175bb226403244d6409307',1,'com::hyphenate::EMError']]],
-  ['file_5fupload_5ffailed_31',['FILE_UPLOAD_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ad2311cd2907213d8df4d3292ef6aa296',1,'com::hyphenate::EMError']]]
+  ['file_5fupload_5ffailed_31',['FILE_UPLOAD_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ad2311cd2907213d8df4d3292ef6aa296',1,'com::hyphenate::EMError']]],
+  ['filter_32',['filter',['../interfacecom_1_1hyphenate_1_1chat_1_1_e_m_custom_conversation_filter.html#afce94afbcd06c4d5d67253ac16c741a5',1,'com::hyphenate::chat::EMCustomConversationFilter']]]
 ];
