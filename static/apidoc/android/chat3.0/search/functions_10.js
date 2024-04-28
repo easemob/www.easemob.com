@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['recallmessage_0',['recallMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a548025c9fd2d6e91c80ee27418ba5464',1,'com::hyphenate::chat::EMChatManager']]],
+  ['recallmessage_0',['recallMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a548025c9fd2d6e91c80ee27418ba5464',1,'com.hyphenate.chat.EMChatManager.recallMessage(EMMessage message)'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a6396b55f255964a1284d45fe59599654',1,'com.hyphenate.chat.EMChatManager.recallMessage(EMMessage message, String ext)']]],
   ['receiverlist_1',['receiverList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a9d0381e1c301d91f968ff471b431b192',1,'com::hyphenate::chat::EMMessage']]],
   ['regardimportedmsgasread_2',['regardImportedMsgAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a633307cb03bcd4dd69845aac55bce29b',1,'com::hyphenate::chat::EMOptions']]],
   ['register_3',['register',['../classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#ac295ce2bbbd3cbc1e77151cfb1fc6562',1,'com::hyphenate::push::EMPushHelper']]],

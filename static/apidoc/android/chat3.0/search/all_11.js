@@ -3,7 +3,7 @@ var searchData=
   ['reaction_5fhas_5fbeen_5foperated_0',['REACTION_HAS_BEEN_OPERATED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a98321740b7347131f36e067c341924dd',1,'com::hyphenate::EMError']]],
   ['reaction_5foperation_5fis_5fillegal_1',['REACTION_OPERATION_IS_ILLEGAL',['../classcom_1_1hyphenate_1_1_e_m_error.html#add97eca1ea20e024fe3ba0cc699677df',1,'com::hyphenate::EMError']]],
   ['reaction_5freach_5flimit_2',['REACTION_REACH_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a4009b6e1e329c24019124347f9581241',1,'com::hyphenate::EMError']]],
-  ['recallmessage_3',['recallMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a548025c9fd2d6e91c80ee27418ba5464',1,'com::hyphenate::chat::EMChatManager']]],
+  ['recallmessage_3',['recallMessage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a548025c9fd2d6e91c80ee27418ba5464',1,'com.hyphenate.chat.EMChatManager.recallMessage(EMMessage message)'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a6396b55f255964a1284d45fe59599654',1,'com.hyphenate.chat.EMChatManager.recallMessage(EMMessage message, String ext)']]],
   ['receive_4',['RECEIVE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_direct.html#a6a599e2b24d25f496f610d6455b4a8d9',1,'com::hyphenate::chat::EMStatisticsManager::EMSearchMessageDirect']]],
   ['receiverlist_5',['receiverList',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a9d0381e1c301d91f968ff471b431b192',1,'com::hyphenate::chat::EMMessage']]],
   ['regardimportedmsgasread_6',['regardImportedMsgAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a633307cb03bcd4dd69845aac55bce29b',1,'com::hyphenate::chat::EMOptions']]],

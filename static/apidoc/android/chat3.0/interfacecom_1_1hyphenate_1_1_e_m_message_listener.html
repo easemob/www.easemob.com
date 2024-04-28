@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.5.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.6.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -90,6 +90,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:abb988497b2cc95cb9a684b18c21207b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa863f6c970a4c5a2219b4a5e675310f6"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#aa863f6c970a4c5a2219b4a5e675310f6">onMessageRecalled</a> (List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt; messages)</td></tr>
 <tr class="separator:aa863f6c970a4c5a2219b4a5e675310f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128137d7b59e869c5bf881db970d9217"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#a128137d7b59e869c5bf881db970d9217">onMessageRecalledWithExt</a> (List&lt; EMRecallMessageInfo &gt; recallMessageInfo)</td></tr>
+<tr class="separator:a128137d7b59e869c5bf881db970d9217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace19daddc9be9709f285e6b1a001e445"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#ace19daddc9be9709f285e6b1a001e445">onMessageChanged</a> (<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> message, Object change)</td></tr>
 <tr class="separator:ace19daddc9be9709f285e6b1a001e445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaac1a4b3ea5742d8ca77481f98f40b20"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#aaac1a4b3ea5742d8ca77481f98f40b20">onReactionChanged</a> (List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message_reaction_change.html">EMMessageReactionChange</a> &gt; messageReactionChangeList)</td></tr>
@@ -331,6 +333,30 @@ EMClient.getInstance().chatManager().removeMessageListener(mMessageListener);
       </table>
 </div><div class="memdoc">
 <p >撤回收到的消息。 </p>
+
+</div>
+</div>
+<a id="a128137d7b59e869c5bf881db970d9217" name="a128137d7b59e869c5bf881db970d9217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a128137d7b59e869c5bf881db970d9217">&#9670;&nbsp;</a></span>onMessageRecalledWithExt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMMessageListener.onMessageRecalledWithExt </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; EMRecallMessageInfo &gt;&#160;</td>
+          <td class="paramname"><em>recallMessageInfo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >撤回收到的消息（支持接收在离线期间被撤回的消息 推荐使用 <code>onMessageRecalledWithExt</code> ） </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recallMessageInfo</td><td>被撤回消息的详情 注: 接收方离线期间被撤回消息 <code>recallMessage</code> 参数的值为 null。 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
