@@ -1,9 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>HyphenateChatSDK: HyphenateChat.framework/Headers/EMClientDelegate.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -11,9 +12,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { init_search(); });
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">4.6.0</span>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.6.1</span>
    </div>
   </td>
  </tr>
@@ -32,38 +29,23 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.10 -->
+<!-- 制作者 Doxygen 1.9.4 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
 </script>
-  <div id="navrow1" class="tabs">
-    <ul class="tablist">
-      <li><a href="index.html"><span>首页</span></a></li>
-      <li><a href="annotated.html"><span>类</span></a></li>
-      <li class="current"><a href="files.html"><span>文件</span></a></li>
-      <li>
-        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="搜索" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="files.html"><span>文件列表</span></a></li>
-    </ul>
-  </div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,58 +66,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">EMClientDelegate.h</div>  </div>
+  <div class="headertitle"><div class="title">EMClientDelegate.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &quot;EMErrorCode.h&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#import &quot;EMCommonDefs.h&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">typedef</span> NS_ENUM(NSInteger, EMConnectionState) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    EMConnectionConnected = 0,  </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    EMConnectionDisconnected,   </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_error.html">EMError</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="protocol_e_m_client_delegate-p.html">   46</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_e_m_client_delegate-p.html">EMClientDelegate</a> &lt;NSObject&gt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">@optional</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;- (void)connectionStateDidChange:(EMConnectionState)aConnectionState;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;- (void)autoLoginDidCompleteWithError:(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable)aError;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;- (void)userAccountDidLoginFromOtherDevice:(NSString* _Nullable)aDeviceName;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;- (void)<a class="code" href="protocol_e_m_client_delegate-p.html#a973d8544232a05da9068dd5535e396e8">userAccountDidRemoveFromServer</a>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;- (void)<a class="code" href="protocol_e_m_client_delegate-p.html#a4cbb63f33783bd5cdea2295e091da904">userDidForbidByServer</a>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;- (void)userAccountDidForcedToLogout:(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable)aError;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;- (void)tokenWillExpire:(EMErrorCode)aErrorCode;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;- (void)tokenDidExpire:(EMErrorCode)aErrorCode;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS 4.1.0</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;- (void)userAccountDidLoginFromOtherDevice <a class="code" href="protocol_e_m_client_delegate-p.html#a8fca88e56b633dd67142795eb087a781">EM_DEPRECATED_IOS</a>(3_1_0, 4_1_0, &quot;Use userAccountDidLoginFromOtherDevice: instead&quot;);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="protocol_e_m_client_delegate-p_html_a973d8544232a05da9068dd5535e396e8"><div class="ttname"><a href="protocol_e_m_client_delegate-p.html#a973d8544232a05da9068dd5535e396e8">-[EMClientDelegate-p userAccountDidRemoveFromServer]</a></div><div class="ttdeci">void userAccountDidRemoveFromServer()</div></div>
-<div class="ttc" id="interface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:26</div></div>
-<div class="ttc" id="protocol_e_m_client_delegate-p_html"><div class="ttname"><a href="protocol_e_m_client_delegate-p.html">EMClientDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMClientDelegate.h:46</div></div>
-<div class="ttc" id="protocol_e_m_client_delegate-p_html_a8fca88e56b633dd67142795eb087a781"><div class="ttname"><a href="protocol_e_m_client_delegate-p.html#a8fca88e56b633dd67142795eb087a781">-[EMClientDelegate-p EM_DEPRECATED_IOS]</a></div><div class="ttdeci">3_1_0, 4_1_0,&quot;Use userAccountDidLoginFromOtherDevice: instead&quot; EM_DEPRECATED_IOS()</div></div>
-<div class="ttc" id="protocol_e_m_client_delegate-p_html_a4cbb63f33783bd5cdea2295e091da904"><div class="ttname"><a href="protocol_e_m_client_delegate-p.html#a4cbb63f33783bd5cdea2295e091da904">-[EMClientDelegate-p userDidForbidByServer]</a></div><div class="ttdeci">void userDidForbidByServer()</div></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#import &quot;EMErrorCode.h&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#import &quot;EMCommonDefs.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="protocol_e_m_client_delegate-p.html#ad95012da82dff4efa58bf72437f5f0a4">   26</a></span><span class="keyword">typedef</span> NS_ENUM(NSInteger, EMConnectionState) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    EMConnectionConnected = 0,  </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    EMConnectionDisconnected,   </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">@class</span> <a class="code hl_interface" href="interface_e_m_error.html">EMError</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="protocol_e_m_client_delegate-p.html">   46</a></span><span class="keyword">@protocol </span><a class="code hl_protocol" href="protocol_e_m_client_delegate-p.html">EMClientDelegate</a> &lt;NSObject&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">@optional</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>- (void)connectionStateDidChange:(EMConnectionState)aConnectionState;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>- (void)autoLoginDidCompleteWithError:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable)aError;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>- (void)userAccountDidLoginFromOtherDevice:(NSString* _Nullable)aDeviceName;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>- (void)<a class="code hl_function" href="protocol_e_m_client_delegate-p.html#a973d8544232a05da9068dd5535e396e8">userAccountDidRemoveFromServer</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>- (void)<a class="code hl_function" href="protocol_e_m_client_delegate-p.html#a4cbb63f33783bd5cdea2295e091da904">userDidForbidByServer</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>- (void)userAccountDidForcedToLogout:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)aError;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>- (void)tokenWillExpire:(EMErrorCode)aErrorCode;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>- (void)tokenDidExpire:(EMErrorCode)aErrorCode;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS 4.1.0</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>- (void)userAccountDidLoginFromOtherDevice <a class="code hl_function" href="protocol_e_m_client_delegate-p.html#a8fca88e56b633dd67142795eb087a781">EM_DEPRECATED_IOS</a>(3_1_0, 4_1_0, &quot;Use userAccountDidLoginFromOtherDevice: instead&quot;);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="keyword">@end</span></div>
+<div class="ttc" id="ainterface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:27</div></div>
+<div class="ttc" id="aprotocol_e_m_client_delegate-p_html"><div class="ttname"><a href="protocol_e_m_client_delegate-p.html">EMClientDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMClientDelegate.h:46</div></div>
+<div class="ttc" id="aprotocol_e_m_client_delegate-p_html_a4cbb63f33783bd5cdea2295e091da904"><div class="ttname"><a href="protocol_e_m_client_delegate-p.html#a4cbb63f33783bd5cdea2295e091da904">-[EMClientDelegate-p userDidForbidByServer]</a></div><div class="ttdeci">void userDidForbidByServer()</div></div>
+<div class="ttc" id="aprotocol_e_m_client_delegate-p_html_a8fca88e56b633dd67142795eb087a781"><div class="ttname"><a href="protocol_e_m_client_delegate-p.html#a8fca88e56b633dd67142795eb087a781">-[EMClientDelegate-p EM_DEPRECATED_IOS]</a></div><div class="ttdeci">3_1_0, 4_1_0, &quot;Use userAccountDidLoginFromOtherDevice: instead&quot; EM_DEPRECATED_IOS()</div></div>
+<div class="ttc" id="aprotocol_e_m_client_delegate-p_html_a973d8544232a05da9068dd5535e396e8"><div class="ttname"><a href="protocol_e_m_client_delegate-p.html#a973d8544232a05da9068dd5535e396e8">-[EMClientDelegate-p userAccountDidRemoveFromServer]</a></div><div class="ttdeci">void userAccountDidRemoveFromServer()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>
