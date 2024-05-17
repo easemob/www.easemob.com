@@ -1,9 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>HyphenateChatSDK: HyphenateChat.framework/Headers/EMGroupManagerDelegate.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -11,9 +12,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { init_search(); });
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">4.6.0</span>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.6.1</span>
    </div>
   </td>
  </tr>
@@ -32,38 +29,23 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.10 -->
+<!-- 制作者 Doxygen 1.9.4 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
 </script>
-  <div id="navrow1" class="tabs">
-    <ul class="tablist">
-      <li><a href="index.html"><span>首页</span></a></li>
-      <li><a href="annotated.html"><span>类</span></a></li>
-      <li class="current"><a href="files.html"><span>文件</span></a></li>
-      <li>
-        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="搜索" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="files.html"><span>文件列表</span></a></li>
-    </ul>
-  </div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,131 +66,127 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">EMGroupManagerDelegate.h</div>  </div>
+  <div class="headertitle"><div class="title">EMGroupManagerDelegate.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">typedef</span> NS_ENUM(NSInteger, EMGroupLeaveReason) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    EMGroupLeaveReasonBeRemoved = 0,    </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    EMGroupLeaveReasonUserLeave,        </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    EMGroupLeaveReasonDestroyed,        </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_group.html">EMGroup</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_group_shared_file.html">EMGroupSharedFile</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="protocol_e_m_group_manager_delegate-p.html">   40</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_e_m_group_manager_delegate-p.html">EMGroupManagerDelegate</a> &lt;NSObject&gt;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">@optional</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;- (void)groupInvitationDidReceive:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        groupName:(NSString *_Nonnull)aGroupName</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                          inviter:(NSString *_Nonnull)aInviter</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                          message:(NSString *_Nullable)aMessage;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;- (void)groupInvitationDidAccept:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                         invitee:(NSString *_Nonnull)aInvitee;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;- (void)groupInvitationDidDecline:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                          invitee:(NSString *_Nonnull)aInvitee</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                           reason:(NSString *_Nullable)aReason;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;- (void)didJoinGroup:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;             inviter:(NSString *_Nonnull)aInviter</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;             message:(NSString *_Nullable)aMessage;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;- (void)didLeaveGroup:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;               reason:(EMGroupLeaveReason)aReason;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;- (void)joinGroupRequestDidReceive:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                              user:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                            reason:(NSString *_Nullable)aReason;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;- (void)joinGroupRequestDidDecline:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                            reason:(NSString *_Nullable)aReason</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                         applicant:(NSString* _Nonnull )aApplicant;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;- (void)joinGroupRequestDidDecline:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                            reason:(NSString *_Nullable)aReason</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                          decliner:(NSString *_Nullable)aDecliner</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                         applicant:(NSString* _Nonnull )aApplicant;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;- (void)joinGroupRequestDidApprove:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;- (void)groupListDidUpdate:(NSArray&lt;<a class="code" href="interface_e_m_group.html">EMGroup</a> *&gt; *_Nonnull)aGroupList;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;- (void)groupMuteListDidUpdate:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;             addedMutedMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMutedMembers</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                    muteExpire:(NSInteger)aMuteExpire;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;- (void)groupMuteListDidUpdate:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;           removedMutedMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMutedMembers;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;- (void)groupWhiteListDidUpdate:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;          addedWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;- (void)groupWhiteListDidUpdate:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        removedWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;- (void)groupAllMemberMuteChanged:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                 isAllMemberMuted:(BOOL)aMuted;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;- (void)groupAdminListDidUpdate:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                     addedAdmin:(NSString *_Nonnull)aAdmin;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;- (void)groupAdminListDidUpdate:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                   removedAdmin:(NSString *_Nonnull)aAdmin;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;- (void)groupOwnerDidUpdate:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                   newOwner:(NSString *_Nonnull)aNewOwner</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                   oldOwner:(NSString *_Nonnull)aOldOwner;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;- (void)userDidJoinGroup:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                    user:(NSString *_Nonnull)aUsername;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;- (void)userDidLeaveGroup:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                     user:(NSString *_Nonnull)aUsername;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;- (void)groupAnnouncementDidUpdate:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;                      announcement:(NSString *_Nullable)aAnnouncement;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;- (void)groupFileListDidUpdate:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;               addedSharedFile:(<a class="code" href="interface_e_m_group_shared_file.html">EMGroupSharedFile</a> *_Nonnull)aSharedFile;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;- (void)groupFileListDidUpdate:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;             removedSharedFile:(NSString *_Nonnull)aFileId;</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160; - (void)groupStateChanged:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *)aGroup</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                isDisabled:(BOOL)aDisabled;</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;- (void)groupSpecificationDidUpdate:(<a class="code" href="interface_e_m_group.html">EMGroup</a> *)aGroup;</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;- (void)onAttributesChangedOfGroupMember:(NSString *_Nonnull)groupId userId:(NSString *_Nonnull)userId attributes:(NSDictionary &lt;NSString*,NSString*&gt;*_Nullable)attributes operatorId:(NSString *_Nonnull)operatorId;</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;<span class="preprocessor">#pragma mark - Deprecated methods</span></div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;- (void)groupInvitationDidReceive:(NSString *)aGroupId</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                          inviter:(NSString *)aInviter</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                          message:(NSString *)aMessage</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                          __deprecated_msg(&quot;Use -groupInvitationDidReceive:groupName:inviter:message: instead&quot;);</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;- (void)joinGroupRequestDidDecline:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;                            reason:(NSString *_Nullable)aReason EM_DEPRECATED_IOS(3_1_0, 4_2_0, &quot;Use -joinGroupRequestDidDecline:reason:applicant: instead&quot;);</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="interface_e_m_group_html"><div class="ttname"><a href="interface_e_m_group.html">EMGroup</a></div><div class="ttdef"><b>Definition:</b> EMGroup.h:42</div></div>
-<div class="ttc" id="interface_e_m_group_shared_file_html"><div class="ttname"><a href="interface_e_m_group_shared_file.html">EMGroupSharedFile</a></div><div class="ttdef"><b>Definition:</b> EMGroupSharedFile.h:23</div></div>
-<div class="ttc" id="protocol_e_m_group_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_group_manager_delegate-p.html">EMGroupManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMGroupManagerDelegate.h:40</div></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="protocol_e_m_group_manager_delegate-p.html#ac7c819d13b9c4194c8788028a70a3609">   24</a></span><span class="keyword">typedef</span> NS_ENUM(NSInteger, EMGroupLeaveReason) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    EMGroupLeaveReasonBeRemoved = 0,    </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    EMGroupLeaveReasonUserLeave,        </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    EMGroupLeaveReasonDestroyed,        </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">@class</span> <a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">@class</span> <a class="code hl_interface" href="interface_e_m_group_shared_file.html">EMGroupSharedFile</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="protocol_e_m_group_manager_delegate-p.html">   40</a></span><span class="keyword">@protocol </span><a class="code hl_protocol" href="protocol_e_m_group_manager_delegate-p.html">EMGroupManagerDelegate</a> &lt;NSObject&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">@optional</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>- (void)groupInvitationDidReceive:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                        groupName:(NSString *_Nonnull)aGroupName</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                          inviter:(NSString *_Nonnull)aInviter</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                          message:(NSString *_Nullable)aMessage;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>- (void)groupInvitationDidAccept:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                         invitee:(NSString *_Nonnull)aInvitee;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>- (void)groupInvitationDidDecline:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                          invitee:(NSString *_Nonnull)aInvitee</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                           reason:(NSString *_Nullable)aReason;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>- (void)didJoinGroup:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>             inviter:(NSString *_Nonnull)aInviter</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>             message:(NSString *_Nullable)aMessage;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>- (void)didLeaveGroup:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>               reason:(EMGroupLeaveReason)aReason;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>- (void)joinGroupRequestDidReceive:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                              user:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                            reason:(NSString *_Nullable)aReason;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>- (void)joinGroupRequestDidDecline:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                            reason:(NSString *_Nullable)aReason</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                         applicant:(NSString* _Nonnull )aApplicant;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>- (void)joinGroupRequestDidDecline:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                            reason:(NSString *_Nullable)aReason</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                          decliner:(NSString *_Nullable)aDecliner</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                         applicant:(NSString* _Nonnull )aApplicant;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>- (void)joinGroupRequestDidApprove:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>- (void)groupListDidUpdate:(NSArray&lt;<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *&gt; *_Nonnull)aGroupList;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>- (void)groupMuteListDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>             addedMutedMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMutedMembers</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                    muteExpire:(NSInteger)aMuteExpire;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>- (void)groupMuteListDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>           removedMutedMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMutedMembers;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>- (void)groupWhiteListDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>          addedWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>- (void)groupWhiteListDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        removedWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>- (void)groupAllMemberMuteChanged:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                 isAllMemberMuted:(BOOL)aMuted;</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>- (void)groupAdminListDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                     addedAdmin:(NSString *_Nonnull)aAdmin;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>- (void)groupAdminListDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                   removedAdmin:(NSString *_Nonnull)aAdmin;</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>- (void)groupOwnerDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                   newOwner:(NSString *_Nonnull)aNewOwner</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                   oldOwner:(NSString *_Nonnull)aOldOwner;</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>- (void)userDidJoinGroup:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                    user:(NSString *_Nonnull)aUsername;</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span> </div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>- (void)userDidLeaveGroup:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                     user:(NSString *_Nonnull)aUsername;</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span> </div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>- (void)groupAnnouncementDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>                      announcement:(NSString *_Nullable)aAnnouncement;</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span> </div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>- (void)groupFileListDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>               addedSharedFile:(<a class="code hl_interface" href="interface_e_m_group_shared_file.html">EMGroupSharedFile</a> *_Nonnull)aSharedFile;</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span> </div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>- (void)groupFileListDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>             removedSharedFile:(NSString *_Nonnull)aFileId;</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span> </div>
+<div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span> - (void)groupStateChanged:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *)aGroup</div>
+<div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span>                isDisabled:(BOOL)aDisabled;</div>
+<div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span> </div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>- (void)groupSpecificationDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *)aGroup;</div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>- (void)onAttributesChangedOfGroupMember:(NSString *_Nonnull)groupId userId:(NSString *_Nonnull)userId attributes:(NSDictionary &lt;NSString*,NSString*&gt;*_Nullable)attributes operatorId:(NSString *_Nonnull)operatorId;</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span> </div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span><span class="preprocessor">#pragma mark - Deprecated methods</span></div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>- (void)groupInvitationDidReceive:(NSString *)aGroupId</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>                          inviter:(NSString *)aInviter</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>                          message:(NSString *)aMessage</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                          __deprecated_msg(&quot;Use -groupInvitationDidReceive:groupName:inviter:message: instead&quot;);</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span> </div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>- (void)joinGroupRequestDidDecline:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>                            reason:(NSString *_Nullable)aReason EM_DEPRECATED_IOS(3_1_0, 4_2_0, &quot;Use -joinGroupRequestDidDecline:reason:applicant: instead&quot;);</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span><span class="keyword">@end</span></div>
+<div class="ttc" id="ainterface_e_m_group_html"><div class="ttname"><a href="interface_e_m_group.html">EMGroup</a></div><div class="ttdef"><b>Definition:</b> EMGroup.h:43</div></div>
+<div class="ttc" id="ainterface_e_m_group_shared_file_html"><div class="ttname"><a href="interface_e_m_group_shared_file.html">EMGroupSharedFile</a></div><div class="ttdef"><b>Definition:</b> EMGroupSharedFile.h:24</div></div>
+<div class="ttc" id="aprotocol_e_m_group_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_group_manager_delegate-p.html">EMGroupManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMGroupManagerDelegate.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>
