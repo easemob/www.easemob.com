@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['markallconversationsasread_0',['markAllConversationsAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4f7dbf5b36fadde636db34dfaa7fc41f',1,'com::hyphenate::chat::EMChatManager']]],
+  ['markallconversationsasread_0',['markAllConversationsAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ad6672b775344b659581fdb7b60bd035d',1,'com::hyphenate::chat::EMChatManager']]],
   ['markallmessagesasread_1',['markAllMessagesAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a7b647fa38c62bb24c2469a704d3f16d5',1,'com::hyphenate::chat::EMConversation']]],
   ['markmessageasread_2',['markMessageAsRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a9e542e10f41e0c7f84d9fac97d03b3fd',1,'com::hyphenate::chat::EMConversation']]],
   ['marks_3',['marks',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a225951942f771b466605030fd7ae68be',1,'com::hyphenate::chat::EMConversation']]],

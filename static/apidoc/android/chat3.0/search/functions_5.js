@@ -21,5 +21,6 @@ var searchData=
   ['fetchsubscribedmembers_18',['fetchSubscribedMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#aab92586b4511c700011ba3c8de8d2897',1,'com::hyphenate::chat::EMPresenceManager']]],
   ['fetchsupportlanguages_19',['fetchSupportLanguages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a061e2f3d93d0c399524b7dbbc62a0a5b',1,'com::hyphenate::chat::EMChatManager']]],
   ['fetchuserinfobyattribute_20',['fetchUserInfoByAttribute',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#a2a98f1cc2139ce16fc0aeb1da91e4507',1,'com::hyphenate::chat::EMUserInfoManager']]],
-  ['fetchuserinfobyuserid_21',['fetchUserInfoByUserId',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#af3b91717ccfaa5b92e1599ff25eeacbd',1,'com::hyphenate::chat::EMUserInfoManager']]]
+  ['fetchuserinfobyuserid_21',['fetchUserInfoByUserId',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#af3b91717ccfaa5b92e1599ff25eeacbd',1,'com::hyphenate::chat::EMUserInfoManager']]],
+  ['filter_22',['filter',['../interfacecom_1_1hyphenate_1_1chat_1_1_e_m_custom_conversation_filter.html#afce94afbcd06c4d5d67253ac16c741a5',1,'com::hyphenate::chat::EMCustomConversationFilter']]]
 ];

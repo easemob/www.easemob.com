@@ -1,10 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
 <title>HyphenateChatSDK: HyphenateChat.framework/Headers/IEMChatroomManager.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -12,6 +11,9 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -19,9 +21,10 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.5.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">HyphenateChatSDK
+   &#160;<span id="projectnumber">4.6.0</span>
    </div>
   </td>
  </tr>
@@ -29,23 +32,38 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.4 -->
+<!-- 制作者 Doxygen 1.8.10 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
-/* @license-end */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -66,328 +84,331 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">IEMChatroomManager.h</div></div>
+  <div class="headertitle">
+<div class="title">IEMChatroomManager.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="protocol_i_e_m_chatroom_manager-p.html#abef44b2324aaaf8a1daaa26b6e6c4acc">    1</a></span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#import &quot;EMCommonDefs.h&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#import &quot;EMChatroomManagerDelegate.h&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#import &quot;EMChatroomOptions.h&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#import &quot;EMChatroom.h&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#import &quot;EMPageResult.h&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#import &quot;EMCursorResult.h&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">@class</span> <a class="code hl_interface" href="interface_e_m_error.html">EMError</a>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="protocol_i_e_m_chatroom_manager-p.html">   34</a></span><span class="keyword">@protocol </span><a class="code hl_protocol" href="protocol_i_e_m_chatroom_manager-p.html">IEMChatroomManager</a> &lt;NSObject&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">@required</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#pragma mark - Delegate</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>- (void)addDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate</a>&gt; _Nonnull)aDelegate</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      delegateQueue:(dispatch_queue_t _Nullable)aQueue;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>- (void)removeDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate</a>&gt; _Nonnull)aDelegate;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#pragma mark - Fetch Chatrooms</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>- (<a class="code hl_interface" href="interface_e_m_page_result.html">EMPageResult</a>&lt;<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a>*&gt; *_Nullable)getChatroomsFromServerWithPage:(NSInteger)aPageNum</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                                                 pageSize:(NSInteger)aPageSize</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                                    error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>- (void)getChatroomsFromServerWithPage:(NSInteger)aPageNum</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                              pageSize:(NSInteger)aPageSize</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                            completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_page_result.html">EMPageResult</a>&lt;<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a>*&gt; *_Nullable aResult, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#pragma mark - Create</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable)createChatroomWithSubject:(NSString *_Nullable)aSubject</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                                       description:(NSString *_Nullable)aDescription</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                                          invitees:(NSArray&lt;NSString *&gt; *_Nullable)aInvitees</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                                           message:(NSString *_Nullable)aMessage</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                                   maxMembersCount:(NSInteger)aMaxMembersCount</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                                             error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>- (void)createChatroomWithSubject:(NSString *_Nullable)aSubject</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                      description:(NSString *_Nullable)aDescription</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                         invitees:(NSArray&lt;NSString *&gt; *_Nullable)aInvitees</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                          message:(NSString *_Nullable)aMessage</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                  maxMembersCount:(NSInteger)aMaxMembersCount</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                       completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">#pragma mark - Edit Chatroom</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)joinChatroom:(NSString * _Nonnull)aChatroomId</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                       error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> ** _Nullable)pError;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>- (void)joinChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>          completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>- (void)leaveChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>- (void)leaveChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable)destroyChatroom:(NSString *_Nonnull)aChatroomId;</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>- (void)destroyChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>             completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="preprocessor">#pragma mark - Fetch</span></div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable)getChatroomSpecificationFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                                                            error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable*)pError;</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>- (void)getChatroomSpecificationFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                                      completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>- (void)getChatroomSpecificationFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                                    fetchMembers:(<span class="keywordtype">bool</span>)aFetchMembers</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                                      completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>- (<a class="code hl_interface" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;NSString*&gt; *_Nullable)getChatroomMemberListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>                                                            cursor:(NSString *_Nullable)aCursor</div>
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>                                                          pageSize:(NSInteger)aPageSize</div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>                                                             error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>- (void)getChatroomMemberListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>                                       cursor:(NSString *_Nullable)aCursor</div>
-<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>                                     pageSize:(NSInteger)aPageSize</div>
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>                                   completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;NSString*&gt; *_Nullable aResult, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span> </div>
-<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>- (NSArray&lt;NSString *&gt; *_Nullable)getChatroomBlacklistFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>                                                            pageNumber:(NSInteger)aPageNum</div>
-<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>                                                              pageSize:(NSInteger)aPageSize</div>
-<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>                                                                 error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span> </div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>- (void)getChatroomBlacklistFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>                                  pageNumber:(NSInteger)aPageNum</div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>                                    pageSize:(NSInteger)aPageSize</div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>                                  completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;NSString *&gt; *_Nullable aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span> </div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>- (NSArray&lt;NSString *&gt; *_Nullable)getChatroomMuteListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>                                                           pageNumber:(NSInteger)aPageNum</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>                                                             pageSize:(NSInteger)aPageSize</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>                                                                error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span> </div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>- (void)getChatroomMuteListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>                                 pageNumber:(NSInteger)aPageNum</div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>                                   pageSize:(NSInteger)aPageSize</div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>                                 completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;NSString *&gt; *_Nullable aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span> </div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span> </div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>- (NSArray&lt;NSString *&gt; *_Nullable)getChatroomWhiteListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>                                                                 error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span> </div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span> </div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>- (void)getChatroomWhiteListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>                                  completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;NSString *&gt; *_Nullable aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span> </div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>- (BOOL)isMemberInWhiteListFromServerWithChatroomId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>                                              error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span> </div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>- (void)isMemberInWhiteListFromServerWithChatroomId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>                                         completion:(<span class="keywordtype">void</span> (^_Nullable)(BOOL inWhiteList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span> </div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>- (void)isMemberInMuteListFromServerWithChatroomId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>                                        completion:(<span class="keywordtype">void</span> (^_Nullable)(BOOL inMuteList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>- (NSString *_Nullable)getChatroomAnnouncementWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>                                               error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span> </div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>- (void)getChatroomAnnouncementWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>                           completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString *_Nullable aAnnouncement, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span> </div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span><span class="preprocessor">#pragma mark - Edit</span></div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span> </div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)updateSubject:(NSString *_Nullable )aSubject</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>                  forChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>                        error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span> </div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>- (void)updateSubject:(NSString *_Nullable )aSubject</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>          forChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>           completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span> </div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )updateDescription:(NSString *_Nullable )aDescription</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>                                forChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>                                      error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span> </div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>- (void)updateDescription:(NSString *_Nullable )aDescription</div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>              forChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>               completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span> </div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )removeMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>                           fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>                                  error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>- (void)removeMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>         fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>           completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span> </div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )blockMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>                          fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>                                 error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span> </div>
-<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>- (void)blockMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>        fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>          completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span> </div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span> </div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )unblockMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>                            fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>                                   error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span> </div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>- (void)unblockMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>          fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>            completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span> </div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )updateChatroomOwner:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>                                     newOwner:(NSString *_Nonnull)aNewOwner</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>                                        error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span> </div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>- (void)updateChatroomOwner:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>                   newOwner:(NSString *_Nonnull)aNewOwner</div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>                 completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span> </div>
-<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )addAdmin:(NSString *_Nonnull)aAdmin</div>
-<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>                        toChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>                             error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span> </div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>- (void)addAdmin:(NSString *_Nonnull)aAdmin</div>
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>      toChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>      completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroomp, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span> </div>
-<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )removeAdmin:(NSString *_Nonnull)aAdmin</div>
-<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>                         fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>                                error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span> </div>
-<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>- (void)removeAdmin:(NSString *_Nonnull)aAdmin</div>
-<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>       fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>         completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span> </div>
-<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span> </div>
-<div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )muteMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMuteMembers</div>
-<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>                     muteMilliseconds:(NSInteger)aMuteMilliseconds</div>
-<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span>                         fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>                                error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span> </div>
-<div class="line"><a id="l01305" name="l01305"></a><span class="lineno"> 1305</span>- (void)muteMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMuteMembers</div>
-<div class="line"><a id="l01306" name="l01306"></a><span class="lineno"> 1306</span>   muteMilliseconds:(NSInteger)aMuteMilliseconds</div>
-<div class="line"><a id="l01307" name="l01307"></a><span class="lineno"> 1307</span>       fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01308" name="l01308"></a><span class="lineno"> 1308</span>         completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01309" name="l01309"></a><span class="lineno"> 1309</span> </div>
-<div class="line"><a id="l01337" name="l01337"></a><span class="lineno"> 1337</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )unmuteMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l01338" name="l01338"></a><span class="lineno"> 1338</span>                           fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01339" name="l01339"></a><span class="lineno"> 1339</span>                                  error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l01340" name="l01340"></a><span class="lineno"> 1340</span> </div>
-<div class="line"><a id="l01365" name="l01365"></a><span class="lineno"> 1365</span>- (void)unmuteMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l01366" name="l01366"></a><span class="lineno"> 1366</span>         fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01367" name="l01367"></a><span class="lineno"> 1367</span>           completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01368" name="l01368"></a><span class="lineno"> 1368</span> </div>
-<div class="line"><a id="l01369" name="l01369"></a><span class="lineno"> 1369</span> </div>
-<div class="line"><a id="l01370" name="l01370"></a><span class="lineno"> 1370</span> </div>
-<div class="line"><a id="l01396" name="l01396"></a><span class="lineno"> 1396</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )muteAllMembersFromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01397" name="l01397"></a><span class="lineno"> 1397</span>                                               error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span> </div>
-<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>- (void)muteAllMembersFromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>                        completion:(<span class="keywordtype">void</span>(^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span> </div>
-<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span> </div>
-<div class="line"><a id="l01450" name="l01450"></a><span class="lineno"> 1450</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )unmuteAllMembersFromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01451" name="l01451"></a><span class="lineno"> 1451</span>                                                 error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l01452" name="l01452"></a><span class="lineno"> 1452</span> </div>
-<div class="line"><a id="l01453" name="l01453"></a><span class="lineno"> 1453</span> </div>
-<div class="line"><a id="l01476" name="l01476"></a><span class="lineno"> 1476</span>- (void)unmuteAllMembersFromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01477" name="l01477"></a><span class="lineno"> 1477</span>                          completion:(<span class="keywordtype">void</span>(^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01478" name="l01478"></a><span class="lineno"> 1478</span> </div>
-<div class="line"><a id="l01479" name="l01479"></a><span class="lineno"> 1479</span> </div>
-<div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )addWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span>                                 fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span>                                        error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span> </div>
-<div class="line"><a id="l01535" name="l01535"></a><span class="lineno"> 1535</span>- (void)addWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l01536" name="l01536"></a><span class="lineno"> 1536</span>               fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01537" name="l01537"></a><span class="lineno"> 1537</span>                 completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01538" name="l01538"></a><span class="lineno"> 1538</span> </div>
-<div class="line"><a id="l01566" name="l01566"></a><span class="lineno"> 1566</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )removeWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l01567" name="l01567"></a><span class="lineno"> 1567</span>                                    fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01568" name="l01568"></a><span class="lineno"> 1568</span>                                           error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l01569" name="l01569"></a><span class="lineno"> 1569</span> </div>
-<div class="line"><a id="l01594" name="l01594"></a><span class="lineno"> 1594</span>- (void)removeWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
-<div class="line"><a id="l01595" name="l01595"></a><span class="lineno"> 1595</span>                  fromChatroom:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>                    completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01597" name="l01597"></a><span class="lineno"> 1597</span> </div>
-<div class="line"><a id="l01625" name="l01625"></a><span class="lineno"> 1625</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )updateChatroomAnnouncementWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01626" name="l01626"></a><span class="lineno"> 1626</span>                                              announcement:(NSString *_Nullable )aAnnouncement</div>
-<div class="line"><a id="l01627" name="l01627"></a><span class="lineno"> 1627</span>                                                     error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
-<div class="line"><a id="l01628" name="l01628"></a><span class="lineno"> 1628</span> </div>
-<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>- (void)updateChatroomAnnouncementWithId:(NSString *_Nonnull)aChatroomId</div>
-<div class="line"><a id="l01654" name="l01654"></a><span class="lineno"> 1654</span>                            announcement:(NSString *_Nullable)aAnnouncement</div>
-<div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span>                              completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01688" name="l01688"></a><span class="lineno"> 1688</span>- (void)setChatroomAttributes:(NSString *_Nonnull)roomId attributes:(NSDictionary&lt;NSString*,NSString*&gt; *_Nonnull)keyValues autoDelete:(BOOL)autoDelete completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError,NSDictionary&lt;NSString*,<a class="code hl_interface" href="interface_e_m_error.html">EMError</a>*&gt; *_Nullable failureKeys))completionBlock ;</div>
-<div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span>- (void)setChatroomAttribute:(NSString *_Nonnull)roomId key:(NSString *_Nonnull)key value:(NSString *_Nonnull)value autoDelete:(BOOL)autoDelete completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))completionBlock;</div>
-<div class="line"><a id="l01758" name="l01758"></a><span class="lineno"> 1758</span>- (void)setChatroomAttributesForced:(NSString *_Nonnull)roomId attributes:(NSDictionary&lt;NSString*,NSString*&gt; *_Nonnull)keyValues autoDelete:(BOOL)autoDelete completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError,NSDictionary&lt;NSString*,<a class="code hl_interface" href="interface_e_m_error.html">EMError</a>*&gt; *_Nullable failureKeys))completionBlock;</div>
-<div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span> </div>
-<div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span>- (void)setChatroomAttributeForced:(NSString *_Nonnull)roomId key:(NSString *_Nonnull)key value:(NSString *_Nonnull)value autoDelete:(BOOL)autoDelete completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))completionBlock;</div>
-<div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span> </div>
-<div class="line"><a id="l01831" name="l01831"></a><span class="lineno"> 1831</span>- (void)removeChatroomAttributes:(NSString *_Nonnull)roomId attributes:(NSArray &lt;__kindof NSString*&gt; * _Nonnull)keyValues completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError,NSDictionary&lt;NSString*,<a class="code hl_interface" href="interface_e_m_error.html">EMError</a>*&gt; *_Nullable failureKeys))completionBlock;</div>
-<div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span>- (void)removeChatroomAttribute:(NSString *_Nonnull)roomId key:(NSString * _Nonnull)key completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))completionBlock;</div>
-<div class="line"><a id="l01885" name="l01885"></a><span class="lineno"> 1885</span>- (void)removeChatroomAttributesForced:(NSString *_Nonnull)roomId attributes:(NSArray &lt;__kindof NSString*&gt; * _Nonnull)keyValues completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError,NSDictionary&lt;NSString*,<a class="code hl_interface" href="interface_e_m_error.html">EMError</a>*&gt; *_Nullable failureKeys))completionBlock;</div>
-<div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span> </div>
-<div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span>- (void)removeChatroomAttributeForced:(NSString *_Nonnull)roomId key:(NSString * _Nonnull)key completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))completionBlock;</div>
-<div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span>- (void)fetchChatroomAttributes:(NSString *_Nonnull)roomId keys:(NSArray &lt;__kindof NSString *&gt; * _Nullable)keys completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError,NSDictionary&lt;NSString*,NSString*&gt; *_Nullable properties ))completionBlock;</div>
-<div class="line"><a id="l01949" name="l01949"></a><span class="lineno"> 1949</span>- (void)fetchChatroomAllAttributes:(NSString * _Nonnull)roomId completion:(<span class="keywordtype">void</span> (^ _Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable error,NSDictionary&lt;NSString*,NSString*&gt; * _Nullable properties))completionBlock;</div>
-<div class="line"><a id="l01950" name="l01950"></a><span class="lineno"> 1950</span> </div>
-<div class="line"><a id="l01951" name="l01951"></a><span class="lineno"> 1951</span><span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS 3.3.0</span></div>
-<div class="line"><a id="l01952" name="l01952"></a><span class="lineno"> 1952</span> </div>
-<div class="line"><a id="l01980" name="l01980"></a><span class="lineno"> 1980</span>- (<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)fetchChatroomInfo:(NSString *)aChatroomId</div>
-<div class="line"><a id="l01981" name="l01981"></a><span class="lineno"> 1981</span>               includeMembersList:(BOOL)aIncludeMembersList</div>
-<div class="line"><a id="l01982" name="l01982"></a><span class="lineno"> 1982</span>                            error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **)pError EM_DEPRECATED_IOS(3_1_0, 3_3_0, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_chatroom_manager-p.html">IEMChatroomManager</a> getChatroomSpecificationFromServerWithId:error: instead&quot;);</div>
-<div class="line"><a id="l01983" name="l01983"></a><span class="lineno"> 1983</span> </div>
-<div class="line"><a id="l02004" name="l02004"></a><span class="lineno"> 2004</span>- (void)getChatroomSpecificationFromServerByID:(NSString *)aChatroomId</div>
-<div class="line"><a id="l02005" name="l02005"></a><span class="lineno"> 2005</span>                            includeMembersList:(BOOL)aIncludeMembersList</div>
-<div class="line"><a id="l02006" name="l02006"></a><span class="lineno"> 2006</span>                                    completion:(<span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *aChatroom, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_1_0, 3_3_0, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_chatroom_manager-p.html">IEMChatroomManager</a> getChatroomSpecificationFromServerWithId:completion: instead&quot;);</div>
-<div class="line"><a id="l02007" name="l02007"></a><span class="lineno"> 2007</span> </div>
-<div class="line"><a id="l02008" name="l02008"></a><span class="lineno"> 2008</span><span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS 3.2.3</span></div>
-<div class="line"><a id="l02009" name="l02009"></a><span class="lineno"> 2009</span> </div>
-<div class="line"><a id="l02025" name="l02025"></a><span class="lineno"> 2025</span>- (void)addDelegate:(<span class="keywordtype">id</span>&lt;<a class="code hl_protocol" href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate</a>&gt;)aDelegate EM_DEPRECATED_IOS(3_1_0, 3_2_2, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_chatroom_manager-p.html">IEMChatroomManager</a> addDelegate:delegateQueue: instead&quot;);</div>
-<div class="line"><a id="l02026" name="l02026"></a><span class="lineno"> 2026</span> </div>
-<div class="line"><a id="l02027" name="l02027"></a><span class="lineno"> 2027</span><span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS &lt; 3.2.3</span></div>
-<div class="line"><a id="l02028" name="l02028"></a><span class="lineno"> 2028</span> </div>
-<div class="line"><a id="l02052" name="l02052"></a><span class="lineno"> 2052</span>- (NSArray *)getAllChatroomsFromServerWithError:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **)pError __deprecated_msg(&quot;Use -getChatroomsFromServerWithPage instead&quot;);</div>
-<div class="line"><a id="l02053" name="l02053"></a><span class="lineno"> 2053</span> </div>
-<div class="line"><a id="l02070" name="l02070"></a><span class="lineno"> 2070</span>- (void)getAllChatroomsFromServerWithCompletion:(<span class="keywordtype">void</span> (^)(NSArray *aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock __deprecated_msg(&quot;Use -getChatroomsFromServerWithPage instead&quot;);</div>
-<div class="line"><a id="l02071" name="l02071"></a><span class="lineno"> 2071</span> </div>
-<div class="line"><a id="l02090" name="l02090"></a><span class="lineno"> 2090</span>- (void)asyncGetAllChatroomsFromServer:(<span class="keywordtype">void</span> (^)(NSArray *aList))aSuccessBlock</div>
-<div class="line"><a id="l02091" name="l02091"></a><span class="lineno"> 2091</span>                               failure:(<span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aFailureBlock __deprecated_msg(&quot;Use -getAllChatroomsFromServerWithCompletion: instead&quot;);</div>
-<div class="line"><a id="l02092" name="l02092"></a><span class="lineno"> 2092</span> </div>
-<div class="line"><a id="l02114" name="l02114"></a><span class="lineno"> 2114</span>- (void)asyncJoinChatroom:(NSString *)aChatroomId</div>
-<div class="line"><a id="l02115" name="l02115"></a><span class="lineno"> 2115</span>                  success:(<span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *aRoom))aSuccessBlock</div>
-<div class="line"><a id="l02116" name="l02116"></a><span class="lineno"> 2116</span>                  failure:(<span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aFailureBlock __deprecated_msg(&quot;Use -joinChatroom:completion: instead&quot;);</div>
-<div class="line"><a id="l02117" name="l02117"></a><span class="lineno"> 2117</span> </div>
-<div class="line"><a id="l02141" name="l02141"></a><span class="lineno"> 2141</span>- (void)asyncLeaveChatroom:(NSString *)aChatroomId</div>
-<div class="line"><a id="l02142" name="l02142"></a><span class="lineno"> 2142</span>                   success:(<span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *aRoom))aSuccessBlock</div>
-<div class="line"><a id="l02143" name="l02143"></a><span class="lineno"> 2143</span>                   failure:(<span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aFailureBlock __deprecated_msg(&quot;Use -leaveChatroom:completion: instead&quot;);</div>
-<div class="line"><a id="l02144" name="l02144"></a><span class="lineno"> 2144</span> </div>
-<div class="line"><a id="l02167" name="l02167"></a><span class="lineno"> 2167</span>- (void)asyncFetchChatroomInfo:(NSString *)aChatroomId</div>
-<div class="line"><a id="l02168" name="l02168"></a><span class="lineno"> 2168</span>            includeMembersList:(BOOL)aIncludeMembersList</div>
-<div class="line"><a id="l02169" name="l02169"></a><span class="lineno"> 2169</span>                       success:(<span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *aChatroom))aSuccessBlock</div>
-<div class="line"><a id="l02170" name="l02170"></a><span class="lineno"> 2170</span>                       failure:(<span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aFailureBlock __deprecated_msg(&quot;Use -getChatroomSpecificationFromServerByID:includeMembersList:completion: instead&quot;);</div>
-<div class="line"><a id="l02171" name="l02171"></a><span class="lineno"> 2171</span><span class="keyword">@end</span></div>
-<div class="ttc" id="ainterface_e_m_chatroom_html"><div class="ttname"><a href="interface_e_m_chatroom.html">EMChatroom</a></div><div class="ttdef"><b>Definition:</b> EMChatroom.h:42</div></div>
-<div class="ttc" id="ainterface_e_m_cursor_result_html"><div class="ttname"><a href="interface_e_m_cursor_result.html">EMCursorResult</a></div><div class="ttdef"><b>Definition:</b> EMCursorResult.h:27</div></div>
-<div class="ttc" id="ainterface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:27</div></div>
-<div class="ttc" id="ainterface_e_m_page_result_html"><div class="ttname"><a href="interface_e_m_page_result.html">EMPageResult</a></div><div class="ttdef"><b>Definition:</b> EMPageResult.h:24</div></div>
-<div class="ttc" id="aprotocol_e_m_chatroom_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMChatroomManagerDelegate.h:41</div></div>
-<div class="ttc" id="aprotocol_i_e_m_chatroom_manager-p_html"><div class="ttname"><a href="protocol_i_e_m_chatroom_manager-p.html">IEMChatroomManager-p</a></div><div class="ttdef"><b>Definition:</b> IEMChatroomManager.h:34</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#import &quot;EMCommonDefs.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#import &quot;EMChatroomManagerDelegate.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;EMChatroomOptions.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;EMChatroom.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;EMPageResult.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#import &quot;EMCursorResult.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_error.html">EMError</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="protocol_i_e_m_chatroom_manager-p.html">   34</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_i_e_m_chatroom_manager-p.html">IEMChatroomManager</a> &lt;NSObject&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">@required</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#pragma mark - Delegate</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;- (void)addDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate</a>&gt; _Nonnull)aDelegate</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      delegateQueue:(dispatch_queue_t _Nullable)aQueue;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;- (void)removeDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate</a>&gt; _Nonnull)aDelegate;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#pragma mark - Fetch Chatrooms</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;- (<a class="code" href="interface_e_m_page_result.html">EMPageResult</a>&lt;<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a>*&gt; *_Nullable)getChatroomsFromServerWithPage:(NSInteger)aPageNum</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                                 pageSize:(NSInteger)aPageSize</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                                    error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;- (void)getChatroomsFromServerWithPage:(NSInteger)aPageNum</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                              pageSize:(NSInteger)aPageSize</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                            completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_page_result.html">EMPageResult</a>&lt;<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a>*&gt; *_Nullable aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#pragma mark - Create</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable)createChatroomWithSubject:(NSString *_Nullable)aSubject</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                                       description:(NSString *_Nullable)aDescription</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                                          invitees:(NSArray&lt;NSString *&gt; *_Nullable)aInvitees</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                           message:(NSString *_Nullable)aMessage</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                                   maxMembersCount:(NSInteger)aMaxMembersCount</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                                             error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;- (void)createChatroomWithSubject:(NSString *_Nullable)aSubject</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                      description:(NSString *_Nullable)aDescription</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                         invitees:(NSArray&lt;NSString *&gt; *_Nullable)aInvitees</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                          message:(NSString *_Nullable)aMessage</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                  maxMembersCount:(NSInteger)aMaxMembersCount</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                       completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#pragma mark - Edit Chatroom</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)joinChatroom:(NSString * _Nonnull)aChatroomId</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                       error:(<a class="code" href="interface_e_m_error.html">EMError</a> ** _Nullable)pError;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;- (void)joinChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;          completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;- (void)leaveChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;- (void)leaveChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;- (<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable)destroyChatroom:(NSString *_Nonnull)aChatroomId;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;- (void)destroyChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;             completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="preprocessor">#pragma mark - Fetch</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable)getChatroomSpecificationFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                                                            error:(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable*)pError;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;- (void)getChatroomSpecificationFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                                      completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;- (void)getChatroomSpecificationFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                                    fetchMembers:(<span class="keywordtype">bool</span>)aFetchMembers</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                                      completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;- (<a class="code" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;NSString*&gt; *_Nullable)getChatroomMemberListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                                                            cursor:(NSString *_Nullable)aCursor</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                                                          pageSize:(NSInteger)aPageSize</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                                                             error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;- (void)getChatroomMemberListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                                       cursor:(NSString *_Nullable)aCursor</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                                     pageSize:(NSInteger)aPageSize</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                                   completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt;NSString*&gt; *_Nullable aResult, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;- (NSArray&lt;NSString *&gt; *_Nullable)getChatroomBlacklistFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;                                                            pageNumber:(NSInteger)aPageNum</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;                                                              pageSize:(NSInteger)aPageSize</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;                                                                 error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;- (void)getChatroomBlacklistFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                                  pageNumber:(NSInteger)aPageNum</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                                    pageSize:(NSInteger)aPageSize</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                                  completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;NSString *&gt; *_Nullable aList, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;- (NSArray&lt;NSString *&gt; *_Nullable)getChatroomMuteListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;                                                           pageNumber:(NSInteger)aPageNum</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                                                             pageSize:(NSInteger)aPageSize</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                                                                error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;- (void)getChatroomMuteListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                                 pageNumber:(NSInteger)aPageNum</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;                                   pageSize:(NSInteger)aPageSize</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                                 completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;NSString *&gt; *_Nullable aList, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;- (NSArray&lt;NSString *&gt; *_Nullable)getChatroomWhiteListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;                                                                 error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;- (void)getChatroomWhiteListFromServerWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;                                  completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;NSString *&gt; *_Nullable aList, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;- (BOOL)isMemberInWhiteListFromServerWithChatroomId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;                                              error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;- (void)isMemberInWhiteListFromServerWithChatroomId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;                                         completion:(<span class="keywordtype">void</span> (^_Nullable)(BOOL inWhiteList, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;- (void)isMemberInMuteListFromServerWithChatroomId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;                                        completion:(<span class="keywordtype">void</span> (^_Nullable)(BOOL inMuteList, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;- (NSString *_Nullable)getChatroomAnnouncementWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;                                               error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;- (void)getChatroomAnnouncementWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;                           completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString *_Nullable aAnnouncement, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="preprocessor">#pragma mark - Edit</span></div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)updateSubject:(NSString *_Nullable )aSubject</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;                  forChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;                        error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;- (void)updateSubject:(NSString *_Nullable )aSubject</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;          forChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;           completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )updateDescription:(NSString *_Nullable )aDescription</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;                                forChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;                                      error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;- (void)updateDescription:(NSString *_Nullable )aDescription</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;              forChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;               completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )removeMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;                           fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;                                  error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;- (void)removeMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;         fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;           completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )blockMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;                          fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;                                 error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;- (void)blockMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;        fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;          completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;</div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;</div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )unblockMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;                            fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;                                   error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;</div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;- (void)unblockMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;          fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;            completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;</div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )updateChatroomOwner:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;                                     newOwner:(NSString *_Nonnull)aNewOwner</div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;                                        error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;</div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;- (void)updateChatroomOwner:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;                   newOwner:(NSString *_Nonnull)aNewOwner</div>
+<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;                 completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;</div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )addAdmin:(NSString *_Nonnull)aAdmin</div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;                        toChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;                             error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;- (void)addAdmin:(NSString *_Nonnull)aAdmin</div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;      toChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;      completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroomp, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;</div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )removeAdmin:(NSString *_Nonnull)aAdmin</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;                         fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;                                error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;- (void)removeAdmin:(NSString *_Nonnull)aAdmin</div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;       fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;         completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;</div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;</div>
+<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )muteMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMuteMembers</div>
+<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;                     muteMilliseconds:(NSInteger)aMuteMilliseconds</div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;                         fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;                                error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;</div>
+<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;- (void)muteMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMuteMembers</div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;   muteMilliseconds:(NSInteger)aMuteMilliseconds</div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;       fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;         completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;</div>
+<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )unmuteMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;                           fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;                                  error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;</div>
+<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;- (void)unmuteMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;         fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;           completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;</div>
+<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;</div>
+<div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;</div>
+<div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )muteAllMembersFromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;                                               error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;</div>
+<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;- (void)muteAllMembersFromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;                        completion:(<span class="keywordtype">void</span>(^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;</div>
+<div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;</div>
+<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )unmuteAllMembersFromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;                                                 error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;</div>
+<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;</div>
+<div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;- (void)unmuteAllMembersFromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;                          completion:(<span class="keywordtype">void</span>(^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;</div>
+<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;</div>
+<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )addWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;                                 fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;                                        error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;</div>
+<div class="line"><a name="l01535"></a><span class="lineno"> 1535</span>&#160;- (void)addWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l01536"></a><span class="lineno"> 1536</span>&#160;               fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01537"></a><span class="lineno"> 1537</span>&#160;                 completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01538"></a><span class="lineno"> 1538</span>&#160;</div>
+<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )removeWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;                                    fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;                                           error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;</div>
+<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;- (void)removeWhiteListMembers:(NSArray&lt;NSString *&gt; *_Nonnull)aMembers</div>
+<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;                  fromChatroom:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;                    completion:(<span class="keywordtype">void</span> (^_Nullable )(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;</div>
+<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable )updateChatroomAnnouncementWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;                                              announcement:(NSString *_Nullable )aAnnouncement</div>
+<div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;                                                     error:(<a class="code" href="interface_e_m_error.html">EMError</a> **_Nullable )pError;</div>
+<div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160;</div>
+<div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;- (void)updateChatroomAnnouncementWithId:(NSString *_Nonnull)aChatroomId</div>
+<div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;                            announcement:(NSString *_Nullable)aAnnouncement</div>
+<div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;                              completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *_Nullable aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160;- (void)setChatroomAttributes:(NSString *_Nonnull)roomId attributes:(NSDictionary&lt;NSString*,NSString*&gt; *_Nonnull)keyValues autoDelete:(BOOL)autoDelete completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError,NSDictionary&lt;NSString*,<a class="code" href="interface_e_m_error.html">EMError</a>*&gt; *_Nullable failureKeys))completionBlock ;</div>
+<div class="line"><a name="l01732"></a><span class="lineno"> 1732</span>&#160;- (void)setChatroomAttribute:(NSString *_Nonnull)roomId key:(NSString *_Nonnull)key value:(NSString *_Nonnull)value autoDelete:(BOOL)autoDelete completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))completionBlock;</div>
+<div class="line"><a name="l01758"></a><span class="lineno"> 1758</span>&#160;- (void)setChatroomAttributesForced:(NSString *_Nonnull)roomId attributes:(NSDictionary&lt;NSString*,NSString*&gt; *_Nonnull)keyValues autoDelete:(BOOL)autoDelete completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError,NSDictionary&lt;NSString*,<a class="code" href="interface_e_m_error.html">EMError</a>*&gt; *_Nullable failureKeys))completionBlock;</div>
+<div class="line"><a name="l01759"></a><span class="lineno"> 1759</span>&#160;</div>
+<div class="line"><a name="l01803"></a><span class="lineno"> 1803</span>&#160;- (void)setChatroomAttributeForced:(NSString *_Nonnull)roomId key:(NSString *_Nonnull)key value:(NSString *_Nonnull)value autoDelete:(BOOL)autoDelete completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))completionBlock;</div>
+<div class="line"><a name="l01804"></a><span class="lineno"> 1804</span>&#160;</div>
+<div class="line"><a name="l01831"></a><span class="lineno"> 1831</span>&#160;- (void)removeChatroomAttributes:(NSString *_Nonnull)roomId attributes:(NSArray &lt;__kindof NSString*&gt; * _Nonnull)keyValues completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError,NSDictionary&lt;NSString*,<a class="code" href="interface_e_m_error.html">EMError</a>*&gt; *_Nullable failureKeys))completionBlock;</div>
+<div class="line"><a name="l01858"></a><span class="lineno"> 1858</span>&#160;- (void)removeChatroomAttribute:(NSString *_Nonnull)roomId key:(NSString * _Nonnull)key completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))completionBlock;</div>
+<div class="line"><a name="l01885"></a><span class="lineno"> 1885</span>&#160;- (void)removeChatroomAttributesForced:(NSString *_Nonnull)roomId attributes:(NSArray &lt;__kindof NSString*&gt; * _Nonnull)keyValues completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError,NSDictionary&lt;NSString*,<a class="code" href="interface_e_m_error.html">EMError</a>*&gt; *_Nullable failureKeys))completionBlock;</div>
+<div class="line"><a name="l01886"></a><span class="lineno"> 1886</span>&#160;</div>
+<div class="line"><a name="l01913"></a><span class="lineno"> 1913</span>&#160;- (void)removeChatroomAttributeForced:(NSString *_Nonnull)roomId key:(NSString * _Nonnull)key completionBlock:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError))completionBlock;</div>
+<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;- (void)fetchChatroomAttributes:(NSString *_Nonnull)roomId keys:(NSArray &lt;__kindof NSString *&gt; * _Nullable)keys completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> *_Nullable aError,NSDictionary&lt;NSString*,NSString*&gt; *_Nullable properties ))completionBlock;</div>
+<div class="line"><a name="l01949"></a><span class="lineno"> 1949</span>&#160;- (void)fetchChatroomAllAttributes:(NSString * _Nonnull)roomId completion:(<span class="keywordtype">void</span> (^ _Nullable)(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable error,NSDictionary&lt;NSString*,NSString*&gt; * _Nullable properties))completionBlock;</div>
+<div class="line"><a name="l01950"></a><span class="lineno"> 1950</span>&#160;</div>
+<div class="line"><a name="l01951"></a><span class="lineno"> 1951</span>&#160;<span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS 3.3.0</span></div>
+<div class="line"><a name="l01952"></a><span class="lineno"> 1952</span>&#160;</div>
+<div class="line"><a name="l01980"></a><span class="lineno"> 1980</span>&#160;- (<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)fetchChatroomInfo:(NSString *)aChatroomId</div>
+<div class="line"><a name="l01981"></a><span class="lineno"> 1981</span>&#160;               includeMembersList:(BOOL)aIncludeMembersList</div>
+<div class="line"><a name="l01982"></a><span class="lineno"> 1982</span>&#160;                            error:(<a class="code" href="interface_e_m_error.html">EMError</a> **)pError EM_DEPRECATED_IOS(3_1_0, 3_3_0, &quot;Use -<a class="code" href="protocol_i_e_m_chatroom_manager-p.html">IEMChatroomManager</a> getChatroomSpecificationFromServerWithId:error: instead&quot;);</div>
+<div class="line"><a name="l01983"></a><span class="lineno"> 1983</span>&#160;</div>
+<div class="line"><a name="l02004"></a><span class="lineno"> 2004</span>&#160;- (void)getChatroomSpecificationFromServerByID:(NSString *)aChatroomId</div>
+<div class="line"><a name="l02005"></a><span class="lineno"> 2005</span>&#160;                            includeMembersList:(BOOL)aIncludeMembersList</div>
+<div class="line"><a name="l02006"></a><span class="lineno"> 2006</span>&#160;                                    completion:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *aChatroom, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_1_0, 3_3_0, &quot;Use -<a class="code" href="protocol_i_e_m_chatroom_manager-p.html">IEMChatroomManager</a> getChatroomSpecificationFromServerWithId:completion: instead&quot;);</div>
+<div class="line"><a name="l02007"></a><span class="lineno"> 2007</span>&#160;</div>
+<div class="line"><a name="l02008"></a><span class="lineno"> 2008</span>&#160;<span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS 3.2.3</span></div>
+<div class="line"><a name="l02009"></a><span class="lineno"> 2009</span>&#160;</div>
+<div class="line"><a name="l02025"></a><span class="lineno"> 2025</span>&#160;- (void)addDelegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate</a>&gt;)aDelegate EM_DEPRECATED_IOS(3_1_0, 3_2_2, &quot;Use -<a class="code" href="protocol_i_e_m_chatroom_manager-p.html">IEMChatroomManager</a> addDelegate:delegateQueue: instead&quot;);</div>
+<div class="line"><a name="l02026"></a><span class="lineno"> 2026</span>&#160;</div>
+<div class="line"><a name="l02027"></a><span class="lineno"> 2027</span>&#160;<span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS &lt; 3.2.3</span></div>
+<div class="line"><a name="l02028"></a><span class="lineno"> 2028</span>&#160;</div>
+<div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;- (NSArray *)getAllChatroomsFromServerWithError:(<a class="code" href="interface_e_m_error.html">EMError</a> **)pError __deprecated_msg(&quot;Use -getChatroomsFromServerWithPage instead&quot;);</div>
+<div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;</div>
+<div class="line"><a name="l02070"></a><span class="lineno"> 2070</span>&#160;- (void)getAllChatroomsFromServerWithCompletion:(<span class="keywordtype">void</span> (^)(NSArray *aList, <a class="code" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock __deprecated_msg(&quot;Use -getChatroomsFromServerWithPage instead&quot;);</div>
+<div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;</div>
+<div class="line"><a name="l02090"></a><span class="lineno"> 2090</span>&#160;- (void)asyncGetAllChatroomsFromServer:(<span class="keywordtype">void</span> (^)(NSArray *aList))aSuccessBlock</div>
+<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;                               failure:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aFailureBlock __deprecated_msg(&quot;Use -getAllChatroomsFromServerWithCompletion: instead&quot;);</div>
+<div class="line"><a name="l02092"></a><span class="lineno"> 2092</span>&#160;</div>
+<div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160;- (void)asyncJoinChatroom:(NSString *)aChatroomId</div>
+<div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;                  success:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *aRoom))aSuccessBlock</div>
+<div class="line"><a name="l02116"></a><span class="lineno"> 2116</span>&#160;                  failure:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aFailureBlock __deprecated_msg(&quot;Use -joinChatroom:completion: instead&quot;);</div>
+<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;</div>
+<div class="line"><a name="l02141"></a><span class="lineno"> 2141</span>&#160;- (void)asyncLeaveChatroom:(NSString *)aChatroomId</div>
+<div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;                   success:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *aRoom))aSuccessBlock</div>
+<div class="line"><a name="l02143"></a><span class="lineno"> 2143</span>&#160;                   failure:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aFailureBlock __deprecated_msg(&quot;Use -leaveChatroom:completion: instead&quot;);</div>
+<div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;</div>
+<div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;- (void)asyncFetchChatroomInfo:(NSString *)aChatroomId</div>
+<div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160;            includeMembersList:(BOOL)aIncludeMembersList</div>
+<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;                       success:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *aChatroom))aSuccessBlock</div>
+<div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160;                       failure:(<span class="keywordtype">void</span> (^)(<a class="code" href="interface_e_m_error.html">EMError</a> *aError))aFailureBlock __deprecated_msg(&quot;Use -getChatroomSpecificationFromServerByID:includeMembersList:completion: instead&quot;);</div>
+<div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="protocol_e_m_chatroom_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMChatroomManagerDelegate.h:41</div></div>
+<div class="ttc" id="interface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:26</div></div>
+<div class="ttc" id="interface_e_m_page_result_html"><div class="ttname"><a href="interface_e_m_page_result.html">EMPageResult</a></div><div class="ttdef"><b>Definition:</b> EMPageResult.h:24</div></div>
+<div class="ttc" id="interface_e_m_chatroom_html"><div class="ttname"><a href="interface_e_m_chatroom.html">EMChatroom</a></div><div class="ttdef"><b>Definition:</b> EMChatroom.h:41</div></div>
+<div class="ttc" id="interface_e_m_cursor_result_html"><div class="ttname"><a href="interface_e_m_cursor_result.html">EMCursorResult</a></div><div class="ttdef"><b>Definition:</b> EMCursorResult.h:27</div></div>
+<div class="ttc" id="protocol_i_e_m_chatroom_manager-p_html"><div class="ttname"><a href="protocol_i_e_m_chatroom_manager-p.html">IEMChatroomManager-p</a></div><div class="ttdef"><b>Definition:</b> IEMChatroomManager.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
 </small></address>
 </body>
 </html>
