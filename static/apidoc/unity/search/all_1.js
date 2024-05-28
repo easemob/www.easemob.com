@@ -7,5 +7,6 @@ var searchData=
   ['blockroommembers_4',['BlockRoomMembers',['../class_agora_chat_1_1_room_manager.html#a02097b33464e047003d5b6de0e3088d3',1,'AgoraChat::RoomManager']]],
   ['body_5',['Body',['../class_agora_chat_1_1_message.html#a54f78096cd4391425071a5f78081bb39',1,'AgoraChat::Message']]],
   ['bool_6',['BOOL',['../namespace_agora_chat.html#a292bc538f956ba5bf2976941df4b469baa97b2c144243b2b9d2c593ec268b62f5',1,'AgoraChat']]],
-  ['buildingname_7',['BuildingName',['../class_agora_chat_1_1_message_body_1_1_location_body.html#a2932e03caacd84596fd871d6d2e785bc',1,'AgoraChat::MessageBody::LocationBody']]]
+  ['broadcast_7',['Broadcast',['../class_agora_chat_1_1_message.html#aee0e2646cdf48f62f9dea699546e7260',1,'AgoraChat::Message']]],
+  ['buildingname_8',['BuildingName',['../class_agora_chat_1_1_message_body_1_1_location_body.html#a2932e03caacd84596fd871d6d2e785bc',1,'AgoraChat::MessageBody::LocationBody']]]
 ];
