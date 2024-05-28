@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.2.0</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.3.0</span>
    </div>
   </td>
  </tr>
@@ -97,6 +97,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ac85aca15e5ae239eb4a9fb861fda8f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac60e7345d7dd51d3326142c284ce9c99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#ac60e7345d7dd51d3326142c284ce9c99">OnMessageContentChanged</a> (<a class="el" href="class_agora_chat_1_1_message.html">Message</a> msg, string operatorId, long operationTime)</td></tr>
 <tr class="separator:ac60e7345d7dd51d3326142c284ce9c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ae23b9607ab72b8e12859b9685e9d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#a88ae23b9607ab72b8e12859b9685e9d4">OnMessagePinChanged</a> (string messageId, string conversationId, bool isPinned, string operatorId, long operationTime)</td></tr>
+<tr class="separator:a88ae23b9607ab72b8e12859b9685e9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >聊天管理器回调接口。 </p>
@@ -396,6 +398,62 @@ Public 成员函数</h2></td></tr>
     <tr><td class="paramname"><a class="el" href="class_agora_chat_1_1_message.html">Message</a></td><td>修改的消息对象，其中的 message body 包含消息修改次数、最后一次修改的操作者、最后一次修改时间等信息。 你也可通过 <code>onMessageContentChanged</code> 回调获得最后一次修改的操作者和最后一次修改时间等信息。 </td></tr>
     <tr><td class="paramname">operatorId</td><td>最后一次修改消息的用户 ID。 </td></tr>
     <tr><td class="paramname">operationTime</td><td>消息的最后一次修改时间戳，单位为毫秒。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a88ae23b9607ab72b8e12859b9685e9d4" name="a88ae23b9607ab72b8e12859b9685e9d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88ae23b9607ab72b8e12859b9685e9d4">&#9670;&nbsp;</a></span>OnMessagePinChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.IChatManagerDelegate.OnMessagePinChanged </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>messageId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>conversationId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isPinned</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>operatorId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>operationTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >消息置顶回调。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">messageId</td><td>置顶状态发生改变的消息 ID。 </td></tr>
+    <tr><td class="paramname">conversationId</td><td>消息所属的会话 ID。 </td></tr>
+    <tr><td class="paramname">operatorId</td><td>进行置顶操作的用户 ID。 </td></tr>
+    <tr><td class="paramname">operationTime</td><td>消息的最后一次置顶操作的时间戳，单位为毫秒。 </td></tr>
   </table>
   </dd>
 </dl>

@@ -19,6 +19,7 @@ var searchData=
   ['removethreadmember_16',['RemoveThreadMember',['../class_agora_chat_1_1_chat_thread_manager.html#a67f2577802ed668d999cbcd6f87caf2e',1,'AgoraChat::ChatThreadManager']]],
   ['removeuserfromblocklist_17',['RemoveUserFromBlockList',['../class_agora_chat_1_1_contact_manager.html#a64a40abf31e80286aae430507c14cac8',1,'AgoraChat::ContactManager']]],
   ['renewagoratoken_18',['RenewAgoraToken',['../class_agora_chat_1_1_s_d_k_client.html#ae350b53d440d433936ab6fec4cacd749',1,'AgoraChat::SDKClient']]],
-  ['reportmessage_19',['ReportMessage',['../class_agora_chat_1_1_chat_manager.html#ac8a8e131abf22c1adf74cd34f2669043',1,'AgoraChat::ChatManager']]],
-  ['resendmessage_20',['ResendMessage',['../class_agora_chat_1_1_chat_manager.html#ab588250c9f88a313186430c0fa3619e5',1,'AgoraChat::ChatManager']]]
+  ['renewtoken_19',['RenewToken',['../class_agora_chat_1_1_s_d_k_client.html#abb05e0cb1708c4634920ec8f454a1ad6',1,'AgoraChat::SDKClient']]],
+  ['reportmessage_20',['ReportMessage',['../class_agora_chat_1_1_chat_manager.html#ac8a8e131abf22c1adf74cd34f2669043',1,'AgoraChat::ChatManager']]],
+  ['resendmessage_21',['ResendMessage',['../class_agora_chat_1_1_chat_manager.html#ab588250c9f88a313186430c0fa3619e5',1,'AgoraChat::ChatManager']]]
 ];

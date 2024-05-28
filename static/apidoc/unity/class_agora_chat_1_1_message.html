@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.2.0</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.3.0</span>
    </div>
   </td>
  </tr>
@@ -163,11 +163,17 @@ Public 属性</h2></td></tr>
 <tr class="separator:aad0e4eecef625f5ea4db544588f97bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac874c62ac5475dc4c32af2b2cfcc6454"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_message.html#ac874c62ac5475dc4c32af2b2cfcc6454">IsThread</a> = false</td></tr>
 <tr class="separator:ac874c62ac5475dc4c32af2b2cfcc6454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee0e2646cdf48f62f9dea699546e7260"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_message.html#aee0e2646cdf48f62f9dea699546e7260">Broadcast</a> = false</td></tr>
+<tr class="separator:aee0e2646cdf48f62f9dea699546e7260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a54421c0563f619265ea6eed2bd53a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_message.html#a23a54421c0563f619265ea6eed2bd53a">IsContentReplaced</a> = false</td></tr>
+<tr class="separator:a23a54421c0563f619265ea6eed2bd53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 属性</h2></td></tr>
 <tr class="memitem:a321681ad0687a1e151f2acc26cfc7b13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_message.html#a321681ad0687a1e151f2acc26cfc7b13">GroupAckCount</a><code> [get]</code></td></tr>
 <tr class="separator:a321681ad0687a1e151f2acc26cfc7b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af505ac210c7b34fa7433f56eb3e0a8a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_agora_chat_1_1_pinned_info.html">PinnedInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_message.html#af505ac210c7b34fa7433f56eb3e0a8a9">PinnedInfo</a><code> [get]</code></td></tr>
+<tr class="separator:af505ac210c7b34fa7433f56eb3e0a8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6610a23e726c30483e5138e22380802b"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_message.html#a6610a23e726c30483e5138e22380802b">ReceiverList</a><code> [get, set]</code></td></tr>
 <tr class="separator:a6610a23e726c30483e5138e22380802b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07b7531c8dd9fbd60d5e1085bb267db2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_agora_chat_1_1_chat_thread.html">ChatThread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_message.html#a07b7531c8dd9fbd60d5e1085bb267db2">ChatThread</a><code> [get]</code></td></tr>
@@ -286,7 +292,13 @@ Public 属性</h2></td></tr>
 <p >创建一条发送的消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">to</td><td>消息接收方 ID。 </td></tr>
+    <tr><td class="paramname">to</td><td>消息接收方。<ul>
+<li>单聊：对端用户 ID；</li>
+<li>群组聊天：群组 ID；</li>
+<li>聊天室：聊天室 ID；</li>
+<li>子区：子区 ID。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">body</td><td>消息体。 </td></tr>
     <tr><td class="paramname">direction</td><td>消息方向，设置为 <code>SEND</code>。<ul>
 <li><code>SEND</code>: 发送该消息。</li>
@@ -336,7 +348,13 @@ Public 属性</h2></td></tr>
 <p >创建一条文本发送消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>消息接收者的用户 ID、群组 ID、子区ID或者是聊天室ID。 </td></tr>
+    <tr><td class="paramname">userId</td><td>消息接收方。<ul>
+<li>单聊：对端用户 ID；</li>
+<li>群组聊天：群组 ID；</li>
+<li>聊天室：聊天室 ID；</li>
+<li>子区：子区 ID。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">content</td><td>文本内容。 </td></tr>
   </table>
   </dd>
@@ -392,7 +410,13 @@ Public 属性</h2></td></tr>
 <p >创建一条文件发送消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>消息接收者的用户 ID、群组 ID、子区ID或者是聊天室ID。 </td></tr>
+    <tr><td class="paramname">userId</td><td>消息接收方。<ul>
+<li>单聊：对端用户 ID；</li>
+<li>群组聊天：群组 ID；</li>
+<li>聊天室：聊天室 ID；</li>
+<li>子区：子区 ID。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">localPath</td><td>文件的本地路径。 </td></tr>
     <tr><td class="paramname">displayName</td><td>文件的显示名称。 </td></tr>
     <tr><td class="paramname">fileSize</td><td>文件大小，单位为字节。 </td></tr>
@@ -468,7 +492,13 @@ Public 属性</h2></td></tr>
 <p >创建一条图片发送消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>消息接收者的用户 ID、群组 ID、子区ID或者是聊天室ID。 </td></tr>
+    <tr><td class="paramname">userId</td><td>消息接收方。<ul>
+<li>单聊：对端用户 ID；</li>
+<li>群组聊天：群组 ID；</li>
+<li>聊天室：聊天室 ID；</li>
+<li>子区：子区 ID。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">localPath</td><td>图片的本地路径。 </td></tr>
     <tr><td class="paramname">displayName</td><td>图片的显示名称。 </td></tr>
     <tr><td class="paramname">fileSize</td><td>图片大小，单位为字节。 </td></tr>
@@ -557,7 +587,13 @@ Public 属性</h2></td></tr>
 <p >创建一条视频发送消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>消息接收者的用户 ID、群组 ID、子区ID或者是聊天室ID。 </td></tr>
+    <tr><td class="paramname">userId</td><td>消息接收方。<ul>
+<li>单聊：对端用户 ID；</li>
+<li>群组聊天：群组 ID；</li>
+<li>聊天室：聊天室 ID；</li>
+<li>子区：子区 ID。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">localPath</td><td>视频文件的 URI。 </td></tr>
     <tr><td class="paramname">displayName</td><td>视频文件的显示名称。 </td></tr>
     <tr><td class="paramname">thumbnailLocalPath</td><td>缩略图的本地路径。 </td></tr>
@@ -625,7 +661,13 @@ Public 属性</h2></td></tr>
 <p >创建一条语音发送消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>消息接收者的用户 ID、群组 ID、子区ID或者是聊天室ID。 </td></tr>
+    <tr><td class="paramname">userId</td><td>消息接收方。<ul>
+<li>单聊：对端用户 ID；</li>
+<li>群组聊天：群组 ID；</li>
+<li>聊天室：聊天室 ID；</li>
+<li>子区：子区 ID。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">localPath</td><td>语音文件的本地路径。 </td></tr>
     <tr><td class="paramname">displayName</td><td>语音文件的显示名称。 </td></tr>
     <tr><td class="paramname">fileSize</td><td>语音文件的大小，单位为字节。 </td></tr>
@@ -690,7 +732,13 @@ Public 属性</h2></td></tr>
 <p >创建一条位置发送消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>消息接收者的用户 ID、群组 ID、子区ID或者是聊天室ID。 </td></tr>
+    <tr><td class="paramname">userId</td><td>消息接收方。<ul>
+<li>单聊：对端用户 ID；</li>
+<li>群组聊天：群组 ID；</li>
+<li>聊天室：聊天室 ID；</li>
+<li>子区：子区 ID。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">latitude</td><td>纬度。 </td></tr>
     <tr><td class="paramname">longitude</td><td>经度。 </td></tr>
     <tr><td class="paramname">address</td><td>位置详情。 </td></tr>
@@ -743,7 +791,13 @@ Public 属性</h2></td></tr>
 <p >创建一条命令发送消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>消息接收者的用户 ID、群组 ID、子区ID或者是聊天室ID。 </td></tr>
+    <tr><td class="paramname">userId</td><td>消息接收方。<ul>
+<li>单聊：对端用户 ID；</li>
+<li>群组聊天：群组 ID；</li>
+<li>聊天室：聊天室 ID；</li>
+<li>子区：子区 ID。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">action</td><td>命令内容。<ul>
 <li><code>true</code>：只投在线用户。</li>
 <li>（默认） <code>false</code>：不管用户是否在线均投递。 </li>
@@ -797,7 +851,13 @@ Public 属性</h2></td></tr>
 <p >创建一条自定义发送消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>消息接收者的用户 ID 或群组 ID。 </td></tr>
+    <tr><td class="paramname">userId</td><td>消息接收方。<ul>
+<li>单聊：对端用户 ID；</li>
+<li>群组聊天：群组 ID；</li>
+<li>聊天室：聊天室 ID；</li>
+<li>子区：子区 ID。 </li>
+</ul>
+</td></tr>
     <tr><td class="paramname">customEvent</td><td>自定义事件。 </td></tr>
     <tr><td class="paramname">customParams</td><td>自定义参数字典。 </td></tr>
   </table>
@@ -857,14 +917,20 @@ Public 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >创建一条组合发送消息。</p>
+<p >创建一条合并消息的发送消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>消息接收者的用户 ID 或群组 ID。 </td></tr>
-    <tr><td class="paramname">title</td><td>组合消息标题。 </td></tr>
-    <tr><td class="paramname">summary</td><td>组合消息概要。 </td></tr>
-    <tr><td class="paramname">compatibleText</td><td>组合消息兼容信息 </td></tr>
-    <tr><td class="paramname">messageList</td><td>组合消息所包含的消息Id列表。 </td></tr>
+    <tr><td class="paramname">userId</td><td>消息接收方。<ul>
+<li>单聊：对端用户 ID；</li>
+<li>群组聊天：群组 ID；</li>
+<li>聊天室：聊天室 ID；</li>
+<li>子区：子区 ID。 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">title</td><td>合并消息的标题。该字段可以设置为 <code>null</code> 或者空字符串。 </td></tr>
+    <tr><td class="paramname">summary</td><td>合并消息的概要。该字段可以设置为 <code>null</code> 或者空字符串。 </td></tr>
+    <tr><td class="paramname">compatibleText</td><td>合并消息的兼容信息。该字段可以设置为 <code>null</code> 或者空字符串。该字段用于需要兼容不支持合并转发消息的版本。 </td></tr>
+    <tr><td class="paramname">messageList</td><td>合并消息的消息 ID 列表。列表不可为<code>null</code>或者空，最多可包含 300 个消息 ID。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1109,7 +1175,7 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >消息发送者的 ID。 </p>
+<p >消息发送者的用户 ID。 </p>
 
 </div>
 </div>
@@ -1124,7 +1190,11 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >消息接收者的用户 ID 或群组 ID。 </p>
+<p >消息接收方，可以是：</p><ul>
+<li>单聊：用户 ID；</li>
+<li>群组：群组 ID；</li>
+<li>聊天室：聊天室 ID。 </li>
+</ul>
 
 </div>
 </div>
@@ -1139,11 +1209,11 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >消息类型。</p>
+<p >聊天类型。</p>
 <ul>
-<li><code>Chat</code>：单聊消息；</li>
-<li><code><a class="el" href="class_agora_chat_1_1_group.html">Group</a></code>：群聊消息；</li>
-<li><code><a class="el" href="class_agora_chat_1_1_room.html">Room</a></code>：聊天室消息； </li>
+<li><code>Chat</code>：单聊；</li>
+<li><code><a class="el" href="class_agora_chat_1_1_group.html">Group</a></code>：群聊；</li>
+<li><code><a class="el" href="class_agora_chat_1_1_room.html">Room</a></code>：聊天室； </li>
 </ul>
 
 </div>
@@ -1286,15 +1356,10 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息是否需要群组已读回执。 </p><dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">need</td><td>- <code>true</code>：需要已读回执；<ul>
+<p >群组消息是否需要已读回执。</p><ul>
+<li><code>true</code>：需要；</li>
 <li><code>false</code>：不需要。 </li>
 </ul>
-</td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -1310,7 +1375,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >消息是否已读。</p>
-<dl class="section note"><dt>注解</dt><dd>如要要设置消息已读，建议在会话中，使用 <code><a class="el" href="">IConversation#MarkAllMessageAsRead()</a></code>。 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>如果要设置消息已读，建议在会话中，使用 <code><a class="el" href="">IConversation#MarkAllMessageAsRead()</a></code>。 </dd></dl>
 
 </div>
 </div>
@@ -1327,7 +1392,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p >是否为在线消息。 </p><dl class="section return"><dt>返回</dt><dd>是否在线。<ul>
 <li><code>true</code>：是。</li>
-<li><code>false</code>：是。 </li>
+<li><code>false</code>：否。 </li>
 </ul>
 </dd></dl>
 
@@ -1376,8 +1441,47 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p >是否是 Thread 消息：</p><ul>
 <li><code>true</code>：是；</li>
-<li><code>false</code>：否。 </li>
+<li><code>false</code>：否。</li>
 </ul>
+<p >该属性为只读属性。 </p>
+
+</div>
+</div>
+<a id="aee0e2646cdf48f62f9dea699546e7260" name="aee0e2646cdf48f62f9dea699546e7260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee0e2646cdf48f62f9dea699546e7260">&#9670;&nbsp;</a></span>Broadcast</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AgoraChat.Message.Broadcast = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >是否是聊天室全局广播消息：</p><ul>
+<li><code>true</code>：是；</li>
+<li><code>false</code>：否。</li>
+</ul>
+<p >该属性为只读属性。 </p>
+
+</div>
+</div>
+<a id="a23a54421c0563f619265ea6eed2bd53a" name="a23a54421c0563f619265ea6eed2bd53a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a54421c0563f619265ea6eed2bd53a">&#9670;&nbsp;</a></span>IsContentReplaced</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AgoraChat.Message.IsContentReplaced = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >内容是否被替换：</p><ul>
+<li><code>true</code>：是；</li>
+<li><code>false</code>：否。</li>
+</ul>
+<p >该属性为只读属性。 </p>
 
 </div>
 </div>
@@ -1406,6 +1510,30 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="af505ac210c7b34fa7433f56eb3e0a8a9" name="af505ac210c7b34fa7433f56eb3e0a8a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af505ac210c7b34fa7433f56eb3e0a8a9">&#9670;&nbsp;</a></span>PinnedInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_agora_chat_1_1_pinned_info.html">PinnedInfo</a> AgoraChat.Message.PinnedInfo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >获取当前消息的置顶信息。</p>
+<dl class="section return"><dt>返回</dt><dd>置顶信息。 </dd></dl>
+
+</div>
+</div>
 <a id="a6610a23e726c30483e5138e22380802b" name="a6610a23e726c30483e5138e22380802b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6610a23e726c30483e5138e22380802b">&#9670;&nbsp;</a></span>ReceiverList</h2>
 
@@ -1425,7 +1553,8 @@ Public 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >接收消息的群组或聊天室成员列表。 </p>
+<p >定向消息的接收方。</p>
+<p >该属性仅对群组聊天和聊天室中的消息有效。 </p>
 
 </div>
 </div>

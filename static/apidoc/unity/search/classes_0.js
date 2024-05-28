@@ -7,8 +7,9 @@ var searchData=
   ['chatthreadmanager_4',['ChatThreadManager',['../class_agora_chat_1_1_chat_thread_manager.html',1,'AgoraChat']]],
   ['cmdbody_5',['CmdBody',['../class_agora_chat_1_1_message_body_1_1_cmd_body.html',1,'AgoraChat::MessageBody']]],
   ['combinebody_6',['CombineBody',['../class_agora_chat_1_1_message_body_1_1_combine_body.html',1,'AgoraChat::MessageBody']]],
-  ['contactmanager_7',['ContactManager',['../class_agora_chat_1_1_contact_manager.html',1,'AgoraChat']]],
-  ['conversation_8',['Conversation',['../class_agora_chat_1_1_conversation.html',1,'AgoraChat']]],
-  ['cursorresult_9',['CursorResult',['../class_agora_chat_1_1_cursor_result.html',1,'AgoraChat']]],
-  ['custombody_10',['CustomBody',['../class_agora_chat_1_1_message_body_1_1_custom_body.html',1,'AgoraChat::MessageBody']]]
+  ['contact_7',['Contact',['../class_agora_chat_1_1_contact.html',1,'AgoraChat']]],
+  ['contactmanager_8',['ContactManager',['../class_agora_chat_1_1_contact_manager.html',1,'AgoraChat']]],
+  ['conversation_9',['Conversation',['../class_agora_chat_1_1_conversation.html',1,'AgoraChat']]],
+  ['cursorresult_10',['CursorResult',['../class_agora_chat_1_1_cursor_result.html',1,'AgoraChat']]],
+  ['custombody_11',['CustomBody',['../class_agora_chat_1_1_message_body_1_1_custom_body.html',1,'AgoraChat::MessageBody']]]
 ];

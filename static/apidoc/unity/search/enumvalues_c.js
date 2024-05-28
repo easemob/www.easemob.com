@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['owner_0',['Owner',['../namespace_agora_chat.html#ad237b6d2eb1d74494a9edf19c66fed61ab6f4a2ec6356bbd56d49f2096bf9d3d3',1,'AgoraChat.Owner()'],['../namespace_agora_chat.html#a2b6f39a7c115fd66eb10ef26f8c9cb76ab6f4a2ec6356bbd56d49f2096bf9d3d3',1,'AgoraChat.Owner()']]]
+  ['normal_0',['Normal',['../namespace_agora_chat.html#aa6d032a78afa107bfed3ea28009b5ff7a960b44c579bc2f6818d2daaf9e4c16f0',1,'AgoraChat']]]
 ];
