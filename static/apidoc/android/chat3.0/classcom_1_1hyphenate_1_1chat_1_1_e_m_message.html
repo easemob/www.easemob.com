@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.6.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.7.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -939,7 +939,7 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>消息对象。 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">弃用:</a></b></dt><dd>已废弃。请用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2c3d73d52f3e6febc67933dfa99f9ed2">createTextSendMessage(String, String)</a> 代替。</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">弃用:</a></b></dt><dd>已废弃。请用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2c3d73d52f3e6febc67933dfa99f9ed2">createTextSendMessage(String, String)</a> 代替。</dd></dl>
 
 </div>
 </div>
@@ -1377,7 +1377,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 Bool 类型的消息扩展属性。</p>
+<p >获取 Boolean 类型的消息扩展属性。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
@@ -1419,7 +1419,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取 Bool 类型的消息扩展属性。</p>
+<p >获取 Boolean 类型的消息扩展属性。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
@@ -1989,8 +1989,12 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取消息接收者的用户名。</p>
-<dl class="section return"><dt>返回</dt><dd>接收者的用户名。 </dd></dl>
+<p >获取消息接收方。</p><ul>
+<li>单聊：消息接收方的用户 ID。</li>
+<li>群聊：群组 ID。</li>
+<li>聊天室：聊天室 ID。</li>
+</ul>
+<dl class="section return"><dt>返回</dt><dd>消息接收方。 </dd></dl>
 
 </div>
 </div>
@@ -2027,13 +2031,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取对端用户的 ID：</p><ul>
-<li>单聊：对端用户的 ID；</li>
-<li>群聊：群组 ID；</li>
-<li>子区会话：子区 ID;</li>
-<li>聊天室：聊天室 ID。</li>
+<p >获取消息的对端用户：</p><ul>
+<li>对于发送的消息，单聊为接收方的用户 ID，群聊为群组 ID，聊天室为聊天室 ID。</li>
+<li>对于接收的消息，对于接收的消息来说，单聊、群聊和聊天室聊天均为发送方的用户 ID。</li>
 </ul>
-<dl class="section return"><dt>返回</dt><dd>对端用户的 ID。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>消息接收方。 </dd></dl>
 
 </div>
 </div>
@@ -2089,8 +2091,11 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >是否是全局广播消息。</p>
-<dl class="section return"><dt>返回</dt><dd>是否是全局广播消息。 </dd></dl>
+<p >是否是聊天室全局广播消息。</p><ul>
+<li><code>true</code>：是；</li>
+<li><code>false</code>：否。</li>
+</ul>
+<dl class="section return"><dt>返回</dt><dd>是否是聊天室全局广播消息。 </dd></dl>
 
 </div>
 </div>
@@ -2131,7 +2136,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >消息内容是否被替换过。</p>
+<p >消息内容是否被替换过。</p><ul>
+<li><code>true</code>：是；</li>
+<li><code>false</code>：否。</li>
+</ul>
 <dl class="section return"><dt>返回</dt><dd>消息内容是否被替换过。 </dd></dl>
 
 </div>
@@ -2404,7 +2412,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息的 Bool 类型的扩展属性。</p>
+<p >设置消息的 Boolean 类型的扩展属性。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>属性名。 </td></tr>
@@ -3057,9 +3065,10 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置消息优先级 chatroom message priority </p><dl class="params"><dt>参数</dt><dd>
+<p >设置聊天室消息优先级。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">priority</td><td></td></tr>
+    <tr><td class="paramname">priority</td><td>聊天室消息优先级。 </td></tr>
   </table>
   </dd>
 </dl>

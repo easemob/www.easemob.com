@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.6.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.7.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -113,6 +113,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a59d5882097c7ce8ab12714e4ffa1350b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2412080448d839f99c6e0ecd25bb5a9"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#ac2412080448d839f99c6e0ecd25bb5a9">searchMsgFromDB</a> (<a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html">Type</a> type, long timeStamp, int maxCount, String from, <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a> direction)</td></tr>
 <tr class="separator:ac2412080448d839f99c6e0ecd25bb5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d6383f05cad205bb25d0403174abe1"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a24d6383f05cad205bb25d0403174abe1">searchMsgFromDB</a> (Set&lt; <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html">Type</a> &gt; types, long timeStamp, int maxCount, String from, <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a> direction)</td></tr>
+<tr class="separator:a24d6383f05cad205bb25d0403174abe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dc6f9258106e78dfb2b0ca5060d3a7c"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a1dc6f9258106e78dfb2b0ca5060d3a7c">searchMsgFromDB</a> (String keywords, long timeStamp, int maxCount, String from, <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a> direction)</td></tr>
 <tr class="separator:a1dc6f9258106e78dfb2b0ca5060d3a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81ebee7253f1e316c97eb5941dbe72ad"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a81ebee7253f1e316c97eb5941dbe72ad">searchMsgFromDB</a> (String keywords, long timeStamp, int maxCount, String from, <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a> direction, <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_message_search_scope.html">EMMessageSearchScope</a> searchScope)</td></tr>
@@ -172,10 +174,10 @@ Public 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >会话类，用于定义单聊会话、群聊会话和聊天室会话。</p>
 <p >每类会话中包含发送和接收的消息。</p>
-<p >例如，从会话中获取未读消息数： </p><div class="fragment"><div class="line"><span class="comment">// conversationId 可以为聊天的另一方 ID，群组 ID 或者聊天室 ID。</span></div>
+<p >例如，从会话中获取未读消息数： </p><div class="fragment"><div class="line"><span class="comment">// conversationId 可以为单聊的对端用户 ID，群组 ID 或者聊天室 ID。</span></div>
 <div class="line">EMConversation conversation = EMClient.getInstance().chatManager().getConversation(<a class="code hl_function" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43">conversationId</a>);</div>
 <div class="line"><span class="keywordtype">int</span> unread = conversation.getUnreadMsgCount();</div>
-<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_conversation_html_a0f576d0db622fd389c56b6b0fa53fa43"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43">com.hyphenate.chat.EMConversation.conversationId</a></div><div class="ttdeci">String conversationId()</div><div class="ttdef"><b>Definition:</b> EMConversation.java:258</div></div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_conversation_html_a0f576d0db622fd389c56b6b0fa53fa43"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a0f576d0db622fd389c56b6b0fa53fa43">com.hyphenate.chat.EMConversation.conversationId</a></div><div class="ttdeci">String conversationId()</div><div class="ttdef"><b>Definition:</b> EMConversation.java:259</div></div>
 </div><!-- fragment --> <dl class="section version"><dt>版本</dt><dd>3.0 </dd></dl>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a70be686d1827304f25835b57cfda5d8a" name="a70be686d1827304f25835b57cfda5d8a"></a>
@@ -994,7 +996,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a685e62500f25a0bdfe57fd37760c4cb2" name="a685e62500f25a0bdfe57fd37760c4cb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a685e62500f25a0bdfe57fd37760c4cb2">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a685e62500f25a0bdfe57fd37760c4cb2">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1038,7 +1040,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a59d5882097c7ce8ab12714e4ffa1350b" name="a59d5882097c7ce8ab12714e4ffa1350b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59d5882097c7ce8ab12714e4ffa1350b">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a59d5882097c7ce8ab12714e4ffa1350b">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1087,8 +1089,72 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="a24d6383f05cad205bb25d0403174abe1" name="a24d6383f05cad205bb25d0403174abe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d6383f05cad205bb25d0403174abe1">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> &gt; com.hyphenate.chat.EMConversation.searchMsgFromDB </td>
+          <td>(</td>
+          <td class="paramtype">Set&lt; <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html">Type</a> &gt;&#160;</td>
+          <td class="paramname"><em>types</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>timeStamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >从本地数据库获取指定会话的一定数量的多种类型的消息。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">types</td><td>消息类型。详见 <a class="el" href="">Type</a>。 </td></tr>
+    <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 </td></tr>
+    <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
+    <tr><td class="paramname">from</td><td>单聊或群聊中的消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，SDK 将在整个会话中搜索消息。 </td></tr>
+    <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMSearchDirection</a>。<ul>
+<li><code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
+<li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>
+</ul>
+</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表（不包含查询起始时间戳对应的消息）。 </dd></dl>
+
+</div>
+</div>
 <a id="a1dc6f9258106e78dfb2b0ca5060d3a7c" name="a1dc6f9258106e78dfb2b0ca5060d3a7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dc6f9258106e78dfb2b0ca5060d3a7c">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc6f9258106e78dfb2b0ca5060d3a7c">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1152,7 +1218,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a81ebee7253f1e316c97eb5941dbe72ad" name="a81ebee7253f1e316c97eb5941dbe72ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81ebee7253f1e316c97eb5941dbe72ad">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ebee7253f1e316c97eb5941dbe72ad">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1223,7 +1289,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ac2412080448d839f99c6e0ecd25bb5a9" name="ac2412080448d839f99c6e0ecd25bb5a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2412080448d839f99c6e0ecd25bb5a9">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2412080448d839f99c6e0ecd25bb5a9">&#9670;&nbsp;</a></span>searchMsgFromDB() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

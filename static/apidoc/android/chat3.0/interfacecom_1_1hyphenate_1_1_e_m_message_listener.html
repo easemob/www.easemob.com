@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.6.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.7.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -291,7 +291,7 @@ EMClient.getInstance().chatManager().removeMessageListener(mMessageListener);
     <tr><td class="paramname">messageId</td><td>消息 ID。 </td></tr>
     <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
     <tr><td class="paramname">pinOperation</td><td>消息置顶操作的类型：包含置顶和取消置顶。详见 <a class="el" href="">EMMessagePinInfo.PinOperation</a>。 </td></tr>
-    <tr><td class="paramname">pinInfo</td><td>消息置顶详情，包含置顶/取消置顶操作者的用户 ID 和操作时间等。 </td></tr>
+    <tr><td class="paramname">pinInfo</td><td>消息置顶详情，包含置顶操作者的用户 ID 和置顶时间等。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -351,7 +351,9 @@ EMClient.getInstance().chatManager().removeMessageListener(mMessageListener);
         </tr>
       </table>
 </div><div class="memdoc">
-<p >撤回收到的消息（支持接收在离线期间被撤回的消息 推荐使用 <code>onMessageRecalledWithExt</code> ） </p><dl class="params"><dt>参数</dt><dd>
+<p >撤回收到的消息。</p>
+<p >支持使用 <code>onMessageRecalledWithExt</code>，因为该回调接收在离线期间被撤回的消息。</p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">recallMessageInfo</td><td>被撤回消息的详情 注: 接收方离线期间被撤回消息 <code>recallMessage</code> 参数的值为 null。 </td></tr>
   </table>
