@@ -1,7 +1,7 @@
 var searchData=
 [
   ['reactionlist_0',['ReactionList',['../class_agora_chat_1_1_message.html#af55c74aab67ea447d9000d2260102360',1,'AgoraChat::Message']]],
-  ['recallmessage_1',['RecallMessage',['../class_agora_chat_1_1_chat_manager.html#a751801322e6ed3ac952dc4f25d1bdbfa',1,'AgoraChat::ChatManager']]],
+  ['recallmessage_1',['RecallMessage',['../class_agora_chat_1_1_chat_manager.html#ad581465f8ceab1c5540230c192bfd5c1',1,'AgoraChat::ChatManager']]],
   ['removeallowlistmembers_2',['RemoveAllowListMembers',['../class_agora_chat_1_1_room_manager.html#a2a5837ac0e2cb859a6a2e67ff402d8d1',1,'AgoraChat::RoomManager']]],
   ['removeattributes_3',['RemoveAttributes',['../class_agora_chat_1_1_room_manager.html#a0ed5625c64443cf8bab45f4acebf70b6',1,'AgoraChat::RoomManager']]],
   ['removechatmanagerdelegate_4',['RemoveChatManagerDelegate',['../class_agora_chat_1_1_chat_manager.html#af04896f0b9f6569bbd37d044ec7771bc',1,'AgoraChat::ChatManager']]],

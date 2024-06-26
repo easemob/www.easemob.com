@@ -51,7 +51,7 @@ var searchData=
   ['onmessagepinchanged_48',['OnMessagePinChanged',['../interface_agora_chat_1_1_i_chat_manager_delegate.html#a88ae23b9607ab72b8e12859b9685e9d4',1,'AgoraChat::IChatManagerDelegate']]],
   ['onmessagesdelivered_49',['OnMessagesDelivered',['../interface_agora_chat_1_1_i_chat_manager_delegate.html#a25f077794d85560dfa99260ecd1b59b4',1,'AgoraChat::IChatManagerDelegate']]],
   ['onmessagesread_50',['OnMessagesRead',['../interface_agora_chat_1_1_i_chat_manager_delegate.html#af54a5de4505f4dc4d39a431cd13b9840',1,'AgoraChat::IChatManagerDelegate']]],
-  ['onmessagesrecalled_51',['OnMessagesRecalled',['../interface_agora_chat_1_1_i_chat_manager_delegate.html#a7946a76551b01c5113285ec73ee6dd6a',1,'AgoraChat::IChatManagerDelegate']]],
+  ['onmessagesrecalled_51',['OnMessagesRecalled',['../interface_agora_chat_1_1_i_chat_manager_delegate.html#a03f856b8ff1a8cd51ff093fbace274e7',1,'AgoraChat::IChatManagerDelegate']]],
   ['onmessagesreceived_52',['OnMessagesReceived',['../interface_agora_chat_1_1_i_chat_manager_delegate.html#a6c84fbc8006d3855fbe646787594a396',1,'AgoraChat::IChatManagerDelegate']]],
   ['onmutelistaddedfromgroup_53',['OnMuteListAddedFromGroup',['../interface_agora_chat_1_1_i_group_manager_delegate.html#acce60e54b0d66019e4cfc36d9fb62fd7',1,'AgoraChat::IGroupManagerDelegate']]],
   ['onmutelistaddedfromroom_54',['OnMuteListAddedFromRoom',['../interface_agora_chat_1_1_i_room_manager_delegate.html#a08e1bac6ca8119a7dbe4cff0297928df',1,'AgoraChat::IRoomManagerDelegate']]],
