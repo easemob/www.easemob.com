@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.7.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.8.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -354,7 +354,7 @@ Protected 成员函数</h2></td></tr>
 <p >推荐进入聊天页面的时调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a121387f48448ea38e5b33ea4622e6e86">ackConversationRead(String)</a> ，其他情况下调用该方法以减少调用频率。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">to</td><td>接收方的用户 ID。 </td></tr>
+    <tr><td class="paramname">to</td><td>已读回执接收方的用户 ID。 </td></tr>
     <tr><td class="paramname">messageId</td><td>消息的 ID。 </td></tr>
   </table>
   </dd>
@@ -1478,7 +1478,7 @@ Protected 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">message</td><td>消息对象。 </td></tr>
-    <tr><td class="paramname">ext</td><td>扩展信息 </td></tr>
+    <tr><td class="paramname">ext</td><td>扩展信息。 </td></tr>
     <tr><td class="paramname">callback</td><td><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> 类的对象，详见 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a>。 </td></tr>
   </table>
   </dd>
@@ -3036,13 +3036,13 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从本地数据库获取指定会话的一定数量的特定类型的消息。</p>
+<p >从本地数据库获取一定数量的特定类型的消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>消息类型。详见 <a class="el" href="">Type</a>。 </td></tr>
     <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 如果该参数设置为负数，SDK 从当前时间开始搜索。 </td></tr>
     <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
-    <tr><td class="paramname">from</td><td>单聊或群聊中的消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，SDK 将在整个会话中搜索消息。 </td></tr>
+    <tr><td class="paramname">from</td><td>消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，搜索消息时对发送方不限制。 </td></tr>
     <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a>。<ul>
 <li>（默认）<code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
 <li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>
@@ -3106,7 +3106,7 @@ Protected 成员函数</h2></td></tr>
     <tr><td class="paramname">types</td><td>消息类型。详见 <a class="el" href="">Type</a>。 </td></tr>
     <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 如果该参数设置为负数，SDK 从当前时间开始搜索。 </td></tr>
     <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
-    <tr><td class="paramname">from</td><td>单聊或群聊中的消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，SDK 将在整个会话中搜索消息。 </td></tr>
+    <tr><td class="paramname">from</td><td>消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，搜索消息时对发送方不限制。 </td></tr>
     <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a>。<ul>
 <li>（默认）<code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
 <li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>
@@ -3164,13 +3164,13 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >从本地数据库获取指定会话中包含特定关键字的消息。</p>
+<p >从本地数据库获取包含特定关键字的消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">keywords</td><td>查询关键字。 </td></tr>
     <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 如果该参数设置为负数，SDK 从当前时间开始搜索。 </td></tr>
     <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。 </td></tr>
-    <tr><td class="paramname">from</td><td>单聊或群聊中的消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，SDK 将在整个会话中搜索消息。 </td></tr>
+    <tr><td class="paramname">from</td><td>消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，搜索消息时对发送方不限制。 </td></tr>
     <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a>。<ul>
 <li>（默认）<code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
 <li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>
@@ -3240,7 +3240,7 @@ Protected 成员函数</h2></td></tr>
     <tr><td class="paramname">keywords</td><td>查询关键字。 </td></tr>
     <tr><td class="paramname">timeStamp</td><td>查询的起始消息 Unix 时间戳，单位为毫秒。该参数设置后，SDK 从指定时间戳的消息开始，按消息搜索方向获取。 如果该参数设置为负数，SDK 从当前时间开始搜索。 </td></tr>
     <tr><td class="paramname">maxCount</td><td>每次获取的最大消息数。取值范围为 [1,400]。如果设为小于等于 0，SDK 会获取一条消息。 </td></tr>
-    <tr><td class="paramname">from</td><td>单聊或群聊中的消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，SDK 将在整个会话中搜索消息。 </td></tr>
+    <tr><td class="paramname">from</td><td>消息发送方的用户 ID。若设置为 <code>null</code> 或空字符串，搜索消息时对发送方不限制。 </td></tr>
     <tr><td class="paramname">direction</td><td>消息搜索方向。详见 <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html">EMConversation.EMSearchDirection</a>。<ul>
 <li>（默认）<code>UP</code>：按照消息中的时间戳的逆序查询；<ul>
 <li><code>DOWN</code>：按照消息中的时间戳的正序查询。 </li>

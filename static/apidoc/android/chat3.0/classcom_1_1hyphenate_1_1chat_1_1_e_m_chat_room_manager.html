@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.7.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.8.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -84,6 +84,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a06f5ef6d4ea48d9c79441eff96e74506"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2d592b0801dbc333c0c60bd551e150d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#af2d592b0801dbc333c0c60bd551e150d">joinChatRoom</a> (final String roomId, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html">EMChatRoom</a> &gt; callback)</td></tr>
 <tr class="separator:af2d592b0801dbc333c0c60bd551e150d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd0c8659cee7819b6bcfd015cc47324"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#aedd0c8659cee7819b6bcfd015cc47324">joinChatRoom</a> (final String roomId, boolean leaveOtherRooms, String ext, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html">EMChatRoom</a> &gt; callback)</td></tr>
+<tr class="separator:aedd0c8659cee7819b6bcfd015cc47324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86283233b629c0ce1246e6e02af30682"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a86283233b629c0ce1246e6e02af30682">leaveChatRoom</a> (final String roomId)</td></tr>
 <tr class="separator:a86283233b629c0ce1246e6e02af30682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1979cee77e44604fe62e0a7523ca9472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a1979cee77e44604fe62e0a7523ca9472">leaveChatRoom</a> (final String roomId, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callback)</td></tr>
@@ -2612,8 +2614,60 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="aedd0c8659cee7819b6bcfd015cc47324" name="aedd0c8659cee7819b6bcfd015cc47324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd0c8659cee7819b6bcfd015cc47324">&#9670;&nbsp;</a></span>joinChatRoom() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMChatRoomManager.joinChatRoom </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>roomId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>leaveOtherRooms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room.html">EMChatRoom</a> &gt;&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >加入聊天室。</p>
+<dl class="section note"><dt>注解</dt><dd>退出聊天室调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a1979cee77e44604fe62e0a7523ca9472">leaveChatRoom(String, EMCallBack)</a> 。</dd></dl>
+<p>异步方法。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">roomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">leaveOtherRooms</td><td>是否退出其他的聊天室。 </td></tr>
+    <tr><td class="paramname">ext</td><td>扩展信息。 </td></tr>
+    <tr><td class="paramname">callback</td><td>聊天室加入结果回调。加入成功，回调 <a class="el" href="">EMValueCallBack#onSuccess(Object)</a> 并返回聊天室对象。 加入失败，回调 <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html#a63dd6b08d9abca034473a887ff3a48fa">EMValueCallBack#onError(int, String)</a>，其中第一个参数为错误参数，第二个参数为错误信息。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af2d592b0801dbc333c0c60bd551e150d" name="af2d592b0801dbc333c0c60bd551e150d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2d592b0801dbc333c0c60bd551e150d">&#9670;&nbsp;</a></span>joinChatRoom()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af2d592b0801dbc333c0c60bd551e150d">&#9670;&nbsp;</a></span>joinChatRoom() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

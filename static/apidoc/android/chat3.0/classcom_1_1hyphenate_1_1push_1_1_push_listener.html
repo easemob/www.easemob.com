@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.7.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.8.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -76,6 +76,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
+<tr class="memitem:ab366ceb1b74ed57177c901b3e26c2d1f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1push_1_1_push_listener.html#ab366ceb1b74ed57177c901b3e26c2d1f">isSupportPush</a> (<a class="el" href="enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html">EMPushType</a> pushType, <a class="el" href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_config.html">EMPushConfig</a> pushConfig)</td></tr>
+<tr class="separator:ab366ceb1b74ed57177c901b3e26c2d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2596084aa1b382de944d0f162fa9c5a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1push_1_1_push_listener.html#ac2596084aa1b382de944d0f162fa9c5a">getPushToken</a> (<a class="el" href="enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html">EMPushType</a> pushType, <a class="el" href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_config.html">EMPushConfig</a> pushConfig)</td></tr>
 <tr class="separator:ac2596084aa1b382de944d0f162fa9c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -115,6 +117,62 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>返回要注册的设备 token。 </dd></dl>
+
+</div>
+</div>
+<a id="ab366ceb1b74ed57177c901b3e26c2d1f" name="ab366ceb1b74ed57177c901b3e26c2d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab366ceb1b74ed57177c901b3e26c2d1f">&#9670;&nbsp;</a></span>isSupportPush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.hyphenate.push.PushListener.isSupportPush </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html">EMPushType</a>&#160;</td>
+          <td class="paramname"><em>pushType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_config.html">EMPushConfig</a>&#160;</td>
+          <td class="paramname"><em>pushConfig</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >判断是否支持某个类型的推送。</p>
+<p >该函数会回调多次，每次向用户传递一个 pushType，旨在让开发者根据 SDK 提供的 pushType 返回一个布尔值，用于 SDK 判断客户端环境是否支持该类推送。 例如: 1.如果想使用FCM推送，需要调用EMPushHelper.getInstance().setPushListener()设置监听，并重写isSupportPush函数，在参数pushType == ChatPushType.FCM时返回true。 </p><div class="fragment"><div class="line">EMPushHelper.getInstance().setPushListener(<span class="keyword">new</span> PushListener() {</div>
+<div class="line">                 ……</div>
+<div class="line">                @Override</div>
+<div class="line">                <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classcom_1_1hyphenate_1_1push_1_1_push_listener.html#ab366ceb1b74ed57177c901b3e26c2d1f">isSupportPush</a>(EMPushType pushType, EMPushConfig pushConfig) {</div>
+<div class="line">                    <span class="comment">// 由用户实现代码判断设备是否支持FCM推送</span></div>
+<div class="line">                    <span class="keywordflow">if</span>(pushType == EMPushType.FCM){</div>
+<div class="line">                        EMLog.d(<span class="stringliteral">&quot;FCM&quot;</span>, <span class="stringliteral">&quot;GooglePlayServiceCode:&quot;</span>+GoogleApiAvailabilityLight.getInstance().isGooglePlayServicesAvailable(context));</div>
+<div class="line">                        <span class="keywordflow">return</span>  GoogleApiAvailabilityLight.getInstance().isGooglePlayServicesAvailable(context) == ConnectionResult.SUCCESS;</div>
+<div class="line">                    }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (pushType == EMPushType.HONORPUSH){</div>
+<div class="line">                       ……</div>
+<div class="line">                    }</div>
+<div class="line">                    <span class="keywordflow">return</span> super.isSupportPush(pushType, pushConfig);</div>
+<div class="line">                }</div>
+<div class="line">            });</div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1push_1_1_push_listener_html_ab366ceb1b74ed57177c901b3e26c2d1f"><div class="ttname"><a href="classcom_1_1hyphenate_1_1push_1_1_push_listener.html#ab366ceb1b74ed57177c901b3e26c2d1f">com.hyphenate.push.PushListener.isSupportPush</a></div><div class="ttdeci">boolean isSupportPush(EMPushType pushType, EMPushConfig pushConfig)</div><div class="ttdef"><b>Definition:</b> PushListener.java:82</div></div>
+</div><!-- fragment --><p> 同理，如果对其他某个特定的 pushType (例如 HONORPUSH) 返回 true，SDK 会采用该类型的推送，该函数后续将不再回调询问。</p>
+<p >注意：最终是否能注册成功还得取决于客户环境是否集成了相关推送套件。</p>
+<p >2.若在isSupportPush回调函数里对所有类型的pushType都返回 false，最终走环信通道。</p>
+<p >3.若不实现该函数，则 SDK 默认根据设备机型来判断支持哪个厂商的推送实现。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pushType</td><td>推送类型。 </td></tr>
+    <tr><td class="paramname">pushConfig</td><td>推送配置。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回是否支持该类型的推送。 </dd></dl>
 
 </div>
 </div>
