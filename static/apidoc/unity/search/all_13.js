@@ -4,8 +4,8 @@ var searchData=
   ['unblockgroup_1',['UnBlockGroup',['../class_agora_chat_1_1_group_manager.html#a60c33e5ccd132161bf5863d26423c1ca',1,'AgoraChat::GroupManager']]],
   ['unblockgroupmembers_2',['UnBlockGroupMembers',['../class_agora_chat_1_1_group_manager.html#ade48d48c2d4ee7622644e2e3bdb93a19',1,'AgoraChat::GroupManager']]],
   ['unblockroommembers_3',['UnBlockRoomMembers',['../class_agora_chat_1_1_room_manager.html#a0a3823a9deb23c2715c803c0c77fc33a',1,'AgoraChat::RoomManager']]],
-  ['unknown_4',['UnKnown',['../namespace_agora_chat.html#a73fcc9c0dc4ba4c315e94b09839977d2a57891b9a1f036c63cca954e2f03683b7',1,'AgoraChat']]],
-  ['unknown_5',['Unknown',['../namespace_agora_chat.html#ad237b6d2eb1d74494a9edf19c66fed61a88183b946cc5f0e8c96b2e66e1c74a7e',1,'AgoraChat.Unknown()'],['../namespace_agora_chat.html#a2b6f39a7c115fd66eb10ef26f8c9cb76a88183b946cc5f0e8c96b2e66e1c74a7e',1,'AgoraChat.Unknown()']]],
+  ['unknown_4',['Unknown',['../namespace_agora_chat.html#ad237b6d2eb1d74494a9edf19c66fed61a88183b946cc5f0e8c96b2e66e1c74a7e',1,'AgoraChat.Unknown()'],['../namespace_agora_chat.html#a2b6f39a7c115fd66eb10ef26f8c9cb76a88183b946cc5f0e8c96b2e66e1c74a7e',1,'AgoraChat.Unknown()']]],
+  ['unknown_5',['UnKnown',['../namespace_agora_chat.html#a73fcc9c0dc4ba4c315e94b09839977d2a57891b9a1f036c63cca954e2f03683b7',1,'AgoraChat']]],
   ['unmuteallroommembers_6',['UnMuteAllRoomMembers',['../class_agora_chat_1_1_room_manager.html#a75a807ae86cd75e8d00ded693242e5d3',1,'AgoraChat::RoomManager']]],
   ['unmutegroupallmembers_7',['UnMuteGroupAllMembers',['../class_agora_chat_1_1_group_manager.html#ac9a8a5fd1f9046a3f676d3554b246185',1,'AgoraChat::GroupManager']]],
   ['unmutegroupmembers_8',['UnMuteGroupMembers',['../class_agora_chat_1_1_group_manager.html#aaccd22495a8e16525befb7a64c5fc39e',1,'AgoraChat::GroupManager']]],
@@ -21,9 +21,10 @@ var searchData=
   ['updateowninfo_18',['UpdateOwnInfo',['../class_agora_chat_1_1_user_info_manager.html#a2ab4ddd0e3bc2d1f378cefc2011ce47d',1,'AgoraChat::UserInfoManager']]],
   ['updateroomannouncement_19',['UpdateRoomAnnouncement',['../class_agora_chat_1_1_room_manager.html#abff0294c07aa17a1ab4e0c3121d419ea',1,'AgoraChat::RoomManager']]],
   ['uploadgroupsharedfile_20',['UploadGroupSharedFile',['../class_agora_chat_1_1_group_manager.html#a6382731532f788298ba2a24f5394c280',1,'AgoraChat::GroupManager']]],
-  ['userid_21',['UserId',['../class_agora_chat_1_1_message_reaction_operation.html#a8a6e749977ea6d6cde332da6b373ef15',1,'AgoraChat.MessageReactionOperation.UserId()'],['../class_agora_chat_1_1_user_info.html#a408c4765e6ce79a022b4c33f3285444b',1,'AgoraChat.UserInfo.UserId()']]],
-  ['userinfo_22',['UserInfo',['../class_agora_chat_1_1_user_info.html',1,'AgoraChat']]],
-  ['userinfomanager_23',['UserInfoManager',['../class_agora_chat_1_1_user_info_manager.html',1,'AgoraChat.UserInfoManager'],['../class_agora_chat_1_1_s_d_k_client.html#a9274bfd035fdf3acbc3229f54f96e318',1,'AgoraChat.SDKClient.UserInfoManager()']]],
-  ['userlist_24',['UserList',['../class_agora_chat_1_1_message_reaction.html#ad60cf8b2101ad55111a03e0c7b4bdf65',1,'AgoraChat::MessageReaction']]],
-  ['usinghttpsonly_25',['UsingHttpsOnly',['../class_agora_chat_1_1_options.html#a647fcd53272428a991805a79489ff638',1,'AgoraChat::Options']]]
+  ['usereplacedmessagecontents_21',['UseReplacedMessageContents',['../class_agora_chat_1_1_options.html#ab78d327b8fb05fb5b038c3502623a49b',1,'AgoraChat::Options']]],
+  ['userid_22',['UserId',['../class_agora_chat_1_1_contact.html#a683c2cb2a83cc832142cd6ff54c3cce2',1,'AgoraChat.Contact.UserId()'],['../class_agora_chat_1_1_message_reaction_operation.html#a8a6e749977ea6d6cde332da6b373ef15',1,'AgoraChat.MessageReactionOperation.UserId()'],['../class_agora_chat_1_1_user_info.html#a408c4765e6ce79a022b4c33f3285444b',1,'AgoraChat.UserInfo.UserId()']]],
+  ['userinfo_23',['UserInfo',['../class_agora_chat_1_1_user_info.html',1,'AgoraChat']]],
+  ['userinfomanager_24',['UserInfoManager',['../class_agora_chat_1_1_user_info_manager.html',1,'AgoraChat.UserInfoManager'],['../class_agora_chat_1_1_s_d_k_client.html#a9274bfd035fdf3acbc3229f54f96e318',1,'AgoraChat.SDKClient.UserInfoManager()']]],
+  ['userlist_25',['UserList',['../class_agora_chat_1_1_message_reaction.html#ad60cf8b2101ad55111a03e0c7b4bdf65',1,'AgoraChat::MessageReaction']]],
+  ['usinghttpsonly_26',['UsingHttpsOnly',['../class_agora_chat_1_1_options.html#a647fcd53272428a991805a79489ff638',1,'AgoraChat::Options']]]
 ];
