@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.7.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.8.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -703,8 +703,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >获取自定义信息。</p>
-<dl class="section return"><dt>返回</dt><dd>自定义信息。 </dd></dl>
+<p >获取自定义设备扩展信息。</p>
+<dl class="section return"><dt>返回</dt><dd>自定义设备扩展信息。 </dd></dl>
 
 </div>
 </div>
@@ -1731,13 +1731,16 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >设置当前设备自定义信息。 未初始化sdk 或 使用自动登录时，需在<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a6117ccd6b09ba873a9b4a2b55d93a613">EMClient#init(Context, EMOptions)</a> 之前设置当前设备自定义信息。 如应用已初始化过并且不使用自动登录时，想要改变自定义信息：在下次调用 <a class="el" href="">EMClient#login(String,String,EMCallBack)</a> <a class="el" href="">EMClient#loginWithToken(String,String,EMCallBack)</a> 之前设置自定义信息。</p>
+<p >设置当前设备自定义扩展信息。</p>
+<p >未初始化 SDK 或使用自动登录时，需在调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a6117ccd6b09ba873a9b4a2b55d93a613">EMClient#init(Context, EMOptions)</a> 方法之前设置当前设备扩展信息。</p>
+<p >若应用已完成初始化且使用手动登录，若要修改自定义信息，在下次调用 <a class="el" href="">EMClient#login(String,String,EMCallBack)</a> 或 <a class="el" href="">EMClient#loginWithToken(String,String,EMCallBack)</a> 之前设置自定义信息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ext</td><td>自定义信息。该参数不支持 null 值。长度限制为 1024 </td></tr>
+    <tr><td class="paramname">ext</td><td>自定义设备扩展信息。该参数不支持 null 值。长度限制为 1024 个字符。</td></tr>
   </table>
   </dd>
 </dl>
+<p>若用户因登录了当前设备而将另一台设备踢下线，向被踢下线设备发通知时会携带当前设备的自定义扩展信息。 </p>
 
 </div>
 </div>
