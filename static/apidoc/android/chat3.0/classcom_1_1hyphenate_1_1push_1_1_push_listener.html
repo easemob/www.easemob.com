@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>hyphenate_SDK4.0: com.hyphenate.push.PushListener类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,9 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.8.0</span>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.8.1</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.5 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -85,7 +92,7 @@ Public 成员函数</h2></td></tr>
 <div class="textblock"><p >用于设置自定义的推送设置。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="ac2596084aa1b382de944d0f162fa9c5a" name="ac2596084aa1b382de944d0f162fa9c5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2596084aa1b382de944d0f162fa9c5a">&#9670;&nbsp;</a></span>getPushToken()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2596084aa1b382de944d0f162fa9c5a">&#9670;&#160;</a></span>getPushToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -121,7 +128,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="ab366ceb1b74ed57177c901b3e26c2d1f" name="ab366ceb1b74ed57177c901b3e26c2d1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab366ceb1b74ed57177c901b3e26c2d1f">&#9670;&nbsp;</a></span>isSupportPush()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab366ceb1b74ed57177c901b3e26c2d1f">&#9670;&#160;</a></span>isSupportPush()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,21 +153,28 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >判断是否支持某个类型的推送。</p>
-<p >该函数会回调多次，每次向用户传递一个 pushType，旨在让开发者根据 SDK 提供的 pushType 返回一个布尔值，用于 SDK 判断客户端环境是否支持该类推送。 例如: 1.如果想使用FCM推送，需要调用EMPushHelper.getInstance().setPushListener()设置监听，并重写isSupportPush函数，在参数pushType == ChatPushType.FCM时返回true。 </p><div class="fragment"><div class="line">EMPushHelper.getInstance().setPushListener(<span class="keyword">new</span> PushListener() {</div>
+<p >该函数会回调多次，每次向用户传递一个 pushType，旨在让开发者根据 SDK 提供的 pushType 返回一个布尔值，用于 SDK 判断客户端环境是否支持该类推送。 例如: 1.如果想使用FCM推送，需要调用EMPushHelper.getInstance().setPushListener()设置监听，并重写isSupportPush函数，在参数pushType == ChatPushType.FCM时返回true。 </p><div class="fragment"><div class="line"><a class="code hl_class" href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html">EMPushHelper</a>.<a class="code hl_function" href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#a6e156572425d731aff2343e1ae6bd474">getInstance</a>().<a class="code hl_function" href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#a7eeae0fcb8ece021a05a60d3565a8080">setPushListener</a>(<span class="keyword">new</span> <a class="code hl_class" href="classcom_1_1hyphenate_1_1push_1_1_push_listener.html">PushListener</a>() {</div>
 <div class="line">                 ……</div>
 <div class="line">                @Override</div>
-<div class="line">                <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classcom_1_1hyphenate_1_1push_1_1_push_listener.html#ab366ceb1b74ed57177c901b3e26c2d1f">isSupportPush</a>(EMPushType pushType, EMPushConfig pushConfig) {</div>
+<div class="line">                <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classcom_1_1hyphenate_1_1push_1_1_push_listener.html#ab366ceb1b74ed57177c901b3e26c2d1f">isSupportPush</a>(<a class="code hl_class" href="enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html">EMPushType</a> pushType, <a class="code hl_class" href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_config.html">EMPushConfig</a> pushConfig) {</div>
 <div class="line">                    <span class="comment">// 由用户实现代码判断设备是否支持FCM推送</span></div>
-<div class="line">                    <span class="keywordflow">if</span>(pushType == EMPushType.FCM){</div>
+<div class="line">                    <span class="keywordflow">if</span>(pushType == <a class="code hl_class" href="enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html">EMPushType</a>.FCM){</div>
 <div class="line">                        EMLog.d(<span class="stringliteral">&quot;FCM&quot;</span>, <span class="stringliteral">&quot;GooglePlayServiceCode:&quot;</span>+GoogleApiAvailabilityLight.getInstance().isGooglePlayServicesAvailable(context));</div>
 <div class="line">                        <span class="keywordflow">return</span>  GoogleApiAvailabilityLight.getInstance().isGooglePlayServicesAvailable(context) == ConnectionResult.SUCCESS;</div>
-<div class="line">                    }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (pushType == EMPushType.HONORPUSH){</div>
+<div class="line">                    }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (pushType == <a class="code hl_class" href="enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html">EMPushType</a>.<a class="code hl_variable" href="enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html#af7b759aca1aa225d41ee993142320812">HONORPUSH</a>){</div>
 <div class="line">                       ……</div>
 <div class="line">                    }</div>
 <div class="line">                    <span class="keywordflow">return</span> super.isSupportPush(pushType, pushConfig);</div>
 <div class="line">                }</div>
 <div class="line">            });</div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1push_1_1_e_m_push_config_html"><div class="ttname"><a href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_config.html">com.hyphenate.push.EMPushConfig</a></div><div class="ttdef"><b>Definition:</b> EMPushConfig.java:19</div></div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1push_1_1_e_m_push_helper_html"><div class="ttname"><a href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html">com.hyphenate.push.EMPushHelper</a></div><div class="ttdef"><b>Definition:</b> EMPushHelper.java:43</div></div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1push_1_1_e_m_push_helper_html_a6e156572425d731aff2343e1ae6bd474"><div class="ttname"><a href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#a6e156572425d731aff2343e1ae6bd474">com.hyphenate.push.EMPushHelper.getInstance</a></div><div class="ttdeci">static EMPushHelper getInstance()</div><div class="ttdef"><b>Definition:</b> EMPushHelper.java:131</div></div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1push_1_1_e_m_push_helper_html_a7eeae0fcb8ece021a05a60d3565a8080"><div class="ttname"><a href="classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#a7eeae0fcb8ece021a05a60d3565a8080">com.hyphenate.push.EMPushHelper.setPushListener</a></div><div class="ttdeci">void setPushListener(PushListener callback)</div><div class="ttdef"><b>Definition:</b> EMPushHelper.java:147</div></div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1push_1_1_push_listener_html"><div class="ttname"><a href="classcom_1_1hyphenate_1_1push_1_1_push_listener.html">com.hyphenate.push.PushListener</a></div><div class="ttdef"><b>Definition:</b> PushListener.java:12</div></div>
 <div class="ttc" id="aclasscom_1_1hyphenate_1_1push_1_1_push_listener_html_ab366ceb1b74ed57177c901b3e26c2d1f"><div class="ttname"><a href="classcom_1_1hyphenate_1_1push_1_1_push_listener.html#ab366ceb1b74ed57177c901b3e26c2d1f">com.hyphenate.push.PushListener.isSupportPush</a></div><div class="ttdeci">boolean isSupportPush(EMPushType pushType, EMPushConfig pushConfig)</div><div class="ttdef"><b>Definition:</b> PushListener.java:82</div></div>
+<div class="ttc" id="aenumcom_1_1hyphenate_1_1push_1_1_e_m_push_type_html"><div class="ttname"><a href="enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html">com.hyphenate.push.EMPushType</a></div><div class="ttdef"><b>Definition:</b> EMPushType.java:13</div></div>
+<div class="ttc" id="aenumcom_1_1hyphenate_1_1push_1_1_e_m_push_type_html_af7b759aca1aa225d41ee993142320812"><div class="ttname"><a href="enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html#af7b759aca1aa225d41ee993142320812">com.hyphenate.push.EMPushType.HONORPUSH</a></div><div class="ttdeci">HONORPUSH</div><div class="ttdef"><b>Definition:</b> EMPushType.java:20</div></div>
 </div><!-- fragment --><p> 同理，如果对其他某个特定的 pushType (例如 HONORPUSH) 返回 true，SDK 会采用该类型的推送，该函数后续将不再回调询问。</p>
 <p >注意：最终是否能注册成功还得取决于客户环境是否集成了相关推送套件。</p>
 <p >2.若在isSupportPush回调函数里对所有类型的pushType都返回 false，最终走环信通道。</p>
@@ -182,7 +196,7 @@ Public 成员函数</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
