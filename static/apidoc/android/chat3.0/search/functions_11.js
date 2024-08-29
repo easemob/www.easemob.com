@@ -124,5 +124,6 @@ var searchData=
   ['showtranslation_121',['showTranslation',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_result.html#a6c8c6e474f9c47d2b1f562d139e200d4',1,'com::hyphenate::chat::EMTranslationResult']]],
   ['silentmodeenabled_122',['silentModeEnabled',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_configs.html#a94659f553dfd39ead544f9d5d9ce34cf',1,'com::hyphenate::chat::EMPushConfigs']]],
   ['status_123',['status',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2e93fe95d0be479c5f58c4c56b0132c2',1,'com::hyphenate::chat::EMMessage']]],
-  ['subscribepresences_124',['subscribePresences',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#a66ea1f4d0ed5674efc4f21aef84a80db',1,'com::hyphenate::chat::EMPresenceManager']]]
+  ['subscribepresences_124',['subscribePresences',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#a66ea1f4d0ed5674efc4f21aef84a80db',1,'com::hyphenate::chat::EMPresenceManager']]],
+  ['syncsilentmodeconversationsfromserver_125',['syncSilentModeConversationsFromServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a3bbed55fb6d0019f31b13afcdef0739a',1,'com::hyphenate::chat::EMPushManager']]]
 ];
