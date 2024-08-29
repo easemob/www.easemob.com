@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>hyphenate_SDK4.0: com.hyphenate.chat.EMStatisticsManager类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,9 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.8.1</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.9.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.5 -->
+<!-- 制作者 Doxygen 1.9.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,16 +56,9 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">载入中...</div>
-<div class="SRStatus" id="Searching">搜索中...</div>
-<div class="SRStatus" id="NoMatches">未找到</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -103,23 +96,24 @@ Public 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >本地消息流量统计管理类。</p>
 <p >该类中的方法可用于统计一定时间段内发送和/接收的指定类型的本地消息数量及其流量。</p>
-<p >本地消息的流量统计功能默认关闭。若要使用该功能，需在 SDK 初始化前设置 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#af3d9fd7bbb4258fc6cbc91b52d94599c">EMOptions#setEnableStatistics(boolean)</a></code> 开启。</p>
+<p >本地消息的流量统计功能默认关闭。若要使用该功能，需在 SDK 初始化前设置 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#af3d9fd7bbb4258fc6cbc91b52d94599c">EMOptions#setEnableStatistics(boolean)</a> 开启。</p>
 <p >SDK 只支持统计该功能开启后最近 30 天内发送和接收的消息。各类消息的流量计算方法如下：</p><ul>
 <li>对于文本、透传、位置和自定义消息，消息流量为消息体的流量；</li>
 <li>对于图片和视频消息，消息流量为消息体、图片或视频文件以及缩略图的流量之和；</li>
 <li>对于文件和语音消息，消息流量为消息体和附件的流量。</li>
 </ul>
-<p ><b>注意</b></p><ol type="1">
+<dl class="section note"><dt>注解</dt><dd><ol type="1">
 <li>对于携带附件的消息，下载成功后 SDK 才统计附件的流量。若附件下载多次，则会对下载的流量进行累加。</li>
 <li>对于从服务器拉取的漫游消息，如果本地数据库中已经存在，则不进行统计。</li>
 </ol>
-<p >SDK 仅统计本地消息的流量，而非消息的实际流量。一般而言，该统计数据小于实际流量，原因如下：</p><ul>
+</dd></dl>
+<p>SDK 仅统计本地消息的流量，而非消息的实际流量。一般而言，该统计数据小于实际流量，原因如下：</p><ul>
 <li>未考虑发送消息时通用协议数据的流量；</li>
 <li>对于接收到的消息，服务端会进行消息聚合，添加通用字段，而消息流量统计为各消息的流量，未考虑通用字段的流量消耗。 </li>
 </ul>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="ab42aea517b9a49abb9dfdb7e3b6ab413" name="ab42aea517b9a49abb9dfdb7e3b6ab413"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab42aea517b9a49abb9dfdb7e3b6ab413">&#9670;&#160;</a></span>getMessageCount()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab42aea517b9a49abb9dfdb7e3b6ab413">&#9670;&nbsp;</a></span>getMessageCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +164,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="adb3a926fe6bf95a45c1975b90a1c839d" name="adb3a926fe6bf95a45c1975b90a1c839d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb3a926fe6bf95a45c1975b90a1c839d">&#9670;&#160;</a></span>getMessageSize()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adb3a926fe6bf95a45c1975b90a1c839d">&#9670;&nbsp;</a></span>getMessageSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,7 +221,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a1d17b5b8d98469fdba4b0e352a3d5ff6" name="a1d17b5b8d98469fdba4b0e352a3d5ff6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d17b5b8d98469fdba4b0e352a3d5ff6">&#9670;&#160;</a></span>getMessageStatistics()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d17b5b8d98469fdba4b0e352a3d5ff6">&#9670;&nbsp;</a></span>getMessageStatistics()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,7 +242,7 @@ Public 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>返回消息的流量统计信息。统计数据详见 <code><a class="el" href="">EMMessageStatistics</a></code>。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>返回消息的流量统计信息。统计数据详见 <a class="el" href="">EMMessageStatistics</a>。 </dd></dl>
 
 </div>
 </div>
@@ -258,7 +252,7 @@ Public 成员函数</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>
