@@ -6,7 +6,7 @@ var searchData=
   ['sendgroupmessagereadack_3atogroup_3acontent_3acompletion_3a_3',['sendGroupMessageReadAck:toGroup:content:completion:',['../protocol_i_e_m_chat_manager-p.html#a3da6f68c3fb96564d93d493ff21d0542',1,'IEMChatManager-p']]],
   ['sendmessage_3aprogress_3acompletion_3a_4',['sendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#a9e907db464e5f5572a0d3b3b48effdba',1,'IEMChatManager-p']]],
   ['sendmessagereadack_3atouser_3acompletion_3a_5',['sendMessageReadAck:toUser:completion:',['../protocol_i_e_m_chat_manager-p.html#ad332c114b5e7bc3c7945923fa19b8eb8',1,'IEMChatManager-p']]],
-  ['servicecheckwithusername_3apassword_3acompletion_3a_6',['serviceCheckWithUsername:password:completion:',['../interface_e_m_client.html#ab10ba4c98eea87f40c9a0e4097308206',1,'EMClient']]],
+  ['servicecheckwithusername_3apassword_3acompletion_3a_6',['serviceCheckWithUsername:password:completion:',['../interface_e_m_client.html#ae4477d427ddaad64eb167fd4996e3d69',1,'EMClient']]],
   ['setchatroomattribute_3akey_3avalue_3aautodelete_3acompletionblock_3a_7',['setChatroomAttribute:key:value:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#aecbc07f8ea29376026ff32d5fd11b735',1,'IEMChatroomManager-p']]],
   ['setchatroomattributeforced_3akey_3avalue_3aautodelete_3acompletionblock_3a_8',['setChatroomAttributeForced:key:value:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#a7ba3bc575b969ac173acea06a686e374',1,'IEMChatroomManager-p']]],
   ['setchatroomattributes_3aattributes_3aautodelete_3acompletionblock_3a_9',['setChatroomAttributes:attributes:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#ac4c2220c3d82da71b282bb05252372ec',1,'IEMChatroomManager-p']]],
