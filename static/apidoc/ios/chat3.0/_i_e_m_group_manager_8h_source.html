@@ -216,286 +216,289 @@ $(function() {
 <div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>- (NSString *_Nullable)getGroupAnnouncementWithId:(NSString *_Nonnull)aGroupId</div>
 <div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                                   error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
 <div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span> </div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>- (void)getGroupAnnouncementWithId:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>                        completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString *aAnnouncement, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>- (void)isMemberInMuteListFromServerWithGroupId:(NSString * _Nonnull)aGroupId</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>                                     completion:(<span class="keywordtype">void</span> (^ _Nonnull)(BOOL inMuteList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable aError))aCompletionBlock;</div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span> </div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span><span class="preprocessor">#pragma mark - Edit Group</span></div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span> </div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)addOccupants:(NSArray&lt;NSString *&gt; * _Nonnull)aOccupants</div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>                  toGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>           welcomeMessage:(NSString *_Nullable)aWelcomeMessage</div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>                    error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span> </div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>- (void)addMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aUsers</div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>           toGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>           message:(NSString *_Nullable)aMessage</div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>        completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span> </div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)removeOccupants:(NSArray&lt;NSString *&gt; * _Nonnull)aOccupants</div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>                   fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>                       error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span> </div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>- (void)removeMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aUsers</div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>            fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span> </div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)blockOccupants:(NSArray&lt;NSString *&gt; * _Nonnull)aOccupants</div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>                  fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>                      error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span> </div>
-<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>- (void)blockMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>           fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>          completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span> </div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span> </div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)unblockOccupants:(NSArray&lt;NSString *&gt; * _Nonnull)aOccupants</div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>                     forGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>                        error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span> </div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>- (void)unblockMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>             fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>            completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span> </div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)changeGroupSubject:(NSString *_Nullable)aSubject</div>
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>                       forGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>                          error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span> </div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>- (void)updateGroupSubject:(NSString *_Nullable)aSubject</div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>                  forGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>                completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span> </div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)changeDescription:(NSString *_Nullable)aDescription</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>                      forGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>                         error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span> </div>
-<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>- (void)updateDescription:(NSString *_Nullable)aDescription</div>
-<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>                 forGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>               completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span> </div>
-<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>- (void)leaveGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>             error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span> </div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>- (void)getGroupAnnouncementWithId:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>                        completion:(<span class="keywordtype">void</span> (^_Nullable)(NSString *aAnnouncement, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span> </div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span><span class="preprocessor">#pragma mark - Edit Group</span></div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span> </div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)addOccupants:(NSArray&lt;NSString *&gt; * _Nonnull)aOccupants</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>                  toGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>           welcomeMessage:(NSString *_Nullable)aWelcomeMessage</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>                    error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span> </div>
+<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>- (void)addMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aUsers</div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>           toGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>           message:(NSString *_Nullable)aMessage</div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>        completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span> </div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)removeOccupants:(NSArray&lt;NSString *&gt; * _Nonnull)aOccupants</div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>                   fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>                       error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span> </div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>- (void)removeMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aUsers</div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>            fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span> </div>
+<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)blockOccupants:(NSArray&lt;NSString *&gt; * _Nonnull)aOccupants</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>                  fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>                      error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span> </div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>- (void)blockMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
+<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>           fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>          completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span> </div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span> </div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)unblockOccupants:(NSArray&lt;NSString *&gt; * _Nonnull)aOccupants</div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>                     forGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>                        error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span> </div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>- (void)unblockMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>             fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>            completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span> </div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)changeGroupSubject:(NSString *_Nullable)aSubject</div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>                       forGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>                          error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span> </div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>- (void)updateGroupSubject:(NSString *_Nullable)aSubject</div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>                  forGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>                completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span> </div>
+<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)changeDescription:(NSString *_Nullable)aDescription</div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>                      forGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>                         error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span> </div>
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>- (void)updateDescription:(NSString *_Nullable)aDescription</div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>                 forGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>               completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span> </div>
 <div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>- (void)leaveGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>        completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>             error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
 <div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span> </div>
-<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)destroyGroup:(NSString *_Nonnull)aGroupId;</div>
-<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span> </div>
-<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>- (void)destroyGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>    finishCompletion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span> </div>
-<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span> </div>
-<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)blockGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>                  error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span> </div>
-<div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>- (void)blockGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>        completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span> </div>
-<div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)unblockGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01305" name="l01305"></a><span class="lineno"> 1305</span>                    error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01306" name="l01306"></a><span class="lineno"> 1306</span> </div>
-<div class="line"><a id="l01321" name="l01321"></a><span class="lineno"> 1321</span>- (void)unblockGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01322" name="l01322"></a><span class="lineno"> 1322</span>          completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01323" name="l01323"></a><span class="lineno"> 1323</span> </div>
+<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>- (void)leaveGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>        completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span> </div>
+<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)destroyGroup:(NSString *_Nonnull)aGroupId;</div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span> </div>
+<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>- (void)destroyGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>    finishCompletion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span> </div>
+<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span> </div>
+<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)blockGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>                  error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span> </div>
+<div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span>- (void)blockGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01299" name="l01299"></a><span class="lineno"> 1299</span>        completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01300" name="l01300"></a><span class="lineno"> 1300</span> </div>
+<div class="line"><a id="l01322" name="l01322"></a><span class="lineno"> 1322</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)unblockGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01323" name="l01323"></a><span class="lineno"> 1323</span>                    error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
 <div class="line"><a id="l01324" name="l01324"></a><span class="lineno"> 1324</span> </div>
-<div class="line"><a id="l01352" name="l01352"></a><span class="lineno"> 1352</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)updateGroupOwner:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01353" name="l01353"></a><span class="lineno"> 1353</span>                     newOwner:(NSString *_Nonnull)aNewOwner</div>
-<div class="line"><a id="l01354" name="l01354"></a><span class="lineno"> 1354</span>                        error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01355" name="l01355"></a><span class="lineno"> 1355</span> </div>
-<div class="line"><a id="l01377" name="l01377"></a><span class="lineno"> 1377</span>- (void)updateGroupOwner:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01378" name="l01378"></a><span class="lineno"> 1378</span>                newOwner:(NSString *_Nonnull)aNewOwner</div>
-<div class="line"><a id="l01379" name="l01379"></a><span class="lineno"> 1379</span>              completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01380" name="l01380"></a><span class="lineno"> 1380</span> </div>
-<div class="line"><a id="l01406" name="l01406"></a><span class="lineno"> 1406</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)addAdmin:(NSString *_Nonnull)aAdmin</div>
-<div class="line"><a id="l01407" name="l01407"></a><span class="lineno"> 1407</span>              toGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01408" name="l01408"></a><span class="lineno"> 1408</span>                error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span> </div>
-<div class="line"><a id="l01435" name="l01435"></a><span class="lineno"> 1435</span>- (void)addAdmin:(NSString *_Nonnull)aAdmin</div>
-<div class="line"><a id="l01436" name="l01436"></a><span class="lineno"> 1436</span>         toGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01437" name="l01437"></a><span class="lineno"> 1437</span>      completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01438" name="l01438"></a><span class="lineno"> 1438</span> </div>
-<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)removeAdmin:(NSString *_Nonnull)aAdmin</div>
-<div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span>               fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>                   error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span> </div>
-<div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>- (void)removeAdmin:(NSString *_Nonnull)aAdmin</div>
-<div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span>          fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>         completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span> </div>
-<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span> </div>
-<div class="line"><a id="l01529" name="l01529"></a><span class="lineno"> 1529</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)muteMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMuteMembers</div>
-<div class="line"><a id="l01530" name="l01530"></a><span class="lineno"> 1530</span>        muteMilliseconds:(NSInteger)aMuteMilliseconds</div>
-<div class="line"><a id="l01531" name="l01531"></a><span class="lineno"> 1531</span>               fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01532" name="l01532"></a><span class="lineno"> 1532</span>                   error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01533" name="l01533"></a><span class="lineno"> 1533</span> </div>
-<div class="line"><a id="l01560" name="l01560"></a><span class="lineno"> 1560</span>- (void)muteMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMuteMembers</div>
-<div class="line"><a id="l01561" name="l01561"></a><span class="lineno"> 1561</span>   muteMilliseconds:(NSInteger)aMuteMilliseconds</div>
-<div class="line"><a id="l01562" name="l01562"></a><span class="lineno"> 1562</span>          fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01563" name="l01563"></a><span class="lineno"> 1563</span>         completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01564" name="l01564"></a><span class="lineno"> 1564</span> </div>
-<div class="line"><a id="l01592" name="l01592"></a><span class="lineno"> 1592</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)unmuteMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
-<div class="line"><a id="l01593" name="l01593"></a><span class="lineno"> 1593</span>                 fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01594" name="l01594"></a><span class="lineno"> 1594</span>                     error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01595" name="l01595"></a><span class="lineno"> 1595</span> </div>
-<div class="line"><a id="l01620" name="l01620"></a><span class="lineno"> 1620</span>- (void)unmuteMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
-<div class="line"><a id="l01621" name="l01621"></a><span class="lineno"> 1621</span>            fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01622" name="l01622"></a><span class="lineno"> 1622</span>           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01623" name="l01623"></a><span class="lineno"> 1623</span> </div>
-<div class="line"><a id="l01649" name="l01649"></a><span class="lineno"> 1649</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)muteAllMembersFromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01650" name="l01650"></a><span class="lineno"> 1650</span>                                  error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01651" name="l01651"></a><span class="lineno"> 1651</span> </div>
-<div class="line"><a id="l01674" name="l01674"></a><span class="lineno"> 1674</span>- (void)muteAllMembersFromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01675" name="l01675"></a><span class="lineno"> 1675</span>                     completion:(<span class="keywordtype">void</span>(^)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01676" name="l01676"></a><span class="lineno"> 1676</span> </div>
-<div class="line"><a id="l01677" name="l01677"></a><span class="lineno"> 1677</span> </div>
-<div class="line"><a id="l01703" name="l01703"></a><span class="lineno"> 1703</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)unmuteAllMembersFromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01704" name="l01704"></a><span class="lineno"> 1704</span>                                 error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01705" name="l01705"></a><span class="lineno"> 1705</span> </div>
-<div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span> </div>
-<div class="line"><a id="l01729" name="l01729"></a><span class="lineno"> 1729</span>- (void)unmuteAllMembersFromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span>                       completion:(<span class="keywordtype">void</span>(^)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span> </div>
-<div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span> </div>
-<div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)addWhiteListMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
-<div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>                       fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span>                           error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span> </div>
-<div class="line"><a id="l01786" name="l01786"></a><span class="lineno"> 1786</span>- (void)addWhiteListMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
-<div class="line"><a id="l01787" name="l01787"></a><span class="lineno"> 1787</span>                  fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01788" name="l01788"></a><span class="lineno"> 1788</span>                 completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01789" name="l01789"></a><span class="lineno"> 1789</span> </div>
-<div class="line"><a id="l01790" name="l01790"></a><span class="lineno"> 1790</span> </div>
-<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)removeWhiteListMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
-<div class="line"><a id="l01819" name="l01819"></a><span class="lineno"> 1819</span>                          fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01820" name="l01820"></a><span class="lineno"> 1820</span>                              error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01821" name="l01821"></a><span class="lineno"> 1821</span> </div>
-<div class="line"><a id="l01846" name="l01846"></a><span class="lineno"> 1846</span>- (void)removeWhiteListMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
-<div class="line"><a id="l01847" name="l01847"></a><span class="lineno"> 1847</span>                     fromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span>                    completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span> </div>
-<div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span>- (void)uploadGroupSharedFileWithId:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>                           filePath:(NSString* _Nonnull)aFilePath</div>
-<div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>                           progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
-<div class="line"><a id="l01872" name="l01872"></a><span class="lineno"> 1872</span>                         completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group_shared_file.html">EMGroupSharedFile</a> *_Nullable aSharedFile, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span> </div>
-<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span>- (void)downloadGroupSharedFileWithId:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span>                             filePath:(NSString *_Nonnull)aFilePath</div>
-<div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span>                         sharedFileId:(NSString *_Nonnull)aSharedFileId</div>
-<div class="line"><a id="l01896" name="l01896"></a><span class="lineno"> 1896</span>                             progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
-<div class="line"><a id="l01897" name="l01897"></a><span class="lineno"> 1897</span>                           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01898" name="l01898"></a><span class="lineno"> 1898</span> </div>
-<div class="line"><a id="l01920" name="l01920"></a><span class="lineno"> 1920</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)removeGroupSharedFileWithId:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>                            sharedFileId:(NSString *_Nonnull)aSharedFileId</div>
-<div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>                                   error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span> </div>
-<div class="line"><a id="l01939" name="l01939"></a><span class="lineno"> 1939</span>- (void)removeGroupSharedFileWithId:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01940" name="l01940"></a><span class="lineno"> 1940</span>                       sharedFileId:(NSString *_Nonnull)aSharedFileId</div>
-<div class="line"><a id="l01941" name="l01941"></a><span class="lineno"> 1941</span>                         completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01942" name="l01942"></a><span class="lineno"> 1942</span> </div>
-<div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)updateGroupAnnouncementWithId:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>                              announcement:(NSString *_Nullable)aAnnouncement</div>
-<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>                                     error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span> </div>
-<div class="line"><a id="l01996" name="l01996"></a><span class="lineno"> 1996</span>- (void)updateGroupAnnouncementWithId:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l01997" name="l01997"></a><span class="lineno"> 1997</span>                         announcement:(NSString *_Nullable)aAnnouncement</div>
-<div class="line"><a id="l01998" name="l01998"></a><span class="lineno"> 1998</span>                           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l01999" name="l01999"></a><span class="lineno"> 1999</span> </div>
-<div class="line"><a id="l02025" name="l02025"></a><span class="lineno"> 2025</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)updateGroupExtWithId:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02026" name="l02026"></a><span class="lineno"> 2026</span>                              ext:(NSString *_Nullable)aExt</div>
-<div class="line"><a id="l02027" name="l02027"></a><span class="lineno"> 2027</span>                            error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l02028" name="l02028"></a><span class="lineno"> 2028</span> </div>
-<div class="line"><a id="l02049" name="l02049"></a><span class="lineno"> 2049</span>- (void)updateGroupExtWithId:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02050" name="l02050"></a><span class="lineno"> 2050</span>                         ext:(NSString *_Nullable)aExt</div>
-<div class="line"><a id="l02051" name="l02051"></a><span class="lineno"> 2051</span>                  completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l02052" name="l02052"></a><span class="lineno"> 2052</span> </div>
-<div class="line"><a id="l02053" name="l02053"></a><span class="lineno"> 2053</span><span class="preprocessor">#pragma mark - Edit Public Group</span></div>
-<div class="line"><a id="l02054" name="l02054"></a><span class="lineno"> 2054</span> </div>
-<div class="line"><a id="l02076" name="l02076"></a><span class="lineno"> 2076</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)joinPublicGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02077" name="l02077"></a><span class="lineno"> 2077</span>                       error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l02078" name="l02078"></a><span class="lineno"> 2078</span> </div>
-<div class="line"><a id="l02093" name="l02093"></a><span class="lineno"> 2093</span>- (void)joinPublicGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02094" name="l02094"></a><span class="lineno"> 2094</span>             completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l02095" name="l02095"></a><span class="lineno"> 2095</span> </div>
-<div class="line"><a id="l02119" name="l02119"></a><span class="lineno"> 2119</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)applyJoinPublicGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02120" name="l02120"></a><span class="lineno"> 2120</span>                          message:(NSString *_Nullable)aMessage</div>
-<div class="line"><a id="l02121" name="l02121"></a><span class="lineno"> 2121</span>                            error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l02122" name="l02122"></a><span class="lineno"> 2122</span> </div>
-<div class="line"><a id="l02140" name="l02140"></a><span class="lineno"> 2140</span>- (void)requestToJoinPublicGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02141" name="l02141"></a><span class="lineno"> 2141</span>                         message:(NSString *_Nullable)aMessage</div>
-<div class="line"><a id="l02142" name="l02142"></a><span class="lineno"> 2142</span>                      completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l02143" name="l02143"></a><span class="lineno"> 2143</span> </div>
-<div class="line"><a id="l02144" name="l02144"></a><span class="lineno"> 2144</span><span class="preprocessor">#pragma mark - Application</span></div>
-<div class="line"><a id="l02145" name="l02145"></a><span class="lineno"> 2145</span> </div>
-<div class="line"><a id="l02171" name="l02171"></a><span class="lineno"> 2171</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)acceptJoinApplication:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02172" name="l02172"></a><span class="lineno"> 2172</span>                         applicant:(NSString *_Nonnull)aUsername;</div>
-<div class="line"><a id="l02173" name="l02173"></a><span class="lineno"> 2173</span> </div>
-<div class="line"><a id="l02199" name="l02199"></a><span class="lineno"> 2199</span>- (void)approveJoinGroupRequest:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02200" name="l02200"></a><span class="lineno"> 2200</span>                         sender:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l02201" name="l02201"></a><span class="lineno"> 2201</span>                     completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l02202" name="l02202"></a><span class="lineno"> 2202</span> </div>
-<div class="line"><a id="l02230" name="l02230"></a><span class="lineno"> 2230</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)declineJoinApplication:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02231" name="l02231"></a><span class="lineno"> 2231</span>                          applicant:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l02232" name="l02232"></a><span class="lineno"> 2232</span>                             reason:(NSString *_Nullable)aReason;</div>
-<div class="line"><a id="l02233" name="l02233"></a><span class="lineno"> 2233</span> </div>
-<div class="line"><a id="l02261" name="l02261"></a><span class="lineno"> 2261</span>- (void)declineJoinGroupRequest:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02262" name="l02262"></a><span class="lineno"> 2262</span>                         sender:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l02263" name="l02263"></a><span class="lineno"> 2263</span>                         reason:(NSString *_Nullable)aReason</div>
-<div class="line"><a id="l02264" name="l02264"></a><span class="lineno"> 2264</span>                     completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l02265" name="l02265"></a><span class="lineno"> 2265</span> </div>
-<div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)acceptInvitationFromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span>                               inviter:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span>                                 error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
-<div class="line"><a id="l02292" name="l02292"></a><span class="lineno"> 2292</span> </div>
-<div class="line"><a id="l02315" name="l02315"></a><span class="lineno"> 2315</span>- (void)acceptInvitationFromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02316" name="l02316"></a><span class="lineno"> 2316</span>                          inviter:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l02317" name="l02317"></a><span class="lineno"> 2317</span>                       completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l02318" name="l02318"></a><span class="lineno"> 2318</span> </div>
-<div class="line"><a id="l02342" name="l02342"></a><span class="lineno"> 2342</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)declineInvitationFromGroup:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02343" name="l02343"></a><span class="lineno"> 2343</span>                                inviter:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a id="l02344" name="l02344"></a><span class="lineno"> 2344</span>                                 reason:(NSString *_Nullable)aReason;</div>
-<div class="line"><a id="l02345" name="l02345"></a><span class="lineno"> 2345</span> </div>
-<div class="line"><a id="l02369" name="l02369"></a><span class="lineno"> 2369</span>- (void)declineGroupInvitation:(NSString *_Nonnull)aGroupId</div>
-<div class="line"><a id="l02370" name="l02370"></a><span class="lineno"> 2370</span>                       inviter:(NSString *_Nonnull)aInviter</div>
-<div class="line"><a id="l02371" name="l02371"></a><span class="lineno"> 2371</span>                        reason:(NSString *_Nullable)aReason</div>
-<div class="line"><a id="l02372" name="l02372"></a><span class="lineno"> 2372</span>                    completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l02373" name="l02373"></a><span class="lineno"> 2373</span> </div>
-<div class="line"><a id="l02412" name="l02412"></a><span class="lineno"> 2412</span>- (void)getJoinedGroupsFromServerWithPage:(NSInteger)aPageNum</div>
-<div class="line"><a id="l02413" name="l02413"></a><span class="lineno"> 2413</span>                                 pageSize:(NSInteger)aPageSize</div>
-<div class="line"><a id="l02414" name="l02414"></a><span class="lineno"> 2414</span>                          needMemberCount:(BOOL)aNeedMemberCount</div>
-<div class="line"><a id="l02415" name="l02415"></a><span class="lineno"> 2415</span>                                 needRole:(BOOL)aNeedRole</div>
-<div class="line"><a id="l02416" name="l02416"></a><span class="lineno"> 2416</span>                               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *&gt; *_Nullable aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
-<div class="line"><a id="l02417" name="l02417"></a><span class="lineno"> 2417</span> </div>
-<div class="line"><a id="l02418" name="l02418"></a><span class="lineno"> 2418</span><span class="preprocessor">#pragma mark - Apns</span></div>
-<div class="line"><a id="l02419" name="l02419"></a><span class="lineno"> 2419</span> </div>
-<div class="line"><a id="l02445" name="l02445"></a><span class="lineno"> 2445</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)ignoreGroupPush:(NSString *)aGroupId</div>
-<div class="line"><a id="l02446" name="l02446"></a><span class="lineno"> 2446</span>                      ignore:(BOOL)aIsIgnore EM_DEPRECATED_IOS(3_3_2, 3_8_3, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_push_manager-p.html">IEMPushManager</a>::updatePushServiceForGroups:disablePush:&quot;);</div>
-<div class="line"><a id="l02447" name="l02447"></a><span class="lineno"> 2447</span> </div>
-<div class="line"><a id="l02448" name="l02448"></a><span class="lineno"> 2448</span> </div>
-<div class="line"><a id="l02470" name="l02470"></a><span class="lineno"> 2470</span>- (void)updatePushServiceForGroup:(NSString *)aGroupId</div>
-<div class="line"><a id="l02471" name="l02471"></a><span class="lineno"> 2471</span>                    isPushEnabled:(BOOL)aIsEnable</div>
-<div class="line"><a id="l02472" name="l02472"></a><span class="lineno"> 2472</span>                       completion:(<span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_3_2, 3_8_3, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_push_manager-p.html">IEMPushManager</a>::updatePushServiceForGroups:disablePush:completion:&quot;);</div>
-<div class="line"><a id="l02473" name="l02473"></a><span class="lineno"> 2473</span> </div>
-<div class="line"><a id="l02474" name="l02474"></a><span class="lineno"> 2474</span> </div>
-<div class="line"><a id="l02500" name="l02500"></a><span class="lineno"> 2500</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)ignoreGroupsPush:(NSArray *)aGroupIDs</div>
-<div class="line"><a id="l02501" name="l02501"></a><span class="lineno"> 2501</span>                       ignore:(BOOL)aIsIgnore EM_DEPRECATED_IOS(3_3_2, 3_8_3, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_push_manager-p.html">IEMPushManager</a>::updatePushServiceForGroups:disablePush:&quot;);</div>
-<div class="line"><a id="l02502" name="l02502"></a><span class="lineno"> 2502</span> </div>
-<div class="line"><a id="l02524" name="l02524"></a><span class="lineno"> 2524</span>- (void)updatePushServiceForGroups:(NSArray *)aGroupIDs</div>
-<div class="line"><a id="l02525" name="l02525"></a><span class="lineno"> 2525</span>                     isPushEnabled:(BOOL)aIsEnable</div>
-<div class="line"><a id="l02526" name="l02526"></a><span class="lineno"> 2526</span>                        completion:(<span class="keywordtype">void</span> (^)(NSArray *groups, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_3_2, 3_8_3, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_push_manager-p.html">IEMPushManager</a>::updatePushServiceForGroups:disablePush:completion:&quot;);</div>
-<div class="line"><a id="l02527" name="l02527"></a><span class="lineno"> 2527</span> </div>
-<div class="line"><a id="l02528" name="l02528"></a><span class="lineno"> 2528</span><span class="preprocessor">#pragma mark - Group member attributes</span></div>
-<div class="line"><a id="l02546" name="l02546"></a><span class="lineno"> 2546</span>- (void)setMemberAttribute:(NSString *_Nonnull)groupId userId:(NSString *_Nonnull)userId attributes:(NSDictionary&lt;NSString*,NSString*&gt; *_Nonnull)attributes completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error))completionBlock;</div>
-<div class="line"><a id="l02547" name="l02547"></a><span class="lineno"> 2547</span> </div>
-<div class="line"><a id="l02569" name="l02569"></a><span class="lineno"> 2569</span>- (void)fetchMemberAttribute:(NSString *_Nonnull)groupId userId:(NSString *_Nonnull)userId completion:(<span class="keywordtype">void</span> (^ _Nullable)(NSDictionary&lt;NSString *,NSString *&gt; * _Nullable, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable))completionBlock;</div>
-<div class="line"><a id="l02594" name="l02594"></a><span class="lineno"> 2594</span>- (void)fetchMembersAttributes:(NSString *_Nonnull)groupId userIds:(NSArray&lt;__kindof NSString *&gt; *_Nonnull)userIds keys:(NSArray&lt;__kindof NSString *&gt; *_Nonnull)keys completion:(<span class="keywordtype">void</span> (^_Nullable)(NSDictionary&lt;NSString*,NSDictionary&lt;NSString*,NSString*&gt;*&gt; *_Nullable attributes, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error))completionBlock;</div>
-<div class="line"><a id="l02595" name="l02595"></a><span class="lineno"> 2595</span> </div>
-<div class="line"><a id="l02596" name="l02596"></a><span class="lineno"> 2596</span><span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS  3.8.8</span></div>
-<div class="line"><a id="l02597" name="l02597"></a><span class="lineno"> 2597</span> </div>
-<div class="line"><a id="l02623" name="l02623"></a><span class="lineno"> 2623</span>- (void)getJoinedGroupsFromServerWithPage:(NSInteger)aPageNum</div>
-<div class="line"><a id="l02624" name="l02624"></a><span class="lineno"> 2624</span>                                 pageSize:(NSInteger)aPageSize</div>
-<div class="line"><a id="l02625" name="l02625"></a><span class="lineno"> 2625</span>                               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *&gt; *aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock</div>
-<div class="line"><a id="l02626" name="l02626"></a><span class="lineno"> 2626</span>                                __deprecated_msg(&quot;Use -getJoinedGroupsFromServerWithPage:pageSize:needMemberCount:needRole:error:completion: instead&quot;);</div>
-<div class="line"><a id="l02627" name="l02627"></a><span class="lineno"> 2627</span> </div>
-<div class="line"><a id="l02628" name="l02628"></a><span class="lineno"> 2628</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l01339" name="l01339"></a><span class="lineno"> 1339</span>- (void)unblockGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01340" name="l01340"></a><span class="lineno"> 1340</span>          completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span> </div>
+<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span> </div>
+<div class="line"><a id="l01370" name="l01370"></a><span class="lineno"> 1370</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)updateGroupOwner:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01371" name="l01371"></a><span class="lineno"> 1371</span>                     newOwner:(NSString *_Nonnull)aNewOwner</div>
+<div class="line"><a id="l01372" name="l01372"></a><span class="lineno"> 1372</span>                        error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01373" name="l01373"></a><span class="lineno"> 1373</span> </div>
+<div class="line"><a id="l01395" name="l01395"></a><span class="lineno"> 1395</span>- (void)updateGroupOwner:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01396" name="l01396"></a><span class="lineno"> 1396</span>                newOwner:(NSString *_Nonnull)aNewOwner</div>
+<div class="line"><a id="l01397" name="l01397"></a><span class="lineno"> 1397</span>              completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span> </div>
+<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)addAdmin:(NSString *_Nonnull)aAdmin</div>
+<div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>              toGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>                error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span> </div>
+<div class="line"><a id="l01453" name="l01453"></a><span class="lineno"> 1453</span>- (void)addAdmin:(NSString *_Nonnull)aAdmin</div>
+<div class="line"><a id="l01454" name="l01454"></a><span class="lineno"> 1454</span>         toGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01455" name="l01455"></a><span class="lineno"> 1455</span>      completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01456" name="l01456"></a><span class="lineno"> 1456</span> </div>
+<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)removeAdmin:(NSString *_Nonnull)aAdmin</div>
+<div class="line"><a id="l01485" name="l01485"></a><span class="lineno"> 1485</span>               fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span>                   error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span> </div>
+<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>- (void)removeAdmin:(NSString *_Nonnull)aAdmin</div>
+<div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>          fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span>         completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span> </div>
+<div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span> </div>
+<div class="line"><a id="l01547" name="l01547"></a><span class="lineno"> 1547</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)muteMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMuteMembers</div>
+<div class="line"><a id="l01548" name="l01548"></a><span class="lineno"> 1548</span>        muteMilliseconds:(NSInteger)aMuteMilliseconds</div>
+<div class="line"><a id="l01549" name="l01549"></a><span class="lineno"> 1549</span>               fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01550" name="l01550"></a><span class="lineno"> 1550</span>                   error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01551" name="l01551"></a><span class="lineno"> 1551</span> </div>
+<div class="line"><a id="l01578" name="l01578"></a><span class="lineno"> 1578</span>- (void)muteMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMuteMembers</div>
+<div class="line"><a id="l01579" name="l01579"></a><span class="lineno"> 1579</span>   muteMilliseconds:(NSInteger)aMuteMilliseconds</div>
+<div class="line"><a id="l01580" name="l01580"></a><span class="lineno"> 1580</span>          fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01581" name="l01581"></a><span class="lineno"> 1581</span>         completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01582" name="l01582"></a><span class="lineno"> 1582</span> </div>
+<div class="line"><a id="l01610" name="l01610"></a><span class="lineno"> 1610</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)unmuteMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
+<div class="line"><a id="l01611" name="l01611"></a><span class="lineno"> 1611</span>                 fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01612" name="l01612"></a><span class="lineno"> 1612</span>                     error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01613" name="l01613"></a><span class="lineno"> 1613</span> </div>
+<div class="line"><a id="l01638" name="l01638"></a><span class="lineno"> 1638</span>- (void)unmuteMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
+<div class="line"><a id="l01639" name="l01639"></a><span class="lineno"> 1639</span>            fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span> </div>
+<div class="line"><a id="l01667" name="l01667"></a><span class="lineno"> 1667</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)muteAllMembersFromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01668" name="l01668"></a><span class="lineno"> 1668</span>                                  error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01669" name="l01669"></a><span class="lineno"> 1669</span> </div>
+<div class="line"><a id="l01692" name="l01692"></a><span class="lineno"> 1692</span>- (void)muteAllMembersFromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>                     completion:(<span class="keywordtype">void</span>(^)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span> </div>
+<div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span> </div>
+<div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)unmuteAllMembersFromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01722" name="l01722"></a><span class="lineno"> 1722</span>                                 error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span> </div>
+<div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span> </div>
+<div class="line"><a id="l01747" name="l01747"></a><span class="lineno"> 1747</span>- (void)unmuteAllMembersFromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01748" name="l01748"></a><span class="lineno"> 1748</span>                       completion:(<span class="keywordtype">void</span>(^)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01749" name="l01749"></a><span class="lineno"> 1749</span> </div>
+<div class="line"><a id="l01750" name="l01750"></a><span class="lineno"> 1750</span> </div>
+<div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)addWhiteListMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
+<div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span>                       fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span>                           error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span> </div>
+<div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span>- (void)addWhiteListMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
+<div class="line"><a id="l01805" name="l01805"></a><span class="lineno"> 1805</span>                  fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01806" name="l01806"></a><span class="lineno"> 1806</span>                 completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01807" name="l01807"></a><span class="lineno"> 1807</span> </div>
+<div class="line"><a id="l01808" name="l01808"></a><span class="lineno"> 1808</span> </div>
+<div class="line"><a id="l01836" name="l01836"></a><span class="lineno"> 1836</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)removeWhiteListMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
+<div class="line"><a id="l01837" name="l01837"></a><span class="lineno"> 1837</span>                          fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>                              error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01839" name="l01839"></a><span class="lineno"> 1839</span> </div>
+<div class="line"><a id="l01864" name="l01864"></a><span class="lineno"> 1864</span>- (void)removeWhiteListMembers:(NSArray&lt;NSString *&gt; * _Nonnull)aMembers</div>
+<div class="line"><a id="l01865" name="l01865"></a><span class="lineno"> 1865</span>                     fromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01866" name="l01866"></a><span class="lineno"> 1866</span>                    completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01867" name="l01867"></a><span class="lineno"> 1867</span> </div>
+<div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>- (void)uploadGroupSharedFileWithId:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span>                           filePath:(NSString* _Nonnull)aFilePath</div>
+<div class="line"><a id="l01889" name="l01889"></a><span class="lineno"> 1889</span>                           progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
+<div class="line"><a id="l01890" name="l01890"></a><span class="lineno"> 1890</span>                         completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group_shared_file.html">EMGroupSharedFile</a> *_Nullable aSharedFile, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span> </div>
+<div class="line"><a id="l01911" name="l01911"></a><span class="lineno"> 1911</span>- (void)downloadGroupSharedFileWithId:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01912" name="l01912"></a><span class="lineno"> 1912</span>                             filePath:(NSString *_Nonnull)aFilePath</div>
+<div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span>                         sharedFileId:(NSString *_Nonnull)aSharedFileId</div>
+<div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span>                             progress:(<span class="keywordtype">void</span> (^_Nullable)(<span class="keywordtype">int</span> progress))aProgressBlock</div>
+<div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>                           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span> </div>
+<div class="line"><a id="l01938" name="l01938"></a><span class="lineno"> 1938</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)removeGroupSharedFileWithId:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01939" name="l01939"></a><span class="lineno"> 1939</span>                            sharedFileId:(NSString *_Nonnull)aSharedFileId</div>
+<div class="line"><a id="l01940" name="l01940"></a><span class="lineno"> 1940</span>                                   error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01941" name="l01941"></a><span class="lineno"> 1941</span> </div>
+<div class="line"><a id="l01957" name="l01957"></a><span class="lineno"> 1957</span>- (void)removeGroupSharedFileWithId:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01958" name="l01958"></a><span class="lineno"> 1958</span>                       sharedFileId:(NSString *_Nonnull)aSharedFileId</div>
+<div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>                         completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span> </div>
+<div class="line"><a id="l01986" name="l01986"></a><span class="lineno"> 1986</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)updateGroupAnnouncementWithId:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l01987" name="l01987"></a><span class="lineno"> 1987</span>                              announcement:(NSString *_Nullable)aAnnouncement</div>
+<div class="line"><a id="l01988" name="l01988"></a><span class="lineno"> 1988</span>                                     error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l01989" name="l01989"></a><span class="lineno"> 1989</span> </div>
+<div class="line"><a id="l02014" name="l02014"></a><span class="lineno"> 2014</span>- (void)updateGroupAnnouncementWithId:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02015" name="l02015"></a><span class="lineno"> 2015</span>                         announcement:(NSString *_Nullable)aAnnouncement</div>
+<div class="line"><a id="l02016" name="l02016"></a><span class="lineno"> 2016</span>                           completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l02017" name="l02017"></a><span class="lineno"> 2017</span> </div>
+<div class="line"><a id="l02043" name="l02043"></a><span class="lineno"> 2043</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)updateGroupExtWithId:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02044" name="l02044"></a><span class="lineno"> 2044</span>                              ext:(NSString *_Nullable)aExt</div>
+<div class="line"><a id="l02045" name="l02045"></a><span class="lineno"> 2045</span>                            error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l02046" name="l02046"></a><span class="lineno"> 2046</span> </div>
+<div class="line"><a id="l02067" name="l02067"></a><span class="lineno"> 2067</span>- (void)updateGroupExtWithId:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02068" name="l02068"></a><span class="lineno"> 2068</span>                         ext:(NSString *_Nullable)aExt</div>
+<div class="line"><a id="l02069" name="l02069"></a><span class="lineno"> 2069</span>                  completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l02070" name="l02070"></a><span class="lineno"> 2070</span> </div>
+<div class="line"><a id="l02071" name="l02071"></a><span class="lineno"> 2071</span><span class="preprocessor">#pragma mark - Edit Public Group</span></div>
+<div class="line"><a id="l02072" name="l02072"></a><span class="lineno"> 2072</span> </div>
+<div class="line"><a id="l02094" name="l02094"></a><span class="lineno"> 2094</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)joinPublicGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02095" name="l02095"></a><span class="lineno"> 2095</span>                       error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l02096" name="l02096"></a><span class="lineno"> 2096</span> </div>
+<div class="line"><a id="l02111" name="l02111"></a><span class="lineno"> 2111</span>- (void)joinPublicGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02112" name="l02112"></a><span class="lineno"> 2112</span>             completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l02113" name="l02113"></a><span class="lineno"> 2113</span> </div>
+<div class="line"><a id="l02137" name="l02137"></a><span class="lineno"> 2137</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)applyJoinPublicGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02138" name="l02138"></a><span class="lineno"> 2138</span>                          message:(NSString *_Nullable)aMessage</div>
+<div class="line"><a id="l02139" name="l02139"></a><span class="lineno"> 2139</span>                            error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l02140" name="l02140"></a><span class="lineno"> 2140</span> </div>
+<div class="line"><a id="l02158" name="l02158"></a><span class="lineno"> 2158</span>- (void)requestToJoinPublicGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02159" name="l02159"></a><span class="lineno"> 2159</span>                         message:(NSString *_Nullable)aMessage</div>
+<div class="line"><a id="l02160" name="l02160"></a><span class="lineno"> 2160</span>                      completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l02161" name="l02161"></a><span class="lineno"> 2161</span> </div>
+<div class="line"><a id="l02162" name="l02162"></a><span class="lineno"> 2162</span><span class="preprocessor">#pragma mark - Application</span></div>
+<div class="line"><a id="l02163" name="l02163"></a><span class="lineno"> 2163</span> </div>
+<div class="line"><a id="l02189" name="l02189"></a><span class="lineno"> 2189</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)acceptJoinApplication:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02190" name="l02190"></a><span class="lineno"> 2190</span>                         applicant:(NSString *_Nonnull)aUsername;</div>
+<div class="line"><a id="l02191" name="l02191"></a><span class="lineno"> 2191</span> </div>
+<div class="line"><a id="l02217" name="l02217"></a><span class="lineno"> 2217</span>- (void)approveJoinGroupRequest:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02218" name="l02218"></a><span class="lineno"> 2218</span>                         sender:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l02219" name="l02219"></a><span class="lineno"> 2219</span>                     completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l02220" name="l02220"></a><span class="lineno"> 2220</span> </div>
+<div class="line"><a id="l02248" name="l02248"></a><span class="lineno"> 2248</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)declineJoinApplication:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02249" name="l02249"></a><span class="lineno"> 2249</span>                          applicant:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l02250" name="l02250"></a><span class="lineno"> 2250</span>                             reason:(NSString *_Nullable)aReason;</div>
+<div class="line"><a id="l02251" name="l02251"></a><span class="lineno"> 2251</span> </div>
+<div class="line"><a id="l02279" name="l02279"></a><span class="lineno"> 2279</span>- (void)declineJoinGroupRequest:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02280" name="l02280"></a><span class="lineno"> 2280</span>                         sender:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l02281" name="l02281"></a><span class="lineno"> 2281</span>                         reason:(NSString *_Nullable)aReason</div>
+<div class="line"><a id="l02282" name="l02282"></a><span class="lineno"> 2282</span>                     completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l02283" name="l02283"></a><span class="lineno"> 2283</span> </div>
+<div class="line"><a id="l02307" name="l02307"></a><span class="lineno"> 2307</span>- (<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> * _Nullable)acceptInvitationFromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02308" name="l02308"></a><span class="lineno"> 2308</span>                               inviter:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l02309" name="l02309"></a><span class="lineno"> 2309</span>                                 error:(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> **_Nullable)pError;</div>
+<div class="line"><a id="l02310" name="l02310"></a><span class="lineno"> 2310</span> </div>
+<div class="line"><a id="l02333" name="l02333"></a><span class="lineno"> 2333</span>- (void)acceptInvitationFromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02334" name="l02334"></a><span class="lineno"> 2334</span>                          inviter:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l02335" name="l02335"></a><span class="lineno"> 2335</span>                       completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nullable aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l02336" name="l02336"></a><span class="lineno"> 2336</span> </div>
+<div class="line"><a id="l02360" name="l02360"></a><span class="lineno"> 2360</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)declineInvitationFromGroup:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02361" name="l02361"></a><span class="lineno"> 2361</span>                                inviter:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a id="l02362" name="l02362"></a><span class="lineno"> 2362</span>                                 reason:(NSString *_Nullable)aReason;</div>
+<div class="line"><a id="l02363" name="l02363"></a><span class="lineno"> 2363</span> </div>
+<div class="line"><a id="l02387" name="l02387"></a><span class="lineno"> 2387</span>- (void)declineGroupInvitation:(NSString *_Nonnull)aGroupId</div>
+<div class="line"><a id="l02388" name="l02388"></a><span class="lineno"> 2388</span>                       inviter:(NSString *_Nonnull)aInviter</div>
+<div class="line"><a id="l02389" name="l02389"></a><span class="lineno"> 2389</span>                        reason:(NSString *_Nullable)aReason</div>
+<div class="line"><a id="l02390" name="l02390"></a><span class="lineno"> 2390</span>                    completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l02391" name="l02391"></a><span class="lineno"> 2391</span> </div>
+<div class="line"><a id="l02430" name="l02430"></a><span class="lineno"> 2430</span>- (void)getJoinedGroupsFromServerWithPage:(NSInteger)aPageNum</div>
+<div class="line"><a id="l02431" name="l02431"></a><span class="lineno"> 2431</span>                                 pageSize:(NSInteger)aPageSize</div>
+<div class="line"><a id="l02432" name="l02432"></a><span class="lineno"> 2432</span>                          needMemberCount:(BOOL)aNeedMemberCount</div>
+<div class="line"><a id="l02433" name="l02433"></a><span class="lineno"> 2433</span>                                 needRole:(BOOL)aNeedRole</div>
+<div class="line"><a id="l02434" name="l02434"></a><span class="lineno"> 2434</span>                               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *&gt; *_Nullable aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock;</div>
+<div class="line"><a id="l02435" name="l02435"></a><span class="lineno"> 2435</span> </div>
+<div class="line"><a id="l02436" name="l02436"></a><span class="lineno"> 2436</span><span class="preprocessor">#pragma mark - Apns</span></div>
+<div class="line"><a id="l02437" name="l02437"></a><span class="lineno"> 2437</span> </div>
+<div class="line"><a id="l02463" name="l02463"></a><span class="lineno"> 2463</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)ignoreGroupPush:(NSString *)aGroupId</div>
+<div class="line"><a id="l02464" name="l02464"></a><span class="lineno"> 2464</span>                      ignore:(BOOL)aIsIgnore EM_DEPRECATED_IOS(3_3_2, 3_8_3, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_push_manager-p.html">IEMPushManager</a>::updatePushServiceForGroups:disablePush:&quot;);</div>
+<div class="line"><a id="l02465" name="l02465"></a><span class="lineno"> 2465</span> </div>
+<div class="line"><a id="l02466" name="l02466"></a><span class="lineno"> 2466</span> </div>
+<div class="line"><a id="l02488" name="l02488"></a><span class="lineno"> 2488</span>- (void)updatePushServiceForGroup:(NSString *)aGroupId</div>
+<div class="line"><a id="l02489" name="l02489"></a><span class="lineno"> 2489</span>                    isPushEnabled:(BOOL)aIsEnable</div>
+<div class="line"><a id="l02490" name="l02490"></a><span class="lineno"> 2490</span>                       completion:(<span class="keywordtype">void</span> (^)(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *aGroup, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_3_2, 3_8_3, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_push_manager-p.html">IEMPushManager</a>::updatePushServiceForGroups:disablePush:completion:&quot;);</div>
+<div class="line"><a id="l02491" name="l02491"></a><span class="lineno"> 2491</span> </div>
+<div class="line"><a id="l02492" name="l02492"></a><span class="lineno"> 2492</span> </div>
+<div class="line"><a id="l02518" name="l02518"></a><span class="lineno"> 2518</span>- (<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *)ignoreGroupsPush:(NSArray *)aGroupIDs</div>
+<div class="line"><a id="l02519" name="l02519"></a><span class="lineno"> 2519</span>                       ignore:(BOOL)aIsIgnore EM_DEPRECATED_IOS(3_3_2, 3_8_3, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_push_manager-p.html">IEMPushManager</a>::updatePushServiceForGroups:disablePush:&quot;);</div>
+<div class="line"><a id="l02520" name="l02520"></a><span class="lineno"> 2520</span> </div>
+<div class="line"><a id="l02542" name="l02542"></a><span class="lineno"> 2542</span>- (void)updatePushServiceForGroups:(NSArray *)aGroupIDs</div>
+<div class="line"><a id="l02543" name="l02543"></a><span class="lineno"> 2543</span>                     isPushEnabled:(BOOL)aIsEnable</div>
+<div class="line"><a id="l02544" name="l02544"></a><span class="lineno"> 2544</span>                        completion:(<span class="keywordtype">void</span> (^)(NSArray *groups, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *aError))aCompletionBlock EM_DEPRECATED_IOS(3_3_2, 3_8_3, &quot;Use -<a class="code hl_protocol" href="protocol_i_e_m_push_manager-p.html">IEMPushManager</a>::updatePushServiceForGroups:disablePush:completion:&quot;);</div>
+<div class="line"><a id="l02545" name="l02545"></a><span class="lineno"> 2545</span> </div>
+<div class="line"><a id="l02546" name="l02546"></a><span class="lineno"> 2546</span><span class="preprocessor">#pragma mark - Group member attributes</span></div>
+<div class="line"><a id="l02564" name="l02564"></a><span class="lineno"> 2564</span>- (void)setMemberAttribute:(NSString *_Nonnull)groupId userId:(NSString *_Nonnull)userId attributes:(NSDictionary&lt;NSString*,NSString*&gt; *_Nonnull)attributes completion:(<span class="keywordtype">void</span> (^_Nullable)(<a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error))completionBlock;</div>
+<div class="line"><a id="l02565" name="l02565"></a><span class="lineno"> 2565</span> </div>
+<div class="line"><a id="l02587" name="l02587"></a><span class="lineno"> 2587</span>- (void)fetchMemberAttribute:(NSString *_Nonnull)groupId userId:(NSString *_Nonnull)userId completion:(<span class="keywordtype">void</span> (^ _Nullable)(NSDictionary&lt;NSString *,NSString *&gt; * _Nullable, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> * _Nullable))completionBlock;</div>
+<div class="line"><a id="l02612" name="l02612"></a><span class="lineno"> 2612</span>- (void)fetchMembersAttributes:(NSString *_Nonnull)groupId userIds:(NSArray&lt;__kindof NSString *&gt; *_Nonnull)userIds keys:(NSArray&lt;__kindof NSString *&gt; *_Nonnull)keys completion:(<span class="keywordtype">void</span> (^_Nullable)(NSDictionary&lt;NSString*,NSDictionary&lt;NSString*,NSString*&gt;*&gt; *_Nullable attributes, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable error))completionBlock;</div>
+<div class="line"><a id="l02613" name="l02613"></a><span class="lineno"> 2613</span> </div>
+<div class="line"><a id="l02614" name="l02614"></a><span class="lineno"> 2614</span><span class="preprocessor">#pragma mark - EM_DEPRECATED_IOS  3.8.8</span></div>
+<div class="line"><a id="l02615" name="l02615"></a><span class="lineno"> 2615</span> </div>
+<div class="line"><a id="l02641" name="l02641"></a><span class="lineno"> 2641</span>- (void)getJoinedGroupsFromServerWithPage:(NSInteger)aPageNum</div>
+<div class="line"><a id="l02642" name="l02642"></a><span class="lineno"> 2642</span>                                 pageSize:(NSInteger)aPageSize</div>
+<div class="line"><a id="l02643" name="l02643"></a><span class="lineno"> 2643</span>                               completion:(<span class="keywordtype">void</span> (^_Nullable)(NSArray&lt;<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *&gt; *aList, <a class="code hl_interface" href="interface_e_m_error.html">EMError</a> *_Nullable aError))aCompletionBlock</div>
+<div class="line"><a id="l02644" name="l02644"></a><span class="lineno"> 2644</span>                                __deprecated_msg(&quot;Use -getJoinedGroupsFromServerWithPage:pageSize:needMemberCount:needRole:error:completion: instead&quot;);</div>
+<div class="line"><a id="l02645" name="l02645"></a><span class="lineno"> 2645</span> </div>
+<div class="line"><a id="l02646" name="l02646"></a><span class="lineno"> 2646</span><span class="keyword">@end</span></div>
 <div class="ttc" id="ainterface_e_m_cursor_result_html"><div class="ttname"><a href="interface_e_m_cursor_result.html">EMCursorResult</a></div><div class="ttdef"><b>Definition:</b> EMCursorResult.h:27</div></div>
 <div class="ttc" id="ainterface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:27</div></div>
 <div class="ttc" id="ainterface_e_m_group_html"><div class="ttname"><a href="interface_e_m_group.html">EMGroup</a></div><div class="ttdef"><b>Definition:</b> EMGroup.h:43</div></div>
