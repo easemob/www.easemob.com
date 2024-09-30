@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.8.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.10.0</span>
    </div>
   </td>
  </tr>
@@ -143,6 +143,8 @@ $(function() {
 <tr class="separator:abafb1f83bc8fd3f59043bc7dd6af8282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cca606a709bf84da4a5e4ba88b78957"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#a7cca606a709bf84da4a5e4ba88b78957">registerForRemoteNotificationsWithDeviceToken:completion:</a></td></tr>
 <tr class="separator:a7cca606a709bf84da4a5e4ba88b78957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3bb4add07d45368d4cb675ab5e52de1"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#ab3bb4add07d45368d4cb675ab5e52de1">registerForRemoteNotificationsWithCertName:deviceToken:completion:</a></td></tr>
+<tr class="separator:ab3bb4add07d45368d4cb675ab5e52de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae48f35a65a173e756646cfb3ae407311"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#ae48f35a65a173e756646cfb3ae407311">bindFCMToken:completion:</a></td></tr>
 <tr class="separator:ae48f35a65a173e756646cfb3ae407311"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bb8b214a9013f2d95ca579d0320cf8d"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#a8bb8b214a9013f2d95ca579d0320cf8d">uploadLogToServer</a></td></tr>
@@ -1498,6 +1500,51 @@ Protected 属性</h2></td></tr>
 <li><code>NO</code>：表示不解除绑定。 </li>
 </ul>
 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab3bb4add07d45368d4cb675ab5e52de1" name="ab3bb4add07d45368d4cb675ab5e52de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3bb4add07d45368d4cb675ab5e52de1">&#9670;&nbsp;</a></span>registerForRemoteNotificationsWithCertName:deviceToken:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) registerForRemoteNotificationsWithCertName: </td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nonnull)&#160;</td>
+          <td class="paramname"><em>aCertName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">deviceToken:</td>
+          <td></td>
+          <td class="paramtype">(NSData *_Nonnull)&#160;</td>
+          <td class="paramname"><em>aDeviceToken</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >注册 device token。</p>
+<p >Device token 用于苹果 APNS 推送。</p>
+<p >异步方法。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aCertName</td><td>要绑定的证书名称 </td></tr>
+    <tr><td class="paramname">aDeviceToken</td><td>要绑定的 token。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
