@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.10.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.11.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -89,6 +89,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ab9607f8e781363ed5e229aadc78e4f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02b81de93cea6f36fc0fd424d0cea08a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#a02b81de93cea6f36fc0fd424d0cea08a">onMuteListAdded</a> (final String chatRoomId, final List&lt; String &gt; mutes, final long expireTime)</td></tr>
 <tr class="separator:a02b81de93cea6f36fc0fd424d0cea08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78af9b1b532878ad8cb9ad28c9d6346"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#aa78af9b1b532878ad8cb9ad28c9d6346">onMuteListAdded</a> (final String chatRoomId, Map&lt; String, Long &gt; muteInfo)</td></tr>
+<tr class="separator:aa78af9b1b532878ad8cb9ad28c9d6346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0295de02e3495010903bcb7d67ca9ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#aa0295de02e3495010903bcb7d67ca9ea">onMuteListRemoved</a> (final String chatRoomId, final List&lt; String &gt; mutes)</td></tr>
 <tr class="separator:aa0295de02e3495010903bcb7d67ca9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c596ff30cc51503d47cb728dcf36fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_chat_room_change_listener.html#a0c596ff30cc51503d47cb728dcf36fd6">onWhiteListAdded</a> (final String chatRoomId, final List&lt; String &gt; whitelist)</td></tr>
@@ -527,7 +529,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a02b81de93cea6f36fc0fd424d0cea08a" name="a02b81de93cea6f36fc0fd424d0cea08a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02b81de93cea6f36fc0fd424d0cea08a">&#9670;&nbsp;</a></span>onMuteListAdded()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b81de93cea6f36fc0fd424d0cea08a">&#9670;&nbsp;</a></span>onMuteListAdded() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -564,6 +566,44 @@ Public 属性</h2></td></tr>
     <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
     <tr><td class="paramname">mutes</td><td>被禁言的成员。 </td></tr>
     <tr><td class="paramname">expireTime</td><td>禁言失效的 Unix 时间戳，单位为毫秒。预留参数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000047">弃用:</a></b></dt><dd>已废弃，请使用 <a class="el" href="">onMuteListAdded(String, Map)</a> 代替。</dd></dl>
+
+</div>
+</div>
+<a id="aa78af9b1b532878ad8cb9ad28c9d6346" name="aa78af9b1b532878ad8cb9ad28c9d6346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa78af9b1b532878ad8cb9ad28c9d6346">&#9670;&nbsp;</a></span>onMuteListAdded() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMChatRoomChangeListener.onMuteListAdded </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>chatRoomId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Map&lt; String, Long &gt;&#160;</td>
+          <td class="paramname"><em>muteInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >有成员被禁言。</p>
+<p >被添加的成员收到该事件。禁言期间成员不能发送发消息。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chatRoomId</td><td>聊天室 ID。 </td></tr>
+    <tr><td class="paramname">muteInfo</td><td>被禁言详情，map结构 key: 被禁言的成员ID value:禁言失效的 Unix 时间戳，单位为毫秒 </td></tr>
   </table>
   </dd>
 </dl>
