@@ -53,8 +53,7 @@ var searchData=
   ['emtextmessagebody_50',['EMTextMessageBody',['../interface_e_m_text_message_body.html',1,'']]],
   ['emthreadmanagerdelegate_2dp_51',['EMThreadManagerDelegate-p',['../protocol_e_m_thread_manager_delegate-p.html',1,'']]],
   ['emtranslatelanguage_52',['EMTranslateLanguage',['../interface_e_m_translate_language.html',1,'']]],
-  ['emtranslationresult_53',['EMTranslationResult',['../interface_e_m_translation_result.html',1,'']]],
-  ['emuserinfo_54',['EMUserInfo',['../interface_e_m_user_info.html',1,'']]],
-  ['emvideomessagebody_55',['EMVideoMessageBody',['../interface_e_m_video_message_body.html',1,'']]],
-  ['emvoicemessagebody_56',['EMVoiceMessageBody',['../interface_e_m_voice_message_body.html',1,'']]]
+  ['emuserinfo_53',['EMUserInfo',['../interface_e_m_user_info.html',1,'']]],
+  ['emvideomessagebody_54',['EMVideoMessageBody',['../interface_e_m_video_message_body.html',1,'']]],
+  ['emvoicemessagebody_55',['EMVoiceMessageBody',['../interface_e_m_voice_message_body.html',1,'']]]
 ];

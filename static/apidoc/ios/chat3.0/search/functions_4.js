@@ -23,12 +23,8 @@ var searchData=
   ['diddismissfromchatroom_3areason_3a_20',['didDismissFromChatroom:reason:',['../protocol_e_m_chatroom_manager_delegate-p.html#a965d66134f09f023b5c72b2aad22236b',1,'EMChatroomManagerDelegate-p']]],
   ['didjoingroup_3ainviter_3amessage_3a_21',['didJoinGroup:inviter:message:',['../protocol_e_m_group_manager_delegate-p.html#ac7c819d13b9c4194c8788028a70a3609',1,'EMGroupManagerDelegate-p']]],
   ['didleavegroup_3areason_3a_22',['didLeaveGroup:reason:',['../protocol_e_m_group_manager_delegate-p.html#a4358d25ad62562a06cdecfb062652dba',1,'EMGroupManagerDelegate-p']]],
-  ['didreceivekickedfromchatroom_3areason_3a_23',['didReceiveKickedFromChatroom:reason:',['../protocol_e_m_chatroom_manager_delegate-p.html#a824a2725061145c0f5caa7fa176a09e2',1,'EMChatroomManagerDelegate-p']]],
-  ['didreceiveuserjoinedchatroom_3ausername_3a_24',['didReceiveUserJoinedChatroom:username:',['../protocol_e_m_chatroom_manager_delegate-p.html#a0b7d77a59e6e8bbd2cb25fa66dace6c9',1,'EMChatroomManagerDelegate-p']]],
-  ['didreceiveuserleavedchatroom_3ausername_3a_25',['didReceiveUserLeavedChatroom:username:',['../protocol_e_m_chatroom_manager_delegate-p.html#a0fcba608c06324907b0f5a096fd9a169',1,'EMChatroomManagerDelegate-p']]],
-  ['disableofflinepushstart_3aend_3a_26',['disableOfflinePushStart:end:',['../protocol_i_e_m_push_manager-p.html#ad15543dc4cbfa31eecead06ddc44112e',1,'IEMPushManager-p']]],
-  ['downloadandparsecombinemessage_3acompletion_3a_27',['downloadAndParseCombineMessage:completion:',['../protocol_i_e_m_chat_manager-p.html#a3c1820e3bf708932525ee3bff46f5ad9',1,'IEMChatManager-p']]],
-  ['downloadgroupsharedfilewithid_3afilepath_3asharedfileid_3aprogress_3acompletion_3a_28',['downloadGroupSharedFileWithId:filePath:sharedFileId:progress:completion:',['../protocol_i_e_m_group_manager-p.html#a2aaee8065d4857848c83a761b0f40b0a',1,'IEMGroupManager-p']]],
-  ['downloadmessageattachment_3aprogress_3acompletion_3a_29',['downloadMessageAttachment:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#adb157ebedb5b163e411d9a100ca70885',1,'IEMChatManager-p']]],
-  ['downloadmessagethumbnail_3aprogress_3acompletion_3a_30',['downloadMessageThumbnail:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#af1de9919bfc24ed8472175bd8f8e12fe',1,'IEMChatManager-p']]]
+  ['downloadandparsecombinemessage_3acompletion_3a_23',['downloadAndParseCombineMessage:completion:',['../protocol_i_e_m_chat_manager-p.html#a3c1820e3bf708932525ee3bff46f5ad9',1,'IEMChatManager-p']]],
+  ['downloadgroupsharedfilewithid_3afilepath_3asharedfileid_3aprogress_3acompletion_3a_24',['downloadGroupSharedFileWithId:filePath:sharedFileId:progress:completion:',['../protocol_i_e_m_group_manager-p.html#a2aaee8065d4857848c83a761b0f40b0a',1,'IEMGroupManager-p']]],
+  ['downloadmessageattachment_3aprogress_3acompletion_3a_25',['downloadMessageAttachment:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#adb157ebedb5b163e411d9a100ca70885',1,'IEMChatManager-p']]],
+  ['downloadmessagethumbnail_3aprogress_3acompletion_3a_26',['downloadMessageThumbnail:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#af1de9919bfc24ed8472175bd8f8e12fe',1,'IEMChatManager-p']]]
 ];

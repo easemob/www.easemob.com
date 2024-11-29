@@ -14,7 +14,7 @@ var searchData=
   ['messagescount_11',['messagesCount',['../interface_e_m_conversation.html#a49ec21b882b40ae12e868978a8ec688d',1,'EMConversation']]],
   ['messagesize_12',['messageSize',['../interface_e_m_chat_message_statistics.html#ada7c0074b4a4cf945c1bd41ab048b0c1',1,'EMChatMessageStatistics']]],
   ['minutes_13',['minutes',['../interface_e_m_silent_mode_time.html#a29ec3446b6d0329dc607bdcf064aa58a',1,'EMSilentModeTime']]],
-  ['msgid_14',['msgId',['../interface_e_m_translation_result.html#a37cc8b8acf886e9990b9416ca5f164d8',1,'EMTranslationResult']]],
-  ['msgtypes_15',['msgTypes',['../interface_e_m_fetch_server_messages_option.html#a87ae35089eaf61188206c7029930d527',1,'EMFetchServerMessagesOption']]],
-  ['mutelist_16',['muteList',['../interface_e_m_chatroom.html#a2ec9b6e10f7299b1414f4758f271e454',1,'EMChatroom::muteList()'],['../interface_e_m_group.html#a54ff97e40a487cf2af74beee9e78386d',1,'EMGroup::muteList()']]]
+  ['msgtypes_14',['msgTypes',['../interface_e_m_fetch_server_messages_option.html#a87ae35089eaf61188206c7029930d527',1,'EMFetchServerMessagesOption']]],
+  ['mutelist_15',['muteList',['../interface_e_m_group.html#a54ff97e40a487cf2af74beee9e78386d',1,'EMGroup']]],
+  ['mutemembers_16',['muteMembers',['../interface_e_m_chatroom.html#a768c33165229b7be915024b7a301ed82',1,'EMChatroom']]]
 ];
