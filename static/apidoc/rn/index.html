@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>react-native-chat-sdk</title><meta name="description" content="Documentation for react-native-chat-sdk"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Chat SDK for React Native v1.6.0</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h2>react-native-chat-sdk</h2></div><div class="tsd-panel tsd-typography"><p>Agora Chat 是一个高度可靠的全球交流平台，您的用户可以在其中进行一对一、群组或聊天室聊天。用户通过短信进行交流，共享图像、音频、视频、文件、表情符号和位置。 Agora Chat 提供开箱即用的打字指示器。</p>
+<!DOCTYPE html><html class="default" lang="en"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>react-native-chat-sdk</title><meta name="description" content="Documentation for react-native-chat-sdk"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Chat SDK for React Native 1.7.0</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>react-native-chat-sdk</h1></div><div class="tsd-panel tsd-typography"><p>Agora Chat 是一个高度可靠的全球交流平台，您的用户可以在其中进行一对一、群组或聊天室聊天。用户通过短信进行交流，共享图像、音频、视频、文件、表情符号和位置。 Agora Chat 提供开箱即用的打字指示器。</p>
 <ul>
 <li>ChatClient类是聊天SDK的入口。它提供了允许您登录和注销聊天应用程序以及管理 SDK 和聊天服务器之间的连接的方法。</li>
 <li>ChatManager 类提供允许您发送和接收消息、管理对话和下载附件的方法。</li>
@@ -212,6 +212,14 @@
 <tr>
 <td style="text-align:left"><a href="interfaces/ChatConnectEventListener.html#onAppActiveNumberReachLimit" class="tsd-kind-method">onAppActiveNumberReachLimit</a></td>
 <td style="text-align:left">应用程序的日活跃用户数量（DAU）或月活跃用户数量（MAU）达到上限时回调。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="interfaces/ChatConnectEventListener.html#onOfflineMessageSyncStart" class="tsd-kind-method">onOfflineMessageSyncStart</a></td>
+<td style="text-align:left">开始接收离线消息的时候触发。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="interfaces/ChatConnectEventListener.html#onOfflineMessageSyncFinish" class="tsd-kind-method">onOfflineMessageSyncFinish</a></td>
+<td style="text-align:left">结束接收离线消息的时候触发。</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="interfaces/ChatConnectEventListener.html#onUserDidLoginFromOtherDevice" class="tsd-kind-method">onUserDidLoginFromOtherDevice</a></td>
@@ -675,6 +683,10 @@
 <td style="text-align:left"><a href="classes/ChatManager.html#getMessageCountWithTimestamp" class="tsd-kind-method">getMessageCountWithTimestamp</a></td>
 <td style="text-align:left">获取消息数量。</td>
 </tr>
+<tr>
+<td style="text-align:left"><a href="classes/ChatManager.html#getMessageCount" class="tsd-kind-method">getMessageCount</a></td>
+<td style="text-align:left">获取本地消息数量。</td>
+</tr>
 </tbody>
 </table>
 <table>
@@ -704,10 +716,6 @@
 <tr>
 <td style="text-align:left"><a href="interfaces/ChatMessageEventListener.html#onMessagesDelivered" class="tsd-kind-method">onMessagesDelivered</a></td>
 <td style="text-align:left">收到消息已送达回执的回调。</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="interfaces/ChatMessageEventListener.html#onMessagesRecalled" class="tsd-kind-method">onMessagesRecalled</a></td>
-<td style="text-align:left">已收到的消息被撤回的回调。</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="interfaces/ChatMessageEventListener.html#onMessagesRecalledInfo" class="tsd-kind-method">onMessagesRecalledInfo</a></td>
@@ -1380,6 +1388,10 @@
 <tr>
 <td style="text-align:left"><a href="interfaces/ChatRoomEventListener.html#onMuteListAdded" class="tsd-kind-method">onMuteListAdded</a></td>
 <td style="text-align:left">有成员被禁言回调。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="interfaces/ChatRoomEventListener.html#onMuteListAddedV2" class="tsd-kind-method">onMuteListAddedV2</a></td>
+<td style="text-align:left">增加禁言成员时候回调。</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="interfaces/ChatRoomEventListener.html#onMuteListRemoved" class="tsd-kind-method">onMuteListRemoved</a></td>
