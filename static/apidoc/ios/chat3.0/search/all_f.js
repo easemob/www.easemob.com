@@ -18,6 +18,7 @@ var searchData=
   ['operatorcount_15',['operatorCount',['../interface_e_m_message_body.html#a6a7891431c56af2964f27f1016bcfceb',1,'EMMessageBody']]],
   ['operatorid_16',['operatorId',['../interface_e_m_message_pin_info.html#a6833011fbb2173a274cad48fd26a9a44',1,'EMMessagePinInfo::operatorId()'],['../interface_e_m_message_body.html#ad4cd6ab745f2e1992647cd32163515fa',1,'EMMessageBody::operatorId()']]],
   ['options_17',['options',['../interface_e_m_client.html#aa36d939c93553e13d926ed010b64a550',1,'EMClient']]],
-  ['optionswithappkey_3a_18',['optionsWithAppkey:',['../interface_e_m_options.html#af915480012e3e2e25de9c3459fe36f0a',1,'EMOptions']]],
-  ['owner_19',['owner',['../interface_e_m_chatroom.html#a4a0dab9996f0e5afdcdbc86732e2cff2',1,'EMChatroom::owner()'],['../interface_e_m_chat_thread.html#a5fa81218b8bb5ac8fdf131c843d8177c',1,'EMChatThread::owner()'],['../interface_e_m_group.html#ae03a2f19396ee83ed51ef704509edf05',1,'EMGroup::owner()']]]
+  ['optionswithappid_3a_18',['optionsWithAppId:',['../interface_e_m_options.html#a7398f035519c2cf7f0520f03141c69d7',1,'EMOptions']]],
+  ['optionswithappkey_3a_19',['optionsWithAppkey:',['../interface_e_m_options.html#af915480012e3e2e25de9c3459fe36f0a',1,'EMOptions']]],
+  ['owner_20',['owner',['../interface_e_m_chatroom.html#a4a0dab9996f0e5afdcdbc86732e2cff2',1,'EMChatroom::owner()'],['../interface_e_m_chat_thread.html#a5fa81218b8bb5ac8fdf131c843d8177c',1,'EMChatThread::owner()'],['../interface_e_m_group.html#ae03a2f19396ee83ed51ef704509edf05',1,'EMGroup::owner()']]]
 ];

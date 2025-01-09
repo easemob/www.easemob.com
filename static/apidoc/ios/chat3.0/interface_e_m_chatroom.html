@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.11.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.12.0</span>
    </div>
   </td>
  </tr>
@@ -119,6 +119,12 @@ $(function() {
 <tr class="separator:a3e807b1af9dbda4beaae8746b209cb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e226ce072107b8149e173c3e242e44f"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_chatroom.html#a3e226ce072107b8149e173c3e242e44f">isMuteAllMembers</a></td></tr>
 <tr class="separator:a3e226ce072107b8149e173c3e242e44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc16ae57b2297b1fd14b96f9b533adf"><td class="memItemLeft" align="right" valign="top">NSInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_chatroom.html#aadc16ae57b2297b1fd14b96f9b533adf">createTimestamp</a></td></tr>
+<tr class="separator:aadc16ae57b2297b1fd14b96f9b533adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9534dc106d06b56cba7b5815f7fec9e8"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_chatroom.html#a9534dc106d06b56cba7b5815f7fec9e8">isInWhitelist</a></td></tr>
+<tr class="separator:a9534dc106d06b56cba7b5815f7fec9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73b1ab30bc0fb0ddee87da9c160c4bc"><td class="memItemLeft" align="right" valign="top">NSInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_chatroom.html#ae73b1ab30bc0fb0ddee87da9c160c4bc">muteExpireTimestamp</a></td></tr>
+<tr class="separator:ae73b1ab30bc0fb0ddee87da9c160c4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >聊天室实例，需要先调用 getChatroomSpecificationFromServerWithId 方法获取该聊天室详情。 </p>
@@ -263,6 +269,29 @@ $(function() {
 
 </div>
 </div>
+<a id="aadc16ae57b2297b1fd14b96f9b533adf" name="aadc16ae57b2297b1fd14b96f9b533adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc16ae57b2297b1fd14b96f9b533adf">&#9670;&nbsp;</a></span>createTimestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSInteger) createTimestamp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >获取聊天室创建时间戳（毫秒）。 只有加入聊天室后可获取。 </p>
+
+</div>
+</div>
 <a id="a383a52d73aa019df0a4b8ee78ba5d293" name="a383a52d73aa019df0a4b8ee78ba5d293"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a383a52d73aa019df0a4b8ee78ba5d293">&#9670;&nbsp;</a></span>description</h2>
 
@@ -286,6 +315,32 @@ $(function() {
 
 </div>
 </div>
+<a id="a9534dc106d06b56cba7b5815f7fec9e8" name="a9534dc106d06b56cba7b5815f7fec9e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9534dc106d06b56cba7b5815f7fec9e8">&#9670;&nbsp;</a></span>isInWhitelist</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isInWhitelist</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >当前登录用户是否在白名单中。 加入聊天室后可获取。 当前用户被加入或者被移除白名单时，此属性会发生变化。</p><ul>
+<li><code>true</code>: 在白名单中。</li>
+<li><code>false</code>: 不在白名单中。 </li>
+</ul>
+
+</div>
+</div>
 <a id="a3e226ce072107b8149e173c3e242e44f" name="a3e226ce072107b8149e173c3e242e44f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e226ce072107b8149e173c3e242e44f">&#9670;&nbsp;</a></span>isMuteAllMembers</h2>
 
@@ -305,7 +360,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >聊天室成员是否全部被禁言。 </p>
+<p >聊天室成员是否全部被禁言,加入聊天室即可获取。 加入聊天室后，收到一键禁言/取消禁言的回调时，该状态会更新。 </p>
 
 </div>
 </div>
@@ -355,6 +410,34 @@ $(function() {
 
 </div>
 </div>
+<a id="ae73b1ab30bc0fb0ddee87da9c160c4bc" name="ae73b1ab30bc0fb0ddee87da9c160c4bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae73b1ab30bc0fb0ddee87da9c160c4bc">&#9670;&nbsp;</a></span>muteExpireTimestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSInteger) muteExpireTimestamp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >获取当前被禁言截止时间戳（毫秒）。</p>
+<p >加入聊天室后可获取。 当前用户被禁言或者被解除禁言时，此属性会被更新。</p>
+<ul>
+<li>当取值为0，表示当前用户未被禁言。</li>
+<li>当取值为-1，表示未能获取到用户被禁言时间戳。 </li>
+</ul>
+
+</div>
+</div>
 <a id="a768c33165229b7be915024b7a301ed82" name="a768c33165229b7be915024b7a301ed82"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a768c33165229b7be915024b7a301ed82">&#9670;&nbsp;</a></span>muteMembers</h2>
 
@@ -398,7 +481,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >聊天室的当前人数，需要先调用 getChatroomSpecificationFromServerWithId 方法获取该聊天室详情。如果没有获取聊天室详情将返回 0。 </p>
+<p >聊天室的当前人数 包括聊天室所有者、管理员与普通成员 加入聊天室即可获取 当聊天室有成员进出时，此属性会更新。 </p>
 
 </div>
 </div>
