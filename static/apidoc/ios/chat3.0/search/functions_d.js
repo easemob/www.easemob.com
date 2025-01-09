@@ -10,5 +10,6 @@ var searchData=
   ['onofflinemessagesyncfinish_7',['onOfflineMessageSyncFinish',['../protocol_e_m_client_delegate-p.html#ad04ad34af124a1b6bc7c205f9829b5c3',1,'EMClientDelegate-p']]],
   ['onofflinemessagesyncstart_8',['onOfflineMessageSyncStart',['../protocol_e_m_client_delegate-p.html#aef836af2b1f32d0047a18431b6eab569',1,'EMClientDelegate-p']]],
   ['onuserkickoutofchatthread_3a_9',['onUserKickOutOfChatThread:',['../protocol_e_m_thread_manager_delegate-p.html#a8d2d62f155fe494b8b23a2cbbe781bc1',1,'EMThreadManagerDelegate-p']]],
-  ['optionswithappkey_3a_10',['optionsWithAppkey:',['../interface_e_m_options.html#af915480012e3e2e25de9c3459fe36f0a',1,'EMOptions']]]
+  ['optionswithappid_3a_10',['optionsWithAppId:',['../interface_e_m_options.html#a7398f035519c2cf7f0520f03141c69d7',1,'EMOptions']]],
+  ['optionswithappkey_3a_11',['optionsWithAppkey:',['../interface_e_m_options.html#af915480012e3e2e25de9c3459fe36f0a',1,'EMOptions']]]
 ];
