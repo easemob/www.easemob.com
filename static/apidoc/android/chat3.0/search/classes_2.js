@@ -75,12 +75,9 @@ var searchData=
   ['emsilentmodetime_72',['EMSilentModeTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_silent_mode_time.html',1,'com::hyphenate::chat']]],
   ['emstatisticsmanager_73',['EMStatisticsManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager.html',1,'com::hyphenate::chat']]],
   ['emtextmessagebody_74',['EMTextMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_text_message_body.html',1,'com::hyphenate::chat']]],
-  ['emtranslateparams_75',['EMTranslateParams',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translate_params.html',1,'com::hyphenate::chat']]],
-  ['emtranslationmanager_76',['EMTranslationManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_manager.html',1,'com::hyphenate::chat']]],
-  ['emtranslationresult_77',['EMTranslationResult',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_result.html',1,'com::hyphenate::chat']]],
-  ['emuserinfo_78',['EMUserInfo',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info.html',1,'com::hyphenate::chat']]],
-  ['emuserinfomanager_79',['EMUserInfoManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html',1,'com::hyphenate::chat']]],
-  ['emvaluecallback_80',['EMValueCallBack',['../interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html',1,'com::hyphenate']]],
-  ['emvideomessagebody_81',['EMVideoMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_message_body.html',1,'com::hyphenate::chat']]],
-  ['emvoicemessagebody_82',['EMVoiceMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_voice_message_body.html',1,'com::hyphenate::chat']]]
+  ['emuserinfo_75',['EMUserInfo',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info.html',1,'com::hyphenate::chat']]],
+  ['emuserinfomanager_76',['EMUserInfoManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html',1,'com::hyphenate::chat']]],
+  ['emvaluecallback_77',['EMValueCallBack',['../interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html',1,'com::hyphenate']]],
+  ['emvideomessagebody_78',['EMVideoMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_message_body.html',1,'com::hyphenate::chat']]],
+  ['emvoicemessagebody_79',['EMVoiceMessageBody',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_voice_message_body.html',1,'com::hyphenate::chat']]]
 ];

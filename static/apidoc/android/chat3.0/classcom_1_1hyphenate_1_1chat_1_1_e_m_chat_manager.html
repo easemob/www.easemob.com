@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.11.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.12.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -143,10 +143,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a67a0996aba1ae2198aad516494800e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64839169e3dc9b895a00b080c86cb096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a64839169e3dc9b895a00b080c86cb096">asyncPinConversation</a> (final String conversationId, boolean isPinned, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callback)</td></tr>
 <tr class="separator:a64839169e3dc9b895a00b080c86cb096"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3db470adf8017018da3f5bc0eeac39f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ab3db470adf8017018da3f5bc0eeac39f">loadAllConversations</a> ()</td></tr>
-<tr class="separator:ab3db470adf8017018da3f5bc0eeac39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae00d3eb41e070546b6b7dc1c3e0750c3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ae00d3eb41e070546b6b7dc1c3e0750c3">deleteConversation</a> (String username, boolean deleteMessages)</td></tr>
-<tr class="separator:ae00d3eb41e070546b6b7dc1c3e0750c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac966fecb591127dc547475da14c0e567"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ac966fecb591127dc547475da14c0e567">loadAllConversations</a> ()</td></tr>
+<tr class="separator:ac966fecb591127dc547475da14c0e567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2169fcb370d9549c78a55f4f7f79dd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a4c2169fcb370d9549c78a55f4f7f79dd">deleteConversation</a> (String conversationId, boolean deleteMessages)</td></tr>
+<tr class="separator:a4c2169fcb370d9549c78a55f4f7f79dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a345e81b9caf2658c8796855fe63fe752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a345e81b9caf2658c8796855fe63fe752">deleteConversationFromServer</a> (String username, <a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_conversation_type.html">EMConversationType</a> type, boolean isDeleteServerMessages, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> deleteCallBack)</td></tr>
 <tr class="separator:a345e81b9caf2658c8796855fe63fe752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a923a569276cc251b85fd541d23432a4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a923a569276cc251b85fd541d23432a4f">addMessageListener</a> (<a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_message_listener.html">EMMessageListener</a> listener)</td></tr>
@@ -236,7 +236,7 @@ Protected 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >聊天管理类，该类负责管理会话（加载，删除等）、发送消息、下载消息附件等。</p>
 <p >发送文文本消息示例如下：</p>
-<div class="fragment"><div class="line">EMMessage message = EMMessage.createTxtSendMessage(content, toChatUsername);</div>
+<div class="fragment"><div class="line">EMMessage message = EMMessage.createTextSendMessage(content, toChatUsername);</div>
 <div class="line">   EMClient.getInstance().chatManager().sendMessage(message);</div>
 </div><!-- fragment --> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a121387f48448ea38e5b33ea4622e6e86" name="a121387f48448ea38e5b33ea4622e6e86"></a>
@@ -1700,12 +1700,12 @@ Protected 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >清除本地内存中的所有会话释放内存。</p>
 <p >注意：释放内存后，通过 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#adee778f8f5d39f240a7482444a64011e">getAllConversations()</a>、<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#abef62d9bb024a58eface6489a0cc4522">getAllConversationsBySort()</a> 从内存里获取到的会话数可能为 0。通过<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a64396e28c58a54a879e9d246362af58f">getUnreadMessageCount()</a>获取到的未读消息数可能为 0。</p>
-<p >若需要获取所有会话和未读数，需要先调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ab3db470adf8017018da3f5bc0eeac39f">loadAllConversations()</a>或者 <a class="el" href="">asyncFilterConversationsFromDB(EMCustomConversationFilter, boolean, EMValueCallBack)</a> 从数据库重新加载会话到内存里。 </p>
+<p >若需要获取所有会话和未读数，需要先调用 <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ac966fecb591127dc547475da14c0e567">loadAllConversations()</a>或者 <a class="el" href="">asyncFilterConversationsFromDB(EMCustomConversationFilter, boolean, EMValueCallBack)</a> 从数据库重新加载会话到内存里。 </p>
 
 </div>
 </div>
-<a id="ae00d3eb41e070546b6b7dc1c3e0750c3" name="ae00d3eb41e070546b6b7dc1c3e0750c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae00d3eb41e070546b6b7dc1c3e0750c3">&#9670;&nbsp;</a></span>deleteConversation()</h2>
+<a id="a4c2169fcb370d9549c78a55f4f7f79dd" name="a4c2169fcb370d9549c78a55f4f7f79dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c2169fcb370d9549c78a55f4f7f79dd">&#9670;&nbsp;</a></span>deleteConversation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1714,7 +1714,7 @@ Protected 成员函数</h2></td></tr>
           <td class="memname">boolean com.hyphenate.chat.EMChatManager.deleteConversation </td>
           <td>(</td>
           <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>username</em>, </td>
+          <td class="paramname"><em>conversationId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1732,7 +1732,7 @@ Protected 成员函数</h2></td></tr>
 <p >删除指定会话及其本地历史消息。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">username</td><td>会话 ID。 </td></tr>
+    <tr><td class="paramname">conversationId</td><td>会话 ID。 </td></tr>
     <tr><td class="paramname">deleteMessages</td><td>删除会话时是否同时删除本地的历史消息。<ul>
 <li><code>true</code>：删除；</li>
 <li><code>false</code>：不删除。 </li>
@@ -2608,14 +2608,14 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ab3db470adf8017018da3f5bc0eeac39f" name="ab3db470adf8017018da3f5bc0eeac39f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3db470adf8017018da3f5bc0eeac39f">&#9670;&nbsp;</a></span>loadAllConversations()</h2>
+<a id="ac966fecb591127dc547475da14c0e567" name="ac966fecb591127dc547475da14c0e567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac966fecb591127dc547475da14c0e567">&#9670;&nbsp;</a></span>loadAllConversations()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void com.hyphenate.chat.EMChatManager.loadAllConversations </td>
+          <td class="memname">boolean com.hyphenate.chat.EMChatManager.loadAllConversations </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
