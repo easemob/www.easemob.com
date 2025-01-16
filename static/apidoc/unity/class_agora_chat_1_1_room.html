@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -107,6 +107,12 @@ $(function() {
 <tr class="separator:aa61080f72664e92a13b5e5a6c3df0585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bf8c1841eb6dc1f1be4211bbf4bd18e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_agora_chat.html#a2b6f39a7c115fd66eb10ef26f8c9cb76">RoomPermissionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_room.html#a5bf8c1841eb6dc1f1be4211bbf4bd18e">PermissionType</a><code> [get, set]</code></td></tr>
 <tr class="separator:a5bf8c1841eb6dc1f1be4211bbf4bd18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b26580b682d2f6900cc9150d9cddd3"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_room.html#a75b26580b682d2f6900cc9150d9cddd3">CreateTimeStamp</a><code> [get, set]</code></td></tr>
+<tr class="separator:a75b26580b682d2f6900cc9150d9cddd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a592a6e18183fad92ef8c4d134cdde1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_room.html#a4a592a6e18183fad92ef8c4d134cdde1">IsInAllowList</a><code> [get, set]</code></td></tr>
+<tr class="separator:a4a592a6e18183fad92ef8c4d134cdde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab286214f8fe22d2a989158f77742cabd"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_room.html#ab286214f8fe22d2a989158f77742cabd">MuteUntilTimeStamp</a><code> [get, set]</code></td></tr>
+<tr class="separator:ab286214f8fe22d2a989158f77742cabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >聊天室类，用于定义聊天室信息。 </p>
@@ -222,7 +228,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >在线成员数。 </p>
+<p >在线成员数。 加入聊天室即可获取。 当聊天室有成员进出时，此属性会更新。 </p>
 
 </div>
 </div>
@@ -388,13 +394,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >是否开启全员禁言。</p><ul>
+<p >是否开启全员禁言,加入聊天室即可获取。</p><ul>
 <li><code>true</code>：开启。</li>
 <li><code>false</code>：关闭。</li>
 </ul>
 <p ><b>注意</b></p><ul>
-<li>加入聊天室后，收到一键禁言/取消禁言的回调时，该状态会更新，此时为可靠状态。</li>
-<li>从聊天室退出后再进入聊天室，该状态不可信。 </li>
+<li>加入聊天室后，收到一键禁言/取消禁言的回调时，该状态会更新。 </li>
 </ul>
 
 </div>
@@ -419,6 +424,75 @@ $(function() {
 </table>
 </div><div class="memdoc">
 <p >当前用户在群组中的角色。 </p>
+
+</div>
+</div>
+<a id="a75b26580b682d2f6900cc9150d9cddd3" name="a75b26580b682d2f6900cc9150d9cddd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75b26580b682d2f6900cc9150d9cddd3">&#9670;&nbsp;</a></span>CreateTimeStamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long AgoraChat.Room.CreateTimeStamp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >聊天室创建时间戳。 只有加入聊天室时可获取。 </p>
+
+</div>
+</div>
+<a id="a4a592a6e18183fad92ef8c4d134cdde1" name="a4a592a6e18183fad92ef8c4d134cdde1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a592a6e18183fad92ef8c4d134cdde1">&#9670;&nbsp;</a></span>IsInAllowList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AgoraChat.Room.IsInAllowList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >当前登录用户是否在白名单中。 加入聊天室时可获取。 当前用户被加入或者被移除白名单时，此属性会发生变化。 </p>
+
+</div>
+</div>
+<a id="ab286214f8fe22d2a989158f77742cabd" name="ab286214f8fe22d2a989158f77742cabd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab286214f8fe22d2a989158f77742cabd">&#9670;&nbsp;</a></span>MuteUntilTimeStamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long AgoraChat.Room.MuteUntilTimeStamp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >当前被禁言截止时间戳（毫秒）。 当取值为0，表示当前用户未被禁言。 当取值为-1，表示未能获取到用户被禁言时间戳。 加入聊天室时可获取。 当前用户被禁言或者被解除禁言时，此属性会被更新。 </p>
 
 </div>
 </div>
