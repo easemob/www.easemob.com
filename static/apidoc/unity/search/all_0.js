@@ -31,13 +31,14 @@ var searchData=
   ['all_28',['ALL',['../namespace_agora_chat.html#a5b46368751bc6fc3ba812aa433030fc1a5fb1f955b45e38e31789286a1790398d',1,'AgoraChat']]],
   ['announcement_29',['Announcement',['../class_agora_chat_1_1_group.html#a0a228d2800190d7d8235ab6cf6dd9cab',1,'AgoraChat.Group.Announcement()'],['../class_agora_chat_1_1_room.html#ae66cb3637ac5c35418667bde349db019',1,'AgoraChat.Room.Announcement()']]],
   ['appendmessage_30',['AppendMessage',['../class_agora_chat_1_1_conversation.html#a0daec1dad018c8705ff9afb2d32c5f15',1,'AgoraChat::Conversation']]],
-  ['appkey_31',['AppKey',['../class_agora_chat_1_1_options.html#a35b926916c2ac258d2e1ab43c89716e5',1,'AgoraChat::Options']]],
-  ['applyjointogroup_32',['applyJoinToGroup',['../class_agora_chat_1_1_group_manager.html#a71a3814a818d451b1789cc7369dba981',1,'AgoraChat::GroupManager']]],
-  ['areacode_33',['AreaCode',['../class_agora_chat_1_1_options.html#a3bb33c3eb48f6986824c3c11f9e83e15',1,'AgoraChat.Options.AreaCode()'],['../namespace_agora_chat.html#a25cdb64c624892d782adc29654d51c0d',1,'AgoraChat.AreaCode()']]],
-  ['attributes_34',['Attributes',['../class_agora_chat_1_1_message.html#aad0e4eecef625f5ea4db544588f97bdb',1,'AgoraChat::Message']]],
-  ['attributevaluetype_35',['AttributeValueType',['../namespace_agora_chat.html#a292bc538f956ba5bf2976941df4b469b',1,'AgoraChat']]],
-  ['autoacceptgroupinvitation_36',['AutoAcceptGroupInvitation',['../class_agora_chat_1_1_options.html#a683d534d59193ab3805c2ef97ba8ddd2',1,'AgoraChat::Options']]],
-  ['autologin_37',['AutoLogin',['../class_agora_chat_1_1_options.html#ab37563e2a51a2bbe67eab2baaeaf00a8',1,'AgoraChat::Options']]],
-  ['avatarurl_38',['AvatarUrl',['../class_agora_chat_1_1_user_info.html#ae5b7d5b9ab7bd757c84543816f4de8a8',1,'AgoraChat::UserInfo']]],
-  ['messagebody_39',['MessageBody',['../namespace_agora_chat_1_1_message_body.html',1,'AgoraChat']]]
+  ['appid_31',['AppId',['../class_agora_chat_1_1_options.html#a22656d439ac381344591f5fca3a2da95',1,'AgoraChat::Options']]],
+  ['appkey_32',['AppKey',['../class_agora_chat_1_1_options.html#a35b926916c2ac258d2e1ab43c89716e5',1,'AgoraChat::Options']]],
+  ['applyjointogroup_33',['applyJoinToGroup',['../class_agora_chat_1_1_group_manager.html#a71a3814a818d451b1789cc7369dba981',1,'AgoraChat::GroupManager']]],
+  ['areacode_34',['AreaCode',['../class_agora_chat_1_1_options.html#a3bb33c3eb48f6986824c3c11f9e83e15',1,'AgoraChat.Options.AreaCode()'],['../namespace_agora_chat.html#a25cdb64c624892d782adc29654d51c0d',1,'AgoraChat.AreaCode()']]],
+  ['attributes_35',['Attributes',['../class_agora_chat_1_1_message.html#aad0e4eecef625f5ea4db544588f97bdb',1,'AgoraChat::Message']]],
+  ['attributevaluetype_36',['AttributeValueType',['../namespace_agora_chat.html#a292bc538f956ba5bf2976941df4b469b',1,'AgoraChat']]],
+  ['autoacceptgroupinvitation_37',['AutoAcceptGroupInvitation',['../class_agora_chat_1_1_options.html#a683d534d59193ab3805c2ef97ba8ddd2',1,'AgoraChat::Options']]],
+  ['autologin_38',['AutoLogin',['../class_agora_chat_1_1_options.html#ab37563e2a51a2bbe67eab2baaeaf00a8',1,'AgoraChat::Options']]],
+  ['avatarurl_39',['AvatarUrl',['../class_agora_chat_1_1_user_info.html#ae5b7d5b9ab7bd757c84543816f4de8a8',1,'AgoraChat::UserInfo']]],
+  ['messagebody_40',['MessageBody',['../namespace_agora_chat_1_1_message_body.html',1,'AgoraChat']]]
 ];

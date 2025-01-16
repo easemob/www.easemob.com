@@ -23,12 +23,13 @@ var searchData=
   ['getlastmessageaccordingthreads_20',['GetLastMessageAccordingThreads',['../class_agora_chat_1_1_chat_thread_manager.html#a2d7daf9156022a20df9b801400be31c4',1,'AgoraChat::ChatThreadManager']]],
   ['getloggedindevicesfromserver_21',['GetLoggedInDevicesFromServer',['../class_agora_chat_1_1_s_d_k_client.html#ad2142591dda9191a5e1e7b135be83c62',1,'AgoraChat::SDKClient']]],
   ['getloggedindevicesfromserverwithtoken_22',['GetLoggedInDevicesFromServerWithToken',['../class_agora_chat_1_1_s_d_k_client.html#a3cf0156be350178cd1f1a39b5b6eba2f',1,'AgoraChat::SDKClient']]],
-  ['getpinnedmessagesfromserver_23',['GetPinnedMessagesFromServer',['../class_agora_chat_1_1_chat_manager.html#a89929a226ecf4c29a5a700475b282514',1,'AgoraChat::ChatManager']]],
-  ['getreactiondetail_24',['GetReactionDetail',['../class_agora_chat_1_1_chat_manager.html#add844be4a1d53d0f3e47715c87dc3815',1,'AgoraChat::ChatManager']]],
-  ['getreactionlist_25',['GetReactionList',['../class_agora_chat_1_1_chat_manager.html#a88cd0affad00b2a1e5058ed4aeb9e4fd',1,'AgoraChat::ChatManager']]],
-  ['getselfidsonotherplatform_26',['GetSelfIdsOnOtherPlatform',['../class_agora_chat_1_1_contact_manager.html#a83d91b4c75012d26ba4fb626f15b468d',1,'AgoraChat::ContactManager']]],
-  ['getthreadconversation_27',['GetThreadConversation',['../class_agora_chat_1_1_chat_manager.html#aac65dd4b853aedd199f4790f45cc077e',1,'AgoraChat::ChatManager']]],
-  ['getthreaddetail_28',['GetThreadDetail',['../class_agora_chat_1_1_chat_thread_manager.html#a787ac6f25874986dbd355e55d8eaed13',1,'AgoraChat::ChatThreadManager']]],
-  ['getunreadmessagecount_29',['GetUnreadMessageCount',['../class_agora_chat_1_1_chat_manager.html#a822f4e52a6d094a61d2a1b659ae2b45f',1,'AgoraChat::ChatManager']]],
-  ['groupoptions_30',['GroupOptions',['../class_agora_chat_1_1_group_options.html#a838257c372b2deb3f0f3f9fb225ba81c',1,'AgoraChat::GroupOptions']]]
+  ['getmessagecount_23',['GetMessageCount',['../class_agora_chat_1_1_chat_manager.html#a59d13f688e3ba80e6c18b76887bcff22',1,'AgoraChat::ChatManager']]],
+  ['getpinnedmessagesfromserver_24',['GetPinnedMessagesFromServer',['../class_agora_chat_1_1_chat_manager.html#a89929a226ecf4c29a5a700475b282514',1,'AgoraChat::ChatManager']]],
+  ['getreactiondetail_25',['GetReactionDetail',['../class_agora_chat_1_1_chat_manager.html#add844be4a1d53d0f3e47715c87dc3815',1,'AgoraChat::ChatManager']]],
+  ['getreactionlist_26',['GetReactionList',['../class_agora_chat_1_1_chat_manager.html#a88cd0affad00b2a1e5058ed4aeb9e4fd',1,'AgoraChat::ChatManager']]],
+  ['getselfidsonotherplatform_27',['GetSelfIdsOnOtherPlatform',['../class_agora_chat_1_1_contact_manager.html#a83d91b4c75012d26ba4fb626f15b468d',1,'AgoraChat::ContactManager']]],
+  ['getthreadconversation_28',['GetThreadConversation',['../class_agora_chat_1_1_chat_manager.html#aac65dd4b853aedd199f4790f45cc077e',1,'AgoraChat::ChatManager']]],
+  ['getthreaddetail_29',['GetThreadDetail',['../class_agora_chat_1_1_chat_thread_manager.html#a787ac6f25874986dbd355e55d8eaed13',1,'AgoraChat::ChatThreadManager']]],
+  ['getunreadmessagecount_30',['GetUnreadMessageCount',['../class_agora_chat_1_1_chat_manager.html#a822f4e52a6d094a61d2a1b659ae2b45f',1,'AgoraChat::ChatManager']]],
+  ['groupoptions_31',['GroupOptions',['../class_agora_chat_1_1_group_options.html#a838257c372b2deb3f0f3f9fb225ba81c',1,'AgoraChat::GroupOptions']]]
 ];

@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.3.1</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -103,6 +103,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a90df2e93ef197f9e923efc6df23a0a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a822f4e52a6d094a61d2a1b659ae2b45f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_chat_manager.html#a822f4e52a6d094a61d2a1b659ae2b45f">GetUnreadMessageCount</a> ()</td></tr>
 <tr class="separator:a822f4e52a6d094a61d2a1b659ae2b45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59d13f688e3ba80e6c18b76887bcff22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_chat_manager.html#a59d13f688e3ba80e6c18b76887bcff22">GetMessageCount</a> (<a class="el" href="class_agora_chat_1_1_value_call_back.html">ValueCallBack</a>&lt; int &gt; callback=null)</td></tr>
+<tr class="separator:a59d13f688e3ba80e6c18b76887bcff22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6259670ab78ecbeec5f5b4c72848e9e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_chat_manager.html#a6259670ab78ecbeec5f5b4c72848e9e0">ImportMessages</a> (List&lt; <a class="el" href="class_agora_chat_1_1_message.html">Message</a> &gt; messages, <a class="el" href="class_agora_chat_1_1_call_back.html">CallBack</a> callback=null)</td></tr>
 <tr class="separator:a6259670ab78ecbeec5f5b4c72848e9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad642bb7b0ff01b41f1f1c2951109593b"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_agora_chat_1_1_conversation.html">Conversation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_chat_manager.html#ad642bb7b0ff01b41f1f1c2951109593b">LoadAllConversations</a> ()</td></tr>
@@ -658,6 +660,32 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p >获取未读消息数。</p>
 <dl class="section return"><dt>返回</dt><dd>未读消息数。 </dd></dl>
+
+</div>
+</div>
+<a id="a59d13f688e3ba80e6c18b76887bcff22" name="a59d13f688e3ba80e6c18b76887bcff22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59d13f688e3ba80e6c18b76887bcff22">&#9670;&nbsp;</a></span>GetMessageCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.ChatManager.GetMessageCount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_agora_chat_1_1_value_call_back.html">ValueCallBack</a>&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>callback</em> = <code>null</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >获取数据库中的消息总数。</p>
+<dl class="section return"><dt>返回</dt><dd>消息总数。 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>成功返回消息总数，失败返回-1，详见 <code><a class="el" href="class_agora_chat_1_1_value_call_back.html">ValueCallBack</a></code>。 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2046,7 +2074,6 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >消息置顶或取消置顶。</p>
-<p >仅支持群组消息。</p>
 <p >异步方法。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
