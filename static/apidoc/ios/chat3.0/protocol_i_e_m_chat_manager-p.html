@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.12.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.13.0</span>
    </div>
   </td>
  </tr>
@@ -125,6 +125,8 @@ $(function() {
 <tr class="separator:aafceafd5a80d99c0d02d96baf66e24af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dd33664277ed76c4208af4150a74987"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a1dd33664277ed76c4208af4150a74987">modifyMessage:body:completion:</a></td></tr>
 <tr class="separator:a1dd33664277ed76c4208af4150a74987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eed319dc3627aff8c44d65502d8c875"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a1eed319dc3627aff8c44d65502d8c875">modifyMessage:body:ext:completion:</a></td></tr>
+<tr class="separator:a1eed319dc3627aff8c44d65502d8c875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad332c114b5e7bc3c7945923fa19b8eb8"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#ad332c114b5e7bc3c7945923fa19b8eb8">sendMessageReadAck:toUser:completion:</a></td></tr>
 <tr class="separator:ad332c114b5e7bc3c7945923fa19b8eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3da6f68c3fb96564d93d493ff21d0542"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a3da6f68c3fb96564d93d493ff21d0542">sendGroupMessageReadAck:toGroup:content:completion:</a></td></tr>
@@ -2638,11 +2640,75 @@ $(function() {
 </table>
 </div><div class="memdoc">
 <p >修改本地以及服务端的消息内容。</p>
-<p >你只能调用该方法修改单聊和群聊中的文本消息，不能修改聊天室消息。 </p><dl class="params"><dt>参数</dt><dd>
+<p >支持文本消息和自定义消息的修改。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">messageId</td><td>消息实例id。 </td></tr>
-    <tr><td class="paramname">body</td><td>文本消息体实例（EMTextMessageBody）。 </td></tr>
+    <tr><td class="paramname">body</td><td>消息体实例。 </td></tr>
     <tr><td class="paramname">completionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。成功则error为空，message不为空 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1eed319dc3627aff8c44d65502d8c875" name="a1eed319dc3627aff8c44d65502d8c875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eed319dc3627aff8c44d65502d8c875">&#9670;&nbsp;</a></span>modifyMessage:body:ext:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) modifyMessage: </td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nonnull)&#160;</td>
+          <td class="paramname"><em>messageId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">body:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_message_body.html">EMMessageBody</a> *_Nullable)&#160;</td>
+          <td class="paramname"><em>body</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">ext:</td>
+          <td></td>
+          <td class="paramtype">(NSDictionary *_Nullable)&#160;</td>
+          <td class="paramname"><em>ext</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable error, <a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message))&#160;</td>
+          <td class="paramname"><em>completionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >修改本地以及服务端消息。</p>
+<ul>
+<li>文本/自定义消息：支持修改消息内容（body）和扩展 <code>ext</code>。</li>
+<li>文件/视频/音频/图片/位置/合并转发消息：只支持修改消息扩展 <code>ext</code>。</li>
+<li>命令消息：不支持修改。</li>
+</ul>
+<p >该方法会同时更新服务器和本地的消息，消息 ID 不会更新。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">messageId</td><td>要修改的消息 ID。 </td></tr>
+    <tr><td class="paramname">body</td><td>修改后的消息 body。只有文本消息和自定义消息支持，传 nil 表示不修改。 </td></tr>
+    <tr><td class="paramname">ext</td><td>修改后的消息扩展信息，将会覆盖之前的扩展信息，传 nil 表示不修改。 </td></tr>
+    <tr><td class="paramname">completionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
 </dl>
