@@ -58,5 +58,6 @@ var searchData=
   ['resendmessage_3aprogress_3acompletion_3a_55',['resendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#a50bac38b79c7015fd6a3e6db7e768b6a',1,'IEMChatManager-p']]],
   ['resource_56',['resource',['../interface_e_m_device_config.html#ad7b34d60d92b577bb36671ce9a92c367',1,'EMDeviceConfig']]],
   ['restserver_57',['restServer',['../category_e_m_options_07_private_deploy_08.html#a534277c754dd1448227b01fa2401d68d',1,'EMOptions(PrivateDeploy)::restServer()'],['../interface_e_m_options.html#a534277c754dd1448227b01fa2401d68d',1,'EMOptions::restServer()']]],
-  ['roommanager_58',['roomManager',['../interface_e_m_client.html#a4452e4b2d78d5ed52bc202b46dfdb1c5',1,'EMClient']]]
+  ['role_58',['role',['../interface_e_m_group_member_info.html#af2172b83a202c4c4b91abb2360e510c0',1,'EMGroupMemberInfo']]],
+  ['roommanager_59',['roomManager',['../interface_e_m_client.html#a4452e4b2d78d5ed52bc202b46dfdb1c5',1,'EMClient']]]
 ];
