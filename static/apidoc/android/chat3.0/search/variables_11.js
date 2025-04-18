@@ -16,5 +16,5 @@ var searchData=
   ['translate_5fparam_5finvalid_13',['TRANSLATE_PARAM_INVALID',['../classcom_1_1hyphenate_1_1_e_m_error.html#a4ff182b47d97eebc5a165603c9320983',1,'com::hyphenate::EMError']]],
   ['translate_5fservice_5fnot_5fenable_14',['TRANSLATE_SERVICE_NOT_ENABLE',['../classcom_1_1hyphenate_1_1_e_m_error.html#a29641910da37ea3c2a90cba0f7f188e2',1,'com::hyphenate::EMError']]],
   ['translate_5fusage_5flimit_15',['TRANSLATE_USAGE_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#ab71ac898621979a21b0e515e15435c5b',1,'com::hyphenate::EMError']]],
-  ['txt_16',['TXT',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a0157bc665bb470f9893a03e7adcf3125',1,'com.hyphenate.chat.EMMessage.Type.TXT()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#af46942dc98601c6c9e59c8ecd861a5c7',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.TXT()']]]
+  ['txt_16',['TXT',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a0157bc665bb470f9893a03e7adcf3125',1,'com.hyphenate.chat.EMMessage.Type.TXT'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#af46942dc98601c6c9e59c8ecd861a5c7',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.TXT']]]
 ];
