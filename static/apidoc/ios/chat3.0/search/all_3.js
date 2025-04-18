@@ -45,13 +45,14 @@ var searchData=
   ['createchatroomwithsubject_3adescription_3ainvitees_3amessage_3amaxmemberscount_3aerror_3a_42',['createChatroomWithSubject:description:invitees:message:maxMembersCount:error:',['../protocol_i_e_m_chatroom_manager-p.html#af0a1c68e882cbbd81defb3d988f7f427',1,'IEMChatroomManager-p']]],
   ['createchatthread_3amessageid_3aparentid_3acompletion_3a_43',['createChatThread:messageId:parentId:completion:',['../protocol_i_e_m_thread_manager-p.html#a37d9a0e16c76bd9430ba32715ea76666',1,'IEMThreadManager-p']]],
   ['createdat_44',['createdAt',['../interface_e_m_group_shared_file.html#a787ee4129494d43c45bec76f8c3f81f8',1,'EMGroupSharedFile']]],
-  ['creategroupwithsubject_3adescription_3ainvitees_3amessage_3asetting_3acompletion_3a_45',['createGroupWithSubject:description:invitees:message:setting:completion:',['../protocol_i_e_m_group_manager-p.html#ab03c6485fb9d37334d93107af607b3d0',1,'IEMGroupManager-p']]],
-  ['creategroupwithsubject_3adescription_3ainvitees_3amessage_3asetting_3aerror_3a_46',['createGroupWithSubject:description:invitees:message:setting:error:',['../protocol_i_e_m_group_manager-p.html#a586d68853275b206a8ff17ada48f186e',1,'IEMGroupManager-p']]],
-  ['createtimestamp_47',['createTimestamp',['../interface_e_m_chatroom.html#aadc16ae57b2297b1fd14b96f9b533adf',1,'EMChatroom']]],
-  ['currentusername_48',['currentUsername',['../interface_e_m_client.html#a83d84fbc4487b6f4d277bd9332ad5cb1',1,'EMClient']]],
-  ['cursor_49',['cursor',['../interface_e_m_cursor_result.html#ad29bc7b182a4d7b70cf72bfc3836ff8d',1,'EMCursorResult']]],
-  ['cursorresultwithlist_3aandcursor_3a_50',['cursorResultWithList:andCursor:',['../interface_e_m_cursor_result.html#a84868c30b11626eb76b9df3cff517f7a',1,'EMCursorResult']]],
-  ['customdevicename_51',['customDeviceName',['../interface_e_m_options.html#a8f40d9f090c30ff618a7d509ead6867c',1,'EMOptions']]],
-  ['customext_52',['customExt',['../interface_e_m_custom_message_body.html#ad110e86dda1ae171e0c601c8e5a12ee2',1,'EMCustomMessageBody']]],
-  ['customostype_53',['customOSType',['../interface_e_m_options.html#a0ca76eff77eb9229fea6f4df027cc11b',1,'EMOptions']]]
+  ['creategroupwithsubject_3aavatar_3adescription_3ainvitees_3amessage_3asetting_3acompletion_3a_45',['createGroupWithSubject:avatar:description:invitees:message:setting:completion:',['../protocol_i_e_m_group_manager-p.html#a0e9f37b255b794166343dc94fce9c689',1,'IEMGroupManager-p']]],
+  ['creategroupwithsubject_3adescription_3ainvitees_3amessage_3asetting_3acompletion_3a_46',['createGroupWithSubject:description:invitees:message:setting:completion:',['../protocol_i_e_m_group_manager-p.html#ab03c6485fb9d37334d93107af607b3d0',1,'IEMGroupManager-p']]],
+  ['creategroupwithsubject_3adescription_3ainvitees_3amessage_3asetting_3aerror_3a_47',['createGroupWithSubject:description:invitees:message:setting:error:',['../protocol_i_e_m_group_manager-p.html#a586d68853275b206a8ff17ada48f186e',1,'IEMGroupManager-p']]],
+  ['createtimestamp_48',['createTimestamp',['../interface_e_m_chatroom.html#aadc16ae57b2297b1fd14b96f9b533adf',1,'EMChatroom']]],
+  ['currentusername_49',['currentUsername',['../interface_e_m_client.html#a83d84fbc4487b6f4d277bd9332ad5cb1',1,'EMClient']]],
+  ['cursor_50',['cursor',['../interface_e_m_cursor_result.html#ad29bc7b182a4d7b70cf72bfc3836ff8d',1,'EMCursorResult']]],
+  ['cursorresultwithlist_3aandcursor_3a_51',['cursorResultWithList:andCursor:',['../interface_e_m_cursor_result.html#a84868c30b11626eb76b9df3cff517f7a',1,'EMCursorResult']]],
+  ['customdevicename_52',['customDeviceName',['../interface_e_m_options.html#a8f40d9f090c30ff618a7d509ead6867c',1,'EMOptions']]],
+  ['customext_53',['customExt',['../interface_e_m_custom_message_body.html#ad110e86dda1ae171e0c601c8e5a12ee2',1,'EMCustomMessageBody']]],
+  ['customostype_54',['customOSType',['../interface_e_m_options.html#a0ca76eff77eb9229fea6f4df027cc11b',1,'EMOptions']]]
 ];
