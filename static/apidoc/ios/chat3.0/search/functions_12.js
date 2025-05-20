@@ -54,9 +54,11 @@ var searchData=
   ['userdidforbidbyserver_51',['userDidForbidByServer',['../protocol_e_m_client_delegate-p.html#a4cbb63f33783bd5cdea2295e091da904',1,'EMClientDelegate-p']]],
   ['userdidjoinchatroom_3auser_3a_52',['userDidJoinChatroom:user:',['../protocol_e_m_chatroom_manager_delegate-p.html#acde29e22a18655f5e245c5a1b379a92a',1,'EMChatroomManagerDelegate-p']]],
   ['userdidjoinchatroom_3auser_3aext_3a_53',['userDidJoinChatroom:user:ext:',['../protocol_e_m_chatroom_manager_delegate-p.html#a13bda37da8ee134e12293837db8c4181',1,'EMChatroomManagerDelegate-p']]],
-  ['userdidjoingroup_3auser_3a_54',['userDidJoinGroup:user:',['../protocol_e_m_group_manager_delegate-p.html#a04f6d088bcc47056f80ad9d133dc9c59',1,'EMGroupManagerDelegate-p']]],
-  ['userdidleavechatroom_3auser_3a_55',['userDidLeaveChatroom:user:',['../protocol_e_m_chatroom_manager_delegate-p.html#acd5c334bf17fde779940f077b58ed547',1,'EMChatroomManagerDelegate-p']]],
-  ['userdidleavegroup_3auser_3a_56',['userDidLeaveGroup:user:',['../protocol_e_m_group_manager_delegate-p.html#a724340821f29143bd19b915c7d2ba201',1,'EMGroupManagerDelegate-p']]],
-  ['usernotificationcenter_3adidreceivenotificationresponse_3awithcompletionhandler_3a_57',['userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:',['../interface_e_m_local_notification_manager.html#a8b62afe6d50e92508e0fb23dbe84b3cf',1,'EMLocalNotificationManager']]],
-  ['usernotificationcenter_3awillpresentnotification_3awithcompletionhandler_3a_58',['userNotificationCenter:willPresentNotification:withCompletionHandler:',['../interface_e_m_local_notification_manager.html#a6f4c04e0115952cf84ce3f0b24a0df3b',1,'EMLocalNotificationManager']]]
+  ['userdidjoingroup_3auser_3a_54',['userDidJoinGroup:user:',['../protocol_e_m_group_manager_delegate-p.html#a1cce16f39a1967de0ac74ff2d16d7560',1,'EMGroupManagerDelegate-p']]],
+  ['userdidjoingroup_3ausers_3a_55',['userDidJoinGroup:users:',['../protocol_e_m_group_manager_delegate-p.html#ae015a0c727385c09fa0c0e474512fcc0',1,'EMGroupManagerDelegate-p']]],
+  ['userdidleavechatroom_3auser_3a_56',['userDidLeaveChatroom:user:',['../protocol_e_m_chatroom_manager_delegate-p.html#acd5c334bf17fde779940f077b58ed547',1,'EMChatroomManagerDelegate-p']]],
+  ['userdidleavegroup_3auser_3a_57',['userDidLeaveGroup:user:',['../protocol_e_m_group_manager_delegate-p.html#a4cfd72a74166d50a65cf3e0ffd6d1adb',1,'EMGroupManagerDelegate-p']]],
+  ['userdidleavegroup_3ausers_3a_58',['userDidLeaveGroup:users:',['../protocol_e_m_group_manager_delegate-p.html#ac8c7534954b5aae58878dd80972331d9',1,'EMGroupManagerDelegate-p']]],
+  ['usernotificationcenter_3adidreceivenotificationresponse_3awithcompletionhandler_3a_59',['userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:',['../interface_e_m_local_notification_manager.html#a8b62afe6d50e92508e0fb23dbe84b3cf',1,'EMLocalNotificationManager']]],
+  ['usernotificationcenter_3awillpresentnotification_3awithcompletionhandler_3a_60',['userNotificationCenter:willPresentNotification:withCompletionHandler:',['../interface_e_m_local_notification_manager.html#a6f4c04e0115952cf84ce3f0b24a0df3b',1,'EMLocalNotificationManager']]]
 ];

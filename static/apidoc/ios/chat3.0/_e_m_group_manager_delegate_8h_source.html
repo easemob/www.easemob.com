@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.14.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.15.0</span>
    </div>
   </td>
  </tr>
@@ -150,11 +150,11 @@ $(function() {
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                   newOwner:(NSString *_Nonnull)aNewOwner</div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                   oldOwner:(NSString *_Nonnull)aOldOwner;</div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>- (void)userDidJoinGroup:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                    user:(NSString *_Nonnull)aUsername;</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>- (void)userDidJoinGroup:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)group</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                   users:(NSArray&lt;NSString*&gt; *_Nonnull)userIds;</div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span> </div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>- (void)userDidLeaveGroup:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                     user:(NSString *_Nonnull)aUsername;</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>- (void)userDidLeaveGroup:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)group</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                    users:(NSArray&lt;NSString *&gt;* _Nonnull)userIds;</div>
 <div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span> </div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>- (void)groupAnnouncementDidUpdate:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>                      announcement:(NSString *_Nullable)aAnnouncement;</div>
@@ -175,7 +175,13 @@ $(function() {
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span> </div>
 <div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>- (void)joinGroupRequestDidDecline:(NSString *_Nonnull)aGroupId</div>
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>                            reason:(NSString *_Nullable)aReason EM_DEPRECATED_IOS(3_1_0, 4_2_0, &quot;Use -joinGroupRequestDidDecline:reason:applicant: instead&quot;);</div>
-<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span> </div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>- (void)userDidJoinGroup:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                    user:(NSString *_Nonnull)aUsername EM_DEPRECATED_IOS(3_1_0, 4_15_0, &quot;Use -userDidJoinGroup:users: instead&quot;);</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span> </div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>- (void)userDidLeaveGroup:(<a class="code hl_interface" href="interface_e_m_group.html">EMGroup</a> *_Nonnull)aGroup</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>                     user:(NSString *_Nonnull)aUsername  EM_DEPRECATED_IOS(3_1_0, 4_15_0, &quot;Use -userDidLeaveGroup:users: instead&quot;);</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span><span class="keyword">@end</span></div>
 <div class="ttc" id="ainterface_e_m_group_html"><div class="ttname"><a href="interface_e_m_group.html">EMGroup</a></div><div class="ttdef"><b>Definition:</b> EMGroup.h:32</div></div>
 <div class="ttc" id="ainterface_e_m_group_shared_file_html"><div class="ttname"><a href="interface_e_m_group_shared_file.html">EMGroupSharedFile</a></div><div class="ttdef"><b>Definition:</b> EMGroupSharedFile.h:24</div></div>
 <div class="ttc" id="aprotocol_e_m_group_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_group_manager_delegate-p.html">EMGroupManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMGroupManagerDelegate.h:40</div></div>
