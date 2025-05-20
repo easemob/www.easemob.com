@@ -12,6 +12,8 @@ var interfacecom_1_1hyphenate_1_1_e_m_group_change_listener =
     [ "onInvitationReceived", "interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#ab3591c00dc3f5b4138fa57073cc29589", null ],
     [ "onMemberExited", "interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a4029cc87388cb50e21cafd2154819595", null ],
     [ "onMemberJoined", "interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a3ae56739e02abf221fa513524232b6e1", null ],
+    [ "onMembersExited", "interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a668ad150f01d5c4e08608ff0d87a052a", null ],
+    [ "onMembersJoined", "interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#adff803babaef32b42a862ffd7dc7b318", null ],
     [ "onMuteListAdded", "interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#afa4df48cc8b76121596342bea0b3b846", null ],
     [ "onMuteListRemoved", "interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a7bf35b1a3e307a6137af2d1cc09b885c", null ],
     [ "onOwnerChanged", "interfacecom_1_1hyphenate_1_1_e_m_group_change_listener.html#a0abd1880b53d45959aa50884cc9fd420", null ],

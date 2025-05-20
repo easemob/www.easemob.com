@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_presence.html#aeb39f817c7311a67e726b6455e7dd35e":[1,0,0,0,0,38,0],
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html":[1,0,0,0,0,39],
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#a2a8ce160095f88357e27bdd57e20dc88":[1,0,0,0,0,39,4],
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#a3c528a74756a731cfa3142314ba83567":[1,0,0,0,0,39,0],
 "classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#a66ea1f4d0ed5674efc4f21aef84a80db":[1,0,0,0,0,39,6],
 "classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#a6a0c08a3fa7b813d3c24e02440b0d768":[1,0,0,0,0,39,1],
 "classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#a82548a4a7a737a1f9a07df3938563849":[1,0,0,0,0,39,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "functions_func.html":[1,3,1,0],
 "functions_func_b.html":[1,3,1,1],
 "functions_func_c.html":[1,3,1,2],
-"functions_func_d.html":[1,3,1,3],
-"functions_func_e.html":[1,3,1,4],
-"functions_func_f.html":[1,3,1,5],
-"functions_func_g.html":[1,3,1,6],
-"functions_func_h.html":[1,3,1,7]
+"functions_func_d.html":[1,3,1,3]
 };
