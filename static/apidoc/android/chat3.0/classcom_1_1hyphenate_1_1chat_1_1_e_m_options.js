@@ -29,6 +29,8 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_options =
     [ "getRequireAck", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a0f51be991905e1201b5b44022aaba007", null ],
     [ "getRequireDeliveryAck", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a57813680cb9b555d3ec0a0a8395dc1e0", null ],
     [ "getRestServer", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a144a78665cb4f0a05bd03d2bb58c1d5e", null ],
+    [ "getSDKPlatform", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a2cdef8dc2c0e9d3850933ed3bcad5e6f", null ],
+    [ "getUIKitVersion", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a4a1d08c5f60f6ee4a81dc2cadd5e5cf4", null ],
     [ "getUsingHttpsOnly", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a752057ecd7333f9c73fa481a4a6510e7", null ],
     [ "getVersion", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aedb2d4058c97e2c2ede12ac239def4ea", null ],
     [ "isAutoLoadAllConversations", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a0b2bbe4915984130d4252d7b009a53a6", null ],
@@ -68,7 +70,9 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_options =
     [ "setRequireAck", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab827ec32187b9ecd0d8ebdc28459f012", null ],
     [ "setRequireDeliveryAck", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a806f3d93bec9e86e37cc863fbf172b46", null ],
     [ "setRestServer", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a27767756d0612a55314ee9ebcf6134c8", null ],
+    [ "setSDKPlatform", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a5adf69b1448031ba7835f6e42d6eabec", null ],
     [ "setSortMessageByServerTime", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a2dd97f19253ce7d3c6cbb23defa38d0e", null ],
+    [ "setUIKitVersion", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a59dc563d0c6ce81f745b4c855f613f3d", null ],
     [ "setUseReplacedMessageContents", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a51e1a8da35ec4a32ac52b3602368730e", null ],
     [ "setUsingHttpsOnly", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#acf81e94e11f74cd4acaaaf3e65a09314", null ]
 ];
