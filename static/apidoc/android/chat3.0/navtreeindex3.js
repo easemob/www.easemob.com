@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_presence.html#a9cda07c333da8f2cb6007c84c39562d1":[1,0,0,0,0,38,1],
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_presence.html#ad63770c20ff308bbb7bfcd3b85f1cba4":[1,0,0,0,0,38,2],
 "classcom_1_1hyphenate_1_1chat_1_1_e_m_presence.html#aeb39f817c7311a67e726b6455e7dd35e":[1,0,0,0,0,38,0],
 "classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html":[1,0,0,0,0,39],
 "classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#a2a8ce160095f88357e27bdd57e20dc88":[1,0,0,0,0,39,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "functions_f.html":[1,3,0,5],
 "functions_func.html":[1,3,1],
 "functions_func.html":[1,3,1,0],
-"functions_func_b.html":[1,3,1,1],
-"functions_func_c.html":[1,3,1,2],
-"functions_func_d.html":[1,3,1,3]
+"functions_func_b.html":[1,3,1,1]
 };

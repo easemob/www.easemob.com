@@ -23,6 +23,8 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager =
     [ "asyncGetPinnedMessagesFromServer", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a0f66105458047472a2d38085057cca3d", null ],
     [ "asyncGetReactionDetail", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a192b476f12be324e57d8b36e4a7b46e9", null ],
     [ "asyncGetReactionList", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#afa876567f3e1c9069ef3b6a237f3815b", null ],
+    [ "asyncLoadConversationMessagesWithKeyword", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ac6a482ea6b2c8f97764f4a84f89365d7", null ],
+    [ "asyncLoadMessages", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a5510e80bcf6e6f31fb27c53dac70691d", null ],
     [ "asyncModifyMessage", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ab86ac4019c52606c17a2e8ff50e9ac30", null ],
     [ "asyncModifyMessage", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ae594cdcf57e128276f6fcc624d725f72", null ],
     [ "asyncPinConversation", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a64839169e3dc9b895a00b080c86cb096", null ],
