@@ -75,6 +75,7 @@ var hierarchy =
     [ "com.hyphenate.chat.EMPushManager.EMPushRemindType", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager_1_1_e_m_push_remind_type.html", null ],
     [ "com.hyphenate.push.EMPushType", "enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html", null ],
     [ "com.hyphenate.EMResultCallBack< T >", "interfacecom_1_1hyphenate_1_1_e_m_result_call_back.html", null ],
+    [ "com.hyphenate.chat.EMRTCTokenInfo", "classcom_1_1hyphenate_1_1chat_1_1_e_m_r_t_c_token_info.html", null ],
     [ "com.hyphenate.chat.EMConversation.EMSearchDirection", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_search_direction.html", null ],
     [ "com.hyphenate.chat.EMStatisticsManager.EMSearchMessageDirect", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_direct.html", null ],
     [ "com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html", null ],

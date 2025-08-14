@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.15.1</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.16.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -206,6 +206,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a1492d6fc949f1bd70d4fe42f393bc7af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6918b88bd3d72bf3a6e838f9393361eb" id="r_a6918b88bd3d72bf3a6e838f9393361eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6918b88bd3d72bf3a6e838f9393361eb">check</a> (String username, String password, final CheckResultListener listener)</td></tr>
 <tr class="separator:a6918b88bd3d72bf3a6e838f9393361eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f42adc7db1e51a15b3f2732e6d49d6" id="r_ab8f42adc7db1e51a15b3f2732e6d49d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8f42adc7db1e51a15b3f2732e6d49d6">asyncGetRTCTokenInfoWithChannelName</a> (@Nullable String channelName, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_r_t_c_token_info.html">EMRTCTokenInfo</a> &gt; callBack)</td></tr>
+<tr class="separator:ab8f42adc7db1e51a15b3f2732e6d49d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4425c6f5058b560e873f48ccd7861b9d" id="r_a4425c6f5058b560e873f48ccd7861b9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4425c6f5058b560e873f48ccd7861b9d">asyncGetUserIdsWithRTCUids</a> (List&lt; Integer &gt; uIds, <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; Map&lt; Integer, String &gt; &gt; callBack)</td></tr>
+<tr class="separator:a4425c6f5058b560e873f48ccd7861b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>Chat 客户端类。该类是 Chat SDK 的入口，负责登录、登出及管理 SDK 与 chat 服务器之间的连接。</p>
@@ -283,6 +287,68 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">listener</td><td>要添加的多设备监听器。 详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html">EMMultiDeviceListener</a></code>, <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a54f0162e902a313349ac59c4caea67f5">EMMultiDeviceListener#onContactEvent(int, String, String)</a></code> 联系人事件回调， <code><a class="el" href="">EMMultiDeviceListener#onGroupEvent(int, String, List)</a></code> 群组事件回调。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab8f42adc7db1e51a15b3f2732e6d49d6" name="ab8f42adc7db1e51a15b3f2732e6d49d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f42adc7db1e51a15b3f2732e6d49d6">&#9670;&#160;</a></span>asyncGetRTCTokenInfoWithChannelName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMClient.asyncGetRTCTokenInfoWithChannelName </td>
+          <td>(</td>
+          <td class="paramtype">@Nullable String</td>          <td class="paramname"><span class="paramname"><em>channelName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_r_t_c_token_info.html">EMRTCTokenInfo</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>callBack</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>根据频道名称 (channelName) 获取 RTC token、token 过期时间以及即时通讯 IM 用户 ID 对应的 RTC UID。</p>
+<p>调用该接口前需要先开通 RTC 功能。</p>
+<p>如果 channelName 设置为 null，会生成支持所有频道的 RTC token。</p>
+<p>异步方法。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channelName</td><td>声网 RTC 频道名称。 </td></tr>
+    <tr><td class="paramname">callBack</td><td>该方法完成调用的回调。 如果该方法调用成功，返回 RTC Token、过期时间戳和 RTC UID。 如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4425c6f5058b560e873f48ccd7861b9d" name="a4425c6f5058b560e873f48ccd7861b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4425c6f5058b560e873f48ccd7861b9d">&#9670;&#160;</a></span>asyncGetUserIdsWithRTCUids()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMClient.asyncGetUserIdsWithRTCUids </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; Integer &gt;</td>          <td class="paramname"><span class="paramname"><em>uIds</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; Map&lt; Integer, String &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>callBack</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取声网 RTC UID 对应的即时通讯 IM 用户 ID。</p>
+<p>异步方法。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uIds</td><td>声网 Agora RTC UID 集合。 </td></tr>
+    <tr><td class="paramname">callBack</td><td>该方法完成调用的回调。 如果该方法调用成功，返回 RTC UID 与即时通讯 IM 用户 ID 之间的映射关系。 如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
 </dl>
