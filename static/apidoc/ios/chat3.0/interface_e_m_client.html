@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.15.1</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.16.0</span>
    </div>
   </td>
  </tr>
@@ -145,6 +145,10 @@ $(function() {
 <tr class="separator:abafb1f83bc8fd3f59043bc7dd6af8282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cca606a709bf84da4a5e4ba88b78957"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#a7cca606a709bf84da4a5e4ba88b78957">registerForRemoteNotificationsWithDeviceToken:completion:</a></td></tr>
 <tr class="separator:a7cca606a709bf84da4a5e4ba88b78957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a6dbdb781fc80a17b2b1384c42a645b"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#a3a6dbdb781fc80a17b2b1384c42a645b">getRTCTokenWithChannel:completion:</a></td></tr>
+<tr class="separator:a3a6dbdb781fc80a17b2b1384c42a645b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa87e36620f1a33278451f43c8372904d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#aa87e36620f1a33278451f43c8372904d">getUserIdByRTCUIds:completion:</a></td></tr>
+<tr class="separator:aa87e36620f1a33278451f43c8372904d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3bb4add07d45368d4cb675ab5e52de1"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#ab3bb4add07d45368d4cb675ab5e52de1">registerForRemoteNotificationsWithCertName:deviceToken:completion:</a></td></tr>
 <tr class="separator:ab3bb4add07d45368d4cb675ab5e52de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae48f35a65a173e756646cfb3ae407311"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_e_m_client.html#ae48f35a65a173e756646cfb3ae407311">bindFCMToken:completion:</a></td></tr>
@@ -832,6 +836,82 @@ Protected 属性</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>所有已经登录的设备信息列表，由 &lt;EMDeviceConfig&gt; 对象组成的数组。 </dd></dl>
+
+</div>
+</div>
+<a id="a3a6dbdb781fc80a17b2b1384c42a645b" name="a3a6dbdb781fc80a17b2b1384c42a645b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a6dbdb781fc80a17b2b1384c42a645b">&#9670;&nbsp;</a></span>getRTCTokenWithChannel:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) getRTCTokenWithChannel: </td>
+          <td></td>
+          <td class="paramtype">(NSString *_Nullable)&#160;</td>
+          <td class="paramname"><em>aChannelName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSUInteger rtcUId, NSString *_Nullable aToken, NSInteger expiredTs, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >根据频道名称 (channelName) 获取 RTC token、token 过期时间以及即时通讯 IM 用户 ID 对应的 RTC UID。</p>
+<p >调用该接口前需要先开通 RTC 功能。</p>
+<p >如果 channelName 设置为 nil，会生成支持所有频道的 RTC token。</p>
+<p >异步方法。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aChannelName</td><td>声网 RTC 频道名称。 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa87e36620f1a33278451f43c8372904d" name="aa87e36620f1a33278451f43c8372904d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa87e36620f1a33278451f43c8372904d">&#9670;&nbsp;</a></span>getUserIdByRTCUIds:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) getUserIdByRTCUIds: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; NSNumber * &gt; *_Nonnull)&#160;</td>
+          <td class="paramname"><em>uIds</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSDictionary&lt; NSNumber *, NSString * &gt; *_Nullable accountInfos, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable aError))&#160;</td>
+          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >获取声网 RTC UID 对应的即时通讯 IM 用户 ID。</p>
+<p >异步方法。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uIds</td><td>声网 Agora RTC UID 数组。 </td></tr>
+    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
