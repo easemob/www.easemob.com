@@ -3,6 +3,8 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_client =
     [ "addConnectionListener", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#acd1dab94f40f5d0c5b100edde4864334", null ],
     [ "addLogListener", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#ae195cca17221e97d8e8f4f0158ded1c6", null ],
     [ "addMultiDeviceListener", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a7dc367e46a9c0f0b7dc5962482e38792", null ],
+    [ "asyncGetRTCTokenInfoWithChannelName", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#ab8f42adc7db1e51a15b3f2732e6d49d6", null ],
+    [ "asyncGetUserIdsWithRTCUids", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a4425c6f5058b560e873f48ccd7861b9d", null ],
     [ "changeAppId", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#af3d7bc8ed8a8c8c21eba03bb64fb52fd", null ],
     [ "changeAppkey", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a5e6eca765750112021feebc1d4f0793b", null ],
     [ "chatManager", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a4e6f34a56c359a9e5420dbfefadb15a8", null ],

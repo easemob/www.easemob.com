@@ -45,6 +45,7 @@ var annotated_dup =
           [ "EMPresenceManager", "classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager" ],
           [ "EMPushConfigs", "classcom_1_1hyphenate_1_1chat_1_1_e_m_push_configs.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_push_configs" ],
           [ "EMPushManager", "classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager" ],
+          [ "EMRTCTokenInfo", "classcom_1_1hyphenate_1_1chat_1_1_e_m_r_t_c_token_info.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_r_t_c_token_info" ],
           [ "EMSilentModeParam", "classcom_1_1hyphenate_1_1chat_1_1_e_m_silent_mode_param.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_silent_mode_param" ],
           [ "EMSilentModeResult", "classcom_1_1hyphenate_1_1chat_1_1_e_m_silent_mode_result.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_silent_mode_result" ],
           [ "EMSilentModeTime", "classcom_1_1hyphenate_1_1chat_1_1_e_m_silent_mode_time.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_silent_mode_time" ],
