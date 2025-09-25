@@ -33,6 +33,8 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_options =
     [ "getUIKitVersion", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a4a1d08c5f60f6ee4a81dc2cadd5e5cf4", null ],
     [ "getUsingHttpsOnly", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a752057ecd7333f9c73fa481a4a6510e7", null ],
     [ "getVersion", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aedb2d4058c97e2c2ede12ac239def4ea", null ],
+    [ "getWebSocketPort", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ae052d076dc44320780d772f45cd44d8d", null ],
+    [ "getWebSocketServer", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a748560ac91fd4b988d045db3dc4e3ce4", null ],
     [ "isAutoLoadAllConversations", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a0b2bbe4915984130d4252d7b009a53a6", null ],
     [ "isEnableStatistics", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a684c2b3058a2eb5a64e268f204e86f70", null ],
     [ "isEnableTLSConnection", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a44e210b984ee0ad24efa471bad9cdcb5", null ],
@@ -74,5 +76,7 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_options =
     [ "setSortMessageByServerTime", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a2dd97f19253ce7d3c6cbb23defa38d0e", null ],
     [ "setUIKitVersion", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a59dc563d0c6ce81f745b4c855f613f3d", null ],
     [ "setUseReplacedMessageContents", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a51e1a8da35ec4a32ac52b3602368730e", null ],
-    [ "setUsingHttpsOnly", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#acf81e94e11f74cd4acaaaf3e65a09314", null ]
+    [ "setUsingHttpsOnly", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#acf81e94e11f74cd4acaaaf3e65a09314", null ],
+    [ "setWebSocketPort", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a0be9c18e89fa948f82842546283f9ec8", null ],
+    [ "setWebSocketServer", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a900f386b886ead4f48cae111309c84fc", null ]
 ];
