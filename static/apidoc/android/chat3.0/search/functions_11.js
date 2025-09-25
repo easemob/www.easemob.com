@@ -124,7 +124,9 @@ var searchData=
   ['setusinghttpsonly_121',['setUsingHttpsOnly',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#acf81e94e11f74cd4acaaaf3e65a09314',1,'com::hyphenate::chat::EMOptions']]],
   ['setvideofilelength_122',['setVideoFileLength',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_video_message_body.html#a66152c7f89d8d8ac9388fedf4ab53999',1,'com::hyphenate::chat::EMVideoMessageBody']]],
   ['setvoicemessagelistened_123',['setVoiceMessageListened',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ae0566e4dc9fb52205ddd8b5d9e0eedba',1,'com::hyphenate::chat::EMChatManager']]],
-  ['status_124',['status',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2e93fe95d0be479c5f58c4c56b0132c2',1,'com::hyphenate::chat::EMMessage']]],
-  ['subscribepresences_125',['subscribePresences',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#a66ea1f4d0ed5674efc4f21aef84a80db',1,'com::hyphenate::chat::EMPresenceManager']]],
-  ['syncsilentmodeconversationsfromserver_126',['syncSilentModeConversationsFromServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a3bbed55fb6d0019f31b13afcdef0739a',1,'com::hyphenate::chat::EMPushManager']]]
+  ['setwebsocketport_124',['setWebSocketPort',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a0be9c18e89fa948f82842546283f9ec8',1,'com::hyphenate::chat::EMOptions']]],
+  ['setwebsocketserver_125',['setWebSocketServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a900f386b886ead4f48cae111309c84fc',1,'com::hyphenate::chat::EMOptions']]],
+  ['status_126',['status',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2e93fe95d0be479c5f58c4c56b0132c2',1,'com::hyphenate::chat::EMMessage']]],
+  ['subscribepresences_127',['subscribePresences',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#a66ea1f4d0ed5674efc4f21aef84a80db',1,'com::hyphenate::chat::EMPresenceManager']]],
+  ['syncsilentmodeconversationsfromserver_128',['syncSilentModeConversationsFromServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a3bbed55fb6d0019f31b13afcdef0739a',1,'com::hyphenate::chat::EMPushManager']]]
 ];
