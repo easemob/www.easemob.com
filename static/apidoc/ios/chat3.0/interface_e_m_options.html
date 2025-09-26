@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.16.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.17.0</span>
    </div>
   </td>
  </tr>
@@ -161,6 +161,10 @@ $(function() {
 <tr class="separator:a658f22805987f576a87668730ea2d754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeb36b28a7d93c6a859e8e94505bbad0"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#adeb36b28a7d93c6a859e8e94505bbad0">dnsURL</a></td></tr>
 <tr class="separator:adeb36b28a7d93c6a859e8e94505bbad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a795e638e2f10e1cc85c3f61896254d17"><td class="memItemLeft" align="right" valign="top">NSString *_Nullable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#a795e638e2f10e1cc85c3f61896254d17">webSocketServer</a></td></tr>
+<tr class="separator:a795e638e2f10e1cc85c3f61896254d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e93d3b2cd168a4b18268fe622a712a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#a8e93d3b2cd168a4b18268fe622a712a8">webSocketPort</a></td></tr>
+<tr class="separator:a8e93d3b2cd168a4b18268fe622a712a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >SDK 的设置选项。 </p>
@@ -771,7 +775,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >连接chatServer时，是否启用TLS加密。默认为NO。</p>
+<p >连接chatServer时，是否启用TLS加密，同时控制webSocketServer和chatServer。默认为NO。</p>
 <p >enableDnsConfig 为 NO 时生效。只能在 <code><a class="el" href="interface_e_m_client.html">initializeSDKWithOptions:</a></code> 中设置，不能在程序运行过程中动态修改。 </p>
 
 <p>由 category <a class="el" href="category_e_m_options_07_private_deploy_08.html#a658f22805987f576a87668730ea2d754">EMOptions(PrivateDeploy)</a> 提供.</p>
@@ -1137,6 +1141,57 @@ $(function() {
 <li><code>YES</code>：是：</li>
 <li>（默认）<code>NO</code>：否。 </li>
 </ul>
+
+</div>
+</div>
+<a id="a8e93d3b2cd168a4b18268fe622a712a8" name="a8e93d3b2cd168a4b18268fe622a712a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e93d3b2cd168a4b18268fe622a712a8">&#9670;&nbsp;</a></span>webSocketPort</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int) webSocketPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >WebSocket 服务器端口。 enableDnsConfig 为 NO 时生效。只能在 <code><a class="el" href="interface_e_m_client.html">initializeSDKWithOptions:</a></code> 中设置，不能在程序运行过程中动态修改。 </p>
+
+<p>由 category <a class="el" href="category_e_m_options_07_private_deploy_08.html#a8e93d3b2cd168a4b18268fe622a712a8">EMOptions(PrivateDeploy)</a> 提供.</p>
+
+</div>
+</div>
+<a id="a795e638e2f10e1cc85c3f61896254d17" name="a795e638e2f10e1cc85c3f61896254d17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a795e638e2f10e1cc85c3f61896254d17">&#9670;&nbsp;</a></span>webSocketServer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString* _Nullable) webSocketServer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >WebSocket 服务器地址。</p>
+<p >enableDnsConfig 为 NO 时生效。只能在 <code><a class="el" href="interface_e_m_client.html">initializeSDKWithOptions:</a></code> 中设置，不能在程序运行过程中动态修改。 </p>
+
+<p>由 category <a class="el" href="category_e_m_options_07_private_deploy_08.html#a795e638e2f10e1cc85c3f61896254d17">EMOptions(PrivateDeploy)</a> 提供.</p>
 
 </div>
 </div>
