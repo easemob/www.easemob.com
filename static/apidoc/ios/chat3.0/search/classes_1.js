@@ -8,6 +8,5 @@ var searchData=
   ['iempushmanager_2dp',['IEMPushManager-p',['../protocol_i_e_m_push_manager-p.html',1,'']]],
   ['iemstatisticsmanager_2dp',['IEMStatisticsManager-p',['../protocol_i_e_m_statistics_manager-p.html',1,'']]],
   ['iemthreadmanager_2dp',['IEMThreadManager-p',['../protocol_i_e_m_thread_manager-p.html',1,'']]],
-  ['iemtranslatemanager_2dp',['IEMTranslateManager-p',['../protocol_i_e_m_translate_manager-p.html',1,'']]],
   ['iemuserinfomanager_2dp',['IEMUserInfoManager-p',['../protocol_i_e_m_user_info_manager-p.html',1,'']]]
 ];

@@ -1,20 +1,16 @@
 var searchData=
 [
-  ['mail',['mail',['../interface_e_m_user_info.html#a7772a7f2392cdf184cfad3b537985c17',1,'EMUserInfo']]],
-  ['mark',['mark',['../interface_e_m_conversation_filter.html#a1ad44f7296b76c34d825efc5cd985a15',1,'EMConversationFilter']]],
-  ['marks',['marks',['../interface_e_m_conversation.html#aa15115072cad9a30fadaa875322aebec',1,'EMConversation']]],
-  ['maxoccupantscount',['maxOccupantsCount',['../interface_e_m_chatroom.html#a1be7d7507769472b119c8c0c09bb2ba3',1,'EMChatroom']]],
-  ['maxusers',['maxUsers',['../interface_e_m_group_options.html#ac1c4abb031008423d8e60493d85cd9e2',1,'EMGroupOptions']]],
-  ['maxuserscount',['maxUsersCount',['../interface_e_m_chatroom_options.html#a0440ab078134a82d3b503959f72bbc36',1,'EMChatroomOptions']]],
-  ['memberlist',['memberList',['../interface_e_m_chatroom.html#a9af689060027755f38d5981b614c2766',1,'EMChatroom::memberList()'],['../interface_e_m_group.html#ab4b47644041818bc040921857777ed56',1,'EMGroup::memberList()']]],
-  ['memberscount',['membersCount',['../interface_e_m_chat_thread.html#a2cbbd0878d5bfa53fcf36be3576c688c',1,'EMChatThread']]],
-  ['messagecount',['messageCount',['../interface_e_m_chat_thread.html#aea0f4afb695dbdc5deba4488b98055e7',1,'EMChatThread']]],
-  ['messageid',['messageId',['../interface_e_m_chat_message.html#a87118c17f667d7cfdf8c0f61e09dd3cf',1,'EMChatMessage::messageId()'],['../interface_e_m_chat_message_statistics.html#a810915cb9c2cb1f28f4b2a52733171c3',1,'EMChatMessageStatistics::messageId()'],['../interface_e_m_chat_thread.html#abc9c83516b0b544d97a2c67ec17288ee',1,'EMChatThread::messageId()'],['../interface_e_m_group_message_ack.html#ae1ef2fc01bf14c2b907c6015a31320cf',1,'EMGroupMessageAck::messageId()'],['../interface_e_m_message_reaction_change.html#a94c941e311102d5172ae4a11fb75e8d1',1,'EMMessageReactionChange::messageId()']]],
-  ['messageidlist',['messageIdList',['../interface_e_m_combine_message_body.html#a78921ae67c33384203216d85105419a4',1,'EMCombineMessageBody']]],
-  ['messagescount',['messagesCount',['../interface_e_m_conversation.html#a49ec21b882b40ae12e868978a8ec688d',1,'EMConversation']]],
-  ['messagesize',['messageSize',['../interface_e_m_chat_message_statistics.html#ada7c0074b4a4cf945c1bd41ab048b0c1',1,'EMChatMessageStatistics']]],
-  ['minutes',['minutes',['../interface_e_m_silent_mode_time.html#a29ec3446b6d0329dc607bdcf064aa58a',1,'EMSilentModeTime']]],
-  ['msgid',['msgId',['../interface_e_m_translation_result.html#a37cc8b8acf886e9990b9416ca5f164d8',1,'EMTranslationResult']]],
-  ['msgtypes',['msgTypes',['../interface_e_m_fetch_server_messages_option.html#a87ae35089eaf61188206c7029930d527',1,'EMFetchServerMessagesOption']]],
-  ['mutelist',['muteList',['../interface_e_m_chatroom.html#a2ec9b6e10f7299b1414f4758f271e454',1,'EMChatroom::muteList()'],['../interface_e_m_group.html#a54ff97e40a487cf2af74beee9e78386d',1,'EMGroup::muteList()']]]
+  ['languagecode',['languageCode',['../interface_e_m_translate_language.html#a68b039445044f80276d2d4ea67df7ca9',1,'EMTranslateLanguage']]],
+  ['languagename',['languageName',['../interface_e_m_translate_language.html#a5fa6b69fa7ff8e4ff2ae1f33b236e82e',1,'EMTranslateLanguage']]],
+  ['languagenativename',['languageNativeName',['../interface_e_m_translate_language.html#aa8522612111f6574106f4e4019b6e956',1,'EMTranslateLanguage']]],
+  ['lastmessage',['lastMessage',['../interface_e_m_chat_thread.html#a873cfbb8b5ef47669b50c52033849262',1,'EMChatThread']]],
+  ['lasttime',['lastTime',['../interface_e_m_presence.html#af2777db98efea4d29abaae850efd979a',1,'EMPresence']]],
+  ['latestmessage',['latestMessage',['../interface_e_m_conversation.html#a6f0b08d0ed19fe13d1e3fa2743c0a779',1,'EMConversation']]],
+  ['latitude',['latitude',['../interface_e_m_location_message_body.html#a250f22dfc88010c5243ba0f2f389d0e2',1,'EMLocationMessageBody']]],
+  ['loademptyconversations',['loadEmptyConversations',['../interface_e_m_options.html#ae4fe12afae396e8e0227a457e10a6eef',1,'EMOptions']]],
+  ['localpath',['localPath',['../interface_e_m_file_message_body.html#aa109e9466c919f0fe5c1c9ef37b5386d',1,'EMFileMessageBody']]],
+  ['localtime',['localTime',['../interface_e_m_chat_message.html#a873ef9768ea4b79fa2f7423cd5d89e15',1,'EMChatMessage']]],
+  ['loginextensioninfo',['loginExtensionInfo',['../interface_e_m_options.html#a6e9c9529d845146d06c7bb6b35974f21',1,'EMOptions']]],
+  ['loglevel',['logLevel',['../interface_e_m_options.html#a0532bf2756002f639f403bed4c8a589e',1,'EMOptions']]],
+  ['longitude',['longitude',['../interface_e_m_location_message_body.html#a803a3f6cd011398d9f3125092359ce67',1,'EMLocationMessageBody']]]
 ];

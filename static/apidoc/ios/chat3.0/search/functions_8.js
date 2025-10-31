@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['ignoregrouppush_3aignore_3a',['ignoreGroupPush:ignore:',['../protocol_i_e_m_group_manager-p.html#a1163c8d2b609fb57fd27385ef7e6ac28',1,'IEMGroupManager-p']]],
-  ['ignoregroupspush_3aignore_3a',['ignoreGroupsPush:ignore:',['../protocol_i_e_m_group_manager-p.html#a5470972404d877baad222a7b2ab2bb14',1,'IEMGroupManager-p']]],
   ['importconversations_3acompletion_3a',['importConversations:completion:',['../protocol_i_e_m_chat_manager-p.html#acc49ed6dc9c14178575c20bd839983d3',1,'IEMChatManager-p']]],
   ['importmessages_3acompletion_3a',['importMessages:completion:',['../protocol_i_e_m_chat_manager-p.html#ac223706d0680cd913d7c9db9751166d1',1,'IEMChatManager-p']]],
   ['initializesdkwithoptions_3a',['initializeSDKWithOptions:',['../interface_e_m_client.html#af6c0671dae6ad967257426e6ab0eaa93',1,'EMClient']]],
@@ -12,6 +10,7 @@ var searchData=
   ['initwithdata_3athumbnaildata_3a',['initWithData:thumbnailData:',['../interface_e_m_image_message_body.html#ae6ef4e09771f3a3814baced8799c42df',1,'EMImageMessageBody']]],
   ['initwithdescription_3acode_3a',['initWithDescription:code:',['../interface_e_m_error.html#afee65c932ca8dad57ae1108a2a2a607f',1,'EMError']]],
   ['initwithevent_3acustomext_3a',['initWithEvent:customExt:',['../interface_e_m_custom_message_body.html#a42d65525d75f13eef7e7483dd02b52f9',1,'EMCustomMessageBody']]],
+  ['initwithgiffilepath_3adisplayname_3a',['initWithGifFilePath:displayName:',['../interface_e_m_image_message_body.html#a512cc28e9421b2b535e84eaf795e49e8',1,'EMImageMessageBody']]],
   ['initwithhours_3aminutes_3a',['initWithHours:minutes:',['../interface_e_m_silent_mode_time.html#a74db5953cf89a2336c0d3dfff37f967b',1,'EMSilentModeTime']]],
   ['initwithlatitude_3alongitude_3aaddress_3a',['initWithLatitude:longitude:address:',['../interface_e_m_location_message_body.html#a6943be3f8bb13f76df306439c9e3e365',1,'EMLocationMessageBody']]],
   ['initwithlatitude_3alongitude_3aaddress_3abuildingname_3a',['initWithLatitude:longitude:address:buildingName:',['../interface_e_m_location_message_body.html#ae13d70908b632b69470cb91226c9cc54',1,'EMLocationMessageBody']]],
@@ -22,6 +21,7 @@ var searchData=
   ['initwithuserid_3aremark_3a',['initWithUserId:remark:',['../interface_e_m_contact.html#a57ae5eb651af157b3ba5b8be58a12de9',1,'EMContact']]],
   ['insertmessage_3aerror_3a',['insertMessage:error:',['../interface_e_m_conversation.html#a61c633ede303968a9d66661be6c6dd6e',1,'EMConversation']]],
   ['ismemberinmutelistfromserverwithchatroomid_3acompletion_3a',['isMemberInMuteListFromServerWithChatroomId:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a2ac05d39ca48c03687c97ddd3f1ca657',1,'IEMChatroomManager-p']]],
+  ['ismemberinmutelistfromserverwithgroupid_3acompletion_3a',['isMemberInMuteListFromServerWithGroupId:completion:',['../protocol_i_e_m_group_manager-p.html#af5dd8a549e61721ead88d12b97a20d53',1,'IEMGroupManager-p']]],
   ['ismemberinwhitelistfromserverwithchatroomid_3acompletion_3a',['isMemberInWhiteListFromServerWithChatroomId:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a6575c5e7ee5272420b2d50ceffe9092c',1,'IEMChatroomManager-p']]],
   ['ismemberinwhitelistfromserverwithchatroomid_3aerror_3a',['isMemberInWhiteListFromServerWithChatroomId:error:',['../protocol_i_e_m_chatroom_manager-p.html#ac55911468a25a6b9fdc971b770dfa8ed',1,'IEMChatroomManager-p']]],
   ['ismemberinwhitelistfromserverwithgroupid_3acompletion_3a',['isMemberInWhiteListFromServerWithGroupId:completion:',['../protocol_i_e_m_group_manager-p.html#a939b632150e3d8bf0a71ee804cd521ea',1,'IEMGroupManager-p']]],

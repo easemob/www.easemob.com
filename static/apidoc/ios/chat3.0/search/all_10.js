@@ -12,6 +12,7 @@ var searchData=
   ['pinnedmessages',['pinnedMessages',['../interface_e_m_conversation.html#a1268b2d8c4074ce51384603908ae8ff0',1,'EMConversation']]],
   ['pinnedtime',['pinnedTime',['../interface_e_m_conversation.html#a34dd43054df46dfb30fe06316d645535',1,'EMConversation']]],
   ['pintime',['pinTime',['../interface_e_m_message_pin_info.html#aa2e76325fc8dad624b89488ab43587cf',1,'EMMessagePinInfo']]],
+  ['platform',['platform',['../interface_e_m_options.html#ae647cca0b580d55a888a58615926a0fb',1,'EMOptions']]],
   ['presencemanager',['presenceManager',['../interface_e_m_client.html#a2fdfa5e3248eeca729f83c5e243a7b4f',1,'EMClient']]],
   ['presencestatusdidchanged_3a',['presenceStatusDidChanged:',['../protocol_e_m_presence_manager_delegate-p.html#a16c1f61f6a0fa67c5402401b4535bf25',1,'EMPresenceManagerDelegate-p']]],
   ['priority',['priority',['../interface_e_m_chat_message.html#af4baf510bce034fe9f1c94baab245303',1,'EMChatMessage']]],

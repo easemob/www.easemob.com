@@ -1,17 +1,12 @@
 var searchData=
 [
-  ['pagesize',['pageSize',['../interface_e_m_conversation_filter.html#a67ff43c9470dbfbc66ee10f1f630116c',1,'EMConversationFilter']]],
-  ['paramtype',['paramType',['../interface_e_m_silent_mode_param.html#a46e9cd31b9eaa15041d4141d1cafd33f',1,'EMSilentModeParam']]],
-  ['parentid',['parentId',['../interface_e_m_chat_thread.html#aac1a28ca7a9d56ff0d71125f7fbe4d87',1,'EMChatThread']]],
-  ['permissiontype',['permissionType',['../interface_e_m_chatroom.html#a88c3a5ddde2cc67aad2bff7ad5c72fa0',1,'EMChatroom::permissionType()'],['../interface_e_m_group.html#aa2c03fbb097e27cd609e75d5e9843c33',1,'EMGroup::permissionType()']]],
-  ['phone',['phone',['../interface_e_m_user_info.html#a156500523b418d828d85c6906068fccb',1,'EMUserInfo']]],
-  ['pinnedinfo',['pinnedInfo',['../interface_e_m_chat_message.html#af67236f39652a997bef17d074e69207f',1,'EMChatMessage']]],
-  ['pinnedtime',['pinnedTime',['../interface_e_m_conversation.html#a34dd43054df46dfb30fe06316d645535',1,'EMConversation']]],
-  ['pintime',['pinTime',['../interface_e_m_message_pin_info.html#aa2e76325fc8dad624b89488ab43587cf',1,'EMMessagePinInfo']]],
-  ['presencemanager',['presenceManager',['../interface_e_m_client.html#a2fdfa5e3248eeca729f83c5e243a7b4f',1,'EMClient']]],
-  ['priority',['priority',['../interface_e_m_chat_message.html#af4baf510bce034fe9f1c94baab245303',1,'EMChatMessage']]],
-  ['publisher',['publisher',['../interface_e_m_presence.html#a652cb03a49d1635da5964ca5895783a3',1,'EMPresence']]],
-  ['pushkitcertname',['pushKitCertName',['../interface_e_m_options.html#a7195f117c6ea75364b7f9cd8b7e13962',1,'EMOptions']]],
-  ['pushmanager',['pushManager',['../interface_e_m_client.html#ab787a96812c78cc27d2c82e73b73dd0e',1,'EMClient']]],
-  ['pushoptions',['pushOptions',['../protocol_i_e_m_push_manager-p.html#a106aeb482017a639eb19535a1d41b576',1,'IEMPushManager-p']]]
+  ['occupantscount',['occupantsCount',['../interface_e_m_chatroom.html#a3e807b1af9dbda4beaae8746b209cb19',1,'EMChatroom::occupantsCount()'],['../interface_e_m_group.html#a792fd91c92ef4a043505a95f675e49f5',1,'EMGroup::occupantsCount()']]],
+  ['onlinestate',['onlineState',['../interface_e_m_chat_message.html#a78d632fe28019bd04eaa9f9df8b94fd6',1,'EMChatMessage']]],
+  ['operate',['operate',['../interface_e_m_message_reaction_operation.html#a66676670ed213e891a9bbca446817310',1,'EMMessageReactionOperation']]],
+  ['operations',['operations',['../interface_e_m_message_reaction_change.html#a3926f45739f369b0f8344c57f45e6789',1,'EMMessageReactionChange']]],
+  ['operationtime',['operationTime',['../interface_e_m_message_body.html#a69a31f44f649c97a35c4bc69ebcdaac4',1,'EMMessageBody']]],
+  ['operatorcount',['operatorCount',['../interface_e_m_message_body.html#a6a7891431c56af2964f27f1016bcfceb',1,'EMMessageBody']]],
+  ['operatorid',['operatorId',['../interface_e_m_message_pin_info.html#a6833011fbb2173a274cad48fd26a9a44',1,'EMMessagePinInfo::operatorId()'],['../interface_e_m_message_body.html#ad4cd6ab745f2e1992647cd32163515fa',1,'EMMessageBody::operatorId()']]],
+  ['options',['options',['../interface_e_m_client.html#aa36d939c93553e13d926ed010b64a550',1,'EMClient']]],
+  ['owner',['owner',['../interface_e_m_chatroom.html#a4a0dab9996f0e5afdcdbc86732e2cff2',1,'EMChatroom::owner()'],['../interface_e_m_chat_thread.html#a5fa81218b8bb5ac8fdf131c843d8177c',1,'EMChatThread::owner()'],['../interface_e_m_group.html#ae03a2f19396ee83ed51ef704509edf05',1,'EMGroup::owner()']]]
 ];

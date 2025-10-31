@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['changeappid_3a',['changeAppId:',['../interface_e_m_client.html#a572d8c5382a78d010c655c385734c3e1',1,'EMClient']]],
   ['changeappkey_3a',['changeAppkey:',['../interface_e_m_client.html#a9bb6782e551125e08f8a029d3d695367',1,'EMClient']]],
   ['changedescription_3aforgroup_3aerror_3a',['changeDescription:forGroup:error:',['../protocol_i_e_m_group_manager-p.html#aa0fd1d7abd838cec45aed5ac95d4e2be',1,'IEMGroupManager-p']]],
   ['changegroupsubject_3aforgroup_3aerror_3a',['changeGroupSubject:forGroup:error:',['../protocol_i_e_m_group_manager-p.html#a950eedc553360694e631a7de30ef1393',1,'IEMGroupManager-p']]],
@@ -9,7 +10,8 @@ var searchData=
   ['chatroomannouncementdidupdate_3aannouncement_3a',['chatroomAnnouncementDidUpdate:announcement:',['../protocol_e_m_chatroom_manager_delegate-p.html#a3df1f170b44c203288478878f06b88c9',1,'EMChatroomManagerDelegate-p']]],
   ['chatroomattributesdidremoved_3aattributes_3afrom_3a',['chatroomAttributesDidRemoved:attributes:from:',['../protocol_e_m_chatroom_manager_delegate-p.html#ae967f7e30be9bdd00bb90ae0e35ba85c',1,'EMChatroomManagerDelegate-p']]],
   ['chatroomattributesdidupdated_3aattributemap_3afrom_3a',['chatroomAttributesDidUpdated:attributeMap:from:',['../protocol_e_m_chatroom_manager_delegate-p.html#a063a6ab4112524a7c1edf0dcdb5dfe09',1,'EMChatroomManagerDelegate-p']]],
-  ['chatroommutelistdidupdate_3aaddedmutedmembers_3amuteexpire_3a',['chatroomMuteListDidUpdate:addedMutedMembers:muteExpire:',['../protocol_e_m_chatroom_manager_delegate-p.html#a65a6b69f8ef3f28a155c25914d8a6e59',1,'EMChatroomManagerDelegate-p']]],
+  ['chatroommutelistdidupdate_3aaddedmutedmembers_3a',['chatroomMuteListDidUpdate:addedMutedMembers:',['../protocol_e_m_chatroom_manager_delegate-p.html#af64d985892da208489eca74abf31a4fa',1,'EMChatroomManagerDelegate-p']]],
+  ['chatroommutelistdidupdate_3aaddedmutedmembers_3amuteexpire_3a',['chatroomMuteListDidUpdate:addedMutedMembers:muteExpire:',['../protocol_e_m_chatroom_manager_delegate-p.html#aea61e97f632745a981c6ab1430d2f622',1,'EMChatroomManagerDelegate-p']]],
   ['chatroommutelistdidupdate_3aremovedmutedmembers_3a',['chatroomMuteListDidUpdate:removedMutedMembers:',['../protocol_e_m_chatroom_manager_delegate-p.html#a3738feeca39e4a0634fb44a4ca1b8e7a',1,'EMChatroomManagerDelegate-p']]],
   ['chatroomownerdidupdate_3anewowner_3aoldowner_3a',['chatroomOwnerDidUpdate:newOwner:oldOwner:',['../protocol_e_m_chatroom_manager_delegate-p.html#ad467f8c97a579beac4d77eee76065b95',1,'EMChatroomManagerDelegate-p']]],
   ['chatroomspecificationdidupdate_3a',['chatroomSpecificationDidUpdate:',['../protocol_e_m_chatroom_manager_delegate-p.html#a5aaf0315504218e6218a5f595ca68f4d',1,'EMChatroomManagerDelegate-p']]],
@@ -25,6 +27,7 @@ var searchData=
   ['createchatroomwithsubject_3adescription_3ainvitees_3amessage_3amaxmemberscount_3acompletion_3a',['createChatroomWithSubject:description:invitees:message:maxMembersCount:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a9a9e6002fc9b18e5608246ac7a68af2c',1,'IEMChatroomManager-p']]],
   ['createchatroomwithsubject_3adescription_3ainvitees_3amessage_3amaxmemberscount_3aerror_3a',['createChatroomWithSubject:description:invitees:message:maxMembersCount:error:',['../protocol_i_e_m_chatroom_manager-p.html#af0a1c68e882cbbd81defb3d988f7f427',1,'IEMChatroomManager-p']]],
   ['createchatthread_3amessageid_3aparentid_3acompletion_3a',['createChatThread:messageId:parentId:completion:',['../protocol_i_e_m_thread_manager-p.html#ae91a81bafe9224e8267bbdff98711865',1,'IEMThreadManager-p']]],
+  ['creategroupwithsubject_3aavatar_3adescription_3ainvitees_3amessage_3asetting_3acompletion_3a',['createGroupWithSubject:avatar:description:invitees:message:setting:completion:',['../protocol_i_e_m_group_manager-p.html#a0e9f37b255b794166343dc94fce9c689',1,'IEMGroupManager-p']]],
   ['creategroupwithsubject_3adescription_3ainvitees_3amessage_3asetting_3acompletion_3a',['createGroupWithSubject:description:invitees:message:setting:completion:',['../protocol_i_e_m_group_manager-p.html#ab03c6485fb9d37334d93107af607b3d0',1,'IEMGroupManager-p']]],
   ['creategroupwithsubject_3adescription_3ainvitees_3amessage_3asetting_3aerror_3a',['createGroupWithSubject:description:invitees:message:setting:error:',['../protocol_i_e_m_group_manager-p.html#a369c6bf7fdc67b67f2c8ba2d7fc7cac1',1,'IEMGroupManager-p']]],
   ['cursorresultwithlist_3aandcursor_3a',['cursorResultWithList:andCursor:',['../interface_e_m_cursor_result.html#a84868c30b11626eb76b9df3cff517f7a',1,'EMCursorResult']]]

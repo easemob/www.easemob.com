@@ -2,7 +2,7 @@ var searchData=
 [
   ['fetchchatroomallattributes_3acompletion_3a',['fetchChatroomAllAttributes:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a84254a03e1e7d6ec07affa7700e6d561',1,'IEMChatroomManager-p']]],
   ['fetchchatroomattributes_3akeys_3acompletion_3a',['fetchChatroomAttributes:keys:completion:',['../protocol_i_e_m_chatroom_manager-p.html#af5a0f5ae86fa425819481d3578356d2d',1,'IEMChatroomManager-p']]],
-  ['fetchchatroominfo_3aincludememberslist_3aerror_3a',['fetchChatroomInfo:includeMembersList:error:',['../protocol_i_e_m_chatroom_manager-p.html#a1703a78eaa440819da27b76062bb40e1',1,'IEMChatroomManager-p']]],
+  ['fetchgroupmemberinfolistfromserverwithgroupid_3acursor_3alimit_3acompletion_3a',['fetchGroupMemberInfoListFromServerWithGroupId:cursor:limit:completion:',['../protocol_i_e_m_group_manager-p.html#ae0cc77fa9a1bf9f245cebf78f68e22c5',1,'IEMGroupManager-p']]],
   ['fetchgroupmutelistfromserverwithid_3apagenumber_3apagesize_3acompletion_3a',['fetchGroupMuteListFromServerWithId:pageNumber:pageSize:completion:',['../protocol_i_e_m_group_manager-p.html#a45e39155746d33af2a2bdbffaac112f0',1,'IEMGroupManager-p']]],
   ['fetchhistorymessagesfromserver_3aconversationtype_3astartmessageid_3afetchdirection_3apagesize_3aerror_3a',['fetchHistoryMessagesFromServer:conversationType:startMessageId:fetchDirection:pageSize:error:',['../protocol_i_e_m_chat_manager-p.html#a89fd9709627440235a084c09404e3a9d',1,'IEMChatManager-p']]],
   ['fetchhistorymessagesfromserver_3aconversationtype_3astartmessageid_3apagesize_3aerror_3a',['fetchHistoryMessagesFromServer:conversationType:startMessageId:pageSize:error:',['../protocol_i_e_m_chat_manager-p.html#a3b4b6188179d6c8fd38268808eb98a4a',1,'IEMChatManager-p']]],

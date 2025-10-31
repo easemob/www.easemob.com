@@ -24,6 +24,7 @@ var searchData=
   ['emfilemessagebody',['EMFileMessageBody',['../interface_e_m_file_message_body.html',1,'']]],
   ['emgroup',['EMGroup',['../interface_e_m_group.html',1,'']]],
   ['emgroupmanagerdelegate_2dp',['EMGroupManagerDelegate-p',['../protocol_e_m_group_manager_delegate-p.html',1,'']]],
+  ['emgroupmemberinfo',['EMGroupMemberInfo',['../interface_e_m_group_member_info.html',1,'']]],
   ['emgroupmessageack',['EMGroupMessageAck',['../interface_e_m_group_message_ack.html',1,'']]],
   ['emgroupoptions',['EMGroupOptions',['../interface_e_m_group_options.html',1,'']]],
   ['emgroupsharedfile',['EMGroupSharedFile',['../interface_e_m_group_shared_file.html',1,'']]],
@@ -53,7 +54,6 @@ var searchData=
   ['emtextmessagebody',['EMTextMessageBody',['../interface_e_m_text_message_body.html',1,'']]],
   ['emthreadmanagerdelegate_2dp',['EMThreadManagerDelegate-p',['../protocol_e_m_thread_manager_delegate-p.html',1,'']]],
   ['emtranslatelanguage',['EMTranslateLanguage',['../interface_e_m_translate_language.html',1,'']]],
-  ['emtranslationresult',['EMTranslationResult',['../interface_e_m_translation_result.html',1,'']]],
   ['emuserinfo',['EMUserInfo',['../interface_e_m_user_info.html',1,'']]],
   ['emvideomessagebody',['EMVideoMessageBody',['../interface_e_m_video_message_body.html',1,'']]],
   ['emvoicemessagebody',['EMVoiceMessageBody',['../interface_e_m_voice_message_body.html',1,'']]]

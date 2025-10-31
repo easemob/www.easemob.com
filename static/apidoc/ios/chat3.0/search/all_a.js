@@ -2,7 +2,9 @@ var searchData=
 [
   ['joinchatroom_3acompletion_3a',['joinChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#acddd1893543a021967967164284e4510',1,'IEMChatroomManager-p']]],
   ['joinchatroom_3aerror_3a',['joinChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#ac66d04fd0182c7499ed539c0ea610152',1,'IEMChatroomManager-p']]],
+  ['joinchatroom_3aext_3aleaveotherrooms_3acompletion_3a',['joinChatroom:ext:leaveOtherRooms:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a3e433e17a380e454c572d7eaca6bce6a',1,'IEMChatroomManager-p']]],
   ['joinchatthread_3acompletion_3a',['joinChatThread:completion:',['../protocol_i_e_m_thread_manager-p.html#a8efd089dc61246c4e5f1150b9d598444',1,'IEMThreadManager-p']]],
+  ['joinedtimestamp',['joinedTimestamp',['../interface_e_m_group_member_info.html#a61573b76b11364ee9a56a9ba5a79c228',1,'EMGroupMemberInfo']]],
   ['joingrouprequestdidapprove_3a',['joinGroupRequestDidApprove:',['../protocol_e_m_group_manager_delegate-p.html#a87f22ca0843e6b64e71941dda9dd524b',1,'EMGroupManagerDelegate-p']]],
   ['joingrouprequestdiddecline_3areason_3a',['joinGroupRequestDidDecline:reason:',['../protocol_e_m_group_manager_delegate-p.html#aebee75ae08e533f1d02c599639b05310',1,'EMGroupManagerDelegate-p']]],
   ['joingrouprequestdiddecline_3areason_3aapplicant_3a',['joinGroupRequestDidDecline:reason:applicant:',['../protocol_e_m_group_manager_delegate-p.html#a482c2373d92419c68058a2844527564b',1,'EMGroupManagerDelegate-p']]],

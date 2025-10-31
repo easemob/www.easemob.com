@@ -9,6 +9,8 @@ var searchData=
   ['onlinestate',['onlineState',['../interface_e_m_chat_message.html#a78d632fe28019bd04eaa9f9df8b94fd6',1,'EMChatMessage']]],
   ['onmessagecontentchanged_3aoperatorid_3aoperationtime_3a',['onMessageContentChanged:operatorId:operationTime:',['../protocol_e_m_chat_manager_delegate-p.html#a0153377b22e44dc156b4077b26d9c6e0',1,'EMChatManagerDelegate-p']]],
   ['onmessagepinchanged_3aconversationid_3aoperation_3apininfo_3a',['onMessagePinChanged:conversationId:operation:pinInfo:',['../protocol_e_m_chat_manager_delegate-p.html#aebcc71ce88bbaa09ad23cb6aead7cbc0',1,'EMChatManagerDelegate-p']]],
+  ['onofflinemessagesyncfinish',['onOfflineMessageSyncFinish',['../protocol_e_m_client_delegate-p.html#ad04ad34af124a1b6bc7c205f9829b5c3',1,'EMClientDelegate-p']]],
+  ['onofflinemessagesyncstart',['onOfflineMessageSyncStart',['../protocol_e_m_client_delegate-p.html#aef836af2b1f32d0047a18431b6eab569',1,'EMClientDelegate-p']]],
   ['onuserkickoutofchatthread_3a',['onUserKickOutOfChatThread:',['../protocol_e_m_thread_manager_delegate-p.html#a8d2d62f155fe494b8b23a2cbbe781bc1',1,'EMThreadManagerDelegate-p']]],
   ['operate',['operate',['../interface_e_m_message_reaction_operation.html#a66676670ed213e891a9bbca446817310',1,'EMMessageReactionOperation']]],
   ['operations',['operations',['../interface_e_m_message_reaction_change.html#a3926f45739f369b0f8344c57f45e6789',1,'EMMessageReactionChange']]],
@@ -16,6 +18,7 @@ var searchData=
   ['operatorcount',['operatorCount',['../interface_e_m_message_body.html#a6a7891431c56af2964f27f1016bcfceb',1,'EMMessageBody']]],
   ['operatorid',['operatorId',['../interface_e_m_message_pin_info.html#a6833011fbb2173a274cad48fd26a9a44',1,'EMMessagePinInfo::operatorId()'],['../interface_e_m_message_body.html#ad4cd6ab745f2e1992647cd32163515fa',1,'EMMessageBody::operatorId()']]],
   ['options',['options',['../interface_e_m_client.html#aa36d939c93553e13d926ed010b64a550',1,'EMClient']]],
+  ['optionswithappid_3a',['optionsWithAppId:',['../interface_e_m_options.html#a7398f035519c2cf7f0520f03141c69d7',1,'EMOptions']]],
   ['optionswithappkey_3a',['optionsWithAppkey:',['../interface_e_m_options.html#af915480012e3e2e25de9c3459fe36f0a',1,'EMOptions']]],
   ['owner',['owner',['../interface_e_m_chatroom.html#a4a0dab9996f0e5afdcdbc86732e2cff2',1,'EMChatroom::owner()'],['../interface_e_m_chat_thread.html#a5fa81218b8bb5ac8fdf131c843d8177c',1,'EMChatThread::owner()'],['../interface_e_m_group.html#ae03a2f19396ee83ed51ef704509edf05',1,'EMGroup::owner()']]]
 ];
