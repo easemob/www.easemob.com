@@ -1,0 +1,904 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Easemob SDK API Reference - v4.15.1</title><meta name="description" content="Documentation for Easemob SDK API Reference - v4.15.1"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Easemob SDK API Reference - v4.15.1</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1> Easemob SDK API Reference - v4.15.1 </h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#easemob-chat-web-api-参考" id="easemob-chat-web-api-参考" style="color: inherit; text-decoration: none;">
+  <h1>Easemob Chat Web API 参考</h1>
+</a>
+<p>Easemob Chat Web SDK 是通过 HTML 网页加载的 JavaScript 和 Typescript 库。你可以使用 Easemob Chat Web SDK 在网页浏览器中调用 API 实现 Chat 功能。</p>
+<p><a href="./modules/ChatSDK.html">CHATSDK</a>
+你引入的 SDK，包含了 SDK 的全部内容。</p>
+
+<a href="#chatroom-apis--该模块包含聊天室相关操作的-api。" id="chatroom-apis--该模块包含聊天室相关操作的-api。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/Chatroom.html">CHATROOM APIS</a> <br/><span style="font-size:14px"> 该模块包含聊天室相关操作的 API。</span></h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="modules/Chatroom.html#joinChatRoom">joinChatRoom</a></td>
+<td align="left">加入聊天室。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#leaveChatRoom">leaveChatRoom</a></td>
+<td align="left">离开聊天室。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#getChatRooms">getChatRooms</a></td>
+<td align="left">分页获取聊天室列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#getChatRoomMembers">getChatRoomMembers</a></td>
+<td align="left">分页列出聊天室的所有成员。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#modifyChatRoom">modifyChatRoom</a></td>
+<td align="left">修改聊天室详情。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#fetchChatRoomAnnouncement">fetchChatRoomAnnouncement</a></td>
+<td align="left">获取聊天室公告。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#updateChatRoomAnnouncement">updateChatRoomAnnouncement</a></td>
+<td align="left">更新聊天室公告。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#setChatRoomAdmin">setChatRoomAdmin</a></td>
+<td align="left">设置聊天室管理员。该方法只有聊天室所有者才有权限调用。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#removeChatRoomAdmin">removeChatRoomAdmin</a></td>
+<td align="left">移除聊天室管理员。该方法只有聊天室所有者才有权限调用。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#getChatRoomAdmin">getChatRoomAdmin</a></td>
+<td align="left">获取聊天室的所有管理员。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#blockChatRoomMember">blockChatRoomMember</a></td>
+<td align="left">添加单个成员至聊天室黑名单。仅聊天室所有者和管理员有权限调用该方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#unblockChatRoomMember">unblockChatRoomMember</a></td>
+<td align="left">将单个用户从聊天室黑名单移除。仅聊天室所有者和管理员有权限调用该方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#blockChatRoomMembers">blockChatRoomMembers</a></td>
+<td align="left">批量添加成员至聊天室黑名单。仅聊天室所有者和管理员有权限调用该方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#unblockChatRoomMembers">unblockChatRoomMembers</a></td>
+<td align="left">批量将成员从聊天室黑名单移除。仅聊天室所有者和管理员有权限调用该方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#getChatRoomBlocklist">getChatRoomBlocklist</a></td>
+<td align="left">获取聊天室黑名单。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#muteChatRoomMember">muteChatRoomMember</a></td>
+<td align="left">禁止聊天室用户发言。该方法只有聊天室所有者才有权限调用。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#unmuteChatRoomMember">unmuteChatRoomMember</a></td>
+<td align="left">解除对聊天室用户的禁言。仅聊天室所有者和管理员有权限调用该方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#disableSendChatRoomMsg">disableSendChatRoomMsg</a></td>
+<td align="left">聊天室全员禁言。仅聊天室创建者和管理员可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#enableSendChatRoomMsg">enableSendChatRoomMsg</a></td>
+<td align="left">聊天室解除全员禁言。仅聊天室创建者和管理员可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#getChatRoomMutelist">getChatRoomMutelist</a></td>
+<td align="left">获取聊天室所有被禁言成员。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#addUsersToChatRoomAllowlist">addUsersToChatRoomAllowlist</a></td>
+<td align="left">批量增加聊天室白名单成员。仅聊天室所有者和管理员有权限调用该方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#removeChatRoomAllowlistMember">removeChatRoomAllowlistMember</a></td>
+<td align="left">批量移除聊天室白名单成员。仅聊天室所有者和管理员有权限调用该方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#isInChatRoomAllowlist">isInChatRoomAllowlist</a></td>
+<td align="left">查询聊天室成员是否是在白名单中。普通成员可查询自己是否在聊天室白名单中；聊天室所有者和管理员可查询其他成员是否在白名单中。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#getChatRoomAllowlist">getChatRoomAllowlist</a></td>
+<td align="left">获取聊天室白名单列表。仅聊天室所有者和管理员有权调用该方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#setChatRoomAttribute">setChatRoomAttribute</a></td>
+<td align="left">设置单个聊天室自定义属性。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#setChatRoomAttributes">setChatRoomAttributes</a></td>
+<td align="left">批量设置聊天室属性。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#removeChatRoomAttribute">removeChatRoomAttribute</a></td>
+<td align="left">移除单个聊天室自定义属性。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#removeChatRoomAttributes">removeChatRoomAttributes</a></td>
+<td align="left">批量移除聊天室属性。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#getChatRoomAttributes">getChatRoomAttributes</a></td>
+<td align="left">获取聊天室全部的自定义属性。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Chatroom.html#getJoinedChatRooms">getJoinedChatRooms</a></td>
+<td align="left">获取用户加入的聊天室列表</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onChatroomEvent">onChatroomEvent</a></td>
+<td align="left">当有聊天室事件时触发。</td>
+</tr>
+</tbody></table>
+
+<a href="#connection--connection-类，用来发消息，你需要进行实例化。" id="connection--connection-类，用来发消息，你需要进行实例化。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/Connection.html">CONNECTION</a> <br/><span style="font-size:14px"> Connection 类，用来发消息，你需要进行实例化。</span></h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="classes/Connection.Connection-1.html#open">open</a></td>
+<td align="left">登录。</td>
+</tr>
+<tr>
+<td align="left"><a href="classes/Connection.Connection-1.html#registerUser">registerUser</a></td>
+<td align="left">注册用户。</td>
+</tr>
+<tr>
+<td align="left"><a href="classes/Connection.Connection-1.html#isOpened">isOpened</a></td>
+<td align="left">监测连接状态。-<code>true</code>：已连接；- <code>false</code>：未连接。</td>
+</tr>
+<tr>
+<td align="left"><a href="classes/Connection.Connection-1.html#renewToken">renewToken</a></td>
+<td align="left">更新 token。</td>
+</tr>
+<tr>
+<td align="left"><a href="classes/Connection.Connection-1.html#send">send</a></td>
+<td align="left">发送消息。</td>
+</tr>
+<tr>
+<td align="left"><a href="classes/Connection.Connection-1.html#addEventHandler">addEventHandler</a></td>
+<td align="left">注册监听函数。</td>
+</tr>
+<tr>
+<td align="left"><a href="classes/Connection.Connection-1.html#removeEventHandler">removeEventHandler</a></td>
+<td align="left">移除监听函数。</td>
+</tr>
+<tr>
+<td align="left"><a href="classes/Connection.Connection-1.html#onShow">onShow</a></td>
+<td align="left">在应用的 onShow 声命周期中执行这个方法，这个方法会主动检测当前连接是否有效，连接无效时会自动触发重连。推荐在小程序或 Electron 中使用。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onConnected">onConnected</a></td>
+<td align="left">当连接建立成功之后触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onReconnecting">onReconnecting</a></td>
+<td align="left">SDK 尝试重连时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onDisconnected">onDisconnected</a></td>
+<td align="left">当断开连接后触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onError">onError</a></td>
+<td align="left">当发生错误时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onMultiDeviceEvent">onMultiDeviceEvent</a></td>
+<td align="left">当在多个设备上操作时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onOffline">onOffline</a></td>
+<td align="left">当网络断开时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onOnline">onOnline</a></td>
+<td align="left">当网络连接成功时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onTokenWillExpire">onTokenWillExpire</a></td>
+<td align="left">当 token 将要过期时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onTokenExpired">onTokenExpired</a></td>
+<td align="left">当 token 过期后触发。</td>
+</tr>
+</tbody></table>
+
+<a href="#contact-apis--该模块包含联系人相关操作的-api。" id="contact-apis--该模块包含联系人相关操作的-api。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/Contact.html">CONTACT APIS</a> <br/><span style="font-size:14px"> 该模块包含联系人相关操作的 API。</span></h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="modules/Contact.html#addContact">addContact</a></td>
+<td align="left">添加好友。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#deleteContact">deleteContact</a></td>
+<td align="left">删除指定好友。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#declineContactInvite">declineContactInvite</a></td>
+<td align="left">拒绝好友申请。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#acceptContactInvite">acceptContactInvite</a></td>
+<td align="left">接受好友申请。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getContacts">getContacts</a></td>
+<td align="left">获取联系人列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#addUsersToBlocklist">addUsersToBlocklist</a></td>
+<td align="left">添加联系人至黑名单。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#removeUserFromBlocklist">removeUserFromBlocklist</a></td>
+<td align="left">将联系人从黑名单移除。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getBlocklist">getBlocklist</a></td>
+<td align="left">获取黑名单列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#fetchUserInfoById">fetchUserInfoById</a></td>
+<td align="left">查询用户属性。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#updateUserInfo">updateUserInfo</a></td>
+<td align="left">修改当前用户的用户属性。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#deleteConversation">deleteConversation</a></td>
+<td align="left">删除会话。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getHistoryMessages">getHistoryMessages</a></td>
+<td align="left">获取对话历史消息。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#addReaction">addReaction</a></td>
+<td align="left">添加消息 Reaction。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#deleteReaction">deleteReaction</a></td>
+<td align="left">删除消息的 Reaction。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getReactionlist">getReactionlist</a></td>
+<td align="left">获取消息的 Reaction 列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getReactionDetail">getReactionDetail</a></td>
+<td align="left">获取 Reaction 详情。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getServerConversations">getServerConversations</a></td>
+<td align="left">分页获取服务器会话列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getServerPinnedConversations">getServerPinnedConversations</a></td>
+<td align="left">分页获取服务器端的置顶会话列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#pinConversation">pinConversation</a></td>
+<td align="left">设置是否置顶会话。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#setContactRemark">setContactRemark</a></td>
+<td align="left">设置好友备注。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getAllContacts">getAllContacts</a></td>
+<td align="left">获取所有联系人。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getContactsWithCursor">getContactsWithCursor</a></td>
+<td align="left">分页获取联系人列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#addConversationMark">addConversationMark</a></td>
+<td align="left">标记会话。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#removeConversationMark">removeConversationMark</a></td>
+<td align="left">取消标记会话。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getServerConversationsByFilter">getServerConversationsByFilter</a></td>
+<td align="left">根据会话过滤选项从服务器分页查询会话列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getSelfIdsOnOtherPlatform">getSelfIdsOnOtherPlatform</a></td>
+<td align="left">从服务器获取当前用户的其他登录设备的登录 ID 列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#deleteAllMessagesAndConversations">deleteAllMessagesAndConversations</a></td>
+<td align="left">清除全部会话及其聊天记录。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#pinMessage">pinMessage</a></td>
+<td align="left">置顶一条消息。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#unpinMessage">unpinMessage</a></td>
+<td align="left">取消置顶一条消息。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Contact.html#getServerPinnedMessages">getServerPinnedMessages</a></td>
+<td align="left">分页获取会话中的置顶消息。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onContactInvited">onContactInvited</a></td>
+<td align="left">当收到好友请求时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onContactAgreed">onContactAgreed</a></td>
+<td align="left">当好友请求被接受时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onContactRefuse">onContactRefuse</a></td>
+<td align="left">当好友请求被拒绝时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onContactAdded">onContactAdded</a></td>
+<td align="left">当添加好友成功后触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onContactDeleted">onContactDeleted</a></td>
+<td align="left">当删除好友成功后触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onReactionChange">onReactionChange</a></td>
+<td align="left">当消息的 reaction 发生变化时触发。</td>
+</tr>
+</tbody></table>
+
+<a href="#eventhandler--该模块用于-sdk-添加或移除事件监听。" id="eventhandler--该模块用于-sdk-添加或移除事件监听。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/EventHandler.html">EVENTHANDLER</a> <br/><span style="font-size:14px"> 该模块用于 SDK 添加或移除事件监听。</span></h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="classes/Connection.Connection-1.html#addEventHandler">addEventHandler</a></td>
+<td align="left">添加事件监听。</td>
+</tr>
+<tr>
+<td align="left"><a href="classes/Connection.Connection-1.html#removeEventHandler">removeEventHandler</a></td>
+<td align="left">移除事件监听。</td>
+</tr>
+</tbody></table>
+
+<a href="#group-apis--该模块包含群组相关操作的-api。" id="group-apis--该模块包含群组相关操作的-api。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/Group.html">GROUP APIS</a> <br/><span style="font-size:14px"> 该模块包含群组相关操作的 API。</span></h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="modules/Group.html#joinGroup">joinGroup</a></td>
+<td align="left">申请加入群组。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#acceptGroupJoinRequest">acceptGroupJoinRequest</a></td>
+<td align="left">同意用户加入群。仅群主和管理员可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#rejectGroupJoinRequest">rejectGroupJoinRequest</a></td>
+<td align="left">拒绝入群申请。仅群主和管理员可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#inviteUsersToGroup">inviteUsersToGroup</a></td>
+<td align="left">邀请用户加群。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#acceptGroupInvite">acceptGroupInvite</a></td>
+<td align="left">接受入群邀请。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#rejectGroupInvite">rejectGroupInvite</a></td>
+<td align="left">拒绝入群邀请。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#leaveGroup">leaveGroup</a></td>
+<td align="left">离开群组。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#getJoinedGroups">getJoinedGroups</a></td>
+<td align="left">列出某用户加入的所有群组。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#getPublicGroups">getPublicGroups</a></td>
+<td align="left">分页获取公开群。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#createGroupVNext">createGroupVNext</a></td>
+<td align="left">创建群组。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#destroyGroup">destroyGroup</a></td>
+<td align="left">解散群组。仅群主可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#changeGroupOwner">changeGroupOwner</a></td>
+<td align="left">转让群组。仅群主可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#modifyGroup">modifyGroup</a></td>
+<td align="left">修改群信息。仅群组管理员可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#getGroupInfo">getGroupInfo</a></td>
+<td align="left">获取群组详情。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#fetchGroupAnnouncement">fetchGroupAnnouncement</a></td>
+<td align="left">获取群公告。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#updateGroupAnnouncement">updateGroupAnnouncement</a></td>
+<td align="left">更新群公告。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#getGroupAdmin">getGroupAdmin</a></td>
+<td align="left">获取群组下所有管理员。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#getGroupMembers">getGroupMembers</a></td>
+<td align="left">分页获取群组成员。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#setGroupAdmin">setGroupAdmin</a></td>
+<td align="left">设置群管理员。仅群主可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#removeGroupAdmin">removeGroupAdmin</a></td>
+<td align="left">移除群管理员。仅群主可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#blockGroupMember">blockGroupMember</a></td>
+<td align="left">将单个成员加入群组黑名单。仅群主和管理员可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#blockGroupMembers">blockGroupMembers</a></td>
+<td align="left">批量添加成员至群组黑名单。仅群组管理员可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#unblockGroupMember">unblockGroupMember</a></td>
+<td align="left">将单个成员从群组黑名单移除。仅群组管理员可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#unblockGroupMembers">unblockGroupMembers</a></td>
+<td align="left">将成员批量移出群组黑名单。仅群主和管理员可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#getGroupBlocklist">getGroupBlocklist</a></td>
+<td align="left">获取群组黑名单。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#muteGroupMember">muteGroupMember</a></td>
+<td align="left">将一个组成员禁言。仅群主和管理员可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#unmuteGroupMember">unmuteGroupMember</a></td>
+<td align="left">解除禁言。仅群主和管理员可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#getGroupMutelist">getGroupMutelist</a></td>
+<td align="left">获取群组的禁言列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#disableSendGroupMsg">disableSendGroupMsg</a></td>
+<td align="left">设置全员禁言。仅群组管理员及以上身份可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#enableSendGroupMsg">enableSendGroupMsg</a></td>
+<td align="left">解除全员禁言。仅群组管理员及以上身份可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#getJoinedGroupsCount">getJoinedGroupsCount</a></td>
+<td align="left">获取加入的群组数量。</td>
+</tr>
+<tr>
+<td align="left">[[blokGroupMessage]]</td>
+<td align="left">屏蔽群组消息。</td>
+</tr>
+<tr>
+<td align="left">[[unblokGroupMessage]]</td>
+<td align="left">解除屏蔽群组消息。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#addUsersToGroupAllowlist">addUsersToGroupAllowlist</a></td>
+<td align="left">添加白名单。白名单里的成员可以在群禁言之后继续发言。仅群组管理员及以上身份可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#removeGroupAllowlistMember">removeGroupAllowlistMember</a></td>
+<td align="left">移除白名单。仅群组管理员及以上身份可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#getGroupAllowlist">getGroupAllowlist</a></td>
+<td align="left">获取群组白名单列表。仅群组管理员及以上身份可调用此方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#isInGroupAllowlist">isInGroupAllowlist</a></td>
+<td align="left">检查当前用户是否在群组白名单中。app admin 可查询所有用户；app user 可查询自己。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#setGroupMemberAttributes">setGroupMemberAttributes</a></td>
+<td align="left">设置群成员自定义属性。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#getGroupMemberAttributes">getGroupMemberAttributes</a></td>
+<td align="left">获取单个群成员所有自定义属性。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Group.html#getGroupMembersAttributes">getGroupMembersAttributes</a></td>
+<td align="left">根据指定的属性 key 获取多个群成员的自定义属性。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onGroupEvent">onGroupEvent</a></td>
+<td align="left">当有群组事件发生时触发。</td>
+</tr>
+</tbody></table>
+
+<a href="#presence-apis--该模块包含在线状态相关操作的-api。" id="presence-apis--该模块包含在线状态相关操作的-api。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/Presence.html">PRESENCE APIS</a> <br/><span style="font-size:14px"> 该模块包含在线状态相关操作的 API。</span></h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="modules/Presence.html#publishPresence">publishPresence</a></td>
+<td align="left">发布自定义在线状态。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Presence.html#subscribePresence">subscribePresence</a></td>
+<td align="left">订阅指定用户的在线状态。订阅成功后，在线状态变更时订阅者会收到回调通知。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Presence.html#unsubscribePresence">unsubscribePresence</a></td>
+<td align="left">取消订阅指定用户的在线状态。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Presence.html#getSubscribedPresencelist">getSubscribedPresencelist</a></td>
+<td align="left">分页查询当前用户订阅了哪些用户的在线状态。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Presence.html#getPresenceStatus">getPresenceStatus</a></td>
+<td align="left">查询指定用户的当前在线状态。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onPresenceStatusChange">onPresenceStatusChange</a></td>
+<td align="left">当订阅的用户在线状态发生变化时触发。</td>
+</tr>
+</tbody></table>
+
+<a href="#silentmode-apis--该模块包含免打扰设置相关操作的-api。" id="silentmode-apis--该模块包含免打扰设置相关操作的-api。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/SilentMode.html">SILENTMODE APIS</a> <br/><span style="font-size:14px"> 该模块包含免打扰设置相关操作的 API。</span></h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="modules/SilentMode.html#setSilentModeForAll">setSilentModeForAll</a></td>
+<td align="left">设置当前登录用户的免打扰设置。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/SilentMode.html#getSilentModeForAll">getSilentModeForAll</a></td>
+<td align="left">获取当前用户的免打扰设置。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/SilentMode.html#setSilentModeForConversation">setSilentModeForConversation</a></td>
+<td align="left">设置会话的免打扰。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/SilentMode.html#clearRemindTypeForConversation">clearRemindTypeForConversation</a></td>
+<td align="left">清除会话的离线推送提醒类型设置。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/SilentMode.html#getSilentModeForConversation">getSilentModeForConversation</a></td>
+<td align="left">获取会话的免打扰设置。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/SilentMode.html#getSilentModeForConversations">getSilentModeForConversations</a></td>
+<td align="left">批量获取指定会话的免打扰设置。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/SilentMode.html#setPushPerformLanguage">setPushPerformLanguage</a></td>
+<td align="left">设置用户推送翻译语言。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/SilentMode.html#getPushPerformLanguage">getPushPerformLanguage</a></td>
+<td align="left">获取用户设置的推送翻译语言。</td>
+</tr>
+</tbody></table>
+
+<a href="#thread-apis--该模块包含消息子区相关操作的-api。" id="thread-apis--该模块包含消息子区相关操作的-api。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/Thread.html">THREAD APIS</a> <br/><span style="font-size:14px"> 该模块包含消息子区相关操作的 API。</span></h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="modules/Thread.html#createChatThread">createChatThread</a></td>
+<td align="left">创建子区。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Thread.html#joinChatThread">joinChatThread</a></td>
+<td align="left">加入子区。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Thread.html#leaveChatThread">leaveChatThread</a></td>
+<td align="left">退出子区。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Thread.html#destroyChatThread">destroyChatThread</a></td>
+<td align="left">解散子区。仅子区所属群组的群主和管理员可以调用该方法。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Thread.html#changeChatThreadName">changeChatThreadName</a></td>
+<td align="left">修改子区名称。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Thread.html#getChatThreadMembers">getChatThreadMembers</a></td>
+<td align="left">分页获取子区成员。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Thread.html#removeChatThreadMember">removeChatThreadMember</a></td>
+<td align="left">移除子区成员。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Thread.html#getJoinedChatThreads">getJoinedChatThreads</a></td>
+<td align="left">分页获取当前用户加入的子区列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Thread.html#getChatThreads">getChatThreads</a></td>
+<td align="left">分页获取当前用户加入指定群组的子区列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Thread.html#getChatThreadLastMessage">getChatThreadLastMessage</a></td>
+<td align="left">批量获取指定子区中的最新一条消息。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Thread.html#getChatThreadDetail">getChatThreadDetail</a></td>
+<td align="left">获取子区详情。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onChatThreadChange">onChatThreadChange</a></td>
+<td align="left">当子区发生变化时触发。</td>
+</tr>
+</tbody></table>
+
+<a href="#translation-apis--该模块包含翻译服务相关操作的-api。" id="translation-apis--该模块包含翻译服务相关操作的-api。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/Translation.html">TRANSLATION APIS</a> <br/><span style="font-size:14px"> 该模块包含翻译服务相关操作的 API。</span></h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="modules/Translation.html#getSupportedLanguages">getSupportedLanguages</a></td>
+<td align="left">获取翻译服务支持的语言。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/Translation.html#translateMessage">translateMessage</a></td>
+<td align="left">翻译消息。</td>
+</tr>
+</tbody></table>
+
+<a href="#localcache-apis--该模块包含本地存储相关操作的-api。" id="localcache-apis--该模块包含本地存储相关操作的-api。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/LocalCache.html">LocalCache APIS</a> <br/><span style="font-size:14px"> 该模块包含本地存储相关操作的 API。</span></h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="modules/LocalCache.html#getLocalConversations">getLocalConversations</a></td>
+<td align="left">获取本地会话列表。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/LocalCache.html#getLocalConversation">getLocalConversation</a></td>
+<td align="left">获取单个本地会话。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/LocalCache.html#removeLocalConversation">removeLocalConversation</a></td>
+<td align="left">删除单个本地会话。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/LocalCache.html#setLocalConversationCustomField">setLocalConversationCustomField</a></td>
+<td align="left">设置本地会话自定义字段。</td>
+</tr>
+<tr>
+<td align="left"><a href="modules/LocalCache.html#clearConversationUnreadCount">clearConversationUnreadCount</a></td>
+<td align="left">对本地会话的未读消息数清零。</td>
+</tr>
+</tbody></table>
+
+<a href="#message--该模块用于-sdk-构建消息。" id="message--该模块用于-sdk-构建消息。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/Message.html">MESSAGE</a> <br/><span style="font-size:14px"> 该模块用于 SDK 构建消息。</span></h3>
+</a>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onTextMessage">onTextMessage</a></td>
+<td align="left">当收到文本消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onAudioMessage">onAudioMessage</a></td>
+<td align="left">当收到音频消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onVideoMessage">onVideoMessage</a></td>
+<td align="left">当收到视频消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onImageMessage">onImageMessage</a></td>
+<td align="left">当收到图片消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onCmdMessage">onCmdMessage</a></td>
+<td align="left">当收到透传消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onCustomMessage">onCustomMessage</a></td>
+<td align="left">当收到自定义消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onFileMessage">onFileMessage</a></td>
+<td align="left">当收到文件消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onLocationMessage">onLocationMessage</a></td>
+<td align="left">当收到位置消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onStatisticMessage">onStatisticMessage</a></td>
+<td align="left">当收到统计消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onReceivedMessage">onReceivedMessage</a></td>
+<td align="left">当收到消息已到达服务器的确认消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onDeliveredMessage">onDeliveredMessage</a></td>
+<td align="left">当收到消息已被对方收到的确认消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onReadMessage">onReadMessage</a></td>
+<td align="left">当收到消息已被对方阅读的确认消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onChannelMessage">onChannelMessage</a></td>
+<td align="left">当收到整个会话所有消息都置为已读的确认消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onRecallMessage">onRecallMessage</a></td>
+<td align="left">当收到撤回消息通知时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onModifiedMessage">onModifiedMessage</a></td>
+<td align="left">当收到修改消息通知时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onMessagePinEvent">onMessagePinEvent</a></td>
+<td align="left">当收到 PIN 消息通知时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onOfflineMessageSyncStart">onOfflineMessageSyncStart</a></td>
+<td align="left">开始从服务器拉取离线消息时触发。</td>
+</tr>
+<tr>
+<td align="left"><a href="interfaces/Types.EventHandlerType.EventHandlerType.html#onOfflineMessageSyncFinish">onOfflineMessageSyncFinish</a></td>
+<td align="left">从服务器拉取离线消息结束时触发。</td>
+</tr>
+</tbody></table>
+
+<a href="#types--sdk-类型声明模块。" id="types--sdk-类型声明模块。" style="color: inherit; text-decoration: none;">
+  <h3><a href="./modules/Types.html">TYPES</a> <br/><span style="font-size:14px"> SDK 类型声明模块。</span></h3>
+</a>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Modules</a></li><li class=" tsd-kind-module"><a href="modules/ChatSDK.html">ChatSDK</a></li><li class=" tsd-kind-module"><a href="modules/Chatroom.html">Chatroom</a></li><li class=" tsd-kind-module"><a href="modules/Connection.html">Connection</a></li><li class=" tsd-kind-module"><a href="modules/Contact.html">Contact</a></li><li class=" tsd-kind-module"><a href="modules/EventHandler.html">Event<wbr/>Handler</a></li><li class=" tsd-kind-module"><a href="modules/Group.html">Group</a></li><li class=" tsd-kind-module"><a href="modules/LocalCache.html">Local<wbr/>Cache</a></li><li class=" tsd-kind-module"><a href="modules/Logger.html">Logger</a></li><li class=" tsd-kind-module"><a href="modules/Message.html">Message</a></li><li class=" tsd-kind-module"><a href="modules/Presence.html">Presence</a></li><li class=" tsd-kind-module"><a href="modules/SilentMode.html">Silent<wbr/>Mode</a></li><li class=" tsd-kind-module"><a href="modules/StatusCode.html">Status<wbr/>Code</a></li><li class=" tsd-kind-module"><a href="modules/Thread.html">Thread</a></li><li class=" tsd-kind-module"><a href="modules/Translation.html">Translation</a></li><li class=" tsd-kind-module"><a href="modules/Types.html">Types</a></li><li class=" tsd-kind-module"><a href="modules/Utils.html">Utils</a></li><li class=" tsd-kind-module"><a href="modules/message_audio.html">message/audio</a></li><li class=" tsd-kind-module"><a href="modules/message_channel.html">message/channel</a></li><li class=" tsd-kind-module"><a href="modules/message_cmd.html">message/cmd</a></li><li class=" tsd-kind-module"><a href="modules/message_combine.html">message/combine</a></li><li class=" tsd-kind-module"><a href="modules/message_custom.html">message/custom</a></li><li class=" tsd-kind-module"><a href="modules/message_delivery.html">message/delivery</a></li><li class=" tsd-kind-module"><a href="modules/message_file.html">message/file</a></li><li class=" tsd-kind-module"><a href="modules/message_img.html">message/img</a></li><li class=" tsd-kind-module"><a href="modules/message_location.html">message/location</a></li><li class=" tsd-kind-module"><a href="modules/message_read.html">message/read</a></li><li class=" tsd-kind-module"><a href="modules/message_text.html">message/text</a></li><li class=" tsd-kind-module"><a href="modules/message_video.html">message/video</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li><li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li><li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li><li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>

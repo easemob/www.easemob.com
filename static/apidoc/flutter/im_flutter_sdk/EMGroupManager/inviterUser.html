@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the inviterUser method from the EMGroupManager class, for the Dart programming language.">
+  <title>inviterUser method - EMGroupManager class - im_flutter_sdk library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/EMGroupManager-class.html">EMGroupManager</a></li>
+    <li class="self-crumb">inviterUser method</li>
+  </ol>
+  <div class="self-name">inviterUser</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="im_flutter_sdk&#47;EMGroupManager-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">inviterUser</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="name ">inviterUser</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="inviterUser-param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span></li>
+<li><span class="parameter" id="inviterUser-param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span>, {</span></li>
+<li><span class="parameter" id="inviterUser-param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span>, </span></li>
+</ol>})
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>邀请用户加入群组。</p>
+<p>群类型为 <a href="../../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle.PrivateOnlyOwnerInvite</a>、<a href="../../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle.PrivateMemberCanInvite</a> 和 <a href="../../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle.PublicJoinNeedApproval</a> 的群组可以邀请用户加入。</p>
+<ul>
+<li>对于 <a href="../../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle.PrivateOnlyOwnerInvite</a> 属性的群组，仅群主可邀请用户入群。</li>
+<li>对于 <a href="../../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle.PrivateMemberCanInvite</a> 属性的群组，群成员可邀请用户入群。</li>
+<li>对于 <a href="../../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle.PublicJoinNeedApproval</a> 属性的群组，仅群主可邀请用户加入。</li>
+</ul>
+<p>Param <code>groupId</code> 群组 ID。</p>
+<p>Param <code>members</code> 要邀请的新成员数组。</p>
+<p>Param <code>reason</code> 邀请原因。</p>
+<p><strong>Throws</strong>  如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; inviterUser(
+  String groupId,
+  List&lt;String&gt; members, {
+  String? reason,
+}) async {
+  Map req = {
+    &#39;groupId&#39;: groupId,
+    &#39;members&#39;: members,
+  };
+  req.putIfNotNull(&quot;reason&quot;, reason);
+
+  Map result = await _channel.invokeMethod(
+    ChatMethodKeys.inviterUser,
+    req,
+  );
+
+  try {
+    EMError.hasErrorFromResult(result);
+  } on EMError catch (e) {
+    throw e;
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/EMGroupManager-class.html">EMGroupManager</a></li>
+    <li class="self-crumb">inviterUser method</li>
+</ol>
+
+
+    <h5>EMGroupManager class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    im_flutter_sdk
+      4.10.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

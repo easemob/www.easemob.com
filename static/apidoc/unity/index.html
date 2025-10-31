@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.3.0</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.3.2</span>
    </div>
   </td>
  </tr>
@@ -65,18 +65,17 @@ $(function() {
   <div class="headertitle"><div class="title">Chat SDK for Unity and Windows </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_D__workspace_project_doc_temp_unity_api_reference_mainpage"></a> ﻿Agora Chat is a highly reliable global communication platform where your users can chat one-to-one, in groups or in chat rooms. Users communicate with text messages, share images, audios, videos, files, emojis, and locations. Agora Chat supplies typing indicators out-of-the-box.</p>
+<div class="textblock"><p ><a class="anchor" id="md_D__workspace_project_doc_temp_unity_api_reference_mainpage"></a> Agora Chat is a highly reliable global communication platform where your users can chat one-to-one, in groups or in chat rooms. Users communicate with text messages, share images, audios, videos, files, emojis, and locations. Agora Chat supplies typing indicators out-of-the-box.</p>
 <ul>
-<li>The ChatClient class is the entry of the chat SDK. It provides methods to define how to log in to and log out of the chat app, as well as manage the connection between the SDK and the chat server.</li>
+<li>The SDKClient class is the entry of the chat SDK. It provides methods to define how to log in to and log out of the chat app, as well as manage the connection between the SDK and the chat server.</li>
 <li>The ChatManager class provides methods to define how to send and receive messages, manage conversations (including loading and deleting conversations), and download attachments.</li>
-<li>The ChatMessage class defines message attributes .</li>
+<li>The Message class defines message attributes .</li>
 <li>The Conversation class provides methods to define how to manage conversations.</li>
 <li>The ContactManager class provides methods to define how to manage chat contacts such as adding, retrieving, modifying, and deleting contacts.</li>
 <li>The GroupManager class provides methods for group management, like group creation and destruction and member management.</li>
-<li>The ChatRoomManager class provides methods for chat room management, like joining and leaving the chat room and retrieving the chat room list, and manages member privileges.</li>
+<li>The RoomManager class provides methods for chat room management, like joining and leaving the chat room and retrieving the chat room list, and manages member privileges.</li>
 <li>The PresenceManager class provides methods for you to set message push configuration options.</li>
 <li>The ChatThreadManager class provides methods t define how to manage message threads, including message thread creation, destruction, and member management.</li>
-<li>The PushManager class provides methods to define how to manage offline push services.</li>
 <li>The UserInfoManager class provides methods to manage user attributes, including getting and updating user attributes.</li>
 </ul>
 <p >During API calls, the SDK may returns error codes and warning codes. See <a href="https://sdkdocs.easemob.com/apidoc/android/chat3.0/classcom_1_1hyphenate_1_1_e_m_error.html">Error Codes and Warning Codes</a>.</p>
@@ -194,45 +193,45 @@ Chat manager</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a10052ded922daaa078a3818cc9925c80">SearchMsgFromDB</a></code>   </td><td class="markdownTableBodyLeft">Queries local messages based on the message scope.    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#ac40a178449998302cf127404a79b1c36">FetchHistoryMessagesFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets historical messages of the conversation from the server.    </td></tr>
-<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#ac65bce8ab0ceaf3fc407d835909b70f4">FetchHistoryMessagesFromServerBy</a></code>   </td><td class="markdownTableBodyLeft">Gets historical messages of a conversation from the server according to FetchServerMessagesOption.    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a27c1d31fec8d425d3f93f43b35835709">RemoveMessagesBeforeTimestamp</a></code>   </td><td class="markdownTableBodyLeft">Deletes local historical messages with a Unix timestamp before a specified one.    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#ac8a8e131abf22c1adf74cd34f2669043">ReportMessage</a></code>   </td><td class="markdownTableBodyLeft">Reports an inappropriate message.    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a2bf27b6dbf4b8ae32c195e28c4491355">FetchSupportLanguages</a></code>   </td><td class="markdownTableBodyLeft">Gets all languages supported by the translation service.    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#aec0aa99d2bdf2b9746b53d0a54eb1729">TranslateMessage</a></code>   </td><td class="markdownTableBodyLeft">Translates a text message.    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#ad2ae1bb3ad9a4198b451546822fd907a">AddReaction</a></code>   </td><td class="markdownTableBodyLeft">Adds a Reaction.    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a9ecb9a57d11c6a9c47f47bffe575b1af">RemoveReaction</a></code>   </td><td class="markdownTableBodyLeft">Deletes a Reaction.    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a88cd0affad00b2a1e5058ed4aeb9e4fd">GetReactionList</a></code>   </td><td class="markdownTableBodyLeft">Gets the list of Reactions.    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#add844be4a1d53d0f3e47715c87dc3815">GetReactionDetail</a></code>   </td><td class="markdownTableBodyLeft">Gets the Reaction details.    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#aa6f643bdfd0845a7cc55d01bc66df23a">GetConversationsFromServerWithPage</a></code>   </td><td class="markdownTableBodyLeft">Gets the some conversations from the server .    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a65e8d2affaf498f4669953dc2aa852f9">GetConversationsFromServerWithCursor</a></code>   </td><td class="markdownTableBodyLeft">Gets the some conversations from the server .    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a90df2e93ef197f9e923efc6df23a0a48">GetConversationsFromServerWithCursor</a></code>   </td><td class="markdownTableBodyLeft">Gets the conversations from the server based on the conversation mark.    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a628c9d3b8933c39db63b88ee74d344f0">RemoveMessagesFromServer</a></code>   </td><td class="markdownTableBodyLeft">Removes messages in a conversation (from both local storage and the server).    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a33adba1151f7b632fe0dd146cf75a079">FetchCombineMessageDetail</a></code>   </td><td class="markdownTableBodyLeft">Fetch combined message in detail.    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a406cc7536230123d294b6213b74c3a7e">ModifyMessage</a></code>   </td><td class="markdownTableBodyLeft">Modify a sent message.    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a1c5a718e3c572d3adc390c8346bd1cd0">DeleteAllMessagesAndConversations</a></code>   </td><td class="markdownTableBodyLeft">Clears all conversations and all messages in them.    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#abfdbaa93f1a9db988ae3fbc4557ef75d">MarkConversations</a></code>   </td><td class="markdownTableBodyLeft">Marks or unmarks conversations.    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a5c6a2796ca2cc30f6f00d6dc3b78d3fd">PinMessage</a></code>   </td><td class="markdownTableBodyLeft">Pins or unpins a message.    </td></tr>
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#abfdbaa93f1a9db988ae3fbc4557ef75d">MarkConversations</a></code>   </td><td class="markdownTableBodyLeft">Marks or unmarks conversations.    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a5c6a2796ca2cc30f6f00d6dc3b78d3fd">PinMessage</a></code>   </td><td class="markdownTableBodyLeft">Pins or unpins a message.    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#a89929a226ecf4c29a5a700475b282514">GetPinnedMessagesFromServer</a></code>   </td><td class="markdownTableBodyLeft">Gets the list of pinned messages in the conversation from the server.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#ad581465f8ceab1c5540230c192bfd5c1">RecallMessage</a></code>   </td><td class="markdownTableBodyLeft">Recalls the message.    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_chat_manager.html#ad82fe37433d576cbf96af1fe9ad381db">AddChatManagerDelegate</a></code>   </td><td class="markdownTableBodyLeft">Adds the message listener.    </td></tr>
 <tr class="markdownTableRowEven">
@@ -254,7 +253,7 @@ Chat manager</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#a25f077794d85560dfa99260ecd1b59b4">OnMessagesDelivered</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a delivery receipt is received.    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#a7946a76551b01c5113285ec73ee6dd6a">OnMessagesRecalled</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a received message is recalled.    </td></tr>
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#a03f856b8ff1a8cd51ff093fbace274e7">OnMessagesRecalled</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a received message is recalled.    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#ac85aca15e5ae239eb4a9fb861fda8f88">MessageReactionDidChange</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a message Reaction changed.    </td></tr>
 <tr class="markdownTableRowOdd">
@@ -267,7 +266,7 @@ Chat manager</h2>
 <td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_chat_manager_delegate.html#a88ae23b9607ab72b8e12859b9685e9d4">OnMessagePinChanged</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a message is pinned or unpinned.   </td></tr>
 </table>
 <h2><a class="anchor" id="autotoc_md2"></a>
-Messages</h2>
+Message</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">Method   </th><th class="markdownTableHeadLeft">Description    </th></tr>
@@ -354,9 +353,9 @@ Messages</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#ac058e1ef3fba34f0cd0ba542c50e25df">MsgId</a></code>   </td><td class="markdownTableBodyLeft">Gets or sets the message ID.    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a68bf990a3120b2209e34f1c022993251">SetAttribute</a></code>   </td><td class="markdownTableBodyLeft">Sets a message extension attribute of the String type.    </td></tr>
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a68bf990a3120b2209e34f1c022993251">SetAttribute</a></code>   </td><td class="markdownTableBodyLeft">Sets a message extension attribute.    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a0b9966a8bfbd23dcce0fe384f85fbdb5">GetAttributeValue</a></code>   </td><td class="markdownTableBodyLeft">Gets a message extension attribute of the String type.    </td></tr>
+<td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a0b9966a8bfbd23dcce0fe384f85fbdb5">GetAttributeValue</a></code>   </td><td class="markdownTableBodyLeft">Gets a message extension attribute.    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code><a class="el" href="class_agora_chat_1_1_message.html#a9c14308a396cdc27846a619de250b93f">HasReadAck</a></code>   </td><td class="markdownTableBodyLeft">Gets whether the message is read.    </td></tr>
 <tr class="markdownTableRowOdd">
@@ -652,7 +651,7 @@ Chat Room</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#a2fa905ff705355767ab23a353741d8d6">OnDestroyedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when the chat room is destroyed.    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#a2989b1cdb2805f4d9689ef084db93e77">OnMemberJoinedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a member joins the chat room.    </td></tr>
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#aceacc468c794cf089bedb4ec61b6584d">OnMemberJoinedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a member joins the chat room.    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code><a class="el" href="interface_agora_chat_1_1_i_room_manager_delegate.html#acf28558473f76820291d1b70188c8870">OnMemberExitedFromRoom</a></code>   </td><td class="markdownTableBodyLeft">Occurs when a member exits the chat room.    </td></tr>
 <tr class="markdownTableRowEven">

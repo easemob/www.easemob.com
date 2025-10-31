@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the blockChatRoomMembers method from the EMChatRoomManager class, for the Dart programming language.">
+  <title>blockChatRoomMembers method - EMChatRoomManager class - im_flutter_sdk library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/EMChatRoomManager-class.html">EMChatRoomManager</a></li>
+    <li class="self-crumb">blockChatRoomMembers method</li>
+  </ol>
+  <div class="self-name">blockChatRoomMembers</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="im_flutter_sdk&#47;EMChatRoomManager-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">blockChatRoomMembers</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="name ">blockChatRoomMembers</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="blockChatRoomMembers-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span></li>
+<li><span class="parameter" id="blockChatRoomMembers-param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>将成员添加到聊天室黑名单。</p>
+<p>仅聊天室所有者和管理员可调用此方法。</p>
+<p>对于添加到聊天室黑名单的成员，请注意以下几点：</p>
+<ol>
+<li>成员添加到黑名单的同时，将被服务器移出聊天室。</li>
+<li>可通过 <a href="../../im_flutter_sdk/EMChatRoomEventHandler/onRemovedFromChatRoom.html">EMChatRoomEventHandler.onRemovedFromChatRoom</a> 回调通知。</li>
+<li>添加到黑名单的成员禁止再次加入到聊天室。</li>
+</ol>
+<p>Param <code>roomId</code> 聊天室 ID。</p>
+<p>Param <code>members</code> 要加入黑名单的成员列表。</p>
+<p><strong>Throws</strong> 如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; blockChatRoomMembers(
+  String roomId,
+  List&lt;String&gt; members,
+) async {
+  Map req = {&quot;roomId&quot;: roomId, &quot;members&quot;: members};
+  Map result =
+      await _channel.invokeMethod(ChatMethodKeys.blockChatRoomMembers, req);
+  try {
+    EMError.hasErrorFromResult(result);
+  } on EMError catch (e) {
+    throw e;
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/EMChatRoomManager-class.html">EMChatRoomManager</a></li>
+    <li class="self-crumb">blockChatRoomMembers method</li>
+</ol>
+
+
+    <h5>EMChatRoomManager class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    im_flutter_sdk
+      4.10.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

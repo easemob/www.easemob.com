@@ -1,9 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>HyphenateChatSDK: HyphenateChat.framework/Headers/EMChatroomManagerDelegate.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -11,9 +12,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { init_search(); });
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">4.14.0</span>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.17.0</span>
    </div>
   </td>
  </tr>
@@ -32,38 +29,23 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.10 -->
+<!-- 制作者 Doxygen 1.9.4 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
 </script>
-  <div id="navrow1" class="tabs">
-    <ul class="tablist">
-      <li><a href="index.html"><span>首页</span></a></li>
-      <li><a href="annotated.html"><span>类</span></a></li>
-      <li class="current"><a href="files.html"><span>文件</span></a></li>
-      <li>
-        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="搜索" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="files.html"><span>文件列表</span></a></li>
-    </ul>
-  </div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,88 +66,85 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">EMChatroomManagerDelegate.h</div>  </div>
+  <div class="headertitle"><div class="title">EMChatroomManagerDelegate.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;NS_ASSUME_NONNULL_BEGIN</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">typedef</span> NS_ENUM(NSInteger, EMChatroomBeKickedReason)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    EMChatroomBeKickedReasonBeRemoved = 0, </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    EMChatroomBeKickedReasonDestroyed,     </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    EMChatroomBeKickedReasonOffline,       </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_chatroom.html">EMChatroom</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="protocol_e_m_chatroom_manager_delegate-p.html">   41</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate</a> &lt;NSObject&gt;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">@optional</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;- (void)userDidJoinChatroom:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                       user:(NSString *)aUsername</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        ext:(NSString* _Nullable)ext;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;- (void)userDidLeaveChatroom:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        user:(NSString *)aUsername;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;- (void)didDismissFromChatroom:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        reason:(EMChatroomBeKickedReason)aReason;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;- (void)chatroomSpecificationDidUpdate:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;- (void)chatroomMuteListDidUpdate:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                addedMutedMembers:(NSDictionary&lt;NSString *,NSNumber*&gt; *)aMutes;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;- (void)chatroomMuteListDidUpdate:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;              removedMutedMembers:(NSArray&lt;NSString *&gt; *)aMutes;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;- (void)chatroomWhiteListDidUpdate:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;             addedWhiteListMembers:(NSArray&lt;NSString *&gt; *)aMembers;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;- (void)chatroomWhiteListDidUpdate:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;           removedWhiteListMembers:(NSArray&lt;NSString *&gt; *)aMembers;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;- (void)chatroomAllMemberMuteChanged:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    isAllMemberMuted:(BOOL)aMuted;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;- (void)chatroomAdminListDidUpdate:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                        addedAdmin:(NSString *)aAdmin;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;- (void)chatroomAdminListDidUpdate:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                      removedAdmin:(NSString *)aAdmin;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;- (void)chatroomOwnerDidUpdate:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                      newOwner:(NSString *)aNewOwner</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                      oldOwner:(NSString *)aOldOwner;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;- (void)chatroomAnnouncementDidUpdate:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                         announcement:(NSString * _Nullable )aAnnouncement;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;- (void)chatroomAttributesDidUpdated:( NSString * _Nonnull )roomId attributeMap:(NSDictionary&lt;NSString*,NSString*&gt; * _Nonnull)attributeMap from:(NSString * _Nonnull)fromId;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;- (void)chatroomAttributesDidRemoved:( NSString * _Nonnull )roomId attributes:(NSArray&lt;__kindof NSString*&gt; * _Nonnull)attributes from:(NSString * _Nonnull)fromId;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#pragma mark - Deprecated methods</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;- (void)userDidJoinChatroom:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                       user:(NSString *)aUsername __deprecated_msg(&quot;Use -userDidJoinChatroom:user:ext: instead&quot;);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;- (void)chatroomMuteListDidUpdate:(<a class="code" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                addedMutedMembers:(NSArray&lt;NSString *&gt; *)aMutes</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                       muteExpire:(NSInteger)aMuteExpire __deprecated_msg(&quot;Use -chatroomMuteListDidUpdate:addedMutedMembers: instead&quot;);;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;NS_ASSUME_NONNULL_END</div>
-<div class="ttc" id="protocol_e_m_chatroom_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMChatroomManagerDelegate.h:41</div></div>
-<div class="ttc" id="interface_e_m_chatroom_html"><div class="ttname"><a href="interface_e_m_chatroom.html">EMChatroom</a></div><div class="ttdef"><b>Definition:</b> EMChatroom.h:41</div></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>NS_ASSUME_NONNULL_BEGIN</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">typedef</span> NS_ENUM(NSInteger, EMChatroomBeKickedReason)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    EMChatroomBeKickedReasonBeRemoved = 0, </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    EMChatroomBeKickedReasonDestroyed,     </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    EMChatroomBeKickedReasonOffline,       </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">@class</span> <a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="protocol_e_m_chatroom_manager_delegate-p.html">   41</a></span><span class="keyword">@protocol </span><a class="code hl_protocol" href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate</a> &lt;NSObject&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">@optional</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>- (void)userDidJoinChatroom:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                       user:(NSString *)aUsername</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        ext:(NSString* _Nullable)ext;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>- (void)userDidLeaveChatroom:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                        user:(NSString *)aUsername;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>- (void)didDismissFromChatroom:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                        reason:(EMChatroomBeKickedReason)aReason;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>- (void)chatroomSpecificationDidUpdate:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>- (void)chatroomMuteListDidUpdate:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                addedMutedMembers:(NSDictionary&lt;NSString *,NSNumber*&gt; *)aMutes;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>- (void)chatroomMuteListDidUpdate:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>              removedMutedMembers:(NSArray&lt;NSString *&gt; *)aMutes;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>- (void)chatroomWhiteListDidUpdate:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>             addedWhiteListMembers:(NSArray&lt;NSString *&gt; *)aMembers;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>- (void)chatroomWhiteListDidUpdate:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>           removedWhiteListMembers:(NSArray&lt;NSString *&gt; *)aMembers;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>- (void)chatroomAllMemberMuteChanged:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                    isAllMemberMuted:(BOOL)aMuted;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>- (void)chatroomAdminListDidUpdate:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                        addedAdmin:(NSString *)aAdmin;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>- (void)chatroomAdminListDidUpdate:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                      removedAdmin:(NSString *)aAdmin;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>- (void)chatroomOwnerDidUpdate:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                      newOwner:(NSString *)aNewOwner</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                      oldOwner:(NSString *)aOldOwner;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>- (void)chatroomAnnouncementDidUpdate:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                         announcement:(NSString * _Nullable )aAnnouncement;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>- (void)chatroomAttributesDidUpdated:( NSString * _Nonnull )roomId attributeMap:(NSDictionary&lt;NSString*,NSString*&gt; * _Nonnull)attributeMap from:(NSString * _Nonnull)fromId;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>- (void)chatroomAttributesDidRemoved:( NSString * _Nonnull )roomId attributes:(NSArray&lt;__kindof NSString*&gt; * _Nonnull)attributes from:(NSString * _Nonnull)fromId;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="preprocessor">#pragma mark - Deprecated methods</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>- (void)userDidJoinChatroom:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                       user:(NSString *)aUsername __deprecated_msg(&quot;Use -userDidJoinChatroom:user:ext: instead&quot;);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>- (void)chatroomMuteListDidUpdate:(<a class="code hl_interface" href="interface_e_m_chatroom.html">EMChatroom</a> *)aChatroom</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                addedMutedMembers:(NSArray&lt;NSString *&gt; *)aMutes</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                       muteExpire:(NSInteger)aMuteExpire __deprecated_msg(&quot;Use -chatroomMuteListDidUpdate:addedMutedMembers: instead&quot;);;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno"><a class="line" href="protocol_e_m_chatroom_manager_delegate-p.html#a45dd4eabb9179e8320ee0bc6aa3f7f59">  328</a></span>NS_ASSUME_NONNULL_END</div>
+<div class="ttc" id="ainterface_e_m_chatroom_html"><div class="ttname"><a href="interface_e_m_chatroom.html">EMChatroom</a></div><div class="ttdef"><b>Definition:</b> EMChatroom.h:42</div></div>
+<div class="ttc" id="aprotocol_e_m_chatroom_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_chatroom_manager_delegate-p.html">EMChatroomManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMChatroomManagerDelegate.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>
