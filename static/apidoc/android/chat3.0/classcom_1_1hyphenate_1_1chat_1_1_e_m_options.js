@@ -18,6 +18,7 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_options =
     [ "getCustomDeviceName", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#af7f900c5e91b9861f8e937a99a1f17fc", null ],
     [ "getCustomOSPlatform", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a9970ea906a900fba1cec3e94fc6e547b", null ],
     [ "getDnsUrl", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a02e6e5746525739fdd77926daac3465a", null ],
+    [ "getDohVendor", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aeaca999b7f7d26812100db1b5b45d01e", null ],
     [ "getEnableDNSConfig", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a7d3ec17a17c7ce69ffb6002b3028ec3f", null ],
     [ "getFixedInterval", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ae0e412c75af85be17b0bf5b8ccfa560f", null ],
     [ "getImPort", "classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aa89221556df9c3c93efba890f7ed9b4b", null ],
