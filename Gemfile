@@ -5,7 +5,7 @@ ruby '2.5.9'
 
 gem 'builder'
 gem 'coderay'
-gem 'kramdown', '~> 0.13.2'
+gem 'kramdown', '~> 2.3.0'
 gem 'mime-types', '~> 1.16'
 gem 'nanoc', '~> 3.7'
 gem 'nokogiri', '~> 1.6.0'
