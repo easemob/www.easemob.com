@@ -9,9 +9,10 @@ var searchData=
   ['unmuteroommembers_6',['UnMuteRoomMembers',['../class_agora_chat_1_1_room_manager.html#a89ff0174068bd19926b696914ee3b24b',1,'AgoraChat::RoomManager']]],
   ['unsubscribepresences_7',['UnsubscribePresences',['../class_agora_chat_1_1_presence_manager.html#a7df4ca3aa8f90e2d777be74b10cbb70a',1,'AgoraChat::PresenceManager']]],
   ['updategroupannouncement_8',['UpdateGroupAnnouncement',['../class_agora_chat_1_1_group_manager.html#a73967c3fd60ad7e01b6b324cdcb4673f',1,'AgoraChat::GroupManager']]],
-  ['updategroupext_9',['UpdateGroupExt',['../class_agora_chat_1_1_group_manager.html#ab71d899cc60f036fe469a30f2135c5bf',1,'AgoraChat::GroupManager']]],
-  ['updatemessage_10',['UpdateMessage',['../class_agora_chat_1_1_chat_manager.html#ab9a23c7c2628fba7c967901bc5e11248',1,'AgoraChat.ChatManager.UpdateMessage()'],['../class_agora_chat_1_1_conversation.html#a177877bf974c03286569139b87551dc9',1,'AgoraChat.Conversation.UpdateMessage()']]],
-  ['updateowninfo_11',['UpdateOwnInfo',['../class_agora_chat_1_1_user_info_manager.html#a2ab4ddd0e3bc2d1f378cefc2011ce47d',1,'AgoraChat::UserInfoManager']]],
-  ['updateroomannouncement_12',['UpdateRoomAnnouncement',['../class_agora_chat_1_1_room_manager.html#abff0294c07aa17a1ab4e0c3121d419ea',1,'AgoraChat::RoomManager']]],
-  ['uploadgroupsharedfile_13',['UploadGroupSharedFile',['../class_agora_chat_1_1_group_manager.html#a6382731532f788298ba2a24f5394c280',1,'AgoraChat::GroupManager']]]
+  ['updategroupavatar_9',['UpdateGroupAvatar',['../class_agora_chat_1_1_group_manager.html#a73ea59dfbd4cdd686206e8cb89a35911',1,'AgoraChat::GroupManager']]],
+  ['updategroupext_10',['UpdateGroupExt',['../class_agora_chat_1_1_group_manager.html#ab71d899cc60f036fe469a30f2135c5bf',1,'AgoraChat::GroupManager']]],
+  ['updatemessage_11',['UpdateMessage',['../class_agora_chat_1_1_chat_manager.html#ab9a23c7c2628fba7c967901bc5e11248',1,'AgoraChat.ChatManager.UpdateMessage()'],['../class_agora_chat_1_1_conversation.html#a177877bf974c03286569139b87551dc9',1,'AgoraChat.Conversation.UpdateMessage()']]],
+  ['updateowninfo_12',['UpdateOwnInfo',['../class_agora_chat_1_1_user_info_manager.html#a2ab4ddd0e3bc2d1f378cefc2011ce47d',1,'AgoraChat::UserInfoManager']]],
+  ['updateroomannouncement_13',['UpdateRoomAnnouncement',['../class_agora_chat_1_1_room_manager.html#abff0294c07aa17a1ab4e0c3121d419ea',1,'AgoraChat::RoomManager']]],
+  ['uploadgroupsharedfile_14',['UploadGroupSharedFile',['../class_agora_chat_1_1_group_manager.html#a6382731532f788298ba2a24f5394c280',1,'AgoraChat::GroupManager']]]
 ];

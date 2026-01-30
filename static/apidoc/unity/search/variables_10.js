@@ -1,16 +1,15 @@
 var searchData=
 [
-  ['targetlanguages_0',['TargetLanguages',['../class_agora_chat_1_1_message_body_1_1_text_body.html#ada909c18640ce9ce17f0591a815371d3',1,'AgoraChat::MessageBody::TextBody']]],
-  ['text_1',['Text',['../class_agora_chat_1_1_message_body_1_1_text_body.html#a4b7adb6388194c412849709f37bc9c22',1,'AgoraChat::MessageBody::TextBody']]],
-  ['thumbnaildownstatus_2',['ThumbnailDownStatus',['../class_agora_chat_1_1_message_body_1_1_image_body.html#a43340ec6834ac16b1513cb4c72e4eba3',1,'AgoraChat.MessageBody.ImageBody.ThumbnailDownStatus()'],['../class_agora_chat_1_1_message_body_1_1_video_body.html#abef8c22b316ecb6ea53324fd9adc691a',1,'AgoraChat.MessageBody.VideoBody.ThumbnailDownStatus()']]],
-  ['thumbnailheight_3',['ThumbnailHeight',['../class_agora_chat_1_1_message_body_1_1_image_body.html#a6a456668279786def1e0f63457a2e1af',1,'AgoraChat::MessageBody::ImageBody']]],
-  ['thumbnaillocalpath_4',['ThumbnailLocalPath',['../class_agora_chat_1_1_message_body_1_1_image_body.html#ab79575c0c86eeb903c44861710d76999',1,'AgoraChat::MessageBody::ImageBody']]],
-  ['thumbnailocationpath_5',['ThumbnaiLocationPath',['../class_agora_chat_1_1_message_body_1_1_video_body.html#aea519d8ff9c34111a39de462758bd5a6',1,'AgoraChat::MessageBody::VideoBody']]],
-  ['thumbnailremotepath_6',['ThumbnailRemotePath',['../class_agora_chat_1_1_message_body_1_1_image_body.html#a037abad81122992410e1dede63d0147e',1,'AgoraChat.MessageBody.ImageBody.ThumbnailRemotePath()'],['../class_agora_chat_1_1_message_body_1_1_video_body.html#ab0e86e3fbdbaf1bb52e2a0f1cec5f4bc',1,'AgoraChat.MessageBody.VideoBody.ThumbnailRemotePath()']]],
-  ['thumbnailsecret_7',['ThumbnailSecret',['../class_agora_chat_1_1_message_body_1_1_image_body.html#ac97370d3558fec83d9f2566ae7b886f9',1,'AgoraChat.MessageBody.ImageBody.ThumbnailSecret()'],['../class_agora_chat_1_1_message_body_1_1_video_body.html#aa33bb1319aaaa2ef91d181a7e8b92912',1,'AgoraChat.MessageBody.VideoBody.ThumbnailSecret()']]],
-  ['tid_8',['Tid',['../class_agora_chat_1_1_chat_thread.html#a7e903aeff51cba5f4e76bb32791c22fd',1,'AgoraChat::ChatThread']]],
-  ['title_9',['Title',['../class_agora_chat_1_1_message_body_1_1_combine_body.html#afc3e14242a332499668b127ee9806e3b',1,'AgoraChat::MessageBody::CombineBody']]],
-  ['to_10',['To',['../class_agora_chat_1_1_message.html#aa274c94e2a988c5012c8c4514cd96b0e',1,'AgoraChat::Message']]],
-  ['translations_11',['Translations',['../class_agora_chat_1_1_message_body_1_1_text_body.html#afcc686d1656f6216a9bdd3aee5fe5752',1,'AgoraChat::MessageBody::TextBody']]],
-  ['type_12',['Type',['../class_agora_chat_1_1_conversation.html#af3c36a606d101abb18c7c4948c74533d',1,'AgoraChat::Conversation']]]
+  ['sdkdatapath_0',['SDKDataPath',['../class_agora_chat_1_1_options.html#afbe585a5379d5c89e684032803d5e51a',1,'AgoraChat::Options']]],
+  ['secret_1',['Secret',['../class_agora_chat_1_1_message_body_1_1_file_body.html#a227d7c1e55f8bdc6ba8513fd9d4491b0',1,'AgoraChat::MessageBody::FileBody']]],
+  ['servertime_2',['ServerTime',['../class_agora_chat_1_1_message.html#a4e61a8da5296a995751e059496dd28ec',1,'AgoraChat::Message']]],
+  ['servertransfer_3',['ServerTransfer',['../class_agora_chat_1_1_options.html#a8653949f868134a2900176e44091a5ed',1,'AgoraChat::Options']]],
+  ['signature_4',['Signature',['../class_agora_chat_1_1_user_info.html#a05fffc01b61d9fb8b079bddb00509e93',1,'AgoraChat::UserInfo']]],
+  ['sortmessagebyservertime_5',['SortMessageByServerTime',['../class_agora_chat_1_1_options.html#ac30dbfc44586f40488b4344a1353fef4',1,'AgoraChat::Options']]],
+  ['starttime_6',['StartTime',['../class_agora_chat_1_1_fetch_server_messages_option.html#ae184996e31424fd5cd239b5d38147892',1,'AgoraChat::FetchServerMessagesOption']]],
+  ['state_7',['State',['../class_agora_chat_1_1_message_reaction.html#a17399b8d95e3f3bdd49379b9ab7777f2',1,'AgoraChat::MessageReaction']]],
+  ['status_8',['Status',['../class_agora_chat_1_1_message.html#aa918c0bee098ebbb615c7147136fe6d5',1,'AgoraChat.Message.Status()'],['../class_agora_chat_1_1_presence_device_status.html#a8bbf122b66d211c52da9fa321e25f7a3',1,'AgoraChat.PresenceDeviceStatus.Status()']]],
+  ['style_9',['Style',['../class_agora_chat_1_1_group_options.html#afa072aacdd6504b91845bc8c45f98015',1,'AgoraChat::GroupOptions']]],
+  ['success_10',['Success',['../class_agora_chat_1_1_call_back.html#ac2495c5db6d86c329ba15ddcea98b41d',1,'AgoraChat::CallBack']]],
+  ['summary_11',['Summary',['../class_agora_chat_1_1_message_body_1_1_combine_body.html#a11edaf0e9e8774577a8ac80fd9d6b3ec',1,'AgoraChat::MessageBody::CombineBody']]]
 ];

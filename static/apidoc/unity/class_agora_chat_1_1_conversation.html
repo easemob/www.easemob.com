@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -113,6 +113,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:af332546d9b72fba10b9c0bb678b1bf73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec275d33ebb5541be4500c1f9990ec2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_conversation.html#aec275d33ebb5541be4500c1f9990ec2c">LoadMessagesWithScope</a> (string keywords, <a class="el" href="namespace_agora_chat.html#a5b46368751bc6fc3ba812aa433030fc1">MessageSearchScope</a> scope=<a class="el" href="namespace_agora_chat.html#a5b46368751bc6fc3ba812aa433030fc1a45685e95985e20822fb2538a522a5ccf">MessageSearchScope.CONTENT</a>, long timestamp=0, int maxCount=20, string from=null, <a class="el" href="namespace_agora_chat.html#a21083e9a15b091e86f3f2cc113bd1b7b">MessageSearchDirection</a> direction=<a class="el" href="namespace_agora_chat.html#a21083e9a15b091e86f3f2cc113bd1b7bafbaedde498cdead4f2780217646e9ba1">MessageSearchDirection.UP</a>, <a class="el" href="class_agora_chat_1_1_value_call_back.html">ValueCallBack</a>&lt; List&lt; <a class="el" href="class_agora_chat_1_1_message.html">Message</a> &gt; &gt; callback=null)</td></tr>
 <tr class="separator:aec275d33ebb5541be4500c1f9990ec2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a348b3ec30fe10491565cac421b8abfca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_conversation.html#a348b3ec30fe10491565cac421b8abfca">LoadMessagesWithScopeAndFromIds</a> (string keywords, long timestamp=0, int maxCount=20, List&lt; string &gt; fromIds=null, <a class="el" href="namespace_agora_chat.html#a21083e9a15b091e86f3f2cc113bd1b7b">MessageSearchDirection</a> direction=<a class="el" href="namespace_agora_chat.html#a21083e9a15b091e86f3f2cc113bd1b7bafbaedde498cdead4f2780217646e9ba1">MessageSearchDirection.UP</a>, <a class="el" href="namespace_agora_chat.html#a5b46368751bc6fc3ba812aa433030fc1">MessageSearchScope</a> scope=<a class="el" href="namespace_agora_chat.html#a5b46368751bc6fc3ba812aa433030fc1a45685e95985e20822fb2538a522a5ccf">MessageSearchScope.CONTENT</a>, <a class="el" href="class_agora_chat_1_1_value_call_back.html">ValueCallBack</a>&lt; List&lt; <a class="el" href="class_agora_chat_1_1_message.html">Message</a> &gt; &gt; callback=null)</td></tr>
+<tr class="separator:a348b3ec30fe10491565cac421b8abfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19e30070920fabe88cc6f9395fd1c472"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_conversation.html#a19e30070920fabe88cc6f9395fd1c472">MessagesCount</a> ()</td></tr>
 <tr class="separator:a19e30070920fabe88cc6f9395fd1c472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3f42eec89ca76339ce557f33e6cb2bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_agora_chat_1_1_conversation.html#ae3f42eec89ca76339ce557f33e6cb2bc">MessagesCountWithTimestamp</a> (long startTimestamp, long endTimestamp)</td></tr>
@@ -771,6 +773,77 @@ Public 属性</h2></td></tr>
     <tr><td class="paramname">maxCount</td><td>查询的最大消息数。 </td></tr>
     <tr><td class="paramname">from</td><td>消息发送方的用户 ID。若不设置该参数，SDK 搜索消息时会忽略该参数。 </td></tr>
     <tr><td class="paramname">direction</td><td>查询方向，详见 <code><a class="el" href="namespace_agora_chat.html#a21083e9a15b091e86f3f2cc113bd1b7b">MessageSearchDirection</a></code>。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>消息列表。 </dd></dl>
+
+</div>
+</div>
+<a id="a348b3ec30fe10491565cac421b8abfca" name="a348b3ec30fe10491565cac421b8abfca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a348b3ec30fe10491565cac421b8abfca">&#9670;&nbsp;</a></span>LoadMessagesWithScopeAndFromIds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.Conversation.LoadMessagesWithScopeAndFromIds </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>keywords</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>timestamp</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxCount</em> = <code>20</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>fromIds</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_agora_chat.html#a21083e9a15b091e86f3f2cc113bd1b7b">MessageSearchDirection</a>&#160;</td>
+          <td class="paramname"><em>direction</em> = <code><a class="el" href="namespace_agora_chat.html#a21083e9a15b091e86f3f2cc113bd1b7bafbaedde498cdead4f2780217646e9ba1">MessageSearchDirection.UP</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_agora_chat.html#a5b46368751bc6fc3ba812aa433030fc1">MessageSearchScope</a>&#160;</td>
+          <td class="paramname"><em>scope</em> = <code><a class="el" href="namespace_agora_chat.html#a5b46368751bc6fc3ba812aa433030fc1a45685e95985e20822fb2538a522a5ccf">MessageSearchScope.CONTENT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_agora_chat_1_1_value_call_back.html">ValueCallBack</a>&lt; List&lt; <a class="el" href="class_agora_chat_1_1_message.html">Message</a> &gt; &gt;&#160;</td>
+          <td class="paramname"><em>callback</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >加载指定范围内满足条件的消息（支持多个发送方）。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keywords</td><td>查找关键字，字符串类型。 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>查询的起始时间戳。单位为毫秒。 </td></tr>
+    <tr><td class="paramname">maxCount</td><td>查询的最大消息数。 </td></tr>
+    <tr><td class="paramname">fromIds</td><td>消息发送方的用户 ID 列表。列表大小不能超过 10。若不设置该参数，SDK 搜索消息时会忽略该参数。 </td></tr>
+    <tr><td class="paramname">direction</td><td>查询方向，详见 <code><a class="el" href="namespace_agora_chat.html#a21083e9a15b091e86f3f2cc113bd1b7b">MessageSearchDirection</a></code>。 </td></tr>
+    <tr><td class="paramname">scope</td><td>查询范围，详见 <code><a class="el" href="namespace_agora_chat.html#a5b46368751bc6fc3ba812aa433030fc1">MessageSearchScope</a></code>。 </td></tr>
   </table>
   </dd>
 </dl>
