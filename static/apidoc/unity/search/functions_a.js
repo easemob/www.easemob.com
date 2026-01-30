@@ -8,7 +8,7 @@ var searchData=
   ['messagereactiondidchange_5',['MessageReactionDidChange',['../interface_agora_chat_1_1_i_chat_manager_delegate.html#ac85aca15e5ae239eb4a9fb861fda8f88',1,'AgoraChat::IChatManagerDelegate']]],
   ['messagescount_6',['MessagesCount',['../class_agora_chat_1_1_conversation.html#a19e30070920fabe88cc6f9395fd1c472',1,'AgoraChat::Conversation']]],
   ['messagescountwithtimestamp_7',['MessagesCountWithTimestamp',['../class_agora_chat_1_1_conversation.html#ae3f42eec89ca76339ce557f33e6cb2bc',1,'AgoraChat::Conversation']]],
-  ['modifymessage_8',['ModifyMessage',['../class_agora_chat_1_1_chat_manager.html#a406cc7536230123d294b6213b74c3a7e',1,'AgoraChat::ChatManager']]],
+  ['modifymessage_8',['ModifyMessage',['../class_agora_chat_1_1_chat_manager.html#a406cc7536230123d294b6213b74c3a7e',1,'AgoraChat.ChatManager.ModifyMessage(string messageId, MessageBody.TextBody body, ValueCallBack&lt; Message &gt; callback=null)'],['../class_agora_chat_1_1_chat_manager.html#ad34c82de804a5360df97061a36b4d4e8',1,'AgoraChat.ChatManager.ModifyMessage(string messageId, IMessageBody body=null, Dictionary&lt; string, AttributeValue &gt; attributes=null, ValueCallBack&lt; Message &gt; callback=null)']]],
   ['muteallroommembers_9',['MuteAllRoomMembers',['../class_agora_chat_1_1_room_manager.html#a172bbd43aab0f7770c15b92a76424466',1,'AgoraChat::RoomManager']]],
   ['mutegroupallmembers_10',['MuteGroupAllMembers',['../class_agora_chat_1_1_group_manager.html#af9653dc4e5aae655e9a0ddac3e927aae',1,'AgoraChat::GroupManager']]],
   ['mutegroupmembers_11',['MuteGroupMembers',['../class_agora_chat_1_1_group_manager.html#abbec16cf7e1e296395571e1cf844eba3',1,'AgoraChat::GroupManager']]],
