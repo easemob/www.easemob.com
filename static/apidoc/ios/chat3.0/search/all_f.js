@@ -11,6 +11,7 @@ var searchData=
   ['onmessagepinchanged_3aconversationid_3aoperation_3apininfo_3a',['onMessagePinChanged:conversationId:operation:pinInfo:',['../protocol_e_m_chat_manager_delegate-p.html#aebcc71ce88bbaa09ad23cb6aead7cbc0',1,'EMChatManagerDelegate-p']]],
   ['onofflinemessagesyncfinish',['onOfflineMessageSyncFinish',['../protocol_e_m_client_delegate-p.html#ad04ad34af124a1b6bc7c205f9829b5c3',1,'EMClientDelegate-p']]],
   ['onofflinemessagesyncstart',['onOfflineMessageSyncStart',['../protocol_e_m_client_delegate-p.html#aef836af2b1f32d0047a18431b6eab569',1,'EMClientDelegate-p']]],
+  ['onstreammessagesreceived_3a',['onStreamMessagesReceived:',['../protocol_e_m_chat_manager_delegate-p.html#a5c3c14b89d2bbc1d590c9b040cd2d9b7',1,'EMChatManagerDelegate-p']]],
   ['onuserkickoutofchatthread_3a',['onUserKickOutOfChatThread:',['../protocol_e_m_thread_manager_delegate-p.html#a8d2d62f155fe494b8b23a2cbbe781bc1',1,'EMThreadManagerDelegate-p']]],
   ['operate',['operate',['../interface_e_m_message_reaction_operation.html#a66676670ed213e891a9bbca446817310',1,'EMMessageReactionOperation']]],
   ['operations',['operations',['../interface_e_m_message_reaction_change.html#a3926f45739f369b0f8344c57f45e6789',1,'EMMessageReactionChange']]],

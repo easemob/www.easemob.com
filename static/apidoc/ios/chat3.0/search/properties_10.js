@@ -1,6 +1,7 @@
 var searchData=
 [
   ['secretkey',['secretKey',['../interface_e_m_file_message_body.html#ae56d6b8868c9efe0c6a3321df980bd6c',1,'EMFileMessageBody']]],
+  ['sequencenumber',['sequenceNumber',['../interface_e_m_stream_chunk.html#a026a9a1338428d2bc5ee8e891bf41f42',1,'EMStreamChunk']]],
   ['settings',['settings',['../interface_e_m_group.html#a5b5ab0d42f1b7002f70f0adcfee78fd5',1,'EMGroup']]],
   ['sharedfilelist',['sharedFileList',['../interface_e_m_group.html#ae19c694cba4ba623d10947f3a6c1bae5',1,'EMGroup']]],
   ['sign',['sign',['../interface_e_m_user_info.html#af54120a99fbba60983a1379705289f4e',1,'EMUserInfo']]],
@@ -11,9 +12,10 @@ var searchData=
   ['sortmessagebyservertime',['sortMessageByServerTime',['../interface_e_m_options.html#aa653fb528db133b69b3ab0a0a307dbff',1,'EMOptions']]],
   ['starttime',['startTime',['../interface_e_m_fetch_server_messages_option.html#a27ff273715eae8ae77f2376f3adcadef',1,'EMFetchServerMessagesOption']]],
   ['statisticsmanager',['statisticsManager',['../interface_e_m_client.html#a1b2b61836b41a89562a3cf0ef866d742',1,'EMClient']]],
-  ['status',['status',['../interface_e_m_chat_message.html#a9bba89066e7b907b8142a8870d553c90',1,'EMChatMessage::status()'],['../interface_e_m_presence_status_detail.html#afe902535d58b07c41bd4f02dae12d2b9',1,'EMPresenceStatusDetail::status()']]],
+  ['status',['status',['../interface_e_m_chat_message.html#a9bba89066e7b907b8142a8870d553c90',1,'EMChatMessage::status()'],['../interface_e_m_presence_status_detail.html#afe902535d58b07c41bd4f02dae12d2b9',1,'EMPresenceStatusDetail::status()'],['../interface_e_m_stream_chunk.html#abf772aa279a7a31c63792c844497d189',1,'EMStreamChunk::status()']]],
   ['statusdescription',['statusDescription',['../interface_e_m_presence.html#a12702b1566a962cd70b2232101ae4ef3',1,'EMPresence']]],
   ['statusdetails',['statusDetails',['../interface_e_m_presence.html#a2f3a87862b14692a3f87f910f5b618c2',1,'EMPresence']]],
+  ['streamchunk',['streamChunk',['../interface_e_m_chat_message.html#ab8f3c33af1b1fee6f6f4012097eb064d',1,'EMChatMessage']]],
   ['style',['style',['../interface_e_m_group_options.html#a620cfb9f0308ae836185dd7d9b539adf',1,'EMGroupOptions']]],
   ['subject',['subject',['../interface_e_m_chatroom.html#a325880df0c461ee38a4ead0fecbfbd28',1,'EMChatroom']]],
   ['summary',['summary',['../interface_e_m_combine_message_body.html#ad67486e446eb4de9c36421e1fe0f29ee',1,'EMCombineMessageBody']]]

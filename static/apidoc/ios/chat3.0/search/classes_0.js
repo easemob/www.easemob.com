@@ -51,6 +51,7 @@ var searchData=
   ['emsilentmodeparam',['EMSilentModeParam',['../interface_e_m_silent_mode_param.html',1,'']]],
   ['emsilentmoderesult',['EMSilentModeResult',['../interface_e_m_silent_mode_result.html',1,'']]],
   ['emsilentmodetime',['EMSilentModeTime',['../interface_e_m_silent_mode_time.html',1,'']]],
+  ['emstreamchunk',['EMStreamChunk',['../interface_e_m_stream_chunk.html',1,'']]],
   ['emtextmessagebody',['EMTextMessageBody',['../interface_e_m_text_message_body.html',1,'']]],
   ['emthreadmanagerdelegate_2dp',['EMThreadManagerDelegate-p',['../protocol_e_m_thread_manager_delegate-p.html',1,'']]],
   ['emtranslatelanguage',['EMTranslateLanguage',['../interface_e_m_translate_language.html',1,'']]],
