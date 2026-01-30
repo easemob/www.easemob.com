@@ -22,5 +22,6 @@ var searchData=
   ['cursor',['cursor',['../interface_e_m_cursor_result.html#ad29bc7b182a4d7b70cf72bfc3836ff8d',1,'EMCursorResult']]],
   ['customdevicename',['customDeviceName',['../interface_e_m_options.html#a8f40d9f090c30ff618a7d509ead6867c',1,'EMOptions']]],
   ['customext',['customExt',['../interface_e_m_custom_message_body.html#ad110e86dda1ae171e0c601c8e5a12ee2',1,'EMCustomMessageBody']]],
-  ['customostype',['customOSType',['../interface_e_m_options.html#a0ca76eff77eb9229fea6f4df027cc11b',1,'EMOptions']]]
+  ['customostype',['customOSType',['../interface_e_m_options.html#a0ca76eff77eb9229fea6f4df027cc11b',1,'EMOptions']]],
+  ['customtype',['customType',['../interface_e_m_stream_chunk.html#a9d6a427a8d3ddf37cf1ef96ef8b2653b',1,'EMStreamChunk']]]
 ];

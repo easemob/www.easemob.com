@@ -21,6 +21,7 @@ var searchData=
   ['fileowner',['fileOwner',['../interface_e_m_group_shared_file.html#a5ff3c7e4ddc6efaa471d5039757e65f5',1,'EMGroupSharedFile']]],
   ['filesize',['fileSize',['../interface_e_m_group_shared_file.html#afe3b908f127188cbdc3668e57d73d8ab',1,'EMGroupSharedFile']]],
   ['filterconversationsfromdb_3afilter_3a',['filterConversationsFromDB:filter:',['../protocol_i_e_m_chat_manager-p.html#adf00c0ef6c73548c43540b5d2343e863',1,'IEMChatManager-p']]],
+  ['finishreason',['finishReason',['../interface_e_m_stream_chunk.html#aeae1f8eb5f9afb2ec96e680903e93ceb',1,'EMStreamChunk']]],
   ['friendrequestdidapprovebyuser_3a',['friendRequestDidApproveByUser:',['../protocol_e_m_contact_manager_delegate-p.html#a39cbe04971aec2b6386674de3d73ffc4',1,'EMContactManagerDelegate-p']]],
   ['friendrequestdiddeclinebyuser_3a',['friendRequestDidDeclineByUser:',['../protocol_e_m_contact_manager_delegate-p.html#aabe544b4d8a8c74cde37259bfe7e4407',1,'EMContactManagerDelegate-p']]],
   ['friendrequestdidreceivefromuser_3amessage_3a',['friendRequestDidReceiveFromUser:message:',['../protocol_e_m_contact_manager_delegate-p.html#ac4ed282b819678437cee6e9182ece6bb',1,'EMContactManagerDelegate-p']]],

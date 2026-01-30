@@ -1,7 +1,7 @@
 var searchData=
 [
   ['targetlanguages',['targetLanguages',['../interface_e_m_text_message_body.html#a72e8178d1f196c8ca60165890a909260',1,'EMTextMessageBody']]],
-  ['text',['text',['../interface_e_m_text_message_body.html#a04a49f280c675e9d3bdd232a0fe59609',1,'EMTextMessageBody']]],
+  ['text',['text',['../interface_e_m_stream_chunk.html#ad890ac3d65cc002c8f7fef94a3d24abb',1,'EMStreamChunk::text()'],['../interface_e_m_text_message_body.html#a04a49f280c675e9d3bdd232a0fe59609',1,'EMTextMessageBody::text()']]],
   ['threadid',['threadId',['../interface_e_m_chat_thread.html#af7c59667e4a20d92d6689d5f296f66ac',1,'EMChatThread']]],
   ['threadmanager',['threadManager',['../interface_e_m_client.html#ab45e474ff0134ecfa576f909895aa132',1,'EMClient']]],
   ['threadname',['threadName',['../interface_e_m_chat_thread.html#a3d1621306293626b5ee2881ebd0391e2',1,'EMChatThread']]],

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">4.14.0</span>
+   &#160;<span id="projectnumber">4.19.0</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#import &quot;EMMessageBody.h&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#import &quot;EMMessageReaction.h&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;EMStreamChunk.h&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">typedef</span> NS_ENUM(NSInteger, EMChatType) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    EMChatTypeChat   = 0,   </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    EMChatTypeGroupChat,    </div>
@@ -189,17 +189,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;</div>
 <div class="line"><a name="l00485"></a><span class="lineno"><a class="line" href="interface_e_m_chat_message.html#af67236f39652a997bef17d074e69207f">  485</a></span>&#160;<span class="keyword">@property</span> (nonatomic,readonly)  <a class="code" href="interface_e_m_message_pin_info.html">EMMessagePinInfo</a>* _Nullable  <a class="code" href="interface_e_m_chat_message.html#af67236f39652a997bef17d074e69207f">pinnedInfo</a>;</div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;- (instancetype _Nonnull)initWithConversationID:(NSString *_Nonnull)aConversationId</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;                                  from:(NSString *_Nonnull)aFrom</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                                    to:(NSString *_Nonnull)aTo</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                                  body:(<a class="code" href="interface_e_m_message_body.html">EMMessageBody</a> *_Nonnull)aBody</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                                   ext:(NSDictionary *_Nullable)aExt;</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;- (instancetype _Nonnull)initWithConversationID:(NSString *_Nonnull)aConversationId</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                                  body:(<a class="code" href="interface_e_m_message_body.html">EMMessageBody</a> *_Nonnull)aBody</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                                   ext:(NSDictionary *_Nullable)aExt;</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00491"></a><span class="lineno"><a class="line" href="interface_e_m_chat_message.html#ab8f3c33af1b1fee6f6f4012097eb064d">  491</a></span>&#160;<span class="keyword">@property</span> (nonatomic,readonly) <a class="code" href="interface_e_m_stream_chunk.html">EMStreamChunk</a> * _Nullable <a class="code" href="interface_e_m_chat_message.html#ab8f3c33af1b1fee6f6f4012097eb064d">streamChunk</a>;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;- (instancetype _Nonnull)initWithConversationID:(NSString *_Nonnull)aConversationId</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;                                  from:(NSString *_Nonnull)aFrom</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;                                    to:(NSString *_Nonnull)aTo</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;                                  body:(<a class="code" href="interface_e_m_message_body.html">EMMessageBody</a> *_Nonnull)aBody</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                                   ext:(NSDictionary *_Nullable)aExt;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;- (instancetype _Nonnull)initWithConversationID:(NSString *_Nonnull)aConversationId</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;                                  body:(<a class="code" href="interface_e_m_message_body.html">EMMessageBody</a> *_Nonnull)aBody</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;                                   ext:(NSDictionary *_Nullable)aExt;</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_e_m_chat_message_html_a923baa3be47892b47ca0ab910925febe"><div class="ttname"><a href="interface_e_m_chat_message.html#a923baa3be47892b47ca0ab910925febe">EMChatMessage::isRead</a></div><div class="ttdeci">BOOL isRead</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:323</div></div>
 <div class="ttc" id="interface_e_m_message_pin_info_html_aa2e76325fc8dad624b89488ab43587cf"><div class="ttname"><a href="interface_e_m_message_pin_info.html#aa2e76325fc8dad624b89488ab43587cf">EMMessagePinInfo::pinTime</a></div><div class="ttdeci">NSInteger pinTime</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:86</div></div>
 <div class="ttc" id="interface_e_m_chat_message_html_a2889fb71b13eec2eab11c22b32d0de30"><div class="ttname"><a href="interface_e_m_chat_message.html#a2889fb71b13eec2eab11c22b32d0de30">EMChatMessage::isReadAcked</a></div><div class="ttdeci">BOOL isReadAcked</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:242</div></div>
@@ -219,6 +220,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="ttc" id="interface_e_m_chat_message_html_a3ed4f78202958b674f205e6ad2cdb0bb"><div class="ttname"><a href="interface_e_m_chat_message.html#a3ed4f78202958b674f205e6ad2cdb0bb">EMChatMessage::isContentReplaced</a></div><div class="ttdeci">BOOL isContentReplaced</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:469</div></div>
 <div class="ttc" id="interface_e_m_chat_message_html_a8ef69621a5d69321f0bd85d36ab0587c"><div class="ttname"><a href="interface_e_m_chat_message.html#a8ef69621a5d69321f0bd85d36ab0587c">EMChatMessage::chatThread</a></div><div class="ttdeci">EMChatThread *_Nullable chatThread</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:399</div></div>
 <div class="ttc" id="interface_e_m_chat_message_html_a87118c17f667d7cfdf8c0f61e09dd3cf"><div class="ttname"><a href="interface_e_m_chat_message.html#a87118c17f667d7cfdf8c0f61e09dd3cf">EMChatMessage::messageId</a></div><div class="ttdeci">NSString *_Nonnull messageId</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:124</div></div>
+<div class="ttc" id="interface_e_m_chat_message_html_ab8f3c33af1b1fee6f6f4012097eb064d"><div class="ttname"><a href="interface_e_m_chat_message.html#ab8f3c33af1b1fee6f6f4012097eb064d">EMChatMessage::streamChunk</a></div><div class="ttdeci">EMStreamChunk *_Nullable streamChunk</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:491</div></div>
 <div class="ttc" id="interface_e_m_chat_message_html_ae18c036817544ebb5d30fcbacfdd2df7"><div class="ttname"><a href="interface_e_m_chat_message.html#ae18c036817544ebb5d30fcbacfdd2df7">EMChatMessage::isListened</a></div><div class="ttdeci">BOOL isListened</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:338</div></div>
 <div class="ttc" id="interface_e_m_chat_message_html_a9a5c5d162d59b0e06ada5c7c4ce93a12"><div class="ttname"><a href="interface_e_m_chat_message.html#a9a5c5d162d59b0e06ada5c7c4ce93a12">EMChatMessage::groupAckCount</a></div><div class="ttdeci">int groupAckCount</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:281</div></div>
 <div class="ttc" id="interface_e_m_chat_message_html_a425b7aa39f5d611a4080df0b4994eec4"><div class="ttname"><a href="interface_e_m_chat_message.html#a425b7aa39f5d611a4080df0b4994eec4">EMChatMessage::ext</a></div><div class="ttdeci">NSDictionary *_Nullable ext</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:386</div></div>
@@ -229,6 +231,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="ttc" id="interface_e_m_chat_message_html_af46f8a6bcebfe2e8b4292146d6222847"><div class="ttname"><a href="interface_e_m_chat_message.html#af46f8a6bcebfe2e8b4292146d6222847">EMChatMessage::chatType</a></div><div class="ttdeci">EMChatType chatType</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:193</div></div>
 <div class="ttc" id="interface_e_m_chat_message_html_a78d632fe28019bd04eaa9f9df8b94fd6"><div class="ttname"><a href="interface_e_m_chat_message.html#a78d632fe28019bd04eaa9f9df8b94fd6">EMChatMessage::onlineState</a></div><div class="ttdeci">BOOL onlineState</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:227</div></div>
 <div class="ttc" id="interface_e_m_message_pin_info_html_a6833011fbb2173a274cad48fd26a9a44"><div class="ttname"><a href="interface_e_m_message_pin_info.html#a6833011fbb2173a274cad48fd26a9a44">EMMessagePinInfo::operatorId</a></div><div class="ttdeci">NSString *_Nonnull operatorId</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:84</div></div>
+<div class="ttc" id="interface_e_m_stream_chunk_html"><div class="ttname"><a href="interface_e_m_stream_chunk.html">EMStreamChunk</a></div><div class="ttdef"><b>Definition:</b> EMStreamChunk.h:41</div></div>
 <div class="ttc" id="interface_e_m_chat_message_html_a873ef9768ea4b79fa2f7423cd5d89e15"><div class="ttname"><a href="interface_e_m_chat_message.html#a873ef9768ea4b79fa2f7423cd5d89e15">EMChatMessage::localTime</a></div><div class="ttdeci">long long localTime</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:184</div></div>
 <div class="ttc" id="interface_e_m_chat_message_html_ae270c2da86b6797658fe447ec33dc304"><div class="ttname"><a href="interface_e_m_chat_message.html#ae270c2da86b6797658fe447ec33dc304">EMChatMessage::broadcast</a></div><div class="ttdeci">BOOL broadcast</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:426</div></div>
 <div class="ttc" id="interface_e_m_chat_message_html_ab206628b7ac95e31bbb9d107665b7dc9"><div class="ttname"><a href="interface_e_m_chat_message.html#ab206628b7ac95e31bbb9d107665b7dc9">EMChatMessage::timestamp</a></div><div class="ttdeci">long long timestamp</div><div class="ttdef"><b>Definition:</b> EMChatMessage.h:171</div></div>
