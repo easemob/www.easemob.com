@@ -19,10 +19,12 @@ var searchData=
   ['message_5frecall_5ftime_5flimit_16',['MESSAGE_RECALL_TIME_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa26b9778978e06f5b7ac6cc1cf4590de',1,'com::hyphenate::EMError']]],
   ['message_5fsend_5ftraffic_5flimit_17',['MESSAGE_SEND_TRAFFIC_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a35cdce147efc8c840242791e6206d215',1,'com::hyphenate::EMError']]],
   ['message_5fsize_5flimit_18',['MESSAGE_SIZE_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a33c0a4205310ba24024a16225a3cce04',1,'com::hyphenate::EMError']]],
-  ['mipush_19',['MIPUSH',['../enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html#a0cb6da78b924561d1e947c15bea6a17f',1,'com::hyphenate::push::EMPushType']]],
-  ['moderation_5ffailed_20',['MODERATION_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ae787d4f8deee8933ff323ba593fade72',1,'com::hyphenate::EMError']]],
-  ['msgtype2conversationtype_21',['msgType2ConversationType',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a2af3c651b5402f316fea84d97bf5e1eb',1,'com::hyphenate::chat::EMConversation']]],
-  ['muteallmembers_22',['muteAllMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a1da9ddb7b1c417d10d82ab6271ad17cd',1,'com.hyphenate.chat.EMChatRoomManager.muteAllMembers()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a1f7e6471a968f7e429b33dcb06d9e7d5',1,'com.hyphenate.chat.EMGroupManager.muteAllMembers()']]],
-  ['mutechatroommembers_23',['muteChatRoomMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a9085e1f9d988cccec5c8ecc7125babbf',1,'com::hyphenate::chat::EMChatRoomManager']]],
-  ['mutegroupmembers_24',['muteGroupMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a5a3abd57e52455ae68a1a5a5039862c3',1,'com::hyphenate::chat::EMGroupManager']]]
+  ['message_5fstream_5finterval_5ftimeout_19',['MESSAGE_STREAM_INTERVAL_TIMEOUT',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac84c1552557e557347800ddc6c2bd5b2',1,'com::hyphenate::EMError']]],
+  ['message_5fstream_5ftimeout_20',['MESSAGE_STREAM_TIMEOUT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a877a5263f014039221bfe1d6c23059f8',1,'com::hyphenate::EMError']]],
+  ['mipush_21',['MIPUSH',['../enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html#a0cb6da78b924561d1e947c15bea6a17f',1,'com::hyphenate::push::EMPushType']]],
+  ['moderation_5ffailed_22',['MODERATION_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ae787d4f8deee8933ff323ba593fade72',1,'com::hyphenate::EMError']]],
+  ['msgtype2conversationtype_23',['msgType2ConversationType',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a2af3c651b5402f316fea84d97bf5e1eb',1,'com::hyphenate::chat::EMConversation']]],
+  ['muteallmembers_24',['muteAllMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a1da9ddb7b1c417d10d82ab6271ad17cd',1,'com.hyphenate.chat.EMChatRoomManager.muteAllMembers()'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a1f7e6471a968f7e429b33dcb06d9e7d5',1,'com.hyphenate.chat.EMGroupManager.muteAllMembers()']]],
+  ['mutechatroommembers_25',['muteChatRoomMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a9085e1f9d988cccec5c8ecc7125babbf',1,'com::hyphenate::chat::EMChatRoomManager']]],
+  ['mutegroupmembers_26',['muteGroupMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a5a3abd57e52455ae68a1a5a5039862c3',1,'com::hyphenate::chat::EMGroupManager']]]
 ];

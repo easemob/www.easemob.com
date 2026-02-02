@@ -15,6 +15,8 @@ var searchData=
   ['message_5frecall_5ftime_5flimit_12',['MESSAGE_RECALL_TIME_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa26b9778978e06f5b7ac6cc1cf4590de',1,'com::hyphenate::EMError']]],
   ['message_5fsend_5ftraffic_5flimit_13',['MESSAGE_SEND_TRAFFIC_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a35cdce147efc8c840242791e6206d215',1,'com::hyphenate::EMError']]],
   ['message_5fsize_5flimit_14',['MESSAGE_SIZE_LIMIT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a33c0a4205310ba24024a16225a3cce04',1,'com::hyphenate::EMError']]],
-  ['mipush_15',['MIPUSH',['../enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html#a0cb6da78b924561d1e947c15bea6a17f',1,'com::hyphenate::push::EMPushType']]],
-  ['moderation_5ffailed_16',['MODERATION_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ae787d4f8deee8933ff323ba593fade72',1,'com::hyphenate::EMError']]]
+  ['message_5fstream_5finterval_5ftimeout_15',['MESSAGE_STREAM_INTERVAL_TIMEOUT',['../classcom_1_1hyphenate_1_1_e_m_error.html#ac84c1552557e557347800ddc6c2bd5b2',1,'com::hyphenate::EMError']]],
+  ['message_5fstream_5ftimeout_16',['MESSAGE_STREAM_TIMEOUT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a877a5263f014039221bfe1d6c23059f8',1,'com::hyphenate::EMError']]],
+  ['mipush_17',['MIPUSH',['../enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html#a0cb6da78b924561d1e947c15bea6a17f',1,'com::hyphenate::push::EMPushType']]],
+  ['moderation_5ffailed_18',['MODERATION_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ae787d4f8deee8933ff323ba593fade72',1,'com::hyphenate::EMError']]]
 ];
