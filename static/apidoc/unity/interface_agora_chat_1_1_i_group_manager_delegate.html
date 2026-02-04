@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.3.2</span>
+   <div id="projectname">Chat SDK for Unity and Windows<span id="projectnumber">&#160;v1.4.0</span>
    </div>
   </td>
  </tr>
@@ -107,6 +107,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a8b1fad148c8ca987c87934af5cc587cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6522d591f4fca610c23d5edf85267a67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a6522d591f4fca610c23d5edf85267a67">OnMemberExitedFromGroup</a> (string groupId, string member)</td></tr>
 <tr class="separator:a6522d591f4fca610c23d5edf85267a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf2a041e4a8951d93e6ae9ce1e499931"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#acf2a041e4a8951d93e6ae9ce1e499931">OnMembersJoinedFromGroup</a> (string groupId, List&lt; string &gt; members)</td></tr>
+<tr class="separator:acf2a041e4a8951d93e6ae9ce1e499931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af13df42bd2dd76aba17839821f5ba9a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#af13df42bd2dd76aba17839821f5ba9a8">OnMembersExitedFromGroup</a> (string groupId, List&lt; string &gt; members)</td></tr>
+<tr class="separator:af13df42bd2dd76aba17839821f5ba9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a407ac5799cbaa3ad995d19147a4b5939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#a407ac5799cbaa3ad995d19147a4b5939">OnAnnouncementChangedFromGroup</a> (string groupId, string announcement)</td></tr>
 <tr class="separator:a407ac5799cbaa3ad995d19147a4b5939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa16ec7506d365b7c48f80377f557226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_agora_chat_1_1_i_group_manager_delegate.html#afa16ec7506d365b7c48f80377f557226">OnSharedFileAddedFromGroup</a> (string groupId, <a class="el" href="class_agora_chat_1_1_group_shared_file.html">GroupSharedFile</a> sharedFile)</td></tr>
@@ -783,6 +787,78 @@ Public 成员函数</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
     <tr><td class="paramname">member</td><td>退群的成员 ID。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acf2a041e4a8951d93e6ae9ce1e499931" name="acf2a041e4a8951d93e6ae9ce1e499931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf2a041e4a8951d93e6ae9ce1e499931">&#9670;&nbsp;</a></span>OnMembersJoinedFromGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.IGroupManagerDelegate.OnMembersJoinedFromGroup </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>groupId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>members</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >批量用户加入群组回调。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">members</td><td>加入群组的用户名列表。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af13df42bd2dd76aba17839821f5ba9a8" name="af13df42bd2dd76aba17839821f5ba9a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af13df42bd2dd76aba17839821f5ba9a8">&#9670;&nbsp;</a></span>OnMembersExitedFromGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgoraChat.IGroupManagerDelegate.OnMembersExitedFromGroup </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>groupId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>members</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >批量用户离开群组回调。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupId</td><td>群组 ID。 </td></tr>
+    <tr><td class="paramname">members</td><td>离开群组的用户名列表。 </td></tr>
   </table>
   </dd>
 </dl>

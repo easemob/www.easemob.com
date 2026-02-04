@@ -39,6 +39,7 @@ var searchData=
   ['attributevaluetype_36',['AttributeValueType',['../namespace_agora_chat.html#a292bc538f956ba5bf2976941df4b469b',1,'AgoraChat']]],
   ['autoacceptgroupinvitation_37',['AutoAcceptGroupInvitation',['../class_agora_chat_1_1_options.html#a683d534d59193ab3805c2ef97ba8ddd2',1,'AgoraChat::Options']]],
   ['autologin_38',['AutoLogin',['../class_agora_chat_1_1_options.html#ab37563e2a51a2bbe67eab2baaeaf00a8',1,'AgoraChat::Options']]],
-  ['avatarurl_39',['AvatarUrl',['../class_agora_chat_1_1_user_info.html#ae5b7d5b9ab7bd757c84543816f4de8a8',1,'AgoraChat::UserInfo']]],
-  ['messagebody_40',['MessageBody',['../namespace_agora_chat_1_1_message_body.html',1,'AgoraChat']]]
+  ['avatar_39',['Avatar',['../class_agora_chat_1_1_group.html#aa38690101507c7192ac6d7ab3721e625',1,'AgoraChat::Group']]],
+  ['avatarurl_40',['AvatarUrl',['../class_agora_chat_1_1_user_info.html#ae5b7d5b9ab7bd757c84543816f4de8a8',1,'AgoraChat::UserInfo']]],
+  ['messagebody_41',['MessageBody',['../namespace_agora_chat_1_1_message_body.html',1,'AgoraChat']]]
 ];

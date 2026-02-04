@@ -10,7 +10,7 @@ var searchData=
   ['getchatroom_7',['GetChatRoom',['../class_agora_chat_1_1_room_manager.html#aa7962b1ada2ee47bedde7292fcaf5318',1,'AgoraChat::RoomManager']]],
   ['getconversation_8',['GetConversation',['../class_agora_chat_1_1_chat_manager.html#abf4395e9ee3bf5bf437fe534f96b9dff',1,'AgoraChat::ChatManager']]],
   ['getconversationsfromserver_9',['GetConversationsFromServer',['../class_agora_chat_1_1_chat_manager.html#afd7e770281c848d98633318995dc4e3e',1,'AgoraChat::ChatManager']]],
-  ['getconversationsfromserverwithcursor_10',['GetConversationsFromServerWithCursor',['../class_agora_chat_1_1_chat_manager.html#a90df2e93ef197f9e923efc6df23a0a48',1,'AgoraChat.ChatManager.GetConversationsFromServerWithCursor(MarkType mark, string cursor=&quot;&quot;, int limit=20, ValueCallBack&lt; CursorResult&lt; Conversation &gt; &gt; callback=null)'],['../class_agora_chat_1_1_chat_manager.html#a65e8d2affaf498f4669953dc2aa852f9',1,'AgoraChat.ChatManager.GetConversationsFromServerWithCursor(bool pinOnly, string cursor=&quot;&quot;, int limit=20, ValueCallBack&lt; CursorResult&lt; Conversation &gt; &gt; callback=null)']]],
+  ['getconversationsfromserverwithcursor_10',['GetConversationsFromServerWithCursor',['../class_agora_chat_1_1_chat_manager.html#a65e8d2affaf498f4669953dc2aa852f9',1,'AgoraChat.ChatManager.GetConversationsFromServerWithCursor(bool pinOnly, string cursor=&quot;&quot;, int limit=20, ValueCallBack&lt; CursorResult&lt; Conversation &gt; &gt; callback=null)'],['../class_agora_chat_1_1_chat_manager.html#a90df2e93ef197f9e923efc6df23a0a48',1,'AgoraChat.ChatManager.GetConversationsFromServerWithCursor(MarkType mark, string cursor=&quot;&quot;, int limit=20, ValueCallBack&lt; CursorResult&lt; Conversation &gt; &gt; callback=null)']]],
   ['getconversationsfromserverwithpage_11',['GetConversationsFromServerWithPage',['../class_agora_chat_1_1_chat_manager.html#aa6f643bdfd0845a7cc55d01bc66df23a',1,'AgoraChat::ChatManager']]],
   ['getgroupallowlistfromserver_12',['GetGroupAllowListFromServer',['../class_agora_chat_1_1_group_manager.html#acf7a7370cacf308cc8dfe828df7f740f',1,'AgoraChat::GroupManager']]],
   ['getgroupannouncementfromserver_13',['GetGroupAnnouncementFromServer',['../class_agora_chat_1_1_group_manager.html#af0581f7520ae7657d6a4c4220e38c830',1,'AgoraChat::GroupManager']]],
@@ -62,10 +62,11 @@ var searchData=
   ['groupid_59',['GroupId',['../class_agora_chat_1_1_group.html#a85b60c8699ce50cccf44398aa60285a1',1,'AgoraChat.Group.GroupId()'],['../class_agora_chat_1_1_group_info.html#a7b0917dc50e27a69ada765e3031f5d5e',1,'AgoraChat.GroupInfo.GroupId()']]],
   ['groupinfo_60',['GroupInfo',['../class_agora_chat_1_1_group_info.html',1,'AgoraChat']]],
   ['groupmanager_61',['GroupManager',['../class_agora_chat_1_1_group_manager.html',1,'AgoraChat.GroupManager'],['../class_agora_chat_1_1_s_d_k_client.html#a1c0e8c344f4c197c7cfb75659ab90ba9',1,'AgoraChat.SDKClient.GroupManager()']]],
-  ['groupname_62',['GroupName',['../class_agora_chat_1_1_group_info.html#a7de55c2a56aa6b4d3f8c97a2087ea02a',1,'AgoraChat::GroupInfo']]],
-  ['groupoptions_63',['GroupOptions',['../class_agora_chat_1_1_group_options.html',1,'AgoraChat.GroupOptions'],['../class_agora_chat_1_1_group_options.html#a838257c372b2deb3f0f3f9fb225ba81c',1,'AgoraChat.GroupOptions.GroupOptions()']]],
-  ['grouppermissiontype_64',['GroupPermissionType',['../namespace_agora_chat.html#ad237b6d2eb1d74494a9edf19c66fed61',1,'AgoraChat']]],
-  ['groupreadack_65',['GroupReadAck',['../class_agora_chat_1_1_group_read_ack.html',1,'AgoraChat']]],
-  ['groupsharedfile_66',['GroupSharedFile',['../class_agora_chat_1_1_group_shared_file.html',1,'AgoraChat']]],
-  ['groupstyle_67',['GroupStyle',['../namespace_agora_chat.html#a78c8dcc8960a647beb75fb8dd1ebfa1c',1,'AgoraChat']]]
+  ['groupmemberinfo_62',['GroupMemberInfo',['../class_agora_chat_1_1_group_member_info.html',1,'AgoraChat']]],
+  ['groupname_63',['GroupName',['../class_agora_chat_1_1_group_info.html#a7de55c2a56aa6b4d3f8c97a2087ea02a',1,'AgoraChat::GroupInfo']]],
+  ['groupoptions_64',['GroupOptions',['../class_agora_chat_1_1_group_options.html',1,'AgoraChat.GroupOptions'],['../class_agora_chat_1_1_group_options.html#a838257c372b2deb3f0f3f9fb225ba81c',1,'AgoraChat.GroupOptions.GroupOptions()']]],
+  ['grouppermissiontype_65',['GroupPermissionType',['../namespace_agora_chat.html#ad237b6d2eb1d74494a9edf19c66fed61',1,'AgoraChat']]],
+  ['groupreadack_66',['GroupReadAck',['../class_agora_chat_1_1_group_read_ack.html',1,'AgoraChat']]],
+  ['groupsharedfile_67',['GroupSharedFile',['../class_agora_chat_1_1_group_shared_file.html',1,'AgoraChat']]],
+  ['groupstyle_68',['GroupStyle',['../namespace_agora_chat.html#a78c8dcc8960a647beb75fb8dd1ebfa1c',1,'AgoraChat']]]
 ];

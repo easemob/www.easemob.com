@@ -21,7 +21,7 @@ var searchData=
   ['createcombinesendmessage_18',['CreateCombineSendMessage',['../class_agora_chat_1_1_message.html#a09e5c22b112823507727f536dff388d1',1,'AgoraChat::Message']]],
   ['createcustomsendmessage_19',['CreateCustomSendMessage',['../class_agora_chat_1_1_message.html#a824d75f7d75db14fbbac44f9d85d93dc',1,'AgoraChat::Message']]],
   ['createfilesendmessage_20',['CreateFileSendMessage',['../class_agora_chat_1_1_message.html#a64d152bf24d282f29221ad5e772b84ec',1,'AgoraChat::Message']]],
-  ['creategroup_21',['CreateGroup',['../class_agora_chat_1_1_group_manager.html#aa4da1b5b4c88ab04c33ab616881cc2d1',1,'AgoraChat::GroupManager']]],
+  ['creategroup_21',['CreateGroup',['../class_agora_chat_1_1_group_manager.html#aa4da1b5b4c88ab04c33ab616881cc2d1',1,'AgoraChat.GroupManager.CreateGroup(string groupName, GroupOptions options, string desc=null, List&lt; string &gt; inviteMembers=null, string inviteReason=null, ValueCallBack&lt; Group &gt; callback=null)'],['../class_agora_chat_1_1_group_manager.html#ae445d05d52f4e22e3d4e0f9735fa6ff5',1,'AgoraChat.GroupManager.CreateGroup(string groupName, GroupOptions options, string avatar=null, string desc=null, List&lt; string &gt; inviteMembers=null, string inviteReason=null, ValueCallBack&lt; Group &gt; callback=null)']]],
   ['createimagesendmessage_22',['CreateImageSendMessage',['../class_agora_chat_1_1_message.html#a8e7b894f7ba72923e442d8204250157e',1,'AgoraChat::Message']]],
   ['createlocationsendmessage_23',['CreateLocationSendMessage',['../class_agora_chat_1_1_message.html#aaf52b3b95e90b6ce59c95e23fe8ed732',1,'AgoraChat::Message']]],
   ['createreceivemessage_24',['CreateReceiveMessage',['../class_agora_chat_1_1_message.html#a82d7057c87bff66b459cb195691f2783',1,'AgoraChat::Message']]],
