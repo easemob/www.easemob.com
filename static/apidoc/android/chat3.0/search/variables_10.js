@@ -11,11 +11,12 @@ var searchData=
   ['server_5funknown_5ferror_8',['SERVER_UNKNOWN_ERROR',['../classcom_1_1hyphenate_1_1_e_m_error.html#ae913315d6d8b7cf71c061e5440b87cb6',1,'com::hyphenate::EMError']]],
   ['service_5farrearages_9',['SERVICE_ARREARAGES',['../classcom_1_1hyphenate_1_1_e_m_error.html#aa7cb9f7ae3ac164a1813a93402b49b3a',1,'com::hyphenate::EMError']]],
   ['service_5fnot_5fenabled_10',['SERVICE_NOT_ENABLED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a910bbe4a66258a42ff5c06ff91c9a925',1,'com::hyphenate::EMError']]],
-  ['silent_5fmode_5fduration_11',['SILENT_MODE_DURATION',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_silent_mode_param_1_1_e_m_silent_mode_param_type.html#a55880d92e30553467d88fa6c7a9af7bc',1,'com::hyphenate::chat::EMSilentModeParam::EMSilentModeParamType']]],
-  ['silent_5fmode_5finterval_12',['SILENT_MODE_INTERVAL',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_silent_mode_param_1_1_e_m_silent_mode_param_type.html#a9295fd55fd0d931e6ab9dc1c8db91afe',1,'com::hyphenate::chat::EMSilentModeParam::EMSilentModeParamType']]],
-  ['start_13',['START',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_e_m_stream_status.html#a6bda7aa0a9da93c2182eb33ef71c1ff5',1,'com::hyphenate::chat::EMMessage::EMStreamStatus']]],
-  ['start_5fand_5fcomplete_14',['START_AND_COMPLETE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_e_m_stream_status.html#af5d3d68162dda83535ccf06259684901',1,'com::hyphenate::chat::EMMessage::EMStreamStatus']]],
-  ['style_15',['style',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_options.html#afb7c3b6e0bdea5d0784971a6a0b9026c',1,'com::hyphenate::chat::EMGroupOptions']]],
-  ['success_16',['SUCCESS',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html#a169f349ea49a3a7ed45224ed97e8c821',1,'com::hyphenate::chat::EMMessage::Status']]],
-  ['successed_17',['SUCCESSED',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body_1_1_e_m_download_status.html#a7e0b077d0ee8ed19522683dfae3cdc39',1,'com::hyphenate::chat::EMFileMessageBody::EMDownloadStatus']]]
+  ['sign_11',['SIGN',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_1_1_e_m_user_info_type.html#a4c6a863011d6cdce3d9e8971e0cf2744',1,'com::hyphenate::chat::EMUserInfo::EMUserInfoType']]],
+  ['silent_5fmode_5fduration_12',['SILENT_MODE_DURATION',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_silent_mode_param_1_1_e_m_silent_mode_param_type.html#a55880d92e30553467d88fa6c7a9af7bc',1,'com::hyphenate::chat::EMSilentModeParam::EMSilentModeParamType']]],
+  ['silent_5fmode_5finterval_13',['SILENT_MODE_INTERVAL',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_silent_mode_param_1_1_e_m_silent_mode_param_type.html#a9295fd55fd0d931e6ab9dc1c8db91afe',1,'com::hyphenate::chat::EMSilentModeParam::EMSilentModeParamType']]],
+  ['start_14',['START',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_e_m_stream_status.html#a6bda7aa0a9da93c2182eb33ef71c1ff5',1,'com::hyphenate::chat::EMMessage::EMStreamStatus']]],
+  ['start_5fand_5fcomplete_15',['START_AND_COMPLETE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_e_m_stream_status.html#af5d3d68162dda83535ccf06259684901',1,'com::hyphenate::chat::EMMessage::EMStreamStatus']]],
+  ['style_16',['style',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_options.html#afb7c3b6e0bdea5d0784971a6a0b9026c',1,'com::hyphenate::chat::EMGroupOptions']]],
+  ['success_17',['SUCCESS',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html#a169f349ea49a3a7ed45224ed97e8c821',1,'com::hyphenate::chat::EMMessage::Status']]],
+  ['successed_18',['SUCCESSED',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body_1_1_e_m_download_status.html#a7e0b077d0ee8ed19522683dfae3cdc39',1,'com::hyphenate::chat::EMFileMessageBody::EMDownloadStatus']]]
 ];
