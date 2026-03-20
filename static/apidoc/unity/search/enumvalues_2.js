@@ -11,9 +11,10 @@ var searchData=
   ['content_8',['CONTENT',['../namespace_agora_chat.html#a5b46368751bc6fc3ba812aa433030fc1a45685e95985e20822fb2538a522a5ccf',1,'AgoraChat']]],
   ['conversation_5fdeleted_9',['CONVERSATION_DELETED',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68aa45655b27371789213d9c9571bbbfbb0',1,'AgoraChat']]],
   ['conversation_5fmark_10',['CONVERSATION_MARK',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a021b011537b6cdea189de8ddfb164623',1,'AgoraChat']]],
-  ['conversation_5fpinned_11',['CONVERSATION_PINNED',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a10a6e5331fe10b5a31274de487c3ef6d',1,'AgoraChat']]],
-  ['conversation_5funpinned_12',['CONVERSATION_UNPINNED',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a530bea15e412262386f211904a17265e',1,'AgoraChat']]],
-  ['create_13',['Create',['../namespace_agora_chat.html#a73fcc9c0dc4ba4c315e94b09839977d2a686e697538050e4664636337cc3b834f',1,'AgoraChat']]],
-  ['create_14',['CREATE',['../namespace_agora_chat.html#a33be8ac1aa48dbbed69d5a7f40ffb131a294ce20cdefa29be3be0735cb62e715d',1,'AgoraChat']]],
-  ['custom_15',['CUSTOM',['../namespace_agora_chat.html#a8d167e073ca67f4f12657a2dde388df1a72baef04098f035e8a320b03ad197818',1,'AgoraChat']]]
+  ['conversation_5fmute_5finfo_5fchanged_11',['CONVERSATION_MUTE_INFO_CHANGED',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68addf37907b7fd0ebfb89b6db98c24c1c4',1,'AgoraChat']]],
+  ['conversation_5fpinned_12',['CONVERSATION_PINNED',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a10a6e5331fe10b5a31274de487c3ef6d',1,'AgoraChat']]],
+  ['conversation_5funpinned_13',['CONVERSATION_UNPINNED',['../namespace_agora_chat.html#a219e2b8202944dcdef170dc529f8fe68a530bea15e412262386f211904a17265e',1,'AgoraChat']]],
+  ['create_14',['Create',['../namespace_agora_chat.html#a73fcc9c0dc4ba4c315e94b09839977d2a686e697538050e4664636337cc3b834f',1,'AgoraChat']]],
+  ['create_15',['CREATE',['../namespace_agora_chat.html#a33be8ac1aa48dbbed69d5a7f40ffb131a294ce20cdefa29be3be0735cb62e715d',1,'AgoraChat']]],
+  ['custom_16',['CUSTOM',['../namespace_agora_chat.html#a8d167e073ca67f4f12657a2dde388df1a72baef04098f035e8a320b03ad197818',1,'AgoraChat']]]
 ];

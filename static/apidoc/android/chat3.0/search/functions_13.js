@@ -19,10 +19,7 @@ var searchData=
   ['updateparticipant_16',['updateParticipant',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a1d06bab9a69824162292d39283bfa3ae',1,'com::hyphenate::chat::EMChatManager']]],
   ['updatepushdisplaystyle_17',['updatePushDisplayStyle',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a107ffceb9cafe14ee528ab60d9095653',1,'com::hyphenate::chat::EMPushManager']]],
   ['updatepushnickname_18',['updatePushNickname',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#afc4cdda10f004b2b673102b43222235d',1,'com::hyphenate::chat::EMPushManager']]],
-  ['updatepushserviceforgroup_19',['updatePushServiceForGroup',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#af0e2e43e5840f1c03c567f797bee312c',1,'com::hyphenate::chat::EMPushManager']]],
-  ['updatepushserviceforusers_20',['updatePushServiceForUsers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a4a0aed8c74244da185072087904a8f2b',1,'com::hyphenate::chat::EMPushManager']]],
-  ['updatetranslationresult_21',['updateTranslationResult',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_translation_manager.html#a7b341d981a773e38276bdb13111f9b22',1,'com::hyphenate::chat::EMTranslationManager']]],
-  ['uploadgroupsharedfile_22',['uploadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#adb127813e9598b699fc2bfc09f63f656',1,'com::hyphenate::chat::EMGroupManager']]],
-  ['uploadlog_23',['uploadLog',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#af592159a62a963afae19318c66a8e236',1,'com::hyphenate::chat::EMClient']]],
-  ['userinfomanager_24',['userInfoManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a46d3cec05dd7855d5eb02d600614bcef',1,'com::hyphenate::chat::EMClient']]]
+  ['uploadgroupsharedfile_19',['uploadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#adb127813e9598b699fc2bfc09f63f656',1,'com::hyphenate::chat::EMGroupManager']]],
+  ['uploadlog_20',['uploadLog',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#af592159a62a963afae19318c66a8e236',1,'com::hyphenate::chat::EMClient']]],
+  ['userinfomanager_21',['userInfoManager',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a46d3cec05dd7855d5eb02d600614bcef',1,'com::hyphenate::chat::EMClient']]]
 ];

@@ -2,7 +2,7 @@ var searchData=
 [
   ['fail_0',['FAIL',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_status.html#accc338930c5e91b3a32b1aa895ec6518',1,'com::hyphenate::chat::EMMessage::Status']]],
   ['failed_1',['FAILED',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body_1_1_e_m_download_status.html#a47b5a25870732ccbc1d88d4b51329fe7',1,'com::hyphenate::chat::EMFileMessageBody::EMDownloadStatus']]],
-  ['file_2',['FILE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a3342887dd01c4f0b431637fc9ccb1f50',1,'com.hyphenate.chat.EMMessage.Type.FILE()'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#a152fc789b6a8b330397b1bf54fe92c3f',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.FILE()']]],
+  ['file_2',['FILE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a3342887dd01c4f0b431637fc9ccb1f50',1,'com.hyphenate.chat.EMMessage.Type.FILE'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#a152fc789b6a8b330397b1bf54fe92c3f',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.FILE']]],
   ['file_5fcontent_5fimproper_3',['FILE_CONTENT_IMPROPER',['../classcom_1_1hyphenate_1_1_e_m_error.html#a20058bcfa7597e743d456ae39cc2e24c',1,'com::hyphenate::EMError']]],
   ['file_5fdelete_5ffailed_4',['FILE_DELETE_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a62a0b701ddfeff5b28cf5cf2fa1f090a',1,'com::hyphenate::EMError']]],
   ['file_5fdownload_5ffailed_5',['FILE_DOWNLOAD_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a0ed081a4d17b21982d4427da8dff8ecb',1,'com::hyphenate::EMError']]],
