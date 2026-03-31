@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMChatRoom class</li>
   </ol>
   <div class="self-name">EMChatRoom</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,9 +54,16 @@
 
     
 <section class="desc markdown">
-  <p>聊天室信息类，包含内存中的聊天室信息。</p>
+  <p>~english
+The chat room instance class.</p>
 <p><strong>Note</strong>
-如需最新数据，需从服务器获取：<a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomInfoFromServer.html">EMChatRoomManager.fetchChatRoomInfoFromServer</a>。</p>
+To get the correct value, ensure that you call <a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomInfoFromServer.html">EMChatRoomManager.fetchChatRoomInfoFromServer</a> before calling this method.
+~end</p>
+<p>~chinese
+聊天室信息类，包含内存中的聊天室信息。</p>
+<p><strong>Note</strong>
+如需最新数据，需从服务器获取：<a href="../im_flutter_sdk/EMChatRoomManager/fetchChatRoomInfoFromServer.html">EMChatRoomManager.fetchChatRoomInfoFromServer</a>。
+~end</p>
 </section>
 
 
@@ -72,8 +71,13 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
+        <dt id="EMChatRoom.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMChatRoom/EMChatRoom.html">EMChatRoom.new</a></span><span class="signature">({<span class="parameter" id="-param-roomId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, </span><span class="parameter" id="-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="-param-description"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">description</span>, </span><span class="parameter" id="-param-owner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">owner</span>, </span><span class="parameter" id="-param-announcement"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">announcement</span>, </span><span class="parameter" id="-param-memberCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">memberCount</span>, </span><span class="parameter" id="-param-maxUsers"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">maxUsers</span>, </span><span class="parameter" id="-param-adminList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">adminList</span>, </span><span class="parameter" id="-param-memberList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">memberList</span>, </span><span class="parameter" id="-param-blockList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">blockList</span>, </span><span class="parameter" id="-param-muteList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">muteList</span>, </span><span class="parameter" id="-param-isAllMemberMuted"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isAllMemberMuted</span>, </span><span class="parameter" id="-param-permissionType"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatRoomPermissionType.html">EMChatRoomPermissionType</a></span> <span class="parameter-name">permissionType</span> = <span class="default-value">EMChatRoomPermissionType.None</span>, </span><span class="parameter" id="-param-isInWhitelist"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isInWhitelist</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-createTimestamp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">createTimestamp</span> = <span class="default-value">0</span>, </span><span class="parameter" id="-param-muteExpireTimestamp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">muteExpireTimestamp</span> = <span class="default-value">0</span></span>})</span>
+        </dt>
+        <dd>
+          
+        </dd>
         <dt id="EMChatRoom.fromJson" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMChatRoom/EMChatRoom.fromJson.html">EMChatRoom.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-map"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">map</span></span>)</span>
         </dt>
@@ -96,7 +100,8 @@
 
 </dt>
 <dd>
-  从内存中获取聊天室管理员列表。
+  ~english
+Gets the chat room admin list.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -108,7 +113,8 @@
 
 </dt>
 <dd>
-  从内存中获取聊天室公告。
+  ~english
+Gets the chat room announcement in the chat room from the memory.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -120,7 +126,23 @@
 
 </dt>
 <dd>
-  从内存中获取聊天室黑名单列表。
+  ~english
+Gets the chat room block list.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="createTimestamp" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoom/createTimestamp.html">createTimestamp</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  ~english
+Gets the timestamp(ms) when the chat room was created.
+This property is available once join the chat room.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -132,7 +154,8 @@
 
 </dt>
 <dd>
-  从内存中获取聊天室描述。
+  ~english
+Gets the chat room description from the memory.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -156,7 +179,25 @@
 
 </dt>
 <dd>
-  从内存中查看是否在全员禁言状态。
+  ~english
+Checks whether all members are muted,This property is available once join the chat room.
+After joining the chat room, when you receive a callback for muting or unmuting all members, this property will be updated.
+~end
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isInWhitelist" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoom/isInWhitelist.html">isInWhitelist</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  ~english
+Current user is in allow list or not.
+This property is available once join the chat room.
+This property will be updated when current user is added or removed from the white list.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -168,7 +209,8 @@
 
 </dt>
 <dd>
-  从内存中获取聊天室最大人数限制，在创建聊天室时设置。
+  ~english
+Gets the maximum number of members in the chat room from the memory, which is set/specified when the chat room is created.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -180,7 +222,11 @@
 
 </dt>
 <dd>
-  从内存中获取聊天室在线用户数量。
+  ~english
+This includes the chat room owner, administrators, and regular members.
+You can get this information after joining the chat room.
+This property is updated when members join or leave the chat room.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -192,7 +238,21 @@
 
 </dt>
 <dd>
-  从内存中获取聊天室成员列表。
+  ~english
+Gets the member list.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="muteExpireTimestamp" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMChatRoom/muteExpireTimestamp.html">muteExpireTimestamp</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  ~english
+Gets the timestamp(ms) when Current user will be unmuted.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -204,7 +264,8 @@
 
 </dt>
 <dd>
-  从内存中获取禁言列表。
+  ~english
+Gets the mute list of the chat room.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -216,7 +277,8 @@
 
 </dt>
 <dd>
-  从内存中获取聊天室名称。
+  ~english
+Gets the chat room name from the memory.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -228,7 +290,8 @@
 
 </dt>
 <dd>
-  从内存中获取聊天室所有者 ID。
+  ~english
+Gets the chat room owner ID. If this method returns an empty string, the SDK fails to get chat room details.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -240,7 +303,8 @@
 
 </dt>
 <dd>
-  从内存中获取当前用户在聊天室角色，详见 <a href="../im_flutter_sdk/EMChatRoomPermissionType.html">EMChatRoomPermissionType</a>。
+  ~english
+Gets the current user's role in the chat room. The role types: <a href="../im_flutter_sdk/EMChatRoomPermissionType.html">EMChatRoomPermissionType</a>.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -252,7 +316,8 @@
 
 </dt>
 <dd>
-  从内存中获取聊天室 ID。
+  ~english
+Gets the chat room ID.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -271,6 +336,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
@@ -343,9 +409,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -353,40 +417,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMChatRoom class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

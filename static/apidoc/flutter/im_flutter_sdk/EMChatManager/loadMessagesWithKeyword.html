@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
     <li class="self-crumb">loadMessagesWithKeyword method</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,8 +54,7 @@
 
     <section class="multi-line-signature">
       
-
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">loadMessagesWithKeyword</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="loadMessagesWithKeyword-param-keywords"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">keywords</span>, {</span></li>
 <li><span class="parameter" id="loadMessagesWithKeyword-param-sender"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">sender</span>, </span></li>
 <li><span class="parameter" id="loadMessagesWithKeyword-param-timestamp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">timestamp</span> = <span class="default-value">-1</span>, </span></li>
@@ -77,7 +68,22 @@
     </section>
     
 <section class="desc markdown">
-  <p>根据消息中的关键词、消息时间戳、要搜索的消息条数、搜索范围和搜索方向从 SDK 本地数据库中搜索指定数量的消息。</p>
+  <p>~english
+Loads messages from the local database by the following parameters: keywords, timestamp, the number of messages to retrieve, message sender, search scope, and search direction.</p>
+<p><strong>Note</strong> Pay attention to the memory usage when you retrieve a great number of messages.</p>
+<p>Param <code>keywords</code> The keywords in message.</p>
+<p>Param <code>sender</code> The user ID of the message sender. If you do not set this parameter, the SDK ignores this parameter when retrieving messages.</p>
+<p>Param <code>timestamp</code> The starting message timestamp for search.</p>
+<p>Param <code>count</code> The number of messages to retrieve.</p>
+<p>Param <code>searchScope</code> The message search scope. See <a href="../../im_flutter_sdk/MessageSearchScope.html">MessageSearchScope</a>.</p>
+<p>Param <code>direction</code> The direction in which the message is loaded: EMSearchDirection.
+<code>EMSearchDirection.Up</code>: Gets the messages loaded before the timestamp of the specified message ID.
+<code>EMSearchDirection.Down</code>: Gets the messages loaded after the timestamp of the specified message ID.</p>
+<p><strong>Returns</strong> The list of retrieved messages.</p>
+<p><strong>Throws</strong> A description of the exception. See <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>.
+~end</p>
+<p>~chinese
+根据消息中的关键词、消息时间戳、要搜索的消息条数、搜索范围和搜索方向从 SDK 本地数据库中搜索指定数量的消息。</p>
 <p>注意：若搜索的消息条数非常大，需要考虑内存消耗。</p>
 <p>Param <code>keywords</code> 搜索消息中的关键词。</p>
 <p>Param <code>sender</code> 消息发送方的用户 ID。若不设置该参数，SDK 搜索消息时会忽略该参数。</p>
@@ -86,7 +92,8 @@
 <p>Param <code>searchScope</code> 消息搜索范围，详见 <a href="../../im_flutter_sdk/MessageSearchScope.html">MessageSearchScope</a>。</p>
 <p>Param <code>direction</code> 消息搜索方向。</p>
 <p><strong>Return</strong> 消息列表。</p>
-<p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
+<p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。
+~end</p>
 </section>
 
 
@@ -101,32 +108,31 @@
   MessageSearchScope searchScope = MessageSearchScope.All,
   EMSearchDirection direction = EMSearchDirection.Up,
 }) async {
-  Map req = Map();
-  req[&quot;keywords&quot;] = keywords;
-  req[&#39;count&#39;] = count;
-  req[&#39;timestamp&#39;] = timestamp;
-  req[&#39;searchScope&#39;] = MessageSearchScope.values.indexOf(searchScope);
-  req[&#39;direction&#39;] = direction.index;
-  req.putIfNotNull(&quot;from&quot;, sender);
-
-  Map result =
-      await ChatChannel.invokeMethod(ChatMethodKeys.searchChatMsgFromDB, req);
   try {
+    Map req = {};
+    req[&quot;keywords&quot;] = keywords;
+    req[&#39;count&#39;] = count;
+    req[&#39;timestamp&#39;] = timestamp;
+    req[&#39;searchScope&#39;] = MessageSearchScope.values.indexOf(searchScope);
+    req[&#39;direction&#39;] = direction.index;
+    req.putIfNotNull(&quot;from&quot;, sender);
+
+    Map result = await Client.instance.chatManager
+        .callNativeMethod(ChatMethodKeys.searchChatMsgFromDB, req);
     EMError.hasErrorFromResult(result);
     List&lt;EMMessage&gt; list = [];
     result[ChatMethodKeys.searchChatMsgFromDB]?.forEach((element) {
       list.add(EMMessage.fromJson(element));
     });
     return list;
-  } on EMError catch (e) {
-    throw e;
+  } catch (e) {
+    rethrow;
   }
 }</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -134,41 +140,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
     <li class="self-crumb">loadMessagesWithKeyword method</li>
 </ol>
 
-
     <h5>EMChatManager class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

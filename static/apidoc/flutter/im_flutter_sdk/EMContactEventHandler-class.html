@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMContactEventHandler class</li>
   </ol>
   <div class="self-name">EMContactEventHandler</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,13 +54,25 @@
 
     
 <section class="desc markdown">
-  <p>联系人事件监听</p>
+  <p>~english
+The contact event handler.</p>
+<p>Occurs when the contact changes, including adding or deleting contacts and accept or rejecting friend requests.</p>
+<p>Adds a contact event handler:</p>
+<pre class="language-dart"><code class="language-dart">  EMClient.getInstance.contactManager.addEventHandler(UNIQUE_HANDLER_ID, EMContactEventHandler());
+</code></pre>
+<p>Removes a contact event handler:</p>
+<pre class="language-dart"><code class="language-dart">  EMClient.getInstance.contactManager.removeEventHandler(UNIQUE_HANDLER_ID);
+</code></pre>
+<p>~end</p>
+<p>~chinese
+联系人事件监听</p>
 <p>添加监听:</p>
 <pre class="language-dart"><code class="language-dart">  EMClient.getInstance.contactManager.addEventHandler(UNIQUE_HANDLER_ID, EMContactEventHandler());
 </code></pre>
 <p>移除监听:</p>
 <pre class="language-dart"><code class="language-dart">  EMClient.getInstance.contactManager.removeEventHandler(UNIQUE_HANDLER_ID);
 </code></pre>
+<p>~end</p>
 </section>
 
 
@@ -76,13 +80,13 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
-        <dt id="EMContactEventHandler" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMContactEventHandler/EMContactEventHandler.html">EMContactEventHandler</a></span><span class="signature">({<span class="parameter" id="-param-onContactAdded"><span class="type-annotation">void</span> <span class="parameter-name">onContactAdded</span>(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)?, </span><span class="parameter" id="-param-onContactDeleted"><span class="type-annotation">void</span> <span class="parameter-name">onContactDeleted</span>(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)?, </span><span class="parameter" id="-param-onContactInvited"><span class="type-annotation">void</span> <span class="parameter-name">onContactInvited</span>(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)?, </span><span class="parameter" id="-param-onFriendRequestAccepted"><span class="type-annotation">void</span> <span class="parameter-name">onFriendRequestAccepted</span>(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)?, </span><span class="parameter" id="-param-onFriendRequestDeclined"><span class="type-annotation">void</span> <span class="parameter-name">onFriendRequestDeclined</span>(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)?</span>})</span>
+        <dt id="EMContactEventHandler.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMContactEventHandler/EMContactEventHandler.html">EMContactEventHandler.new</a></span><span class="signature">({<span class="parameter" id="-param-onContactAdded"><span class="type-annotation">void</span> <span class="parameter-name">onContactAdded</span>(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)?, </span><span class="parameter" id="-param-onContactDeleted"><span class="type-annotation">void</span> <span class="parameter-name">onContactDeleted</span>(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)?, </span><span class="parameter" id="-param-onContactInvited"><span class="type-annotation">void</span> <span class="parameter-name">onContactInvited</span>(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)?, </span><span class="parameter" id="-param-onFriendRequestAccepted"><span class="type-annotation">void</span> <span class="parameter-name">onFriendRequestAccepted</span>(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)?, </span><span class="parameter" id="-param-onFriendRequestDeclined"><span class="type-annotation">void</span> <span class="parameter-name">onFriendRequestDeclined</span>(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)?</span>})</span>
         </dt>
         <dd>
-          联系人事件监听。
+          ~english
+The contact updates listener callback.
         </dd>
     </dl>
   </section>
@@ -106,60 +110,70 @@
 
         <dt id="onContactAdded" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMContactEventHandler/onContactAdded.html">onContactAdded</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  添加好友回调。
+  ~english
+Occurs when user is added as a contact by another user.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onContactDeleted" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMContactEventHandler/onContactDeleted.html">onContactDeleted</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  删除好友回调。
+  ~english
+Occurs when a user is removed from the contact list by another user.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onContactInvited" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMContactEventHandler/onContactInvited.html">onContactInvited</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  好友申请回调。
+  ~english
+Occurs when a user receives a friend request.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onFriendRequestAccepted" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMContactEventHandler/onFriendRequestAccepted.html">onFriendRequestAccepted</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  发出的好友申请被对方同意。
+  ~english
+Occurs when a friend request is approved.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onFriendRequestDeclined" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMContactEventHandler/onFriendRequestDeclined.html">onFriendRequestDeclined</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  发出的好友申请被对方拒绝。
+  ~english
+Occurs when a friend request is declined.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -178,6 +192,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor inherited"
@@ -237,9 +252,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -247,40 +260,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMContactEventHandler class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

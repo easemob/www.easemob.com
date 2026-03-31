@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMOptions class</li>
   </ol>
   <div class="self-name">EMOptions</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,9 +54,15 @@
 
     
 <section class="desc markdown">
-  <p>提供 SDK 聊天相关的设置。
+  <p>~english
+The EMOptions class, which contains the settings of the Chat SDK.</p>
+<p>For example, whether to encrypt the messages before sending and whether to automatically accept the friend invitations.
+~end</p>
+<p>~chinese
+提供 SDK 聊天相关的设置。
 用户可以用来配置 SDK 的各种参数、选项，
-比如，发送消息加密，是否自动接受加好友邀请。</p>
+比如，发送消息加密，是否自动接受加好友邀请。
+~end</p>
 </section>
 
 
@@ -72,14 +70,27 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
-        <dt id="EMOptions" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMOptions/EMOptions.html">EMOptions</a></span><span class="signature">({<span class="parameter" id="-param-appKey"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">appKey</span>, </span><span class="parameter" id="-param-autoLogin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoLogin</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-debugMode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">debugMode</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-acceptInvitationAlways"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">acceptInvitationAlways</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-autoAcceptGroupInvitation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoAcceptGroupInvitation</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-requireAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">requireAck</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-requireDeliveryAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">requireDeliveryAck</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-deleteMessagesAsExitGroup"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">deleteMessagesAsExitGroup</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-deleteMessagesAsExitChatRoom"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">deleteMessagesAsExitChatRoom</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-isChatRoomOwnerLeaveAllowed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isChatRoomOwnerLeaveAllowed</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-sortMessageByServerTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">sortMessageByServerTime</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-usingHttpsOnly"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">usingHttpsOnly</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-serverTransfer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">serverTransfer</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-isAutoDownloadThumbnail"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAutoDownloadThumbnail</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-enableDNSConfig"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableDNSConfig</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-dnsUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dnsUrl</span>, </span><span class="parameter" id="-param-restServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">restServer</span>, </span><span class="parameter" id="-param-imPort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">imPort</span>, </span><span class="parameter" id="-param-imServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">imServer</span>, </span><span class="parameter" id="-param-chatAreaCode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">chatAreaCode</span> = <span class="default-value">ChatAreaCode.GLOB</span>, </span><span class="parameter" id="-param-enableEmptyConversation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableEmptyConversation</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-deviceName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">deviceName</span>, </span><span class="parameter" id="-param-osType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">osType</span>, </span><span class="parameter" id="-param-useReplacedMessageContents"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">useReplacedMessageContents</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-enableTLS"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableTLS</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-messagesReceiveCallbackIncludeSend"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">messagesReceiveCallbackIncludeSend</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-regardImportMessagesAsRead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">regardImportMessagesAsRead</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-workPathCopiable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">workPathCopiable</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-loginExtension"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">loginExtension</span></span>})</span>
+        <dt id="EMOptions.new" class="callable">
+          <span class="name"><a class="deprecated" href="../im_flutter_sdk/EMOptions/EMOptions.html">EMOptions.new</a></span><span class="signature">({<span class="parameter" id="-param-appKey"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">appKey</span>, </span><span class="parameter" id="-param-autoLogin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoLogin</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-debugMode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">debugMode</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-acceptInvitationAlways"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">acceptInvitationAlways</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-autoAcceptGroupInvitation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoAcceptGroupInvitation</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-requireAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">requireAck</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-requireDeliveryAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">requireDeliveryAck</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-deleteMessagesAsExitGroup"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">deleteMessagesAsExitGroup</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-deleteMessagesAsExitChatRoom"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">deleteMessagesAsExitChatRoom</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-isChatRoomOwnerLeaveAllowed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isChatRoomOwnerLeaveAllowed</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-sortMessageByServerTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">sortMessageByServerTime</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-usingHttpsOnly"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">usingHttpsOnly</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-serverTransfer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">serverTransfer</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-isAutoDownloadThumbnail"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAutoDownloadThumbnail</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-enableDNSConfig"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableDNSConfig</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-dnsUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dnsUrl</span>, </span><span class="parameter" id="-param-restServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">restServer</span>, </span><span class="parameter" id="-param-imPort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">imPort</span>, </span><span class="parameter" id="-param-imServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">imServer</span>, </span><span class="parameter" id="-param-webSocketServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">webSocketServer</span>, </span><span class="parameter" id="-param-webSocketPort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">webSocketPort</span>, </span><span class="parameter" id="-param-chatAreaCode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">chatAreaCode</span>, </span><span class="parameter" id="-param-enableEmptyConversation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableEmptyConversation</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-deviceName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">deviceName</span>, </span><span class="parameter" id="-param-osType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">osType</span>, </span><span class="parameter" id="-param-useReplacedMessageContents"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">useReplacedMessageContents</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-enableTLS"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableTLS</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-messagesReceiveCallbackIncludeSend"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">messagesReceiveCallbackIncludeSend</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-regardImportMessagesAsRead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">regardImportMessagesAsRead</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-workPathCopiable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">workPathCopiable</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-loginExtension"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">loginExtension</span></span>})</span>
         </dt>
         <dd>
-          设置 SDK
-Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app 时在 console 后台上注册的 app 唯一识别符。
+          ~english
+Sets the app options.
+        </dd>
+        <dt id="EMOptions.withAppId" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMOptions/EMOptions.withAppId.html">EMOptions.withAppId</a></span><span class="signature">(<span class="parameter" id="withAppId-param-appId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">appId</span>, {</span><span class="parameter" id="withAppId-param-autoLogin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoLogin</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppId-param-debugMode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">debugMode</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppId-param-acceptInvitationAlways"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">acceptInvitationAlways</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppId-param-autoAcceptGroupInvitation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoAcceptGroupInvitation</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppId-param-requireAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">requireAck</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppId-param-requireDeliveryAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">requireDeliveryAck</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppId-param-deleteMessagesAsExitGroup"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">deleteMessagesAsExitGroup</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppId-param-deleteMessagesAsExitChatRoom"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">deleteMessagesAsExitChatRoom</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppId-param-isChatRoomOwnerLeaveAllowed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isChatRoomOwnerLeaveAllowed</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppId-param-sortMessageByServerTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">sortMessageByServerTime</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppId-param-usingHttpsOnly"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">usingHttpsOnly</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppId-param-serverTransfer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">serverTransfer</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppId-param-isAutoDownloadThumbnail"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAutoDownloadThumbnail</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppId-param-enableDNSConfig"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableDNSConfig</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppId-param-dnsUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dnsUrl</span>, </span><span class="parameter" id="withAppId-param-restServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">restServer</span>, </span><span class="parameter" id="withAppId-param-imPort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">imPort</span>, </span><span class="parameter" id="withAppId-param-imServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">imServer</span>, </span><span class="parameter" id="withAppId-param-webSocketServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">webSocketServer</span>, </span><span class="parameter" id="withAppId-param-webSocketPort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">webSocketPort</span>, </span><span class="parameter" id="withAppId-param-chatAreaCode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">chatAreaCode</span>, </span><span class="parameter" id="withAppId-param-enableEmptyConversation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableEmptyConversation</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppId-param-deviceName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">deviceName</span>, </span><span class="parameter" id="withAppId-param-osType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">osType</span>, </span><span class="parameter" id="withAppId-param-useReplacedMessageContents"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">useReplacedMessageContents</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppId-param-enableTLS"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableTLS</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppId-param-messagesReceiveCallbackIncludeSend"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">messagesReceiveCallbackIncludeSend</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppId-param-regardImportMessagesAsRead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">regardImportMessagesAsRead</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppId-param-workPathCopiable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">workPathCopiable</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppId-param-loginExtension"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">loginExtension</span>, </span><span class="parameter" id="withAppId-param-extSettings"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">extSettings</span></span>})</span>
+        </dt>
+        <dd>
+          ~english
+Sets the app options.
+        </dd>
+        <dt id="EMOptions.withAppKey" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMOptions/EMOptions.withAppKey.html">EMOptions.withAppKey</a></span><span class="signature">(<span class="parameter" id="withAppKey-param-appKey"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">appKey</span>, {</span><span class="parameter" id="withAppKey-param-autoLogin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoLogin</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppKey-param-debugMode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">debugMode</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppKey-param-acceptInvitationAlways"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">acceptInvitationAlways</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppKey-param-autoAcceptGroupInvitation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoAcceptGroupInvitation</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppKey-param-requireAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">requireAck</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppKey-param-requireDeliveryAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">requireDeliveryAck</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppKey-param-deleteMessagesAsExitGroup"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">deleteMessagesAsExitGroup</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppKey-param-deleteMessagesAsExitChatRoom"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">deleteMessagesAsExitChatRoom</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppKey-param-isChatRoomOwnerLeaveAllowed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isChatRoomOwnerLeaveAllowed</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppKey-param-sortMessageByServerTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">sortMessageByServerTime</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppKey-param-usingHttpsOnly"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">usingHttpsOnly</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppKey-param-serverTransfer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">serverTransfer</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppKey-param-isAutoDownloadThumbnail"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAutoDownloadThumbnail</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppKey-param-enableDNSConfig"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableDNSConfig</span> = <span class="default-value">true</span>, </span><span class="parameter" id="withAppKey-param-dnsUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dnsUrl</span>, </span><span class="parameter" id="withAppKey-param-restServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">restServer</span>, </span><span class="parameter" id="withAppKey-param-imPort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">imPort</span>, </span><span class="parameter" id="withAppKey-param-imServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">imServer</span>, </span><span class="parameter" id="withAppKey-param-webSocketServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">webSocketServer</span>, </span><span class="parameter" id="withAppKey-param-webSocketPort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">webSocketPort</span>, </span><span class="parameter" id="withAppKey-param-chatAreaCode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">chatAreaCode</span>, </span><span class="parameter" id="withAppKey-param-enableEmptyConversation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableEmptyConversation</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppKey-param-deviceName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">deviceName</span>, </span><span class="parameter" id="withAppKey-param-osType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">osType</span>, </span><span class="parameter" id="withAppKey-param-useReplacedMessageContents"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">useReplacedMessageContents</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppKey-param-enableTLS"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableTLS</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppKey-param-messagesReceiveCallbackIncludeSend"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">messagesReceiveCallbackIncludeSend</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppKey-param-regardImportMessagesAsRead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">regardImportMessagesAsRead</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppKey-param-workPathCopiable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">workPathCopiable</span> = <span class="default-value">false</span>, </span><span class="parameter" id="withAppKey-param-loginExtension"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">loginExtension</span>, </span><span class="parameter" id="withAppKey-param-extSettings"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">extSettings</span></span>})</span>
+        </dt>
+        <dd>
+          ~english
+Sets the app options.
         </dd>
     </dl>
   </section>
@@ -96,19 +107,36 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否自动接受加好友邀请。
+  ~english
+Whether to accept friend invitations from other users automatically.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="appId" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMOptions/appId.html">appId</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  ~english
+The app key that you get from the console when creating the app.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="appKey" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
   
 
 </dt>
 <dd>
-  创建 app 时在 console 后台上注册的 app 唯一识别符。
+  ~english
+The app key that you get from the console when creating the app.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -120,7 +148,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否自动接受群组邀请。
+  ~english
+Whether to accept group invitations automatically.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -132,7 +161,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否允许自动登录。
+  ~english
+Whether to enable automatic login.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -144,9 +174,11 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  区号
-此属性用于限制可访问边缘节点的范围。缺省值为AreaCodeGLOB。
-此属性只能在调用<a href="../im_flutter_sdk/EMClient/init.html">EMClient.init</a>时设置。在应用程序运行期间不能更改属性设置。
+  ~english
+The area code.
+This attribute is used to restrict the scope of accessible edge nodes. The default value is <code>AreaCodeGLOB</code>.
+This attribute can be set only when you call <a href="../im_flutter_sdk/EMClient/init.html">EMClient.init</a>. The attribute setting cannot be changed during the app runtime.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -158,7 +190,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否输出调试信息，在 EMClient 初始化完成后调用，详见 <a href="../im_flutter_sdk/EMClient/init.html">EMClient.init</a>。
+  ~english
+Whether to output the debug information. Make sure to call the method after initializing the EMClient using <a href="../im_flutter_sdk/EMClient/init.html">EMClient.init</a>.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -170,7 +203,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  离开聊天室时是否删除消息。
+  ~english
+Whether to delete the chat room messages when leaving the chat room.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -182,7 +216,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  离开群组时是否删除消息。
+  ~english
+Whether to delete the group messages when leaving a group.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -194,7 +229,9 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  自定义设备名称。
+  ~english
+Custom device name.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -206,7 +243,9 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  DNS 地址。
+  ~english
+The DNS URL.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -218,7 +257,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否开启 DNS。
+  ~english
+Whether to enable DNS.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -230,7 +270,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  从本地数据库加载会话时是否包括空会话。
+  ~english
+Whether to include empty conversations when the SDK loads conversations from the local database:
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -242,7 +283,9 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否开启 TLS 连接，初始化时生效，默认为 false。
+  ~english
+Whether to enable TLS connection, which takes effect during initialization and is false by default.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -266,7 +309,9 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否使用自定义 IM 服务的端口。用于私有化部署。
+  ~english
+The custom IM server port.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -278,7 +323,9 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  消息服务器。
+  ~english
+The custom IM message server url.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -290,7 +337,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否自动下载缩略图。
+  ~english
+Whether to automatically download the thumbnail.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -302,7 +350,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否允许聊天室所有者离开聊天室。
+  ~english
+Whether to allow the chat room owner to leave the chat room.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -314,7 +363,9 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  登录时携带的扩展信息，可以是JSON 字符串，目前字符串长度 底层限制长度1024
+  ~english
+The extended information carried during login can be a JSON string. The current string length is limited to 1024 characters.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -326,7 +377,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  发送的消息是会执行 <a href="../im_flutter_sdk/EMChatEventHandler/onMessagesReceived.html">EMChatEventHandler.onMessagesReceived</a> 回调。
+  ~english
+Whether the sent message is included in <a href="../im_flutter_sdk/EMChatEventHandler/onMessagesReceived.html">EMChatEventHandler.onMessagesReceived</a>:
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -338,7 +390,9 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  自定义系统类型。
+  ~english
+Custom system type.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -350,7 +404,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否将导入的消息视为已读。
+  ~english
+Whether to regard import messages as read.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -362,7 +417,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否发送消息已读回执.
+  ~english
+Whether to require read receipt after sending a message.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -374,7 +430,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  /// 是否发送消息已送达回执。
+  ~english
+Whether to require the delivery receipt after sending a message.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -386,7 +443,9 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  REST 服务器。
+  ~english
+The custom REST server.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -410,7 +469,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否自动将消息附件上传到聊天服务器。
+  ~english
+Whether to upload the message attachments automatically to the chat server.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -422,7 +482,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否根据服务器收到消息的时间对消息进行排序。
+  ~english
+Whether to sort the messages by the time when the messages are received by the server.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -434,7 +495,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否在文本审核时，返回给发送者被替换内容的文本消息：
+  ~english
+Whether the server returns the sender the text message with the content replaced during text moderation:
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -446,7 +508,34 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  是否只用 HTTPS。
+  ~english
+Whether only HTTPS is used for REST operations.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="webSocketPort" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMOptions/webSocketPort.html">webSocketPort</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  ~english
+The WebSocket server port.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="webSocketServer" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMOptions/webSocketServer.html">webSocketServer</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  ~english
+The WebSocket server.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -458,13 +547,16 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  SDK 的工作路径是否可备份, 只有ios生效，默认为 false。
+  ~english
+Whether the SDK work path is copiable, only valid for iOS, default is false.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
@@ -472,7 +564,7 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="copyWith" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMOptions/copyWith.html">copyWith</a></span><span class="signature">(<wbr>{<span class="parameter" id="copyWith-param-usingHttpsOnly"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">usingHttpsOnly</span>, </span><span class="parameter" id="copyWith-param-loginExtension"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">loginExtension</span>, </span><span class="parameter" id="copyWith-param-deleteMessageWhenLeaveRoom"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">deleteMessageWhenLeaveRoom</span>, </span><span class="parameter" id="copyWith-param-deleteMessagesWhenLeaveGroup"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">deleteMessagesWhenLeaveGroup</span>, </span><span class="parameter" id="copyWith-param-roomOwnerCanLeave"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">roomOwnerCanLeave</span>, </span><span class="parameter" id="copyWith-param-autoAcceptGroupInvitation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">autoAcceptGroupInvitation</span>, </span><span class="parameter" id="copyWith-param-acceptInvitationAlways"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">acceptInvitationAlways</span>, </span><span class="parameter" id="copyWith-param-autoDownloadThumbnail"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">autoDownloadThumbnail</span>, </span><span class="parameter" id="copyWith-param-requireDeliveryAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">requireDeliveryAck</span>, </span><span class="parameter" id="copyWith-param-requireAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">requireAck</span>, </span><span class="parameter" id="copyWith-param-sortMessageByServerTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">sortMessageByServerTime</span>, </span><span class="parameter" id="copyWith-param-messagesReceiveCallbackIncludeSend"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">messagesReceiveCallbackIncludeSend</span>, </span><span class="parameter" id="copyWith-param-regardImportMessagesAsRead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">regardImportMessagesAsRead</span></span>})
+  <span class="name"><a href="../im_flutter_sdk/EMOptions/copyWith.html">copyWith</a></span><span class="signature">(<wbr>{<span class="parameter" id="copyWith-param-usingHttpsOnly"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">usingHttpsOnly</span>, </span><span class="parameter" id="copyWith-param-loginExtension"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">loginExtension</span>, </span><span class="parameter" id="copyWith-param-deleteMessageWhenLeaveRoom"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">deleteMessageWhenLeaveRoom</span>, </span><span class="parameter" id="copyWith-param-deleteMessagesWhenLeaveGroup"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">deleteMessagesWhenLeaveGroup</span>, </span><span class="parameter" id="copyWith-param-roomOwnerCanLeave"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">roomOwnerCanLeave</span>, </span><span class="parameter" id="copyWith-param-autoAcceptGroupInvitation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">autoAcceptGroupInvitation</span>, </span><span class="parameter" id="copyWith-param-acceptInvitationAlways"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">acceptInvitationAlways</span>, </span><span class="parameter" id="copyWith-param-autoDownloadThumbnail"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">autoDownloadThumbnail</span>, </span><span class="parameter" id="copyWith-param-requireDeliveryAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">requireDeliveryAck</span>, </span><span class="parameter" id="copyWith-param-requireAck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">requireAck</span>, </span><span class="parameter" id="copyWith-param-sortMessageByServerTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">sortMessageByServerTime</span>, </span><span class="parameter" id="copyWith-param-messagesReceiveCallbackIncludeSend"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">messagesReceiveCallbackIncludeSend</span>, </span><span class="parameter" id="copyWith-param-regardImportMessagesAsRead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">regardImportMessagesAsRead</span>, </span><span class="parameter" id="copyWith-param-extSettings"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">extSettings</span></span>})
     <span class="returntype parameter">&#8594; <a href="../im_flutter_sdk/EMOptions-class.html">EMOptions</a></span>
   </span>
   
@@ -492,7 +584,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  开启 Apple 推送通知服务（APNs）推送。
+  ~english
+Enables Apple Push Notification service (APNs) on iOS devices.
   
 
 </dd>
@@ -505,7 +598,8 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  开启 FCM（GCM 的升级版）推送。
+  ~english
+Enables Firebase Cloud Messaging (FCM) push on devices that support Google Play.
   
 
 </dd>
@@ -518,7 +612,9 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  开启荣耀推送。
+  ~english
+Enables Honor Push on Honor devices.
+~end
   
 
 </dd>
@@ -531,7 +627,9 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  开启华为推送。
+  ~english
+Enables Huawei Push on Huawei devices.
+~end
   
 
 </dd>
@@ -544,9 +642,11 @@ Param <a href="../im_flutter_sdk/EMOptions/appKey.html">appKey</a> 创建 app �
 
 </dt>
 <dd>
-  开启魅族推送.
-Param <code>appId</code> 魅族 App ID.
-Param <code>appKey</code> 魅族 App Key.
+  ~english
+Enables MeiZu Push on MeiZu devices.
+Param <code>appId</code> The app ID for MeiZu Push.
+Param <code>appKey</code> The app key for MeiZu Push.
+~end
   
 
 </dd>
@@ -559,7 +659,8 @@ Param <code>appKey</code> 魅族 App Key.
 
 </dt>
 <dd>
-  开启小米推送。
+  ~english
+Enables Mi Push on Mi devices.
   
 
 </dd>
@@ -572,7 +673,8 @@ Param <code>appKey</code> 魅族 App Key.
 
 </dt>
 <dd>
-  开启 Oppo 推送。
+  ~english
+Enables OPPO PUSH on OPPO devices.
   
 
 </dd>
@@ -585,7 +687,9 @@ Param <code>appKey</code> 魅族 App Key.
 
 </dt>
 <dd>
-  开启 vivo 推送。
+  ~english
+Enables vivo Push on vivo devices.
+~end
   
 
 </dd>
@@ -656,9 +760,7 @@ Param <code>appKey</code> 魅族 App Key.
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -666,40 +768,30 @@ Param <code>appKey</code> 魅族 App Key.
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMOptions class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

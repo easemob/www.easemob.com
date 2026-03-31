@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMConnectionEventHandler class</li>
   </ol>
   <div class="self-name">EMConnectionEventHandler</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,7 +54,21 @@
 
     
 <section class="desc markdown">
-  <p>服务器连接监听类。</p>
+  <p>~english
+The connection event handler.</p>
+<p>For the occasion of onDisconnected during unstable network condition, you don't need to reconnect manually,
+the chat SDK will handle it automatically.</p>
+<p>Note: We recommend not to update UI based on those methods, because this method is called on worker thread. If you update UI in those methods, other UI errors might be invoked.
+Also do not insert heavy computation work here, which might invoke other listeners to handle this connection event.</p>
+<p>Adds connection event handler:</p>
+<pre class="language-dart"><code class="language-dart">  EMClient.getInstance.addConnectionEventHandler(UNIQUE_HANDLER_ID, EMConnectionEventHandler());
+</code></pre>
+<p>Remove a connection event handler:</p>
+<pre class="language-dart"><code class="language-dart">  EMClient.getInstance.removeConnectionEventHandler(UNIQUE_HANDLER_ID);
+</code></pre>
+<p>~end</p>
+<p>~chinese
+服务器连接监听类。</p>
 <p>对于不稳定网络条件下的onDisconnected情况，您不需要手动重新连接，
 SDK会自动处理。</p>
 <p>添加 connection event handler:</p>
@@ -71,6 +77,7 @@ SDK会自动处理。</p>
 <p>移除 connection event handler:</p>
 <pre class="language-dart"><code class="language-dart">  EMClient.getInstance.removeConnectionEventHandler(UNIQUE_HANDLER_ID);
 </code></pre>
+<p>~end</p>
 </section>
 
 
@@ -78,13 +85,13 @@ SDK会自动处理。</p>
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
-        <dt id="EMConnectionEventHandler" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMConnectionEventHandler/EMConnectionEventHandler.html">EMConnectionEventHandler</a></span><span class="signature">({<span class="parameter" id="-param-onConnected"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onConnected</span>, </span><span class="parameter" id="-param-onDisconnected"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onDisconnected</span>, </span><span class="parameter" id="-param-onUserDidLoginFromOtherDevice"><span class="type-annotation">void</span> <span class="parameter-name">onUserDidLoginFromOtherDevice</span>(<span class="parameter" id="param-info"><span class="type-annotation"><a href="../im_flutter_sdk/LoginExtensionInfo-class.html">LoginExtensionInfo</a></span> <span class="parameter-name">info</span></span>)?, </span><span class="parameter" id="-param-onUserDidRemoveFromServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserDidRemoveFromServer</span>, </span><span class="parameter" id="-param-onUserDidForbidByServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserDidForbidByServer</span>, </span><span class="parameter" id="-param-onUserDidChangePassword"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserDidChangePassword</span>, </span><span class="parameter" id="-param-onUserDidLoginTooManyDevice"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserDidLoginTooManyDevice</span>, </span><span class="parameter" id="-param-onUserKickedByOtherDevice"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserKickedByOtherDevice</span>, </span><span class="parameter" id="-param-onUserAuthenticationFailed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserAuthenticationFailed</span>, </span><span class="parameter" id="-param-onTokenWillExpire"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onTokenWillExpire</span>, </span><span class="parameter" id="-param-onTokenDidExpire"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onTokenDidExpire</span>, </span><span class="parameter" id="-param-onAppActiveNumberReachLimit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onAppActiveNumberReachLimit</span>, </span><span class="parameter" id="-param-onOfflineMessageSyncStart"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onOfflineMessageSyncStart</span>, </span><span class="parameter" id="-param-onOfflineMessageSyncFinish"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onOfflineMessageSyncFinish</span></span>})</span>
+        <dt id="EMConnectionEventHandler.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMConnectionEventHandler/EMConnectionEventHandler.html">EMConnectionEventHandler.new</a></span><span class="signature">({<span class="parameter" id="-param-onConnected"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onConnected</span>, </span><span class="parameter" id="-param-onDisconnected"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onDisconnected</span>, </span><span class="parameter" id="-param-onUserDidLoginFromOtherDevice"><span class="type-annotation">void</span> <span class="parameter-name">onUserDidLoginFromOtherDevice</span>(<span class="parameter" id="param-info"><span class="type-annotation"><a href="../im_flutter_sdk/LoginExtensionInfo-class.html">LoginExtensionInfo</a></span> <span class="parameter-name">info</span></span>)?, </span><span class="parameter" id="-param-onUserDidRemoveFromServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserDidRemoveFromServer</span>, </span><span class="parameter" id="-param-onUserDidForbidByServer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserDidForbidByServer</span>, </span><span class="parameter" id="-param-onUserDidChangePassword"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserDidChangePassword</span>, </span><span class="parameter" id="-param-onUserDidLoginTooManyDevice"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserDidLoginTooManyDevice</span>, </span><span class="parameter" id="-param-onUserKickedByOtherDevice"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserKickedByOtherDevice</span>, </span><span class="parameter" id="-param-onUserAuthenticationFailed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onUserAuthenticationFailed</span>, </span><span class="parameter" id="-param-onTokenWillExpire"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onTokenWillExpire</span>, </span><span class="parameter" id="-param-onTokenDidExpire"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onTokenDidExpire</span>, </span><span class="parameter" id="-param-onAppActiveNumberReachLimit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onAppActiveNumberReachLimit</span>, </span><span class="parameter" id="-param-onOfflineMessageSyncStart"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onOfflineMessageSyncStart</span>, </span><span class="parameter" id="-param-onOfflineMessageSyncFinish"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onOfflineMessageSyncFinish</span></span>})</span>
         </dt>
         <dd>
-          连接状态监听。
+          ~english
+The chat connection listener callback.
         </dd>
     </dl>
   </section>
@@ -113,7 +120,9 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  应用程序的日活跃用户数量（DAU）或月活跃用户数量（MAU）达到上限。
+  ~english
+The number of daily active users (DAU) or monthly active users (MAU) for the app has reached the upper limit.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -125,7 +134,9 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  成功连接到 chat 服务器时触发的回调。
+  ~english
+Occurs when the SDK connects to the chat server successfully.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -137,7 +148,8 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  与 chat 服务器断开连接时触发的回调。
+  ~english
+Occurs when the SDK disconnects from the chat server.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -149,7 +161,9 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  从服务器拉取离线消息结束时触发。
+  ~english
+Occurs when the SDK finishes pulling offline messages from the server.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -161,7 +175,9 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  开始从服务器拉取离线消息时触发。
+  ~english
+Occurs when the SDK starts pulling offline messages from the server.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -173,7 +189,9 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  Agora token 已过期时触发。
+  ~english
+Occurs when the token has expired.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -185,7 +203,9 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  Agora token 即将过期时触发。
+  ~english
+Occurs when the token is about to expire.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -197,7 +217,9 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  鉴权失败回调。
+  ~english
+Occurs when the current chat user authentication failed.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -209,7 +231,9 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  用户密码变更回调。
+  ~english
+Occurs when the current chat user changed the password.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -221,19 +245,23 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  被服务器禁止连接回调。
+  ~english
+Occurs when the current chat user is banned from accessing the server.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onUserDidLoginFromOtherDevice" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMConnectionEventHandler/onUserDidLoginFromOtherDevice.html">onUserDidLoginFromOtherDevice</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-info"><span class="type-annotation"><a href="../im_flutter_sdk/LoginExtensionInfo-class.html">LoginExtensionInfo</a></span> <span class="parameter-name">info</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-info"><span class="type-annotation"><a href="../im_flutter_sdk/LoginExtensionInfo-class.html">LoginExtensionInfo</a></span> <span class="parameter-name">info</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  其他设备登录回调。
+  ~english
+Occurs when the current user account is logged in to another device.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -245,7 +273,9 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  登录设备过多回调。
+  ~english
+Occurs when the current chat user logged to many devices.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -257,7 +287,9 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  当前用户被服务器移除回调。
+  ~english
+Occurs when the current chat user is removed from the server.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -269,7 +301,9 @@ SDK会自动处理。</p>
 
 </dt>
 <dd>
-  被其他设备踢掉回调。
+  ~english
+Occurs when the current chat user is kicked out of the app by another device.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -288,6 +322,7 @@ SDK会自动处理。</p>
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor inherited"
@@ -347,9 +382,7 @@ SDK会自动处理。</p>
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -357,40 +390,30 @@ SDK会自动处理。</p>
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMConnectionEventHandler class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
     <li class="self-crumb">fetchReactionDetail method</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,8 +54,7 @@
 
     <section class="multi-line-signature">
       
-
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMMessageReaction-class.html">EMMessageReaction</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMMessageReaction-class.html">EMMessageReaction</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">fetchReactionDetail</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="fetchReactionDetail-param-messageId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">messageId</span>, </span></li>
 <li><span class="parameter" id="fetchReactionDetail-param-reaction"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">reaction</span>, </span></li>
 <li><span class="parameter" id="fetchReactionDetail-param-cursor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span></li>
@@ -75,13 +66,24 @@
     </section>
     
 <section class="desc markdown">
-  <p>获取 Reaction 详情。</p>
+  <p>~english
+Gets the Reaction details.</p>
+<p>Param <code>messageId</code> The message ID.</p>
+<p>Param <code>reaction</code> The Reaction content.</p>
+<p>Param <code>cursor</code> The cursor position from which to get Reactions.</p>
+<p>Param <code>pageSize</code> The number of Reactions you expect to get on each page.</p>
+<p><strong>Return</strong> The result callback, which contains the reaction list obtained from the server and the cursor for the next query. Returns null if all the data is fetched.</p>
+<p><strong>Throws</strong> A description of the exception. See <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>.
+~end</p>
+<p>~chinese
+获取 Reaction 详情。</p>
 <p>Param <code>messageId</code> 消息 ID。</p>
 <p>Param <code>reaction</code> Reaction 内容。</p>
 <p>Param <code>cursor</code> 开始获取 Reaction 的游标位置, 首次可以不传。</p>
 <p>Param <code>pageSize</code> 每页期望返回的 Reaction 数量。</p>
 <p><strong>Return</strong> 若调用成功，返回 Reaction 详情。</p>
-<p><strong>Throws</strong> 如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
+<p><strong>Throws</strong> 如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。
+~end</p>
 </section>
 
 
@@ -94,31 +96,35 @@
   String? cursor,
   int pageSize = 20,
 }) async {
-  Map req = {
-    &quot;msgId&quot;: messageId,
-    &quot;reaction&quot;: reaction,
-  };
-  req.putIfNotNull(&quot;cursor&quot;, cursor);
-  req.putIfNotNull(&quot;pageSize&quot;, pageSize);
-  Map result =
-      await ChatChannel.invokeMethod(ChatMethodKeys.fetchReactionDetail, req);
-
   try {
+    Map req = {
+      &quot;msgId&quot;: messageId,
+      &quot;reaction&quot;: reaction,
+    };
+    req.putIfNotNull(&quot;cursor&quot;, cursor);
+    req.putIfNotNull(&quot;pageSize&quot;, pageSize);
+    Map result = await Client.instance.chatManager.callNativeMethod(
+      ChatMethodKeys.fetchReactionDetail,
+      req,
+    );
     EMError.hasErrorFromResult(result);
-    return EMCursorResult&lt;EMMessageReaction&gt;.fromJson(
-        result[ChatMethodKeys.fetchReactionDetail],
-        dataItemCallback: (value) {
-      return EMMessageReaction.fromJson(value);
-    });
-  } on EMError catch (e) {
-    throw e;
+    final data = result[ChatMethodKeys.fetchReactionDetail];
+    if (data != null) {
+      return EMCursorResult&lt;EMMessageReaction&gt;.fromJson(data,
+          dataItemCallback: (value) {
+        return EMMessageReaction.fromJson(value);
+      });
+    } else {
+      return EMCursorResult&lt;EMMessageReaction&gt;(null, []);
+    }
+  } catch (e) {
+    rethrow;
   }
 }</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -126,41 +132,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
     <li class="self-crumb">fetchReactionDetail method</li>
 </ol>
 
-
     <h5>EMChatManager class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

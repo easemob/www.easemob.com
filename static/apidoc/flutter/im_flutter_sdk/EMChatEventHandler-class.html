@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMChatEventHandler class</li>
   </ol>
   <div class="self-name">EMChatEventHandler</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,7 +54,20 @@
 
     
 <section class="desc markdown">
-  <p>Chat 事件监听。</p>
+  <p>~english
+The chat event handler.</p>
+<p>This handler is used to check whether messages are received. If messages are sent successfully, a delivery receipt will be returned (delivery receipt needs to be enabled: <a href="../im_flutter_sdk/EMOptions/requireDeliveryAck.html">EMOptions.requireDeliveryAck</a>.
+If the peer user reads the received message, a read receipt will be returned (read receipt needs to be enabled: <a href="../im_flutter_sdk/EMOptions/requireAck.html">EMOptions.requireAck</a>).
+This API should be implemented in the app to listen for message status changes.</p>
+<p>Adds chat event handler:</p>
+<pre class="language-dart"><code class="language-dart">  EMClient.getInstance.chatManager.addEventHandler(UNIQUE_HANDLER_ID, EMChatEventHandler());
+</code></pre>
+<p>Removes a chat event handler:</p>
+<pre class="language-dart"><code class="language-dart">  EMClient.getInstance.chatManager.removeEventHandler(UNIQUE_HANDLER_ID);
+</code></pre>
+<p>~end</p>
+<p>~chinese
+Chat 事件监听。</p>
 <p>用于监听收消息，已读回执，等回调。</p>
 <p>添加监听：</p>
 <pre class="language-dart"><code class="language-dart">  EMClient.getInstance.chatManager.addEventHandler(UNIQUE_HANDLER_ID, EMChatEventHandler());
@@ -70,6 +75,7 @@
 <p>移除监听：</p>
 <pre class="language-dart"><code class="language-dart">  EMClient.getInstance.chatManager.removeEventHandler(UNIQUE_HANDLER_ID);
 </code></pre>
+<p>~end</p>
 </section>
 
 
@@ -77,13 +83,13 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
-        <dt id="EMChatEventHandler" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/EMChatEventHandler.html">EMChatEventHandler</a></span><span class="signature">({<span class="parameter" id="-param-onMessagesReceived"><span class="type-annotation">void</span> <span class="parameter-name">onMessagesReceived</span>(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)?, </span><span class="parameter" id="-param-onCmdMessagesReceived"><span class="type-annotation">void</span> <span class="parameter-name">onCmdMessagesReceived</span>(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)?, </span><span class="parameter" id="-param-onMessagesRead"><span class="type-annotation">void</span> <span class="parameter-name">onMessagesRead</span>(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)?, </span><span class="parameter" id="-param-onGroupMessageRead"><span class="type-annotation">void</span> <span class="parameter-name">onGroupMessageRead</span>(<span class="parameter" id="param-groupMessageAcks"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMGroupMessageAck-class.html">EMGroupMessageAck</a></span>&gt;</span></span> <span class="parameter-name">groupMessageAcks</span></span>)?, </span><span class="parameter" id="-param-onReadAckForGroupMessageUpdated"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onReadAckForGroupMessageUpdated</span>, </span><span class="parameter" id="-param-onMessagesDelivered"><span class="type-annotation">void</span> <span class="parameter-name">onMessagesDelivered</span>(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)?, </span><span class="parameter" id="-param-onMessagesRecalled"><span class="type-annotation">void</span> <span class="parameter-name">onMessagesRecalled</span>(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)?, </span><span class="parameter" id="-param-onConversationsUpdate"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onConversationsUpdate</span>, </span><span class="parameter" id="-param-onConversationRead"><span class="type-annotation">void</span> <span class="parameter-name">onConversationRead</span>(<span class="parameter" id="param-from"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">from</span>, </span><span class="parameter" id="param-to"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">to</span></span>)?, </span><span class="parameter" id="-param-onMessageReactionDidChange"><span class="type-annotation">void</span> <span class="parameter-name">onMessageReactionDidChange</span>(<span class="parameter" id="param-events"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessageReactionEvent-class.html">EMMessageReactionEvent</a></span>&gt;</span></span> <span class="parameter-name">events</span></span>)?, </span><span class="parameter" id="-param-onMessageContentChanged"><span class="type-annotation">void</span> <span class="parameter-name">onMessageContentChanged</span>(<span class="parameter" id="param-message"><span class="type-annotation"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="param-operatorId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">operatorId</span>, </span><span class="parameter" id="param-operationTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">operationTime</span></span>)?, </span><span class="parameter" id="-param-onMessagePinChanged"><span class="type-annotation">void</span> <span class="parameter-name">onMessagePinChanged</span>(<span class="parameter" id="param-messageId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">messageId</span>, </span><span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-pinOperation"><span class="type-annotation"><a href="../im_flutter_sdk/MessagePinOperation.html">MessagePinOperation</a></span> <span class="parameter-name">pinOperation</span>, </span><span class="parameter" id="param-pinInfo"><span class="type-annotation"><a href="../im_flutter_sdk/MessagePinInfo-class.html">MessagePinInfo</a></span> <span class="parameter-name">pinInfo</span></span>)?, </span><span class="parameter" id="-param-onMessagesRecalledInfo"><span class="type-annotation">void</span> <span class="parameter-name">onMessagesRecalledInfo</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/RecallMessageInfo-class.html">RecallMessageInfo</a></span>&gt;</span></span></span>)?</span>})</span>
+        <dt id="EMChatEventHandler.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/EMChatEventHandler.html">EMChatEventHandler.new</a></span><span class="signature">({<span class="parameter" id="-param-onMessagesReceived"><span class="type-annotation">void</span> <span class="parameter-name">onMessagesReceived</span>(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)?, </span><span class="parameter" id="-param-onStreamMessagesReceived"><span class="type-annotation">void</span> <span class="parameter-name">onStreamMessagesReceived</span>(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)?, </span><span class="parameter" id="-param-onCmdMessagesReceived"><span class="type-annotation">void</span> <span class="parameter-name">onCmdMessagesReceived</span>(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)?, </span><span class="parameter" id="-param-onMessagesRead"><span class="type-annotation">void</span> <span class="parameter-name">onMessagesRead</span>(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)?, </span><span class="parameter" id="-param-onGroupMessageRead"><span class="type-annotation">void</span> <span class="parameter-name">onGroupMessageRead</span>(<span class="parameter" id="param-groupMessageAcks"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMGroupMessageAck-class.html">EMGroupMessageAck</a></span>&gt;</span></span> <span class="parameter-name">groupMessageAcks</span></span>)?, </span><span class="parameter" id="-param-onReadAckForGroupMessageUpdated"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onReadAckForGroupMessageUpdated</span>, </span><span class="parameter" id="-param-onMessagesDelivered"><span class="type-annotation">void</span> <span class="parameter-name">onMessagesDelivered</span>(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)?, </span><span class="parameter" id="-param-onMessagesRecalled"><span class="type-annotation">void</span> <span class="parameter-name">onMessagesRecalled</span>(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)?, </span><span class="parameter" id="-param-onConversationsUpdate"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onConversationsUpdate</span>, </span><span class="parameter" id="-param-onConversationRead"><span class="type-annotation">void</span> <span class="parameter-name">onConversationRead</span>(<span class="parameter" id="param-from"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">from</span>, </span><span class="parameter" id="param-to"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">to</span></span>)?, </span><span class="parameter" id="-param-onMessageReactionDidChange"><span class="type-annotation">void</span> <span class="parameter-name">onMessageReactionDidChange</span>(<span class="parameter" id="param-events"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessageReactionEvent-class.html">EMMessageReactionEvent</a></span>&gt;</span></span> <span class="parameter-name">events</span></span>)?, </span><span class="parameter" id="-param-onMessageContentChanged"><span class="type-annotation">void</span> <span class="parameter-name">onMessageContentChanged</span>(<span class="parameter" id="param-message"><span class="type-annotation"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="param-operatorId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">operatorId</span>, </span><span class="parameter" id="param-operationTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">operationTime</span></span>)?, </span><span class="parameter" id="-param-onMessagePinChanged"><span class="type-annotation">void</span> <span class="parameter-name">onMessagePinChanged</span>(<span class="parameter" id="param-messageId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">messageId</span>, </span><span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-pinOperation"><span class="type-annotation"><a href="../im_flutter_sdk/MessagePinOperation.html">MessagePinOperation</a></span> <span class="parameter-name">pinOperation</span>, </span><span class="parameter" id="param-pinInfo"><span class="type-annotation"><a href="../im_flutter_sdk/MessagePinInfo-class.html">MessagePinInfo</a></span> <span class="parameter-name">pinInfo</span></span>)?, </span><span class="parameter" id="-param-onMessagesRecalledInfo"><span class="type-annotation">void</span> <span class="parameter-name">onMessagesRecalledInfo</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/RecallMessageInfo-class.html">RecallMessageInfo</a></span>&gt;</span></span></span>)?</span>})</span>
         </dt>
         <dd>
-          消息事件监听。
+          ~english
+The chat event handler.
         </dd>
     </dl>
   </section>
@@ -107,25 +113,26 @@
 
         <dt id="onCmdMessagesReceived" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/onCmdMessagesReceived.html">onCmdMessagesReceived</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  收到命令消息回调。
-与 <a href="../im_flutter_sdk/EMChatEventHandler/onMessagesReceived.html">onMessagesReceived</a> 不同, 这个回调只包含命令的消息，命令消息通常不对用户展示。
+  ~english
+Occurs when a command message is received.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onConversationRead" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/onConversationRead.html">onConversationRead</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-from"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">from</span>, </span><span class="parameter" id="param-to"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">to</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-from"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">from</span>, </span><span class="parameter" id="param-to"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">to</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  收到会话已读回执的回调。
+  ~english
+Occurs when a conversation read receipt is received.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -137,116 +144,133 @@
 
 </dt>
 <dd>
-  会话更新事件回调。
+  ~english
+Occurs when the conversation updated.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onGroupMessageRead" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/onGroupMessageRead.html">onGroupMessageRead</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupMessageAcks"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMGroupMessageAck-class.html">EMGroupMessageAck</a></span>&gt;</span></span> <span class="parameter-name">groupMessageAcks</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupMessageAcks"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMGroupMessageAck-class.html">EMGroupMessageAck</a></span>&gt;</span></span> <span class="parameter-name">groupMessageAcks</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  收到群组消息的已读回执的回调。
+  ~english
+Occurs when a read receipt is received for a group message.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMessageContentChanged" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/onMessageContentChanged.html">onMessageContentChanged</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-message"><span class="type-annotation"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="param-operatorId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">operatorId</span>, </span><span class="parameter" id="param-operationTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">operationTime</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-message"><span class="type-annotation"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="param-operatorId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">operatorId</span>, </span><span class="parameter" id="param-operationTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">operationTime</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  收到消息内容变化。
+  ~english
+Occurs when the message content is modified.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMessagePinChanged" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/onMessagePinChanged.html">onMessagePinChanged</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-messageId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">messageId</span>, </span><span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-pinOperation"><span class="type-annotation"><a href="../im_flutter_sdk/MessagePinOperation.html">MessagePinOperation</a></span> <span class="parameter-name">pinOperation</span>, </span><span class="parameter" id="param-pinInfo"><span class="type-annotation"><a href="../im_flutter_sdk/MessagePinInfo-class.html">MessagePinInfo</a></span> <span class="parameter-name">pinInfo</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-messageId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">messageId</span>, </span><span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-pinOperation"><span class="type-annotation"><a href="../im_flutter_sdk/MessagePinOperation.html">MessagePinOperation</a></span> <span class="parameter-name">pinOperation</span>, </span><span class="parameter" id="param-pinInfo"><span class="type-annotation"><a href="../im_flutter_sdk/MessagePinInfo-class.html">MessagePinInfo</a></span> <span class="parameter-name">pinInfo</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  消息置顶状态变化。
+  ~english
+Occurs when the message pinning status changes.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMessageReactionDidChange" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/onMessageReactionDidChange.html">onMessageReactionDidChange</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-events"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessageReactionEvent-class.html">EMMessageReactionEvent</a></span>&gt;</span></span> <span class="parameter-name">events</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-events"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessageReactionEvent-class.html">EMMessageReactionEvent</a></span>&gt;</span></span> <span class="parameter-name">events</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  消息表情回复（Reaction）变化监听器。
+  ~english
+Occurs when the Reaction data changes.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMessagesDelivered" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/onMessagesDelivered.html">onMessagesDelivered</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  收到消息已送达回执的回调。
+  ~english
+Occurs when a delivery receipt is received.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMessagesRead" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/onMessagesRead.html">onMessagesRead</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  收到单聊消息已读回执的回调。
+  ~english
+Occurs when a read receipt is received for a message.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMessagesRecalled" class="property">
   <span class="name"><a class="deprecated" href="../im_flutter_sdk/EMChatEventHandler/onMessagesRecalled.html">onMessagesRecalled</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  已收到的消息被撤回的回调。
+  ~english
+Occurs when a received message is recalled.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMessagesRecalledInfo" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/onMessagesRecalledInfo.html">onMessagesRecalledInfo</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/RecallMessageInfo-class.html">RecallMessageInfo</a></span>&gt;</span></span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/RecallMessageInfo-class.html">RecallMessageInfo</a></span>&gt;</span></span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  已收到的消息被撤回的回调。
+  ~english
+Occurs when a received message is recalled.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMessagesReceived" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/onMessagesReceived.html">onMessagesReceived</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  收到消息回调。
-在收到文本、图片、视频、语音、地理位置和文件等消息时，通过此回调通知用户。
+  ~english
+Occurs when a message is received.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -258,7 +282,22 @@
 
 </dt>
 <dd>
-  群消息已读变更。
+  ~english
+Occurs when the update for the group message read status is received.
+~end
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onStreamMessagesReceived" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMChatEventHandler/onStreamMessagesReceived.html">onStreamMessagesReceived</a></span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-messages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span> <span class="parameter-name">messages</span></span>)</span>?</span>
+  
+
+</dt>
+<dd>
+  ~english
+Occurs when a stream message is received.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -277,6 +316,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor inherited"
@@ -336,9 +376,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -346,40 +384,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMChatEventHandler class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

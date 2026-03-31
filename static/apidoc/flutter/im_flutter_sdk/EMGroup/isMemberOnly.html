@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMGroup-class.html">EMGroup</a></li>
     <li class="self-crumb">isMemberOnly property</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -60,6 +52,7 @@
 <h1><span class="kind-property">isMemberOnly</span> property 
 </h1></div>
 
+    
       <section class="multi-line-signature">
         
         <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?
@@ -69,14 +62,31 @@
       </section>
       
 <section class="desc markdown">
-  <p>从内存中获取群组类型：成员是否能自由加入，还是需要申请或者被邀请。</p>
+  <p>~english
+Checks whether users cannot join a chat group freely:</p>
+<ul>
+<li><code>true</code>: Yes. Needs the approval from the group owner(admin) or being invited by group members(PrivateOnlyOwnerInvite, PrivateMemberCanInvite, PublicJoinNeedApproval).</li>
+<li><code>false</code>: No. Users can join freely <a href="../../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle.PublicOpenJoin</a>.</li>
+</ul>
+<p><strong>Note</strong>
+There are four types of group properties used to define the style of a group: <a href="../../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle</a>.</p>
+<p><strong>Return</strong>
+Whether users can join a chat group with only the approval of the group owner(admin):</p>
+<ul>
+<li><code>true</code>: Yes. Needs the approval from the group owner(admin) or being invited by group members.</li>
+<li><code>false</code>: No.
+~end</li>
+</ul>
+<p>~chinese
+从内存中获取群组类型：成员是否能自由加入，还是需要申请或者被邀请。</p>
 <p>群组有四个类型属性，<code>isMemberOnly</code>是除了 <a href="../../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle.PublicOpenJoin</a> 之外的三种属性，表示该群不是自由加入的群组。</p>
 <p><strong>Note</strong>
 如需最新数据，需先从服务器获取： <a href="../../im_flutter_sdk/EMGroupManager/fetchGroupInfoFromServer.html">EMGroupManager.fetchGroupInfoFromServer</a>。</p>
 <p><strong>Return</strong></p>
 <ul>
 <li><code>true</code>：进群需要群主邀请，群成员邀请，或者群主和管理员同意入群申请；</li>
-<li><code>false</code>：意味着用户可以自由加入群，不需要申请和被邀请。</li>
+<li><code>false</code>：意味着用户可以自由加入群，不需要申请和被邀请。
+~end</li>
 </ul>
 </section>
 
@@ -87,8 +97,8 @@
 </section>
 
 
+    
 </div> <!-- /.main-content -->
-
 <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
   <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -96,41 +106,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMGroup-class.html">EMGroup</a></li>
     <li class="self-crumb">isMemberOnly property</li>
 </ol>
 
-
   <h5>EMGroup class</h5>
   <div id="dartdoc-sidebar-left-content"></div>
 </div><!--/.sidebar-offcanvas-->
-
 <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

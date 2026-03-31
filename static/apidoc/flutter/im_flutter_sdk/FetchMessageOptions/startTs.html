@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/FetchMessageOptions-class.html">FetchMessageOptions</a></li>
     <li class="self-crumb">startTs property</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -60,6 +52,7 @@
 <h1><span class="kind-property">startTs</span> property 
 </h1></div>
 
+    
       <section class="multi-line-signature">
         
         <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>
@@ -69,9 +62,19 @@
       </section>
       
 <section class="desc markdown">
-  <p>消息查询的起始时间，Unix 时间戳，单位为毫秒。默认为 -1，表示消息查询时会忽略该参数。
+  <p>~english
+The start time for message query. The time is a UNIX time stamp in milliseconds. The default value is -1,
+indicating that this parameter is ignored during message query.
+If the <a href="../../im_flutter_sdk/FetchMessageOptions/startTs.html">startTs</a> is set to a specific time spot and the <a href="../../im_flutter_sdk/FetchMessageOptions/endTs.html">endTs</a> uses the default value -1,
+the SDK returns messages that are sent and received in the period that is from the start time to the current time.
+If the <a href="../../im_flutter_sdk/FetchMessageOptions/startTs.html">startTs</a> uses the default value -1 and the <a href="../../im_flutter_sdk/FetchMessageOptions/endTs.html">endTs</a> is set to a specific time spot,
+the SDK returns messages that are sent and received in the period that is from the timestamp of the first message to the current time.
+~end</p>
+<p>~chinese
+消息查询的起始时间，Unix 时间戳，单位为毫秒。默认为 -1，表示消息查询时会忽略该参数。
 若 <a href="../../im_flutter_sdk/FetchMessageOptions/startTs.html">startTs</a> 设置为特定时间点，而 <a href="../../im_flutter_sdk/FetchMessageOptions/endTs.html">endTs</a> 采用默认值 -1，则查询起始时间至当前时间的消息。
-若 <a href="../../im_flutter_sdk/FetchMessageOptions/startTs.html">startTs</a> 采用默认值 -1，而 <a href="../../im_flutter_sdk/FetchMessageOptions/endTs.html">endTs</a> 设置了特定时间，SDK 返回从会话中最早的消息到结束时间点的消息。</p>
+若 <a href="../../im_flutter_sdk/FetchMessageOptions/startTs.html">startTs</a> 采用默认值 -1，而 <a href="../../im_flutter_sdk/FetchMessageOptions/endTs.html">endTs</a> 设置了特定时间，SDK 返回从会话中最早的消息到结束时间点的消息。
+~end</p>
 </section>
 
       
@@ -81,8 +84,8 @@
 </section>
 
 
+    
 </div> <!-- /.main-content -->
-
 <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
   <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -90,41 +93,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/FetchMessageOptions-class.html">FetchMessageOptions</a></li>
     <li class="self-crumb">startTs property</li>
 </ol>
 
-
   <h5>FetchMessageOptions class</h5>
   <div id="dartdoc-sidebar-left-content"></div>
 </div><!--/.sidebar-offcanvas-->
-
 <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 
