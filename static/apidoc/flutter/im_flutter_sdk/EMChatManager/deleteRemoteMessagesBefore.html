@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
     <li class="self-crumb">deleteRemoteMessagesBefore method</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,8 +54,7 @@
 
     <section class="multi-line-signature">
       
-
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
 <span class="name ">deleteRemoteMessagesBefore</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="deleteRemoteMessagesBefore-param-conversationId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span></li>
 <li><span class="parameter" id="deleteRemoteMessagesBefore-param-type"><span>required</span> <span class="type-annotation"><a href="../../im_flutter_sdk/EMConversationType.html">EMConversationType</a></span> <span class="parameter-name">type</span>, </span></li>
 <li><span class="parameter" id="deleteRemoteMessagesBefore-param-timestamp"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">timestamp</span>, </span></li>
@@ -74,10 +65,18 @@
     </section>
     
 <section class="desc markdown">
-  <p>根据时间 单向删除服务器会话中的消息和本地消息。
+  <p>~english
+Unidirectionally removes historical message by timestamp from the server.</p>
+<p>Param <code>conversationId</code> The conversation ID.</p>
+<p>Param <code>type</code> The conversation type.</p>
+<p>Param <code>timestamp</code> The UNIX timestamp in millisecond. Messages with a timestamp smaller than the specified one will be removed.
+~end</p>
+<p>~chinese
+根据时间 单向删除服务器会话中的消息和本地消息。
 Param <code>conversationId</code> 会话 ID。</p>
 <p>Param <code>type</code> 会话类型。</p>
-<p>Param <code>timestamp</code> 以毫秒为单位的UNIX时间戳。时间戳小于指定时间戳的消息将被删除。</p>
+<p>Param <code>timestamp</code> 以毫秒为单位的UNIX时间戳。时间戳小于指定时间戳的消息将被删除。
+~end</p>
 </section>
 
 
@@ -88,26 +87,23 @@ Param <code>conversationId</code> 会话 ID。</p>
     {required String conversationId,
     required EMConversationType type,
     required int timestamp}) async {
-  Map request = {
-    &quot;convId&quot;: conversationId,
-    &quot;type&quot;: type.index,
-    &quot;timestamp&quot;: timestamp,
-  };
-  Map result = await ChatChannel.invokeMethod(
-    ChatMethodKeys.removeMessagesFromServerWithTs,
-    request,
-  );
   try {
+    Map request = {
+      &quot;convId&quot;: conversationId,
+      &quot;type&quot;: type.index,
+      &quot;timestamp&quot;: timestamp,
+    };
+    Map result = await Client.instance.chatManager.callNativeMethod(
+        ChatMethodKeys.removeMessagesFromServerWithTs, request);
     EMError.hasErrorFromResult(result);
-  } on EMError catch (e) {
-    throw e;
+  } catch (e) {
+    rethrow;
   }
 }</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -115,41 +111,31 @@ Param <code>conversationId</code> 会话 ID。</p>
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
     <li class="self-crumb">deleteRemoteMessagesBefore method</li>
 </ol>
 
-
     <h5>EMChatManager class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMChatThreadManager class</li>
   </ol>
   <div class="self-name">EMChatThreadManager</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,7 +54,12 @@
 
     
 <section class="desc markdown">
-  <p>子区管理类。</p>
+  <p>~english
+The chat thread manager class.
+~end</p>
+<p>~chinese
+子区管理类。
+~end</p>
 </section>
 
 
@@ -70,10 +67,9 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
-        <dt id="EMChatThreadManager" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/EMChatThreadManager.html">EMChatThreadManager</a></span><span class="signature">()</span>
+        <dt id="EMChatThreadManager.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/EMChatThreadManager.html">EMChatThreadManager.new</a></span><span class="signature">()</span>
         </dt>
         <dd>
           
@@ -112,6 +108,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
@@ -126,7 +123,8 @@
 
 </dt>
 <dd>
-  添加 Thread 事件监听。
+  ~english
+Adds the chat thread event handler. After calling this method, you can handle for chat thread event when they arrive.
   
 
 </dd>
@@ -139,111 +137,121 @@
 
 </dt>
 <dd>
-  清除所有 Thread 监听。
+  ~english
+Clear all chat thread event handlers.
+~end
   
 
 </dd>
 
         <dt id="createChatThread" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/createChatThread.html">createChatThread</a></span><span class="signature">(<wbr>{<span class="parameter" id="createChatThread-param-name"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="createChatThread-param-messageId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">messageId</span>, </span><span class="parameter" id="createChatThread-param-parentId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">parentId</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  创建子区。
+  ~english
+Create Chat Thread.
   
 
 </dd>
 
         <dt id="destroyChatThread" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/destroyChatThread.html">destroyChatThread</a></span><span class="signature">(<wbr>{<span class="parameter" id="destroyChatThread-param-chatThreadId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  解散子区。
+  ~english
+Disband Chat Thread.
   
 
 </dd>
 
         <dt id="fetchChatThread" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/fetchChatThread.html">fetchChatThread</a></span><span class="signature">(<wbr>{<span class="parameter" id="fetchChatThread-param-chatThreadId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a>?</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a>?</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  从服务器获取子区详情。
+  ~english
+Get Chat Thread details from server.
   
 
 </dd>
 
         <dt id="fetchChatThreadMembers" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/fetchChatThreadMembers.html">fetchChatThreadMembers</a></span><span class="signature">(<wbr>{<span class="parameter" id="fetchChatThreadMembers-param-chatThreadId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span>, </span><span class="parameter" id="fetchChatThreadMembers-param-cursor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span><span class="parameter" id="fetchChatThreadMembers-param-limit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">limit</span> = <span class="default-value">20</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  分页获取子区成员。
+  ~english
+Paging to get Chat Thread members.
   
 
 </dd>
 
         <dt id="fetchChatThreadsWithParentId" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/fetchChatThreadsWithParentId.html">fetchChatThreadsWithParentId</a></span><span class="signature">(<wbr>{<span class="parameter" id="fetchChatThreadsWithParentId-param-parentId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">parentId</span>, </span><span class="parameter" id="fetchChatThreadsWithParentId-param-cursor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span><span class="parameter" id="fetchChatThreadsWithParentId-param-limit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">limit</span> = <span class="default-value">20</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  分页从服务器端获取指定群组的子区列表。
+  ~english
+Get the subareas under a group from the server
   
 
 </dd>
 
         <dt id="fetchJoinedChatThreads" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/fetchJoinedChatThreads.html">fetchJoinedChatThreads</a></span><span class="signature">(<wbr>{<span class="parameter" id="fetchJoinedChatThreads-param-cursor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span><span class="parameter" id="fetchJoinedChatThreads-param-limit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">limit</span> = <span class="default-value">20</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  分页从服务器获取当前用户加入的子区列表。
+  ~english
+Paging to get the list of Chat Threads that the current user has joined from the server
   
 
 </dd>
 
         <dt id="fetchJoinedChatThreadsWithParentId" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/fetchJoinedChatThreadsWithParentId.html">fetchJoinedChatThreadsWithParentId</a></span><span class="signature">(<wbr>{<span class="parameter" id="fetchJoinedChatThreadsWithParentId-param-parentId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">parentId</span>, </span><span class="parameter" id="fetchJoinedChatThreadsWithParentId-param-cursor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span><span class="parameter" id="fetchJoinedChatThreadsWithParentId-param-limit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">limit</span> = <span class="default-value">20</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  分页从服务器获取当前用户加入指定群组的子区列表。
+  ~english
+Paging to get the list of Chat Threads that the current user has joined the specified group from the server。
   
 
 </dd>
 
         <dt id="fetchLatestMessageWithChatThreads" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/fetchLatestMessageWithChatThreads.html">fetchLatestMessageWithChatThreads</a></span><span class="signature">(<wbr>{<span class="parameter" id="fetchLatestMessageWithChatThreads-param-chatThreadIds"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">chatThreadIds</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  从服务器批量获取指定子区中的最新一条消息。
+  ~english
+Get the latest news of the specified Chat Thread list from the server.
   
 
 </dd>
@@ -256,33 +264,36 @@
 
 </dt>
 <dd>
-  获取指定 ID 的事件监听。
+  ~english
+Get the chat thread event handler.
   
 
 </dd>
 
         <dt id="joinChatThread" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/joinChatThread.html">joinChatThread</a></span><span class="signature">(<wbr>{<span class="parameter" id="joinChatThread-param-chatThreadId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  加入子区。
+  ~english
+Join Chat Thread.
   
 
 </dd>
 
         <dt id="leaveChatThread" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/leaveChatThread.html">leaveChatThread</a></span><span class="signature">(<wbr>{<span class="parameter" id="leaveChatThread-param-chatThreadId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  退出子区。
+  ~english
+Leave Chat Thread.
   
 
 </dd>
@@ -308,20 +319,22 @@
 
 </dt>
 <dd>
-  移除 Thread 事件。
+  ~english
+Remove the chat thread event handler.
   
 
 </dd>
 
         <dt id="removeMemberFromChatThread" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/removeMemberFromChatThread.html">removeMemberFromChatThread</a></span><span class="signature">(<wbr>{<span class="parameter" id="removeMemberFromChatThread-param-memberId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">memberId</span>, </span><span class="parameter" id="removeMemberFromChatThread-param-chatThreadId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  移除子区成员。
+  ~english
+Remove member from Chat Thread.
   
 
 </dd>
@@ -341,13 +354,14 @@
 
         <dt id="updateChatThreadName" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadManager/updateChatThreadName.html">updateChatThreadName</a></span><span class="signature">(<wbr>{<span class="parameter" id="updateChatThreadName-param-chatThreadId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span>, </span><span class="parameter" id="updateChatThreadName-param-newName"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">newName</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  修改子区名称。
+  ~english
+Change Chat Thread name.
   
 
 </dd>
@@ -379,9 +393,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -389,40 +401,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMChatThreadManager class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

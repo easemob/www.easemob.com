@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMMessage class</li>
   </ol>
   <div class="self-name">EMMessage</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,13 +54,24 @@
 
     
 <section class="desc markdown">
-  <p>消息对象类。</p>
+  <p>~english
+The message class.</p>
+<p>The sample code for constructing a text message to send is as follows.</p>
+<pre class="language-dart"><code class="language-dart">  EMMessage msg = EMMessage.createTxtSendMessage(
+     username: "user1",
+     content: "hello",
+   );
+</code></pre>
+<p>~end</p>
+<p>~chinese
+消息对象类。</p>
 <p>创建一条待发送的文本消息示例代码如下：</p>
 <pre class="language-dart"><code class="language-dart">  EMMessage msg = EMMessage.createTxtSendMessage(
      targetId: "user1",
      content: "hello",
    );
 </code></pre>
+<p>~end</p>
 </section>
 
 
@@ -76,73 +79,83 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
         <dt id="EMMessage.createCmdSendMessage" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createCmdSendMessage.html">EMMessage.createCmdSendMessage</a></span><span class="signature">({<span class="parameter" id="createCmdSendMessage-param-targetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="createCmdSendMessage-param-action"><span>required</span> <span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>, </span><span class="parameter" id="createCmdSendMessage-param-deliverOnlineOnly"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">deliverOnlineOnly</span> = <span class="default-value">false</span>, </span><span class="parameter" id="createCmdSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
         </dt>
         <dd>
-          创建一条待发送的命令消息。
+          ~english
+Creates a command message for sending.
         </dd>
         <dt id="EMMessage.createCombineSendMessage" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createCombineSendMessage.html">EMMessage.createCombineSendMessage</a></span><span class="signature">({<span class="parameter" id="createCombineSendMessage-param-targetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="createCombineSendMessage-param-title"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">title</span>, </span><span class="parameter" id="createCombineSendMessage-param-summary"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">summary</span>, </span><span class="parameter" id="createCombineSendMessage-param-compatibleText"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">compatibleText</span>, </span><span class="parameter" id="createCombineSendMessage-param-msgIds"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">msgIds</span>, </span><span class="parameter" id="createCombineSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
         </dt>
         <dd>
-          创建一条待发送的合并消息。
+          ~english
+Creates a combined message for sending.
         </dd>
         <dt id="EMMessage.createCustomSendMessage" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createCustomSendMessage.html">EMMessage.createCustomSendMessage</a></span><span class="signature">({<span class="parameter" id="createCustomSendMessage-param-targetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="createCustomSendMessage-param-event"><span>required</span> <span class="type-annotation">dynamic</span> <span class="parameter-name">event</span>, </span><span class="parameter" id="createCustomSendMessage-param-params"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">params</span>, </span><span class="parameter" id="createCustomSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
+          <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createCustomSendMessage.html">EMMessage.createCustomSendMessage</a></span><span class="signature">({<span class="parameter" id="createCustomSendMessage-param-targetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="createCustomSendMessage-param-event"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="createCustomSendMessage-param-params"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">params</span>, </span><span class="parameter" id="createCustomSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
         </dt>
         <dd>
-          创建一条待发送的自定义消息。
+          ~english
+Creates a custom message for sending.
         </dd>
         <dt id="EMMessage.createFileSendMessage" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createFileSendMessage.html">EMMessage.createFileSendMessage</a></span><span class="signature">({<span class="parameter" id="createFileSendMessage-param-targetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="createFileSendMessage-param-filePath"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">filePath</span>, </span><span class="parameter" id="createFileSendMessage-param-displayName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">displayName</span>, </span><span class="parameter" id="createFileSendMessage-param-fileSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">fileSize</span>, </span><span class="parameter" id="createFileSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
         </dt>
         <dd>
-          创建一条待发送的文件消息。
+          ~english
+Creates a file message for sending.
         </dd>
         <dt id="EMMessage.createImageSendMessage" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createImageSendMessage.html">EMMessage.createImageSendMessage</a></span><span class="signature">({<span class="parameter" id="createImageSendMessage-param-targetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="createImageSendMessage-param-filePath"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">filePath</span>, </span><span class="parameter" id="createImageSendMessage-param-displayName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">displayName</span>, </span><span class="parameter" id="createImageSendMessage-param-thumbnailLocalPath"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">thumbnailLocalPath</span>, </span><span class="parameter" id="createImageSendMessage-param-sendOriginalImage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">sendOriginalImage</span> = <span class="default-value">false</span>, </span><span class="parameter" id="createImageSendMessage-param-fileSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">fileSize</span>, </span><span class="parameter" id="createImageSendMessage-param-width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">width</span>, </span><span class="parameter" id="createImageSendMessage-param-height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">height</span>, </span><span class="parameter" id="createImageSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
+          <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createImageSendMessage.html">EMMessage.createImageSendMessage</a></span><span class="signature">({<span class="parameter" id="createImageSendMessage-param-targetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="createImageSendMessage-param-filePath"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">filePath</span>, </span><span class="parameter" id="createImageSendMessage-param-displayName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">displayName</span>, </span><span class="parameter" id="createImageSendMessage-param-thumbnailLocalPath"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">thumbnailLocalPath</span>, </span><span class="parameter" id="createImageSendMessage-param-sendOriginalImage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">sendOriginalImage</span> = <span class="default-value">false</span>, </span><span class="parameter" id="createImageSendMessage-param-isGif"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isGif</span> = <span class="default-value">false</span>, </span><span class="parameter" id="createImageSendMessage-param-fileSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">fileSize</span>, </span><span class="parameter" id="createImageSendMessage-param-width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">width</span>, </span><span class="parameter" id="createImageSendMessage-param-height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">height</span>, </span><span class="parameter" id="createImageSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
         </dt>
         <dd>
-          创建一条待发送的图片消息。
+          ~english
+Creates an image message for sending.
         </dd>
         <dt id="EMMessage.createLocationSendMessage" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createLocationSendMessage.html">EMMessage.createLocationSendMessage</a></span><span class="signature">({<span class="parameter" id="createLocationSendMessage-param-targetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="createLocationSendMessage-param-latitude"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">latitude</span>, </span><span class="parameter" id="createLocationSendMessage-param-longitude"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">longitude</span>, </span><span class="parameter" id="createLocationSendMessage-param-address"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">address</span>, </span><span class="parameter" id="createLocationSendMessage-param-buildingName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">buildingName</span>, </span><span class="parameter" id="createLocationSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
         </dt>
         <dd>
-          创建一条待发送的位置信息。
+          ~english
+Creates a location message for sending.
         </dd>
         <dt id="EMMessage.createReceiveMessage" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createReceiveMessage.html">EMMessage.createReceiveMessage</a></span><span class="signature">({<span class="parameter" id="createReceiveMessage-param-body"><span>required</span> <span class="type-annotation"><a href="../im_flutter_sdk/EMMessageBody-class.html">EMMessageBody</a></span> <span class="parameter-name">body</span>, </span><span class="parameter" id="createReceiveMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
         </dt>
         <dd>
-          创建一条接收消息。
+          ~english
+Creates a received message instance.
         </dd>
         <dt id="EMMessage.createSendMessage" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createSendMessage.html">EMMessage.createSendMessage</a></span><span class="signature">({<span class="parameter" id="createSendMessage-param-body"><span>required</span> <span class="type-annotation"><a href="../im_flutter_sdk/EMMessageBody-class.html">EMMessageBody</a></span> <span class="parameter-name">body</span>, </span><span class="parameter" id="createSendMessage-param-to"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">to</span>, </span><span class="parameter" id="createSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
         </dt>
         <dd>
-          创建一条待发送的消息。
+          ~english
+Creates a message instance for sending.
         </dd>
         <dt id="EMMessage.createTxtSendMessage" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createTxtSendMessage.html">EMMessage.createTxtSendMessage</a></span><span class="signature">({<span class="parameter" id="createTxtSendMessage-param-targetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="createTxtSendMessage-param-content"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">content</span>, </span><span class="parameter" id="createTxtSendMessage-param-targetLanguages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">targetLanguages</span>, </span><span class="parameter" id="createTxtSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
         </dt>
         <dd>
-          创建一条文本消息。
+          ~english
+Creates a text message for sending.
         </dd>
         <dt id="EMMessage.createVideoSendMessage" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createVideoSendMessage.html">EMMessage.createVideoSendMessage</a></span><span class="signature">({<span class="parameter" id="createVideoSendMessage-param-targetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="createVideoSendMessage-param-filePath"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">filePath</span>, </span><span class="parameter" id="createVideoSendMessage-param-displayName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">displayName</span>, </span><span class="parameter" id="createVideoSendMessage-param-duration"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">duration</span> = <span class="default-value">0</span>, </span><span class="parameter" id="createVideoSendMessage-param-fileSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">fileSize</span>, </span><span class="parameter" id="createVideoSendMessage-param-thumbnailLocalPath"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">thumbnailLocalPath</span>, </span><span class="parameter" id="createVideoSendMessage-param-width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">width</span>, </span><span class="parameter" id="createVideoSendMessage-param-height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">height</span>, </span><span class="parameter" id="createVideoSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
         </dt>
         <dd>
-          创建一条待发送的视频消息。
+          ~english
+Creates a video message instance for sending.
         </dd>
         <dt id="EMMessage.createVoiceSendMessage" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.createVoiceSendMessage.html">EMMessage.createVoiceSendMessage</a></span><span class="signature">({<span class="parameter" id="createVoiceSendMessage-param-targetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="createVoiceSendMessage-param-filePath"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">filePath</span>, </span><span class="parameter" id="createVoiceSendMessage-param-duration"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">duration</span> = <span class="default-value">0</span>, </span><span class="parameter" id="createVoiceSendMessage-param-fileSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">fileSize</span>, </span><span class="parameter" id="createVoiceSendMessage-param-displayName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">displayName</span>, </span><span class="parameter" id="createVoiceSendMessage-param-chatType"><span class="type-annotation"><a href="../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span></span>})</span>
         </dt>
         <dd>
-          创建一条待发送的语音消息。
+          ~english
+Creates a voice message for sending.
         </dd>
         <dt id="EMMessage.fromJson" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMMessage/EMMessage.fromJson.html">EMMessage.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-map"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">map</span></span>)</span>
@@ -166,7 +179,9 @@
 
 </dt>
 <dd>
-  消息的扩展字段。
+  ~english
+Message's extension attribute.
+~end
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -178,7 +193,9 @@
 
 </dt>
 <dd>
-  消息体。请参见 <a href="../im_flutter_sdk/EMMessageBody-class.html">EMMessageBody</a>。
+  ~english
+Message body. See <a href="../im_flutter_sdk/EMMessageBody-class.html">EMMessageBody</a>.
+~end
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -190,8 +207,10 @@
 
 </dt>
 <dd>
-  设置聊天室消息优先级。
-Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>，表示普通优先级。详见 <a href="../im_flutter_sdk/ChatRoomMessagePriority.html">ChatRoomMessagePriority</a>。
+  ~english
+Sets the priority of chat room messages.
+param <code>priority</code> The priority of chat room messages. The default value is <code>Normal</code>, indicating the normal priority. For details, see<a href="../im_flutter_sdk/ChatRoomMessagePriority.html">ChatRoomMessagePriority</a>.
+~end
   <div class="features"><span class="feature">no getter</span></div>
 
 </dd>
@@ -203,7 +222,8 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  会话类型枚举。
+  ~english
+The enumeration of chat types.
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -215,7 +235,9 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  会话 ID。
+  ~english
+The conversation ID.
+~end
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -227,7 +249,8 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  消息是否只投递给在线用户：
+  ~english
+Whether the message is delivered only when the recipient(s) is/are online:
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -239,7 +262,9 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  消息方向，详见 <a href="../im_flutter_sdk/MessageDirection.html">MessageDirection</a>。
+  ~english
+The message direction. See <a href="../im_flutter_sdk/MessageDirection.html">MessageDirection</a>.
+~end
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -251,7 +276,9 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  消息发送方的用户 ID。
+  ~english
+The user ID of the message sender.
+~end
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -263,7 +290,8 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  设置送达回执，即接收方是否已收到消息。
+  ~english
+Whether the recipient has received the message.
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -287,7 +315,8 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  查看消息是否已读。
+  ~english
+Whether the message is read.
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -299,7 +328,8 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  设置已读回执，即接收方是否已阅读消息。
+  ~english
+Whether the recipient has read the message.
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -311,7 +341,9 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  是否是聊天室全局广播消息。
+  ~english
+Whether it is a global broadcast message for all chat rooms in an app.
+~end
   <div class="features"><span class="feature">late</span><span class="feature">final</span></div>
 
 </dd>
@@ -323,7 +355,8 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  是否为子区中的消息。
+  ~english
+Whether the message is sent within a chat thread.
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -335,7 +368,12 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  消息内容是否被替换, 开启<a href="../im_flutter_sdk/EMOptions/useReplacedMessageContents.html">EMOptions.useReplacedMessageContents</a>后有效
+  ~english
+Whether the message content is replaced. It is valid after <a href="../im_flutter_sdk/EMOptions/useReplacedMessageContents.html">EMOptions.useReplacedMessageContents</a> is enabled.
+~end
+~chinese
+消息内容是否被替换, 开启<a href="../im_flutter_sdk/EMOptions/useReplacedMessageContents.html">EMOptions.useReplacedMessageContents</a>后有效
+~end
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -347,7 +385,9 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  消息的本地时间戳，单位为毫秒。
+  ~english
+The local timestamp when the message is created on the local device, in milliseconds.
+~end
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -359,7 +399,8 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  消息 ID。
+  ~english
+Gets the message ID.
   <div class="features"><span class="feature">no setter</span></div>
 
 </dd>
@@ -371,7 +412,8 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  设置是否需要群组已读回执。
+  ~english
+Whether read receipts are required for group messages.
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -383,7 +425,8 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  该字段标记服务器下发消息时判断用户是在线还是离线的状态。
+  ~english
+Whether the message gets delivered to an online user.
   <div class="features"><span class="feature">late</span><span class="feature">final</span></div>
 
 </dd>
@@ -395,7 +438,8 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  定向消息的接收方。
+  ~english
+The recipient list of a targeted message.
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -419,7 +463,9 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  消息的服务器时间戳，单位为毫秒。
+  ~english
+The timestamp when the message is received by the server.
+~end
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -431,7 +477,23 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  消息状态，详见 <a href="../im_flutter_sdk/MessageStatus.html">MessageStatus</a>。
+  ~english
+The message sending/reception status. See <a href="../im_flutter_sdk/MessageStatus.html">MessageStatus</a>.
+~end
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="streamChunk" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMMessage/streamChunk.html">streamChunk</a></span>
+  <span class="signature">&#8596; <a href="../im_flutter_sdk/EMStreamChunk-class.html">EMStreamChunk</a>?</span>
+  
+
+</dt>
+<dd>
+  ~english
+The stream chunk of the message. Only valid for stream messages.
+~end
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -443,13 +505,15 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
 </dt>
 <dd>
-  消息接收方，可以是：
+  ~english
+The message recipient.
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
@@ -458,13 +522,14 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
     <dl class="callables">
         <dt id="chatThread" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMMessage/chatThread.html">chatThread</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a>?</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMChatThread-class.html">EMChatThread</a>?</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获得消息中的子区概述。
+  ~english
+Get an overview of the thread in the message (currently only supported by group messages)
   
 
 </dd>
@@ -484,13 +549,14 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
         <dt id="groupAckCount" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMMessage/groupAckCount.html">groupAckCount</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取群消息已读人数。
+  ~english
+Gets the number of members that have read the group message.
   
 
 </dd>
@@ -510,7 +576,7 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
         <dt id="pinInfo" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMMessage/pinInfo.html">pinInfo</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/MessagePinInfo-class.html">MessagePinInfo</a>?</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/MessagePinInfo-class.html">MessagePinInfo</a>?</span>&gt;</span></span>
   </span>
   
 
@@ -523,13 +589,14 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
 
         <dt id="reactionList" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMMessage/reactionList.html">reactionList</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessageReaction-class.html">EMMessageReaction</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessageReaction-class.html">EMMessageReaction</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取 Reaction 列表。
+  ~english
+Gets the Reaction list.
   
 
 </dd>
@@ -587,9 +654,7 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -597,40 +662,30 @@ Param <code>priority</code> 消息优先级。默认值为 <code>Normal</code>�
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMMessage class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

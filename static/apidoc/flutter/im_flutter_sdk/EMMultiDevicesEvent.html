@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMMultiDevicesEvent enum</li>
   </ol>
   <div class="self-name">EMMultiDevicesEvent</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -67,8 +59,14 @@
 
     
 <section class="desc markdown">
-  <p>多设备登录事件类型。</p>
-<p>本枚举类以用户 A 同时登录设备 A1 和 设备 A2 为例，描述多设备登录各事件的触发时机。</p>
+  <p>~english
+Multi-device event types.</p>
+<p>This enumeration takes user A logged into both Device A1 and Device A2 as an example to illustrate the various multi-device event types and when these events are triggered.
+~end</p>
+<p>~chinese
+多设备登录事件类型。</p>
+<p>本枚举类以用户 A 同时登录设备 A1 和 设备 A2 为例，描述多设备登录各事件的触发时机。
+~end</p>
 </section>
 
 
@@ -87,30 +85,31 @@
           
           
           
+  <dt>Available extensions</dt>
+  <dd><ul class="comma-separated clazz-relationships">
+      <li><a href="https://api.flutter.dev/flutter/dart-core/EnumName.html">EnumName</a></li>
+  </ul></dd>
+          
 
 
         </dl>
       </section>
 
-    
-  <section class="summary offset-anchor" id="constructors">
-    <h2>Constructors</h2>
-
-    <dl class="constructor-summary-list">
-        <dt id="EMMultiDevicesEvent" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMMultiDevicesEvent/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span><span class="signature">()</span>
-        </dt>
-        <dd>
-          
-            <div class="constructor-modifier features">const</div>
-        </dd>
-    </dl>
-  </section>
-
       <section class="summary offset-anchor" id="values">
         <h2>Values</h2>
-
         <dl class="properties">
+            <dt id="UnKnow" class="constant">
+    <span class="name ">UnKnow</span>
+  <span class="signature">&#8594; const <a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
             <dt id="CONTACT_REMOVE" class="constant">
     <span class="name ">CONTACT_REMOVE</span>
   <span class="signature">&#8594; const <a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span>
@@ -118,7 +117,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上删除了好友，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A deletes a contact on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上删除了好友，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -130,7 +134,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上同意了好友请求，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A accepts a friend request on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上同意了好友请求，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -142,7 +151,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上拒绝了好友请求，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A declines a friend request on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上拒绝了好友请求，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -154,7 +168,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上将其他用户加入了黑名单，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A adds another user to the block list on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上将其他用户加入了黑名单，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -166,7 +185,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上将其他用户移出了黑名单，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A removes another user from the block list on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上将其他用户移出了黑名单，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -178,7 +202,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上创建了群组，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A creates a chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上创建了群组，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -190,7 +219,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上解散了群组，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A destroys a chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上解散了群组，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -202,7 +236,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上加入了群组，则设备 A2 会收到该事件。</p>
+  <p>~english
+If user A joins a chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上加入了群组，则设备 A2 会收到该事件。
+~end</p>
   
 
 </dd>
@@ -214,7 +253,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上退出群组，则设备 A2 会收到该事件。</p>
+  <p>~english
+If user A leaves a chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上退出群组，则设备 A2 会收到该事件。
+~end</p>
   
 
 </dd>
@@ -226,7 +270,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上申请加入群组，则设备 A2 会收到该事件。</p>
+  <p>~english
+If user A requests to join a chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上申请加入群组，则设备 A2 会收到该事件。
+~end</p>
   
 
 </dd>
@@ -238,7 +287,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上接受了入群申请，则设备 A2 会收到该事件。</p>
+  <p>~english
+If user A accepts a request to join the chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上接受了入群申请，则设备 A2 会收到该事件。
+~end</p>
   
 
 </dd>
@@ -250,7 +304,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上拒绝了入群申请，设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A declines a request to join the chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上拒绝了入群申请，设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -262,7 +321,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上邀请了其他用户进入群组，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A invites a user to join the chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上邀请了其他用户进入群组，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -274,7 +338,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上同意了其他用户的群组邀请，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A accepts a group invitation on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上同意了其他用户的群组邀请，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -286,7 +355,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上拒绝了其他用户的群组邀请，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A declines a group invitation on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上拒绝了其他用户的群组邀请，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -298,7 +372,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上将其他用户踢出群组，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A declines a group invitation on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上将其他用户踢出群组，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -310,7 +389,12 @@
 
 </dt>
 <dd>
-  <p>当前用户在其他设备上将成员加入群组黑名单。用户 A 在设备 A1 上将其他用户加入黑名单，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A adds a member to a group block list on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+当前用户在其他设备上将成员加入群组黑名单。用户 A 在设备 A1 上将其他用户加入黑名单，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -322,7 +406,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上将其他用户移出群组黑名单，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A removes a member from a group block list on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上将其他用户移出群组黑名单，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -334,7 +423,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上屏蔽了某个群组的消息，设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A blocks messages from a chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上屏蔽了某个群组的消息，设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -346,7 +440,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上取消屏蔽了某个群组的消息，设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A unblocks messages from a chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上取消屏蔽了某个群组的消息，设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -358,7 +457,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上转移群组所有权，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A transfers the group ownership on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上转移群组所有权，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -370,7 +474,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上添加了群组管理员，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A adds a group admin on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上添加了群组管理员，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -382,7 +491,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上移除了群组管理员，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A removes a group admin on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上移除了群组管理员，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -394,7 +508,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上禁言了群成员，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A mutes a group member on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上禁言了群成员，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -406,7 +525,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上取消禁言了群成员，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A unmutes a group member on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上取消禁言了群成员，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -418,7 +542,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上将其他成员添加到群组白名单中，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A adds other members to the allow list of the chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上将其他成员添加到群组白名单中，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -430,7 +559,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上将其他成员移除群组白名单，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A removes other members from the allow list of the chat group on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上将其他成员移除群组白名单，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -442,7 +576,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上将所有其他群组成员添加到群组禁言列表，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A adds all other chat group members to the group mute list on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上将所有其他群组成员添加到群组禁言列表，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -454,7 +593,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上将所有其他群组成员移除群组禁言列表，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A removes all other chat group members from the group mute list on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上将所有其他群组成员移除群组禁言列表，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -466,7 +610,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 的群组功能在设备 A1 上被关闭，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If the group function is disabled for user A on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 的群组功能在设备 A1 上被关闭，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -478,7 +627,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 的群组功能在设备 A1 上被开启，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If the group function is enabled for user A on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 的群组功能在设备 A1 上被开启，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -490,7 +644,11 @@
 
 </dt>
 <dd>
-  
+  <p>~english
+If user A modifies custom attributes of a group member on Device A1, this event is triggered on Device A2.</p>
+<p>~chinese
+用户 A 在设备 A1 上修改群组成员属性，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -502,7 +660,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上创建了子区，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A creates a message thread on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上创建了子区，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -514,7 +677,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上移除了子区，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A destroys a message thread on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上移除了子区，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -526,7 +694,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上加入了子区，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A joins a message thread on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上加入了子区，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -538,7 +711,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上离开了子区，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A leaves a message thread on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上离开了子区，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -550,7 +728,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上更新了子区信息，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A updates the message thread name, or sends or recalls a message in thread on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上更新了子区信息，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -562,7 +745,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 上将其他用户踢出子区，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A kicks a user from a message thread on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 上将其他用户踢出子区，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -574,7 +762,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 置顶会话，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A pins a conversation on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 置顶会话，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -586,7 +779,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 取消置顶会话，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A unpins a conversation on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 取消置顶会话，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -598,7 +796,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 删除会话，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A deletes a conversation on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 删除会话，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -610,7 +813,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 更新会话标记，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A updates a conversation mark on Device A1, this event is triggered on Device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 更新会话标记，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -622,7 +830,12 @@
 
 </dt>
 <dd>
-  <p>用户 A 在设备 A1 设置会话免打扰，则设备 A2 上会收到该事件。</p>
+  <p>~english
+If user A sets the Do Not Disturb mode for a conversation on device A1, this event is triggered on device A2.
+~end</p>
+<p>~chinese
+用户 A 在设备 A1 设置会话免打扰，则设备 A2 上会收到该事件。
+~end</p>
   
 
 </dd>
@@ -660,6 +873,22 @@
 
 </dd>
 
+        <dt id="name" class="property">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/EnumName/name.html">name</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="https://api.flutter.dev/flutter/dart-core/Enum-class.html">Enum</a>,
+        provided by the <a href="https://api.flutter.dev/flutter/dart-core/EnumName.html">EnumName</a> extension</span>
+      </p>
+  The name of the enum value.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
         <dt id="runtimeType" class="property inherited">
   <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
@@ -674,6 +903,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor inherited"
@@ -735,7 +965,6 @@
 
   <section class="summary offset-anchor" id="constants">
     <h2>Constants</h2>
-
     <dl class="properties">
         <dt id="values" class="constant">
     <span class="name "><a href="../im_flutter_sdk/EMMultiDevicesEvent/values-constant.html">values</a></span>
@@ -752,7 +981,6 @@
     </dl>
   </section>
 </div><!-- /.main-content -->
-
 <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
   <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -760,40 +988,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMMultiDevicesEvent enum</li>
 </ol>
-
 
   <h5>im_flutter_sdk library</h5>
   <div id="dartdoc-sidebar-left-content"></div>
 </div>
-
 <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!-- /.sidebar-offcanvas -->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

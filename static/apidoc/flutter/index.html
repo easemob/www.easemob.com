@@ -16,38 +16,30 @@
   <link rel="stylesheet" href="static-assets/github.css?v1">
   <link rel="stylesheet" href="static-assets/styles.css?v1">
   <link rel="icon" href="static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
-    <li><a href="https://www.easemob.com/product/im">im_flutter_sdk package</a></li>
+    <li><a href="https://www.easemob.com">im_flutter_sdk package</a></li>
   </ol>
   <div class="self-name">im_flutter_sdk</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
   <div id="dartdoc-main-content" class="main-content">
       
 <section class="desc markdown">
@@ -66,13 +58,10 @@
 <h2 id="-2">前提条件</h2>
 <p>如果你的目标平台是iOS，你需要满足一下要求：</p>
 <ul>
-<li>Xcode 12.4 或以上版本，包括命令行工具;</li>
-<li>iOS 10 或以上版本;</li>
+<li>iOS 12 或以上版本;</li>
 <li>Android SDK API 等级 21 或以上版本；</li>
-<li>Android Studio 4.0 或以上版本，包括 JDK 1.8 或以上版本;</li>
-<li>CocoaPods 包管理工具;</li>
-<li>Flutter 2.10 或以上版本;</li>
-<li>Dart 2.16 或以上版本;</li>
+<li>Flutter 3.3.0 或以上版本;</li>
+<li>Dart 3.3.0 或以上版本;</li>
 </ul>
 <p><a href="https://docs.flutter.dev/get-started/install">配置开发或者运行环境如果遇到问题，请参考这里</a></p>
 <ul>
@@ -102,7 +91,7 @@
 <h3 id="-ios">设置 iOS</h3>
 <p>打开文件 <code>quick_start/ios/Runner.xcodeproj</code>，然后：</p>
 <ol>
-<li>找到 <code>TARGETS &gt; Runner </code> 在 <code>General</code> 的 <code>Deployment Info</code> 中修改最低版本为 <code>iOS 10.0</code></li>
+<li>找到 <code>TARGETS &gt; Runner </code> 在 <code>General</code> 的 <code>Deployment Info</code> 中修改最低版本为 <code>iOS 12.0</code></li>
 </ol>
 <h3 id="-sdk">集成 SDK</h3>
 <p>在终端命令行，输入命令添加依赖：</p>
@@ -144,7 +133,7 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
           mainAxisSize: MainAxisSize.max,
           children: [
             TextField(
-              decoration: const InputDecoration(hintText: "Enter username"),
+              decoration: const InputDecoration(hintText: "Enter userId"),
               onChanged: (username) =&gt; _username = username,
             ),
             TextField(
@@ -274,14 +263,14 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 <p>在 <code>_signUp</code> 方法中添加登录代码。</p>
 <pre class="language-dart"><code class="language-dart">void _signUp() async {
   if (_username.isEmpty || _password.isEmpty) {
-    _addLogToConsole("username or password is null");
+    _addLogToConsole("userId or password is null");
     return;
   }
 
   try {
     _addLogToConsole("begin create account...");
     await EMClient.getInstance.createAccount(_username, _password);
-    _addLogToConsole("create account succeed, username: $_username");
+    _addLogToConsole("create account succeed, userId: $_username");
   } on EMError catch (e) {
     _addLogToConsole(
         "create account failed, code: ${e.code}, desc: ${e.description}");
@@ -292,7 +281,7 @@ import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 <p>在 <code>_signIn</code> 方法中添加登录代码。</p>
 <pre class="language-dart"><code class="language-dart">void _signIn() async {
   if (_userId.isEmpty || _password.isEmpty) {
-    _addLogToConsole("username or password is null");
+    _addLogToConsole("userId or password is null");
     return;
   }
 
@@ -444,7 +433,7 @@ void dispose() {
           <h2>Libraries</h2>
         <dl>
           <dt id="im_flutter_sdk">
-  <span class="name"><a href="im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></span> 
+  <span class="name"><a href="im_flutter_sdk/">im_flutter_sdk</a></span> 
 
 </dt>
 <dd>
@@ -452,9 +441,7 @@ void dispose() {
 
         </dl>
       </section>
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -462,42 +449,32 @@ void dispose() {
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-    <li><a href="https://www.easemob.com/product/im">im_flutter_sdk package</a></li>
+    <li><a href="https://www.easemob.com">im_flutter_sdk package</a></li>
 </ol>
-
 
     <h5 class="hidden-xs"><span class="package-name">im_flutter_sdk</span> <span class="package-kind">package</span></h5>
     <ol>
       <li class="section-title">Libraries</li>
-      <li><a href="im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+      <li><a href="im_flutter_sdk/">im_flutter_sdk</a></li>
 </ol>
 
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div>
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="static-assets/highlight.pack.js?v1"></script>
 <script src="static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

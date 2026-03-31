@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMUserInfoManager-class.html">EMUserInfoManager</a></li>
     <li class="self-crumb">updateUserInfo method</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,8 +54,7 @@
 
     <section class="multi-line-signature">
       
-
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMUserInfo-class.html">EMUserInfo</a></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMUserInfo-class.html">EMUserInfo</a></span>&gt;</span></span>
 <span class="name ">updateUserInfo</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="updateUserInfo-param-nickname"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">nickname</span>, </span></li>
 <li><span class="parameter" id="updateUserInfo-param-avatarUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">avatarUrl</span>, </span></li>
 <li><span class="parameter" id="updateUserInfo-param-mail"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">mail</span>, </span></li>
@@ -79,7 +70,26 @@
     </section>
     
 <section class="desc markdown">
-  <p>修改当前用户的属性信息。</p>
+  <p>~english
+Modifies the user attributes of the current user.</p>
+<p>Param <code>nickname</code> The nickname of the user.</p>
+<p>Param <code>avatarUrl</code> The avatar URL of the user.</p>
+<p>Param <code>mail</code> The email address of the user.</p>
+<p>Param <code>phone</code> The phone number of the user.</p>
+<p>Param <code>gender</code> The gender of the user. The value can only be <code>0</code>, <code>1</code>, or <code>2</code>. Other values are invalid.</p>
+<ul>
+<li><code>0</code>: (Default) Unknown;</li>
+<li><code>1</code>: Male;</li>
+<li><code>2</code>: Female.
+Param <code>sign</code> The signature of the user.</li>
+</ul>
+<p>Param <code>birth</code> The birthday of the user.</p>
+<p>Param <code>ext</code> The custom extension information of the user. You can set it to an empty string or type custom information and encapsulate them as a JSON string.</p>
+<p><strong>Return</strong> The user info.</p>
+<p><strong>Throws</strong> A description of the exception. See <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>.
+~end</p>
+<p>~chinese
+修改当前用户的属性信息。</p>
 <p>Param <code>nickname</code> 用户昵称。该昵称与推送设置中的昵称设置不同，我们建议这两种昵称的设置保持一致。设置推送昵称详见 <a href="../../im_flutter_sdk/EMPushManager/updatePushNickname.html">EMPushManager.updatePushNickname</a>。</p>
 <p>Param <code>avatarUrl</code> 用户头像。</p>
 <p>Param <code>mail</code> 用户邮箱。</p>
@@ -94,7 +104,8 @@
 <p>Param <code>birth</code> 用户的生日。</p>
 <p>Param <code>ext</code> 用户的自定义属性字段。该字段可为空，或设置为自定义扩展信息，封装为 JSON 字符串。</p>
 <p><strong>Return</strong> 用户属性信息。</p>
-<p><strong>Throws</strong>  如果有方法调用的异常会在这里抛出，可以看到具体错误原因。请参见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
+<p><strong>Throws</strong>  如果有方法调用的异常会在这里抛出，可以看到具体错误原因。请参见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。
+~end</p>
 </section>
 
 
@@ -111,33 +122,32 @@
   String? birth,
   String? ext,
 }) async {
-  Map req = {};
-  req.putIfNotNull(&quot;nickName&quot;, nickname);
-  req.putIfNotNull(&quot;avatarUrl&quot;, avatarUrl);
-  req.putIfNotNull(&quot;mail&quot;, mail);
-  req.putIfNotNull(&quot;phone&quot;, phone);
-  req.putIfNotNull(&quot;gender&quot;, gender);
-  req.putIfNotNull(&quot;sign&quot;, sign);
-  req.putIfNotNull(&quot;birth&quot;, birth);
-  req.putIfNotNull(&quot;ext&quot;, ext);
-
   try {
-    Map result =
-        await _channel.invokeMethod(ChatMethodKeys.updateOwnUserInfo, req);
+    Map req = {};
+    req.putIfNotNull(&quot;nickName&quot;, nickname);
+    req.putIfNotNull(&quot;avatarUrl&quot;, avatarUrl);
+    req.putIfNotNull(&quot;mail&quot;, mail);
+    req.putIfNotNull(&quot;phone&quot;, phone);
+    req.putIfNotNull(&quot;gender&quot;, gender);
+    req.putIfNotNull(&quot;sign&quot;, sign);
+    req.putIfNotNull(&quot;birth&quot;, birth);
+    req.putIfNotNull(&quot;ext&quot;, ext);
+
+    Map result = await Client.instance.userInfoManager
+        .callNativeMethod(ChatMethodKeys.updateOwnUserInfo, req);
     EMError.hasErrorFromResult(result);
     EMUserInfo info =
         EMUserInfo.fromJson(result[ChatMethodKeys.updateOwnUserInfo]);
     _effectiveUserInfoMap[info.userId] = info;
     return info;
-  } on EMError catch (e) {
-    throw e;
+  } catch (e) {
+    rethrow;
   }
 }</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -145,41 +155,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMUserInfoManager-class.html">EMUserInfoManager</a></li>
     <li class="self-crumb">updateUserInfo method</li>
 </ol>
 
-
     <h5>EMUserInfoManager class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></li>
     <li class="self-crumb">EMMessage.createCombineSendMessage constructor</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
   <div
       id="dartdoc-main-content"
       class="main-content"
@@ -70,10 +62,25 @@
 <li><span class="parameter" id="createCombineSendMessage-param-chatType"><span class="type-annotation"><a href="../../im_flutter_sdk/ChatType.html">ChatType</a></span> <span class="parameter-name">chatType</span> = <span class="default-value">ChatType.Chat</span>, </span></li>
 </ol>})
     </section>
-
     
 <section class="desc markdown">
-  <p>创建一条待发送的合并消息。</p>
+  <p>~english
+Creates a combined message for sending.</p>
+<p>Param <code>targetId</code> The message recipient. The field setting is determined by the conversation type:</p>
+<ul>
+<li>For a one-to-one chat, it is the user ID of the peer user.</li>
+<li>For a group chat, it is the group ID.</li>
+<li>For a chat room, it is the chat room ID.</li>
+</ul>
+<p>Param <code>title</code>  The title of the combined message.</p>
+<p>Param <code>summary</code>  The summary of the combined message.</p>
+<p>Param <code>compatibleText</code> The compatible text of the combined message.</p>
+<p>Param <code>msgIds</code> The list of original messages included in the combined message.</p>
+<p>Param <code>chatType</code> The chat type. The default chat type is one-to-one chat. For the group chat or chat room, see <a href="../../im_flutter_sdk/ChatType.html">ChatType</a>.</p>
+<p><strong>Return</strong> The message instance.
+~end</p>
+<p>~chinese
+创建一条待发送的合并消息。</p>
 <p>Param <code>targetId</code> 消息接收方。该字段的设置取决于会话类型：</p>
 <ul>
 <li>单聊：对方用户 ID；</li>
@@ -85,7 +92,8 @@
 <p>Param <code>compatibleText</code> 合并消息的兼容信息。</p>
 <p>Param <code>msgIds</code> 合并消息的消息 ID 列表。</p>
 <p>Param <code>chatType</code> 聊天类型, 默认为单聊，如果是群聊或者聊天室，可以参考 <a href="../../im_flutter_sdk/ChatType.html">ChatType</a>。</p>
-<p><strong>Return</strong> 消息体实例。</p>
+<p><strong>Return</strong> 消息体实例。
+~end</p>
 </section>
 
 
@@ -112,7 +120,6 @@
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -120,41 +127,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></li>
     <li class="self-crumb">EMMessage.createCombineSendMessage constructor</li>
 </ol>
 
-
     <h5>EMMessage class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-left-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

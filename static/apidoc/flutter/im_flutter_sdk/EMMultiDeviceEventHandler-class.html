@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMMultiDeviceEventHandler class</li>
   </ol>
   <div class="self-name">EMMultiDeviceEventHandler</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,7 +54,18 @@
 
     
 <section class="desc markdown">
-  <p>多设备事件监听
+  <p>~english
+The multi-device event handler.
+Listens for the callback for the current user's actions on other devices, including contact changes, group changes, and thread changes.</p>
+<p>Adds a multi-device event handler:</p>
+<pre class="language-dart"><code class="language-dart">  EMClient.getInstance.addMultiDeviceEventHandler((UNIQUE_HANDLER_ID, EMMultiDeviceEventHandler());
+</code></pre>
+<p>Removes a multi-device event handler:</p>
+<pre class="language-dart"><code class="language-dart">  EMClient.getInstance.removeMultiDeviceEventHandler(UNIQUE_HANDLER_ID);
+</code></pre>
+<p>~end</p>
+<p>~chinese
+多设备事件监听
 监听当前用户在其他设备上的操作的回调，包括联系人更改、群组和 thread 等更改。</p>
 <p>添加监听:</p>
 <pre class="language-dart"><code class="language-dart">  EMClient.getInstance.addMultiDeviceEventHandler((UNIQUE_HANDLER_ID, EMMultiDeviceEventHandler());
@@ -70,6 +73,7 @@
 <p>移除监听:</p>
 <pre class="language-dart"><code class="language-dart">  EMClient.getInstance.removeMultiDeviceEventHandler(UNIQUE_HANDLER_ID);
 </code></pre>
+<p>~end</p>
 </section>
 
 
@@ -77,13 +81,13 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
-        <dt id="EMMultiDeviceEventHandler" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMMultiDeviceEventHandler/EMMultiDeviceEventHandler.html">EMMultiDeviceEventHandler</a></span><span class="signature">({<span class="parameter" id="-param-onContactEvent"><span class="type-annotation">void</span> <span class="parameter-name">onContactEvent</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-ext"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ext</span></span>)?, </span><span class="parameter" id="-param-onGroupEvent"><span class="type-annotation">void</span> <span class="parameter-name">onGroupEvent</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">userIds</span></span>)?, </span><span class="parameter" id="-param-onChatThreadEvent"><span class="type-annotation">void</span> <span class="parameter-name">onChatThreadEvent</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-chatThreadId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIds</span></span>)?, </span><span class="parameter" id="-param-onRemoteMessagesRemoved"><span class="type-annotation">void</span> <span class="parameter-name">onRemoteMessagesRemoved</span>(<span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-deviceId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">deviceId</span></span>)?, </span><span class="parameter" id="-param-onConversationEvent"><span class="type-annotation">void</span> <span class="parameter-name">onConversationEvent</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-type"><span class="type-annotation"><a href="../im_flutter_sdk/EMConversationType.html">EMConversationType</a></span> <span class="parameter-name">type</span></span>)?</span>})</span>
+        <dt id="EMMultiDeviceEventHandler.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMMultiDeviceEventHandler/EMMultiDeviceEventHandler.html">EMMultiDeviceEventHandler.new</a></span><span class="signature">({<span class="parameter" id="-param-onContactEvent"><span class="type-annotation">void</span> <span class="parameter-name">onContactEvent</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-ext"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ext</span></span>)?, </span><span class="parameter" id="-param-onGroupEvent"><span class="type-annotation">void</span> <span class="parameter-name">onGroupEvent</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">userIds</span></span>)?, </span><span class="parameter" id="-param-onChatThreadEvent"><span class="type-annotation">void</span> <span class="parameter-name">onChatThreadEvent</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-chatThreadId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIds</span></span>)?, </span><span class="parameter" id="-param-onRemoteMessagesRemoved"><span class="type-annotation">void</span> <span class="parameter-name">onRemoteMessagesRemoved</span>(<span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-deviceId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">deviceId</span></span>)?, </span><span class="parameter" id="-param-onConversationEvent"><span class="type-annotation">void</span> <span class="parameter-name">onConversationEvent</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-type"><span class="type-annotation"><a href="../im_flutter_sdk/EMConversationType.html">EMConversationType</a></span> <span class="parameter-name">type</span></span>)?</span>})</span>
         </dt>
         <dd>
-          多设备事件。
+          ~english
+The multi-device event handler.
         </dd>
     </dl>
   </section>
@@ -107,60 +111,70 @@
 
         <dt id="onChatThreadEvent" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMMultiDeviceEventHandler/onChatThreadEvent.html">onChatThreadEvent</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-chatThreadId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIds</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-chatThreadId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIds</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  多设备 Thread 事件。
+  ~english
+The multi-device event of thread.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onContactEvent" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMMultiDeviceEventHandler/onContactEvent.html">onContactEvent</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-ext"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ext</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-ext"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ext</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  多设备联系人事件。
+  ~english
+The multi-device event of contact.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onConversationEvent" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMMultiDeviceEventHandler/onConversationEvent.html">onConversationEvent</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-type"><span class="type-annotation"><a href="../im_flutter_sdk/EMConversationType.html">EMConversationType</a></span> <span class="parameter-name">type</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-type"><span class="type-annotation"><a href="../im_flutter_sdk/EMConversationType.html">EMConversationType</a></span> <span class="parameter-name">type</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  开启多设备后单个会话操作的多设备事件回调。
+  ~english
+The multi-device event callback for the operation of a conversation.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onGroupEvent" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMMultiDeviceEventHandler/onGroupEvent.html">onGroupEvent</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">userIds</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent</a></span> <span class="parameter-name">event</span>, </span><span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">userIds</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  多设备群组事件。
+  ~english
+The multi-device event of group.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onRemoteMessagesRemoved" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMMultiDeviceEventHandler/onRemoteMessagesRemoved.html">onRemoteMessagesRemoved</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-deviceId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">deviceId</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="param-deviceId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">deviceId</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  开启多设备后对单个会话删除漫游消息后对其他设备的回调。
+  ~english
+Callback received by other devices after historical messages in a conversation are removed from the server in a multi-device login scenario.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -179,6 +193,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor inherited"
@@ -238,9 +253,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -248,40 +261,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMMultiDeviceEventHandler class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

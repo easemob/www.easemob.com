@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions-class.html">EMOptions</a></li>
     <li class="self-crumb"><span class="deprecated">enableFCM</span> method</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -67,7 +59,6 @@
         <li>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use [EMPushManager.bindDeviceToken] instead.&#39;)</li>
     </ol>
   </div>
-
 <span class="returntype">void</span>
 <span class="name deprecated">enableFCM</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="enableFCM-param-appId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">appId</span></span></li>
 </ol>)
@@ -77,8 +68,14 @@
     </section>
     
 <section class="desc markdown">
-  <p>开启 FCM（GCM 的升级版）推送。</p>
-<p>Param <code>appId</code> FCM 推送的 App ID。</p>
+  <p>~english
+Enables Firebase Cloud Messaging (FCM) push on devices that support Google Play.</p>
+<p>Param <code>appId</code> The app ID for FCM push.
+~end</p>
+<p>~chinese
+开启 FCM（GCM 的升级版）推送。</p>
+<p>Param <code>appId</code> FCM 推送的 App ID。
+~end</p>
 </section>
 
 
@@ -87,13 +84,17 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@Deprecated(&#39;Use [EMPushManager.bindDeviceToken] instead.&#39;)
 
+&#47;&#47;&#47; ~english
+&#47;&#47;&#47; Enables Firebase Cloud Messaging (FCM) push on devices that support Google Play.
 &#47;&#47;&#47;
+&#47;&#47;&#47; Param [appId] The app ID for FCM push.
+&#47;&#47;&#47; ~end
 &#47;&#47;&#47;
-&#47;&#47;&#47;
+&#47;&#47;&#47; ~chinese
 &#47;&#47;&#47; 开启 FCM（GCM 的升级版）推送。
 &#47;&#47;&#47;
 &#47;&#47;&#47; Param [appId] FCM 推送的 App ID。
-&#47;&#47;&#47;
+&#47;&#47;&#47; ~end
 void enableFCM(String appId) {
   _pushConfig.enableFCM = true;
   _pushConfig.fcmId = appId;
@@ -102,7 +103,6 @@ void enableFCM(String appId) {
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -110,41 +110,31 @@ void enableFCM(String appId) {
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions-class.html">EMOptions</a></li>
     <li class="self-crumb"><span class="deprecated">enableFCM</span> method</li>
 </ol>
 
-
     <h5>EMOptions class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

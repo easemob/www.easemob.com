@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMPushManager class</li>
   </ol>
   <div class="self-name">EMPushManager</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,7 +54,12 @@
 
     
 <section class="desc markdown">
-  <p>推送设置管理类。</p>
+  <p>~english
+The message push configuration options.
+~end</p>
+<p>~chinese
+推送设置管理类。
+~end</p>
 </section>
 
 
@@ -70,13 +67,14 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
-        <dt id="EMPushManager" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMPushManager/EMPushManager.html">EMPushManager</a></span><span class="signature">()</span>
+        <dt id="EMPushManager.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMPushManager/EMPushManager.html">EMPushManager.new</a></span><span class="signature">()</span>
         </dt>
         <dd>
-          
+          ~english
+Gets the push configurations from the server.
+~end
         </dd>
     </dl>
   </section>
@@ -112,6 +110,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
@@ -120,91 +119,97 @@
     <dl class="callables">
         <dt id="bindDeviceToken" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/bindDeviceToken.html">bindDeviceToken</a></span><span class="signature">(<wbr>{<span class="parameter" id="bindDeviceToken-param-notifierName"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">notifierName</span>, </span><span class="parameter" id="bindDeviceToken-param-deviceToken"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">deviceToken</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  更新推送 token。
+  ~english
+bind the push token.
   
 
 </dd>
 
         <dt id="fetchConversationSilentMode" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/fetchConversationSilentMode.html">fetchConversationSilentMode</a></span><span class="signature">(<wbr>{<span class="parameter" id="fetchConversationSilentMode-param-conversationId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="fetchConversationSilentMode-param-type"><span>required</span> <span class="type-annotation"><a href="../im_flutter_sdk/EMConversationType.html">EMConversationType</a></span> <span class="parameter-name">type</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/ChatSilentModeResult-class.html">ChatSilentModeResult</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/ChatSilentModeResult-class.html">ChatSilentModeResult</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取指定会话的离线推送设置。
+  ~english
+Gets the offline push settings of a conversation.
   
 
 </dd>
 
         <dt id="fetchPreferredNotificationLanguage" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/fetchPreferredNotificationLanguage.html">fetchPreferredNotificationLanguage</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取用户设置的推送翻译语言。
+  ~english
+Gets the preferred language for push notifications.
   
 
 </dd>
 
         <dt id="fetchPushConfigsFromServer" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/fetchPushConfigsFromServer.html">fetchPushConfigsFromServer</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMPushConfigs-class.html">EMPushConfigs</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMPushConfigs-class.html">EMPushConfigs</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  从服务器获取推送设置信息。
+  
   
 
 </dd>
 
         <dt id="fetchSilentModeForAll" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/fetchSilentModeForAll.html">fetchSilentModeForAll</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/ChatSilentModeResult-class.html">ChatSilentModeResult</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/ChatSilentModeResult-class.html">ChatSilentModeResult</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取当前登录用户的 app 级别的推送通知设置。
+  ~english
+Gets the offline push settings at the app level for the current login user.
   
 
 </dd>
 
         <dt id="fetchSilentModeForConversations" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/fetchSilentModeForConversations.html">fetchSilentModeForConversations</a></span><span class="signature">(<wbr><span class="parameter" id="fetchSilentModeForConversations-param-conversations"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMConversation-class.html">EMConversation</a></span>&gt;</span></span> <span class="parameter-name">conversations</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="../im_flutter_sdk/ChatSilentModeResult-class.html">ChatSilentModeResult</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="../im_flutter_sdk/ChatSilentModeResult-class.html">ChatSilentModeResult</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  批量获取指定会话的推送通知设置。
+  ~english
+Gets the offline push settings of specified conversations.
   
 
 </dd>
 
         <dt id="getPushTemplate" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/getPushTemplate.html">getPushTemplate</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取推送模板名称。
+  ~english
+Gets the template for offline push notifications.
   
 
 </dd>
@@ -224,78 +229,84 @@
 
         <dt id="removeConversationSilentMode" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/removeConversationSilentMode.html">removeConversationSilentMode</a></span><span class="signature">(<wbr>{<span class="parameter" id="removeConversationSilentMode-param-conversationId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="removeConversationSilentMode-param-type"><span>required</span> <span class="type-annotation"><a href="../im_flutter_sdk/EMConversationType.html">EMConversationType</a></span> <span class="parameter-name">type</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  删除指定会话的离线推送通知设置。
+  ~english
+Removes the offline push notification settings for a conversation.
   
 
 </dd>
 
         <dt id="setConversationSilentMode" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/setConversationSilentMode.html">setConversationSilentMode</a></span><span class="signature">(<wbr>{<span class="parameter" id="setConversationSilentMode-param-conversationId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, </span><span class="parameter" id="setConversationSilentMode-param-type"><span>required</span> <span class="type-annotation"><a href="../im_flutter_sdk/EMConversationType.html">EMConversationType</a></span> <span class="parameter-name">type</span>, </span><span class="parameter" id="setConversationSilentMode-param-param"><span>required</span> <span class="type-annotation"><a href="../im_flutter_sdk/ChatSilentModeParam-class.html">ChatSilentModeParam</a></span> <span class="parameter-name">param</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  设置指定会话的离线推送设置。
+  ~english
+Sets the push notifications for a conversation.
   
 
 </dd>
 
         <dt id="setPreferredNotificationLanguage" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/setPreferredNotificationLanguage.html">setPreferredNotificationLanguage</a></span><span class="signature">(<wbr><span class="parameter" id="setPreferredNotificationLanguage-param-languageCode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">languageCode</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  设置用户推送翻译语言。
+  ~english
+Sets the preferred language for push notifications.
   
 
 </dd>
 
         <dt id="setPushTemplate" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/setPushTemplate.html">setPushTemplate</a></span><span class="signature">(<wbr><span class="parameter" id="setPushTemplate-param-pushTemplateName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">pushTemplateName</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  设置离线推送模板。
+  ~english
+Sets the template for offline push notifications.
   
 
 </dd>
 
         <dt id="setSilentModeForAll" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/setSilentModeForAll.html">setSilentModeForAll</a></span><span class="signature">(<wbr>{<span class="parameter" id="setSilentModeForAll-param-param"><span>required</span> <span class="type-annotation"><a href="../im_flutter_sdk/ChatSilentModeParam-class.html">ChatSilentModeParam</a></span> <span class="parameter-name">param</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  设置当前登录用户的 app 级别的推送设置。
+  ~english
+Sets the offline push settings at the app level for the current login user.
   
 
 </dd>
 
         <dt id="syncConversationsSilentMode" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/syncConversationsSilentMode.html">syncConversationsSilentMode</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  从服务器获取所有会话免打扰。
+  ~english
+Get all conversations mute info from server.
   
 
 </dd>
@@ -315,65 +326,70 @@
 
         <dt id="updateAPNsDeviceToken" class="callable">
   <span class="name deprecated"><a class="deprecated" href="../im_flutter_sdk/EMPushManager/updateAPNsDeviceToken.html">updateAPNsDeviceToken</a></span><span class="signature">(<wbr><span class="parameter" id="updateAPNsDeviceToken-param-token"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">token</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  更新苹果推送（APNs）token。
+  ~english
+Updates the APNs push token.
   
 
 </dd>
 
         <dt id="updateFCMPushToken" class="callable">
   <span class="name deprecated"><a class="deprecated" href="../im_flutter_sdk/EMPushManager/updateFCMPushToken.html">updateFCMPushToken</a></span><span class="signature">(<wbr><span class="parameter" id="updateFCMPushToken-param-token"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">token</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  更新谷歌 FCM 推送 token。
+  ~english
+Updates the FCM push token,
   
 
 </dd>
 
         <dt id="updateHMSPushToken" class="callable">
   <span class="name deprecated"><a class="deprecated" href="../im_flutter_sdk/EMPushManager/updateHMSPushToken.html">updateHMSPushToken</a></span><span class="signature">(<wbr><span class="parameter" id="updateHMSPushToken-param-token"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">token</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  更新华为推送 token。
+  ~english
+Updates the HMS push token.
   
 
 </dd>
 
         <dt id="updatePushDisplayStyle" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/updatePushDisplayStyle.html">updatePushDisplayStyle</a></span><span class="signature">(<wbr><span class="parameter" id="updatePushDisplayStyle-param-displayStyle"><span class="type-annotation"><a href="../im_flutter_sdk/DisplayStyle.html">DisplayStyle</a></span> <span class="parameter-name">displayStyle</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  更新推送通知的展示方式。
+  ~english
+Updates the push message display style. The default value is <a href="../im_flutter_sdk/DisplayStyle.html">DisplayStyle.Simple</a>.
   
 
 </dd>
 
         <dt id="updatePushNickname" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMPushManager/updatePushNickname.html">updatePushNickname</a></span><span class="signature">(<wbr><span class="parameter" id="updatePushNickname-param-nickname"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">nickname</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  更新推送通知收到时显示的昵称。
+  ~english
+Updates the push display nickname of the current user.
   
 
 </dd>
@@ -405,9 +421,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -415,40 +429,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMPushManager class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

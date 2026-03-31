@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the EMGroupOptions constructor from Class EMGroupOptions from the im_flutter_sdk library, for the Dart programming language.">
-  <title>EMGroupOptions constructor - EMGroupOptions - im_flutter_sdk library - Dart API</title>
+  <meta name="description" content="API docs for the EMGroupOptions.new constructor from Class EMGroupOptions from the im_flutter_sdk library, for the Dart programming language.">
+  <title>EMGroupOptions.new constructor - EMGroupOptions - im_flutter_sdk library - Dart API</title>
 
 
   
@@ -16,41 +16,33 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMGroupOptions-class.html">EMGroupOptions</a></li>
-    <li class="self-crumb">EMGroupOptions constructor</li>
+    <li class="self-crumb">EMGroupOptions.new constructor</li>
   </ol>
-  <div class="self-name">EMGroupOptions</div>
+  <div class="self-name">EMGroupOptions.new</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
   <div
       id="dartdoc-main-content"
       class="main-content"
@@ -68,13 +60,26 @@
 <li><span class="parameter" id="-param-ext"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ext</span>, </span></li>
 </ol>})
     </section>
-
     
 <section class="desc markdown">
-  <p>设置群组属性。</p>
-<p>Param <a href="../../im_flutter_sdk/EMGroupOptions/style.html">style</a> 群组的类型。详见 {EMGroupStyle}。</p>
-<p>Param <a href="../../im_flutter_sdk/EMGroupOptions/maxCount.html">maxCount</a> 群组的最大成员数，默认为 200。</p>
-<p>Param <a href="../../im_flutter_sdk/EMGroupOptions/inviteNeedConfirm.html">inviteNeedConfirm</a> 邀请用户进群是否需要对方同意。收到邀请是否自动入群取决于两个设置：创建群组时设置 inviteNeedConfirm 以及通过 <code>EMOptions.setAutoAcceptGroupInvitation</code> 确定是否自动接受加群邀请。
+  <p>~english
+Sets the group options.</p>
+<p>Param <code>style</code> The group style: {EMGroupStyle}.</p>
+<p>Param <code>maxCount</code> The maximum number of members in a group. The default value is 200.</p>
+<p>Param <code>inviteNeedConfirm</code> Whether you can automatically add a user to the chat group depends on the settings of <code>inviteNeedConfirm</code> and <a href="../../im_flutter_sdk/EMOptions/autoAcceptGroupInvitation.html">EMOptions.autoAcceptGroupInvitation</a>.</p>
+<ul>
+<li>If <code>inviteNeedConfirm</code> is set to <code>false</code>, you can add the invitee directly to the chat group, regardless of the settings of <a href="../../im_flutter_sdk/EMOptions/autoAcceptGroupInvitation.html">EMOptions.autoAcceptGroupInvitation</a>.</li>
+<li>If <code>inviteNeedConfirm</code> is set to <code>true</code>, whether the invitee automatically joins the chat group or not depends on the settings of <a href="../../im_flutter_sdk/EMOptions/autoAcceptGroupInvitation.html">EMOptions.autoAcceptGroupInvitation</a> on the invitee's client.</li>
+<li>If <code>autoAcceptGroupInvitation</code> is set to <code>true</code>, the invitee automatically joins the chat group.</li>
+<li>If <code>autoAcceptGroupInvitation</code> is set to <code>false</code>, the invitee does not join the chat group until this invitee approves the group invitation.</li>
+</ul>
+<p>Param <code>ext</code> Group detail extensions which can be in the JSON format to contain more group information.
+~end</p>
+<p>~chinese
+设置群组属性。</p>
+<p>Param <code>style</code> 群组的类型。详见 {EMGroupStyle}。</p>
+<p>Param <code>maxCount</code> 群组的最大成员数，默认为 200。</p>
+<p>Param <code>inviteNeedConfirm</code> 邀请用户进群是否需要对方同意。收到邀请是否自动入群取决于两个设置：创建群组时设置 inviteNeedConfirm 以及通过 <code>EMOptions.setAutoAcceptGroupInvitation</code> 确定是否自动接受加群邀请。
 具体使用如下：
 （1）如果 inviteNeedConfirm 设置为 'false'，在服务端直接加受邀人进群，
 与受邀人对 <code>EMOptions.setAutoAcceptGroupInvitation</code> 的设置无关。
@@ -82,7 +87,8 @@
 <code>EMOptions.setAutoAcceptGroupInvitation</code> 为 SDK 级别操作，设置为 'true' 时，受邀人收到入群邀请后，SDK 在内部调用同意入群的 API，
 自动接受邀请入群；
 若设置为 'false'，即非自动同意其邀请，用户可以选择接受邀请进群，也可选择拒绝邀请。</p>
-<p>Param <a href="../../im_flutter_sdk/EMGroupOptions/ext.html">ext</a> 群组详情扩展，可以采用 JSON 格式，以包含更多群信息。</p>
+<p>Param <code>ext</code> 群组详情扩展，可以采用 JSON 格式，以包含更多群信息。
+~end</p>
 </section>
 
 
@@ -99,7 +105,6 @@
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -107,41 +112,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMGroupOptions-class.html">EMGroupOptions</a></li>
-    <li class="self-crumb">EMGroupOptions constructor</li>
+    <li class="self-crumb">EMGroupOptions.new constructor</li>
 </ol>
-
 
     <h5>EMGroupOptions class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-left-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

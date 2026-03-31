@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMGroupManager-class.html">EMGroupManager</a></li>
     <li class="self-crumb">fetchJoinedGroupsFromServer method</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,8 +54,7 @@
 
     <section class="multi-line-signature">
       
-
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMGroup-class.html">EMGroup</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMGroup-class.html">EMGroup</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">fetchJoinedGroupsFromServer</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="fetchJoinedGroupsFromServer-param-pageSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageSize</span> = <span class="default-value">20</span>, </span></li>
 <li><span class="parameter" id="fetchJoinedGroupsFromServer-param-pageNum"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageNum</span> = <span class="default-value">0</span>, </span></li>
 <li><span class="parameter" id="fetchJoinedGroupsFromServer-param-needMemberCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">needMemberCount</span> = <span class="default-value">false</span>, </span></li>
@@ -75,10 +66,24 @@
     </section>
     
 <section class="desc markdown">
-  <p>从服务器中获取当前用户加入的所有群组。</p>
-<p>此操作只返回群组列表，不包含所有成员的信息。如果要更新某个群组包括成员的全部信息，需要再调用 <a href="../../im_flutter_sdk/EMGroupManager/fetchGroupInfoFromServer.html">EMGroupManager.fetchGroupInfoFromServer</a>。</p>
-<p><strong>Return</strong> 当前用户加入的群组的列表。</p>
-<p><strong>Throws</strong>  如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
+  <p>~english
+Gets the groups joined by the current user from the server with pagination.</p>
+<p>Param <code>pageNum</code>        The current page number, starting from 0. The SDK queries in reverse order of group joining.
+Param <code>pageSize</code>       The number of groups to get per page. Value range: <code>1,20</code>.
+Param <code>needMemberCount</code> Whether to get the group member count.
+Param <code>needRole</code>       Whether to get the role of the current user in the group.</p>
+<p><strong>Returns</strong> The list of retrieved groups.</p>
+<p><strong>Throws</strong> Exception description, see <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>.
+~end</p>
+<p>~chinese
+从服务器分页获取当前用户加入的群组。</p>
+<p>Param <code>pageNum</code>        当前页码，从 0 开始，SDK 按照加入群组逆序查询。
+Param <code>pageSize</code>       每页获取的群组数量，取值范围 <code>1,20</code>。
+Param <code>needMemberCount</code> 是否需要群组成员数。
+Param <code>needRole</code>       是否需要当前用户在群组内的角色。</p>
+<p><strong>Return</strong> 获取到的群组列表。</p>
+<p><strong>Throws</strong> 如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>.
+~end</p>
 </section>
 
 
@@ -91,29 +96,28 @@
   bool needMemberCount = false,
   bool needRole = false,
 }) async {
-  Map req = {
-    &#39;pageSize&#39;: pageSize,
-    &#39;pageNum&#39;: pageNum,
-    &quot;needMemberCount&quot;: needMemberCount,
-    &quot;needRole&quot;: needRole,
-  };
-  Map result = await _channel.invokeMethod(
-      ChatMethodKeys.getJoinedGroupsFromServer, req);
   try {
+    Map req = {
+      &#39;pageSize&#39;: pageSize,
+      &#39;pageNum&#39;: pageNum,
+      &quot;needMemberCount&quot;: needMemberCount,
+      &quot;needRole&quot;: needRole,
+    };
+    Map result = await Client.instance.groupManager
+        .callNativeMethod(ChatMethodKeys.getJoinedGroupsFromServer, req);
     EMError.hasErrorFromResult(result);
     List&lt;EMGroup&gt; list = [];
     result[ChatMethodKeys.getJoinedGroupsFromServer]
         ?.forEach((element) =&gt; list.add(EMGroup.fromJson(element)));
     return list;
-  } on EMError catch (e) {
-    throw e;
+  } catch (e) {
+    rethrow;
   }
 }</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -121,41 +125,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMGroupManager-class.html">EMGroupManager</a></li>
     <li class="self-crumb">fetchJoinedGroupsFromServer method</li>
 </ol>
 
-
     <h5>EMGroupManager class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

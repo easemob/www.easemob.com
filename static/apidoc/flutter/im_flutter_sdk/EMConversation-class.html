@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMConversation class</li>
   </ol>
   <div class="self-name">EMConversation</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,12 +54,22 @@
 
     
 <section class="desc markdown">
-  <p>会话类，用于定义单聊会话、群聊会话和聊天室会话。每类会话中包含发送和接收的消息。</p>
+  <p>~english
+The conversation class, indicating a one-to-one chat, a group chat, or a conversation chat. It contains the messages that are sent and received within the conversation.</p>
+<p>The following code shows how to get the number of the unread messages from the conversation.</p>
+<pre class="language-dart"><code class="language-dart">  // ConversationId can be the other party id, the group id, or the chat room id.
+  EMConversation? con = await EMClient.getInstance.chatManager.getConversation(conversationId);
+  int? unreadCount = con?.unreadCount;
+</code></pre>
+<p>~end</p>
+<p>~chinese
+会话类，用于定义单聊会话、群聊会话和聊天室会话。每类会话中包含发送和接收的消息。</p>
 <p>以下示例代码展示如何从会话中获取未读消息数：</p>
 <pre class="language-dart"><code class="language-dart">  // The `ConversationId` can be the other party ID, the group ID, or the chat room ID.
   EMConversation? con = await EMClient.getInstance.chatManager.getConversation(conversationId);
   int? unreadCount = con?.unreadCount;
 </code></pre>
+<p>~end</p>
 </section>
 
 
@@ -75,8 +77,13 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
+        <dt id="EMConversation.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMConversation/EMConversation.html">EMConversation.new</a></span><span class="signature">(<span class="parameter" id="-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">id</span>, </span><span class="parameter" id="-param-type"><span class="type-annotation"><a href="../im_flutter_sdk/EMConversationType.html">EMConversationType</a></span> <span class="parameter-name">type</span>, </span><span class="parameter" id="-param-_ext"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">_ext</span>, </span><span class="parameter" id="-param-isChatThread"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isChatThread</span>, </span><span class="parameter" id="-param-isPinned"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isPinned</span>, </span><span class="parameter" id="-param-pinnedTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pinnedTime</span>, </span><span class="parameter" id="-param-marks"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/ConversationMarkType.html">ConversationMarkType</a></span>&gt;</span>?</span> <span class="parameter-name">marks</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
         <dt id="EMConversation.fromJson" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMConversation/EMConversation.fromJson.html">EMConversation.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-map"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">map</span></span>)</span>
         </dt>
@@ -99,7 +106,8 @@
 
 </dt>
 <dd>
-  获取会话扩展属性。
+  ~english
+The conversation extension attribute.
   <div class="features"><span class="feature">no setter</span></div>
 
 </dd>
@@ -123,7 +131,8 @@
 
 </dt>
 <dd>
-  获取会话 ID。
+  ~english
+The conversation ID.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -135,7 +144,8 @@
 
 </dt>
 <dd>
-  是否为子区会话。
+  ~english
+Whether the conversation is a chat thread conversation.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -147,7 +157,8 @@
 
 </dt>
 <dd>
-  是否为置顶会话：
+  ~english
+Whether the conversation is pinned:
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -159,7 +170,9 @@
 
 </dt>
 <dd>
-  会话标记。
+  ~english
+The conversation marks.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -171,7 +184,9 @@
 
 </dt>
 <dd>
-  会话置顶的 UNIX 时间戳，单位为毫秒。未置顶时值为 <code>0</code>。
+  ~english
+The UNIX timestamp when the conversation is pinned. The unit is millisecond. This value is <code>0</code> when the conversation is not pinned.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -195,13 +210,16 @@
 
 </dt>
 <dd>
-  会话类型。
+  ~english
+The conversation type.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
@@ -210,260 +228,281 @@
     <dl class="callables">
         <dt id="appendMessage" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/appendMessage.html">appendMessage</a></span><span class="signature">(<wbr><span class="parameter" id="appendMessage-param-message"><span class="type-annotation"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span> <span class="parameter-name">message</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  插入一条消息到会话尾部。
+  ~english
+Inserts a message to the end of a conversation in the local database.
   
 
 </dd>
 
         <dt id="deleteAllMessages" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/deleteAllMessages.html">deleteAllMessages</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  同时从内存和本地数据库中删除会话中的所有消息。
+  ~english
+Deletes all the messages of the conversation from both the memory and local database.
   
 
 </dd>
 
         <dt id="deleteLocalAndServerMessages" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/deleteLocalAndServerMessages.html">deleteLocalAndServerMessages</a></span><span class="signature">(<wbr>{<span class="parameter" id="deleteLocalAndServerMessages-param-msgIds"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">msgIds</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  通过消息 ID 从本地和服务器删除消息。
+  ~english
   
 
 </dd>
 
         <dt id="deleteLocalAndServerMessagesByTime" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/deleteLocalAndServerMessagesByTime.html">deleteLocalAndServerMessagesByTime</a></span><span class="signature">(<wbr>{<span class="parameter" id="deleteLocalAndServerMessagesByTime-param-beforeMs"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">beforeMs</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  通过消息时间戳从本地和服务器删除消息。
+  ~english
   
 
 </dd>
 
         <dt id="deleteMessage" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/deleteMessage.html">deleteMessage</a></span><span class="signature">(<wbr><span class="parameter" id="deleteMessage-param-messageId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">messageId</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  删除会话中的一条消息，同时清除内存和数据库中的消息。
+  ~english
+Deletes a message in the local database.
   
 
 </dd>
 
         <dt id="deleteMessageByIds" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/deleteMessageByIds.html">deleteMessageByIds</a></span><span class="signature">(<wbr><span class="parameter" id="deleteMessageByIds-param-messageIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">messageIds</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  根据时间删除本地消息。
+  ~english
+Deletes messages with message ids.
   
 
 </dd>
 
         <dt id="deleteMessagesWithTs" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/deleteMessagesWithTs.html">deleteMessagesWithTs</a></span><span class="signature">(<wbr><span class="parameter" id="deleteMessagesWithTs-param-startTs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">startTs</span>, </span><span class="parameter" id="deleteMessagesWithTs-param-endTs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">endTs</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  从本地数据库中删除指定时间段内的消息。
+  ~english
+Deletes messages sent or received in a certain period from the local database.
   
 
 </dd>
 
         <dt id="getLocalMessageCount" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/getLocalMessageCount.html">getLocalMessageCount</a></span><span class="signature">(<wbr>{<span class="parameter" id="getLocalMessageCount-param-startMs"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">startMs</span>, </span><span class="parameter" id="getLocalMessageCount-param-endMs"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">endMs</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取本地消息数量。
+  ~english
+Gets the local message count.
+The count of messages in the local database within the specified time range.
   
 
 </dd>
 
         <dt id="insertMessage" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/insertMessage.html">insertMessage</a></span><span class="signature">(<wbr><span class="parameter" id="insertMessage-param-message"><span class="type-annotation"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span> <span class="parameter-name">message</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  插入一条消息在 SDK 本地数据库，消息的 conversation ID 应该和会话的 conversation ID 一致，消息会根据消息里的时间戳被插入 SDK 本地数据库，并且更新会话的 <code>latestMessage</code> 等属性。
+  ~english
+Inserts a message to a conversation in the local database and the SDK will automatically update the last message.
   
 
 </dd>
 
         <dt id="lastReceivedMessage" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/lastReceivedMessage.html">lastReceivedMessage</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a>?</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a>?</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取最近收到的一条消息。
+  ~english
+Gets the latest message from the conversation.
   
 
 </dd>
 
         <dt id="latestMessage" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/latestMessage.html">latestMessage</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a>?</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a>?</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取会话的最新一条消息。
+  ~english
+Gets the last message from the conversation.
   
 
 </dd>
 
         <dt id="loadMessage" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/loadMessage.html">loadMessage</a></span><span class="signature">(<wbr><span class="parameter" id="loadMessage-param-messageId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">messageId</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a>?</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a>?</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取指定 ID 的消息。
+  ~english
+Gets the message with a specific message ID.
   
 
 </dd>
 
         <dt id="loadMessages" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/loadMessages.html">loadMessages</a></span><span class="signature">(<wbr>{<span class="parameter" id="loadMessages-param-startMsgId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">startMsgId</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="loadMessages-param-loadCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">loadCount</span> = <span class="default-value">20</span>, </span><span class="parameter" id="loadMessages-param-direction"><span class="type-annotation"><a href="../im_flutter_sdk/EMSearchDirection.html">EMSearchDirection</a></span> <span class="parameter-name">direction</span> = <span class="default-value">EMSearchDirection.Up</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  从本地数据库加载消息。
+  ~english
+Loads multiple messages from the local database.
   
 
 </dd>
 
         <dt id="loadMessagesFromTime" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/loadMessagesFromTime.html">loadMessagesFromTime</a></span><span class="signature">(<wbr>{<span class="parameter" id="loadMessagesFromTime-param-startTime"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">startTime</span>, </span><span class="parameter" id="loadMessagesFromTime-param-endTime"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">endTime</span>, </span><span class="parameter" id="loadMessagesFromTime-param-count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">count</span> = <span class="default-value">20</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  加载一个时间段内的消息，不超过最大数量。
+  ~english
+Loads messages from the local database according the following parameters: start timestamp, end timestamp, count.
   
 
 </dd>
 
         <dt id="loadMessagesWithKeyword" class="callable">
-  <span class="name"><a href="../im_flutter_sdk/EMConversation/loadMessagesWithKeyword.html">loadMessagesWithKeyword</a></span><span class="signature">(<wbr><span class="parameter" id="loadMessagesWithKeyword-param-keywords"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">keywords</span>, {</span><span class="parameter" id="loadMessagesWithKeyword-param-sender"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">sender</span>, </span><span class="parameter" id="loadMessagesWithKeyword-param-timestamp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">timestamp</span> = <span class="default-value">-1</span>, </span><span class="parameter" id="loadMessagesWithKeyword-param-count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">count</span> = <span class="default-value">20</span>, </span><span class="parameter" id="loadMessagesWithKeyword-param-searchScope"><span class="type-annotation"><a href="../im_flutter_sdk/MessageSearchScope.html">MessageSearchScope</a></span> <span class="parameter-name">searchScope</span> = <span class="default-value">MessageSearchScope.All</span>, </span><span class="parameter" id="loadMessagesWithKeyword-param-direction"><span class="type-annotation"><a href="../im_flutter_sdk/EMSearchDirection.html">EMSearchDirection</a></span> <span class="parameter-name">direction</span> = <span class="default-value">EMSearchDirection.Up</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
+  <span class="name"><a href="../im_flutter_sdk/EMConversation/loadMessagesWithKeyword.html">loadMessagesWithKeyword</a></span><span class="signature">(<wbr><span class="parameter" id="loadMessagesWithKeyword-param-keywords"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">keywords</span>, {</span><span class="parameter" id="loadMessagesWithKeyword-param-sender"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">sender</span>, </span><span class="parameter" id="loadMessagesWithKeyword-param-senders"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">senders</span>, </span><span class="parameter" id="loadMessagesWithKeyword-param-timestamp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">timestamp</span> = <span class="default-value">-1</span>, </span><span class="parameter" id="loadMessagesWithKeyword-param-count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">count</span> = <span class="default-value">20</span>, </span><span class="parameter" id="loadMessagesWithKeyword-param-searchScope"><span class="type-annotation"><a href="../im_flutter_sdk/MessageSearchScope.html">MessageSearchScope</a></span> <span class="parameter-name">searchScope</span> = <span class="default-value">MessageSearchScope.All</span>, </span><span class="parameter" id="loadMessagesWithKeyword-param-direction"><span class="type-annotation"><a href="../im_flutter_sdk/EMSearchDirection.html">EMSearchDirection</a></span> <span class="parameter-name">direction</span> = <span class="default-value">EMSearchDirection.Up</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  根据消息中的关键词、消息时间戳、要搜索的消息条数、搜索范围和搜索方向从 SDK 本地数据库中搜索指定数量的消息。
+  ~english
+Loads messages from the local database by the following parameters: keywords, timestamp, the number of messages to retrieve, sender, search scope, and search direction.
   
 
 </dd>
 
         <dt id="loadMessagesWithMsgType" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/loadMessagesWithMsgType.html">loadMessagesWithMsgType</a></span><span class="signature">(<wbr>{<span class="parameter" id="loadMessagesWithMsgType-param-type"><span>required</span> <span class="type-annotation"><a href="../im_flutter_sdk/MessageType.html">MessageType</a></span> <span class="parameter-name">type</span>, </span><span class="parameter" id="loadMessagesWithMsgType-param-timestamp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">timestamp</span> = <span class="default-value">-1</span>, </span><span class="parameter" id="loadMessagesWithMsgType-param-count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">count</span> = <span class="default-value">20</span>, </span><span class="parameter" id="loadMessagesWithMsgType-param-sender"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">sender</span>, </span><span class="parameter" id="loadMessagesWithMsgType-param-direction"><span class="type-annotation"><a href="../im_flutter_sdk/EMSearchDirection.html">EMSearchDirection</a></span> <span class="parameter-name">direction</span> = <span class="default-value">EMSearchDirection.Up</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  根据消息类型、搜索消息的时间点、搜索结果的最大条数、搜索来源和搜索方向从 SDK 本地数据库中搜索指定数量的消息。
+  ~english
+Retrieves messages from the database according to the following parameters: the message type, the Unix timestamp, max count, sender.
   
 
 </dd>
 
         <dt id="loadPinnedMessages" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/loadPinnedMessages.html">loadPinnedMessages</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取会话内的置顶消息列表。
+  ~english
+Gets the pinned messages in a local conversation.
   
 
 </dd>
 
         <dt id="markAllMessagesAsRead" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/markAllMessagesAsRead.html">markAllMessagesAsRead</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  将所有消息标为已读。
+  ~english
+Marks all messages as read.
+~end
   
 
 </dd>
 
         <dt id="markMessageAsRead" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/markMessageAsRead.html">markMessageAsRead</a></span><span class="signature">(<wbr><span class="parameter" id="markMessageAsRead-param-messageId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">messageId</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  将消息标为已读。
+  ~english
+Marks a message as read.
   
 
 </dd>
 
         <dt id="messagesCount" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/messagesCount.html">messagesCount</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  会话中的消息数
+  ~english
+Message count
+~end
   
 
 </dd>
@@ -483,39 +522,42 @@
 
         <dt id="remindType" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/remindType.html">remindType</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/ChatPushRemindType.html">ChatPushRemindType</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/ChatPushRemindType.html">ChatPushRemindType</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  会话免打扰类型。<code>ChatPushRemindType</code>。
+  ~english
+The conversation no disturb type. <a href="../im_flutter_sdk/ChatPushRemindType.html">ChatPushRemindType</a>
   
 
 </dd>
 
         <dt id="searchMsgsByOptions" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/searchMsgsByOptions.html">searchMsgsByOptions</a></span><span class="signature">(<wbr><span class="parameter" id="searchMsgsByOptions-param-options"><span class="type-annotation"><a href="../im_flutter_sdk/MessageSearchOptions-class.html">MessageSearchOptions</a></span> <span class="parameter-name">options</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  通过类型从数据库获取消息。
+  ~english
+Loads messages with the specified keyword from the local database.
   
 
 </dd>
 
         <dt id="setExt" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/setExt.html">setExt</a></span><span class="signature">(<wbr><span class="parameter" id="setExt-param-ext"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">ext</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  设置会话扩展属性。
+  ~english
+Sets the conversation extension attribute.
   
 
 </dd>
@@ -535,26 +577,28 @@
 
         <dt id="unreadCount" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/unreadCount.html">unreadCount</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  获取会话的消息未读数。
+  ~english
+Gets the unread message count of the conversation.
   
 
 </dd>
 
         <dt id="updateMessage" class="callable">
   <span class="name"><a href="../im_flutter_sdk/EMConversation/updateMessage.html">updateMessage</a></span><span class="signature">(<wbr><span class="parameter" id="updateMessage-param-message"><span class="type-annotation"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span> <span class="parameter-name">message</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  更新 SDK 本地数据库的消息。
+  ~english
+Updates a message in the local database.
   
 
 </dd>
@@ -586,9 +630,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -596,40 +638,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMConversation class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 
