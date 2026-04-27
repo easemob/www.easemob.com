@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['bigimagedownloadstatus',['bigImageDownloadStatus',['../interface_e_m_image_message_body.html#a5c166fc8e286c4d1eca7598953a77587',1,'EMImageMessageBody']]],
-  ['bigimagelocalpath',['bigImageLocalPath',['../interface_e_m_image_message_body.html#abcbe7091d5be8f5a2f9a1f0fb31dfc8f',1,'EMImageMessageBody']]],
-  ['bigimageremotepath',['bigImageRemotePath',['../interface_e_m_image_message_body.html#a55de39849673df0b58b8fe1e8454056a',1,'EMImageMessageBody']]],
   ['birth',['birth',['../interface_e_m_user_info.html#aaf4b803b42a52437a3438d6eafe5b3ca',1,'EMUserInfo']]],
   ['bitspersample',['bitsPerSample',['../interface_e_m_voice_param.html#a773f5624eff153c8f4d860277f5a7b37',1,'EMVoiceParam']]],
   ['blacklist',['blacklist',['../interface_e_m_chatroom.html#a1fe8db5d70110519916c4c2e1e4511fa',1,'EMChatroom::blacklist()'],['../interface_e_m_group.html#ad54a4aff8522f802f4238c588c9659c5',1,'EMGroup::blacklist()']]],

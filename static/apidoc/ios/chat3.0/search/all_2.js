@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['bigimagedownloadstatus',['bigImageDownloadStatus',['../interface_e_m_image_message_body.html#a5c166fc8e286c4d1eca7598953a77587',1,'EMImageMessageBody']]],
-  ['bigimagelocalpath',['bigImageLocalPath',['../interface_e_m_image_message_body.html#abcbe7091d5be8f5a2f9a1f0fb31dfc8f',1,'EMImageMessageBody']]],
-  ['bigimageremotepath',['bigImageRemotePath',['../interface_e_m_image_message_body.html#a55de39849673df0b58b8fe1e8454056a',1,'EMImageMessageBody']]],
   ['binddevicetoken_3a',['bindDeviceToken:',['../interface_e_m_client.html#abafb1f83bc8fd3f59043bc7dd6af8282',1,'EMClient']]],
   ['bindfcmtoken_3acompletion_3a',['bindFCMToken:completion:',['../interface_e_m_client.html#ae48f35a65a173e756646cfb3ae407311',1,'EMClient']]],
   ['bindpushkittoken_3a',['bindPushKitToken:',['../interface_e_m_client.html#aef5431060401b82c264a44bba0b8c018',1,'EMClient']]],

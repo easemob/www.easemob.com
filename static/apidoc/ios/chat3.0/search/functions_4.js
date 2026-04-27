@@ -24,7 +24,6 @@ var searchData=
   ['didjoingroup_3ainviter_3amessage_3a',['didJoinGroup:inviter:message:',['../protocol_e_m_group_manager_delegate-p.html#ac7c819d13b9c4194c8788028a70a3609',1,'EMGroupManagerDelegate-p']]],
   ['didleavegroup_3areason_3a',['didLeaveGroup:reason:',['../protocol_e_m_group_manager_delegate-p.html#a4358d25ad62562a06cdecfb062652dba',1,'EMGroupManagerDelegate-p']]],
   ['downloadandparsecombinemessage_3acompletion_3a',['downloadAndParseCombineMessage:completion:',['../protocol_i_e_m_chat_manager-p.html#a3c1820e3bf708932525ee3bff46f5ad9',1,'IEMChatManager-p']]],
-  ['downloadbigimageattachment_3aprogress_3acompletion_3a',['downloadBigImageAttachment:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#a501d35966acac6c685896cde0f046995',1,'IEMChatManager-p']]],
   ['downloadgroupsharedfilewithid_3afilepath_3asharedfileid_3aprogress_3acompletion_3a',['downloadGroupSharedFileWithId:filePath:sharedFileId:progress:completion:',['../protocol_i_e_m_group_manager-p.html#a2aaee8065d4857848c83a761b0f40b0a',1,'IEMGroupManager-p']]],
   ['downloadmessageattachment_3aprogress_3acompletion_3a',['downloadMessageAttachment:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#adb157ebedb5b163e411d9a100ca70885',1,'IEMChatManager-p']]],
   ['downloadmessagethumbnail_3aprogress_3acompletion_3a',['downloadMessageThumbnail:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#af1de9919bfc24ed8472175bd8f8e12fe',1,'IEMChatManager-p']]]

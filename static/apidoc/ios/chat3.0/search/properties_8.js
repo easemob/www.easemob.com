@@ -20,7 +20,6 @@ var searchData=
   ['isloggedin',['isLoggedIn',['../interface_e_m_client.html#a980267158808e32dee8981bb854eb9d4',1,'EMClient']]],
   ['ismuteallmembers',['isMuteAllMembers',['../interface_e_m_chatroom.html#a3e226ce072107b8149e173c3e242e44f',1,'EMChatroom::isMuteAllMembers()'],['../interface_e_m_group.html#a1dc14b39612307cd04b9bede981a8153',1,'EMGroup::isMuteAllMembers()']]],
   ['isneedgroupack',['isNeedGroupAck',['../interface_e_m_chat_message.html#a3d5de5fe65ec3d77ba1e5bdd42eba2d2',1,'EMChatMessage']]],
-  ['isoriginalimage',['isOriginalImage',['../interface_e_m_image_message_body.html#ac510636a99813ac8a2122af44ccf80f6',1,'EMImageMessageBody']]],
   ['ispinned',['isPinned',['../interface_e_m_conversation.html#abe6aeee1ee55fc05e89ad72d67164360',1,'EMConversation']]],
   ['ispublic',['isPublic',['../interface_e_m_group.html#aed6396dd2c96945e01a3332241bff705',1,'EMGroup']]],
   ['ispushnotificationenabled',['isPushNotificationEnabled',['../interface_e_m_group.html#a8c91ccdda39b50b9c06a5fa5a3cfa3a8',1,'EMGroup']]],
