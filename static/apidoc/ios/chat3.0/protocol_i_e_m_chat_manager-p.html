@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">4.21.0</span>
+   &#160;<span id="projectnumber">4.19.0</span>
    </div>
   </td>
  </tr>
@@ -169,8 +169,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:af1de9919bfc24ed8472175bd8f8e12fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb157ebedb5b163e411d9a100ca70885"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#adb157ebedb5b163e411d9a100ca70885">downloadMessageAttachment:progress:completion:</a></td></tr>
 <tr class="separator:adb157ebedb5b163e411d9a100ca70885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a501d35966acac6c685896cde0f046995"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a501d35966acac6c685896cde0f046995">downloadBigImageAttachment:progress:completion:</a></td></tr>
-<tr class="separator:a501d35966acac6c685896cde0f046995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c1820e3bf708932525ee3bff46f5ad9"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a3c1820e3bf708932525ee3bff46f5ad9">downloadAndParseCombineMessage:completion:</a></td></tr>
 <tr class="separator:a3c1820e3bf708932525ee3bff46f5ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89fd9709627440235a084c09404e3a9d"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt; <a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> * &gt; *_Nullable)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a89fd9709627440235a084c09404e3a9d">fetchHistoryMessagesFromServer:conversationType:startMessageId:fetchDirection:pageSize:error:</a></td></tr>
@@ -952,57 +950,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aMessage</td><td>合并消息对象。 </td></tr>
-    <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a501d35966acac6c685896cde0f046995"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (void) downloadBigImageAttachment: </td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)&#160;</td>
-          <td class="paramname"><em>aMessage</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">progress:</td>
-          <td></td>
-          <td class="paramtype">(void(^)(int progress))&#160;</td>
-          <td class="paramname"><em>aProgressBlock</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">completion:</td>
-          <td></td>
-          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nullable message, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable error))&#160;</td>
-          <td class="paramname"><em>aCompletionBlock</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">required</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>下载图片消息大图。</p>
-<p>SDK 发送图片消息时在EMImageMessageBody中设置了isOriginalImage属性默认为false，接收方则使用此方法下载大图。</p>
-<p>异步方法。</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">aMessage</td><td>消息。 </td></tr>
-    <tr><td class="paramname">aProgressBlock</td><td>附件下载进度回调 block。进度值的范围为 [0,100]。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>

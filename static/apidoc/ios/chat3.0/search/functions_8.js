@@ -7,7 +7,7 @@ var searchData=
   ['initwithconversationid_3abody_3aext_3a',['initWithConversationID:body:ext:',['../interface_e_m_chat_message.html#af41cd386a292990a6e947814c13340a1',1,'EMChatMessage']]],
   ['initwithconversationid_3afrom_3ato_3abody_3aext_3a',['initWithConversationID:from:to:body:ext:',['../interface_e_m_chat_message.html#ac50c690092ec3a7750eba210d3725a63',1,'EMChatMessage']]],
   ['initwithdata_3adisplayname_3a',['initWithData:displayName:',['../interface_e_m_file_message_body.html#ab089655c69bb2f52518cb10ff7d76f32',1,'EMFileMessageBody']]],
-  ['initwithdata_3athumbnaildata_3a',['initWithData:thumbnailData:',['../interface_e_m_image_message_body.html#a151db9fa1e70f79e9fb7fb1749c7b38d',1,'EMImageMessageBody']]],
+  ['initwithdata_3athumbnaildata_3a',['initWithData:thumbnailData:',['../interface_e_m_image_message_body.html#ae6ef4e09771f3a3814baced8799c42df',1,'EMImageMessageBody']]],
   ['initwithdescription_3acode_3a',['initWithDescription:code:',['../interface_e_m_error.html#afee65c932ca8dad57ae1108a2a2a607f',1,'EMError']]],
   ['initwithevent_3acustomext_3a',['initWithEvent:customExt:',['../interface_e_m_custom_message_body.html#a42d65525d75f13eef7e7483dd02b52f9',1,'EMCustomMessageBody']]],
   ['initwithgiffilepath_3adisplayname_3a',['initWithGifFilePath:displayName:',['../interface_e_m_image_message_body.html#a512cc28e9421b2b535e84eaf795e49e8',1,'EMImageMessageBody']]],
