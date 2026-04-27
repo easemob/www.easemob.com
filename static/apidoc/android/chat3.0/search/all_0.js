@@ -147,6 +147,7 @@ var searchData=
   ['asyncupdatepushdisplaystyle_144',['asyncUpdatePushDisplayStyle',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#af9c29bc93f58f31b366e8ae6d9291b7b',1,'com::hyphenate::chat::EMPushManager']]],
   ['asyncupdatepushnickname_145',['asyncUpdatePushNickname',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#aa865b61ec16fb003c5bcc6f1f1023616',1,'com::hyphenate::chat::EMPushManager']]],
   ['asyncuploadgroupsharedfile_146',['asyncUploadGroupSharedFile',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a135a866faf915b49870a6d683cb15f91',1,'com.hyphenate.chat.EMGroupManager.asyncUploadGroupSharedFile(final String groupId, final String filePath, final EMCallBack callBack)'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#ab45ffa7e465fecb37b7f479165313b39',1,'com.hyphenate.chat.EMGroupManager.asyncUploadGroupSharedFile(final String groupId, final String filePath, final EMValueCallBack&lt; EMMucSharedFile &gt; callBack)']]],
-  ['autoacceptgroupinvitations_147',['autoAcceptGroupInvitations',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a07b8689b0a651604cced1a7bc1ae7d4c',1,'com::hyphenate::chat::EMOptions']]],
-  ['avatar_5furl_148',['AVATAR_URL',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_1_1_e_m_user_info_type.html#a21190d443e02c6a5a087f380fccbe0e5',1,'com::hyphenate::chat::EMUserInfo::EMUserInfoType']]]
+  ['audioformat_147',['AudioFormat',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_audio_params_1_1_audio_format.html',1,'com::hyphenate::chat::EMAudioParams']]],
+  ['autoacceptgroupinvitations_148',['autoAcceptGroupInvitations',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a07b8689b0a651604cced1a7bc1ae7d4c',1,'com::hyphenate::chat::EMOptions']]],
+  ['avatar_5furl_149',['AVATAR_URL',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_1_1_e_m_user_info_type.html#a21190d443e02c6a5a087f380fccbe0e5',1,'com::hyphenate::chat::EMUserInfo::EMUserInfoType']]]
 ];
