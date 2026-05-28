@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">4.19.0</span>
+   &#160;<span id="projectnumber">4.21.0</span>
    </div>
   </td>
  </tr>
@@ -91,26 +91,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_error.html">EMError</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="protocol_e_m_contact_manager_delegate-p.html">   26</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_e_m_contact_manager_delegate-p.html">EMContactManagerDelegate</a> &lt;NSObject&gt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">@optional</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;- (void)friendRequestDidApproveByUser:(NSString * _Nonnull)aUsername;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;- (void)friendRequestDidDeclineByUser:(NSString * _Nonnull)aUsername;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;- (void)friendshipDidRemoveByUser:(NSString * _Nonnull)aUsername;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;- (void)friendshipDidAddByUser:(NSString *_Nonnull)aUsername;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;- (void)friendRequestDidReceiveFromUser:(NSString *_Nonnull)aUsername</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                message:(NSString *_Nullable)aMessage;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_contact.html">EMContact</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_e_m_error.html">EMError</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="protocol_e_m_contact_manager_delegate-p.html">   27</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_e_m_contact_manager_delegate-p.html">EMContactManagerDelegate</a> &lt;NSObject&gt;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">@optional</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;- (void)friendRequestDidApproveByUser:(NSString * _Nonnull)aUsername;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;- (void)friendRequestDidDeclineByUser:(NSString * _Nonnull)aUsername;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;- (void)friendshipDidRemoveByUser:(NSString * _Nonnull)aUsername;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;- (void)friendshipDidAddByUser:(NSString *_Nonnull)aUsername;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;- (void)friendRequestDidReceiveFromUser:(NSString *_Nonnull)aUsername</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                message:(NSString *_Nullable)aMessage;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;- (void)<a class="code" href="protocol_e_m_contact_manager_delegate-p.html#a0d1418bba59616816da8f46eee322396">onFriendStartSync</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;- (void)onFriendSyncFinished:(<a class="code" href="interface_e_m_error.html">EMError</a> * _Nullable)error;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;- (void)onFriendInfoChanged:(<a class="code" href="interface_e_m_contact.html">EMContact</a> * _Nonnull)contact;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_e_m_error_html"><div class="ttname"><a href="interface_e_m_error.html">EMError</a></div><div class="ttdef"><b>Definition:</b> EMError.h:26</div></div>
-<div class="ttc" id="protocol_e_m_contact_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_contact_manager_delegate-p.html">EMContactManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMContactManagerDelegate.h:26</div></div>
+<div class="ttc" id="protocol_e_m_contact_manager_delegate-p_html"><div class="ttname"><a href="protocol_e_m_contact_manager_delegate-p.html">EMContactManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> EMContactManagerDelegate.h:27</div></div>
+<div class="ttc" id="protocol_e_m_contact_manager_delegate-p_html_a0d1418bba59616816da8f46eee322396"><div class="ttname"><a href="protocol_e_m_contact_manager_delegate-p.html#a0d1418bba59616816da8f46eee322396">-[EMContactManagerDelegate-p onFriendStartSync]</a></div><div class="ttdeci">void onFriendStartSync()</div></div>
+<div class="ttc" id="interface_e_m_contact_html"><div class="ttname"><a href="interface_e_m_contact.html">EMContact</a></div><div class="ttdef"><b>Definition:</b> EMContact.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

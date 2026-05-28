@@ -21,6 +21,7 @@ var searchData=
   ['addoccupants_3atogroup_3awelcomemessage_3aerror_3a',['addOccupants:toGroup:welcomeMessage:error:',['../protocol_i_e_m_group_manager-p.html#ad1c2bdb1b09ed9bec3e0c7122e50ed9d',1,'IEMGroupManager-p']]],
   ['addreaction_3atomessage_3acompletion_3a',['addReaction:toMessage:completion:',['../protocol_i_e_m_chat_manager-p.html#a1a3664ec87dd6eb72950e441fba7af70',1,'IEMChatManager-p']]],
   ['address',['address',['../interface_e_m_location_message_body.html#a3a8cb0a38dea43be09300702053997f4',1,'EMLocationMessageBody']]],
+  ['addtimestamp',['addTimestamp',['../interface_e_m_contact.html#a904f01b067ded28e3d411089355f3492',1,'EMContact']]],
   ['addusertoblacklist_3a',['addUserToBlackList:',['../protocol_i_e_m_contact_manager-p.html#a0c35bb7ba0561b2d486a347d67e421d3',1,'IEMContactManager-p']]],
   ['addusertoblacklist_3acompletion_3a',['addUserToBlackList:completion:',['../protocol_i_e_m_contact_manager-p.html#ae15d60fc337b6f4dac25dcbfaac29ffb',1,'IEMContactManager-p']]],
   ['addwhitelistmembers_3afromchatroom_3acompletion_3a',['addWhiteListMembers:fromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a074da8f7df2c6c8cffc28c55ce822cd3',1,'IEMChatroomManager-p']]],

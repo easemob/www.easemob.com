@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">4.19.0</span>
+   &#160;<span id="projectnumber">4.21.0</span>
    </div>
   </td>
  </tr>
@@ -117,6 +117,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:ae15ed384b418e7c4fc13f03a38de7548"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70ea0a2f407b5924c1534da9455d046"><td class="memItemLeft" align="right" valign="top">(NSDictionary&lt; NSString *, <a class="el" href="interface_e_m_user_info.html">EMUserInfo</a> * &gt; *_Nullable)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_user_info_manager-p.html#ab70ea0a2f407b5924c1534da9455d046">getUserInfoByIds:</a></td></tr>
 <tr class="separator:ab70ea0a2f407b5924c1534da9455d046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2a07528093670d7eac18d5379276dc3"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_user_info_manager-p.html#ac2a07528093670d7eac18d5379276dc3">subscribeUsersInfo:completion:</a></td></tr>
+<tr class="separator:ac2a07528093670d7eac18d5379276dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec1adaf9d659b4913a20e0b207153fcd"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_user_info_manager-p.html#aec1adaf9d659b4913a20e0b207153fcd">unsubscribeUsersInfo:completion:</a></td></tr>
+<tr class="separator:aec1adaf9d659b4913a20e0b207153fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef304a09f077b4c38f190eeb359e6b2a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_user_info_manager-p.html#aef304a09f077b4c38f190eeb359e6b2a">fetchSubscribedUsers:</a></td></tr>
+<tr class="separator:aef304a09f077b4c38f190eeb359e6b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p><a class="el" href="_i_e_m_user_info_manager_8h_source.html">IEMUserInfoManager.h</a>  用户属性操作类。 </p><dl class="section author"><dt>作者</dt><dd>Hyphenate </dd></dl>
@@ -150,6 +156,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <table class="params">
     <tr><td class="paramname">aDelegate</td><td>实现代理协议的对象。 </td></tr>
     <tr><td class="paramname">aQueue</td><td>执行代理方法的队列。若在主线程上运行 app，将该参数设置为空。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aef304a09f077b4c38f190eeb359e6b2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) fetchSubscribedUsers: </td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSArray&lt; <a class="el" href="interface_e_m_user_info.html">EMUserInfo</a> * &gt; *_Nullable users, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable error))&#160;</td>
+          <td class="paramname"><em>completionBlock</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>根据用户 ID 获取订阅非好友用户属性变更事件的用户信息。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">completionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -272,6 +301,74 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aDelegate</td><td>要移除的代理。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac2a07528093670d7eac18d5379276dc3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) subscribeUsersInfo: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; NSString * &gt; *_Nonnull)&#160;</td>
+          <td class="paramname"><em>userIds</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable error))&#160;</td>
+          <td class="paramname"><em>completionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>根据用户 ID 订阅非好友用户属性变更事件。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userIds</td><td>要获取用户属性的的用户 ID 列表。 </td></tr>
+    <tr><td class="paramname">completionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aec1adaf9d659b4913a20e0b207153fcd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) unsubscribeUsersInfo: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; NSString * &gt; *_Nonnull)&#160;</td>
+          <td class="paramname"><em>userIds</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable error))&#160;</td>
+          <td class="paramname"><em>completionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>根据用户 ID 取消订阅非好友用户属性变更事件。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userIds</td><td>要获取用户属性的的用户 ID 列表。 </td></tr>
+    <tr><td class="paramname">completionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
   </dd>
 </dl>

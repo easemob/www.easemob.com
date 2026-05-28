@@ -11,6 +11,7 @@ var searchData=
   ['fetchmessagesfromserverby_3aconversationtype_3acursor_3apagesize_3aoption_3acompletion_3a',['fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion:',['../protocol_i_e_m_chat_manager-p.html#a10cb84d7a8240d932ab65b3402ed3a73',1,'IEMChatManager-p']]],
   ['fetchpresencestatus_3acompletion_3a',['fetchPresenceStatus:completion:',['../protocol_i_e_m_presence_manager-p.html#a0b53a506abe69f2c28cdf615cfb4fee5',1,'IEMPresenceManager-p']]],
   ['fetchsubscribedmemberswithpagenum_3apagesize_3acompletion_3a',['fetchSubscribedMembersWithPageNum:pageSize:Completion:',['../protocol_i_e_m_presence_manager-p.html#ac9e78e79e4f9faf025c5ad3e7940f1ea',1,'IEMPresenceManager-p']]],
+  ['fetchsubscribedusers_3a',['fetchSubscribedUsers:',['../protocol_i_e_m_user_info_manager-p.html#aef304a09f077b4c38f190eeb359e6b2a',1,'IEMUserInfoManager-p']]],
   ['fetchsupportedlanguages_3a',['fetchSupportedLanguages:',['../protocol_i_e_m_chat_manager-p.html#a1b4ffe09737822fb665cfa16713433a1',1,'IEMChatManager-p']]],
   ['fetchtokenwithusername_3apassword_3acompletion_3a',['fetchTokenWithUsername:password:completion:',['../interface_e_m_client.html#aa7b626b422f34b4639b9df8fb15e157f',1,'EMClient']]],
   ['fetchuserinfobyid_3acompletion_3a',['fetchUserInfoById:completion:',['../protocol_i_e_m_user_info_manager-p.html#a8a480f7ef5eac2e02ca38374a20dde80',1,'IEMUserInfoManager-p']]],
