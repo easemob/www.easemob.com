@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">4.19.0</span>
+   &#160;<span id="projectnumber">4.22.0</span>
    </div>
   </td>
  </tr>
@@ -113,6 +113,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="separator:a052c6ddf4d48c2fcdbbe668f69fb02a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4ed282b819678437cee6e9182ece6bb"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_contact_manager_delegate-p.html#ac4ed282b819678437cee6e9182ece6bb">friendRequestDidReceiveFromUser:message:</a></td></tr>
 <tr class="separator:ac4ed282b819678437cee6e9182ece6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d1418bba59616816da8f46eee322396"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_contact_manager_delegate-p.html#a0d1418bba59616816da8f46eee322396">onFriendStartSync</a></td></tr>
+<tr class="separator:a0d1418bba59616816da8f46eee322396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad901d6740ee911264642d0b80d2ef282"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_contact_manager_delegate-p.html#ad901d6740ee911264642d0b80d2ef282">onFriendSyncFinished:</a></td></tr>
+<tr class="separator:ad901d6740ee911264642d0b80d2ef282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc139db250bed503f4361c13115a33dc"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_contact_manager_delegate-p.html#adc139db250bed503f4361c13115a33dc">onFriendInfoChanged:</a></td></tr>
+<tr class="separator:adc139db250bed503f4361c13115a33dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>联系人相关的代理协议。 </p>
@@ -277,6 +283,90 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aUsername</td><td>用户 B 的 user ID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adc139db250bed503f4361c13115a33dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) onFriendInfoChanged: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_contact.html">EMContact</a> *_Nonnull)&#160;</td>
+          <td class="paramname"><em>contact</em></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>好友信息变更回调 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contact</td><td>好友对象，其中包括好友信息对象<code><a class="el" href="interface_e_m_user_info.html">EMUserInfo</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d1418bba59616816da8f46eee322396"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) onFriendStartSync </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>好友列表以及好友信息同步开始时，用户会收到这个回调 </p>
+
+</div>
+</div>
+<a class="anchor" id="ad901d6740ee911264642d0b80d2ef282"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) onFriendSyncFinished: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable)&#160;</td>
+          <td class="paramname"><em>error</em></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>好友列表以及好友信息同步完成时，用户会收到这个回调 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error</td><td>联系人同步成功error为空，联系人同步失败error不为空 </td></tr>
   </table>
   </dd>
 </dl>

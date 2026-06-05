@@ -3,6 +3,7 @@ var searchData=
   ['accessusertoken',['accessUserToken',['../interface_e_m_client.html#a2fa34ffc2d955950651534a97cf269e3',1,'EMClient']]],
   ['action',['action',['../interface_e_m_cmd_message_body.html#a52133aa1e7e36dc3699550c56752ba86',1,'EMCmdMessageBody']]],
   ['address',['address',['../interface_e_m_location_message_body.html#a3a8cb0a38dea43be09300702053997f4',1,'EMLocationMessageBody']]],
+  ['addtimestamp',['addTimestamp',['../interface_e_m_contact.html#a904f01b067ded28e3d411089355f3492',1,'EMContact']]],
   ['adminlist',['adminList',['../interface_e_m_chatroom.html#a2a90fa560817d96482458e68c09b883a',1,'EMChatroom::adminList()'],['../interface_e_m_group.html#ab79a83b7f7339240ab3342f69e62e245',1,'EMGroup::adminList()']]],
   ['announcement',['announcement',['../interface_e_m_chatroom.html#ab82c203fa0342ba69ea61caa74fd1f3a',1,'EMChatroom::announcement()'],['../interface_e_m_group.html#a1ae69e0c6fdc8a63a9e0fbafa0779805',1,'EMGroup::announcement()']]],
   ['apnscertname',['apnsCertName',['../interface_e_m_options.html#a0bc4133a846b0c769ec6f47277473dc5',1,'EMOptions']]],

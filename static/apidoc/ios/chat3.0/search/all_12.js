@@ -41,6 +41,9 @@ var searchData=
   ['style',['style',['../interface_e_m_group_options.html#a620cfb9f0308ae836185dd7d9b539adf',1,'EMGroupOptions']]],
   ['subject',['subject',['../interface_e_m_chatroom.html#a325880df0c461ee38a4ead0fecbfbd28',1,'EMChatroom']]],
   ['subscribe_3aexpiry_3acompletion_3a',['subscribe:expiry:completion:',['../protocol_i_e_m_presence_manager-p.html#ab6d03351191dc2c558aa5069c33cc25c',1,'IEMPresenceManager-p']]],
+  ['subscribeusersinfo_3acompletion_3a',['subscribeUsersInfo:completion:',['../protocol_i_e_m_user_info_manager-p.html#ac2a07528093670d7eac18d5379276dc3',1,'IEMUserInfoManager-p']]],
   ['summary',['summary',['../interface_e_m_combine_message_body.html#ad67486e446eb4de9c36421e1fe0f29ee',1,'EMCombineMessageBody']]],
+  ['syncdatawshost',['syncDataWSHost',['../category_e_m_options_07_private_deploy_08.html#a7845cb8c68da289c9733d4363c3c6639',1,'EMOptions(PrivateDeploy)::syncDataWSHost()'],['../interface_e_m_options.html#a7845cb8c68da289c9733d4363c3c6639',1,'EMOptions::syncDataWSHost()']]],
+  ['syncdatawsport',['syncDataWSPort',['../category_e_m_options_07_private_deploy_08.html#aa2455d1791d53c97bb7e563027e15e7f',1,'EMOptions(PrivateDeploy)::syncDataWSPort()'],['../interface_e_m_options.html#aa2455d1791d53c97bb7e563027e15e7f',1,'EMOptions::syncDataWSPort()']]],
   ['syncsilentmodeconversationsfromservercompletion_3a',['syncSilentModeConversationsFromServerCompletion:',['../protocol_i_e_m_push_manager-p.html#ad68bc8591e51285579d20c01fd825f26',1,'IEMPushManager-p']]]
 ];

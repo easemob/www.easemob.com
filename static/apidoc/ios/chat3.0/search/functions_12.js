@@ -18,6 +18,7 @@ var searchData=
   ['unpinmessage_3acompletion_3a',['unpinMessage:completion:',['../protocol_i_e_m_chat_manager-p.html#a7e21a221a6c93433b38f8ab4d1b5590a',1,'IEMChatManager-p']]],
   ['unregisterpushkittokenwithcompletion_3a',['unRegisterPushKitTokenWithCompletion:',['../interface_e_m_client.html#a6b909146ba1756f01f891af3f38aa0d9',1,'EMClient']]],
   ['unsubscribe_3acompletion_3a',['unsubscribe:completion:',['../protocol_i_e_m_presence_manager-p.html#ab2bb9c41b853094fd0219932bb635004',1,'IEMPresenceManager-p']]],
+  ['unsubscribeusersinfo_3acompletion_3a',['unsubscribeUsersInfo:completion:',['../protocol_i_e_m_user_info_manager-p.html#aec1adaf9d659b4913a20e0b207153fcd',1,'IEMUserInfoManager-p']]],
   ['updatechatroomannouncementwithid_3aannouncement_3acompletion_3a',['updateChatroomAnnouncementWithId:announcement:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a6ced1cdbd669a4e01953f58853287e67',1,'IEMChatroomManager-p']]],
   ['updatechatroomannouncementwithid_3aannouncement_3aerror_3a',['updateChatroomAnnouncementWithId:announcement:error:',['../protocol_i_e_m_chatroom_manager-p.html#a64db6d9e176172a74e252a4df42f48d5',1,'IEMChatroomManager-p']]],
   ['updatechatroomowner_3anewowner_3acompletion_3a',['updateChatroomOwner:newOwner:completion:',['../protocol_i_e_m_chatroom_manager-p.html#aa70b713c93123072ffab93da5014f4a4',1,'IEMChatroomManager-p']]],

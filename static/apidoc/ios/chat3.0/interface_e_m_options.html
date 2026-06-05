@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">HyphenateChatSDK
-   &#160;<span id="projectnumber">4.19.0</span>
+   &#160;<span id="projectnumber">4.22.0</span>
    </div>
   </td>
  </tr>
@@ -178,6 +178,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr class="memitem:a77f54d58983fdb499ebba3f0889cb68e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77f54d58983fdb499ebba3f0889cb68e"></a>
 NSInteger&#160;</td><td class="memItemRight" valign="bottom"><b>dohVendor</b></td></tr>
 <tr class="separator:a77f54d58983fdb499ebba3f0889cb68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c7ef52ca47894a047d0b01e90abca7"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#a09c7ef52ca47894a047d0b01e90abca7">enableAutoSyncContacts</a></td></tr>
+<tr class="separator:a09c7ef52ca47894a047d0b01e90abca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf551f2e0bcf1be8454d42c7eac763f5"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#acf551f2e0bcf1be8454d42c7eac763f5">enableDnsConfig</a></td></tr>
 <tr class="separator:acf551f2e0bcf1be8454d42c7eac763f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add8ffc7906a0b90c66402014173b6e69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#add8ffc7906a0b90c66402014173b6e69">chatPort</a></td></tr>
@@ -194,6 +196,10 @@ NSInteger&#160;</td><td class="memItemRight" valign="bottom"><b>dohVendor</b></t
 <tr class="separator:a795e638e2f10e1cc85c3f61896254d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e93d3b2cd168a4b18268fe622a712a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#a8e93d3b2cd168a4b18268fe622a712a8">webSocketPort</a></td></tr>
 <tr class="separator:a8e93d3b2cd168a4b18268fe622a712a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7845cb8c68da289c9733d4363c3c6639"><td class="memItemLeft" align="right" valign="top">NSString *_Nullable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#a7845cb8c68da289c9733d4363c3c6639">syncDataWSHost</a></td></tr>
+<tr class="separator:a7845cb8c68da289c9733d4363c3c6639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2455d1791d53c97bb7e563027e15e7f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_e_m_options.html#aa2455d1791d53c97bb7e563027e15e7f">syncDataWSPort</a></td></tr>
+<tr class="separator:aa2455d1791d53c97bb7e563027e15e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>SDK 的设置选项。 </p>
@@ -615,6 +621,27 @@ NSInteger&#160;</td><td class="memItemRight" valign="bottom"><b>dohVendor</b></t
 <p>enableDnsConfig为YES时生效，只能在 <a class="el" href="interface_e_m_client.html">initializeSDKWithOptions:</a> 中设置，不能在程序运行过程中动态修改。 </p>
 
 <p>由 category <a class="el" href="category_e_m_options_07_private_deploy_08.html#adeb36b28a7d93c6a859e8e94505bbad0">EMOptions(PrivateDeploy)</a> 提供.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09c7ef52ca47894a047d0b01e90abca7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) enableAutoSyncContacts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>登录时是否同步好友列表.默认值为&lt;tt&gt;NO </p>
 
 </div>
 </div>
@@ -1046,6 +1073,52 @@ NSInteger&#160;</td><td class="memItemRight" valign="bottom"><b>dohVendor</b></t
 <li>（默认）<code>YES</code>：按服务器时间排序；</li>
 <li><code>NO</code>：否。 </li>
 </ul>
+
+</div>
+</div>
+<a class="anchor" id="a7845cb8c68da289c9733d4363c3c6639"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString* _Nullable) syncDataWSHost</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>同步数据的WebSocket服务器地址 enableDnsConfig 为 NO 时生效。只能在 <a class="el" href="interface_e_m_client.html">initializeSDKWithOptions:</a> 中设置，不能在程序运行过程中动态修改。 </p>
+
+<p>由 category <a class="el" href="category_e_m_options_07_private_deploy_08.html#a7845cb8c68da289c9733d4363c3c6639">EMOptions(PrivateDeploy)</a> 提供.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2455d1791d53c97bb7e563027e15e7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int) syncDataWSPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>同步数据的WebSocket服务器端口 enableDnsConfig 为 NO 时生效。只能在 <a class="el" href="interface_e_m_client.html">initializeSDKWithOptions:</a> 中设置，不能在程序运行过程中动态修改。 </p>
+
+<p>由 category <a class="el" href="category_e_m_options_07_private_deploy_08.html#aa2455d1791d53c97bb7e563027e15e7f">EMOptions(PrivateDeploy)</a> 提供.</p>
 
 </div>
 </div>

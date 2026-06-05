@@ -21,5 +21,6 @@ var searchData=
   ['sharedfilewithid_3a',['sharedFileWithId:',['../interface_e_m_group_shared_file.html#ac6b00368e3575cd5392913f278eba3ad',1,'EMGroupSharedFile']]],
   ['sharedmanager',['sharedManager',['../interface_e_m_local_notification_manager.html#a13dae8749df020c38b0d562923fa2bf7',1,'EMLocalNotificationManager']]],
   ['subscribe_3aexpiry_3acompletion_3a',['subscribe:expiry:completion:',['../protocol_i_e_m_presence_manager-p.html#ab6d03351191dc2c558aa5069c33cc25c',1,'IEMPresenceManager-p']]],
+  ['subscribeusersinfo_3acompletion_3a',['subscribeUsersInfo:completion:',['../protocol_i_e_m_user_info_manager-p.html#ac2a07528093670d7eac18d5379276dc3',1,'IEMUserInfoManager-p']]],
   ['syncsilentmodeconversationsfromservercompletion_3a',['syncSilentModeConversationsFromServerCompletion:',['../protocol_i_e_m_push_manager-p.html#ad68bc8591e51285579d20c01fd825f26',1,'IEMPushManager-p']]]
 ];
