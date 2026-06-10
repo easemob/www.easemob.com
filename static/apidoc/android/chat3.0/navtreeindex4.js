@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_conversation_type.html#aa3954f1a8444c45f63a4f6b52b2cb3ab":[1,0,0,0,0,11,0,0],
+"enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_conversation_type.html#aab8fe59c081eb6c2af2d912ac3d34466":[1,0,0,0,0,11,0,2],
 "enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_mark_type.html":[1,0,0,0,0,11,1],
 "enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_message_search_scope.html":[1,0,0,0,0,11,2],
 "enumcom_1_1hyphenate_1_1chat_1_1_e_m_conversation_1_1_e_m_message_search_scope.html#a1a563d685341bbdde9076876fc3d8057":[1,0,0,0,0,11,2,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "interfacecom_1_1hyphenate_1_1_e_m_log_listener.html":[1,0,0,0,11],
 "interfacecom_1_1hyphenate_1_1_e_m_log_listener.html#aaa25fee1fe794c419a8f0ace056359ff":[1,0,0,0,11,0],
 "interfacecom_1_1hyphenate_1_1_e_m_message_listener.html":[1,0,0,0,12],
-"interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#a128137d7b59e869c5bf881db970d9217":[1,0,0,0,12,8],
-"interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#a13e5b50149c13bc9b4dcf011ec5c0504":[1,0,0,0,12,6],
-"interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#a29f604b56b3bfec13ff1c41b5e6ae3de":[1,0,0,0,12,0]
+"interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#a128137d7b59e869c5bf881db970d9217":[1,0,0,0,12,8]
 };
