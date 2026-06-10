@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.22.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.23.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -271,6 +271,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ad6cbc1f58145f8506f63ec971c67c7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f025a6d42cd1aff9c96019921ed82c3" id="r_a9f025a6d42cd1aff9c96019921ed82c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f025a6d42cd1aff9c96019921ed82c3">deliverOnlineOnly</a> (boolean onlineOnly)</td></tr>
 <tr class="separator:a9f025a6d42cd1aff9c96019921ed82c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b70813edf77719b5567dbd8f238df05" id="r_a8b70813edf77719b5567dbd8f238df05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b70813edf77719b5567dbd8f238df05">setWebhookEnv</a> (String webhookEnv)</td></tr>
+<tr class="separator:a8b70813edf77719b5567dbd8f238df05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addad7e544901dff38c7b3255d3046336" id="r_addad7e544901dff38c7b3255d3046336"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addad7e544901dff38c7b3255d3046336">getWebhookEnv</a> ()</td></tr>
+<tr class="separator:addad7e544901dff38c7b3255d3046336"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a403c20e6d7db93de14f7ca694c8d6f7a" id="r_a403c20e6d7db93de14f7ca694c8d6f7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a403c20e6d7db93de14f7ca694c8d6f7a">setReceiverList</a> (List&lt; String &gt; <a class="el" href="#a9d0381e1c301d91f968ff471b431b192">receiverList</a>)</td></tr>
 <tr class="separator:a403c20e6d7db93de14f7ca694c8d6f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d0381e1c301d91f968ff471b431b192" id="r_a9d0381e1c301d91f968ff471b431b192"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d0381e1c301d91f968ff471b431b192">receiverList</a> ()</td></tr>
@@ -1997,6 +2001,25 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="addad7e544901dff38c7b3255d3046336" name="addad7e544901dff38c7b3255d3046336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addad7e544901dff38c7b3255d3046336">&#9670;&#160;</a></span>getWebhookEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.hyphenate.chat.EMMessage.getWebhookEnv </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取消息回调路由的环境标识。</p>
+<dl class="section return"><dt>返回</dt><dd>消息回调路由的环境标识。若未设置，返回 <code>null</code>。 </dd></dl>
+
+</div>
+</div>
 <a id="afd62dc71e54f281ffb45dd5cd758d28c" name="afd62dc71e54f281ffb45dd5cd758d28c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd62dc71e54f281ffb45dd5cd758d28c">&#9670;&#160;</a></span>groupAckCount()</h2>
 
@@ -3083,6 +3106,35 @@ Public 成员函数</h2></td></tr>
 <li><code>false</code>:设置消息为已读。 </li>
 </ul>
 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b70813edf77719b5567dbd8f238df05" name="a8b70813edf77719b5567dbd8f238df05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b70813edf77719b5567dbd8f238df05">&#9670;&#160;</a></span>setWebhookEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMMessage.setWebhookEnv </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>webhookEnv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置消息回调路由的环境标识。</p>
+<ul>
+<li>不调用该方法或传入 <code>null</code>：服务器使用默认回调。</li>
+<li>传入空字符串 <code>""</code>：服务器按照匹配不到处理。</li>
+<li>传入有效字符串：服务器根据该字符串匹配对应的回调路由。</li>
+</ul>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">webhookEnv</td><td>消息回调路由的环境标识。 </td></tr>
   </table>
   </dd>
 </dl>
