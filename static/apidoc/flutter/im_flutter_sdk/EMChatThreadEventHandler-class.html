@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMChatThreadEventHandler class</li>
   </ol>
   <div class="self-name">EMChatThreadEventHandler</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,13 +54,24 @@
 
     
 <section class="desc markdown">
-  <p>Thread 事件监听</p>
+  <p>~english
+The message thread event handler, which handles message thread events such as creating or leaving a message thread.</p>
+<p>Adds a message thread event handler:</p>
+<pre class="language-dart"><code class="language-dart">  EMClient.getInstance.chatThreadManager.addEventHandler(UNIQUE_HANDLER_ID, EMChatThreadEventHandler());
+</code></pre>
+<p>Removes a chat event handler:</p>
+<pre class="language-dart"><code class="language-dart">EMClient.getInstance.chatThreadManager.removeEventHandler(UNIQUE_HANDLER_ID);
+</code></pre>
+<p>~end</p>
+<p>~chinese
+Thread 事件监听</p>
 <p>添加监听:</p>
 <pre class="language-dart"><code class="language-dart">  EMClient.getInstance.chatThreadManager.addEventHandler(UNIQUE_HANDLER_ID, EMChatThreadEventHandler());
 </code></pre>
 <p>移除监听:</p>
 <pre class="language-dart"><code class="language-dart">EMClient.getInstance.chatThreadManager.removeEventHandler(UNIQUE_HANDLER_ID);
 </code></pre>
+<p>~end</p>
 </section>
 
 
@@ -76,13 +79,13 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
-        <dt id="EMChatThreadEventHandler" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMChatThreadEventHandler/EMChatThreadEventHandler.html">EMChatThreadEventHandler</a></span><span class="signature">({<span class="parameter" id="-param-onChatThreadCreate"><span class="type-annotation">void</span> <span class="parameter-name">onChatThreadCreate</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)?, </span><span class="parameter" id="-param-onChatThreadDestroy"><span class="type-annotation">void</span> <span class="parameter-name">onChatThreadDestroy</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)?, </span><span class="parameter" id="-param-onChatThreadUpdate"><span class="type-annotation">void</span> <span class="parameter-name">onChatThreadUpdate</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)?, </span><span class="parameter" id="-param-onUserKickOutOfChatThread"><span class="type-annotation">void</span> <span class="parameter-name">onUserKickOutOfChatThread</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)?</span>})</span>
+        <dt id="EMChatThreadEventHandler.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMChatThreadEventHandler/EMChatThreadEventHandler.html">EMChatThreadEventHandler.new</a></span><span class="signature">({<span class="parameter" id="-param-onChatThreadCreate"><span class="type-annotation">void</span> <span class="parameter-name">onChatThreadCreate</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)?, </span><span class="parameter" id="-param-onChatThreadDestroy"><span class="type-annotation">void</span> <span class="parameter-name">onChatThreadDestroy</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)?, </span><span class="parameter" id="-param-onChatThreadUpdate"><span class="type-annotation">void</span> <span class="parameter-name">onChatThreadUpdate</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)?, </span><span class="parameter" id="-param-onUserKickOutOfChatThread"><span class="type-annotation">void</span> <span class="parameter-name">onUserKickOutOfChatThread</span>(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)?</span>})</span>
         </dt>
         <dd>
-          Thread 事件监听。
+          ~english
+The message thread listener callback.
         </dd>
     </dl>
   </section>
@@ -106,50 +109,53 @@
 
         <dt id="onChatThreadCreate" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadEventHandler/onChatThreadCreate.html">onChatThreadCreate</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  子区创建回调。
+  ~english
+Occurs when a message thread is created.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onChatThreadDestroy" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadEventHandler/onChatThreadDestroy.html">onChatThreadDestroy</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  子区解散事件。
-子区所属群组的所有成员均可调用该方法。
+  ~english
+Occurs when a message thread is destroyed.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onChatThreadUpdate" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadEventHandler/onChatThreadUpdate.html">onChatThreadUpdate</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  子区更新回调。
-子区所属群组的所有成员均可调用该方法。
+  ~english
+Occurs when a message thread is updated.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onUserKickOutOfChatThread" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMChatThreadEventHandler/onUserKickOutOfChatThread.html">onUserKickOutOfChatThread</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-event"><span class="type-annotation"><a href="../im_flutter_sdk/EMChatThreadEvent-class.html">EMChatThreadEvent</a></span> <span class="parameter-name">event</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  管理员移除子区用户的回调。
+  ~english
+Occurs when the current user is removed from the message thread by the group owner or a group admin to which the message thread belongs.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -168,6 +174,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor inherited"
@@ -227,9 +234,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -237,40 +242,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMChatThreadEventHandler class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

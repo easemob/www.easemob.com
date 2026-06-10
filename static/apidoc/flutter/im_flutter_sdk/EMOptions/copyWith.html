@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions-class.html">EMOptions</a></li>
     <li class="self-crumb">copyWith method</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,7 +54,6 @@
 
     <section class="multi-line-signature">
       
-
 <span class="returntype"><a href="../../im_flutter_sdk/EMOptions-class.html">EMOptions</a></span>
 <span class="name ">copyWith</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="copyWith-param-usingHttpsOnly"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">usingHttpsOnly</span>, </span></li>
 <li><span class="parameter" id="copyWith-param-loginExtension"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">loginExtension</span>, </span></li>
@@ -77,6 +68,7 @@
 <li><span class="parameter" id="copyWith-param-sortMessageByServerTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">sortMessageByServerTime</span>, </span></li>
 <li><span class="parameter" id="copyWith-param-messagesReceiveCallbackIncludeSend"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">messagesReceiveCallbackIncludeSend</span>, </span></li>
 <li><span class="parameter" id="copyWith-param-regardImportMessagesAsRead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">regardImportMessagesAsRead</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-extSettings"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">extSettings</span>, </span></li>
 </ol>})
 
       
@@ -102,9 +94,11 @@
   bool? sortMessageByServerTime,
   bool? messagesReceiveCallbackIncludeSend,
   bool? regardImportMessagesAsRead,
+  Map&lt;String, dynamic&gt;? extSettings,
 }) {
-  return EMOptions(
+  return EMOptions._(
     appKey: appKey,
+    appId: appId,
     autoLogin: autoLogin,
     debugMode: debugMode,
     acceptInvitationAlways:
@@ -114,22 +108,23 @@
     requireAck: requireAck ?? this.requireAck,
     requireDeliveryAck: requireDeliveryAck ?? this.requireDeliveryAck,
     deleteMessagesAsExitGroup:
-        deleteMessagesWhenLeaveGroup ?? this.deleteMessagesAsExitGroup,
+        deleteMessagesWhenLeaveGroup ?? deleteMessagesAsExitGroup,
     deleteMessagesAsExitChatRoom:
-        deleteMessageWhenLeaveRoom ?? this.deleteMessagesAsExitChatRoom,
+        deleteMessageWhenLeaveRoom ?? deleteMessagesAsExitChatRoom,
     isChatRoomOwnerLeaveAllowed:
-        roomOwnerCanLeave ?? this.isChatRoomOwnerLeaveAllowed,
+        roomOwnerCanLeave ?? isChatRoomOwnerLeaveAllowed,
     sortMessageByServerTime:
         sortMessageByServerTime ?? this.sortMessageByServerTime,
     usingHttpsOnly: usingHttpsOnly ?? this.usingHttpsOnly,
     serverTransfer: serverTransfer,
-    isAutoDownloadThumbnail:
-        autoDownloadThumbnail ?? this.isAutoDownloadThumbnail,
+    isAutoDownloadThumbnail: autoDownloadThumbnail ?? isAutoDownloadThumbnail,
     enableDNSConfig: enableDNSConfig,
     dnsUrl: dnsUrl,
     restServer: restServer,
     imPort: imPort,
     imServer: imServer,
+    webSocketServer: webSocketServer,
+    webSocketPort: webSocketPort,
     chatAreaCode: chatAreaCode,
     enableEmptyConversation: enableEmptyConversation,
     deviceName: deviceName,
@@ -141,13 +136,13 @@
     regardImportMessagesAsRead:
         regardImportMessagesAsRead ?? this.regardImportMessagesAsRead,
     loginExtension: loginExtension,
+    extSettings: extSettings,
   );
 }</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -155,41 +150,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMOptions-class.html">EMOptions</a></li>
     <li class="self-crumb">copyWith method</li>
 </ol>
 
-
     <h5>EMOptions class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

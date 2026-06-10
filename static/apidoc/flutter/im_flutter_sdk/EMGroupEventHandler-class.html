@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMGroupEventHandler class</li>
   </ol>
   <div class="self-name">EMGroupEventHandler</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,13 +54,25 @@
 
     
 <section class="desc markdown">
-  <p>群组事件监听</p>
+  <p>~english
+The group event handler.</p>
+<p>Occurs when the following group events happens: joining a group, approving or declining a group request, and kicking a user out of a group.</p>
+<p>Adds a group event handler:</p>
+<pre class="language-dart"><code class="language-dart">  EMClient.getInstance.groupManager.addEventHandler(UNIQUE_HANDLER_ID, EMGroupEventHandler());
+</code></pre>
+<p>Removes a group event handler:</p>
+<pre class="language-dart"><code class="language-dart">  EMClient.getInstance.groupManager.removeEventHandler(UNIQUE_HANDLER_ID);
+</code></pre>
+<p>~end</p>
+<p>~chinese
+群组事件监听</p>
 <p>添加监听:</p>
 <pre class="language-dart"><code class="language-dart">  EMClient.getInstance.groupManager.addEventHandler(UNIQUE_HANDLER_ID, EMGroupEventHandler());
 </code></pre>
 <p>移除监听:</p>
 <pre class="language-dart"><code class="language-dart">  EMClient.getInstance.groupManager.removeEventHandler(UNIQUE_HANDLER_ID);
 </code></pre>
+<p>~end</p>
 </section>
 
 
@@ -76,13 +80,13 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
-        <dt id="EMGroupEventHandler" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/EMGroupEventHandler.html">EMGroupEventHandler</a></span><span class="signature">({<span class="parameter" id="-param-onAdminAddedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAdminAddedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-admin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">admin</span></span>)?, </span><span class="parameter" id="-param-onAdminRemovedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAdminRemovedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-admin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">admin</span></span>)?, </span><span class="parameter" id="-param-onAllGroupMemberMuteStateChanged"><span class="type-annotation">void</span> <span class="parameter-name">onAllGroupMemberMuteStateChanged</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-isAllMuted"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAllMuted</span></span>)?, </span><span class="parameter" id="-param-onAllowListAddedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAllowListAddedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span>)?, </span><span class="parameter" id="-param-onAllowListRemovedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAllowListRemovedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span>)?, </span><span class="parameter" id="-param-onAnnouncementChangedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAnnouncementChangedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-announcement"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">announcement</span></span>)?, </span><span class="parameter" id="-param-onAutoAcceptInvitationFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAutoAcceptInvitationFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-inviter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">inviter</span>, </span><span class="parameter" id="param-inviteMessage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">inviteMessage</span></span>)?, </span><span class="parameter" id="-param-onGroupDestroyed"><span class="type-annotation">void</span> <span class="parameter-name">onGroupDestroyed</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span></span>)?, </span><span class="parameter" id="-param-onInvitationAcceptedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onInvitationAcceptedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-invitee"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">invitee</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)?, </span><span class="parameter" id="-param-onInvitationDeclinedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onInvitationDeclinedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-invitee"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">invitee</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)?, </span><span class="parameter" id="-param-onInvitationReceivedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onInvitationReceivedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-inviter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">inviter</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)?, </span><span class="parameter" id="-param-onMemberExitedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onMemberExitedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-member"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">member</span></span>)?, </span><span class="parameter" id="-param-onMemberJoinedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onMemberJoinedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-member"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">member</span></span>)?, </span><span class="parameter" id="-param-onMuteListAddedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onMuteListAddedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-mutes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">mutes</span>, </span><span class="parameter" id="param-muteExpire"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">muteExpire</span></span>)?, </span><span class="parameter" id="-param-onMuteListRemovedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onMuteListRemovedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-mutes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">mutes</span></span>)?, </span><span class="parameter" id="-param-onOwnerChangedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onOwnerChangedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-newOwner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">newOwner</span>, </span><span class="parameter" id="param-oldOwner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">oldOwner</span></span>)?, </span><span class="parameter" id="-param-onRequestToJoinAcceptedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onRequestToJoinAcceptedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-accepter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">accepter</span></span>)?, </span><span class="parameter" id="-param-onRequestToJoinDeclinedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onRequestToJoinDeclinedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-decliner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">decliner</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span>, </span><span class="parameter" id="param-applicant"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">applicant</span></span>)?, </span><span class="parameter" id="-param-onRequestToJoinReceivedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onRequestToJoinReceivedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-applicant"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">applicant</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)?, </span><span class="parameter" id="-param-onSharedFileAddedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onSharedFileAddedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-sharedFile"><span class="type-annotation"><a href="../im_flutter_sdk/EMGroupSharedFile-class.html">EMGroupSharedFile</a></span> <span class="parameter-name">sharedFile</span></span>)?, </span><span class="parameter" id="-param-onSharedFileDeletedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onSharedFileDeletedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-fileId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">fileId</span></span>)?, </span><span class="parameter" id="-param-onUserRemovedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onUserRemovedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span></span>)?, </span><span class="parameter" id="-param-onSpecificationDidUpdate"><span class="type-annotation">void</span> <span class="parameter-name">onSpecificationDidUpdate</span>(<span class="parameter" id="param-group"><span class="type-annotation"><a href="../im_flutter_sdk/EMGroup-class.html">EMGroup</a></span> <span class="parameter-name">group</span></span>)?, </span><span class="parameter" id="-param-onDisableChanged"><span class="type-annotation">void</span> <span class="parameter-name">onDisableChanged</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-isDisable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isDisable</span></span>)?, </span><span class="parameter" id="-param-onAttributesChangedOfGroupMember"><span class="type-annotation">void</span> <span class="parameter-name">onAttributesChangedOfGroupMember</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-attributes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">attributes</span>, </span><span class="parameter" id="param-operatorId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">operatorId</span></span>)?</span>})</span>
+        <dt id="EMGroupEventHandler.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/EMGroupEventHandler.html">EMGroupEventHandler.new</a></span><span class="signature">({<span class="parameter" id="-param-onAdminAddedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAdminAddedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-admin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">admin</span></span>)?, </span><span class="parameter" id="-param-onAdminRemovedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAdminRemovedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-admin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">admin</span></span>)?, </span><span class="parameter" id="-param-onAllGroupMemberMuteStateChanged"><span class="type-annotation">void</span> <span class="parameter-name">onAllGroupMemberMuteStateChanged</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-isAllMuted"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAllMuted</span></span>)?, </span><span class="parameter" id="-param-onAllowListAddedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAllowListAddedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span>)?, </span><span class="parameter" id="-param-onAllowListRemovedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAllowListRemovedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span>)?, </span><span class="parameter" id="-param-onAnnouncementChangedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAnnouncementChangedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-announcement"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">announcement</span></span>)?, </span><span class="parameter" id="-param-onAutoAcceptInvitationFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onAutoAcceptInvitationFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-inviter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">inviter</span>, </span><span class="parameter" id="param-inviteMessage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">inviteMessage</span></span>)?, </span><span class="parameter" id="-param-onGroupDestroyed"><span class="type-annotation">void</span> <span class="parameter-name">onGroupDestroyed</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span></span>)?, </span><span class="parameter" id="-param-onInvitationAcceptedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onInvitationAcceptedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-invitee"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">invitee</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)?, </span><span class="parameter" id="-param-onInvitationDeclinedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onInvitationDeclinedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-invitee"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">invitee</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)?, </span><span class="parameter" id="-param-onInvitationReceivedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onInvitationReceivedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-inviter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">inviter</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)?, </span><span class="parameter" id="-param-onMemberExitedFromGroup"><span>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use onMemberExitedFromGroup instead&#39;)</span> <span class="type-annotation">void</span> <span class="parameter-name">onMemberExitedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-member"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">member</span></span>)?, </span><span class="parameter" id="-param-onMemberJoinedFromGroup"><span>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use onMembersJoinedFromGroup instead&#39;)</span> <span class="type-annotation">void</span> <span class="parameter-name">onMemberJoinedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-member"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">member</span></span>)?, </span><span class="parameter" id="-param-onMuteListAddedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onMuteListAddedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-mutes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">mutes</span>, </span><span class="parameter" id="param-muteExpire"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">muteExpire</span></span>)?, </span><span class="parameter" id="-param-onMuteListRemovedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onMuteListRemovedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-mutes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">mutes</span></span>)?, </span><span class="parameter" id="-param-onOwnerChangedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onOwnerChangedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-newOwner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">newOwner</span>, </span><span class="parameter" id="param-oldOwner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">oldOwner</span></span>)?, </span><span class="parameter" id="-param-onRequestToJoinAcceptedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onRequestToJoinAcceptedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-accepter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">accepter</span></span>)?, </span><span class="parameter" id="-param-onRequestToJoinDeclinedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onRequestToJoinDeclinedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-decliner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">decliner</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span>, </span><span class="parameter" id="param-applicant"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">applicant</span></span>)?, </span><span class="parameter" id="-param-onRequestToJoinReceivedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onRequestToJoinReceivedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-applicant"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">applicant</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)?, </span><span class="parameter" id="-param-onSharedFileAddedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onSharedFileAddedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-sharedFile"><span class="type-annotation"><a href="../im_flutter_sdk/EMGroupSharedFile-class.html">EMGroupSharedFile</a></span> <span class="parameter-name">sharedFile</span></span>)?, </span><span class="parameter" id="-param-onSharedFileDeletedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onSharedFileDeletedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-fileId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">fileId</span></span>)?, </span><span class="parameter" id="-param-onUserRemovedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onUserRemovedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span></span>)?, </span><span class="parameter" id="-param-onSpecificationDidUpdate"><span class="type-annotation">void</span> <span class="parameter-name">onSpecificationDidUpdate</span>(<span class="parameter" id="param-group"><span class="type-annotation"><a href="../im_flutter_sdk/EMGroup-class.html">EMGroup</a></span> <span class="parameter-name">group</span></span>)?, </span><span class="parameter" id="-param-onDisableChanged"><span class="type-annotation">void</span> <span class="parameter-name">onDisableChanged</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-isDisable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isDisable</span></span>)?, </span><span class="parameter" id="-param-onAttributesChangedOfGroupMember"><span class="type-annotation">void</span> <span class="parameter-name">onAttributesChangedOfGroupMember</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-attributes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">attributes</span>, </span><span class="parameter" id="param-operatorId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">operatorId</span></span>)?, </span><span class="parameter" id="-param-onMembersJoinedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onMembersJoinedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIds</span></span>)?, </span><span class="parameter" id="-param-onMembersExitedFromGroup"><span class="type-annotation">void</span> <span class="parameter-name">onMembersExitedFromGroup</span>(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIds</span></span>)?</span>})</span>
         </dt>
         <dd>
-          群组时间监听
+          ~english
+The group manager listener callback.
         </dd>
     </dl>
   </section>
@@ -106,303 +110,376 @@
 
         <dt id="onAdminAddedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onAdminAddedFromGroup.html">onAdminAddedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-admin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">admin</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-admin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">admin</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  成员设置为管理员的回调。
+  ~english
+Occurs when a member is set as an admin.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onAdminRemovedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onAdminRemovedFromGroup.html">onAdminRemovedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-admin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">admin</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-admin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">admin</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  取消成员的管理员权限的回调。
+  ~english
+Occurs when a member's admin privileges are removed.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onAllGroupMemberMuteStateChanged" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onAllGroupMemberMuteStateChanged.html">onAllGroupMemberMuteStateChanged</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-isAllMuted"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAllMuted</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-isAllMuted"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAllMuted</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  全员禁言状态变化回调。
+  ~english
+Occurs when all group members are muted or unmuted.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onAllowListAddedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onAllowListAddedFromGroup.html">onAllowListAddedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  成员加入群组白名单回调。
+  ~english
+Occurs when one or more group members are added to the allowlist.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onAllowListRemovedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onAllowListRemovedFromGroup.html">onAllowListRemovedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-members"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">members</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  成员移出群组白名单回调。
+  ~english
+Occurs when one or more members are removed from the allowlist.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onAnnouncementChangedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onAnnouncementChangedFromGroup.html">onAnnouncementChangedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-announcement"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">announcement</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-announcement"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">announcement</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  群公告更新回调。
+  ~english
+Occurs when the announcement is updated.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onAttributesChangedOfGroupMember" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onAttributesChangedOfGroupMember.html">onAttributesChangedOfGroupMember</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-attributes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">attributes</span>, </span><span class="parameter" id="param-operatorId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">operatorId</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span><span class="parameter" id="param-attributes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">attributes</span>, </span><span class="parameter" id="param-operatorId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">operatorId</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  群组成员自定义属性有变更。
+  ~english
+Occurs when a custom attribute(s) of a group member is/are changed.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onAutoAcceptInvitationFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onAutoAcceptInvitationFromGroup.html">onAutoAcceptInvitationFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-inviter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">inviter</span>, </span><span class="parameter" id="param-inviteMessage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">inviteMessage</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-inviter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">inviter</span>, </span><span class="parameter" id="param-inviteMessage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">inviteMessage</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  当前用户自动同意入群邀请的回调。
-设置请见 <a href="../im_flutter_sdk/EMOptions/autoAcceptGroupInvitation.html">EMOptions.autoAcceptGroupInvitation</a>.
+  ~english
+Occurs when the group invitation is accepted automatically.
+For settings, See <a href="../im_flutter_sdk/EMOptions/autoAcceptGroupInvitation.html">EMOptions.autoAcceptGroupInvitation</a>.
+The SDK will join the group before notifying the app of the acceptance of the group invitation.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onDisableChanged" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onDisableChanged.html">onDisableChanged</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-isDisable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isDisable</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-isDisable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isDisable</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  群是禁用状态变更。
+  ~english
+Occurs when the group is enabled or disabled.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onGroupDestroyed" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onGroupDestroyed.html">onGroupDestroyed</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  当前用户收到群组被解散的回调。
+  ~english
+Occurs when a group is destroyed.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onInvitationAcceptedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onInvitationAcceptedFromGroup.html">onInvitationAcceptedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-invitee"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">invitee</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-invitee"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">invitee</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  当前用户收到对端用户同意入群邀请触发的回调。
+  ~english
+Occurs when a group invitation is accepted.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onInvitationDeclinedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onInvitationDeclinedFromGroup.html">onInvitationDeclinedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-invitee"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">invitee</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-invitee"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">invitee</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  当前用户收到群组邀请被拒绝的回调。
-该回调是由当前用户收到对端用户拒绝入群邀请触发的。例如，用户 B 拒绝了用户 A 的群组邀请，用户 A 会收到该回调。
+  ~english
+Occurs when a group invitation is declined.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onInvitationReceivedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onInvitationReceivedFromGroup.html">onInvitationReceivedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-inviter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">inviter</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-inviter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">inviter</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  当前用户收到入群邀请的回调。
+  ~english
+Occurs when the user receives a group invitation.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMemberExitedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onMemberExitedFromGroup.html">onMemberExitedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-member"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">member</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-member"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">member</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  群组成员主动退出回调。
+  ~english
+Occurs when a member proactively leaves the group.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMemberJoinedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onMemberJoinedFromGroup.html">onMemberJoinedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-member"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">member</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-member"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">member</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  新成员加入群组的回调。
+  ~english
+Occurs when a user joins a group.
+~end
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onMembersExitedFromGroup" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onMembersExitedFromGroup.html">onMembersExitedFromGroup</a></span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIds</span></span>)</span>?</span>
+  
+
+</dt>
+<dd>
+  ~english
+Occurs when members leave the group.
+~end
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onMembersJoinedFromGroup" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onMembersJoinedFromGroup.html">onMembersJoinedFromGroup</a></span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-userIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIds</span></span>)</span>?</span>
+  
+
+</dt>
+<dd>
+  ~english
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMuteListAddedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onMuteListAddedFromGroup.html">onMuteListAddedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-mutes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">mutes</span>, </span><span class="parameter" id="param-muteExpire"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">muteExpire</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-mutes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">mutes</span>, </span><span class="parameter" id="param-muteExpire"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">muteExpire</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  有成员被禁言回调。
-用户禁言后，将无法在群中发送消息，但可查看群组中的消息，而黑名单中的用户无法查看和发送群组消息。
+  ~english
+Occurs when one or more group members are muted.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onMuteListRemovedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onMuteListRemovedFromGroup.html">onMuteListRemovedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-mutes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">mutes</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-mutes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">mutes</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  有成员被解除禁言的回调。
+  ~english
+Occurs when one or more group members are unmuted.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onOwnerChangedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onOwnerChangedFromGroup.html">onOwnerChangedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-newOwner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">newOwner</span>, </span><span class="parameter" id="param-oldOwner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">oldOwner</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-newOwner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">newOwner</span>, </span><span class="parameter" id="param-oldOwner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">oldOwner</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  转移群主权限的回调。
+  ~english
+Occurs when the group ownership is transferred.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onRequestToJoinAcceptedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onRequestToJoinAcceptedFromGroup.html">onRequestToJoinAcceptedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-accepter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">accepter</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-accepter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">accepter</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  对端用户接受当前用户发送的群组申请的回调。
+  ~english
+Occurs when a group request is accepted.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onRequestToJoinDeclinedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onRequestToJoinDeclinedFromGroup.html">onRequestToJoinDeclinedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-decliner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">decliner</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span>, </span><span class="parameter" id="param-applicant"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">applicant</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-decliner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">decliner</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span>, </span><span class="parameter" id="param-applicant"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">applicant</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  对端用户拒绝群组申请的回调。
+  ~english
+Occurs when a group request is declined.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onRequestToJoinReceivedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onRequestToJoinReceivedFromGroup.html">onRequestToJoinReceivedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-applicant"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">applicant</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="param-applicant"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">applicant</span>, </span><span class="parameter" id="param-reason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reason</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  对端用户接收群组申请的回调。
+  ~english
+Occurs when the group owner or administrator receives a group request from a user.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onSharedFileAddedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onSharedFileAddedFromGroup.html">onSharedFileAddedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-sharedFile"><span class="type-annotation"><a href="../im_flutter_sdk/EMGroupSharedFile-class.html">EMGroupSharedFile</a></span> <span class="parameter-name">sharedFile</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-sharedFile"><span class="type-annotation"><a href="../im_flutter_sdk/EMGroupSharedFile-class.html">EMGroupSharedFile</a></span> <span class="parameter-name">sharedFile</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  群组添加共享文件回调。
+  ~english
+Occurs when a shared file is added to a group.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onSharedFileDeletedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onSharedFileDeletedFromGroup.html">onSharedFileDeletedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-fileId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">fileId</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-fileId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">fileId</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  群组删除共享文件回调。
+  ~english
+Occurs when a shared file is removed from a group.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onSpecificationDidUpdate" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onSpecificationDidUpdate.html">onSpecificationDidUpdate</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-group"><span class="type-annotation"><a href="../im_flutter_sdk/EMGroup-class.html">EMGroup</a></span> <span class="parameter-name">group</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-group"><span class="type-annotation"><a href="../im_flutter_sdk/EMGroup-class.html">EMGroup</a></span> <span class="parameter-name">group</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  群详情变更回调。
+  ~english
+Occurs when the group detail information is updated.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="onUserRemovedFromGroup" class="property">
   <span class="name"><a href="../im_flutter_sdk/EMGroupEventHandler/onUserRemovedFromGroup.html">onUserRemovedFromGroup</a></span>
-  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span></span>)</span>?)</span>
+  <span class="signature">&#8594; void Function<span class="signature">(<span class="parameter" id="param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span></span>)</span>?</span>
   
 
 </dt>
 <dd>
-  当前用户被移出群组时的回调。
+  ~english
+Occurs when the current user is removed from the group by the group admin.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -421,6 +498,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor inherited"
@@ -480,9 +558,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -490,40 +566,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMGroupEventHandler class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

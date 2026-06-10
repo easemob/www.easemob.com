@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMGroup class</li>
   </ol>
   <div class="self-name">EMGroup</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,9 +54,14 @@
 
     
 <section class="desc markdown">
-  <p>群组信息类，包含内存中的群组相关信息。</p>
+  <p>~english
+The EMGroup class, which contains the information of the chat group.
+~end</p>
+<p>~chinese
+群组信息类，包含内存中的群组相关信息。</p>
 <p><strong>Note</strong>
-如需最新数据，需先从服务器获取：<a href="../im_flutter_sdk/EMGroupManager/fetchGroupInfoFromServer.html">EMGroupManager.fetchGroupInfoFromServer</a>。</p>
+如需最新数据，需先从服务器获取：<a href="../im_flutter_sdk/EMGroupManager/fetchGroupInfoFromServer.html">EMGroupManager.fetchGroupInfoFromServer</a>。
+~end</p>
 </section>
 
 
@@ -72,8 +69,13 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
+        <dt id="EMGroup.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMGroup/EMGroup.html">EMGroup.new</a></span><span class="signature">({<span class="parameter" id="-param-groupId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span><span class="parameter" id="-param-name"><span>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use [groupName] instead&#39;)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="-param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span><span class="parameter" id="-param-avatarUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">avatarUrl</span>, </span><span class="parameter" id="-param-description"><span>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use [desc] instead&#39;)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">description</span>, </span><span class="parameter" id="-param-desc"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">desc</span>, </span><span class="parameter" id="-param-owner"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">owner</span>, </span><span class="parameter" id="-param-announcement"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">announcement</span>, </span><span class="parameter" id="-param-memberCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">memberCount</span>, </span><span class="parameter" id="-param-memberList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">memberList</span>, </span><span class="parameter" id="-param-adminList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">adminList</span>, </span><span class="parameter" id="-param-blockList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">blockList</span>, </span><span class="parameter" id="-param-muteList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">muteList</span>, </span><span class="parameter" id="-param-messageBlocked"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">messageBlocked</span>, </span><span class="parameter" id="-param-isAllMemberMuted"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isAllMemberMuted</span>, </span><span class="parameter" id="-param-permissionType"><span class="type-annotation"><a href="../im_flutter_sdk/EMGroupPermissionType.html">EMGroupPermissionType</a>?</span> <span class="parameter-name">permissionType</span>, </span><span class="parameter" id="-param-maxUserCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">maxUserCount</span>, </span><span class="parameter" id="-param-isMemberOnly"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isMemberOnly</span>, </span><span class="parameter" id="-param-isMemberAllowToInvite"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isMemberAllowToInvite</span>, </span><span class="parameter" id="-param-extension"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">extension</span>, </span><span class="parameter" id="-param-isDisabled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isDisabled</span> = <span class="default-value">false</span></span>})</span>
+        </dt>
+        <dd>
+          
+        </dd>
         <dt id="EMGroup.fromJson" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMGroup/EMGroup.fromJson.html">EMGroup.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-map"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a></span> <span class="parameter-name">map</span></span>)</span>
         </dt>
@@ -96,7 +98,8 @@
 
 </dt>
 <dd>
-  从内存中获取群组管理员列表。
+  ~english
+Gets the admin list of the group.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -108,7 +111,23 @@
 
 </dt>
 <dd>
-  从内存中获取群公告内容。
+  ~english
+The content of the group announcement.
+~end
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="avatarUrl" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMGroup/avatarUrl.html">avatarUrl</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  ~english
+Gets the group avatar.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -120,19 +139,34 @@
 
 </dt>
 <dd>
-  从内存中获取群组黑名单。
+  ~english
+Gets the block list of the group.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
-        <dt id="description" class="property">
-  <span class="name"><a href="../im_flutter_sdk/EMGroup/description.html">description</a></span>
+        <dt id="desc" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMGroup/desc.html">desc</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
   
 
 </dt>
 <dd>
-  从内存中获取群组描述。
+  ~english
+Gets the group description.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="description" class="property">
+  <span class="name"><a class="deprecated" href="../im_flutter_sdk/EMGroup/description.html">description</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  ~english
+Gets the group description.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -144,7 +178,9 @@
 
 </dt>
 <dd>
-  群组ext
+  ~english
+Group detail extensions which can be in the JSON format to contain more group information.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -156,7 +192,22 @@
 
 </dt>
 <dd>
-  群组 ID。
+  ~english
+Gets the group ID.
+~end
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="groupName" class="property">
+  <span class="name"><a href="../im_flutter_sdk/EMGroup/groupName.html">groupName</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  ~english
+Gets the group name.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -180,7 +231,8 @@
 
 </dt>
 <dd>
-  从内存中获取是否已经全员禁言。
+  ~english
+Gets Whether all members are muted.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -192,7 +244,9 @@
 
 </dt>
 <dd>
-  组是否被禁用。从数据库读取或提取漫游消息的默认值是false。
+  ~english
+Whether the group is disabled. The default value for reading or pulling roaming messages from the database is NO
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -204,7 +258,8 @@
 
 </dt>
 <dd>
-  从内存中获取是否允许成员邀请他人进群。
+  ~english
+Checks whether a group member is allowed to invite other users to join the group.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -216,7 +271,8 @@
 
 </dt>
 <dd>
-  从内存中获取群组类型：成员是否能自由加入，还是需要申请或者被邀请。
+  ~english
+Checks whether users cannot join a chat group freely:
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -228,9 +284,8 @@
 
 </dt>
 <dd>
-  从内存中获取群组最大人数限制，创建时确定。
-<strong>Note</strong>
-如需最新数据，需先从服务器获取： <a href="../im_flutter_sdk/EMGroupManager/fetchGroupInfoFromServer.html">EMGroupManager.fetchGroupInfoFromServer</a>。
+  ~english
+Gets the maximum number of group members allowed in a group. The parameter is set when the group is created.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -242,7 +297,8 @@
 
 </dt>
 <dd>
-  从内存中获取群组成员数量。
+  ~english
+Gets the member count of the group.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -254,7 +310,8 @@
 
 </dt>
 <dd>
-  从内存中获取群组成员列表。
+  ~english
+Gets the member list of the group.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -266,7 +323,8 @@
 
 </dt>
 <dd>
-  从内存中获取消息是否被屏蔽。
+  ~english
+Gets whether the group message is blocked.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -278,19 +336,21 @@
 
 </dt>
 <dd>
-  从内存中获取群组禁言名单。
+  ~english
+Gets the mute list of the group.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
         <dt id="name" class="property">
-  <span class="name"><a href="../im_flutter_sdk/EMGroup/name.html">name</a></span>
+  <span class="name"><a class="deprecated" href="../im_flutter_sdk/EMGroup/name.html">name</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
   
 
 </dt>
 <dd>
-  从内存中获取群组名称。
+  ~english
+Gets the group name.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -302,7 +362,8 @@
 
 </dt>
 <dd>
-  从内存中获取群主用户 ID。
+  ~english
+Gets the user ID of the group owner.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -314,7 +375,8 @@
 
 </dt>
 <dd>
-  从内存中获取当前用户在群组中的角色。
+  ~english
+Gets the current user's role in group.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -345,6 +407,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
@@ -417,9 +480,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -427,40 +488,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMGroup class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

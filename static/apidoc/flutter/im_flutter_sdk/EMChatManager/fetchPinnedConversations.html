@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
     <li class="self-crumb"><span class="deprecated">fetchPinnedConversations</span> method</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -67,8 +59,7 @@
         <li>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use [fetchConversationsByOptions] instead&#39;)</li>
     </ol>
   </div>
-
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMConversation-class.html">EMConversation</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMCursorResult-class.html">EMCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMConversation-class.html">EMConversation</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name deprecated">fetchPinnedConversations</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="fetchPinnedConversations-param-cursor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span></li>
 <li><span class="parameter" id="fetchPinnedConversations-param-pageSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageSize</span> = <span class="default-value">20</span>, </span></li>
 </ol>})
@@ -78,12 +69,22 @@
     </section>
     
 <section class="desc markdown">
-  <p>分页从服务器获取置顶会话。</p>
+  <p>~english
+Gets the list of pinned conversations from the server with pagination.</p>
+<p>The SDK returns the pinned conversations in the reverse chronological order of their pinning.</p>
+<p>Param <code>cursor</code> The position from which to start getting data. If this parameter is not set, the SDK retrieves conversations from the latest pinned one.</p>
+<p>Param <code>pageSize</code> The number of conversations that you expect to get on each page. The value range is <code>1,50</code>.</p>
+<p><strong>Return</strong> The pinned conversation list of the current user.</p>
+<p><strong>Throws</strong> A description of the exception. See <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>.
+~end</p>
+<p>~chinese
+分页从服务器获取置顶会话。</p>
 <p>SDK 按照会话的置顶时间的倒序返回会话列表。</p>
 <p>Param <code>cursor</code> 查询的开始位置，如不传， SDK 从最新置顶的会话开始查询。</p>
 <p>Param <code>pageSize</code> 每页期望返回的会话数量。取值范围为 <code>1,50</code>。</p>
 <p><strong>Return</strong> 当前用户的置顶会话列表。</p>
-<p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
+<p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。
+~end</p>
 </section>
 
 
@@ -92,9 +93,21 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@Deprecated(&#39;Use [fetchConversationsByOptions] instead&#39;)
 
+&#47;&#47;&#47; ~english
+&#47;&#47;&#47; Gets the list of pinned conversations from the server with pagination.
 &#47;&#47;&#47;
+&#47;&#47;&#47; The SDK returns the pinned conversations in the reverse chronological order of their pinning.
 &#47;&#47;&#47;
+&#47;&#47;&#47; Param [cursor] The position from which to start getting data. If this parameter is not set, the SDK retrieves conversations from the latest pinned one.
 &#47;&#47;&#47;
+&#47;&#47;&#47; Param [pageSize] The number of conversations that you expect to get on each page. The value range is [1,50].
+&#47;&#47;&#47;
+&#47;&#47;&#47; **Return** The pinned conversation list of the current user.
+&#47;&#47;&#47;
+&#47;&#47;&#47; **Throws** A description of the exception. See [EMError].
+&#47;&#47;&#47; ~end
+&#47;&#47;&#47;
+&#47;&#47;&#47; ~chinese
 &#47;&#47;&#47; 分页从服务器获取置顶会话。
 &#47;&#47;&#47;
 &#47;&#47;&#47; SDK 按照会话的置顶时间的倒序返回会话列表。
@@ -106,35 +119,34 @@
 &#47;&#47;&#47; **Return** 当前用户的置顶会话列表。
 &#47;&#47;&#47;
 &#47;&#47;&#47; **Throws**  如果有异常会在这里抛出，包含错误码和错误描述，详见 [EMError]。
-&#47;&#47;&#47;
+&#47;&#47;&#47; ~end
 Future&lt;EMCursorResult&lt;EMConversation&gt;&gt; fetchPinnedConversations({
   String? cursor,
   int pageSize = 20,
 }) async {
-  Map map = {
-    &quot;pageSize&quot;: pageSize,
-  };
-  map.putIfNotNull(&#39;cursor&#39;, cursor);
-  Map result = await ChatChannel.invokeMethod(
-    ChatMethodKeys.getPinnedConversationsFromServerWithCursor,
-    map,
-  );
   try {
+    Map map = {
+      &quot;pageSize&quot;: pageSize,
+    };
+    map.putIfNotNull(&#39;cursor&#39;, cursor);
+    Map result = await Client.instance.chatManager.callNativeMethod(
+      ChatMethodKeys.getPinnedConversationsFromServerWithCursor,
+      map,
+    );
     EMError.hasErrorFromResult(result);
     return EMCursorResult.fromJson(
         result[ChatMethodKeys.getPinnedConversationsFromServerWithCursor],
         dataItemCallback: (map) {
       return EMConversation.fromJson(map);
     });
-  } on EMError catch (e) {
-    throw e;
+  } catch (e) {
+    rethrow;
   }
 }</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -142,41 +154,31 @@ Future&lt;EMCursorResult&lt;EMConversation&gt;&gt; fetchPinnedConversations({
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
     <li class="self-crumb"><span class="deprecated">fetchPinnedConversations</span> method</li>
 </ol>
 
-
     <h5>EMChatManager class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li class="self-crumb">EMChatThread class</li>
   </ol>
   <div class="self-name">EMChatThread</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,7 +54,12 @@
 
     
 <section class="desc markdown">
-  <p>子区详情类。</p>
+  <p>~english
+The message thread class.
+~end</p>
+<p>~chinese
+子区详情类。
+~end</p>
 </section>
 
 
@@ -70,8 +67,13 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
+        <dt id="EMChatThread.new" class="callable">
+          <span class="name"><a href="../im_flutter_sdk/EMChatThread/EMChatThread.html">EMChatThread.new</a></span><span class="signature">({<span class="parameter" id="-param-threadId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">threadId</span>, </span><span class="parameter" id="-param-threadName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">threadName</span>, </span><span class="parameter" id="-param-owner"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">owner</span>, </span><span class="parameter" id="-param-messageId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">messageId</span>, </span><span class="parameter" id="-param-parentId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">parentId</span>, </span><span class="parameter" id="-param-membersCount"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">membersCount</span>, </span><span class="parameter" id="-param-messageCount"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">messageCount</span>, </span><span class="parameter" id="-param-createAt"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">createAt</span>, </span><span class="parameter" id="-param-lastMessage"><span class="type-annotation"><a href="../im_flutter_sdk/EMMessage-class.html">EMMessage</a>?</span> <span class="parameter-name">lastMessage</span></span>})</span>
+        </dt>
+        <dd>
+          
+        </dd>
         <dt id="EMChatThread.fromJson" class="callable">
           <span class="name"><a href="../im_flutter_sdk/EMChatThread/EMChatThread.fromJson.html">EMChatThread.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-map"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a></span> <span class="parameter-name">map</span></span>)</span>
         </dt>
@@ -94,7 +96,9 @@
 
 </dt>
 <dd>
-  子区创建的 Unix 时间戳。单位为毫秒。
+  ~english
+The Unix timestamp when the message thread is created. The unit is millisecond.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -118,7 +122,9 @@
 
 </dt>
 <dd>
-  子区最新一条消息。如果为空，表明最新一条消息被撤回。
+  ~english
+The last reply in the message thread. If it is empty, the last message is withdrawn.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -130,7 +136,9 @@
 
 </dt>
 <dd>
-  子区成员数量。
+  ~english
+The count of members in the message thread.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -142,7 +150,9 @@
 
 </dt>
 <dd>
-  子区消息数量。
+  ~english
+The count of messages in the message thread.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -154,7 +164,9 @@
 
 </dt>
 <dd>
-  子区父消息 ID。
+  ~english
+The ID of the parent message of the message thread.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -166,7 +178,9 @@
 
 </dt>
 <dd>
-  子区创建者的用户 ID。
+  ~english
+The creator of the message thread.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -178,7 +192,9 @@
 
 </dt>
 <dd>
-  子区所属的群组 ID。
+  ~english
+The group ID where the message thread belongs.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -202,7 +218,9 @@
 
 </dt>
 <dd>
-  子区 ID。
+  ~english
+The message thread ID.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -214,13 +232,16 @@
 
 </dt>
 <dd>
-  子区名称。
+  ~english
+The name of the message thread.
+~end
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
@@ -293,9 +314,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -303,40 +322,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">im_flutter_sdk</a></li>
-    <li><a href="../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li class="self-crumb">EMChatThread class</li>
 </ol>
-
 
     <h5>im_flutter_sdk library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

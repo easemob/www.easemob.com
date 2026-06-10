@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMConversation-class.html">EMConversation</a></li>
     <li class="self-crumb">loadMessagesWithMsgType method</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,8 +54,7 @@
 
     <section class="multi-line-signature">
       
-
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">loadMessagesWithMsgType</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="loadMessagesWithMsgType-param-type"><span>required</span> <span class="type-annotation"><a href="../../im_flutter_sdk/MessageType.html">MessageType</a></span> <span class="parameter-name">type</span>, </span></li>
 <li><span class="parameter" id="loadMessagesWithMsgType-param-timestamp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">timestamp</span> = <span class="default-value">-1</span>, </span></li>
 <li><span class="parameter" id="loadMessagesWithMsgType-param-count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">count</span> = <span class="default-value">20</span>, </span></li>
@@ -76,7 +67,24 @@
     </section>
     
 <section class="desc markdown">
-  <p>根据消息类型、搜索消息的时间点、搜索结果的最大条数、搜索来源和搜索方向从 SDK 本地数据库中搜索指定数量的消息。</p>
+  <p>~english
+Retrieves messages from the database according to the following parameters: the message type, the Unix timestamp, max count, sender.</p>
+<p><strong>Note</strong>
+Be cautious about the memory usage when the maxCount is large.</p>
+<p>Param <code>type</code> The message type, including TXT, VOICE, IMAGE, and so on.</p>
+<p>Param <code>timestamp</code> The Unix timestamp for the search.</p>
+<p>Param <code>count</code> The max number of messages to search.</p>
+<p>Param <code>sender</code> The sender of the message. The param can also be used to search in group chat or chat room.</p>
+<p>Param <code>direction</code>  The direction in which the message is loaded: <a href="../../im_flutter_sdk/EMSearchDirection.html">EMSearchDirection</a>.</p>
+<ul>
+<li><code>EMSearchDirection.Up</code>: Messages are retrieved in the reverse chronological order of when the server received messages.</li>
+<li><code>EMSearchDirection.Down</code>: Messages are retrieved in the chronological order of when the server received messages.</li>
+</ul>
+<p><strong>Return</strong> The message list.</p>
+<p><strong>Throws</strong> A description of the exception. See <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>.
+~end</p>
+<p>~chinese
+根据消息类型、搜索消息的时间点、搜索结果的最大条数、搜索来源和搜索方向从 SDK 本地数据库中搜索指定数量的消息。</p>
 <p><strong>Note</strong> 当 maxCount 非常大时，需要考虑内存消耗。</p>
 <p>Param <code>type</code> 消息类型，文本、图片、语音等等。</p>
 <p>Param <code>timestamp</code> 搜索时间。</p>
@@ -84,7 +92,8 @@
 <p>Param <code>sender</code> 搜索来自某人的消息，也可用于搜索群组或聊天室里的消息。</p>
 <p>Param <code>direction</code> 消息加载的方向。</p>
 <p><strong>Return</strong> 消息列表。</p>
-<p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
+<p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。
+~end</p>
 </section>
 
 
@@ -98,30 +107,29 @@
   String? sender,
   EMSearchDirection direction = EMSearchDirection.Up,
 }) async {
-  Map req = this._toJson();
-  req[&#39;msgType&#39;] = type.index;
-  req[&#39;timestamp&#39;] = timestamp;
-  req[&#39;count&#39;] = count;
-  req[&#39;direction&#39;] = direction.index;
-  req.putIfNotNull(&quot;sender&quot;, sender);
-  Map result = await _emConversationChannel.invokeMethod(
-      ChatMethodKeys.loadMsgWithMsgType, req);
   try {
+    Map req = _toJson();
+    req[&#39;msgType&#39;] = type.index;
+    req[&#39;timestamp&#39;] = timestamp;
+    req[&#39;count&#39;] = count;
+    req[&#39;direction&#39;] = direction.index;
+    req.putIfNotNull(&quot;sender&quot;, sender);
+    Map result = await Client.instance.conversationManager
+        .callNativeMethod(ChatMethodKeys.loadMsgWithMsgType, req);
     EMError.hasErrorFromResult(result);
     List&lt;EMMessage&gt; list = [];
     result[ChatMethodKeys.loadMsgWithMsgType]?.forEach((element) {
       list.add(EMMessage.fromJson(element));
     });
     return list;
-  } on EMError catch (e) {
-    throw e;
+  } catch (e) {
+    rethrow;
   }
 }</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -129,41 +137,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMConversation-class.html">EMConversation</a></li>
     <li class="self-crumb">loadMessagesWithMsgType method</li>
 </ol>
 
-
     <h5>EMConversation class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

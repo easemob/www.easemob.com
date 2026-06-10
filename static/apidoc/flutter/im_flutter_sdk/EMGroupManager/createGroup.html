@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMGroupManager-class.html">EMGroupManager</a></li>
     <li class="self-crumb">createGroup method</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,9 +54,9 @@
 
     <section class="multi-line-signature">
       
-
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMGroup-class.html">EMGroup</a></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/EMGroup-class.html">EMGroup</a></span>&gt;</span></span>
 <span class="name ">createGroup</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="createGroup-param-groupName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">groupName</span>, </span></li>
+<li><span class="parameter" id="createGroup-param-avatarUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">avatarUrl</span>, </span></li>
 <li><span class="parameter" id="createGroup-param-desc"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">desc</span>, </span></li>
 <li><span class="parameter" id="createGroup-param-inviteMembers"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">inviteMembers</span>, </span></li>
 <li><span class="parameter" id="createGroup-param-inviteReason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">inviteReason</span>, </span></li>
@@ -76,23 +68,28 @@
     </section>
     
 <section class="desc markdown">
-  <p>创建群组。</p>
-<p>群组创建成功后，会更新内存及数据库中的数据，多端多设备会收到相应的通知事件，将群组更新到内存及数据库中。
-可通过设置 <a href="../../im_flutter_sdk/EMClient/addMultiDeviceEventHandler.html">EMClient.addMultiDeviceEventHandler</a> 监听相关事件，事件回调函数为 <a href="../../im_flutter_sdk/EMMultiDeviceEventHandler/onGroupEvent.html">EMMultiDeviceEventHandler.onGroupEvent</a>，第一个参数为事件，创建群组事件为 <a href="../../im_flutter_sdk/EMMultiDevicesEvent.html">EMMultiDevicesEvent.GROUP_CREATE</a>。</p>
-<p>Param <code>groupName</code> 群组名称。</p>
-<p>Param <code>desc</code> 群组描述。</p>
-<p>Param <code>inviteMembers</code> 群成员数组。群主 ID 可选。</p>
-<p>Param <code>inviteReason</code> 用户入群邀请信息。</p>
-<p>Param <code>options</code> 群组的其他选项。请参见 <a href="../../im_flutter_sdk/EMGroupOptions-class.html">EMGroupOptions</a>。
-群组的其他选项。</p>
-<ul>
-<li>群最大成员数，默认值为 200；</li>
-<li>群组类型，详见 <a href="../../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle</a>，默认为 <a href="../../im_flutter_sdk/EMGroupStyle.html">EMGroupStyle.PrivateOnlyOwnerInvite</a>；</li>
-<li>邀请进群是否需要对方同意，默认为 false，即邀请后直接进群；</li>
-<li>群组详情扩展。</li>
-</ul>
-<p><strong>Return</strong> 创建成功的群对象。</p>
-<p><strong>Throws</strong>  如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>。</p>
+  <p>~english
+Creates a group.</p>
+<p>Param <code>groupName</code>      The group name.
+Param <code>avatarUrl</code>      The group avatar URL.
+Param <code>desc</code>           The group description.
+Param <code>inviteMembers</code>  The group members to invite, not including the creator.
+Param <code>inviteReason</code>   The invitation message for joining the group.
+Param <code>options</code>        The group options, see <a href="../../im_flutter_sdk/EMGroupOptions-class.html">EMGroupOptions</a>.</p>
+<p><strong>Returns</strong> The created group instance.</p>
+<p><strong>Throws</strong> Exception description, see <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>.
+~end</p>
+<p>~chinese
+创建群组。</p>
+<p>Param <code>groupName</code>      群组名称。
+Param <code>avatarUrl</code>      群组头像地址。
+Param <code>desc</code>           群组描述。
+Param <code>inviteMembers</code>  邀请的群成员，不包含创建者自己。
+Param <code>inviteReason</code>   加入群组的邀请消息。
+Param <code>options</code>        群组属性，详见 <a href="../../im_flutter_sdk/EMGroupOptions-class.html">EMGroupOptions</a>。</p>
+<p><strong>Return</strong> 创建的群组实例。</p>
+<p><strong>Throws</strong> 如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/EMError-class.html">EMError</a>.
+~end</p>
 </section>
 
 
@@ -101,30 +98,32 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">Future&lt;EMGroup&gt; createGroup({
   String? groupName,
+  String? avatarUrl,
   String? desc,
   List&lt;String&gt;? inviteMembers,
   String? inviteReason,
   required EMGroupOptions options,
 }) async {
-  Map req = {&#39;options&#39;: options.toJson()};
-  req.putIfNotNull(&quot;groupName&quot;, groupName);
-  req.putIfNotNull(&quot;desc&quot;, desc);
-  req.putIfNotNull(&quot;inviteMembers&quot;, inviteMembers);
-  req.putIfNotNull(&quot;inviteReason&quot;, inviteReason);
-
-  Map result = await _channel.invokeMethod(ChatMethodKeys.createGroup, req);
   try {
+    Map req = {&#39;options&#39;: options.toJson()};
+    req.putIfNotNull(&quot;groupName&quot;, groupName);
+    req.putIfNotNull(&quot;avatarUrl&quot;, avatarUrl);
+    req.putIfNotNull(&quot;desc&quot;, desc);
+    req.putIfNotNull(&quot;inviteMembers&quot;, inviteMembers);
+    req.putIfNotNull(&quot;inviteReason&quot;, inviteReason);
+
+    Map result = await Client.instance.groupManager
+        .callNativeMethod(ChatMethodKeys.createGroup, req);
     EMError.hasErrorFromResult(result);
     return EMGroup.fromJson(result[ChatMethodKeys.createGroup]);
-  } on EMError catch (e) {
-    throw e;
+  } catch (e) {
+    rethrow;
   }
 }</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -132,41 +131,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMGroupManager-class.html">EMGroupManager</a></li>
     <li class="self-crumb">createGroup method</li>
 </ol>
 
-
     <h5>EMGroupManager class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

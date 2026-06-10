@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
     <li class="self-crumb">deleteAllMessageAndConversation method</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,8 +54,7 @@
 
     <section class="multi-line-signature">
       
-
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
 <span class="name ">deleteAllMessageAndConversation</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="deleteAllMessageAndConversation-param-clearServerData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">clearServerData</span> = <span class="default-value">false</span>, </span></li>
 </ol>})
 
@@ -72,11 +63,22 @@
     </section>
     
 <section class="desc markdown">
-  <p>清空所有会话和会话中的所有消息。
+  <p>~english
+Clears all conversations and all messages in them.
+Param <code>clearServerData</code> Whether to clear all conversations and all messages in them on the server.</p>
+<ul>
+<li>true: Yes. All conversations and all messages in them will be cleared on the server side.
+The current user cannot retrieve messages and conversations from the server, while this has no impact on other users.</li>
+<li>(Default) false：No. All local conversations and all messages in them will be cleared, while those on the server remain.
+~end</li>
+</ul>
+<p>~chinese
+清空所有会话和会话中的所有消息。
 Param <code>clearServerData</code> 是否删除服务端所有会话及其消息：</p>
 <ul>
 <li>true: 是。服务端的所有会话及其消息会被清除，当前用户无法再从服务端拉取消息和会话，其他用户不受影响。</li>
-<li>（默认）false: 否。只清除本地所有会话及其消息，服务端的会话及其消息仍保留。</li>
+<li>（默认）false: 否。只清除本地所有会话及其消息，服务端的会话及其消息仍保留。
+~end</li>
 </ul>
 </section>
 
@@ -86,11 +88,11 @@ Param <code>clearServerData</code> 是否删除服务端所有会话及其消息
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; deleteAllMessageAndConversation(
     {bool clearServerData = false}) async {
-  Map result = await ChatChannel.invokeMethod(
-      ChatMethodKeys.deleteAllMessageAndConversation, {
-    &#39;clearServerData&#39;: clearServerData,
-  });
   try {
+    Map result = await Client.instance.chatManager
+        .callNativeMethod(ChatMethodKeys.deleteAllMessageAndConversation, {
+      &#39;clearServerData&#39;: clearServerData,
+    });
     EMError.hasErrorFromResult(result);
   } catch (e) {
     rethrow;
@@ -100,7 +102,6 @@ Param <code>clearServerData</code> 是否删除服务端所有会话及其消息
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -108,41 +109,31 @@ Param <code>clearServerData</code> 是否删除服务端所有会话及其消息
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMChatManager-class.html">EMChatManager</a></li>
     <li class="self-crumb">deleteAllMessageAndConversation method</li>
 </ol>
 
-
     <h5>EMChatManager class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

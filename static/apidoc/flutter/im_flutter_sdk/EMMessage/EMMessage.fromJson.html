@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk.dart</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk.dart</a></li>
     <li><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></li>
     <li class="self-crumb">EMMessage.fromJson factory constructor</li>
   </ol>
@@ -37,20 +33,16 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
   <div
       id="dartdoc-main-content"
       class="main-content"
@@ -65,7 +57,6 @@
       <span class="name ">EMMessage.fromJson</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="fromJson-param-map"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">map</span></span></li>
 </ol>)
     </section>
-
     
 
 
@@ -78,15 +69,13 @@
     ..from = map[&quot;from&quot;]
     ..body = _bodyFromMap(map[&quot;body&quot;])!
     ..attributes = map.getMapValue(&quot;attributes&quot;)
-    ..direction = map[&quot;direction&quot;] == &#39;send&#39;
-        ? MessageDirection.SEND
-        : MessageDirection.RECEIVE
+    ..direction = MessageDirection.values[map[&quot;direction&quot;]]
     ..hasRead = map.boolValue(&#39;hasRead&#39;)
     ..hasReadAck = map.boolValue(&#39;hasReadAck&#39;)
     ..needGroupAck = map.boolValue(&#39;needGroupAck&#39;)
     ..hasDeliverAck = map.boolValue(&#39;hasDeliverAck&#39;)
     .._msgId = map[&quot;msgId&quot;]
-    ..conversationId = map[&quot;conversationId&quot;]
+    ..conversationId = map[&quot;convId&quot;]
     ..chatType = ChatType.values[map[&quot;chatType&quot;]]
     ..localTime = map[&quot;localTime&quot;] ?? 0
     ..serverTime = map[&quot;serverTime&quot;] ?? 0
@@ -96,13 +85,15 @@
     ..status = MessageStatus.values[map[&quot;status&quot;]]
     ..receiverList = map[&quot;receiverList&quot;]?.cast&lt;String&gt;()
     ..isBroadcast = map[&quot;broadcast&quot;] ?? false
-    ..isContentReplaced = map[&quot;isContentReplaced&quot;] ?? false;
+    ..isContentReplaced = map[&quot;isContentReplaced&quot;] ?? false
+    ..streamChunk = map[&quot;streamChunk&quot;] != null
+        ? EMStreamChunk.fromJson(map[&quot;streamChunk&quot;])
+        : null;
 }</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -110,41 +101,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">im_flutter_sdk</a></li>
-    <li><a href="../../im_flutter_sdk/im_flutter_sdk-library.html">im_flutter_sdk</a></li>
+    <li><a href="../../im_flutter_sdk/">im_flutter_sdk</a></li>
     <li><a href="../../im_flutter_sdk/EMMessage-class.html">EMMessage</a></li>
     <li class="self-crumb">EMMessage.fromJson factory constructor</li>
 </ol>
 
-
     <h5>EMMessage class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-left-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.10.0
+      4.19.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

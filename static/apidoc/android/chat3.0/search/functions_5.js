@@ -19,8 +19,9 @@ var searchData=
   ['fetchpresencestatus_16',['fetchPresenceStatus',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#a82548a4a7a737a1f9a07df3938563849',1,'com::hyphenate::chat::EMPresenceManager']]],
   ['fetchpublicchatroomsfromserver_17',['fetchPublicChatRoomsFromServer',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_manager.html#a4177832474a6cc73623f2367eb6be25f',1,'com::hyphenate::chat::EMChatRoomManager']]],
   ['fetchsubscribedmembers_18',['fetchSubscribedMembers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_presence_manager.html#aab92586b4511c700011ba3c8de8d2897',1,'com::hyphenate::chat::EMPresenceManager']]],
-  ['fetchsupportlanguages_19',['fetchSupportLanguages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a061e2f3d93d0c399524b7dbbc62a0a5b',1,'com::hyphenate::chat::EMChatManager']]],
-  ['fetchuserinfobyattribute_20',['fetchUserInfoByAttribute',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#a2a98f1cc2139ce16fc0aeb1da91e4507',1,'com::hyphenate::chat::EMUserInfoManager']]],
-  ['fetchuserinfobyuserid_21',['fetchUserInfoByUserId',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#af3b91717ccfaa5b92e1599ff25eeacbd',1,'com::hyphenate::chat::EMUserInfoManager']]],
-  ['filter_22',['filter',['../interfacecom_1_1hyphenate_1_1chat_1_1_e_m_custom_conversation_filter.html#afce94afbcd06c4d5d67253ac16c741a5',1,'com::hyphenate::chat::EMCustomConversationFilter']]]
+  ['fetchsubscribedusers_19',['fetchSubscribedUsers',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#adcd167134b81a0ee361824fd9b92903a',1,'com::hyphenate::chat::EMUserInfoManager']]],
+  ['fetchsupportlanguages_20',['fetchSupportLanguages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a061e2f3d93d0c399524b7dbbc62a0a5b',1,'com::hyphenate::chat::EMChatManager']]],
+  ['fetchuserinfobyattribute_21',['fetchUserInfoByAttribute',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#a2a98f1cc2139ce16fc0aeb1da91e4507',1,'com::hyphenate::chat::EMUserInfoManager']]],
+  ['fetchuserinfobyuserid_22',['fetchUserInfoByUserId',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#af3b91717ccfaa5b92e1599ff25eeacbd',1,'com::hyphenate::chat::EMUserInfoManager']]],
+  ['filter_23',['filter',['../interfacecom_1_1hyphenate_1_1chat_1_1_e_m_custom_conversation_filter.html#afce94afbcd06c4d5d67253ac16c741a5',1,'com::hyphenate::chat::EMCustomConversationFilter']]]
 ];
