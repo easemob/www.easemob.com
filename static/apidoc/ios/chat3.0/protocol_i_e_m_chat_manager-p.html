@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.23.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.24.0</span>
    </div>
   </td>
  </tr>
@@ -199,6 +199,8 @@ $(function() {
 <tr class="separator:a3a61731104e7609fcf531b0bdff7a92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10cb84d7a8240d932ab65b3402ed3a73"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a10cb84d7a8240d932ab65b3402ed3a73">fetchMessagesFromServerBy:conversationType:cursor:pageSize:option:completion:</a></td></tr>
 <tr class="separator:a10cb84d7a8240d932ab65b3402ed3a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4345e303676c81f52cbb53815ee5feb8"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a4345e303676c81f52cbb53815ee5feb8">searchMessagesFromServerWithOption:pageSize:pageNum:completion:</a></td></tr>
+<tr class="separator:a4345e303676c81f52cbb53815ee5feb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e33319b36aad99f98994f08bcb490c8"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a0e33319b36aad99f98994f08bcb490c8">addConversationMark:mark:completion:</a></td></tr>
 <tr class="separator:a0e33319b36aad99f98994f08bcb490c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e5144febac439d392700fdabc827a1"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a82e5144febac439d392700fdabc827a1">removeConversationMark:mark:completion:</a></td></tr>
@@ -1002,12 +1004,13 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p >下载图片消息大图。</p>
-<p >SDK 发送图片消息时在EMImageMessageBody中设置了isOriginalImage属性默认为false，接收方则使用此方法下载大图。</p>
+<p >下载图片消息的大图。</p>
+<p >SDK 发送图片消息时，若 <code><a class="el" href="interface_e_m_image_message_body.html">EMImageMessageBody</a></code> 中的 <code>isOriginalImage</code> 属性为默认值 <code>false</code>，则接收方使用此方法下载大图。</p>
+<p >该方法仅适用于图片消息。</p>
 <p >异步方法。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aMessage</td><td>消息。 </td></tr>
+    <tr><td class="paramname">aMessage</td><td>消息对象。 </td></tr>
     <tr><td class="paramname">aProgressBlock</td><td>附件下载进度回调 block。进度值的范围为 [0,100]。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
   </table>
@@ -3446,6 +3449,64 @@ $(function() {
     <tr><td class="paramname">aMessage</td><td>消息对象。 </td></tr>
     <tr><td class="paramname">aProgressBlock</td><td>附件上传进度回调 block。进度值范围为 [0,100]。 </td></tr>
     <tr><td class="paramname">aCompletionBlock</td><td>该方法完成调用的回调。如果该方法调用失败，会包含调用失败的原因。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4345e303676c81f52cbb53815ee5feb8" name="a4345e303676c81f52cbb53815ee5feb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4345e303676c81f52cbb53815ee5feb8">&#9670;&nbsp;</a></span>searchMessagesFromServerWithOption:pageSize:pageNum:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) searchMessagesFromServerWithOption: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_e_m_message_search_option.html">EMMessageSearchOption</a> *)&#160;</td>
+          <td class="paramname"><em>option</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">pageSize:</td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>pageSize</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">pageNum:</td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>pageNum</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_e_m_page_result.html">EMPageResult</a>&lt; <a class="el" href="interface_e_m_search_server_message_result.html">EMSearchServerMessageResult</a> * &gt; *_Nullable result, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable aError))&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >从服务端搜索消息。 该功能需要在 Console 开通「消息搜索」增值服务。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">option</td><td>搜索参数配置，详见 <code><a class="el" href="interface_e_m_message_search_option.html">EMMessageSearchOption</a></code>。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页返回条数。 </td></tr>
+    <tr><td class="paramname">pageNum</td><td>分页页码，从 1 开始。 </td></tr>
+    <tr><td class="paramname">completion</td><td>该方法完成调用的回调，返回搜索结果或错误信息，搜索结果按照相关性排序。 </td></tr>
   </table>
   </dd>
 </dl>
