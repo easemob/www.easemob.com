@@ -38,6 +38,7 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_message =
     [ "getTo", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#aa881df804354cd5367c030ef68719900", null ],
     [ "getType", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a5cd7f32108465be36097e00a7e66e4d9", null ],
     [ "getUserName", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#aa4e08a80072c42163d2e3a3711a6f464", null ],
+    [ "getWebhookEnv", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#addad7e544901dff38c7b3255d3046336", null ],
     [ "groupAckCount", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#afd62dc71e54f281ffb45dd5cd758d28c", null ],
     [ "isAcked", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a814412b9cabc5ea0078f71d96395ad15", null ],
     [ "isBroadcast", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a353ef8e4e89828286da02d25dcbb3bc0", null ],
@@ -82,5 +83,6 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_message =
     [ "setStatus", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ae49d4c615dacea6f375a96bbd6780ad6", null ],
     [ "setTo", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a426de4400e68b712f28aa727e4bb9d65", null ],
     [ "setUnread", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a0856c0c61d59cd1c411101d553e40192", null ],
+    [ "setWebhookEnv", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a8b70813edf77719b5567dbd8f238df05", null ],
     [ "status", "classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2e93fe95d0be479c5f58c4c56b0132c2", null ]
 ];
