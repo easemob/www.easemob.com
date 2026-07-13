@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.21.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.24.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -95,6 +95,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a565ddbf1aa16753dfb80eb14ed73226f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0214c73238569f316befdb316f3f85a4" id="r_a0214c73238569f316befdb316f3f85a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0214c73238569f316befdb316f3f85a4">onFriendRequestDeclined</a> (String username)</td></tr>
 <tr class="separator:a0214c73238569f316befdb316f3f85a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0569ee37349fc4c6ea02cfa51d43a8d" id="r_ad0569ee37349fc4c6ea02cfa51d43a8d"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0569ee37349fc4c6ea02cfa51d43a8d">onContactSyncStart</a> ()</td></tr>
+<tr class="separator:ad0569ee37349fc4c6ea02cfa51d43a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a934092e76baa6b5cc8d94ff3a21a13de" id="r_a934092e76baa6b5cc8d94ff3a21a13de"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a934092e76baa6b5cc8d94ff3a21a13de">onContactSyncFinishWithError</a> (int errorCode, String error)</td></tr>
+<tr class="separator:a934092e76baa6b5cc8d94ff3a21a13de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58511c4908b25450e7760ec32d3da8cc" id="r_a58511c4908b25450e7760ec32d3da8cc"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58511c4908b25450e7760ec32d3da8cc">onContactInfoUpdate</a> (<a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_contact.html">EMContact</a> contact)</td></tr>
+<tr class="separator:a58511c4908b25450e7760ec32d3da8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>联系人监听器。 监听联系人变化，包括添加好友的申请，对方删除好友的通知，对方同意好友请求，对方拒绝好友请求。</p>
@@ -115,9 +121,9 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>增加联系人时回调此方法。 </p><dl class="params"><dt>参数</dt><dd>
+<p>添加好友回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">username</td><td>增加的联系人。 </td></tr>
+    <tr><td class="paramname">username</td><td>新增的好友。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -138,9 +144,33 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>被删除联系人时回调此方法。 </p><dl class="params"><dt>参数</dt><dd>
+<p>被删除联系人时的回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>删除的联系人。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a58511c4908b25450e7760ec32d3da8cc" name="a58511c4908b25450e7760ec32d3da8cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58511c4908b25450e7760ec32d3da8cc">&#9670;&#160;</a></span>onContactInfoUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMContactListener.onContactInfoUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_contact.html">EMContact</a></td>          <td class="paramname"><span class="paramname"><em>contact</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>好友信息变更回调。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contact</td><td>好友对象，可通过 <code><a class="el" href="">EMContact#getUserInfo()</a></code> 获取好友信息。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -165,13 +195,53 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>收到好友邀请。 </p><dl class="params"><dt>参数</dt><dd>
+<p>收到好友邀请的回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>发起好友请求的用户。 </td></tr>
     <tr><td class="paramname">reason</td><td>对方发起好友邀请时发出的文字性描述。 </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a934092e76baa6b5cc8d94ff3a21a13de" name="a934092e76baa6b5cc8d94ff3a21a13de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a934092e76baa6b5cc8d94ff3a21a13de">&#9670;&#160;</a></span>onContactSyncFinishWithError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMContactListener.onContactSyncFinishWithError </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>errorCode</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>error</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>从服务器同步好友列表与好友信息完成时的回调。 </p>
+
+</div>
+</div>
+<a id="ad0569ee37349fc4c6ea02cfa51d43a8d" name="ad0569ee37349fc4c6ea02cfa51d43a8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0569ee37349fc4c6ea02cfa51d43a8d">&#9670;&#160;</a></span>onContactSyncStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.hyphenate.EMContactListener.onContactSyncStart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>从服务器同步好友列表与好友信息开始时的回调。 </p>
 
 </div>
 </div>
@@ -189,7 +259,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>好友请求被同意。 </p><dl class="params"><dt>参数</dt><dd>
+<p>好友请求被同意的回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>发起好友请求的用户。 </td></tr>
   </table>
@@ -212,7 +282,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>好友请求被拒绝。 </p><dl class="params"><dt>参数</dt><dd>
+<p>好友请求被拒绝的回调。 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">username</td><td>发起好友请求的用户。 </td></tr>
   </table>
