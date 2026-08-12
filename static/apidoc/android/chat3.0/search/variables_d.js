@@ -1,13 +1,8 @@
 var searchData=
 [
-  ['partial_5fsuccess_0',['PARTIAL_SUCCESS',['../classcom_1_1hyphenate_1_1_e_m_error.html#a0d43f99edd2d037e068a8fca68c14d8f',1,'com::hyphenate::EMError']]],
-  ['pending_1',['PENDING',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body_1_1_e_m_download_status.html#af5b856a4e2a0438911fd4475a817afaa',1,'com::hyphenate::chat::EMFileMessageBody::EMDownloadStatus']]],
-  ['phone_2',['PHONE',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_1_1_e_m_user_info_type.html#a74cc2f7de45efe1cdae6ba36a2d604d8',1,'com::hyphenate::chat::EMUserInfo::EMUserInfoType']]],
-  ['presence_5fcannot_5fsubscribe_5fyourself_3',['PRESENCE_CANNOT_SUBSCRIBE_YOURSELF',['../classcom_1_1hyphenate_1_1_e_m_error.html#abc9130b164d5cccb3559585ec38e8e99',1,'com::hyphenate::EMError']]],
-  ['presence_5fparam_5flength_5fexceed_4',['PRESENCE_PARAM_LENGTH_EXCEED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a31844948c9046f7f46bcdd1abe139236',1,'com::hyphenate::EMError']]],
-  ['progress_5',['PROGRESS',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_e_m_stream_status.html#ad4ed193364ce5924bf7732ac544612f0',1,'com::hyphenate::chat::EMMessage::EMStreamStatus']]],
-  ['push_5fbind_5ffailed_6',['PUSH_BIND_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a727d04b5dcb8051239d3b4bea8a83ce9',1,'com::hyphenate::EMError']]],
-  ['push_5fnot_5fsupport_7',['PUSH_NOT_SUPPORT',['../classcom_1_1hyphenate_1_1_e_m_error.html#a016634ad37ef538c6562d24c2f08b423',1,'com::hyphenate::EMError']]],
-  ['push_5freport_5faction_5ffailed_8',['PUSH_REPORT_ACTION_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a6285f4d26f3ec2f9210fb90522999261',1,'com::hyphenate::EMError']]],
-  ['push_5funbind_5ffailed_9',['PUSH_UNBIND_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a68c79ea1effad987e7a7a09233818f3b',1,'com::hyphenate::EMError']]]
+  ['operation_5funsupported_0',['OPERATION_UNSUPPORTED',['../classcom_1_1hyphenate_1_1_e_m_error.html#a8f1a558c92a5afd9b5f848f4677a8c8f',1,'com::hyphenate::EMError']]],
+  ['oppopush_1',['OPPOPUSH',['../enumcom_1_1hyphenate_1_1push_1_1_e_m_push_type.html#ac11d80be2d06a5615da59b9cedc7c324',1,'com::hyphenate::push::EMPushType']]],
+  ['or_2',['OR',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_keyword_list_match_type.html#a08afc4418a627ca857df77ad8fee80b8',1,'com::hyphenate::chat::EMKeywordListMatchType']]],
+  ['original_3',['ORIGINAL',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager_1_1_attachment_download_type.html#ad207900ed1e4f3cce5244684a58cd633',1,'com::hyphenate::chat::EMChatManager::AttachmentDownloadType']]],
+  ['owner_4',['owner',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_chat_room_1_1_e_m_chat_room_permission_type.html#ad1fbb2301d847060611ebdb444bf6152',1,'com.hyphenate.chat.EMChatRoom.EMChatRoomPermissionType.owner'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_1_1_e_m_group_permission_type.html#af22f96d7f2da795941fc9897a2633a08',1,'com.hyphenate.chat.EMGroup.EMGroupPermissionType.owner']]]
 ];

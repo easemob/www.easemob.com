@@ -3,6 +3,7 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager =
     [ "DisplayStyle", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager_1_1_display_style.html", null ],
     [ "EMPushAction", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager_1_1_e_m_push_action.html", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager_1_1_e_m_push_action" ],
     [ "EMPushRemindType", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager_1_1_e_m_push_remind_type.html", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager_1_1_e_m_push_remind_type" ],
+    [ "asyncGetPushConfigsFromServer", "classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a3525b0d379947de0b3d6ec9e62bf1566", null ],
     [ "asyncUpdatePushDisplayStyle", "classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#af9c29bc93f58f31b366e8ae6d9291b7b", null ],
     [ "asyncUpdatePushNickname", "classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#aa865b61ec16fb003c5bcc6f1f1023616", null ],
     [ "bindDeviceToken", "classcom_1_1hyphenate_1_1chat_1_1_e_m_push_manager.html#a3c49e8245c25954b2cc1a13e93b57e0f", null ],

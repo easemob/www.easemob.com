@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.23.0</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;5.0.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -130,8 +130,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a6db83d8a1156a964a2ca13e5bb51fcd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb54bbc1475e4ba346b9b1c7fbe41589" id="r_adb54bbc1475e4ba346b9b1c7fbe41589"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb54bbc1475e4ba346b9b1c7fbe41589">isMemberAllowToInvite</a> ()</td></tr>
 <tr class="separator:adb54bbc1475e4ba346b9b1c7fbe41589"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa71058cbdfbe29b04090eeae1fb0756d" id="r_aa71058cbdfbe29b04090eeae1fb0756d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa71058cbdfbe29b04090eeae1fb0756d">isMemberOnly</a> ()</td></tr>
-<tr class="separator:aa71058cbdfbe29b04090eeae1fb0756d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e9a46dac1565f160195e93ae6152a3" id="r_ae5e9a46dac1565f160195e93ae6152a3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5e9a46dac1565f160195e93ae6152a3">isJoinApprovalRequired</a> ()</td></tr>
+<tr class="separator:ae5e9a46dac1565f160195e93ae6152a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2225adb775cf78f5b70b3972235b4f75" id="r_a2225adb775cf78f5b70b3972235b4f75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2225adb775cf78f5b70b3972235b4f75">getMaxUserCount</a> ()</td></tr>
 <tr class="separator:a2225adb775cf78f5b70b3972235b4f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad98b22914ef53e9cf566a08a6acb634f" id="r_ad98b22914ef53e9cf566a08a6acb634f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad98b22914ef53e9cf566a08a6acb634f">isMsgBlocked</a> ()</td></tr>
@@ -148,6 +148,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a4b78922949af0c458ab80ca4c2979546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab48516948b625b4e6dd48b6567d7608f" id="r_ab48516948b625b4e6dd48b6567d7608f"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab48516948b625b4e6dd48b6567d7608f">getAdminList</a> ()</td></tr>
 <tr class="separator:ab48516948b625b4e6dd48b6567d7608f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af167ebf84cef2e29ca1fc69aa6c1f1d3" id="r_af167ebf84cef2e29ca1fc69aa6c1f1d3"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af167ebf84cef2e29ca1fc69aa6c1f1d3">getUsers</a> ()</td></tr>
+<tr class="separator:af167ebf84cef2e29ca1fc69aa6c1f1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69a4076644cb79bb0d0cd084e6215867" id="r_a69a4076644cb79bb0d0cd084e6215867"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69a4076644cb79bb0d0cd084e6215867">getBlackList</a> ()</td></tr>
 <tr class="separator:a69a4076644cb79bb0d0cd084e6215867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd34c364815e670cc3cc04f95b116c71" id="r_abd34c364815e670cc3cc04f95b116c71"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd34c364815e670cc3cc04f95b116c71">getMuteList</a> ()</td></tr>
@@ -391,7 +393,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>获取群成员列表。 如果没有获取成员列表，返回的列表可能为空。</p>
-<p>获取成员有如下方式： （1）成员人数少于 200 人时，可通过 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a0621f15915badc2c88254ca6298878e9">EMGroupManager#getGroupFromServer(String, boolean)</a></code>, 第二个参数传入 <code>true</code>，可获取最多 200 个成员。 （2）通过 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a9254cb46847af30793d740260ce53cde">EMGroupManager#fetchGroupMembers(String, String, int)</a></code> 分页获取，也可通过其异步方法 <code><a class="el" href="">EMGroupManager#asyncFetchGroupMembers(String, String, int, EMValueCallBack)</a></code> 获取。 </p><dl class="section return"><dt>返回</dt><dd>群成员 ID 列表。 </dd></dl>
+<p>获取成员有如下方式： （1）成员人数少于 200 人时，可通过 <code><a class="el" href="">EMGroupManager#getGroupFromServer(String, boolean)</a></code>, 第二个参数传入 <code>true</code>，可获取最多 200 个成员。 （2）通过 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a9254cb46847af30793d740260ce53cde">EMGroupManager#fetchGroupMembers(String, String, int)</a></code> 分页获取，也可通过其异步方法 <code><a class="el" href="">EMGroupManager#asyncFetchGroupMembers(String, String, int, EMValueCallBack)</a></code> 获取。 </p><dl class="section return"><dt>返回</dt><dd>群成员 ID 列表。 </dd></dl>
 
 </div>
 </div>
@@ -449,6 +451,26 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p>获取群组共享文件。 如果没有获取群组共享文件，返回的列表可能为空。</p>
 <p>参考： 获取群组共享文件，可调用 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager.html#a19d16ebfdade1b93fd64526ca97fc67f">EMGroupManager#fetchGroupSharedFileList(String, int, int)</a></code>, 也可调用其异步方法 <code><a class="el" href="">EMGroupManager#asyncFetchGroupSharedFileList(String, int, int, EMValueCallBack)</a></code> </p><dl class="section return"><dt>返回</dt><dd>群组共享文件列表。 </dd></dl>
+
+</div>
+</div>
+<a id="af167ebf84cef2e29ca1fc69aa6c1f1d3" name="af167ebf84cef2e29ca1fc69aa6c1f1d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af167ebf84cef2e29ca1fc69aa6c1f1d3">&#9670;&#160;</a></span>getUsers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; String &gt; com.hyphenate.chat.EMGroup.getUsers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取群组的所有成员。</p>
+<p>包含群主、管理员和普通成员。</p>
+<dl class="section return"><dt>返回</dt><dd>群组所有成员的用户 ID 列表。 </dd></dl>
 
 </div>
 </div>
@@ -533,6 +555,30 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="ae5e9a46dac1565f160195e93ae6152a3" name="ae5e9a46dac1565f160195e93ae6152a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5e9a46dac1565f160195e93ae6152a3">&#9670;&#160;</a></span>isJoinApprovalRequired()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.hyphenate.chat.EMGroup.isJoinApprovalRequired </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取群组配置：加入公开群是否需要审批。</p>
+<p>该方法直接返回群组配置的 <code>joinApprovalRequired</code> 字段。对私有群（<code>isPublic=false</code>）该配置无实际意义，私有群用户只能通过邀请入群。</p>
+<dl class="section return"><dt>返回</dt><dd><ul>
+<li><code>true</code>：群组配置 <code>joinApprovalRequired=true</code>，用户加入公开群需要审批；</li>
+<li><code>false</code>：群组配置 <code>joinApprovalRequired=false</code>，用户可以自由加入公开群。 </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
 <a id="adb54bbc1475e4ba346b9b1c7fbe41589" name="adb54bbc1475e4ba346b9b1c7fbe41589"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb54bbc1475e4ba346b9b1c7fbe41589">&#9670;&#160;</a></span>isMemberAllowToInvite()</h2>
 
@@ -547,33 +593,8 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>获取群组是否允许成员邀请。 </p><dl class="section return"><dt>返回</dt><dd>- <code>true</code>：群成员可以邀请其他用户加入；<ul>
-<li><code>false</code>：不允许群成员邀请其他用户加入。 </li>
-</ul>
-</dd></dl>
-
-</div>
-</div>
-<a id="aa71058cbdfbe29b04090eeae1fb0756d" name="aa71058cbdfbe29b04090eeae1fb0756d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa71058cbdfbe29b04090eeae1fb0756d">&#9670;&#160;</a></span>isMemberOnly()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">boolean com.hyphenate.chat.EMGroup.isMemberOnly </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>获取群组属性：成员是否能自由加入，还是需要申请或者被邀请。</p>
-<p>群组有四个类型属性，<code>isMemberonly</code>是除了 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_style.html#a7e715664b7cf519ab6a4734f013a619c">EMGroupManager.EMGroupStyle#EMGroupStylePublicOpenJoin</a></code> 之外的三种属性，表示该群不是自由加入的群组。</p>
-<dl class="section return"><dt>返回</dt><dd><br  />
-<ul>
-<li><code>true</code>：进群需要群主邀请，群成员邀请，或者群主和管理员同意入群申请；</li>
-<li><code>false</code>：意味着用户可以自由加入群，不需要申请和被邀请。 </li>
+<p>获取群组是否允许成员邀请。 </p><dl class="section return"><dt>返回</dt><dd>- <code>true</code>：群组配置 <code>allowInvites=true</code>，群成员可以邀请其他用户加入；<ul>
+<li><code>false</code>：群组配置 <code>allowInvites=false</code>，不允许群成员邀请其他用户加入。 </li>
 </ul>
 </dd></dl>
 
@@ -616,7 +637,7 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>群组是否为公开群。 </p><dl class="section return"><dt>返回</dt><dd><code>true</code> 为公开群，否则为私有群。 </dd></dl>
+<p>群组是否为公开群。 </p><dl class="section return"><dt>返回</dt><dd><code>true</code>：群组配置 <code>isPublic=true</code>，为公开群；<code>false</code>：群组配置 <code>isPublic=false</code>，为私有群。 </dd></dl>
 
 </div>
 </div>

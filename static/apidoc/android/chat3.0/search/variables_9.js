@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['languagecode_0',['LanguageCode',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_language.html#a1974137c118ed2ff56aa58261939948b',1,'com::hyphenate::chat::EMLanguage']]],
-  ['languagelocalname_1',['LanguageLocalName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_language.html#ada7945f9fac2ba422ac0ab088fa6613b',1,'com::hyphenate::chat::EMLanguage']]],
-  ['languagename_2',['LanguageName',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_language.html#a651163e6abec5b8e9665c5ec9d064cd6',1,'com::hyphenate::chat::EMLanguage']]],
-  ['location_3',['LOCATION',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a71f6afb2453b66775c1bef679128e52d',1,'com.hyphenate.chat.EMMessage.Type.LOCATION'],['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_statistics_manager_1_1_e_m_search_message_type.html#a47d7ee16c3696927281c1c95644e82bc',1,'com.hyphenate.chat.EMStatisticsManager.EMSearchMessageType.LOCATION']]]
+  ['join_5fapproval_5frequired_0',['JOIN_APPROVAL_REQUIRED',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_configs_type.html#a0bf5e7012712032aba5d09631b3e9878',1,'com::hyphenate::chat::EMGroupManager::EMGroupConfigsType']]],
+  ['joinapprovalrequired_1',['joinApprovalRequired',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_configs.html#a09e727c2d529b91d9f5dbdd1e5aae928',1,'com::hyphenate::chat::EMGroupConfigs']]],
+  ['joined_5fgroups_2',['JOINED_GROUPS',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_options_1_1_e_m_data_sync_type.html#a8daf33feb35550a2753c44b0868a13bd',1,'com::hyphenate::chat::EMOptions::EMDataSyncType']]]
 ];

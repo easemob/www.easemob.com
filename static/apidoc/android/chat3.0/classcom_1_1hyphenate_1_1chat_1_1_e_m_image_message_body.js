@@ -22,6 +22,7 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body =
     [ "setBigImageLocalUrl", "classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#aa5b3e83391f7aee08eceefc610e65d96", null ],
     [ "setGif", "classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a09410ac86111c50917de92d76e915a81", null ],
     [ "setSendOriginalImage", "classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a18e72b9f2271c8aa8ae6f9b7322e68eb", null ],
+    [ "setSize", "classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a555c5ebe5ab76268e1fb57924769b1f6", null ],
     [ "setThumbnailDownloadStatus", "classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#aa62df5c0f99ba579f2b0dc70043ae986", null ],
     [ "setThumbnailLocalPath", "classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a1f8fb158b747ed825d3aa441daa9704f", null ],
     [ "setThumbnailLocalPath", "classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a60c71a065043074ee05b54414aa145df", null ],
