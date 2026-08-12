@@ -1,0 +1,5654 @@
+<!DOCTYPE html><html class="default" lang="en" data-base=".."><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>error-codes | IM SDK Web API 文档</title><meta name="description" content="Documentation for IM SDK Web API 文档"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search"><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">IM SDK Web API 文档</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../index.html">IM SDK Web API 文档</a></li><li><a href="error-codes.html">error-codes</a></li></ul></div><div class="tsd-panel tsd-typography"><a id="错误码参考" class="tsd-anchor"></a><h1 class="tsd-anchor-link">错误码参考<a href="#错误码参考" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1><blockquote>
+<p>自动生成自 <code>src/rest/api-errors.json</code>，供 TypeDoc HTML API Reference 使用。
+本页面只展示对外处理错误所需字段，内部匹配 key 与来源细节请查看 Markdown reference。</p>
+</blockquote>
+<a id="公开错误码" class="tsd-anchor"></a><h2 class="tsd-anchor-link">公开错误码<a href="#公开错误码" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>用户侧优先按 <code>SDKError.code</code> 判断错误；<code>details.serverCode</code> 和 <code>details.canonicalCode</code> 仅用于排障。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>常见场景</th>
+<th>处理建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>消息发送已取消</td>
+<td>sendMessage；connection 通用错误；message 通用错误；unknown 通用错误；另 1 个场景</td>
+<td>确认 SDK 实例仍有效；如为用户主动取消，无需重试</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>网络错误</td>
+<td>transport 通用错误</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>本地存储操作失败</td>
+<td>storage 通用错误</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>黑名单数量已达上限</td>
+<td>addUsersToBlocklist；createChatThread；createCombineMessage；createGroup；getSubscribedUsers；getUserInfoByAttribute；unknown 通用错误；另 16 个场景</td>
+<td>移除不再需要的黑名单用户后重试；减少创建频率，清理不需要的子区，或联系服务端提升配额；减少合并消息嵌套层级后重试；减少创建或加入数量，或联系服务端提升限制；降低请求频率后重试；退出不再使用的聊天室后重试，或联系服务端提升限制；减少操作频率或联系服务端提升配额；降低用量或调整服务配额后重试；减少操作频率；减少单次操作的属性数量；降低发送频率、减少定向用户数量，或联系服务端提升配额；删除不再使用的属性后重试；删除不再使用的属性后重试，或联系服务端提升配额；缩短备注内容后重试；稍后重试或提升服务配额</td>
+</tr>
+<tr>
+<td style="text-align:right">100</td>
+<td>App Key 不合法</td>
+<td>sendMessage；upload 通用错误</td>
+<td>检查 SDK 初始化使用的 appKey</td>
+</tr>
+<tr>
+<td style="text-align:right">108</td>
+<td>Token 已过期</td>
+<td>sendMessage；auth 通用错误</td>
+<td>刷新 Token 并重新登录后发送</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>acceptContactInvite；addChatRoomMembers；addContact；addConversationMark；addReaction；addUsersToBlocklist；upload 通用错误；validation 通用错误；另 70 个场景</td>
+<td>传入非空字符串 userId；检查 userIds 列表，确保为非空合法用户 ID；传入非空字符串 userId；message 如需传入也必须是字符串；传入合法 mark，并确保 conversations 为非空数组或传入单个合法会话；传入合法 messageId 和非空 reaction；传入至少一个非空字符串 userId；重复值会由 SDK 去重；传入合法会话 ID，并使用 singleChat 或 groupChat；传入有效的父群组 ID、子区名称和父消息 ID；传入合法的 conversationId、conversationType 和非空 action；传入合法的标题、摘要和 1 到 300 条可合并消息；传入合法的 conversationId、conversationType 和非空 event；params 使用字符串键值；至少传入 data 或 originalUrl，并确保文件元数据合法；更换冲突参数，并确保请求字段长度与取值范围合法；检查创建群组请求体，补齐必填字段并修正字段格式；至少传入 data 或 originalUrl，并确保图片元数据为合法类型和值；传入合法的 conversationId、conversationType、latitude 和 longitude；传入合法的 conversationId、conversationType 和非空 content；receiverList 仅用于群聊或聊天室，needReadReceipt 不支持 chatRoom；至少传入 data 或 originalUrl，并传入大于 0 的 duration；传入合法会话 ID、会话类型，并确保 deleteRoamingMessages 为布尔值；通过有效的 chatThreadId 创建 ChatThread 实体；传入有效的子区 ID；传入 type 为 combine 且包含有效 url 的消息，或直接传入合并消息体中的有效 url/secret；修正请求参数或操作类型后重试；确保 keys 为合法非空字符串数组，或省略 keys 获取全部属性；传入 1 到 20 个有效的子区 ID；传入有效的父群组 ID、分页大小和游标；传入有效的子区 ID、分页大小和游标；通过有效的 chatThreadId 创建实体，并传入有效分页参数；使用 SDK 上一次返回的 cursor，并确保 pageSize 为正整数、includeEmptyConversations 为布尔值；传入 0 到 19 之间的整数 mark，并使用合法分页参数；传入正整数 pageSize，并使用上一次返回的 cursor；传入 1 到 20 个会话，并确保每项包含非空 id 与 singleChat/groupChat 类型；传入合法 groupId 和非空 messageIds 列表；检查请求体与消息 ID；若超过 20 条，请由调用方拆分后重试；传入合法 groupId、messageId，并确保 pageSize 为正整数；传入合法会话定位参数，并确保 pageSize 为正整数；降低用量或调整服务配额后重试；传入有效的分页参数；如指定 parentId，应传入非空字符串；确认目标资源存在后重试；传入合法 messageId、非空 reaction，并确保 pageSize 为正整数；传入合法 messageId；conversationType 为 groupChat 时同时传入 groupId；传入非空用户 ID 数组和非空资料属性数组，并确保属性名属于支持范围；传入非空用户 ID 数组，并确保每个用户 ID 都是非空字符串；检查 userIds 与 muteDuration，确保传入有效值；传入合法会话定位参数和待撤回消息 ID；确保 key 为合法非空字符串；确保每次删除的属性数量不超过限制，且 keys 为合法非空字符串数组；传入有效的子区 ID 和成员 ID；通过有效的 chatThreadId 创建实体，并传入有效成员 ID；传入非空 messageIds，或传入大于 0 的 beforeTimestamp；确认 appKey 配置正确；检查请求参数是否符合搜索接口要求；检查关键词列表（非空、最多5个、每个≤150字符）、conversationId/conversationType 须配对使用、startTime/endTime 须同时提供；通过 ChatManager 的 create*Message 方法创建消息，确保发送者与当前用户一致，并检查附件数据和上传配置；传入合法 conversationId、singleChat/groupChat 会话类型和同一会话内 1 至 50 条非空 messageIds；确保 key/value 为合法非空字符串；确保每次设置的属性数量不超过限制，且 key/value 均为合法字符串；传入非空字符串 userId，并确保 remark 为字符串；可传空字符串清空备注；传入合法会话 ID、会话类型，并确保 pinned 为布尔值；传入合法会话 ID、会话类型，并按 REMIND_TYPE、DURATION 或 INTERVAL 选择一种规则模式；按 REMIND_TYPE、DURATION 或 INTERVAL 选择一种规则模式，并传入对应必填字段；传入非空语言标识，例如 zh-Hans 或 en；缩短公告内容后重试；缩短名称/描述，或传入允许范围内的 maxMembers；仅提交 name、description、maxMembers 等允许修改的字段；传入有效的子区 ID 和新名称；通过有效的 chatThreadId 创建实体，并传入有效的新名称；缩短本次提交的群组字段内容后重试；仅提交允许修改的字段，并确保字段长度合法；传入合法会话定位参数和待编辑消息 ID；至少传入一个可更新字段，并确保字段值类型合法；仅使用支持的资料属性，并确保属性值类型合法；传入非空 deviceId、deviceToken 和 notifierName；在支持上传的环境中调用，或为当前平台配置上传适配器</td>
+</tr>
+<tr>
+<td style="text-align:right">111</td>
+<td>当前服务端不支持获取置顶消息列表</td>
+<td>getPinnedMessageList；updateMessage</td>
+<td>修正请求参数或操作类型后重试；仅传入 type 为 text 或 custom 的消息内容</td>
+</tr>
+<tr>
+<td style="text-align:right">112</td>
+<td>删除消息数量超限</td>
+<td>removeHistoryMessages</td>
+<td>降低用量或调整服务配额后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">200</td>
+<td>用户已登录</td>
+<td>auth 通用错误</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>未登录</td>
+<td>clearAllConversationUnreadMessageCount；clearConversationUnreadMessageCount；createChatThread；destroyChatThread；getChatThreadInfo；getChatThreadLastMessageList；auth 通用错误；另 9 个场景</td>
+<td>登录或刷新 token 后重试；重新登录后再创建子区；重新登录后再解散子区；重新登录后再查询子区详情；重新登录后再查询子区最后消息；重新登录后再查询子区列表；重新登录后再查询子区成员；重新登录后再查询已加入子区；重新登录后再加入子区；重新登录后再退出子区；重新登录后再移除子区成员；重新登录后再更新子区名称</td>
+</tr>
+<tr>
+<td style="text-align:right">202</td>
+<td>用户鉴权失败</td>
+<td>getGroupMessageReadReceipts；getSubscribedUsers；searchMessages；sendMessage；subscribeUsersInfo；unsubscribeUsersInfo；auth 通用错误；connection 通用错误；另 2 个场景</td>
+<td>更新为有效 token 后重试；刷新 token 后重试；重新登录获取有效 token；重新获取有效 Token 并登录</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>acceptContactInvite；addChatRoomMembers；addContact；addUsersToBlocklist；addUsersToChatRoomAllowlist；blockChatRoomMembers；另 8 个场景</td>
+<td>确认用户 ID 正确；确认 userIds 中的用户都已存在；确认 memberIds 中的用户都已存在；确认 userId 对应用户存在；确认用户已注册</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有添加聊天室成员的权限</td>
+<td>addChatRoomMembers；addContact；addUsersToChatRoomAllowlist；blockChatRoomMembers；createChatThread；deleteChatRoomSharedFile；auth 通用错误；另 33 个场景</td>
+<td>使用聊天室 owner/admin 账号重试；根据错误原因修正后重试；确认当前用户已加入父群组，并检查控制台 Thread 能力开通状态；使用聊天室 owner 账号重试；使用有管理权限的账号重试；确认当前用户已加入父群组或目标子区；确认当前用户有权限访问传入的所有子区；确认当前用户已加入父群组；确认用户已加入目标群并具备查询权限；确认当前用户已加入目标群组；检查服务开通状态与账号权限后重试；确认当前用户已加入父群组且目标子区可加入；确认当前用户已加入目标子区且允许退出；确认当前用户已加入聊天室，并仅删除自己有权限操作的属性；使用群主、管理员或有权限的账号重试；检查账号权限、会话关系和服务开通状态；确认当前用户已加入聊天室，并仅修改自己有权限操作的属性；确认当前用户有权限操作目标成员属性；确认关系与操作权限后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">213</td>
+<td>当前登录态绑定到其他设备</td>
+<td>sendMessage；auth 通用错误</td>
+<td>检查多设备登录策略和设备绑定关系后重新登录</td>
+</tr>
+<tr>
+<td style="text-align:right">214</td>
+<td>登录设备数超过限制</td>
+<td>sendMessage；auth 通用错误</td>
+<td>退出其他设备或联系服务端提升设备数限制</td>
+</tr>
+<tr>
+<td style="text-align:right">215</td>
+<td>用户在群组或聊天室中被禁言</td>
+<td>sendMessage；auth 通用错误</td>
+<td>等待禁言解除或联系群组/聊天室管理员</td>
+</tr>
+<tr>
+<td style="text-align:right">219</td>
+<td>用户被全局禁言</td>
+<td>sendMessage</td>
+<td>联系管理员解除全局禁言</td>
+</tr>
+<tr>
+<td style="text-align:right">220</td>
+<td>当前登录设备发生变化</td>
+<td>sendMessage</td>
+<td>检查设备标识并重新登录</td>
+</tr>
+<tr>
+<td style="text-align:right">221</td>
+<td>非好友禁止发送消息</td>
+<td>sendMessage</td>
+<td>先添加对方为联系人，或调整应用的陌生人消息策略</td>
+</tr>
+<tr>
+<td style="text-align:right">222</td>
+<td>消息发送失败：被接收方拉黑</td>
+<td>sendMessage</td>
+<td>停止重试，并提示用户检查与接收方的关系状态</td>
+</tr>
+<tr>
+<td style="text-align:right">223</td>
+<td>非好友不能设置备注</td>
+<td>setContactRemark</td>
+<td>先添加好友再设置备注</td>
+</tr>
+<tr>
+<td style="text-align:right">300</td>
+<td>未连接服务器</td>
+<td>clearAllConversationUnreadMessageCount；clearConversationUnreadMessageCount；recallMessage；sendMessage；sendMessageReadReceipts；updateMessage；connection 通用错误；message 通用错误</td>
+<td>恢复连接后重试；等待连接成功后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>createChatThread；destroyChatThread；getChatThreadInfo；getChatThreadLastMessageList；getChatThreadList；getChatThreadMemberList；connection 通用错误；message 通用错误；transport 通用错误；另 7 个场景</td>
+<td>稍后重试；检查网络连接后重试；重试前可根据 msgLocalId 查询业务侧发送状态</td>
+</tr>
+<tr>
+<td style="text-align:right">302</td>
+<td>Reaction 服务繁忙</td>
+<td>addReaction；connection 通用错误</td>
+<td>稍后重试；持续失败时联系服务端排查</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>createChatThread；destroyChatThread；getChatThreadInfo；getChatThreadLastMessageList；getChatThreadList；getChatThreadMemberList；message 通用错误；transport 通用错误；另 11 个场景</td>
+<td>稍后重试或联系服务端排查；稍后重试；若持续失败，请联系服务端排查；稍后重试，若持续失败请联系技术支持；检查 details.serverCode 和 details.reason；若持续出现，请联系技术支持</td>
+</tr>
+<tr>
+<td style="text-align:right">304</td>
+<td>获取服务器配置信息错误</td>
+<td>connection 通用错误</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:right">305</td>
+<td>消息服务不可用</td>
+<td>sendMessage；setGroupMemberAttributes</td>
+<td>检查控制台服务开通状态或联系技术支持；联系服务端开通群成员属性服务</td>
+</tr>
+<tr>
+<td style="text-align:right">400</td>
+<td>附件不存在</td>
+<td>downloadMessageAttachment</td>
+<td>确认目标资源存在后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">401</td>
+<td>合并消息解析失败</td>
+<td>downloadAndParseCombineMessage；downloadMessageAttachment</td>
+<td>稍后重试；持续失败时联系服务端排查；仅对包含远程附件地址的图片、语音、视频或文件消息调用；修正请求参数或操作类型后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">402</td>
+<td>附件上传失败</td>
+<td>sendMessage；voiceFileToText；upload 通用错误</td>
+<td>检查文件、网络和上传权限后重试；检查网络和文件后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">403</td>
+<td>合并消息下载失败</td>
+<td>downloadAndParseCombineMessage；downloadMessageAttachment</td>
+<td>稍后重试；持续失败时联系服务端排查</td>
+</tr>
+<tr>
+<td style="text-align:right">405</td>
+<td>附件文件过大</td>
+<td>sendMessage；upload 通用错误</td>
+<td>压缩文件或更换更小的文件后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">406</td>
+<td>附件内容不合规</td>
+<td>sendMessage</td>
+<td>更换合规文件后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">407</td>
+<td>附件已过期</td>
+<td>downloadMessageAttachment；voiceFileToText；voiceMessageToText</td>
+<td>根据错误原因修正后重试；更换合法语音文件后重试；传入浏览器 File 或小程序 MiniAppFile，并确保语音识别参数类型合法；传入带有效 url 的语音消息体，并确保 format、sampleRate、bitsPerSample、channels 类型合法</td>
+</tr>
+<tr>
+<td style="text-align:right">408</td>
+<td>语音时长超过限制</td>
+<td>voiceFileToText；voiceMessageToText</td>
+<td>缩短语音时长后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">409</td>
+<td>语音转文字失败</td>
+<td>voiceFileToText；voiceMessageToText</td>
+<td>稍后重试；如果持续失败，联系服务端排查</td>
+</tr>
+<tr>
+<td style="text-align:right">410</td>
+<td>语音文件不存在</td>
+<td>voiceMessageToText</td>
+<td>确认语音文件已上传且未过期；确认语音消息已成功上传且 url 有效</td>
+</tr>
+<tr>
+<td style="text-align:right">411</td>
+<td>语音文件过大</td>
+<td>voiceFileToText；voiceMessageToText</td>
+<td>压缩或缩短语音文件后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">500</td>
+<td>会话中无消息</td>
+<td>clearAllConversationUnreadMessageCount；clearConversationUnreadMessageCount；createCombineMessage；downloadAndParseCombineMessage；getGroupMessageReadUsers；sendMessage；message 通用错误</td>
+<td>修正请求参数或操作类型后重试；检查被合并消息的消息体和扩展字段是否合法；确认目标资源存在后重试；检查消息体、扩展字段和附件信息是否合法</td>
+</tr>
+<tr>
+<td style="text-align:right">501</td>
+<td>消息包含违规内容</td>
+<td>sendMessage</td>
+<td>修改消息内容后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">504</td>
+<td>超过撤回时间限制</td>
+<td>recallMessage</td>
+<td>降低用量或调整服务配额后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>Reaction 服务未开通</td>
+<td>addReaction；getHistoryMessages；getReactionDetail；getReactionList；getSupportedTranslationLanguages；recallMessage；另 6 个场景</td>
+<td>确认已开通对应服务后重试；在环信 Console 开通 Message Search 服务；在控制台开通对应服务后重试；开通服务后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">506</td>
+<td>消息已过期</td>
+<td>sendMessage</td>
+<td>重新创建消息后发送</td>
+</tr>
+<tr>
+<td style="text-align:right">507</td>
+<td>当前用户不在消息白名单中</td>
+<td>sendMessage</td>
+<td>联系管理员将当前用户加入白名单</td>
+</tr>
+<tr>
+<td style="text-align:right">508</td>
+<td>消息被外部逻辑拦截</td>
+<td>sendMessage</td>
+<td>根据业务审核规则调整消息，或联系服务端排查</td>
+</tr>
+<tr>
+<td style="text-align:right">509</td>
+<td>消息发送过于频繁</td>
+<td>sendMessage</td>
+<td>降低发送频率后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">510</td>
+<td>消息体超过大小限制</td>
+<td>sendMessage</td>
+<td>缩短消息内容、减少扩展字段或拆分消息后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">511</td>
+<td>消息编辑失败</td>
+<td>updateMessage</td>
+<td>稍后重试；持续失败时联系服务端排查</td>
+</tr>
+<tr>
+<td style="text-align:right">600</td>
+<td>groupId 无效</td>
+<td>getReactionList；joinGroup</td>
+<td>修正请求参数或操作类型后重试；检查并传入合法的 groupId</td>
+</tr>
+<tr>
+<td style="text-align:right">601</td>
+<td>已在该群组中</td>
+<td>joinGroup</td>
+<td>无需重复加入，直接使用现有群组上下文</td>
+</tr>
+<tr>
+<td style="text-align:right">602</td>
+<td>当前用户不在该群组中</td>
+<td>addReaction；joinGroup；leaveGroup；sendMessage；setGroupMemberAttributes</td>
+<td>确认关系与操作权限后重试；确认当前用户已加入目标群组；加入目标群组或聊天室后重试；确认目标用户已加入群组</td>
+</tr>
+<tr>
+<td style="text-align:right">603</td>
+<td>无权限的群组操作</td>
+<td>changeGroupOwner；deleteGroupSharedFile；destroyGroup；inviteUsersToGroup；joinGroup；leaveGroup；另 2 个场景</td>
+<td>传入有效的新群主成员 ID，并使用当前群主账号重试；使用群主、管理员或文件所有者账号重试；使用群主账号重试；使用有邀请权限的账号重试；等待管理员审批，或改用有权限的账号重试；先调用 changeGroupOwner 转让群主，再退出群组；检查群组角色和消息权限配置；确认当前用户权限与群组状态满足更新要求；使用群主或管理员账号重试</td>
+</tr>
+<tr>
+<td style="text-align:right">604</td>
+<td>群组成员超上限</td>
+<td>joinGroup</td>
+<td>清理群成员或提升群人数上限后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">605</td>
+<td>群共享文件 ID 无效</td>
+<td>deleteGroupSharedFile</td>
+<td>确认 fileId 正确且共享文件仍存在</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>changeGroupOwner；checkIfInGroupMuteList；createChatThread；deleteGroupSharedFile；destroyChatThread；destroyGroup；另 24 个场景</td>
+<td>确认 groupId 正确且群组仍存在；确认父群组和父消息仍存在后重试；确认子区 ID 正确且子区仍存在；确认父群组 ID 正确且群组仍存在；确认 groupIds 中的群组都存在；确认子区和目标成员关系仍存在</td>
+</tr>
+<tr>
+<td style="text-align:right">607</td>
+<td>群组已禁用</td>
+<td>destroyGroup；inviteUsersToGroup；joinGroup；sendMessage；updateGroupInfo</td>
+<td>确认群组状态后再重试；确认群组状态恢复正常后再重试；确认群组状态恢复正常后再尝试加入；恢复群组可用状态后重试；先恢复群组可用状态，再重试该操作</td>
+</tr>
+<tr>
+<td style="text-align:right">608</td>
+<td>群组名称无效</td>
+<td>createGroup；updateGroupInfo</td>
+<td>更换为合法群组名称后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">609</td>
+<td>群组成员属性个数超上限</td>
+<td>setGroupMemberAttributes</td>
+<td>减少成员属性条目数量后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">610</td>
+<td>群组成员属性更新失败</td>
+<td>setGroupMemberAttributes</td>
+<td>检查属性内容与当前群成员状态后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">611</td>
+<td>群组成员属性 key 长度超上限</td>
+<td>setGroupMemberAttributes</td>
+<td>缩短属性 key 后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">612</td>
+<td>群组成员属性 value 长度超上限</td>
+<td>setGroupMemberAttributes</td>
+<td>缩短属性 value 后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">613</td>
+<td>用户已被群禁言列表拦截</td>
+<td>joinGroup</td>
+<td>联系群主或管理员移出对应名单后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">700</td>
+<td>聊天室 ID 无效</td>
+<td>chatroom 通用错误</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:right">702</td>
+<td>未加入聊天室</td>
+<td>removeChatRoomAttribute；removeChatRoomAttributes；setChatRoomAttribute；setChatRoomAttributes；chatroom 通用错误</td>
+<td>先加入聊天室后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">703</td>
+<td>聊天室属性权限拒绝</td>
+<td>removeChatRoomAttribute；removeChatRoomAttributes；setChatRoomAttribute；setChatRoomAttributes；chatroom 通用错误</td>
+<td>仅删除自己创建的属性，或使用 forced 模式；仅修改自己创建的属性，或使用 forced 模式覆盖</td>
+</tr>
+<tr>
+<td style="text-align:right">704</td>
+<td>聊天室成员已满</td>
+<td>joinChatRoom；chatroom 通用错误</td>
+<td>等待其他成员退出后重试，或联系聊天室管理员提升上限</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>addChatRoomMembers；addUsersToChatRoomAllowlist；blockChatRoomMembers；checkIfInChatRoomAllowList；deleteChatRoomSharedFile；destroyChatRoom；chatroom 通用错误；另 23 个场景</td>
+<td>确认 chatRoomId 正确且聊天室仍存在；确认 chatRoomId 与 fileId 正确且资源仍存在</td>
+</tr>
+<tr>
+<td style="text-align:right">706</td>
+<td>聊天室所有者不允许退出</td>
+<td>chatroom 通用错误</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:right">707</td>
+<td>用户在聊天室黑名单中</td>
+<td>joinChatRoom；chatroom 通用错误</td>
+<td>联系聊天室管理员将用户从黑名单移除</td>
+</tr>
+<tr>
+<td style="text-align:right">900</td>
+<td>批量查询用户数超限</td>
+<td>getUserInfoByAttribute；getUserInfoByUserId</td>
+<td>减少单次查询的用户数量后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">901</td>
+<td>用户资料数据长度超限</td>
+<td>updateOwnUserInfo</td>
+<td>缩短资料字段内容后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1000</td>
+<td>添加联系人失败：已是好友</td>
+<td>addContact</td>
+<td>根据错误原因修正后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1001</td>
+<td>邀请方联系人数量已达上限</td>
+<td>acceptContactInvite；addContact</td>
+<td>删除不再使用的联系人后重试；删除不再使用的联系人后重试，或联系服务端提升配额</td>
+</tr>
+<tr>
+<td style="text-align:right">1002</td>
+<td>被邀请方联系人数量已达上限</td>
+<td>acceptContactInvite；addContact</td>
+<td>联系对方清理联系人列表</td>
+</tr>
+<tr>
+<td style="text-align:right">1100</td>
+<td>参数长度超限</td>
+<td>getPresenceStatus；getSubscribedPresenceList；publishPresence；subscribePresences；unsubscribePresence</td>
+<td>减少单次查询的用户数量；调整 pageNum 或 pageSize 后重试；缩短 customStatus 后重试；减少单次订阅的用户数量；减少单次取消订阅的用户数量</td>
+</tr>
+<tr>
+<td style="text-align:right">1101</td>
+<td>不能订阅自己的在线状态</td>
+<td>subscribePresences</td>
+<td>从订阅列表中移除当前用户</td>
+</tr>
+<tr>
+<td style="text-align:right">1110</td>
+<td>目标语言不合法</td>
+<td>translateMessage</td>
+<td>修正请求参数或操作类型后重试；根据错误原因修正后重试；仅传入包含非空文本内容的文本消息，并指定至少一个合法目标语言代码</td>
+</tr>
+<tr>
+<td style="text-align:right">1111</td>
+<td>翻译服务未开通</td>
+<td>translateMessage</td>
+<td>确认已开通对应服务后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1112</td>
+<td>翻译服务配额已达上限</td>
+<td>translateMessage</td>
+<td>降低用量或调整服务配额后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1113</td>
+<td>翻译服务异常</td>
+<td>translateMessage</td>
+<td>稍后重试；持续失败时联系服务端排查</td>
+</tr>
+<tr>
+<td style="text-align:right">1200</td>
+<td>第三方内容审核拒绝</td>
+<td>sendMessage</td>
+<td>修改消息内容后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1299</td>
+<td>第三方服务拒绝消息</td>
+<td>sendMessage</td>
+<td>检查 details.reason，并联系对应第三方服务排查</td>
+</tr>
+<tr>
+<td style="text-align:right">1300</td>
+<td>Reaction 数量达到上限</td>
+<td>addReaction</td>
+<td>降低用量或调整服务配额后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1301</td>
+<td>当前用户已经操作过该 Reaction</td>
+<td>addReaction</td>
+<td>根据错误原因修正后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1302</td>
+<td>Reaction 操作非法</td>
+<td>addReaction；getReactionDetail；removeReaction</td>
+<td>修正请求参数或操作类型后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1500</td>
+<td>Push token 上传失败</td>
+<td>uploadPushToken；push 通用错误</td>
+<td>检查登录态、deviceToken 与 notifierName 后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1501</td>
+<td>免打扰设置失败</td>
+<td>clearConversationRemindType；getConversationSilentMode；getConversationSilentModes；getGlobalSilentMode；setConversationSilentMode；setGlobalSilentMode；push 通用错误</td>
+<td>根据错误原因修正后重试；检查免打扰参数后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1502</td>
+<td>推送翻译语言设置失败</td>
+<td>getPushLanguage；setPushLanguage；push 通用错误</td>
+<td>根据错误原因修正后重试；检查语言参数后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1600</td>
+<td>订阅人数超限</td>
+<td>getSubscribedUsers；subscribeUsersInfo；unsubscribeUsersInfo</td>
+<td>减少单次订阅的目标用户数量后重试</td>
+</tr>
+<tr>
+<td style="text-align:right">1601</td>
+<td>目标用户被订阅人数超限</td>
+<td>getSubscribedUsers；subscribeUsersInfo；unsubscribeUsersInfo</td>
+<td>更换订阅目标或稍后重试</td>
+</tr>
+</tbody>
+</table>
+<a id="api-专属错误" class="tsd-anchor"></a><h2 class="tsd-anchor-link">API 专属错误<a href="#api-专属错误" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>本节按 API 分组列出服务端业务错误到公开 <code>SDKError.code</code> 的映射。</p>
+<p><strong>updateGroupAnnouncement</strong></p>
+<p>更新群公告</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：群公告长度超限</td>
+<td>403</td>
+<td>缩短公告内容后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：群公告长度超限</td>
+<td>403</td>
+<td>缩短公告内容后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>updateOwnUserInfo</strong></p>
+<p>更新当前用户资料</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>至少传入一个可更新字段，并确保字段值类型合法</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>仅使用支持的资料属性，并确保属性值类型合法</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">901</td>
+<td>用户资料数据长度超限</td>
+<td>403</td>
+<td>缩短资料字段内容后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认用户已注册</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>429</td>
+<td>降低请求频率后重试</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getUserInfoByUserId</strong></p>
+<p>批量获取用户资料</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入非空用户 ID 数组，并确保每个用户 ID 都是非空字符串</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">900</td>
+<td>批量查询用户数超限</td>
+<td>400</td>
+<td>减少单次查询的用户数量后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认用户 ID 正确</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>429</td>
+<td>降低请求频率后重试</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getUserInfoByAttribute</strong></p>
+<p>按属性批量获取用户资料</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入非空用户 ID 数组和非空资料属性数组，并确保属性名属于支持范围</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">900</td>
+<td>批量查询用户数超限</td>
+<td>400</td>
+<td>减少单次查询的用户数量后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认用户 ID 正确</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>429</td>
+<td>降低请求频率后重试</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>subscribeUsersInfo</strong></p>
+<p>订阅陌生人资料变化</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">202</td>
+<td>用户鉴权失败</td>
+<td>401</td>
+<td>刷新 token 后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>服务未开通或无权限</td>
+<td>403</td>
+<td>检查服务开通状态与账号权限后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1600</td>
+<td>订阅人数超限</td>
+<td>400</td>
+<td>减少单次订阅的目标用户数量后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1601</td>
+<td>目标用户被订阅人数超限</td>
+<td>400</td>
+<td>更换订阅目标或稍后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>429</td>
+<td>降低请求频率后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误：服务端内部错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>unsubscribeUsersInfo</strong></p>
+<p>取消订阅陌生人资料变化</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">202</td>
+<td>用户鉴权失败</td>
+<td>401</td>
+<td>刷新 token 后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>服务未开通或无权限</td>
+<td>403</td>
+<td>检查服务开通状态与账号权限后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1600</td>
+<td>订阅人数超限</td>
+<td>400</td>
+<td>减少单次订阅的目标用户数量后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1601</td>
+<td>目标用户被订阅人数超限</td>
+<td>400</td>
+<td>更换订阅目标或稍后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>429</td>
+<td>降低请求频率后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误：服务端内部错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getSubscribedUsers</strong></p>
+<p>查询已订阅陌生人资料变化列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">202</td>
+<td>用户鉴权失败</td>
+<td>401</td>
+<td>刷新 token 后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>服务未开通或无权限</td>
+<td>403</td>
+<td>检查服务开通状态与账号权限后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1600</td>
+<td>订阅人数超限</td>
+<td>400</td>
+<td>减少单次订阅的目标用户数量后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1601</td>
+<td>目标用户被订阅人数超限</td>
+<td>400</td>
+<td>更换订阅目标或稍后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>429</td>
+<td>降低请求频率后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误：服务端内部错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>addContact</strong></p>
+<p>添加联系人</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入非空字符串 userId；message 如需传入也必须是字符串</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认用户 ID 正确</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1000</td>
+<td>添加联系人失败：已是好友</td>
+<td>-</td>
+<td>根据错误原因修正后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：被对方拉黑</td>
+<td>-</td>
+<td>根据错误原因修正后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1001</td>
+<td>邀请方联系人数量已达上限</td>
+<td>403</td>
+<td>删除不再使用的联系人后重试，或联系服务端提升配额</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1002</td>
+<td>被邀请方联系人数量已达上限</td>
+<td>403</td>
+<td>联系对方清理联系人列表</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>deleteContact</strong></p>
+<p>删除联系人</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入非空字符串 userId</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认用户 ID 正确</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>acceptContactInvite</strong></p>
+<p>接受联系人申请</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入非空字符串 userId</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认用户 ID 正确</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1001</td>
+<td>邀请方联系人数量已达上限</td>
+<td>403</td>
+<td>删除不再使用的联系人后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1002</td>
+<td>被邀请方联系人数量已达上限</td>
+<td>403</td>
+<td>联系对方清理联系人列表</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>declineContactInvite</strong></p>
+<p>拒绝联系人申请</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入非空字符串 userId</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认用户 ID 正确</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>setContactRemark</strong></p>
+<p>设置联系人备注</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入非空字符串 userId，并确保 remark 为字符串；可传空字符串清空备注</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">223</td>
+<td>非好友不能设置备注</td>
+<td>400</td>
+<td>先添加好友再设置备注</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>备注长度超限</td>
+<td>400</td>
+<td>缩短备注内容后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>addUsersToBlocklist</strong></p>
+<p>添加黑名单</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入至少一个非空字符串 userId；重复值会由 SDK 去重</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>黑名单添加失败：目标用户不存在</td>
+<td>404</td>
+<td>确认用户 ID 正确</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>黑名单数量已达上限</td>
+<td>400</td>
+<td>移除不再需要的黑名单用户后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>removeUserFromBlocklist</strong></p>
+<p>移除黑名单</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入至少一个非空字符串 userId；重复值会由 SDK 去重</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>createGroup</strong></p>
+<p>创建群组</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：缺少创建群组必填参数</td>
+<td>400</td>
+<td>检查创建群组请求体，补齐必填字段并修正字段格式</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：群组参数不合法</td>
+<td>400</td>
+<td>更换冲突参数，并确保请求字段长度与取值范围合法</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制：群组数量或成员数量超限</td>
+<td>403</td>
+<td>减少创建或加入数量，或联系服务端提升限制</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">608</td>
+<td>群组名称无效</td>
+<td>403</td>
+<td>更换为合法群组名称后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认 memberIds 中的用户都已存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupInfo</strong></p>
+<p>获取群组详情</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupInfoList</strong></p>
+<p>批量获取群组详情</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupIds 中的群组都存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>updateGroupInfo</strong></p>
+<p>更新群组信息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">603</td>
+<td>无权限的群组操作</td>
+<td>403</td>
+<td>使用群主或管理员账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">603</td>
+<td>无权限的群组操作</td>
+<td>403</td>
+<td>确认当前用户权限与群组状态满足更新要求</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：群组字段不支持修改</td>
+<td>400</td>
+<td>仅提交允许修改的字段，并确保字段长度合法</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：群组字段长度超限</td>
+<td>403</td>
+<td>缩短本次提交的群组字段内容后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">608</td>
+<td>群组名称无效</td>
+<td>403</td>
+<td>更换为合法群组名称后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">607</td>
+<td>群组已禁用</td>
+<td>403</td>
+<td>先恢复群组可用状态，再重试该操作</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>changeGroupOwner</strong></p>
+<p>转让群主</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">603</td>
+<td>无权限的群组操作</td>
+<td>403</td>
+<td>传入有效的新群主成员 ID，并使用当前群主账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>destroyGroup</strong></p>
+<p>解散群组</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">603</td>
+<td>无权限的群组操作</td>
+<td>403</td>
+<td>使用群主账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">607</td>
+<td>群组已禁用</td>
+<td>403</td>
+<td>确认群组状态后再重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>leaveGroup</strong></p>
+<p>退出群组</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">602</td>
+<td>用户未加入该群组</td>
+<td>-</td>
+<td>确认当前用户已加入目标群组</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">603</td>
+<td>群主不能退出群组</td>
+<td>403</td>
+<td>先调用 changeGroupOwner 转让群主，再退出群组</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatRoomInfo</strong></p>
+<p>获取聊天室详情</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>updateChatRoomInfo</strong></p>
+<p>更新聊天室信息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：需要聊天室管理员权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：聊天室信息长度或范围超限</td>
+<td>403</td>
+<td>缩短名称/描述，或传入允许范围内的 maxMembers</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：聊天室字段不支持修改</td>
+<td>400</td>
+<td>仅提交 name、description、maxMembers 等允许修改的字段</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>destroyChatRoom</strong></p>
+<p>销毁聊天室</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：需要聊天室所有者权限</td>
+<td>401</td>
+<td>使用聊天室 owner 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>joinChatRoom</strong></p>
+<p>加入聊天室</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制：加入聊天室数量超限</td>
+<td>403</td>
+<td>退出不再使用的聊天室后重试，或联系服务端提升限制</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">704</td>
+<td>聊天室成员已满</td>
+<td>403</td>
+<td>等待其他成员退出后重试，或联系聊天室管理员提升上限</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">707</td>
+<td>用户在聊天室黑名单中</td>
+<td>403</td>
+<td>联系聊天室管理员将用户从黑名单移除</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>leaveChatRoom</strong></p>
+<p>退出聊天室</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatRoomMemberList</strong></p>
+<p>获取聊天室成员列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>addChatRoomMembers</strong></p>
+<p>添加聊天室成员</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：聊天室成员参数不合法</td>
+<td>400</td>
+<td>检查 userIds 列表，确保为非空合法用户 ID</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有添加聊天室成员的权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认 userIds 中的用户都已存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>removeChatRoomMembers</strong></p>
+<p>移除聊天室成员</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有移除聊天室成员的权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatRoomAdminList</strong></p>
+<p>获取聊天室管理员列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>setChatRoomAdmin</strong></p>
+<p>设置聊天室管理员</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：只有聊天室所有者可设置管理员</td>
+<td>401</td>
+<td>使用聊天室 owner 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认 userId 对应用户存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>removeChatRoomAdmin</strong></p>
+<p>移除聊天室管理员</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：只有聊天室所有者可移除管理员</td>
+<td>401</td>
+<td>使用聊天室 owner 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatRoomMuteList</strong></p>
+<p>获取聊天室禁言列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>muteChatRoomMembers</strong></p>
+<p>禁言聊天室成员</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：聊天室禁言参数不合法</td>
+<td>400</td>
+<td>检查 userIds 与 muteDuration，确保传入有效值</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有禁言聊天室成员的权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>unmuteChatRoomMembers</strong></p>
+<p>解除聊天室成员禁言</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有解除聊天室成员禁言的权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>muteAllChatRoomMembers</strong></p>
+<p>开启聊天室全员禁言</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有开启全员禁言的权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>unmuteAllChatRoomMembers</strong></p>
+<p>关闭聊天室全员禁言</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有关闭全员禁言的权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>isCurrentUserMutedInChatRoom</strong></p>
+<p>查询当前用户聊天室禁言状态</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatRoomBlocklist</strong></p>
+<p>获取聊天室黑名单</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>blockChatRoomMembers</strong></p>
+<p>添加聊天室黑名单</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有添加聊天室黑名单的权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认 userIds 中的用户都已存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>unblockChatRoomMembers</strong></p>
+<p>移除聊天室黑名单</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有移除聊天室黑名单的权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatRoomAllowlist</strong></p>
+<p>获取聊天室 allowlist</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>addUsersToChatRoomAllowlist</strong></p>
+<p>添加聊天室 allowlist</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有添加聊天室 allowlist 的权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认 userIds 中的用户都已存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>removeUsersFromChatRoomAllowlist</strong></p>
+<p>移除聊天室 allowlist</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有移除聊天室 allowlist 的权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>checkIfInChatRoomAllowList</strong></p>
+<p>查询当前用户是否在聊天室 allowlist 中</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatRoomAnnouncement</strong></p>
+<p>获取聊天室公告</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>updateChatRoomAnnouncement</strong></p>
+<p>更新聊天室公告</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：需要聊天室管理员权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：聊天室公告长度超限</td>
+<td>403</td>
+<td>缩短公告内容后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatRoomSharedFileList</strong></p>
+<p>获取聊天室共享文件列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>deleteChatRoomSharedFile</strong></p>
+<p>删除聊天室共享文件</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：没有删除聊天室共享文件的权限</td>
+<td>401</td>
+<td>使用聊天室 owner/admin 账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 与 fileId 正确且资源仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatRoomAttributes</strong></p>
+<p>获取聊天室属性</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：属性 key 列表不合法</td>
+<td>400</td>
+<td>确保 keys 为合法非空字符串数组，或省略 keys 获取全部属性</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">705</td>
+<td>聊天室不存在</td>
+<td>404</td>
+<td>确认 chatRoomId 正确且聊天室仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>setChatRoomAttributes</strong></p>
+<p>设置聊天室属性</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：聊天室属性数量或字段不合法</td>
+<td>400</td>
+<td>确保每次设置的属性数量不超过限制，且 key/value 均为合法字符串</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">702</td>
+<td>未加入聊天室</td>
+<td>400</td>
+<td>先加入聊天室后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">703</td>
+<td>聊天室属性权限拒绝</td>
+<td>400</td>
+<td>仅修改自己创建的属性，或使用 forced 模式覆盖</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>聊天室属性数量或总量超限</td>
+<td>400</td>
+<td>删除不再使用的属性后重试，或联系服务端提升配额</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：聊天室属性写入被拒绝</td>
+<td>401</td>
+<td>确认当前用户已加入聊天室，并仅修改自己有权限操作的属性</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>setChatRoomAttribute</strong></p>
+<p>设置单个聊天室属性</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：聊天室属性字段不合法</td>
+<td>400</td>
+<td>确保 key/value 为合法非空字符串</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">702</td>
+<td>未加入聊天室</td>
+<td>400</td>
+<td>先加入聊天室后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">703</td>
+<td>聊天室属性权限拒绝</td>
+<td>400</td>
+<td>仅修改自己创建的属性，或使用 forced 模式覆盖</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>聊天室属性数量或总量超限</td>
+<td>400</td>
+<td>删除不再使用的属性后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：聊天室属性写入被拒绝</td>
+<td>401</td>
+<td>确认当前用户已加入聊天室，并仅修改自己有权限操作的属性</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>removeChatRoomAttributes</strong></p>
+<p>删除聊天室属性</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：聊天室属性 key 列表不合法</td>
+<td>400</td>
+<td>确保每次删除的属性数量不超过限制，且 keys 为合法非空字符串数组</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">702</td>
+<td>未加入聊天室</td>
+<td>400</td>
+<td>先加入聊天室后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">703</td>
+<td>聊天室属性权限拒绝</td>
+<td>400</td>
+<td>仅删除自己创建的属性，或使用 forced 模式</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>聊天室属性操作超限</td>
+<td>400</td>
+<td>减少单次操作的属性数量</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：聊天室属性删除被拒绝</td>
+<td>401</td>
+<td>确认当前用户已加入聊天室，并仅删除自己有权限操作的属性</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>removeChatRoomAttribute</strong></p>
+<p>删除单个聊天室属性</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：聊天室属性 key 不合法</td>
+<td>400</td>
+<td>确保 key 为合法非空字符串</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">702</td>
+<td>未加入聊天室</td>
+<td>400</td>
+<td>先加入聊天室后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">703</td>
+<td>聊天室属性权限拒绝</td>
+<td>400</td>
+<td>仅删除自己创建的属性，或使用 forced 模式</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>聊天室属性操作超限</td>
+<td>400</td>
+<td>减少操作频率</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限：聊天室属性删除被拒绝</td>
+<td>401</td>
+<td>确认当前用户已加入聊天室，并仅删除自己有权限操作的属性</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>joinGroup</strong></p>
+<p>加入群组</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">600</td>
+<td>群组 ID 无效</td>
+<td>-</td>
+<td>检查并传入合法的 groupId</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">601</td>
+<td>已在该群组中</td>
+<td>-</td>
+<td>无需重复加入，直接使用现有群组上下文</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">602</td>
+<td>用户未加入该群组</td>
+<td>-</td>
+<td>确认当前用户已加入目标群组</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">603</td>
+<td>无权限的群组操作</td>
+<td>403</td>
+<td>等待管理员审批，或改用有权限的账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">604</td>
+<td>群组成员超上限</td>
+<td>403</td>
+<td>清理群成员或提升群人数上限后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">607</td>
+<td>群组已禁用</td>
+<td>-</td>
+<td>确认群组状态恢复正常后再尝试加入</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">613</td>
+<td>用户已被群禁言列表拦截</td>
+<td>403</td>
+<td>联系群主或管理员移出对应名单后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>inviteUsersToGroup</strong></p>
+<p>邀请用户入群</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">603</td>
+<td>无权限的群组操作</td>
+<td>400</td>
+<td>使用有邀请权限的账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">204</td>
+<td>用户不存在</td>
+<td>404</td>
+<td>确认 userIds 中的用户都已存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>-</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">607</td>
+<td>群组已禁用</td>
+<td>-</td>
+<td>确认群组状态恢复正常后再重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupMemberList</strong></p>
+<p>获取群成员列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupAdminList</strong></p>
+<p>获取群管理员列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupMuteList</strong></p>
+<p>获取群禁言列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>checkIfInGroupMuteList</strong></p>
+<p>查询当前用户群组禁言状态</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupBlocklist</strong></p>
+<p>获取群黑名单</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupAllowlist</strong></p>
+<p>获取群 allowlist</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupAnnouncement</strong></p>
+<p>获取群公告</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupSharedFileList</strong></p>
+<p>获取群共享文件列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>deleteGroupSharedFile</strong></p>
+<p>删除群共享文件</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">603</td>
+<td>无权限的群组操作</td>
+<td>-</td>
+<td>使用群主、管理员或文件所有者账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">605</td>
+<td>群共享文件 ID 无效</td>
+<td>-</td>
+<td>确认 fileId 正确且共享文件仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>-</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>setGroupMemberAttributes</strong></p>
+<p>设置群成员属性</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">609</td>
+<td>群组成员属性个数超上限</td>
+<td>-</td>
+<td>减少成员属性条目数量后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">610</td>
+<td>群组成员属性更新失败</td>
+<td>-</td>
+<td>检查属性内容与当前群成员状态后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">611</td>
+<td>群组成员属性 key 长度超上限</td>
+<td>-</td>
+<td>缩短属性 key 后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">612</td>
+<td>群组成员属性 value 长度超上限</td>
+<td>-</td>
+<td>缩短属性 value 后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">602</td>
+<td>用户未加入该群组</td>
+<td>404</td>
+<td>确认目标用户已加入群组</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限设置群成员属性</td>
+<td>401</td>
+<td>确认当前用户有权限操作目标成员属性</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限设置群成员属性</td>
+<td>403</td>
+<td>确认当前用户有权限操作目标成员属性</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>400</td>
+<td>减少操作频率或联系服务端提升配额</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">305</td>
+<td>服务已禁用</td>
+<td>403</td>
+<td>联系服务端开通群成员属性服务</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupMembersAttributes</strong></p>
+<p>批量获取群成员属性</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>-</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>sendMessage</strong></p>
+<p>发送消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>消息发送已取消</td>
+<td>-</td>
+<td>确认 SDK 实例仍有效；如为用户主动取消，无需重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">100</td>
+<td>App Key 不合法</td>
+<td>-</td>
+<td>检查 SDK 初始化使用的 appKey</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>通过 ChatManager 的 create*Message 方法创建消息，确保发送者与当前用户一致，并检查附件数据和上传配置</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">300</td>
+<td>服务器不可达</td>
+<td>-</td>
+<td>等待连接成功后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>消息发送超时</td>
+<td>-</td>
+<td>检查网络连接后重试；重试前可根据 msgLocalId 查询业务侧发送状态</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>消息发送失败</td>
+<td>-</td>
+<td>检查 details.serverCode 和 details.reason；若持续出现，请联系技术支持</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">402</td>
+<td>附件上传失败</td>
+<td>-</td>
+<td>检查文件、网络和上传权限后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">405</td>
+<td>附件文件过大</td>
+<td>-</td>
+<td>压缩文件或更换更小的文件后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">406</td>
+<td>附件内容不合规</td>
+<td>-</td>
+<td>更换合规文件后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">500</td>
+<td>消息异常：编码失败</td>
+<td>-</td>
+<td>检查消息体、扩展字段和附件信息是否合法</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>消息发送超过服务限制</td>
+<td>-</td>
+<td>降低发送频率、减少定向用户数量，或联系服务端提升配额</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">108</td>
+<td>Token 已过期</td>
+<td>-</td>
+<td>刷新 Token 并重新登录后发送</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">202</td>
+<td>消息发送鉴权失败</td>
+<td>-</td>
+<td>重新获取有效 Token 并登录</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限执行消息操作</td>
+<td>-</td>
+<td>检查账号权限、会话关系和服务开通状态</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">213</td>
+<td>当前登录态绑定到其他设备</td>
+<td>-</td>
+<td>检查多设备登录策略和设备绑定关系后重新登录</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">214</td>
+<td>登录设备数超过限制</td>
+<td>-</td>
+<td>退出其他设备或联系服务端提升设备数限制</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">215</td>
+<td>用户在群组或聊天室中被禁言</td>
+<td>-</td>
+<td>等待禁言解除或联系群组/聊天室管理员</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">219</td>
+<td>用户被全局禁言</td>
+<td>-</td>
+<td>联系管理员解除全局禁言</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">220</td>
+<td>当前登录设备发生变化</td>
+<td>-</td>
+<td>检查设备标识并重新登录</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">221</td>
+<td>非好友禁止发送消息</td>
+<td>-</td>
+<td>先添加对方为联系人，或调整应用的陌生人消息策略</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">222</td>
+<td>消息发送失败：被接收方拉黑</td>
+<td>-</td>
+<td>停止重试，并提示用户检查与接收方的关系状态</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">305</td>
+<td>消息服务不可用</td>
+<td>-</td>
+<td>检查控制台服务开通状态或联系技术支持</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">501</td>
+<td>消息包含违规内容</td>
+<td>-</td>
+<td>修改消息内容后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>相关消息服务未开通</td>
+<td>-</td>
+<td>在控制台开通对应服务后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">506</td>
+<td>消息已过期</td>
+<td>-</td>
+<td>重新创建消息后发送</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">507</td>
+<td>当前用户不在消息白名单中</td>
+<td>-</td>
+<td>联系管理员将当前用户加入白名单</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">508</td>
+<td>消息被外部逻辑拦截</td>
+<td>-</td>
+<td>根据业务审核规则调整消息，或联系服务端排查</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">509</td>
+<td>消息发送过于频繁</td>
+<td>-</td>
+<td>降低发送频率后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">510</td>
+<td>消息体超过大小限制</td>
+<td>-</td>
+<td>缩短消息内容、减少扩展字段或拆分消息后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">602</td>
+<td>当前用户不在群组或聊天室中</td>
+<td>-</td>
+<td>加入目标群组或聊天室后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">603</td>
+<td>无群组消息操作权限</td>
+<td>-</td>
+<td>检查群组角色和消息权限配置</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>-</td>
+<td>确认 groupId 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">607</td>
+<td>群组已禁用</td>
+<td>-</td>
+<td>恢复群组可用状态后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1200</td>
+<td>第三方内容审核拒绝</td>
+<td>-</td>
+<td>修改消息内容后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1299</td>
+<td>第三方服务拒绝消息</td>
+<td>-</td>
+<td>检查 details.reason，并联系对应第三方服务排查</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>createTextMessage</strong></p>
+<p>创建文本消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法的 conversationId、conversationType 和非空 content；receiverList 仅用于群聊或聊天室，needReadReceipt 不支持 chatRoom</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>createImageMessage</strong></p>
+<p>创建图片消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>至少传入 data 或 originalUrl，并确保图片元数据为合法类型和值</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>createFileMessage</strong></p>
+<p>创建文件消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>至少传入 data 或 originalUrl，并确保文件元数据合法</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>createVoiceMessage</strong></p>
+<p>创建语音消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>至少传入 data 或 originalUrl，并传入大于 0 的 duration</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>createVideoMessage</strong></p>
+<p>创建视频消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>至少传入 data 或 originalUrl，并传入大于 0 的 duration</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>createLocationMessage</strong></p>
+<p>创建位置消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法的 conversationId、conversationType、latitude 和 longitude</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>createCmdMessage</strong></p>
+<p>创建命令消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法的 conversationId、conversationType 和非空 action</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>createCustomMessage</strong></p>
+<p>创建自定义消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法的 conversationId、conversationType 和非空 event；params 使用字符串键值</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>createCombineMessage</strong></p>
+<p>创建合并消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法的标题、摘要和 1 到 300 条可合并消息</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>-</td>
+<td>减少合并消息嵌套层级后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">500</td>
+<td>消息异常：编码失败</td>
+<td>-</td>
+<td>检查被合并消息的消息体和扩展字段是否合法</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>publishPresence</strong></p>
+<p>发布在线状态</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1100</td>
+<td>发布自定义在线状态时，参数长度超出限制</td>
+<td>400</td>
+<td>缩短 customStatus 后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>subscribePresences</strong></p>
+<p>订阅在线状态</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1101</td>
+<td>不能订阅自己的在线状态</td>
+<td>400</td>
+<td>从订阅列表中移除当前用户</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1100</td>
+<td>参数长度超限</td>
+<td>400</td>
+<td>减少单次订阅的用户数量</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>unsubscribePresence</strong></p>
+<p>取消订阅在线状态</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1100</td>
+<td>参数长度超限</td>
+<td>400</td>
+<td>减少单次取消订阅的用户数量</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getSubscribedPresenceList</strong></p>
+<p>查询在线状态订阅列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1100</td>
+<td>参数长度超限</td>
+<td>400</td>
+<td>调整 pageNum 或 pageSize 后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getPresenceStatus</strong></p>
+<p>查询在线状态</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1100</td>
+<td>参数长度超限</td>
+<td>400</td>
+<td>减少单次查询的用户数量</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>setGlobalSilentMode</strong></p>
+<p>设置全局免打扰</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>按 REMIND_TYPE、DURATION 或 INTERVAL 选择一种规则模式，并传入对应必填字段</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1501</td>
+<td>免打扰设置失败</td>
+<td>400</td>
+<td>检查免打扰参数后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>setConversationSilentMode</strong></p>
+<p>设置会话免打扰</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法会话 ID、会话类型，并按 REMIND_TYPE、DURATION 或 INTERVAL 选择一种规则模式</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1501</td>
+<td>免打扰设置失败</td>
+<td>400</td>
+<td>检查免打扰参数后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>setPushLanguage</strong></p>
+<p>设置推送语言</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入非空语言标识，例如 zh-Hans 或 en</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1502</td>
+<td>推送翻译语言设置失败</td>
+<td>400</td>
+<td>检查语言参数后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>uploadPushToken</strong></p>
+<p>上传推送 token</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入非空 deviceId、deviceToken 和 notifierName</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1500</td>
+<td>Push token 上传失败</td>
+<td>400</td>
+<td>检查登录态、deviceToken 与 notifierName 后重试</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGlobalSilentMode</strong></p>
+<p>获取全局免打扰</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1501</td>
+<td>免打扰设置失败</td>
+<td>-</td>
+<td>根据错误原因修正后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getConversationSilentMode</strong></p>
+<p>获取会话免打扰</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法会话 ID，并使用 singleChat 或 groupChat</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1501</td>
+<td>免打扰设置失败</td>
+<td>-</td>
+<td>根据错误原因修正后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>clearConversationRemindType</strong></p>
+<p>清除会话提醒类型</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法会话 ID，并使用 singleChat 或 groupChat</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1501</td>
+<td>免打扰设置失败</td>
+<td>-</td>
+<td>根据错误原因修正后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getConversationSilentModes</strong></p>
+<p>批量获取会话免打扰</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入 1 到 20 个会话，并确保每项包含非空 id 与 singleChat/groupChat 类型</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1501</td>
+<td>免打扰设置失败</td>
+<td>-</td>
+<td>根据错误原因修正后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getConversationListByRemindType</strong></p>
+<p>分页获取免打扰会话</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入正整数 pageSize，并使用上一次返回的 cursor</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getConversationList</strong></p>
+<p>获取会话列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>使用 SDK 上一次返回的 cursor，并确保 pageSize 为正整数、includeEmptyConversations 为布尔值</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getPinnedConversationList</strong></p>
+<p>获取置顶会话列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>使用 SDK 上一次返回的 cursor，并确保 pageSize 为正整数、includeEmptyConversations 为布尔值</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getConversationListByMark</strong></p>
+<p>按标记获取会话列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入 0 到 19 之间的整数 mark，并使用合法分页参数</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>deleteConversation</strong></p>
+<p>删除会话</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法会话 ID、会话类型，并确保 deleteRoamingMessages 为布尔值</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>setConversationPinned</strong></p>
+<p>设置会话置顶</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法会话 ID、会话类型，并确保 pinned 为布尔值</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>addConversationMark</strong></p>
+<p>添加会话标记</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法 mark，并确保 conversations 为非空数组或传入单个合法会话</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>removeConversationMark</strong></p>
+<p>移除会话标记</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法 mark，并确保 conversations 为非空数组或传入单个合法会话</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>searchMessages</strong></p>
+<p>服务端消息搜索</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>检查关键词列表（非空、最多5个、每个≤150字符）、conversationId/conversationType 须配对使用、startTime/endTime 须同时提供</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>搜索参数错误</td>
+<td>400</td>
+<td>检查请求参数是否符合搜索接口要求</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">202</td>
+<td>token 无效或过期</td>
+<td>401</td>
+<td>重新登录获取有效 token</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>消息搜索服务未开通</td>
+<td>403</td>
+<td>在环信 Console 开通 Message Search 服务</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>appKey 对应应用不存在</td>
+<td>404</td>
+<td>确认 appKey 配置正确</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务端内部错误或索引服务不可用</td>
+<td>500</td>
+<td>稍后重试，若持续失败请联系技术支持</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>createChatThread</strong></p>
+<p>创建子区</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入有效的父群组 ID、子区名称和父消息 ID</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>用户未登录</td>
+<td>401</td>
+<td>重新登录后再创建子区</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限创建子区</td>
+<td>403</td>
+<td>确认当前用户已加入父群组，并检查控制台 Thread 能力开通状态</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组或父消息不存在</td>
+<td>404</td>
+<td>确认父群组和父消息仍存在后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>400</td>
+<td>减少创建频率，清理不需要的子区，或联系服务端提升配额</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>504</td>
+<td>稍后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatThreadList</strong></p>
+<p>获取子区列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入有效的父群组 ID、分页大小和游标</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>用户未登录</td>
+<td>401</td>
+<td>重新登录后再查询子区列表</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限查询子区列表</td>
+<td>403</td>
+<td>确认当前用户已加入父群组</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认父群组 ID 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>504</td>
+<td>稍后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getJoinedChatThreadList</strong></p>
+<p>获取已加入子区列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入有效的分页参数；如指定 parentId，应传入非空字符串</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>用户未登录</td>
+<td>401</td>
+<td>重新登录后再查询已加入子区</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限查询已加入子区</td>
+<td>403</td>
+<td>确认当前用户已加入目标群组</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>群组不存在</td>
+<td>404</td>
+<td>确认父群组 ID 正确且群组仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>504</td>
+<td>稍后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatThreadInfo</strong></p>
+<p>获取子区详情</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入有效的子区 ID</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>通过有效的 chatThreadId 创建 ChatThread 实体</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>通过有效的 chatThreadId 创建 ChatThread 实体</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>用户未登录</td>
+<td>401</td>
+<td>重新登录后再查询子区详情</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限查询子区详情</td>
+<td>403</td>
+<td>确认当前用户已加入父群组或目标子区</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>子区不存在</td>
+<td>404</td>
+<td>确认子区 ID 正确且子区仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>504</td>
+<td>稍后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>joinChatThread</strong></p>
+<p>加入子区</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入有效的子区 ID</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>通过有效的 chatThreadId 创建 ChatThread 实体</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>用户未登录</td>
+<td>401</td>
+<td>重新登录后再加入子区</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限加入子区</td>
+<td>403</td>
+<td>确认当前用户已加入父群组且目标子区可加入</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>子区不存在</td>
+<td>404</td>
+<td>确认子区 ID 正确且子区仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>400</td>
+<td>减少操作频率或联系服务端提升配额</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>504</td>
+<td>稍后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>leaveChatThread</strong></p>
+<p>退出子区</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入有效的子区 ID</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>通过有效的 chatThreadId 创建 ChatThread 实体</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>用户未登录</td>
+<td>401</td>
+<td>重新登录后再退出子区</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限退出子区</td>
+<td>403</td>
+<td>确认当前用户已加入目标子区且允许退出</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>子区不存在</td>
+<td>404</td>
+<td>确认子区 ID 正确且子区仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>504</td>
+<td>稍后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>destroyChatThread</strong></p>
+<p>解散子区</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入有效的子区 ID</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>通过有效的 chatThreadId 创建 ChatThread 实体</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>用户未登录</td>
+<td>401</td>
+<td>重新登录后再解散子区</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限解散子区</td>
+<td>403</td>
+<td>使用有管理权限的账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>子区不存在</td>
+<td>404</td>
+<td>确认子区 ID 正确且子区仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>504</td>
+<td>稍后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>updateChatThreadName</strong></p>
+<p>更新子区名称</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入有效的子区 ID 和新名称</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>通过有效的 chatThreadId 创建实体，并传入有效的新名称</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>用户未登录</td>
+<td>401</td>
+<td>重新登录后再更新子区名称</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限更新子区名称</td>
+<td>403</td>
+<td>使用群主、管理员或有权限的账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>子区不存在</td>
+<td>404</td>
+<td>确认子区 ID 正确且子区仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>504</td>
+<td>稍后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatThreadMemberList</strong></p>
+<p>获取子区成员列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入有效的子区 ID、分页大小和游标</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>通过有效的 chatThreadId 创建实体，并传入有效分页参数</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>用户未登录</td>
+<td>401</td>
+<td>重新登录后再查询子区成员</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限查询子区成员</td>
+<td>403</td>
+<td>确认当前用户已加入父群组或目标子区</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>子区不存在</td>
+<td>404</td>
+<td>确认子区 ID 正确且子区仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>504</td>
+<td>稍后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>removeChatThreadMember</strong></p>
+<p>移除子区成员</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入有效的子区 ID 和成员 ID</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>通过有效的 chatThreadId 创建实体，并传入有效成员 ID</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>用户未登录</td>
+<td>401</td>
+<td>重新登录后再移除子区成员</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限移除子区成员</td>
+<td>403</td>
+<td>使用群主、管理员或有权限的账号重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>子区或成员不存在</td>
+<td>404</td>
+<td>确认子区和目标成员关系仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>504</td>
+<td>稍后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getChatThreadLastMessageList</strong></p>
+<p>批量获取子区最后一条消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入 1 到 20 个有效的子区 ID</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>用户未登录</td>
+<td>401</td>
+<td>重新登录后再查询子区最后消息</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权限查询子区最后消息</td>
+<td>403</td>
+<td>确认当前用户有权限访问传入的所有子区</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">606</td>
+<td>子区不存在</td>
+<td>404</td>
+<td>确认子区 ID 正确且子区仍存在</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">301</td>
+<td>请求服务超时</td>
+<td>504</td>
+<td>稍后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务请求通用错误</td>
+<td>500</td>
+<td>稍后重试或联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getPushLanguage</strong></p>
+<p>获取推送翻译语言</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1502</td>
+<td>推送翻译语言设置失败</td>
+<td>-</td>
+<td>根据错误原因修正后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>clearConversationUnreadMessageCount</strong></p>
+<p>清空会话未读数</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法会话 ID，并使用 singleChat 或 groupChat</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>未登录</td>
+<td>-</td>
+<td>登录或刷新 token 后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">300</td>
+<td>未连接服务器</td>
+<td>-</td>
+<td>恢复连接后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">500</td>
+<td>会话中无消息</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>clearAllConversationUnreadMessageCount</strong></p>
+<p>清空所有会话未读数</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">201</td>
+<td>未登录</td>
+<td>-</td>
+<td>登录或刷新 token 后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">300</td>
+<td>未连接服务器</td>
+<td>-</td>
+<td>恢复连接后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">500</td>
+<td>会话中无消息</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>sendMessageReadReceipts</strong></p>
+<p>批量发送消息已读回执</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法 conversationId、singleChat/groupChat 会话类型和同一会话内 1 至 50 条非空 messageIds</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>只能对接收的消息发送已读回执</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">300</td>
+<td>未连接服务器</td>
+<td>-</td>
+<td>恢复连接后重试</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupMessageReadReceipts</strong></p>
+<p>批量获取群消息已读回执详情</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法 groupId 和非空 messageIds 列表</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>400</td>
+<td>检查请求体与消息 ID；若超过 20 条，请由调用方拆分后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">202</td>
+<td>用户鉴权失败</td>
+<td>401</td>
+<td>更新为有效 token 后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>用户无权限</td>
+<td>403</td>
+<td>确认用户已加入目标群并具备查询权限</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">303</td>
+<td>服务内部异常</td>
+<td>500</td>
+<td>稍后重试；若持续失败，请联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>recallMessage</strong></p>
+<p>撤回消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法会话定位参数和待撤回消息 ID</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>消息无效或未发送成功</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>未登录</td>
+<td>-</td>
+<td>登录或刷新 token 后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">300</td>
+<td>未连接服务器</td>
+<td>-</td>
+<td>恢复连接后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">504</td>
+<td>超过撤回时间限制</td>
+<td>-</td>
+<td>降低用量或调整服务配额后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>撤回功能未开通</td>
+<td>-</td>
+<td>确认已开通对应服务后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>updateMessage</strong></p>
+<p>编辑消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法会话定位参数和待编辑消息 ID</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">111</td>
+<td>操作不支持</td>
+<td>-</td>
+<td>仅传入 type 为 text 或 custom 的消息内容</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>消息无效</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">111</td>
+<td>仅支持编辑文本和自定义消息</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">201</td>
+<td>未登录</td>
+<td>-</td>
+<td>登录或刷新 token 后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">210</td>
+<td>无权编辑该消息</td>
+<td>-</td>
+<td>确认关系与操作权限后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">300</td>
+<td>未连接服务器</td>
+<td>-</td>
+<td>恢复连接后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">511</td>
+<td>消息编辑失败</td>
+<td>-</td>
+<td>稍后重试；持续失败时联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>downloadMessageAttachment</strong></p>
+<p>下载消息附件</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">401</td>
+<td>附件无效或消息类型不支持下载</td>
+<td>-</td>
+<td>仅对包含远程附件地址的图片、语音、视频或文件消息调用</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">400</td>
+<td>附件不存在</td>
+<td>404</td>
+<td>确认目标资源存在后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">401</td>
+<td>附件无效或消息类型不支持下载</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">403</td>
+<td>附件下载失败</td>
+<td>-</td>
+<td>稍后重试；持续失败时联系服务端排查</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">407</td>
+<td>附件已过期</td>
+<td>404</td>
+<td>根据错误原因修正后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>downloadAndParseCombineMessage</strong></p>
+<p>下载合并消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入 type 为 combine 且包含有效 url 的消息，或直接传入合并消息体中的有效 url/secret</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>消息为空</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">500</td>
+<td>消息不是合并消息类型</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">401</td>
+<td>合并消息解析失败</td>
+<td>-</td>
+<td>稍后重试；持续失败时联系服务端排查</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">403</td>
+<td>合并消息下载失败</td>
+<td>-</td>
+<td>稍后重试；持续失败时联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getHistoryMessages</strong></p>
+<p>获取历史消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法会话定位参数，并确保 pageSize 为正整数</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>消息漫游服务未开通</td>
+<td>-</td>
+<td>确认已开通对应服务后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>分页参数超限</td>
+<td>-</td>
+<td>降低用量或调整服务配额后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>removeHistoryMessages</strong></p>
+<p>删除历史消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入非空 messageIds，或传入大于 0 的 beforeTimestamp</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>消息漫游服务未开通</td>
+<td>-</td>
+<td>确认已开通对应服务后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">112</td>
+<td>删除消息数量超限</td>
+<td>-</td>
+<td>降低用量或调整服务配额后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getGroupMessageReadUsers</strong></p>
+<p>获取群消息已读成员</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法 groupId、messageId，并确保 pageSize 为正整数</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">500</td>
+<td>消息不存在</td>
+<td>-</td>
+<td>确认目标资源存在后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>addReaction</strong></p>
+<p>添加消息 Reaction</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法 messageId 和非空 reaction</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1301</td>
+<td>当前用户已经操作过该 Reaction</td>
+<td>-</td>
+<td>根据错误原因修正后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1300</td>
+<td>Reaction 数量达到上限</td>
+<td>-</td>
+<td>降低用量或调整服务配额后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">602</td>
+<td>当前用户不在该群组中</td>
+<td>-</td>
+<td>确认关系与操作权限后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1302</td>
+<td>Reaction 操作非法</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>Reaction 服务未开通</td>
+<td>-</td>
+<td>确认已开通对应服务后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">302</td>
+<td>Reaction 服务繁忙</td>
+<td>-</td>
+<td>稍后重试；持续失败时联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>removeReaction</strong></p>
+<p>删除消息 Reaction</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法 messageId 和非空 reaction</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>Reaction 服务未开通</td>
+<td>-</td>
+<td>确认已开通对应服务后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1302</td>
+<td>Reaction 操作非法</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getReactionList</strong></p>
+<p>获取消息 Reaction 列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法 messageId；conversationType 为 groupChat 时同时传入 groupId</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>Reaction 服务未开通</td>
+<td>-</td>
+<td>确认已开通对应服务后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">600</td>
+<td>groupId 无效</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getReactionDetail</strong></p>
+<p>获取消息 Reaction 详情</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效</td>
+<td>-</td>
+<td>传入合法 messageId、非空 reaction，并确保 pageSize 为正整数</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>Reaction 服务未开通</td>
+<td>-</td>
+<td>确认已开通对应服务后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1302</td>
+<td>Reaction 操作非法</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>pinMessage</strong></p>
+<p>置顶消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>消息 ID 非法</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>置顶消息数量达到上限</td>
+<td>-</td>
+<td>降低用量或调整服务配额后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>待置顶消息不存在</td>
+<td>-</td>
+<td>确认目标资源存在后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>unpinMessage</strong></p>
+<p>取消置顶消息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">110</td>
+<td>消息 ID 非法</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>待取消置顶消息不存在</td>
+<td>-</td>
+<td>确认目标资源存在后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getPinnedMessageList</strong></p>
+<p>获取置顶消息列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">111</td>
+<td>当前服务端不支持获取置顶消息列表</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>置顶消息不存在</td>
+<td>-</td>
+<td>确认目标资源存在后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getSupportedTranslationLanguages</strong></p>
+<p>获取翻译支持语言</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">505</td>
+<td>翻译服务未开通</td>
+<td>-</td>
+<td>确认已开通对应服务后重试</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>translateMessage</strong></p>
+<p>翻译消息内容</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1110</td>
+<td>目标语言不合法</td>
+<td>-</td>
+<td>仅传入包含非空文本内容的文本消息，并指定至少一个合法目标语言代码</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1110</td>
+<td>翻译文本过长</td>
+<td>-</td>
+<td>根据错误原因修正后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1110</td>
+<td>目标语言不合法</td>
+<td>-</td>
+<td>修正请求参数或操作类型后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1111</td>
+<td>翻译服务未开通</td>
+<td>-</td>
+<td>确认已开通对应服务后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1112</td>
+<td>翻译服务配额已达上限</td>
+<td>-</td>
+<td>降低用量或调整服务配额后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">1113</td>
+<td>翻译服务异常</td>
+<td>-</td>
+<td>稍后重试；持续失败时联系服务端排查</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p><strong>voiceMessageToText</strong></p>
+<p>语音消息转文字</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">407</td>
+<td>语音文件无效</td>
+<td>-</td>
+<td>传入带有效 url 的语音消息体，并确保 format、sampleRate、bitsPerSample、channels 类型合法</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">410</td>
+<td>语音文件不存在</td>
+<td>-</td>
+<td>确认语音消息已成功上传且 url 有效</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">202</td>
+<td>用户鉴权失败</td>
+<td>-</td>
+<td>刷新 token 后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">410</td>
+<td>语音文件不存在</td>
+<td>-</td>
+<td>确认语音文件已上传且未过期</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">407</td>
+<td>语音文件无效</td>
+<td>-</td>
+<td>更换合法语音文件后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">408</td>
+<td>语音时长超过限制</td>
+<td>-</td>
+<td>缩短语音时长后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">411</td>
+<td>语音文件过大</td>
+<td>-</td>
+<td>压缩或缩短语音文件后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>语音转文字服务未开通</td>
+<td>-</td>
+<td>开通服务后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>-</td>
+<td>稍后重试或提升服务配额</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">409</td>
+<td>语音转文字失败</td>
+<td>-</td>
+<td>稍后重试；如果持续失败，联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>voiceFileToText</strong></p>
+<p>本地语音文件转文字</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Code</th>
+<th>含义</th>
+<th>HTTP</th>
+<th>处理建议</th>
+<th>可重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">407</td>
+<td>语音文件无效</td>
+<td>-</td>
+<td>传入浏览器 File 或小程序 MiniAppFile，并确保语音识别参数类型合法</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">110</td>
+<td>参数无效：缺少必需字段</td>
+<td>-</td>
+<td>在支持上传的环境中调用，或为当前平台配置上传适配器</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">202</td>
+<td>用户鉴权失败</td>
+<td>-</td>
+<td>刷新 token 后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">402</td>
+<td>上传文件错误</td>
+<td>-</td>
+<td>检查网络和文件后重试</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">407</td>
+<td>语音文件无效</td>
+<td>-</td>
+<td>更换合法语音文件后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">408</td>
+<td>语音时长超过限制</td>
+<td>-</td>
+<td>缩短语音时长后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">411</td>
+<td>语音文件过大</td>
+<td>-</td>
+<td>压缩或缩短语音文件后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">505</td>
+<td>语音转文字服务未开通</td>
+<td>-</td>
+<td>开通服务后重试</td>
+<td>否</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>超过服务限制</td>
+<td>-</td>
+<td>稍后重试或提升服务配额</td>
+<td>是</td>
+</tr>
+<tr>
+<td style="text-align:right">409</td>
+<td>语音转文字失败</td>
+<td>-</td>
+<td>稍后重试；如果持续失败，联系服务端排查</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#错误码参考"><span>错误码参考</span></a><ul><li><a href="#公开错误码"><span>公开错误码</span></a></li><li><a href="#api-专属错误"><span>API 专属错误</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html">IM SDK Web API 文档</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
