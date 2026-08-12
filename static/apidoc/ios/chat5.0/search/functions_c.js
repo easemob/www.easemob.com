@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['messageattachmentstatusdidchange_3aerror_3a_0',['messageAttachmentStatusDidChange:error:',['../protocol_e_m_chat_manager_delegate-p.html#a38dc747a5de5966f694534716ab45f92',1,'EMChatManagerDelegate-p']]],
+  ['messagereactiondidchange_3a_1',['messageReactionDidChange:',['../protocol_e_m_chat_manager_delegate-p.html#a5c3cf638f30c14f8ed69eb0c70d2025d',1,'EMChatManagerDelegate-p']]],
+  ['messagesdiddeliver_3a_2',['messagesDidDeliver:',['../protocol_e_m_chat_manager_delegate-p.html#a544a8f526f4719a7d8b94796a3dc2eb3',1,'EMChatManagerDelegate-p']]],
+  ['messagesdidreceive_3a_3',['messagesDidReceive:',['../protocol_e_m_chat_manager_delegate-p.html#a55dcfe94117d29bc702d9d5fba0990f2',1,'EMChatManagerDelegate-p']]],
+  ['messagesinfodidrecall_3a_4',['messagesInfoDidRecall:',['../protocol_e_m_chat_manager_delegate-p.html#a906e8ac61d085287ada0bcac44fd8e6d',1,'EMChatManagerDelegate-p']]],
+  ['messagestatusdidchange_3aerror_3a_5',['messageStatusDidChange:error:',['../protocol_e_m_chat_manager_delegate-p.html#a40302a2c17f714a89286c23de8adbcb2',1,'EMChatManagerDelegate-p']]],
+  ['modifymessage_3abody_3aext_3acompletion_3a_6',['modifyMessage:body:ext:completion:',['../protocol_i_e_m_chat_manager-p.html#a1eed319dc3627aff8c44d65502d8c875',1,'IEMChatManager-p']]],
+  ['multideviceschatthreadeventdidreceive_3athreadid_3aext_3a_7',['multiDevicesChatThreadEventDidReceive:threadId:ext:',['../protocol_e_m_multi_devices_delegate-p.html#a49782dc721be231cd301d7f0c1f44f6e',1,'EMMultiDevicesDelegate-p']]],
+  ['multidevicescontacteventdidreceive_3ausername_3aext_3a_8',['multiDevicesContactEventDidReceive:username:ext:',['../protocol_e_m_multi_devices_delegate-p.html#a09c33470a91a9fc21a2f73de360b8089',1,'EMMultiDevicesDelegate-p']]],
+  ['multidevicesconversationevent_3aconversationid_3aconversationtype_3a_9',['multiDevicesConversationEvent:conversationId:conversationType:',['../protocol_e_m_multi_devices_delegate-p.html#a5b78c308894c326f4ce66667161221ca',1,'EMMultiDevicesDelegate-p']]],
+  ['multidevicesgroupeventdidreceive_3agroupid_3aext_3a_10',['multiDevicesGroupEventDidReceive:groupId:ext:',['../protocol_e_m_multi_devices_delegate-p.html#a3dd879cf55bc5a0b3b5958046c1901b1',1,'EMMultiDevicesDelegate-p']]],
+  ['multidevicesmessageberemoved_3adeviceid_3a_11',['multiDevicesMessageBeRemoved:deviceId:',['../protocol_e_m_multi_devices_delegate-p.html#abc7c27e5f2296370e086e5929f5634e6',1,'EMMultiDevicesDelegate-p']]],
+  ['multidevicesundisturbeventnotifyformotherdevicedata_3a_12',['multiDevicesUndisturbEventNotifyFormOtherDeviceData:',['../protocol_e_m_multi_devices_delegate-p.html#a76e18b73dec91ee93666f6190daf6509',1,'EMMultiDevicesDelegate-p']]],
+  ['muteallmembersfromchatroom_3acompletion_3a_13',['muteAllMembersFromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a19ee5ab3a930c33e443aca5be0038da9',1,'IEMChatroomManager-p']]],
+  ['muteallmembersfromchatroom_3aerror_3a_14',['muteAllMembersFromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a9dcd1c5c5587587b22c257867f430abe',1,'IEMChatroomManager-p']]],
+  ['muteallmembersfromgroup_3acompletion_3a_15',['muteAllMembersFromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#ab2463374d0896939e6c689519a5a252f',1,'IEMGroupManager-p']]],
+  ['mutemembers_3amutemilliseconds_3afromchatroom_3acompletion_3a_16',['muteMembers:muteMilliseconds:fromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#ad08c3eb7293e9c586f28fbeeaa2f6e94',1,'IEMChatroomManager-p']]],
+  ['mutemembers_3amutemilliseconds_3afromchatroom_3aerror_3a_17',['muteMembers:muteMilliseconds:fromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a7a11f82ebb93f972ac40d2ab4d4f9e4a',1,'IEMChatroomManager-p']]],
+  ['mutemembers_3amutemilliseconds_3afromgroup_3acompletion_3a_18',['muteMembers:muteMilliseconds:fromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a1ab97c49141b705c62301d57d6873dd7',1,'IEMGroupManager-p']]]
+];

@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['saveblacklist_3acompletion_3a_0',['saveBlackList:completion:',['../protocol_i_e_m_contact_manager-p.html#ab5c70d0d39907b2d2cc6e71588b7192a',1,'IEMContactManager-p']]],
+  ['searchmessagesfromserverwithoption_3apagesize_3apagenum_3acompletion_3a_1',['searchMessagesFromServerWithOption:pageSize:pageNum:completion:',['../protocol_i_e_m_chat_manager-p.html#a4345e303676c81f52cbb53815ee5feb8',1,'IEMChatManager-p']]],
+  ['searchmessageswithtypes_3atimestamp_3acount_3afromuser_3asearchdirection_3acompletion_3a_2',['searchMessagesWithTypes:timestamp:count:fromUser:searchDirection:completion:',['../interface_e_m_conversation.html#adf04f49c8d45511576aa143c00558d92',1,'EMConversation::searchMessagesWithTypes:timestamp:count:fromUser:searchDirection:completion:()'],['../protocol_i_e_m_chat_manager-p.html#a1e66936daa71ebd1eec81f0a34a3b385',1,'IEMChatManager-p::searchMessagesWithTypes:timestamp:count:fromUser:searchDirection:completion:(NSArray&lt; NSNumber * &gt; *_Nonnull aTypes,[timestamp] long long aTimestamp,[count] int aCount,[fromUser] NSString *_Nullable aUsername,[searchDirection] EMMessageSearchDirection aDirection,[completion] void(^_Nonnull aCompletionBlock)(NSArray&lt; EMChatMessage * &gt; *_Nullable aMessages, EMError *_Nullable aError))']]],
+  ['sendmessage_3aprogress_3acompletion_3a_3',['sendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#a9e907db464e5f5572a0d3b3b48effdba',1,'IEMChatManager-p']]],
+  ['sendmessagereadreceipts_3acompletion_3a_4',['sendMessageReadReceipts:completion:',['../protocol_i_e_m_chat_manager-p.html#a997de55fceed9466e1e88ae503bbd4c7',1,'IEMChatManager-p']]],
+  ['setchatroomattribute_3akey_3avalue_3aautodelete_3acompletionblock_3a_5',['setChatroomAttribute:key:value:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#aecbc07f8ea29376026ff32d5fd11b735',1,'IEMChatroomManager-p']]],
+  ['setchatroomattributeforced_3akey_3avalue_3aautodelete_3acompletionblock_3a_6',['setChatroomAttributeForced:key:value:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#a7ba3bc575b969ac173acea06a686e374',1,'IEMChatroomManager-p']]],
+  ['setchatroomattributes_3aattributes_3aautodelete_3acompletionblock_3a_7',['setChatroomAttributes:attributes:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#ac4c2220c3d82da71b282bb05252372ec',1,'IEMChatroomManager-p']]],
+  ['setchatroomattributesforced_3aattributes_3aautodelete_3acompletionblock_3a_8',['setChatroomAttributesForced:attributes:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#a20e972353eeb9836dd2ae71e6d16f73d',1,'IEMChatroomManager-p']]],
+  ['setcontactremark_3aremark_3acompletion_3a_9',['setContactRemark:remark:completion:',['../protocol_i_e_m_contact_manager-p.html#a6d9ad5eab1c502e44b5987c9e06eecaf',1,'IEMContactManager-p']]],
+  ['setmemberattribute_3auserid_3aattributes_3acompletion_3a_10',['setMemberAttribute:userId:attributes:completion:',['../protocol_i_e_m_group_manager-p.html#aff388c3cdbf8d11fc97c6f26c51166a4',1,'IEMGroupManager-p']]],
+  ['setpreferrednotificationlanguage_3acompletion_3a_11',['setPreferredNotificationLanguage:completion:',['../protocol_i_e_m_push_manager-p.html#a039a883f549fb703356f3ec7e0c99574',1,'IEMPushManager-p']]],
+  ['setpushtemplate_3acompletion_3a_12',['setPushTemplate:completion:',['../protocol_i_e_m_push_manager-p.html#a8c15445a0bf1cd78bb3f8b3319d4187b',1,'IEMPushManager-p']]],
+  ['setsilentmodeforall_3acompletion_3a_13',['setSilentModeForAll:completion:',['../protocol_i_e_m_push_manager-p.html#aeb688ae0c8ddd64f2c2457f55ffc3891',1,'IEMPushManager-p']]],
+  ['setsilentmodeforconversation_3aconversationtype_3aparams_3acompletion_3a_14',['setSilentModeForConversation:conversationType:params:completion:',['../protocol_i_e_m_push_manager-p.html#a6d88ec018a1997ec5184b2ef6e408b6b',1,'IEMPushManager-p']]],
+  ['sharedclient_15',['sharedClient',['../interface_e_m_client.html#a9e4da8a88c2cb50245c9a675b0cf6a34',1,'EMClient']]],
+  ['sharedfilewithid_3a_16',['sharedFileWithId:',['../interface_e_m_group_shared_file.html#ac6b00368e3575cd5392913f278eba3ad',1,'EMGroupSharedFile']]],
+  ['sharedmanager_17',['sharedManager',['../interface_e_m_local_notification_manager.html#a13dae8749df020c38b0d562923fa2bf7',1,'EMLocalNotificationManager']]],
+  ['subscribe_3aexpiry_3acompletion_3a_18',['subscribe:expiry:completion:',['../protocol_i_e_m_presence_manager-p.html#ab6d03351191dc2c558aa5069c33cc25c',1,'IEMPresenceManager-p']]],
+  ['subscribeusersinfo_3acompletion_3a_19',['subscribeUsersInfo:completion:',['../protocol_i_e_m_user_info_manager-p.html#ac2a07528093670d7eac18d5379276dc3',1,'IEMUserInfoManager-p']]],
+  ['syncdatafinished_3atype_3a_20',['syncDataFinished:type:',['../protocol_e_m_client_delegate-p.html#a742f6696b8d0f2ce9253dca51725eb4c',1,'EMClientDelegate-p']]],
+  ['syncdatastartwithtype_3a_21',['syncDataStartWithType:',['../protocol_e_m_client_delegate-p.html#a1966154c0dca9e8be4bb480b223739a8',1,'EMClientDelegate-p']]],
+  ['syncsilentmodeconversationsfromservercompletion_3a_22',['syncSilentModeConversationsFromServerCompletion:',['../protocol_i_e_m_push_manager-p.html#ad68bc8591e51285579d20c01fd825f26',1,'IEMPushManager-p']]]
+];

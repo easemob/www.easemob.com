@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['acceptinvitationfromgroup_3ainviter_3acompletion_3a_0',['acceptInvitationFromGroup:inviter:completion:',['../protocol_i_e_m_group_manager-p.html#a279c98f8e807f08f8ac9bb6c159ac4ca',1,'IEMGroupManager-p']]],
+  ['addadmin_3atochatroom_3acompletion_3a_1',['addAdmin:toChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#abef44b2324aaaf8a1daaa26b6e6c4acc',1,'IEMChatroomManager-p']]],
+  ['addadmin_3atochatroom_3aerror_3a_2',['addAdmin:toChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a776ed75020c2dce690d536978e8954fc',1,'IEMChatroomManager-p']]],
+  ['addadmin_3atogroup_3acompletion_3a_3',['addAdmin:toGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a3ff549522121f811041810fa60167dd1',1,'IEMGroupManager-p']]],
+  ['addcontact_3amessage_3acompletion_3a_4',['addContact:message:completion:',['../protocol_i_e_m_contact_manager-p.html#a5524891cf8b4fe14779d770f8cf7f67d',1,'IEMContactManager-p']]],
+  ['addconversationdelegate_3adelegatequeue_3a_5',['addConversationDelegate:delegateQueue:',['../protocol_i_e_m_chat_manager-p.html#a18673a99f71664478d771cc9f7e27f7e',1,'IEMChatManager-p']]],
+  ['addconversationmark_3amark_3acompletion_3a_6',['addConversationMark:mark:completion:',['../protocol_i_e_m_chat_manager-p.html#a0e33319b36aad99f98994f08bcb490c8',1,'IEMChatManager-p']]],
+  ['adddelegate_3adelegatequeue_3a_7',['addDelegate:delegateQueue:',['../interface_e_m_client.html#ac3ae9e0afb9240a66ca9609a07837b8b',1,'EMClient::addDelegate:delegateQueue:()'],['../protocol_i_e_m_chat_manager-p.html#a22377260bef066b3c7048166bc507154',1,'IEMChatManager-p::addDelegate:delegateQueue:()'],['../protocol_i_e_m_chatroom_manager-p.html#ae6ab44fa6cb5553fc6a888414012b760',1,'IEMChatroomManager-p::addDelegate:delegateQueue:()'],['../protocol_i_e_m_contact_manager-p.html#a0cb89372d5f7fbbaea16d8a0b8289263',1,'IEMContactManager-p::addDelegate:delegateQueue:()'],['../protocol_i_e_m_group_manager-p.html#a1640f9f316e166ea58d164a5a6ed533d',1,'IEMGroupManager-p::addDelegate:delegateQueue:()'],['../protocol_i_e_m_presence_manager-p.html#ae1cc03c37f2b39700e7ffa9f768bb129',1,'IEMPresenceManager-p::addDelegate:delegateQueue:()'],['../protocol_i_e_m_thread_manager-p.html#ad7a69c89005eb896f53d74ee4e41b42b',1,'IEMThreadManager-p::addDelegate:delegateQueue:()'],['../protocol_i_e_m_user_info_manager-p.html#acffb708616e76e76b1daeaa5647f9ca1',1,'IEMUserInfoManager-p::addDelegate:delegateQueue:()']]],
+  ['addlogdelegate_3adelegatequeue_3a_8',['addLogDelegate:delegateQueue:',['../interface_e_m_client.html#ab10b95b0640a3d111e35974b1dd56197',1,'EMClient']]],
+  ['addmembers_3atogroup_3amessage_3acompletion_3a_9',['addMembers:toGroup:message:completion:',['../protocol_i_e_m_group_manager-p.html#a8d163c1369572f40e6501259166db3f5',1,'IEMGroupManager-p']]],
+  ['addmultidevicesdelegate_3adelegatequeue_3a_10',['addMultiDevicesDelegate:delegateQueue:',['../interface_e_m_client.html#aca420acc7322e4756d9d153f96e86f37',1,'EMClient']]],
+  ['addreaction_3atomessage_3acompletion_3a_11',['addReaction:toMessage:completion:',['../protocol_i_e_m_chat_manager-p.html#aa933d30242b85a26655c54d81d41ec5a',1,'IEMChatManager-p']]],
+  ['addusertoblacklist_3acompletion_3a_12',['addUserToBlackList:completion:',['../protocol_i_e_m_contact_manager-p.html#ae15d60fc337b6f4dac25dcbfaac29ffb',1,'IEMContactManager-p']]],
+  ['addwhitelistmembers_3afromchatroom_3acompletion_3a_13',['addWhiteListMembers:fromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a074da8f7df2c6c8cffc28c55ce822cd3',1,'IEMChatroomManager-p']]],
+  ['addwhitelistmembers_3afromchatroom_3aerror_3a_14',['addWhiteListMembers:fromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#ae7365cce04da0b83dd3d5f3f28368ffc',1,'IEMChatroomManager-p']]],
+  ['addwhitelistmembers_3afromgroup_3acompletion_3a_15',['addWhiteListMembers:fromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#ad6e19f4a69156ce145bb38c3115ba8f2',1,'IEMGroupManager-p']]],
+  ['appendmessage_3aerror_3a_16',['appendMessage:error:',['../interface_e_m_conversation.html#a4bc5383538dafe89cbc8c5b4b33f2a4c',1,'EMConversation']]],
+  ['application_3adidreceiveremotenotification_3a_17',['application:didReceiveRemoteNotification:',['../interface_e_m_client.html#a5278bb9011950d8003a8e3309baf2b32',1,'EMClient']]],
+  ['applicationdidenterbackground_3a_18',['applicationDidEnterBackground:',['../interface_e_m_client.html#a83045c22c5d8baa0fba67d0e99130b2a',1,'EMClient']]],
+  ['applicationwillenterforeground_3a_19',['applicationWillEnterForeground:',['../interface_e_m_client.html#ab1495bff629e84cca8b9dfa1f327eab9',1,'EMClient']]],
+  ['approvefriendrequestfromuser_3acompletion_3a_20',['approveFriendRequestFromUser:completion:',['../protocol_i_e_m_contact_manager-p.html#a5467b9fc6e8232e1997a4c788491f269',1,'IEMContactManager-p']]],
+  ['approvejoingrouprequest_3asender_3acompletion_3a_21',['approveJoinGroupRequest:sender:completion:',['../protocol_i_e_m_group_manager-p.html#a2afbe21b16a28791b3ca7bc7ea7de909',1,'IEMGroupManager-p']]],
+  ['asyncfetchgroupmessagereadusersfromserver_3agroupid_3areadreceiptid_3apagesize_3acompletion_3a_22',['asyncFetchGroupMessageReadUsersFromServer:groupId:readReceiptId:pageSize:completion:',['../protocol_i_e_m_chat_manager-p.html#a12049217e5e72db91ee958af33df917d',1,'IEMChatManager-p']]]
+];
