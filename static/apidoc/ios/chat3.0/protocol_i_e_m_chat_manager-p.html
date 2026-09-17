@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.24.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.25.0</span>
    </div>
   </td>
  </tr>
@@ -99,6 +99,8 @@ $(function() {
 <tr class="separator:ab960513636ad6c85917513f8ec54d8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaba5f63f05f9da74122e3e3b5dedcff2"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#aaba5f63f05f9da74122e3e3b5dedcff2">getPinnedConversationsFromServerWithCursor:pageSize:completion:</a></td></tr>
 <tr class="separator:aaba5f63f05f9da74122e3e3b5dedcff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0689aae5a6d8240f2507610698ef9a9d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#a0689aae5a6d8240f2507610698ef9a9d">getConversationsFromDBWithCursor:pageSize:completion:</a></td></tr>
+<tr class="separator:a0689aae5a6d8240f2507610698ef9a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7ec272edae5130035bd09f6edc88c24"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#ab7ec272edae5130035bd09f6edc88c24">pinConversation:isPinned:completionBlock:</a></td></tr>
 <tr class="separator:ab7ec272edae5130035bd09f6edc88c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a0ce0755f99d82c08ce89c9b3abfc3"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_e_m_conversation.html">EMConversation</a> *_Nullable)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_i_e_m_chat_manager-p.html#aa4a0ce0755f99d82c08ce89c9b3abfc3">getConversationWithConvId:</a></td></tr>
@@ -1607,6 +1609,59 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>会话对象。 </dd></dl>
+
+</div>
+</div>
+<a id="a0689aae5a6d8240f2507610698ef9a9d" name="a0689aae5a6d8240f2507610698ef9a9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0689aae5a6d8240f2507610698ef9a9d">&#9670;&nbsp;</a></span>getConversationsFromDBWithCursor:pageSize:completion:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) getConversationsFromDBWithCursor: </td>
+          <td></td>
+          <td class="paramtype">(nullable NSString *)&#160;</td>
+          <td class="paramname"><em>cursor</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">pageSize:</td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>pageSize</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(nonnull void(^)(<a class="el" href="interface_e_m_cursor_result.html">EMCursorResult</a>&lt; <a class="el" href="interface_e_m_conversation.html">EMConversation</a> * &gt; *_Nullable result, <a class="el" href="interface_e_m_error.html">EMError</a> *_Nullable error))&#160;</td>
+          <td class="paramname"><em>completionBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">required</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >分页从本地数据库获取会话列表。</p>
+<p >调用该方法前，需将 <a class="el" href="interface_e_m_options.html#a57225f0b4032852da92e63aa6a544459">EMOptions::autoLoadConversations</a> 设置为 <code>NO</code>。</p>
+<p >SDK 按照以下顺序返回会话列表：会话置顶状态倒序 &gt; 会话最新一条消息的服务器时间倒序 &gt; 会话 ID 倒序（不区分大小写）。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cursor</td><td>查询的开始位置。若传 <code>nil</code> 或 <code>@""</code>，SDK 从第一页开始获取；否则传上一页结果中返回的 cursor。若结果中的 cursor 为空字符串，表示已获取到最后一页。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页期望返回的会话数量。取值范围为 [1,100]。 </td></tr>
+    <tr><td class="paramname">completionBlock</td><td>该方法完成调用的回调。如果传入的 cursor 无效，回调中的 error 为 EMErrorInvalidParam。 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
