@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.24.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.25.0</span>
    </div>
   </td>
  </tr>
@@ -89,8 +89,8 @@ $(function() {
 <tr class="separator:a3452001448ff71714824458da2be9484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fd222567a4fb393c0f2c62ecd7cf5d7"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a2fd222567a4fb393c0f2c62ecd7cf5d7">messagesDidRead:</a></td></tr>
 <tr class="separator:a2fd222567a4fb393c0f2c62ecd7cf5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a369c264fadcb8cfbca05082a381c0ceb"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a369c264fadcb8cfbca05082a381c0ceb">groupMessageDidRead:groupAcks:</a></td></tr>
-<tr class="separator:a369c264fadcb8cfbca05082a381c0ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fdf2e79d7f5a5b0e9da0bffde5ac66c"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a5fdf2e79d7f5a5b0e9da0bffde5ac66c">groupMessageDidRead:</a></td></tr>
+<tr class="separator:a5fdf2e79d7f5a5b0e9da0bffde5ac66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa209384b77e33fec99166cd129571b3e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#aa209384b77e33fec99166cd129571b3e">groupMessageAckHasChanged</a></td></tr>
 <tr class="separator:aa209384b77e33fec99166cd129571b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7868ad1d4d9da227eeb01aa900c42d9"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#ab7868ad1d4d9da227eeb01aa900c42d9">onConversationRead:to:</a></td></tr>
@@ -109,6 +109,8 @@ $(function() {
 <tr class="separator:aebcc71ce88bbaa09ad23cb6aead7cbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c3cf638f30c14f8ed69eb0c70d2025d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a5c3cf638f30c14f8ed69eb0c70d2025d">messageReactionDidChange:</a></td></tr>
 <tr class="separator:a5c3cf638f30c14f8ed69eb0c70d2025d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863ce8a115c8703cec4c918dec33862e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a863ce8a115c8703cec4c918dec33862e">groupMessageDidRead:groupAcks:</a></td></tr>
+<tr class="separator:a863ce8a115c8703cec4c918dec33862e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >聊天相关回调的协议类。 </p>
@@ -205,8 +207,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a369c264fadcb8cfbca05082a381c0ceb" name="a369c264fadcb8cfbca05082a381c0ceb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a369c264fadcb8cfbca05082a381c0ceb">&#9670;&nbsp;</a></span>groupMessageDidRead:groupAcks:</h2>
+<a id="a5fdf2e79d7f5a5b0e9da0bffde5ac66c" name="a5fdf2e79d7f5a5b0e9da0bffde5ac66c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fdf2e79d7f5a5b0e9da0bffde5ac66c">&#9670;&nbsp;</a></span>groupMessageDidRead:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,14 +219,47 @@ $(function() {
         <tr>
           <td class="memname">- (void) groupMessageDidRead: </td>
           <td></td>
+          <td class="paramtype">(NSArray&lt; <a class="el" href="interface_e_m_group_message_ack.html">EMGroupMessageAck</a> * &gt; *_Nonnull)&#160;</td>
+          <td class="paramname"><em>aGroupAcks</em></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">optional</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >收到群消息已读回执代理。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aGroupAcks</td><td>消息的已读回执列表。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a863ce8a115c8703cec4c918dec33862e" name="a863ce8a115c8703cec4c918dec33862e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a863ce8a115c8703cec4c918dec33862e">&#9670;&nbsp;</a></span>groupMessageDidRead:groupAcks:</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) <a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a5fdf2e79d7f5a5b0e9da0bffde5ac66c">groupMessageDidRead:</a> </td>
+          <td></td>
           <td class="paramtype">(<a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> *_Nonnull)&#160;</td>
           <td class="paramname"><em>aMessage</em></td>
         </tr>
         <tr>
           <td class="paramkey">groupAcks:</td>
           <td></td>
-          <td class="paramtype">(NSArray&lt; <a class="el" href="interface_e_m_group_message_ack.html">EMGroupMessageAck</a> * &gt; *_Nonnull)&#160;</td>
-          <td class="paramname"><em>aGroupAcks</em>&#160;</td>
+          <td class="paramtype">(&quot;Use -<a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a5fdf2e79d7f5a5b0e9da0bffde5ac66c">groupMessageDidRead:</a> instead&quot;)&#160;</td>
+          <td class="paramname"><em>__deprecated_msg</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

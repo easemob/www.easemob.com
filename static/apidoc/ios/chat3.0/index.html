@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HyphenateChatSDK: 首页</title>
+<title>HyphenateChatSDK: HyphenateChatSDK</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.24.0</span>
+   <div id="projectname">HyphenateChatSDK<span id="projectnumber">&#160;4.25.0</span>
    </div>
   </td>
  </tr>
@@ -61,10 +61,701 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">HyphenateChatSDK 文档</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">HyphenateChatSDK </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p ><a class="anchor" id="md_HyphenateChat_framework_Headers_mainpage_v4_zh"></a> 即时通讯 IM 是一个高度可靠的全球通信平台，用户可以进行一对一单聊、群组聊天或聊天室聊天。用户可以通过发送文本消息、分享图片、音频、视频、文件、表情符号和位置进行沟通。</p>
+<ul>
+<li><b><a class="el" href="interface_e_m_client.html">EMClient</a> 类</b> 是聊天 SDK 的入口，提供登录和登出即时通讯 IM 的方法，并管理 SDK 与聊天服务器之间的连接。</li>
+<li><b><a class="el" href="protocol_i_e_m_chat_manager-p.html">IEMChatManager</a> 协议</b> 提供发送和接收消息、管理会话以及下载附件的方法。</li>
+<li><b><a class="el" href="interface_e_m_chat_message.html">EMChatMessage</a> 类</b> 定义消息的属性。</li>
+<li><b><a class="el" href="interface_e_m_conversation.html">EMConversation</a> 类</b> 提供管理会话的方法。</li>
+<li><b><a class="el" href="protocol_i_e_m_contact_manager-p.html">IEMContactManager</a> 协议</b> 提供管理联系人的方法。</li>
+<li><b><a class="el" href="protocol_i_e_m_group_manager-p.html">IEMGroupManager</a> 协议</b> 提供群组创建、解散和成员管理等方法。</li>
+<li><b><a class="el" href="protocol_i_e_m_chatroom_manager-p.html">IEMChatroomManager</a> 协议</b> 提供聊天室和成员权限管理的方法。</li>
+<li><b><a class="el" href="protocol_i_e_m_presence_manager-p.html">IEMPresenceManager</a> 协议</b> 提供管理用户在线状态的方法。</li>
+<li><b><a class="el" href="protocol_i_e_m_thread_manager-p.html">IEMThreadManager</a> 协议</b> 提供 Thread 创建、解散和成员管理的方法。</li>
+<li><b><a class="el" href="protocol_i_e_m_push_manager-p.html">IEMPushManager</a> 协议</b> 提供配置离线推送服务的方法。</li>
+<li><b><a class="el" href="protocol_i_e_m_user_info_manager-p.html">IEMUserInfoManager</a> 协议</b> 提供获取、更新和订阅用户属性的方法。</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md0"></a>
+Chat Client</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">方法   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#af6c0671dae6ad967257426e6ab0eaa93">initializeSDKWithOptions:</a></code>   </td><td class="markdownTableBodyLeft">初始化SDK。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#aae4bcdde407ea28d2c7004735976fd69">loginWithUsername:token:completion:</a></code>   </td><td class="markdownTableBodyLeft">使用用户ID和token登录聊天服务器。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#a5f9d08d4026d8f12020efc331753c386">renewToken:</a></code>   </td><td class="markdownTableBodyLeft">更新token。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#a29530ec16c9ab20db70f1ecff811dac1">logout:completion:</a></code>   </td><td class="markdownTableBodyLeft">退出登录账号。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#a83d84fbc4487b6f4d277bd9332ad5cb1">currentUsername</a></code>   </td><td class="markdownTableBodyLeft">获取当前登录用户的用户ID。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#adc6613f8c69c7aba0b1540c114800125">isConnected</a></code>   </td><td class="markdownTableBodyLeft">检查SDK是否已连接到聊天服务器。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#a980267158808e32dee8981bb854eb9d4">isLoggedIn</a></code>   </td><td class="markdownTableBodyLeft">检查用户是否已登录聊天应用。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#ac3ae9e0afb9240a66ca9609a07837b8b">addDelegate:</a></code>   </td><td class="markdownTableBodyLeft">添加代理。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#ab10b95b0640a3d111e35974b1dd56197">addLogDelegate:delegateQueue:</a></code>   </td><td class="markdownTableBodyLeft">添加SDK的日志回调代理。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#a69fb00ce1c36adee9b98c10585ccaca6">groupManager</a></code>   </td><td class="markdownTableBodyLeft">获取<code>GroupManager</code>类。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#ab787a96812c78cc27d2c82e73b73dd0e">pushManager</a></code>   </td><td class="markdownTableBodyLeft">获取<code>PushManager</code>类。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#a4452e4b2d78d5ed52bc202b46dfdb1c5">roomManager</a></code>   </td><td class="markdownTableBodyLeft">获取<code>RoomManager</code>类。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#a5937280632184b7bb8d09e3e8893387d">chatManager</a></code>   </td><td class="markdownTableBodyLeft">获取<code>ChatManager</code>类。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#a6b2c243e87ee7e86ef1af863c1f90681">userInfoManager</a></code>   </td><td class="markdownTableBodyLeft">获取<code>UserInfoManager</code>类。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#a866a36a426b9beb111786cde83d83e1e">contactManager</a></code>   </td><td class="markdownTableBodyLeft">获取<code>ContactManager</code>类。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#a2fdfa5e3248eeca729f83c5e243a7b4f">presenceManager</a></code>   </td><td class="markdownTableBodyLeft">获取<code>presenceManager</code>类。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#ab45e474ff0134ecfa576f909895aa132">threadManager</a></code>   </td><td class="markdownTableBodyLeft">获取<code>ChatThreadManager</code>类。   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">事件   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_client_delegate-p.html#adf175d117ada98617c054bacf4c11dcb">connectionStateDidChange:</a></code>   </td><td class="markdownTableBodyLeft">当SDK连接状态发生变化时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_client_delegate-p.html#a8815169ea17fa723db3903e307064540">tokenDidExpire:</a></code>   </td><td class="markdownTableBodyLeft">当token过期时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_client_delegate-p.html#aa4502cad30fd6d4d467d1eff375df853">tokenWillExpire:</a></code>   </td><td class="markdownTableBodyLeft">当token即将过期时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_client_delegate-p.html#ad95012da82dff4efa58bf72437f5f0a4">autoLoginDidCompleteWithError:</a></code>   </td><td class="markdownTableBodyLeft">当SDK自动登录成功或失败时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_log_delegate-p.html#a7acf710cfa9f20854ebb516d1bfe2322">logDidOutput:</a></code>   </td><td class="markdownTableBodyLeft">当有日志输出时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_client_delegate-p.html#aef836af2b1f32d0047a18431b6eab569">onOfflineMessageSyncStart</a></code>   </td><td class="markdownTableBodyLeft">开始从服务器拉取离线消息时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_client_delegate-p.html#ad04ad34af124a1b6bc7c205f9829b5c3">onOfflineMessageSyncFinish</a></code>   </td><td class="markdownTableBodyLeft">从服务器拉取离线消息结束时触发。   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Chat manager</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">方法   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a9e907db464e5f5572a0d3b3b48effdba">sendMessage:progress:completion:</a></code>   </td><td class="markdownTableBodyLeft">发送消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#afe2068deb555d7f5b1ed0e2224f278e0">ackConversationRead:completion:</a></code>   </td><td class="markdownTableBodyLeft">向服务器发送会话已读回执。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#ad332c114b5e7bc3c7945923fa19b8eb8">sendMessageReadAck:toUser:completion:</a></code>   </td><td class="markdownTableBodyLeft">向服务器发送消息已读回执。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a3da6f68c3fb96564d93d493ff21d0542">sendGroupMessageReadAck:toGroup:content:completion:</a></code>   </td><td class="markdownTableBodyLeft">向服务器发送群消息的已读回执。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a4c90e488c1701ef6fc7ee6d5939e5cde">getConversation:type:createIfNotExist:</a></code>   </td><td class="markdownTableBodyLeft">根据会话ID获取会话对象。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#ac223706d0680cd913d7c9db9751166d1">importMessages:completion:</a></code>   </td><td class="markdownTableBodyLeft">将消息导入内存和本地数据库。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#aafceafd5a80d99c0d02d96baf66e24af">updateMessage:completion:</a></code>   </td><td class="markdownTableBodyLeft">更新本地消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#adb157ebedb5b163e411d9a100ca70885">downloadMessageAttachment:progress:completion:</a></code>   </td><td class="markdownTableBodyLeft">下载消息附件。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#af1de9919bfc24ed8472175bd8f8e12fe">downloadMessageThumbnail:progress:completion:</a></code>   </td><td class="markdownTableBodyLeft">下载消息缩略图。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a9159a946045d347e01eaeb754491b3c6">getAllConversations</a></code>   </td><td class="markdownTableBodyLeft">获取所有本地会话。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a0689aae5a6d8240f2507610698ef9a9d">getConversationsFromDBWithCursor</a></code>   </td><td class="markdownTableBodyLeft">从本地数据库分页获取会话列表。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#ab960513636ad6c85917513f8ec54d8a6">getConversationsFromServerWithCursor</a></code>   </td><td class="markdownTableBodyLeft">从服务器分页获取会话列表。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a5e40bd7fca87991de81912fc67b63edb">deleteConversations:isDeleteMessages:completion:</a></code>   </td><td class="markdownTableBodyLeft">从本地数据库中删除会话及其本地消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#acd99e104a4dc5e145e3e60773d761195">deleteServerConversation</a></code>   </td><td class="markdownTableBodyLeft">从服务器删除指定会话及其历史消息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#acd79acd5bf4960488cf1dda087f6f128">fetchGroupReadAcks</a></code>   </td><td class="markdownTableBodyLeft">从服务器分页获取群消息的已读回执。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#ad2094dc45b4c9a6b777a1ddd67297f39">loadMessages</a></code>   </td><td class="markdownTableBodyLeft">从本地数据库中检索特定类型的消息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#ab67f3b7050de815caafdddf6529d3e4d">deleteMessagesBeforeTimestamp</a></code>   </td><td class="markdownTableBodyLeft">删除时间戳在指定时间之前的本地历史消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a9db077be049b56849ec606de147d0f11">reportMessageWithId:tag:reason:completion:</a></code>   </td><td class="markdownTableBodyLeft">举报不当消息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a1b4ffe09737822fb665cfa16713433a1">fetchSupportedLanguages:</a></code>   </td><td class="markdownTableBodyLeft">获取翻译服务支持的所有语言。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a23eef0b7f10c3fc7bd513030e2019664">translateMessage:targetLanguages:completion:</a></code>   </td><td class="markdownTableBodyLeft">翻译文本消息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a1048a44856f78030d5c9b4697702053c">voiceMessageToText</a></code>   </td><td class="markdownTableBodyLeft">将已成功发送的语音消息转换为文本。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a1cbe74a171baa567924fb643204e9fbf">voiceFileToText</a></code>   </td><td class="markdownTableBodyLeft">将本地语音文件转换为文本。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#aa933d30242b85a26655c54d81d41ec5a">addReaction:toMessage:completion:</a></code>   </td><td class="markdownTableBodyLeft">添加Reaction。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#ada7b8d6da6577859239cd11174208cc2">removeReaction:fromMessage:completion:</a></code>   </td><td class="markdownTableBodyLeft">删除Reaction。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a7e3d20aaff25363f19d7c0d803f49c29">getReactionList</a></code>   </td><td class="markdownTableBodyLeft">获取Reaction列表。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a3a61731104e7609fcf531b0bdff7a92c">getReactionDetail</a></code>   </td><td class="markdownTableBodyLeft">获取Reaction详情。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a22377260bef066b3c7048166bc507154">addDelegate</a></code>   </td><td class="markdownTableBodyLeft">添加消息监听器。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a59c37d7733f37616d9d948aa5bbb7ef0">pinMessage</a></code>   </td><td class="markdownTableBodyLeft">置顶消息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a7e21a221a6c93433b38f8ab4d1b5590a">unpinMessage</a></code>   </td><td class="markdownTableBodyLeft">取消置顶消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a1dd33664277ed76c4208af4150a74987">modifyMessage</a></code>   </td><td class="markdownTableBodyLeft">修改消息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a10cb84d7a8240d932ab65b3402ed3a73">fetchMessagesFromServer</a></code>   </td><td class="markdownTableBodyLeft">从服务器拉取历史消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a4345e303676c81f52cbb53815ee5feb8">searchMessagesFromServerWithOption</a></code>   </td><td class="markdownTableBodyLeft">从服务器搜索消息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a0e33319b36aad99f98994f08bcb490c8">addConversationMark</a></code>   </td><td class="markdownTableBodyLeft">为本地和服务器上的会话添加标记。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a82e5144febac439d392700fdabc827a1">removeConversationMark</a></code>   </td><td class="markdownTableBodyLeft">移除会话标记。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#ac0dfccc5ece53e7260cb774fafb7e11f">getConversationsFromServerWithCursor</a></code>   </td><td class="markdownTableBodyLeft">按过滤条件从服务器分页获取会话。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a95e2c1c70e4827e614a1b539b141ee94">deleteAllMessagesAndConversations</a></code>   </td><td class="markdownTableBodyLeft">清空所有会话及其消息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a6d62ee40de1e5af0ebe25f39fbe4b54d">getPinnedMessagesFromServer</a></code>   </td><td class="markdownTableBodyLeft">获取会话中的置顶消息列表。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#ae8ec9a1c06372e6c6072bd60eb8aa641">markAllConversationsAsRead</a></code>   </td><td class="markdownTableBodyLeft">将所有本地会话设为已读。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#ae004337a6e59c55f2c6b4a2d9a54305f">getMessageCountWithCompletion</a></code>   </td><td class="markdownTableBodyLeft">获取本地数据库中的消息总数。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chat_manager-p.html#a57fe2584db83f5f16ce8af635ea22224">getMessages</a></code>   </td><td class="markdownTableBodyLeft">根据消息 ID 从本地数据库获取消息。   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">事件   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a55dcfe94117d29bc702d9d5fba0990f2">messagesDidReceive:</a></code>   </td><td class="markdownTableBodyLeft">当收到消息时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a3452001448ff71714824458da2be9484">cmdMessagesDidReceive:</a></code>   </td><td class="markdownTableBodyLeft">当收到cmd消息时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a2fd222567a4fb393c0f2c62ecd7cf5d7">messagesDidRead:</a></code>   </td><td class="markdownTableBodyLeft">当收到消息的已读回执时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a5fdf2e79d7f5a5b0e9da0bffde5ac66c">groupMessageDidRead:</a></code>   </td><td class="markdownTableBodyLeft">当收到群消息的已读回执时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#aa209384b77e33fec99166cd129571b3e">groupMessageAckHasChanged</a></code>   </td><td class="markdownTableBodyLeft">当收到群消息已读状态更新时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a544a8f526f4719a7d8b94796a3dc2eb3">messagesDidDeliver:</a></code>   </td><td class="markdownTableBodyLeft">当收到送达回执时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a906e8ac61d085287ada0bcac44fd8e6d">messagesInfoDidRecall:</a></code>   </td><td class="markdownTableBodyLeft">当收到的消息被撤回时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a40302a2c17f714a89286c23de8adbcb2">messageStatusDidChange</a></code>   </td><td class="markdownTableBodyLeft">当收到消息状态变更通知时触发，包括消息ID的变更。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a5c3cf638f30c14f8ed69eb0c70d2025d">messageReactionDidChange:</a></code>   </td><td class="markdownTableBodyLeft">当消息Reaction发生变化时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#aefe59b13d208725ba348c6a9e2e1af85">conversationListDidUpdate:</a></code>   </td><td class="markdownTableBodyLeft">当会话列表更新时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#ab7868ad1d4d9da227eeb01aa900c42d9">onConversationRead:to:</a></code>   </td><td class="markdownTableBodyLeft">当收到会话已读回执时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#aebcc71ce88bbaa09ad23cb6aead7cbc0">onMessagePinChanged</a></code>   </td><td class="markdownTableBodyLeft">当消息置顶状态发生变更时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a0153377b22e44dc156b4077b26d9c6e0">onMessageContentChanged</a></code>   </td><td class="markdownTableBodyLeft">当消息内容变更时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chat_manager_delegate-p.html#a5c3c14b89d2bbc1d590c9b040cd2d9b7">onStreamMessagesReceived</a></code>   </td><td class="markdownTableBodyLeft">当收到流式消息时触发。   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Messages</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">方法   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#adadfc8b72fb52e6ec461417ac9e26221">conversationId</a></code>   </td><td class="markdownTableBodyLeft">获取会话ID，具体取决于会话类型。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#ac0f666957be5047ae9560942f168b078">unreadMessagesCount</a></code>   </td><td class="markdownTableBodyLeft">获取会话中的未读消息数量。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#a3e5f15201830f2e7a38e892cb0b832ff">markAllMessagesAsRead:</a></code>   </td><td class="markdownTableBodyLeft">将所有未读消息标记为已读。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#a49ec21b882b40ae12e868978a8ec688d">messagesCount</a></code>   </td><td class="markdownTableBodyLeft">获取本地数据库中会话的所有消息数量。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#a5b7776fc532b76ffea1e12dc88848056">isChatThread</a></code>   </td><td class="markdownTableBodyLeft">检查当前会话是否为Thread会话。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#a69db8e7f46ddc86f9d5046c94e4863dc">loadMoreMsgFromDB</a></code>   </td><td class="markdownTableBodyLeft">从本地数据库加载消息，从特定消息ID开始。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#ad78e9ec8131fcff2a1fa26bcc80fa6c7">markMessageAsRead</a></code>   </td><td class="markdownTableBodyLeft">将特定消息标记为已读。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#ab334e21e01b0dcf6edca4d7fb36af9fa">deleteMessageWithId:error:</a></code>   </td><td class="markdownTableBodyLeft">在本地数据库中删除特定消息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#a6f0b08d0ed19fe13d1e3fa2743c0a779">latestMessage</a></code>   </td><td class="markdownTableBodyLeft">获取会话中的最新消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#afe68caf35b60dc2fcd2ba35b5b19f702">lastReceivedMessage</a></code>   </td><td class="markdownTableBodyLeft">获取会话中的最新接收消息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#ac69e81a3e9f002eeaa63b070b7f2b240">deleteAllMessages:</a></code>   </td><td class="markdownTableBodyLeft">删除会话中的所有消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#a164480add35abfde2c733d264373388a">ext</a></code>   </td><td class="markdownTableBodyLeft">会话的扩展字段。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#a61c633ede303968a9d66661be6c6dd6e">insertMessage</a></code>   </td><td class="markdownTableBodyLeft">在本地数据库中向会话插入消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#a4bc5383538dafe89cbc8c5b4b33f2a4c">appendMessage</a></code>   </td><td class="markdownTableBodyLeft">在本地数据库中将消息插入到会话的末尾。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_conversation.html#a36ae190decd87209523046fd6abf9912">updateMessage</a></code>   </td><td class="markdownTableBodyLeft">更新本地数据库中的消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a9bba89066e7b907b8142a8870d553c90">status</a></code>   </td><td class="markdownTableBodyLeft">消息发送或接收状态。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#af46f8a6bcebfe2e8b4292146d6222847">chatType</a></code>   </td><td class="markdownTableBodyLeft">获取聊天消息类型。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#afa78db9d43f69fd65879aa902115455f">body</a></code>   </td><td class="markdownTableBodyLeft">消息正文。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#ab206628b7ac95e31bbb9d107665b7dc9">timestamp</a></code>   </td><td class="markdownTableBodyLeft">服务器接收消息时的Unix时间戳。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a873ef9768ea4b79fa2f7423cd5d89e15">localTime</a></code>   </td><td class="markdownTableBodyLeft">消息的本地时间戳。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a649db1f6ae743ad8413f00824aad6d0c">isChatThreadMessage</a></code>   </td><td class="markdownTableBodyLeft">消息是否为Thread消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a8ef69621a5d69321f0bd85d36ab0587c">chatThread</a></code>   </td><td class="markdownTableBodyLeft">获取Thread的概述。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a6ae9cf2a37b6d35856232e83f8ffd946">from</a></code>   </td><td class="markdownTableBodyLeft">获取消息发送者的用户ID。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#aa7296db3f02b1d530cc0dd9bb586b4c2">to</a></code>   </td><td class="markdownTableBodyLeft">消息接收者的用户ID。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a87118c17f667d7cfdf8c0f61e09dd3cf">messageId</a></code>   </td><td class="markdownTableBodyLeft">消息ID。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a425b7aa39f5d611a4080df0b4994eec4">ext</a></code>   </td><td class="markdownTableBodyLeft">消息的扩展属性，类型为字典。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a923baa3be47892b47ca0ab910925febe">isRead</a></code>   </td><td class="markdownTableBodyLeft">消息是否已读。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a7f9d3559a9d33f8cdeb4b43602d1b0f5">isDeliverAcked</a></code>   </td><td class="markdownTableBodyLeft">消息是否已成功送达。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#ae18c036817544ebb5d30fcbacfdd2df7">isListened</a></code>   </td><td class="markdownTableBodyLeft">语音消息是否已被收听。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#ac3276607543ee0dc1d9e8e5b64e924ff">direction</a></code>   </td><td class="markdownTableBodyLeft">消息的收发方向。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a4861f20d6e6a074deeac1f8fed3de163">conversationId</a></code>   </td><td class="markdownTableBodyLeft">获取会话ID。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a03ba884426a50597c2ec9f0dcb2fb3de">reactionList</a></code>   </td><td class="markdownTableBodyLeft">获取Reaction列表。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#a78d632fe28019bd04eaa9f9df8b94fd6">onlineState</a></code>   </td><td class="markdownTableBodyLeft">是否在线消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_chat_message.html#af67236f39652a997bef17d074e69207f">pinnedInfo</a></code>   </td><td class="markdownTableBodyLeft">消息的置顶操作信息。   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Contacts</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">方法   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_contact_manager-p.html#acc5ab3752a26aeaeb39342fe0a100e3a">getContactsFromServerWithCompletion:</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取所有联系人。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_contact_manager-p.html#ae15d60fc337b6f4dac25dcbfaac29ffb">addUserToBlackList</a></code>   </td><td class="markdownTableBodyLeft">将用户添加到黑名单。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_contact_manager-p.html#ad32c77bb02ec722fec007a27775e7ad6">removeUserFromBlackList</a></code>   </td><td class="markdownTableBodyLeft">从黑名单中移除联系人。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_contact_manager-p.html#a69f3c6ab8efda6f521fd40c8c5d1ae74">getBlackList</a></code>   </td><td class="markdownTableBodyLeft">获取本地黑名单。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_contact_manager-p.html#aa530659b0219d5e37fc1ebfe2cba0d87">getBlackListFromServerWithCompletion:</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取黑名单。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_contact_manager-p.html#a5467b9fc6e8232e1997a4c788491f269">approveFriendRequestFromUser</a></code>   </td><td class="markdownTableBodyLeft">接受好友邀请。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_contact_manager-p.html#adff859c6ee0bee58dc62ce72bdfbde6c">declineFriendRequestFromUser</a></code>   </td><td class="markdownTableBodyLeft">拒绝好友邀请。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_contact_manager-p.html#af8d15c688e46accad6ec38c819ef0c60">getContacts</a></code>   </td><td class="markdownTableBodyLeft">从本地数据库获取联系人列表。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_contact_manager-p.html#ae76f4d8ba23c49072de273278a009025">getSelfIdsOnOtherPlatformWithCompletion:</a></code>   </td><td class="markdownTableBodyLeft">获取当前账号在其他平台或设备上的登录 ID 列表。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_contact_manager-p.html#a0cb89372d5f7fbbaea16d8a0b8289263">addDelegate</a></code>   </td><td class="markdownTableBodyLeft">添加联系人变更监听。   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">事件   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_contact_manager_delegate-p.html#a052c6ddf4d48c2fcdbbe668f69fb02a2">friendshipDidAddByUser:</a></code>   </td><td class="markdownTableBodyLeft">当用户被其他用户添加为联系人时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_contact_manager_delegate-p.html#a740f3f1b6d165047922b6f7e65f7b233">friendshipDidRemoveByUser:</a></code>   </td><td class="markdownTableBodyLeft">当用户被其他用户从联系人列表中移除时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_contact_manager_delegate-p.html#ac4ed282b819678437cee6e9182ece6bb">friendRequestDidReceiveFromUser:message:</a></code>   </td><td class="markdownTableBodyLeft">当用户收到好友请求时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_contact_manager_delegate-p.html#a39cbe04971aec2b6386674de3d73ffc4">friendRequestDidApproveByUser:</a></code>   </td><td class="markdownTableBodyLeft">当好友请求被批准时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_contact_manager_delegate-p.html#aabe544b4d8a8c74cde37259bfe7e4407">onFriendRequestDeclined</a></code>   </td><td class="markdownTableBodyLeft">当好友请求被拒绝时触发。   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Chat Group</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">方法   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#ab03c6485fb9d37334d93107af607b3d0">createGroup</a></code>   </td><td class="markdownTableBodyLeft">创建群组。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a02fe3ad6b6727807230f622ded50eebf">destroyGroup</a></code>   </td><td class="markdownTableBodyLeft">销毁群组。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a9016f0d69663f7a3381e448dae7f3c7c">leaveGroup</a></code>   </td><td class="markdownTableBodyLeft">离开群组。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#abf6864b99087dbad068d2c50cdcded65">joinPublicGroup</a></code>   </td><td class="markdownTableBodyLeft">加入一个公共群组。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a8d163c1369572f40e6501259166db3f5">addMembers</a></code>   </td><td class="markdownTableBodyLeft">将用户添加到群组中。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a662409866ae4f6e475cd5c763482bc28">removeMembersFromGroup</a></code>   </td><td class="markdownTableBodyLeft">从群组中移除成员。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a0a1c6284271d8ea239eee12c0620348c">getGroupSpecificationFromServerWithId</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取群组信息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a5be627ce4c271155855931a79e179907">getJoinedGroupsFromServerWithPage</a></code>   </td><td class="markdownTableBodyLeft">从服务器分页获取当前用户的所有群组。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#ad7b159490c4d0ed3f0eb4b814d8ebc72">getPublicGroupsFromServer</a></code>   </td><td class="markdownTableBodyLeft">从服务器分页获取公开群组。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#ae34c3036386619fb0dbe681687b6939d">updateGroupSubject</a></code>   </td><td class="markdownTableBodyLeft">更改群组名称。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a9897fe12aefca7abdca409744f726c8a">updateDescription</a></code>   </td><td class="markdownTableBodyLeft">更改群组描述。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a279c98f8e807f08f8ac9bb6c159ac4ca">acceptInvitationFromGroup</a></code>   </td><td class="markdownTableBodyLeft">接受群组邀请。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a86b117023c9c8d020abf535817f3724e">declineGroupInvitation</a></code>   </td><td class="markdownTableBodyLeft">拒绝群组邀请。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a2afbe21b16a28791b3ca7bc7ea7de909">approveJoinGroupRequest</a></code>   </td><td class="markdownTableBodyLeft">批准入群申请。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a920e728709b5c0e5ec992e9964d3b781">declineJoinGroupRequest</a></code>   </td><td class="markdownTableBodyLeft">拒绝群组请求。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#af1a96b745295f3ef01b5745079384106">requestToJoinPublicGroup</a></code>   </td><td class="markdownTableBodyLeft">请求加入公共群组。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#afde6db742f5ba2658f13b4da20facf3e">blockGroup</a></code>   </td><td class="markdownTableBodyLeft">阻止群组消息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a986d2881f7a2b0e5224258ff5af05160">unblockGroup</a></code>   </td><td class="markdownTableBodyLeft">取消阻止群组消息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a048543934a19754b79ed05f3f21a135b">blockMembers</a></code>   </td><td class="markdownTableBodyLeft">将用户添加到群组黑名单。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a18a766aa1ffa105477f14c75a6cacd6d">unblockMembers</a></code>   </td><td class="markdownTableBodyLeft">从群组黑名单中移除用户。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#afac0bc4fcba5e8eb1a81cd07540175df">getGroupBlacklistFromServer</a></code>   </td><td class="markdownTableBodyLeft">获取群组黑名单（带分页）。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#ae6dc595eab3f5cf7c91fc2fca13f3d25">getGroupMemberListFromServer</a></code>   </td><td class="markdownTableBodyLeft">获取群组成员列表（带分页）。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#aad98a5f00dca25d95fbc3981f33c0caa">updateGroupOwner</a></code>   </td><td class="markdownTableBodyLeft">转移群组所有权。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a3ff549522121f811041810fa60167dd1">addAdmin</a></code>   </td><td class="markdownTableBodyLeft">添加群组管理员。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a35c55a68367b5b9674b25ccd5c042f66">removeAdmin</a></code>   </td><td class="markdownTableBodyLeft">移除群组管理员。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a1ab97c49141b705c62301d57d6873dd7">muteMembers</a></code>   </td><td class="markdownTableBodyLeft">禁言群组成员。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#ad5a5069895251344511fc9926ff9b144">unmuteMembers</a></code>   </td><td class="markdownTableBodyLeft">取消禁言群组成员。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a98c0a1c5d6a4c1083bba78b44b713a79">getGroupMuteListFromServer</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取群组禁言列表。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#ad6e19f4a69156ce145bb38c3115ba8f2">addWhiteListMembers</a></code>   </td><td class="markdownTableBodyLeft">将成员添加到白名单列表。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a2acb3ccb85795f609896f370c180f78c">removeWhiteListMembers</a></code>   </td><td class="markdownTableBodyLeft">从白名单列表中移除成员。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#adb261a15e54bd6af4d66ab615be6e462">getGroupWhiteListFromServer</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取群组白名单列表。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#ad3e76187ee3294bb539be591ee70274a">updateGroupAnnouncement</a></code>   </td><td class="markdownTableBodyLeft">更新群组公告。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#adfdf283872f4a15757d1f370f5ace691">asyncFetchGroupAnnouncement</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取群组公告。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a10fe8d97ef09193418f8ddbf88700cfa">uploadGroupSharedFileWithId</a></code>   </td><td class="markdownTableBodyLeft">上传群组共享文件。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a73c4581b2b7578f824f994868ee277db">getGroupFileList</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取共享文件列表。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#aa134a9a008d00f212ac36164d1bca98e">removeGroupSharedFile</a></code>   </td><td class="markdownTableBodyLeft">移除群组共享文件。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a2aaee8065d4857848c83a761b0f40b0a">downloadGroupSharedFile</a></code>   </td><td class="markdownTableBodyLeft">下载群组共享文件。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a3e547213e61b863d904202eb15b9a986">getJoinedGroups</a></code>   </td><td class="markdownTableBodyLeft">获取当前用户的所有群组（从缓存中）。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#aff388c3cdbf8d11fc97c6f26c51166a4">setMemberAttribute</a></code>   </td><td class="markdownTableBodyLeft">设置群成员自定义属性。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#ad3bea277b9b6a3815be0103ace83af95">fetchMemberAttribute</a></code>   </td><td class="markdownTableBodyLeft">获取单个群成员的所有自定义属性。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a5320474ede27dda1f58b4aa786c6d6ad">fetchMembersAttributes</a></code>   </td><td class="markdownTableBodyLeft">按属性键获取多个群成员的自定义属性。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#afbb0204524226554b81954c66415e91c">updateGroupNamecard</a></code>   </td><td class="markdownTableBodyLeft">修改当前用户在群组中的群名片。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#ad035d7a538651be84a1c234168233c5d">getGroupNamecardWithGroupId</a></code>   </td><td class="markdownTableBodyLeft">获取本地缓存的群成员名片。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_group_manager-p.html#a1640f9f316e166ea58d164a5a6ed533d">addDelegate</a></code>   </td><td class="markdownTableBodyLeft">添加群组变更监听器。   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">事件   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a7eb4d32b6730b232aad0492cc808f996">groupInvitationDidReceive</a></code>   </td><td class="markdownTableBodyLeft">当用户收到群组邀请时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a2e97a35c87a6b307b997645097d9d57a">joinGroupRequestDidReceive</a></code>   </td><td class="markdownTableBodyLeft">当群组所有者或管理员收到用户的加入请求时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a87f22ca0843e6b64e71941dda9dd524b">joinGroupRequestDidApprove</a></code>   </td><td class="markdownTableBodyLeft">当入群申请被批准时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a61f195015a2018b8eeb3b27999e17d00">joinGroupRequestDidDecline</a></code>   </td><td class="markdownTableBodyLeft">当入群申请被拒绝时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a565ddc9602ca6b2fef671d990bcdb3e8">groupInvitationDidAccept</a></code>   </td><td class="markdownTableBodyLeft">当群组邀请被接受时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#af6af72c534b5226cb6e6c97d77c04db6">groupInvitationDidDecline</a></code>   </td><td class="markdownTableBodyLeft">当群组邀请被拒绝时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#ac7c819d13b9c4194c8788028a70a3609">didJoinGroup:inviter:message:</a></code>   </td><td class="markdownTableBodyLeft">当群组邀请自动接受时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a4358d25ad62562a06cdecfb062652dba">didLeaveGroup</a></code>   </td><td class="markdownTableBodyLeft">当当前用户被群组管理员移除时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a2c1b510c4c776f2e64bbb3c7593a0483">groupMuteListDidUpdate:addedMutedMembers:muteExpire:</a></code>   </td><td class="markdownTableBodyLeft">当一个或多个群组成员被禁言时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a24f7046bfb2cb6b10de43cfdf8be3f20">groupMuteListDidUpdate</a></code>   </td><td class="markdownTableBodyLeft">当一个或多个群组成员被取消禁言时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#abd4f10dc4815eb25e84d7030bb5eecaf">groupWhiteListDidUpdate:addedWhiteListMembers:</a></code>   </td><td class="markdownTableBodyLeft">当一个或多个群组成员被添加到白名单列表时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a6aee4bce8a0bf3ee1c9e4135ecade230">groupWhiteListDidUpdate:removedWhiteListMembers:</a></code>   </td><td class="markdownTableBodyLeft">当一个或多个成员从白名单列表中移除时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#ab76a87b8ff81d65e04dbb6612bdef094">groupAllMemberMuteChanged</a></code>   </td><td class="markdownTableBodyLeft">当所有群组成员被禁言或取消禁言时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#af70504f891a206e744468acd154a7c9e">groupAdminListDidUpdate:addedAdmin:</a></code>   </td><td class="markdownTableBodyLeft">当某个成员被设置为管理员时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#ad192ce31db60d1e58b6c98ad5a3977a6">groupAdminListDidUpdate:removedAdmin:</a></code>   </td><td class="markdownTableBodyLeft">当某个成员的管理员权限被移除时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a2ff5654873a653946f360298d249dc0d">groupOwnerDidUpdate</a></code>   </td><td class="markdownTableBodyLeft">当群组所有权被转移时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#ae015a0c727385c09fa0c0e474512fcc0">userDidJoinGroup</a></code>   </td><td class="markdownTableBodyLeft">当一个或多个成员加入群组时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#ac8c7534954b5aae58878dd80972331d9">userDidLeaveGroup</a></code>   </td><td class="markdownTableBodyLeft">当一个或多个成员离开群组时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#acde6b94b53564cb783de29532989c2e4">groupAnnouncementDidUpdate</a></code>   </td><td class="markdownTableBodyLeft">当公告被更新时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a2f5e1d8d7692daaa379a2311a80cde3d">onSharedFileAdded</a></code>   </td><td class="markdownTableBodyLeft">当共享文件被添加到群组时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#afd5674bc965662474c3ced89f32939ad">onSharedFileDeleted</a></code>   </td><td class="markdownTableBodyLeft">当共享文件从群组中移除时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a6307e33a0224ab398cb453335944e8a1">groupSpecificationDidUpdate</a></code>   </td><td class="markdownTableBodyLeft">当群组详细信息被更新时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a78cf03ae99363c5f64b02f8708059070">groupStateChanged</a></code>   </td><td class="markdownTableBodyLeft">当群组被启用或禁用时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#a8df5afd3dbfa0219cff79426fbadb381">onAttributesChangedOfGroupMember</a></code>   </td><td class="markdownTableBodyLeft">当群成员自定义属性变更时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_group_manager_delegate-p.html#adfb43ced4067281246f37dd7c328feab">onUserGroupNamecardChanged</a></code>   </td><td class="markdownTableBodyLeft">当群成员名片变更时触发。   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Chat Room</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">方法   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a9a9e6002fc9b18e5608246ac7a68af2c">createChatRoom</a></code>   </td><td class="markdownTableBodyLeft">创建聊天室。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a81c808e4efaca38a95e0a9482ed2a125">destroyChatroom</a></code>   </td><td class="markdownTableBodyLeft">销毁聊天室。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#acddd1893543a021967967164284e4510">joinChatRoom</a></code>   </td><td class="markdownTableBodyLeft">加入聊天室。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a1a721e5c4a66a457fb84a62adafbc1ac">leaveChatroom</a></code>   </td><td class="markdownTableBodyLeft">退出聊天室。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a146a15dc7d58f031d9f7e56557e51ecd">getChatroomsFromServer</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取聊天室数据，支持分页。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a2a4cd8a3b86565f57c2d8778ef675f4a">getChatroomSpecificationFromServer</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取聊天室的详细信息。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#afd634772ff5a5f764525457b51768858">updateSubject</a></code>   </td><td class="markdownTableBodyLeft">修改聊天室名称。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a2d7e6d8d9c4fd90adb380a4a05c503d0">updateDescription</a></code>   </td><td class="markdownTableBodyLeft">修改聊天室描述。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#aa86c27d68bb239a6a5ab1cf5d9ad5395">getChatroomMemberListFromServer</a></code>   </td><td class="markdownTableBodyLeft">获取聊天室成员列表。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#ad08c3eb7293e9c586f28fbeeaa2f6e94">muteMembers</a></code>   </td><td class="markdownTableBodyLeft">在聊天室中禁言成员。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a96d2b5981b32cc2f5fa77bb4c86080ba">unmuteMembers</a></code>   </td><td class="markdownTableBodyLeft">在聊天室中取消禁言成员。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#abef44b2324aaaf8a1daaa26b6e6c4acc">addAdmin</a></code>   </td><td class="markdownTableBodyLeft">添加聊天室管理员。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a74133caa7a465e00ee87157a7c60c5b0">removeAdmin</a></code>   </td><td class="markdownTableBodyLeft">移除聊天室管理员的管理权限。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a27f09b16ba05e5bfc50b41a1f7dbb692">getChatroomMuteListFromServer</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取禁言聊天室成员列表。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a72e481104511726cd09c848decb7809b">removeMembers</a></code>   </td><td class="markdownTableBodyLeft">从聊天室中移除成员。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a0e760cb2bfa80449c216591b3204734f">blockMembers</a></code>   </td><td class="markdownTableBodyLeft">将成员添加到聊天室的黑名单中。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#aa46ba2abdcaffa9850013c4b641cd7ec">unblockMembers</a></code>   </td><td class="markdownTableBodyLeft">从聊天室的黑名单中移除成员。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a6a130f444349ef7a10ce1278a1c4d30e">getChatroomBlacklistFromServer</a></code>   </td><td class="markdownTableBodyLeft">获取聊天室黑名单，支持分页。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a074da8f7df2c6c8cffc28c55ce822cd3">addWhiteListMembers</a></code>   </td><td class="markdownTableBodyLeft">将成员添加到聊天室的白名单中。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a4c7043edc06240742d89120e6d724669">removeWhiteListMembers</a></code>   </td><td class="markdownTableBodyLeft">从聊天室的白名单中移除成员。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a0a2d2901b47fa2d06d6deed291f942ab">getChatroomWhiteListFromServer</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取聊天室的白名单。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a19ee5ab3a930c33e443aca5be0038da9">muteAllMembers</a></code>   </td><td class="markdownTableBodyLeft">禁言所有成员。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a07785b52dc8b53a12399081467ff2955">unmuteAllMembers</a></code>   </td><td class="markdownTableBodyLeft">取消禁言所有成员。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a6ced1cdbd669a4e01953f58853287e67">updateChatroomAnnouncement</a></code>   </td><td class="markdownTableBodyLeft">更新聊天室公告。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a8fa56a00c0903eb799b5529c4a175b10">getChatroomAnnouncement</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取聊天室公告。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#ac4c2220c3d82da71b282bb05252372ec">setChatroomAttributes</a></code>   </td><td class="markdownTableBodyLeft">添加自定义聊天室属性。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#aecbc07f8ea29376026ff32d5fd11b735">setChatroomAttribute</a></code>   </td><td class="markdownTableBodyLeft">设置自定义聊天室属性。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a20e972353eeb9836dd2ae71e6d16f73d">setChatroomAttributesForced</a></code>   </td><td class="markdownTableBodyLeft">强制设置自定义聊天室属性。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a7ba3bc575b969ac173acea06a686e374">setChatroomAttributeForced</a></code>   </td><td class="markdownTableBodyLeft">强制设置自定义聊天室属性。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#af5a0f5ae86fa425819481d3578356d2d">fetchChatroomAttributes</a></code>   </td><td class="markdownTableBodyLeft">根据属性键列表获取聊天室的自定义属性列表。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a7bed1ef805c229f454032e2cae482d69">fetchChatroomAllAttributes</a></code>   </td><td class="markdownTableBodyLeft">获取聊天室的所有自定义属性。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#a7d04d666c72b5bd83768826e6d0d36c2">removeChatroomAttributes</a></code>   </td><td class="markdownTableBodyLeft">根据属性键列表移除自定义聊天室属性。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#ac6120071b4adb081c63928bed6937eff">removeChatroomAttribute</a></code>   </td><td class="markdownTableBodyLeft">移除自定义聊天室属性。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#afbf41e940511c5085926295fb31f4153">removeChatroomAttributesForced</a></code>   </td><td class="markdownTableBodyLeft">强制移除自定义聊天室属性。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#ac940fdb3923a54c354a48c4022964e31">removeChatroomAttributeForced</a></code>   </td><td class="markdownTableBodyLeft">强制移除自定义聊天室属性。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_chatroom_manager-p.html#ae6ab44fa6cb5553fc6a888414012b760">addDelegate</a></code>   </td><td class="markdownTableBodyLeft">添加聊天室事件监听器。   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">事件   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#a965d66134f09f023b5c72b2aad22236b">didDismissFromChatroom</a></code>   </td><td class="markdownTableBodyLeft">当当前用户被移出聊天室时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#a13bda37da8ee134e12293837db8c4181">userDidJoinChatroom</a></code>   </td><td class="markdownTableBodyLeft">当其他成员加入聊天室时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#acd5c334bf17fde779940f077b58ed547">userDidLeaveChatroom</a></code>   </td><td class="markdownTableBodyLeft">当其他成员退出聊天室时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#af64d985892da208489eca74abf31a4fa">onMuteListAdded</a></code>   </td><td class="markdownTableBodyLeft">当聊天室成员被添加到禁言列表时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#a3738feeca39e4a0634fb44a4ca1b8e7a">onMuteListRemoved</a></code>   </td><td class="markdownTableBodyLeft">当聊天室成员从禁言列表中移除时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#a4590904526e9c90959c783a5f463cbc9">onWhiteListAdded</a></code>   </td><td class="markdownTableBodyLeft">当聊天室成员被添加到白名单时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#a94636ecbc5d30386a8817eacbf61d46c">onWhiteListRemoved</a></code>   </td><td class="markdownTableBodyLeft">当聊天室成员从白名单中移除时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#ac24a29f4e8a91945c0e36f4835dc6b04">chatroomAllMemberMuteChanged</a></code>   </td><td class="markdownTableBodyLeft">当聊天室中的全员禁言状态变更时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#a45dd4eabb9179e8320ee0bc6aa3f7f59">onAdminAdded</a></code>   </td><td class="markdownTableBodyLeft">当聊天室成员被设置为管理员时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#ac625ddeb93757a393c974c566d047a5a">onAdminRemoved</a></code>   </td><td class="markdownTableBodyLeft">当聊天室成员从管理员列表中移除时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#ad467f8c97a579beac4d77eee76065b95">chatroomOwnerDidUpdate</a></code>   </td><td class="markdownTableBodyLeft">当聊天室的拥有者更改时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#a3df1f170b44c203288478878f06b88c9">chatroomAnnouncementDidUpdate</a></code>   </td><td class="markdownTableBodyLeft">当聊天室公告更改时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#a5aaf0315504218e6218a5f595ca68f4d">chatroomSpecificationDidUpdate:</a></code>   </td><td class="markdownTableBodyLeft">当聊天室详情更改时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#a063a6ab4112524a7c1edf0dcdb5dfe09">chatroomAttributesDidUpdated</a></code>   </td><td class="markdownTableBodyLeft">当自定义聊天室属性更新时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_chatroom_manager_delegate-p.html#ae967f7e30be9bdd00bb90ae0e35ba85c">chatroomAttributesDidRemoved</a></code>   </td><td class="markdownTableBodyLeft">当自定义聊天室属性被移除时触发。   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Presence</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">方法   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_presence_manager-p.html#a8e27652e793406682aba73d269c53108">publishPresence</a></code>   </td><td class="markdownTableBodyLeft">发布自定义的在线状态。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_presence_manager-p.html#ab6d03351191dc2c558aa5069c33cc25c">subscribePresences</a></code>   </td><td class="markdownTableBodyLeft">订阅用户的在线状态。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_presence_manager-p.html#ab2bb9c41b853094fd0219932bb635004">unsubscribePresences</a></code>   </td><td class="markdownTableBodyLeft">取消订阅用户的在线状态。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_presence_manager-p.html#ac9e78e79e4f9faf025c5ad3e7940f1ea">fetchSubscribedMembers</a></code>   </td><td class="markdownTableBodyLeft">使用分页获取已订阅的用户的列表。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_presence_manager-p.html#a0b53a506abe69f2c28cdf615cfb4fee5">fetchPresenceStatus</a></code>   </td><td class="markdownTableBodyLeft">获取用户的当前在线状态。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_presence_manager-p.html#ae1cc03c37f2b39700e7ffa9f768bb129">addDelegate</a></code>   </td><td class="markdownTableBodyLeft">添加监听器。   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">事件   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_presence_manager_delegate-p.html#a16c1f61f6a0fa67c5402401b4535bf25">presenceStatusDidChanged:</a></code>   </td><td class="markdownTableBodyLeft">当订阅的用户的在线状态更新时触发。   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Threading</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">方法   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#a37d9a0e16c76bd9430ba32715ea76666">createChatThread</a></code>   </td><td class="markdownTableBodyLeft">创建 Thread。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#a26266426bdf14ed651cb8e1741bdefaf">joinChatThread</a></code>   </td><td class="markdownTableBodyLeft">加入 Thread。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#a7c2188d3ff7cc6884a48f1bc29b3a690">destroyChatThread</a></code>   </td><td class="markdownTableBodyLeft">销毁 Thread。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#af77e5dd7775f11b79dd9210b25e3045a">leaveChatThread</a></code>   </td><td class="markdownTableBodyLeft">离开 Thread。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#af40921af8931da9fb7a68bed4e864627">getChatThreadFromServer</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取 Thread 详细信息。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#a6321952b9acd4a4ae472eb22e0d01cd1">updateChatThreadName</a></code>   </td><td class="markdownTableBodyLeft">更改 Thread 名称。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#a276680560341e0317aeecdff0b23c866">removeMemberFromChatThread</a></code>   </td><td class="markdownTableBodyLeft">从 Thread 中移除成员。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#a9b4a9a8f1ece3147e846dc84d77332e3">getChatThreadMembers</a></code>   </td><td class="markdownTableBodyLeft">分页获取 Thread 成员列表。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#a33adb9ec9bf9464245036b81b1a75bcb">getJoinedChatThreadsFromServer</a></code>   </td><td class="markdownTableBodyLeft">分页获取当前用户已加入的 Thread 列表。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#aace9c86388c990a8cff06127c15fce24">getJoinedChatThreadsFromServer</a></code>   </td><td class="markdownTableBodyLeft">分页获取当前用户在指定群组中已加入的 Thread 列表。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#a7d64dc4fd8201c1f788c78e2b009edf8">getChatThreadsFromServer</a></code>   </td><td class="markdownTableBodyLeft">分页获取指定群组中的 Thread 列表。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#a95a90823048c61a01ae850e4b96f2e4e">getChatThreadLatestMessage</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取指定 Thread 的最后一条回复。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_thread_manager-p.html#ad7a69c89005eb896f53d74ee4e41b42b">addDelegate</a></code>   </td><td class="markdownTableBodyLeft">添加 Thread 事件监听器。   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">事件   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_thread_manager_delegate-p.html#adc22ca28946196187ab5d9034ae8b4dd">onChatThreadCreated</a></code>   </td><td class="markdownTableBodyLeft">当 Thread 被创建时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_thread_manager_delegate-p.html#ab35d58c04d075b541f560631d1c203c1">onChatThreadUpdated</a></code>   </td><td class="markdownTableBodyLeft">当 Thread 被更新时触发。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_thread_manager_delegate-p.html#a96a7b02e754872c1bfe29dafd2c0660c">onChatThreadDestroyed</a></code>   </td><td class="markdownTableBodyLeft">当 Thread 被销毁时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_thread_manager_delegate-p.html#a8d2d62f155fe494b8b23a2cbbe781bc1">onChatThreadUserRemoved</a></code>   </td><td class="markdownTableBodyLeft">当当前用户被群主或群管理员从 Thread 中移除时触发。   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Offline push</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">方法   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_push_manager-p.html#adbf54c5d64605889f2def74195d8e715">getPushConfigsFromServer</a></code>   </td><td class="markdownTableBodyLeft">从服务器获取推送配置。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_push_manager-p.html#adc5e5ea0089477a0bb91c6c38e3ecac6">updatePushDisplayName</a></code>   </td><td class="markdownTableBodyLeft">更新当前用户的推送显示昵称。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_push_manager-p.html#a6d88ec018a1997ec5184b2ef6e408b6b">setSilentModeForConversation</a></code>   </td><td class="markdownTableBodyLeft">修改会话的免打扰设置。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_push_manager-p.html#ace0b3b08951341ceeac6ee543920bcac">clearRemindTypeForConversation</a></code>   </td><td class="markdownTableBodyLeft">清除会话的离线推送通知类型设置。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_push_manager-p.html#a1e96802cbae1c4cf5313a908748bb9a1">getSilentModeForConversation</a></code>   </td><td class="markdownTableBodyLeft">获取会话的免打扰设置。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_push_manager-p.html#aeb688ae0c8ddd64f2c2457f55ffc3891">setSilentModeForAll</a></code>   </td><td class="markdownTableBodyLeft">设置当前登录用户的免打扰设置。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_push_manager-p.html#a3c19cbb5e3477deea65122d7513aeef9">getSilentModeForAll</a></code>   </td><td class="markdownTableBodyLeft">获取当前登录用户的免打扰设置。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_push_manager-p.html#abf3c82ab52b4e8d78a4c3b4fbcf99f77">getSilentModeForConversations</a></code>   </td><td class="markdownTableBodyLeft">批量获取指定会话的免打扰设置。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#a7cca606a709bf84da4a5e4ba88b78957">bindDeviceToken</a></code>   </td><td class="markdownTableBodyLeft">绑定 APNs Token。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="interface_e_m_client.html#aa129bfa3d2cd74fc9cfb35ef3167f8d9">registerPushKitToken</a></code>   </td><td class="markdownTableBodyLeft">绑定 VoIP Token。   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md9"></a>
+User Attributes</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">方法   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_user_info_manager-p.html#ad995a58c25f7e7c242fd78abd5aa7c20">updateOwnInfo</a></code>   </td><td class="markdownTableBodyLeft">修改当前用户的用户属性。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_user_info_manager-p.html#a7f43afc95f3b0aac06394ddd909d9f74">updateOwnInfoByAttribute</a></code>   </td><td class="markdownTableBodyLeft">修改当前用户的用户属性。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_user_info_manager-p.html#a8a480f7ef5eac2e02ca38374a20dde80">fetchUserInfoByUserId</a></code>   </td><td class="markdownTableBodyLeft">根据用户ID获取用户属性。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_user_info_manager-p.html#ae15ed384b418e7c4fc13f03a38de7548">fetchUserInfoByAttribute</a></code>   </td><td class="markdownTableBodyLeft">根据用户ID和属性类型获取用户属性。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_user_info_manager-p.html#a759cbe5ab7836545c9dbb04ab19f74d1">getUserInfoByIds</a></code>   </td><td class="markdownTableBodyLeft">根据用户 ID 从本地缓存获取用户属性。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_user_info_manager-p.html#ac2a07528093670d7eac18d5379276dc3">subscribeUsersInfo</a></code>   </td><td class="markdownTableBodyLeft">订阅非好友用户的用户属性更新事件。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_user_info_manager-p.html#aec1adaf9d659b4913a20e0b207153fcd">unsubscribeUsersInfo</a></code>   </td><td class="markdownTableBodyLeft">取消订阅非好友用户的用户属性更新事件。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_user_info_manager-p.html#aef304a09f077b4c38f190eeb359e6b2a">fetchSubscribedUsers</a></code>   </td><td class="markdownTableBodyLeft">获取已订阅属性更新事件的非好友用户属性。    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_i_e_m_user_info_manager-p.html#acffb708616e76e76b1daeaa5647f9ca1">addDelegate</a></code>   </td><td class="markdownTableBodyLeft">添加用户属性变更监听器。   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">事件   </th><th class="markdownTableHeadLeft">描述    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_user_info_manager_delegate-p.html#a11106e252e23e0d806d4edbf459963e3">onSelfUserInfoUpdate</a></code>   </td><td class="markdownTableBodyLeft">当前登录用户的用户属性变更时触发。    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="protocol_e_m_user_info_manager_delegate-p.html#ad414a556bf2f114a5cfd3ab2a6f320a3">onUserInfoUpdate</a></code>   </td><td class="markdownTableBodyLeft">其他用户的用户属性变更时批量触发。   </td></tr>
+</table>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
