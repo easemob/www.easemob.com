@@ -42,6 +42,7 @@ var interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener =
     [ "GROUP_REMOVE_MUTE", "interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a2a3ed3e8ab7f3b84f598438c3e76b2c0", null ],
     [ "GROUP_REMOVE_USER_WHITE_LIST", "interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a80f3b482fdf6a29ab77b6064e8dbc7c0", null ],
     [ "GROUP_UNBLOCK", "interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a95537d129a1a6df71f6e3850b398f360", null ],
+    [ "GROUP_UPDATE", "interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#ac0161e2c8553d25a1e67d3da9c4c4efe", null ],
     [ "THREAD_CREATE", "interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a013dd937bd504fe24269426da0813b11", null ],
     [ "THREAD_DESTROY", "interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a9a5702ff29f392e62a5ebb04a2a3112f", null ],
     [ "THREAD_JOIN", "interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#ace5243f3a87ca289e29452e8592304ff", null ],

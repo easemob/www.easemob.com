@@ -27,6 +27,16 @@ var NAVTREE =
   [ "hyphenate_SDK_5.0", "index.html", [
     [ "弃用列表", "deprecated.html", null ],
     [ "类", "annotated.html", [
+      [ "EMClient", "index.html#autotoc_md0", null ],
+      [ "EMChatManager", "index.html#autotoc_md1", null ],
+      [ "EMMessage", "index.html#autotoc_md2", null ],
+      [ "EMContactManager", "index.html#autotoc_md3", null ],
+      [ "EMGroupManager", "index.html#autotoc_md4", null ],
+      [ "EMChatRoomManager", "index.html#autotoc_md5", null ],
+      [ "EMPresenceManager", "index.html#autotoc_md6", null ],
+      [ "EMChatThreadManager", "index.html#autotoc_md7", null ],
+      [ "EMPushManager", "index.html#autotoc_md8", null ],
+      [ "EMUserInfoManager", "index.html#autotoc_md9", null ],
       [ "类列表", "annotated.html", "annotated_dup" ],
       [ "类索引", "classes.html", null ],
       [ "类继承关系", "hierarchy.html", "hierarchy" ],
@@ -42,11 +52,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a354484b3fb1dc1edfa92f939f8a0b309",
-"classcom_1_1hyphenate_1_1chat_1_1_e_m_group_member_info.html#ab6e51a3b8e7d2b67731f6c71212b59b7",
-"classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ae0e412c75af85be17b0bf5b8ccfa560f",
-"enumcom_1_1hyphenate_1_1chat_1_1_e_m_keyword_list_match_type.html#aedd145d0b5f8f963de06bcb0f2e531a9",
-"interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a6eb7dbce9a04e9c0a433078a280fafcf"
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a30a00840020f30d51c1e026eeaa29707",
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_group_member_info.html#a8f2d76f99b3b8ae2529afe0565ae9c04",
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ad216e0c50516d30a1ed15a848664b33b",
+"enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_configs_type.html#af5514682040ccaa126bab8f5a9153076",
+"interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a35519eed94528e5e3e59c16d9f9082b8"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

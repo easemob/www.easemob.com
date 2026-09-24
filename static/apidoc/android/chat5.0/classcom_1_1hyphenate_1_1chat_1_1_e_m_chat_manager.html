@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">hyphenate_SDK_5.0<span id="projectnumber">&#160;5.0.0</span>
+   <div id="projectname">hyphenate_SDK_5.0<span id="projectnumber">&#160;5.1.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -179,6 +179,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a39cfea90587beeb7156aca1edfc1987c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad890649320e65e0080f937a727eaf5a2" id="r_ad890649320e65e0080f937a727eaf5a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad890649320e65e0080f937a727eaf5a2">cleanConversationsMemoryCache</a> ()</td></tr>
 <tr class="separator:ad890649320e65e0080f937a727eaf5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45aed4917dd06729e82457619d319b7a" id="r_a45aed4917dd06729e82457619d319b7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45aed4917dd06729e82457619d319b7a">asyncGetConversationsFromDB</a> (final String cursor, final int pageSize, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_cursor_result.html">EMCursorResult</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html">EMConversation</a> &gt; &gt; callback)</td></tr>
+<tr class="separator:a45aed4917dd06729e82457619d319b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64839169e3dc9b895a00b080c86cb096" id="r_a64839169e3dc9b895a00b080c86cb096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64839169e3dc9b895a00b080c86cb096">asyncPinConversation</a> (final String conversationId, boolean isPinned, final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html">EMCallBack</a> callback)</td></tr>
 <tr class="separator:a64839169e3dc9b895a00b080c86cb096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2169fcb370d9549c78a55f4f7f79dd" id="r_a4c2169fcb370d9549c78a55f4f7f79dd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c2169fcb370d9549c78a55f4f7f79dd">deleteConversation</a> (String conversationId, boolean deleteMessages)</td></tr>
@@ -711,6 +713,43 @@ Protected 成员函数</h2></td></tr>
     <tr><td class="paramname">filter</td><td>过滤器，详见 <code><a class="el" href="interfacecom_1_1hyphenate_1_1chat_1_1_e_m_custom_conversation_filter.html">EMCustomConversationFilter</a></code>。若要获取全部会话，传入 null 即可。 </td></tr>
     <tr><td class="paramname">cleanConversationsCache</td><td>是否清空内存缓存的会话。 </td></tr>
     <tr><td class="paramname">callBack</td><td>结果回调，成功时回调 <code><a class="el" href="">EMValueCallBack#onSuccess(Object)</a></code>，返回过滤后的会话列表。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a45aed4917dd06729e82457619d319b7a" name="a45aed4917dd06729e82457619d319b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45aed4917dd06729e82457619d319b7a">&#9670;&#160;</a></span>asyncGetConversationsFromDB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.hyphenate.chat.EMChatManager.asyncGetConversationsFromDB </td>
+          <td>(</td>
+          <td class="paramtype">final String</td>          <td class="paramname"><span class="paramname"><em>cursor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int</td>          <td class="paramname"><span class="paramname"><em>pageSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_value_call_back.html">EMValueCallBack</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_cursor_result.html">EMCursorResult</a>&lt; <a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html">EMConversation</a> &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>分页从本地数据库获取会话列表。</p>
+<p>调用该方法前，需将 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a85f83b480fae567fb57f564e77e5dfe9">EMOptions#setAutoLoadAllConversations(boolean)</a></code> 设置为 <code>false</code>。</p>
+<p>SDK 按照以下顺序返回会话列表：会话置顶状态倒序 &gt; 会话最新一条消息的服务器时间倒序 &gt; 会话 ID 倒序（不区分大小写）。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cursor</td><td>查询的开始位置。若传 <code>null</code> 或空字符串（""），SDK 从第一页开始获取；否则传上一页结果中返回的 cursor。 若结果中的 cursor 为空字符串，表示已获取到最后一页。 </td></tr>
+    <tr><td class="paramname">pageSize</td><td>每页期望返回的会话数量。取值范围为 [1,100]。 </td></tr>
+    <tr><td class="paramname">callback</td><td>分页获取结果 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_cursor_result.html">EMCursorResult</a></code>，包含用于下次获取数据的 cursor 以及会话列表。 如果传入的 cursor 无效，回调中的错误码为 <code><a class="el" href="classcom_1_1hyphenate_1_1_e_m_error.html#a69866681bb6a734df3d83eae77ea2653">EMError#INVALID_PARAM</a></code>。 </td></tr>
   </table>
   </dd>
 </dl>
