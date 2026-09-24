@@ -21,6 +21,7 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_group =
     [ "groupSubject", "classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a9ecd7b4130d8e6d15c5e60d9a532c914", null ],
     [ "isAllMemberMuted", "classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a92aae603ba4e4315014e111d9d0111d2", null ],
     [ "isDisabled", "classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#acd072d7fc16e6ff89110173979ed318b", null ],
+    [ "isInviteNeedConfirm", "classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a5169c0351168f0af600419cfcf206ce6", null ],
     [ "isJoinApprovalRequired", "classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#ae5e9a46dac1565f160195e93ae6152a3", null ],
     [ "isMemberAllowToInvite", "classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#adb54bbc1475e4ba346b9b1c7fbe41589", null ],
     [ "isMsgBlocked", "classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#ad98b22914ef53e9cf566a08a6acb634f", null ],

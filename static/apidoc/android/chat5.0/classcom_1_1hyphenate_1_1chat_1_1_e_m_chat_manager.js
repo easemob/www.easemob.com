@@ -13,6 +13,7 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager =
     [ "asyncFetchGroupMessageReadReceipts", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#aa6da658b18938a875e445fa8ea48df0d", null ],
     [ "asyncFetchHistoryMessages", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a89d765c75694e2361e59aa96407bde1f", null ],
     [ "asyncFilterConversationsFromDB", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a39cfea90587beeb7156aca1edfc1987c", null ],
+    [ "asyncGetConversationsFromDB", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a45aed4917dd06729e82457619d319b7a", null ],
     [ "asyncGetGroupMessageReadReceipts", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#ab5bb2cef833fecbda0badac13ee491af", null ],
     [ "asyncGetMessageCount", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a5ec164103868b5dd9a1e69027c671b04", null ],
     [ "asyncGetPinnedMessagesFromServer", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a0f66105458047472a2d38085057cca3d", null ],
