@@ -69,20 +69,23 @@
     ..from = map[&quot;from&quot;]
     ..body = _bodyFromMap(map[&quot;body&quot;])!
     ..attributes = map.getMapValue(&quot;attributes&quot;)
-    ..direction = MessageDirection.values[map[&quot;direction&quot;]]
+    ..direction = MessageDirection
+        .values[map[&quot;direction&quot;] ?? MessageDirection.SEND.index]
     ..hasRead = map.boolValue(&#39;hasRead&#39;)
     ..hasReadAck = map.boolValue(&#39;hasReadAck&#39;)
     ..needGroupAck = map.boolValue(&#39;needGroupAck&#39;)
     ..hasDeliverAck = map.boolValue(&#39;hasDeliverAck&#39;)
     .._msgId = map[&quot;msgId&quot;]
     ..conversationId = map[&quot;convId&quot;]
-    ..chatType = ChatType.values[map[&quot;chatType&quot;]]
+    ..chatType = ChatType.values[map[&quot;chatType&quot;] ?? ChatType.Chat.index]
     ..localTime = map[&quot;localTime&quot;] ?? 0
     ..serverTime = map[&quot;serverTime&quot;] ?? 0
     ..isChatThreadMessage = map[&quot;isThread&quot;] ?? false
     ..onlineState = map[&quot;onlineState&quot;] ?? true
     ..deliverOnlineOnly = map[&#39;deliverOnlineOnly&#39;] ?? false
-    ..status = MessageStatus.values[map[&quot;status&quot;]]
+    ..webhookEnv = map[&quot;webhookEnv&quot;]
+    ..status =
+        MessageStatus.values[map[&quot;status&quot;] ?? MessageStatus.CREATE.index]
     ..receiverList = map[&quot;receiverList&quot;]?.cast&lt;String&gt;()
     ..isBroadcast = map[&quot;broadcast&quot;] ?? false
     ..isContentReplaced = map[&quot;isContentReplaced&quot;] ?? false
@@ -120,7 +123,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

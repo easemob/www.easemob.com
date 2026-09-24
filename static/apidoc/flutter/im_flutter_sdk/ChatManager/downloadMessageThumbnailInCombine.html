@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
 <span class="name ">downloadMessageThumbnailInCombine</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="downloadMessageThumbnailInCombine-param-message"><span class="type-annotation"><a href="../../im_flutter_sdk/ChatMessage-class.html">ChatMessage</a></span> <span class="parameter-name">message</span></span></li>
 </ol>)
 
@@ -74,9 +74,9 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; downloadMessageThumbnailInCombine(ChatMessage message) async {
   try {
-    Map result = await platform_interface.Client.instance.chatManager.callNativeMethod(
-        ChatMethodKeys.downloadMessageThumbnailInCombine,
-        {&quot;message&quot;: message.toJson()});
+    Map result = await platform_interface.Client.instance.chatManager
+        .callNativeMethod(ChatMethodKeys.downloadMessageThumbnailInCombine,
+            {&quot;message&quot;: message.toJson()});
     ChatError.hasErrorFromResult(result);
   } catch (e) {
     rethrow;
@@ -109,7 +109,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

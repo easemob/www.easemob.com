@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
 <span class="name ">deleteMessagesBefore</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="deleteMessagesBefore-param-timestamp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">timestamp</span></span></li>
 </ol>)
 
@@ -74,9 +74,9 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; deleteMessagesBefore(int timestamp) async {
   try {
-    Map result = await platform_interface.Client.instance.chatManager.callNativeMethod(
-        ChatMethodKeys.deleteMessagesBeforeTimestamp,
-        {&quot;timestamp&quot;: timestamp});
+    Map result = await platform_interface.Client.instance.chatManager
+        .callNativeMethod(ChatMethodKeys.deleteMessagesBeforeTimestamp,
+            {&quot;timestamp&quot;: timestamp});
     ChatError.hasErrorFromResult(result);
   } catch (e) {
     rethrow;
@@ -109,7 +109,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

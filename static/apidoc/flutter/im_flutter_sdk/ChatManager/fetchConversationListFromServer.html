@@ -59,7 +59,7 @@
         <li>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated/Deprecated.html">Deprecated</a>(&#39;Use [fetchConversationsByOptions] instead&#39;)</li>
     </ol>
   </div>
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatConversation-class.html">ChatConversation</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatConversation-class.html">ChatConversation</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name deprecated">fetchConversationListFromServer</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="fetchConversationListFromServer-param-pageNum"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageNum</span> = <span class="default-value">1</span>, </span></li>
 <li><span class="parameter" id="fetchConversationListFromServer-param-pageSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageSize</span> = <span class="default-value">20</span>, </span></li>
 </ol>})
@@ -101,8 +101,9 @@ Future&lt;List&lt;ChatConversation&gt;&gt; fetchConversationListFromServer({
       &quot;pageNum&quot;: pageNum,
       &quot;pageSize&quot;: pageSize,
     };
-    Map result = await platform_interface.Client.instance.chatManager.callNativeMethod(
-        ChatMethodKeys.fetchConversationsFromServerWithPage, request);
+    Map result = await platform_interface.Client.instance.chatManager
+        .callNativeMethod(
+            ChatMethodKeys.fetchConversationsFromServerWithPage, request);
     ChatError.hasErrorFromResult(result);
     List&lt;ChatConversation&gt; conversationList = [];
     result[ChatMethodKeys.fetchConversationsFromServerWithPage]
@@ -141,7 +142,7 @@ Future&lt;List&lt;ChatConversation&gt;&gt; fetchConversationListFromServer({
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

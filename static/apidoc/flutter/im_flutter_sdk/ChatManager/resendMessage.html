@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatMessage-class.html">ChatMessage</a></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatMessage-class.html">ChatMessage</a></span>&gt;</span></span>
 <span class="name ">resendMessage</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="resendMessage-param-message"><span class="type-annotation"><a href="../../im_flutter_sdk/ChatMessage-class.html">ChatMessage</a></span> <span class="parameter-name">message</span></span></li>
 </ol>)
 
@@ -78,7 +78,8 @@
     Map result = await platform_interface.Client.instance.chatManager
         .callNativeMethod(ChatMethodKeys.resendMessage, message.toJson());
     ChatError.hasErrorFromResult(result);
-    ChatMessage msg = ChatMessage.fromJson(result[ChatMethodKeys.resendMessage]);
+    ChatMessage msg =
+        ChatMessage.fromJson(result[ChatMethodKeys.resendMessage]);
     message.from = msg.from;
     message.to = msg.to;
     message.status = msg.status;
@@ -115,7 +116,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

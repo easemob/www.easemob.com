@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatMessage-class.html">ChatMessage</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatMessage-class.html">ChatMessage</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">searchMsgsByOptions</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="searchMsgsByOptions-param-options"><span class="type-annotation"><a href="../../im_flutter_sdk/MessageSearchOptions-class.html">MessageSearchOptions</a></span> <span class="parameter-name">options</span></span></li>
 </ol>)
 
@@ -82,8 +82,9 @@
     req[&#39;direction&#39;] = options.direction.index;
     req.putIfNotNull(&quot;from&quot;, options.from);
     req[&#39;types&#39;] = options.types.map((e) =&gt; (e).index).toList();
-    Map result = await platform_interface.Client.instance.conversationManager.callNativeMethod(
-        ChatMethodKeys.conversationSearchMsgsByOptions, req);
+    Map result = await platform_interface.Client.instance.conversationManager
+        .callNativeMethod(
+            ChatMethodKeys.conversationSearchMsgsByOptions, req);
     ChatError.hasErrorFromResult(result);
     List&lt;ChatMessage&gt; messages = [];
     List list = result[ChatMethodKeys.conversationSearchMsgsByOptions];
@@ -122,7 +123,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

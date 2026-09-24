@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">fetchMembersAttributes</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="fetchMembersAttributes-param-groupId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span></li>
 <li><span class="parameter" id="fetchMembersAttributes-param-userIds"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userIds</span>, </span></li>
 <li><span class="parameter" id="fetchMembersAttributes-param-keys"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">keys</span>, </span></li>
@@ -85,8 +85,9 @@ Param <code>keys</code>       要获取的自定义属性 key 列表。</p>
   try {
     Map req = {&#39;groupId&#39;: groupId, &#39;userIds&#39;: userIds};
     req.putIfNotNull(&quot;keys&quot;, keys);
-    Map result = await platform_interface.Client.instance.groupManager.callNativeMethod(
-        ChatMethodKeys.fetchMembersAttributesFromGroup, req);
+    Map result = await platform_interface.Client.instance.groupManager
+        .callNativeMethod(
+            ChatMethodKeys.fetchMembersAttributesFromGroup, req);
     ChatError.hasErrorFromResult(result);
     var map = result[ChatMethodKeys.fetchMembersAttributesFromGroup];
     Map&lt;String, Map&lt;String, String&gt;&gt; ret = {};
@@ -131,7 +132,7 @@ Param <code>keys</code>       要获取的自定义属性 key 列表。</p>
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

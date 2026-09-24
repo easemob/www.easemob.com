@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatThread-class.html">ChatThread</a>?</span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatThread-class.html">ChatThread</a>?</span>&gt;</span></span>
 <span class="name ">fetchChatThread</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="fetchChatThread-param-chatThreadId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span>, </span></li>
 </ol>})
 
@@ -78,13 +78,13 @@
 }) async {
   try {
     Map req = {&quot;threadId&quot;: chatThreadId};
-    Map result = await platform_interface.Client.instance.chatThreadManager.callNativeMethod(
+    Map result = await platform_interface.Client.instance.chatThreadManager
+        .callNativeMethod(
       ChatMethodKeys.fetchChatThreadDetail,
       req,
     );
     ChatError.hasErrorFromResult(result);
-    return ChatThread.fromJson(
-        result[ChatMethodKeys.fetchChatThreadDetail]);
+    return ChatThread.fromJson(result[ChatMethodKeys.fetchChatThreadDetail]);
   } catch (e) {
     rethrow;
   }
@@ -116,7 +116,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

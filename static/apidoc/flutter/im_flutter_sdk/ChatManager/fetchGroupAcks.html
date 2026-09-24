@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatCursorResult-class.html">ChatCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatGroupMessageAck-class.html">ChatGroupMessageAck</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatCursorResult-class.html">ChatCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatGroupMessageAck-class.html">ChatGroupMessageAck</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">fetchGroupAcks</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="fetchGroupAcks-param-msgId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">msgId</span>, </span></li>
 <li><span class="parameter" id="fetchGroupAcks-param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, {</span></li>
 <li><span class="parameter" id="fetchGroupAcks-param-startAckId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">startAckId</span>, </span></li>
@@ -95,7 +95,8 @@
     Map result = await platform_interface.Client.instance.chatManager
         .callNativeMethod(ChatMethodKeys.asyncFetchGroupAcks, req);
     ChatError.hasErrorFromResult(result);
-    ChatCursorResult&lt;ChatGroupMessageAck&gt; cursorResult = ChatCursorResult.fromJson(
+    ChatCursorResult&lt;ChatGroupMessageAck&gt; cursorResult =
+        ChatCursorResult.fromJson(
       result[ChatMethodKeys.asyncFetchGroupAcks],
       dataItemCallback: (map) {
         return ChatGroupMessageAck.fromJson(map);
@@ -134,7 +135,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

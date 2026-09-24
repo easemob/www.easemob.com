@@ -59,7 +59,7 @@
         <li>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated/Deprecated.html">Deprecated</a>(&#39;Use [loginWithToken or loginWithPassword] instead&#39;)</li>
     </ol>
   </div>
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
 <span class="name deprecated">login</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="login-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userId</span>, </span></li>
 <li><span class="parameter" id="login-param-pwdOrToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">pwdOrToken</span>, [</span></li>
 <li><span class="parameter" id="login-param-isPassword"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isPassword</span> = <span class="default-value">true</span></span></li>
@@ -109,14 +109,14 @@ Future&lt;void&gt; login(
   bool isPassword = true,
 ]) async {
   try {
-    ChatLog.v(&#39;login: $userId : $pwdOrToken, isPassword: $isPassword&#39;);
+    ChatLog.v(&#39;login: $userId : ******, isPassword: $isPassword&#39;);
     Map req = {
       &#39;userId&#39;: userId,
       &#39;pwdOrToken&#39;: pwdOrToken,
       &#39;isPassword&#39;: isPassword
     };
-    Map result =
-        await platform_interface.Client.instance.callNativeMethod(ChatMethodKeys.login, req);
+    Map result = await platform_interface.Client.instance
+        .callNativeMethod(ChatMethodKeys.login, req);
     ChatError.hasErrorFromResult(result);
     _currentUserId = userId;
   } catch (e) {
@@ -150,7 +150,7 @@ Future&lt;void&gt; login(
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

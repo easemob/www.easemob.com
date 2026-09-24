@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">fetchSubscribedMembers</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="fetchSubscribedMembers-param-pageNum"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageNum</span> = <span class="default-value">1</span>, </span></li>
 <li><span class="parameter" id="fetchSubscribedMembers-param-pageSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageSize</span> = <span class="default-value">20</span>, </span></li>
 </ol>})
@@ -81,8 +81,9 @@
 }) async {
   try {
     Map req = {&#39;pageNum&#39;: pageNum, &quot;pageSize&quot;: pageSize};
-    Map result = await platform_interface.Client.instance.presenceManager.callNativeMethod(
-        ChatMethodKeys.fetchSubscribedMembersWithPageNum, req);
+    Map result = await platform_interface.Client.instance.presenceManager
+        .callNativeMethod(
+            ChatMethodKeys.fetchSubscribedMembersWithPageNum, req);
     ChatError.hasErrorFromResult(result);
     List&lt;String&gt; list = [];
     result[ChatMethodKeys.fetchSubscribedMembersWithPageNum]
@@ -123,7 +124,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>
