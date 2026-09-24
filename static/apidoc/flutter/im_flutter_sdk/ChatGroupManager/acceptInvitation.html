@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatGroup-class.html">ChatGroup</a></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatGroup-class.html">ChatGroup</a></span>&gt;</span></span>
 <span class="name ">acceptInvitation</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="acceptInvitation-param-groupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">groupId</span>, </span></li>
 <li><span class="parameter" id="acceptInvitation-param-inviter"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">inviter</span></span></li>
 </ol>)
@@ -84,7 +84,8 @@ Param <code>inviter</code>   邀请者。</p>
     Map result = await platform_interface.Client.instance.groupManager
         .callNativeMethod(ChatMethodKeys.acceptInvitationFromGroup, req);
     ChatError.hasErrorFromResult(result);
-    return ChatGroup.fromJson(result[ChatMethodKeys.acceptInvitationFromGroup]);
+    return ChatGroup.fromJson(
+        result[ChatMethodKeys.acceptInvitationFromGroup]);
   } catch (e) {
     rethrow;
   }
@@ -116,7 +117,7 @@ Param <code>inviter</code>   邀请者。</p>
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

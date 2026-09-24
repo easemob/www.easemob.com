@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatMessage-class.html">ChatMessage</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatMessage-class.html">ChatMessage</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">loadMessagesWithKeyword</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="loadMessagesWithKeyword-param-keywords"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">keywords</span>, {</span></li>
 <li><span class="parameter" id="loadMessagesWithKeyword-param-sender"><span>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated/Deprecated.html">Deprecated</a>(&#39;The `sender` parameter is deprecated, use `senders` instead.&#39;)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">sender</span>, </span></li>
 <li><span class="parameter" id="loadMessagesWithKeyword-param-senders"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">senders</span>, </span></li>
@@ -105,7 +105,8 @@
     req.putIfNotNull(&quot;senders&quot;, senders);
     req.putIfNotNull(&quot;from&quot;, sender);
 
-    Map&lt;String, dynamic&gt; result = await platform_interface.Client.instance.conversationManager
+    Map&lt;String, dynamic&gt; result = await platform_interface
+        .Client.instance.conversationManager
         .callNativeMethod(ChatMethodKeys.loadMsgWithKeywords, req);
     ChatError.hasErrorFromResult(result);
     List&lt;ChatMessage&gt; msgList = [];
@@ -144,7 +145,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

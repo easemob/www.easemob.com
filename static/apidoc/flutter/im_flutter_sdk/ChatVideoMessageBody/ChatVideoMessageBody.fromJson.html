@@ -71,7 +71,8 @@
   thumbnailSecret = map[&quot;thumbnailSecret&quot;];
   height = (map[&quot;height&quot;] ?? 0).toDouble();
   width = (map[&quot;width&quot;] ?? 0).toDouble();
-  thumbnailStatus = DownloadStatus.values[map[&quot;thumbnailStatus&quot;]];
+  thumbnailStatus = DownloadStatus
+      .values[map[&quot;thumbnailStatus&quot;] ?? DownloadStatus.PENDING.index];
 }</code></pre>
 </section>
 
@@ -100,7 +101,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

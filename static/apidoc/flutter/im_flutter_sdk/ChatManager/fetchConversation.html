@@ -59,7 +59,7 @@
         <li>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated/Deprecated.html">Deprecated</a>(&#39;Use fetchConversationsByOptions instead&#39;)</li>
     </ol>
   </div>
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatCursorResult-class.html">ChatCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatConversation-class.html">ChatConversation</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatCursorResult-class.html">ChatCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatConversation-class.html">ChatConversation</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name deprecated">fetchConversation</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="fetchConversation-param-cursor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span></li>
 <li><span class="parameter" id="fetchConversation-param-pageSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageSize</span> = <span class="default-value">20</span>, </span></li>
 </ol>})
@@ -106,8 +106,9 @@ Future&lt;ChatCursorResult&lt;ChatConversation&gt;&gt; fetchConversation({
       &quot;pageSize&quot;: pageSize,
     };
     map.putIfNotNull(&#39;cursor&#39;, cursor);
-    Map result = await platform_interface.Client.instance.chatManager.callNativeMethod(
-        ChatMethodKeys.getConversationsFromServerWithCursor, map);
+    Map result = await platform_interface.Client.instance.chatManager
+        .callNativeMethod(
+            ChatMethodKeys.getConversationsFromServerWithCursor, map);
     ChatError.hasErrorFromResult(result);
     return ChatCursorResult.fromJson(
         result[ChatMethodKeys.getConversationsFromServerWithCursor],
@@ -145,7 +146,7 @@ Future&lt;ChatCursorResult&lt;ChatConversation&gt;&gt; fetchConversation({
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

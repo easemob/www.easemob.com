@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatMessage-class.html">ChatMessage</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatMessage-class.html">ChatMessage</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">loadMessagesFromTime</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="loadMessagesFromTime-param-startTime"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">startTime</span>, </span></li>
 <li><span class="parameter" id="loadMessagesFromTime-param-endTime"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">endTime</span>, </span></li>
 <li><span class="parameter" id="loadMessagesFromTime-param-count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">count</span> = <span class="default-value">20</span>, </span></li>
@@ -89,7 +89,8 @@
     req[&#39;endTime&#39;] = endTime;
     req[&#39;count&#39;] = count;
 
-    Map&lt;String, dynamic&gt; result = await platform_interface.Client.instance.conversationManager
+    Map&lt;String, dynamic&gt; result = await platform_interface
+        .Client.instance.conversationManager
         .callNativeMethod(ChatMethodKeys.loadMsgWithTime, req);
     ChatError.hasErrorFromResult(result);
     List&lt;ChatMessage&gt; msgList = [];
@@ -128,7 +129,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

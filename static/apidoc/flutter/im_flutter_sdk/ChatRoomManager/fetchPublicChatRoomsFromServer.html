@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatPageResult-class.html">ChatPageResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatRoom-class.html">ChatRoom</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatPageResult-class.html">ChatPageResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatRoom-class.html">ChatRoom</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">fetchPublicChatRoomsFromServer</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="fetchPublicChatRoomsFromServer-param-pageNum"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageNum</span> = <span class="default-value">1</span>, </span></li>
 <li><span class="parameter" id="fetchPublicChatRoomsFromServer-param-pageSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pageSize</span> = <span class="default-value">200</span>, </span></li>
 </ol>})
@@ -80,9 +80,9 @@
   int pageSize = 200,
 }) async {
   try {
-    Map result = await platform_interface.Client.instance.chatRoomManager.callNativeMethod(
-        ChatMethodKeys.fetchPublicChatRoomsFromServer,
-        {&quot;pageNum&quot;: pageNum, &quot;pageSize&quot;: pageSize});
+    Map result = await platform_interface.Client.instance.chatRoomManager
+        .callNativeMethod(ChatMethodKeys.fetchPublicChatRoomsFromServer,
+            {&quot;pageNum&quot;: pageNum, &quot;pageSize&quot;: pageSize});
     ChatError.hasErrorFromResult(result);
     return ChatPageResult&lt;ChatRoom&gt;.fromJson(
         result[ChatMethodKeys.fetchPublicChatRoomsFromServer],
@@ -120,7 +120,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

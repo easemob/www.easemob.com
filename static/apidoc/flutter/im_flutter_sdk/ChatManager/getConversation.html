@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatConversation-class.html">ChatConversation</a>?</span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatConversation-class.html">ChatConversation</a>?</span>&gt;</span></span>
 <span class="name ">getConversation</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="getConversation-param-conversationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">conversationId</span>, {</span></li>
 <li><span class="parameter" id="getConversation-param-type"><span class="type-annotation"><a href="../../im_flutter_sdk/ChatConversationType.html">ChatConversationType</a></span> <span class="parameter-name">type</span> = <span class="default-value">ChatConversationType.Chat</span>, </span></li>
 <li><span class="parameter" id="getConversation-param-createIfNeed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">createIfNeed</span> = <span class="default-value">true</span>, </span></li>
@@ -97,7 +97,8 @@
         .callNativeMethod(ChatMethodKeys.getConversation, req);
     ChatError.hasErrorFromResult(result);
     if (result.containsKey(ChatMethodKeys.getConversation)) {
-      return ChatConversation.fromJson(result[ChatMethodKeys.getConversation]);
+      return ChatConversation.fromJson(
+          result[ChatMethodKeys.getConversation]);
     } else {
       return null;
     }
@@ -132,7 +133,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

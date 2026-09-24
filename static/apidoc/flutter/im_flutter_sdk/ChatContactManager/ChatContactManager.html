@@ -63,7 +63,8 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">ChatContactManager() {
-  platform_interface.Client.instance.contactManager.updateNativeHandler((MethodCall call) async {
+  platform_interface.Client.instance.contactManager
+      .updateNativeHandler((MethodCall call) async {
     ChatLog.d(&quot;${call.method}: arguments: ${call.arguments}&quot;);
     Map? argMap = call.arguments;
     if (call.method == ChatMethodKeys.onContactChanged) {
@@ -98,7 +99,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

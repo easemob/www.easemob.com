@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
 <span class="name ">updateChatThreadName</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="updateChatThreadName-param-chatThreadId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">chatThreadId</span>, </span></li>
 <li><span class="parameter" id="updateChatThreadName-param-newName"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">newName</span>, </span></li>
 </ol>})
@@ -86,7 +86,8 @@
       &quot;name&quot;: newName,
       &quot;threadId&quot;: chatThreadId,
     };
-    Map result = await platform_interface.Client.instance.chatThreadManager.callNativeMethod(
+    Map result = await platform_interface.Client.instance.chatThreadManager
+        .callNativeMethod(
       ChatMethodKeys.updateChatThreadSubject,
       req,
     );
@@ -122,7 +123,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

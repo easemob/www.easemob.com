@@ -64,14 +64,16 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">ChatFileMessageBody.fromJson({required Map map, super.type = MessageType.FILE})
+  <pre class="language-dart"><code class="language-dart">ChatFileMessageBody.fromJson(
+    {required Map map, super.type = MessageType.FILE})
     : super.fromJson(map: map) {
   secret = map[&quot;secret&quot;];
   remotePath = map[&quot;remotePath&quot;];
   fileSize = map[&quot;fileSize&quot;];
   localPath = map[&quot;localPath&quot;] ?? &quot;&quot;;
   displayName = map[&quot;displayName&quot;];
-  fileStatus = DownloadStatus.values[map[&quot;fileStatus&quot;]];
+  fileStatus = DownloadStatus
+      .values[map[&quot;fileStatus&quot;] ?? DownloadStatus.PENDING.index];
 }</code></pre>
 </section>
 
@@ -100,7 +102,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

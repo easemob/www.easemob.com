@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatRoom-class.html">ChatRoom</a></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatRoom-class.html">ChatRoom</a></span>&gt;</span></span>
 <span class="name ">fetchChatRoomInfoFromServer</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="fetchChatRoomInfoFromServer-param-roomId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">roomId</span>, {</span></li>
 <li><span class="parameter" id="fetchChatRoomInfoFromServer-param-fetchMembers"><span>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated/Deprecated.html">Deprecated</a>(&#39;&#39;)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">fetchMembers</span>, </span></li>
 </ol>})
@@ -79,9 +79,9 @@
   @Deprecated(&#39;&#39;) bool? fetchMembers,
 }) async {
   try {
-    Map result = await platform_interface.Client.instance.chatRoomManager.callNativeMethod(
-        ChatMethodKeys.fetchChatRoomInfoFromServer,
-        {&quot;roomId&quot;: roomId, &quot;fetchMembers&quot;: fetchMembers});
+    Map result = await platform_interface.Client.instance.chatRoomManager
+        .callNativeMethod(ChatMethodKeys.fetchChatRoomInfoFromServer,
+            {&quot;roomId&quot;: roomId, &quot;fetchMembers&quot;: fetchMembers});
     ChatError.hasErrorFromResult(result);
     return ChatRoom.fromJson(
         result[ChatMethodKeys.fetchChatRoomInfoFromServer]);
@@ -116,7 +116,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatCursorResult-class.html">ChatCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatMessageReaction-class.html">ChatMessageReaction</a></span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatCursorResult-class.html">ChatCursorResult</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatMessageReaction-class.html">ChatMessageReaction</a></span>&gt;</span></span>&gt;</span></span>
 <span class="name ">fetchReactionDetail</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="fetchReactionDetail-param-messageId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">messageId</span>, </span></li>
 <li><span class="parameter" id="fetchReactionDetail-param-reaction"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">reaction</span>, </span></li>
 <li><span class="parameter" id="fetchReactionDetail-param-cursor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span></li>
@@ -92,7 +92,8 @@
     };
     req.putIfNotNull(&quot;cursor&quot;, cursor);
     req.putIfNotNull(&quot;pageSize&quot;, pageSize);
-    Map result = await platform_interface.Client.instance.chatManager.callNativeMethod(
+    Map result =
+        await platform_interface.Client.instance.chatManager.callNativeMethod(
       ChatMethodKeys.fetchReactionDetail,
       req,
     );
@@ -137,7 +138,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>

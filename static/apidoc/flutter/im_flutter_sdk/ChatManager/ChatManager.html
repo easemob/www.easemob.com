@@ -63,7 +63,8 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">ChatManager() {
-  platform_interface.Client.instance.chatManager.updateNativeHandler((MethodCall call) {
+  platform_interface.Client.instance.chatManager
+      .updateNativeHandler((MethodCall call) {
     ChatLog.d(&quot;${call.method}: arguments: ${call.arguments}&quot;);
     if (call.method == ChatMethodKeys.onMessagesReceived) {
       return _onMessagesReceived(call.arguments);
@@ -125,7 +126,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      4.22.0
+      4.24.0
   </span>
   
 </footer>
