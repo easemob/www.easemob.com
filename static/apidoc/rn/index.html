@@ -1,5 +1,5 @@
 <!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>react-native-chat-sdk</title><meta name="description" content="Documentation for react-native-chat-sdk"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script><script async src="assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
-<div class="tsd-toolbar-contents container"><a href="index.html" class="title">Chat SDK for React Native 1.18.0</a>
+<div class="tsd-toolbar-contents container"><a href="index.html" class="title">Chat SDK for React Native 1.21.0</a>
 <div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
 <ul role="listbox" id="tsd-search-results"></ul>
 <div id="tsd-search-status" aria-live="polite" aria-atomic="true">
@@ -125,6 +125,14 @@
 <tr>
 <td style="text-align:left"><a href="classes/ChatClient.html#updatepushconfig" class="tsd-kind-method">updatePushConfig</a></td>
 <td style="text-align:left">更新推送设置。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="classes/ChatClient.html#bindpushkittoken" class="tsd-kind-method">bindPushKitToken</a></td>
+<td style="text-align:left">绑定 Apple PushKit token，用于 VoIP 推送通知。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="classes/ChatClient.html#unbindpushkittoken" class="tsd-kind-method">unbindPushKitToken</a></td>
+<td style="text-align:left">解绑通过 <a href="classes/ChatClient.html#bindpushkittoken" class="tsd-kind-method"> ChatClient.bindPushKitToken</a> 绑定的 Apple PushKit token。</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="classes/ChatClient.html#getrtctokeninfowithchannelname" class="tsd-kind-method">getRTCTokenInfoWithChannelName</a></td>
@@ -668,6 +676,10 @@
 <td style="text-align:left">分页从服务器获取置顶会话。</td>
 </tr>
 <tr>
+<td style="text-align:left"><a href="classes/ChatManager.html#fetchconversationsfromdb" class="tsd-kind-method">fetchConversationsFromDB</a></td>
+<td style="text-align:left">从本地数据库分页获取会话列表。</td>
+</tr>
+<tr>
 <td style="text-align:left"><a href="classes/ChatManager.html#pinconversation" class="tsd-kind-method">pinConversation</a></td>
 <td style="text-align:left">设置会话是否置顶。</td>
 </tr>
@@ -728,8 +740,12 @@
 <td style="text-align:left">搜索指定会话的消息。</td>
 </tr>
 <tr>
+<td style="text-align:left"><a href="classes/ChatManager.html#searchmessagesfromserver" class="tsd-kind-method">searchMessagesFromServer</a></td>
+<td style="text-align:left">从服务器端搜索消息。</td>
+</tr>
+<tr>
 <td style="text-align:left"><a href="classes/ChatManager.html#removemessageswithtimestamp" class="tsd-kind-method">removeMessagesWithTimestamp</a></td>
-<td style="text-align:left">从本地和服务器端删除指定会话的消息。</td>
+<td style="text-align:left">删除当前用户的本地消息和服务器消息。单聊或群聊中其他用户的服务器消息不受影响，可通过消息漫游获取。</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="classes/ChatManager.html#getmessagecountwithtimestamp" class="tsd-kind-method">getMessageCountWithTimestamp</a></td>
@@ -1744,6 +1760,10 @@
 <tbody>
 <tr>
 <td style="text-align:left"><a href="classes/ChatMessage.html#constructor" class="tsd-kind-constructor">constructor</a></td>
+<td style="text-align:left">构造消息。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="classes/ChatMessage.html#getbody" class="tsd-kind-method">getBody</a></td>
 <td style="text-align:left">构造消息。</td>
 </tr>
 <tr>
