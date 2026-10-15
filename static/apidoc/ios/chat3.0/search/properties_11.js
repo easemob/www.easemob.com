@@ -21,7 +21,5 @@ var searchData=
   ['streamchunk_18',['streamChunk',['../interface_e_m_chat_message.html#ab8f3c33af1b1fee6f6f4012097eb064d',1,'EMChatMessage']]],
   ['style_19',['style',['../interface_e_m_group_options.html#a620cfb9f0308ae836185dd7d9b539adf',1,'EMGroupOptions']]],
   ['subject_20',['subject',['../interface_e_m_chatroom.html#a325880df0c461ee38a4ead0fecbfbd28',1,'EMChatroom']]],
-  ['summary_21',['summary',['../interface_e_m_combine_message_body.html#ad67486e446eb4de9c36421e1fe0f29ee',1,'EMCombineMessageBody']]],
-  ['syncdatawshost_22',['syncDataWSHost',['../category_e_m_options_07_private_deploy_08.html#a7845cb8c68da289c9733d4363c3c6639',1,'EMOptions(PrivateDeploy)::syncDataWSHost()'],['../interface_e_m_options.html#a7845cb8c68da289c9733d4363c3c6639',1,'EMOptions::syncDataWSHost()']]],
-  ['syncdatawsport_23',['syncDataWSPort',['../category_e_m_options_07_private_deploy_08.html#aa2455d1791d53c97bb7e563027e15e7f',1,'EMOptions(PrivateDeploy)::syncDataWSPort()'],['../interface_e_m_options.html#aa2455d1791d53c97bb7e563027e15e7f',1,'EMOptions::syncDataWSPort()']]]
+  ['summary_21',['summary',['../interface_e_m_combine_message_body.html#ad67486e446eb4de9c36421e1fe0f29ee',1,'EMCombineMessageBody']]]
 ];

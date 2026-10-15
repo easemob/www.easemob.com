@@ -45,7 +45,5 @@ var searchData=
   ['subscribe_3aexpiry_3acompletion_3a_42',['subscribe:expiry:completion:',['../protocol_i_e_m_presence_manager-p.html#ab6d03351191dc2c558aa5069c33cc25c',1,'IEMPresenceManager-p']]],
   ['subscribeusersinfo_3acompletion_3a_43',['subscribeUsersInfo:completion:',['../protocol_i_e_m_user_info_manager-p.html#ac2a07528093670d7eac18d5379276dc3',1,'IEMUserInfoManager-p']]],
   ['summary_44',['summary',['../interface_e_m_combine_message_body.html#ad67486e446eb4de9c36421e1fe0f29ee',1,'EMCombineMessageBody']]],
-  ['syncdatawshost_45',['syncDataWSHost',['../category_e_m_options_07_private_deploy_08.html#a7845cb8c68da289c9733d4363c3c6639',1,'EMOptions(PrivateDeploy)::syncDataWSHost()'],['../interface_e_m_options.html#a7845cb8c68da289c9733d4363c3c6639',1,'EMOptions::syncDataWSHost()']]],
-  ['syncdatawsport_46',['syncDataWSPort',['../category_e_m_options_07_private_deploy_08.html#aa2455d1791d53c97bb7e563027e15e7f',1,'EMOptions(PrivateDeploy)::syncDataWSPort()'],['../interface_e_m_options.html#aa2455d1791d53c97bb7e563027e15e7f',1,'EMOptions::syncDataWSPort()']]],
-  ['syncsilentmodeconversationsfromservercompletion_3a_47',['syncSilentModeConversationsFromServerCompletion:',['../protocol_i_e_m_push_manager-p.html#ad68bc8591e51285579d20c01fd825f26',1,'IEMPushManager-p']]]
+  ['syncsilentmodeconversationsfromservercompletion_3a_45',['syncSilentModeConversationsFromServerCompletion:',['../protocol_i_e_m_push_manager-p.html#ad68bc8591e51285579d20c01fd825f26',1,'IEMPushManager-p']]]
 ];
