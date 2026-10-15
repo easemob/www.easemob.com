@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="im_flutter_sdk API docs, for the Dart programming language.">
+  <title>im_flutter_sdk - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://www.easemob.com">im_flutter_sdk package</a></li>
+  </ol>
+  <div class="self-name">im_flutter_sdk</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
+</header>
+<main>
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="-im-flutter-sdk">环信即时通讯 IM Flutter SDK</h1>
+<p>环信 IM 的 Flutter 插件，基于 Federated Plugin 架构，通过本插件可以在 Flutter 应用中快速集成单聊、群聊、聊天室等即时通讯能力。</p>
+<h2 id="">平台支持</h2>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>最低版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td>API 21 (Android 5.0)</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>13.0</td>
+</tr>
+<tr>
+<td>鸿蒙</td>
+<td>见下方<a href="#%E9%B8%BF%E8%92%99%E6%94%AF%E6%8C%81">鸿蒙支持</a></td>
+</tr>
+</tbody>
+</table>
+<p>环境要求：Flutter &gt;= 3.3.0，Dart &gt;= 3.3.0 且 &lt; 4.0.0。</p>
+<h2 id="-2">前提条件</h2>
+<ul>
+<li>有效的环信 IM 开发者账号和 App Key，可在 <a href="https://console.easemob.com/user/login">环信即时通讯云控制台</a> 注册获取。</li>
+<li>Flutter 开发环境配置问题请参考 <a href="https://docs.flutter.dev/get-started/install">Flutter 官方文档</a>。</li>
+</ul>
+<h2 id="-sdk">集成 SDK</h2>
+<pre class="language-bash"><code class="language-bash">flutter pub add im_flutter_sdk
+</code></pre>
+<h3 id="android-">Android 配置</h3>
+<ol>
+<li>在 <code>android/app/build.gradle</code> 中确认最低版本：</li>
+</ol>
+<pre class="language-gradle"><code class="language-gradle">android {
+    defaultConfig {
+        minSdkVersion 21
+    }
+}
+</code></pre>
+<ol start="2">
+<li>在 <code>android/app/proguard-rules.pro</code> 中添加免混淆规则：</li>
+</ol>
+<pre class="language-pro"><code class="language-pro">-keep class com.hyphenate.** {*;}
+-dontwarn com.hyphenate.**
+</code></pre>
+<h3 id="ios-">iOS 配置</h3>
+<ol>
+<li>在 <code>ios/Runner.xcodeproj</code> 中将 <code>TARGETS &gt; Runner &gt; General &gt; Deployment Info</code> 的最低版本设置为 <code>iOS 13.0</code>。</li>
+<li>iOS 同时支持 CocoaPods 与 Swift Package Manager 两种集成方式，按你的 Flutter 项目配置选择即可，无需额外操作。</li>
+</ol>
+<h2 id="-3">快速上手</h2>
+<p>以下代码覆盖「初始化 → 登录 → 收发文本消息 → 退出」的最小流程：</p>
+<pre class="language-dart"><code class="language-dart">import 'package:im_flutter_sdk/im_flutter_sdk.dart';
+
+// 1. 初始化（app 启动时执行一次）
+Future&lt;void&gt; initSDK() async {
+  ChatOptions options = ChatOptions(
+    appKey: "你的 AppKey",
+    autoLogin: false,
+  );
+  await ChatClient.getInstance.init(options);
+  // 通知 SDK UI 已准备好，执行后才会收到事件回调
+  await ChatClient.getInstance.startCallback();
+}
+
+// 2. 登录（生产环境建议使用 token 登录，token 由你的应用服务器下发）
+Future&lt;void&gt; signIn(String userId, String password) async {
+  try {
+    await ChatClient.getInstance.login(userId, password);
+  } on ChatError catch (e) {
+    // 登录失败：e.code / e.description
+  }
+}
+
+// 3. 添加收消息监听（key 需唯一，页面销毁时用同一 key 移除）
+void addChatListener() {
+  ChatClient.getInstance.chatManager.addEventHandler(
+    "UNIQUE_HANDLER_ID",
+    ChatEventHandler(
+      onMessagesReceived: (messages) {
+        for (var msg in messages) {
+          if (msg.body.type == MessageType.TXT) {
+            var body = msg.body as ChatTextMessageBody;
+            // 收到文本消息：body.content，发送方：msg.from
+          }
+        }
+      },
+    ),
+  );
+
+  // 消息发送状态回调
+  ChatClient.getInstance.chatManager.addMessageEvent(
+    "UNIQUE_HANDLER_ID",
+    ChatMessageEvent(
+      onSuccess: (msgId, msg) {
+        // 发送成功
+      },
+      onProgress: (msgId, progress) {
+        // 附件上传进度
+      },
+      onError: (msgId, msg, error) {
+        // 发送失败：error.code / error.description
+      },
+    ),
+  );
+}
+
+// 4. 发送文本消息
+void sendTextMessage(String targetId, String content) {
+  var msg = ChatMessage.createTxtSendMessage(
+    targetId: targetId,
+    content: content,
+  );
+  ChatClient.getInstance.chatManager.sendMessage(msg);
+}
+
+// 5. 退出登录
+Future&lt;void&gt; signOut() async {
+  try {
+    await ChatClient.getInstance.logout(true);
+  } on ChatError catch (e) {
+    // 退出失败：e.code / e.description
+  }
+}
+
+// 6. 页面销毁时移除监听（key 与添加时一致）
+void dispose() {
+  ChatClient.getInstance.chatManager.removeMessageEvent("UNIQUE_HANDLER_ID");
+  ChatClient.getInstance.chatManager.removeEventHandler("UNIQUE_HANDLER_ID");
+}
+</code></pre>
+<blockquote>
+<p>注意：注册账号（<code>ChatClient.getInstance.createAccount</code>）仅建议在 demo 中使用，生产环境应由你的应用服务器调用环信 REST API 完成注册。</p>
+</blockquote>
+<blockquote>
+<p>说明：4.22.0 起公开 API 统一为 <code>Chat</code> 前缀命名（如 <code>ChatClient</code>、<code>ChatOptions</code>）。旧 <code>EM</code> 前缀名字仍可通过 <code>em_compat.dart</code> 中的 <code>@Deprecated</code> typedef 使用，建议新代码使用新名字。</p>
+</blockquote>
+<h2 id="-4">示例应用</h2>
+<p>仓库内 <code>example/</code> 目录提供了一个可视化 API 测试应用，覆盖初始化、登录及常用 API 的调用与结果查看，可用于集成参考和功能验证。</p>
+<h2 id="-5">鸿蒙支持</h2>
+<p>鸿蒙平台通过独立插件提供，需使用鸿蒙版 Flutter（<code>https://gitee.com/harmonycommando_flutter/flutter</code>），并在 <code>pubspec.yaml</code> 中添加：</p>
+<pre class="language-yaml"><code class="language-yaml">im_flutter_sdk: ^4.13.0
+im_flutter_sdk_ohos:
+  git:
+    url: "https://github.com/easemob/im_flutter_sdk_oh.git"
+    ref: 1.5.3
+</code></pre>
+<p>最新 <code>ref</code> 请查看 <a href="https://github.com/easemob/im_flutter_sdk_oh/releases">im_flutter_sdk_oh releases</a>。</p>
+<h2 id="-6">更多资源</h2>
+<ul>
+<li><a href="https://docs-im.easemob.com/">环信 IM 官方文档</a></li>
+<li><a href="https://console.easemob.com/user/login">环信即时通讯云控制台</a></li>
+<li>版本变更记录见 <a href="CHANGELOG.md">CHANGELOG.md</a></li>
+</ul>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="em_compat">
+  <span class="name"><a href="em_compat/">em_compat</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="im_flutter_sdk">
+  <span class="name"><a href="im_flutter_sdk/">im_flutter_sdk</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="https://www.easemob.com">im_flutter_sdk package</a></li>
+</ol>
+
+    <h5 class="hidden-xs"><span class="package-name">im_flutter_sdk</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="em_compat/">em_compat</a></li>
+      <li><a href="im_flutter_sdk/">im_flutter_sdk</a></li>
+</ol>
+
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+</main>
+<footer>
+  <span class="no-break">
+    im_flutter_sdk
+      4.25.0
+  </span>
+  
+</footer>
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

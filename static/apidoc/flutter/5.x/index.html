@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="im_flutter_sdk API docs, for the Dart programming language.">
+  <title>im_flutter_sdk - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://www.easemob.com">im_flutter_sdk package</a></li>
+  </ol>
+  <div class="self-name">im_flutter_sdk</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
+</header>
+<main>
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="easemob-im-flutter-sdk">EaseMob IM Flutter SDK</h1>
+<p>The Flutter plugin for EaseMob IM, built on the Federated Plugin architecture. With this plugin you can quickly integrate one-to-one chat, group chat, chat rooms, and other instant messaging capabilities into your Flutter app.</p>
+<h2 id="platform-support">Platform Support</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Minimum Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td>API 21 (Android 5.0)</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>13.0</td>
+</tr>
+<tr>
+<td>HarmonyOS</td>
+<td>See <a href="#harmonyos-support">HarmonyOS Support</a> below</td>
+</tr>
+</tbody>
+</table>
+<p>Environment requirements: Flutter &gt;= 3.3.0, Dart &gt;= 3.3.0 and &lt; 4.0.0.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A valid EaseMob IM developer account and App Key, which you can obtain by registering at the <a href="https://console.easemob.com/user/login">EaseMob IM Cloud Console</a>.</li>
+<li>For Flutter development environment setup issues, see the <a href="https://docs.flutter.dev/get-started/install">Flutter official documentation</a>.</li>
+</ul>
+<h2 id="integrating-the-sdk">Integrating the SDK</h2>
+<pre class="language-bash"><code class="language-bash">flutter pub add im_flutter_sdk
+</code></pre>
+<h3 id="android-configuration">Android Configuration</h3>
+<ol>
+<li>Confirm the minimum version in <code>android/app/build.gradle</code>:</li>
+</ol>
+<pre class="language-gradle"><code class="language-gradle">android {
+    defaultConfig {
+        minSdkVersion 21
+    }
+}
+</code></pre>
+<ol start="2">
+<li>Add keep rules to <code>android/app/proguard-rules.pro</code>:</li>
+</ol>
+<pre class="language-pro"><code class="language-pro">-keep class com.hyphenate.** {*;}
+-dontwarn com.hyphenate.**
+</code></pre>
+<h3 id="ios-configuration">iOS Configuration</h3>
+<ol>
+<li>In <code>ios/Runner.xcodeproj</code>, set the minimum version under <code>TARGETS &gt; Runner &gt; General &gt; Deployment Info</code> to <code>iOS 13.0</code>.</li>
+<li>iOS supports both CocoaPods and Swift Package Manager integration. Choose according to your Flutter project configuration; no extra steps are required.</li>
+</ol>
+<h2 id="quick-start">Quick Start</h2>
+<p>The following code covers the minimal flow of "initialize → log in → send and receive text messages → log out":</p>
+<pre class="language-dart"><code class="language-dart">import 'package:im_flutter_sdk/im_flutter_sdk.dart';
+
+// 1. Initialize (run once at app startup)
+Future&lt;void&gt; initSDK() async {
+  ChatOptions options = ChatOptions(
+    appKey: "your AppKey",
+  );
+  await ChatClient.getInstance.init(options);
+  // Notify the SDK that the UI is ready; event callbacks are only delivered after this call
+  await ChatClient.getInstance.startCallback();
+}
+
+// 2. Log in (token login is recommended in production; the token is issued by your app server)
+Future&lt;void&gt; signIn(String userId, String token) async {
+  try {
+    await ChatClient.getInstance.loginWithToken(userId, token);
+  } on ChatError catch (e) {
+    // Login failed: e.code / e.description
+  }
+}
+
+// 3. Add a message listener (the key must be unique; remove it with the same key when the page is disposed)
+void addChatListener() {
+  ChatClient.getInstance.chatManager.addEventHandler(
+    "UNIQUE_HANDLER_ID",
+    ChatEventHandler(
+      onMessagesReceived: (messages) {
+        for (var msg in messages) {
+          if (msg.body.type == MessageType.TXT) {
+            var body = msg.body as ChatTextMessageBody;
+            // Received a text message: body.content; sender: msg.from
+          }
+        }
+      },
+    ),
+  );
+
+  // Message sending status callbacks
+  ChatClient.getInstance.chatManager.addMessageEvent(
+    "UNIQUE_HANDLER_ID",
+    ChatMessageEvent(
+      onSuccess: (msgId, msg) {
+        // Sent successfully
+      },
+      onProgress: (msgId, progress) {
+        // Attachment upload progress
+      },
+      onError: (msgId, msg, error) {
+        // Sending failed: error.code / error.description
+      },
+    ),
+  );
+}
+
+// 4. Send a text message
+void sendTextMessage(String targetId, String content) {
+  var msg = ChatMessage.createTxtSendMessage(
+    targetId: targetId,
+    content: content,
+  );
+  ChatClient.getInstance.chatManager.sendMessage(msg);
+}
+
+// 5. Log out
+Future&lt;void&gt; signOut() async {
+  try {
+    await ChatClient.getInstance.logout(true);
+  } on ChatError catch (e) {
+    // Logout failed: e.code / e.description
+  }
+}
+
+// 6. Remove the listeners when the page is disposed (use the same keys as when adding)
+void dispose() {
+  ChatClient.getInstance.chatManager.removeMessageEvent("UNIQUE_HANDLER_ID");
+  ChatClient.getInstance.chatManager.removeEventHandler("UNIQUE_HANDLER_ID");
+}
+</code></pre>
+<blockquote>
+<p>Note: Starting from 5.0.0, the client only supports token login. Account registration and token retrieval should be performed by your app server via the REST API.</p>
+</blockquote>
+<blockquote>
+<p>Note: Starting from 4.22.0, public APIs are uniformly named with the <code>Chat</code> prefix (e.g. <code>ChatClient</code>, <code>ChatOptions</code>). The old <code>EM</code>-prefixed names are still available through <code>@Deprecated</code> typedefs in <code>em_compat.dart</code>; new code should use the new names.</p>
+</blockquote>
+<h2 id="example-app">Example App</h2>
+<p>The <code>example/</code> directory in the repository provides a visual API testing app that covers initialization, login, and invocation of common APIs with result viewing. It can be used as an integration reference and for feature verification.</p>
+<h2 id="harmonyos-support">HarmonyOS Support</h2>
+<p>HarmonyOS is provided through a separate plugin. It requires the HarmonyOS version of Flutter (<code>https://gitee.com/harmonycommando_flutter/flutter</code>). Add the following to your <code>pubspec.yaml</code>:</p>
+<pre class="language-yaml"><code class="language-yaml">im_flutter_sdk: ^4.13.0
+im_flutter_sdk_ohos:
+  git:
+    url: "https://github.com/easemob/im_flutter_sdk_oh.git"
+    ref: 1.5.3
+</code></pre>
+<p>For the latest <code>ref</code>, see <a href="https://github.com/easemob/im_flutter_sdk_oh/releases">im_flutter_sdk_oh releases</a>.</p>
+<h2 id="more-resources">More Resources</h2>
+<ul>
+<li><a href="https://docs-im.easemob.com/">EaseMob IM official documentation</a></li>
+<li><a href="https://console.easemob.com/user/login">EaseMob IM Cloud Console</a></li>
+<li>For version changes, see <a href="CHANGELOG.md">CHANGELOG.md</a></li>
+</ul>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="em_compat">
+  <span class="name"><a href="em_compat/">em_compat</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="im_flutter_sdk">
+  <span class="name"><a href="im_flutter_sdk/">im_flutter_sdk</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="https://www.easemob.com">im_flutter_sdk package</a></li>
+</ol>
+
+    <h5 class="hidden-xs"><span class="package-name">im_flutter_sdk</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="em_compat/">em_compat</a></li>
+      <li><a href="im_flutter_sdk/">im_flutter_sdk</a></li>
+</ol>
+
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+</main>
+<footer>
+  <span class="no-break">
+    im_flutter_sdk
+      5.0.0
+  </span>
+  
+</footer>
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+
