@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.25.1</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.26.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -110,6 +110,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a38864711bae1ca592090de1bfff96f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b647fa38c62bb24c2469a704d3f16d5" id="r_a7b647fa38c62bb24c2469a704d3f16d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b647fa38c62bb24c2469a704d3f16d5">markAllMessagesAsRead</a> ()</td></tr>
 <tr class="separator:a7b647fa38c62bb24c2469a704d3f16d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ed93f8431db5e186f77f0404674ff39" id="r_a4ed93f8431db5e186f77f0404674ff39"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ed93f8431db5e186f77f0404674ff39">markMessagesAsReadWithTimestamp</a> (long timestamp)</td></tr>
+<tr class="separator:a4ed93f8431db5e186f77f0404674ff39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dbf9754bb2aac24de1e0f313305dbd1" id="r_a3dbf9754bb2aac24de1e0f313305dbd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dbf9754bb2aac24de1e0f313305dbd1">getAllMsgCount</a> ()</td></tr>
 <tr class="separator:a3dbf9754bb2aac24de1e0f313305dbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab33d97761ae2857f4831bd6c5ac23124" id="r_ab33d97761ae2857f4831bd6c5ac23124"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab33d97761ae2857f4831bd6c5ac23124">getAllMsgCount</a> (long startTimestamp, long endTimestamp)</td></tr>
@@ -803,6 +805,36 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="a4ed93f8431db5e186f77f0404674ff39" name="a4ed93f8431db5e186f77f0404674ff39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ed93f8431db5e186f77f0404674ff39">&#9670;&#160;</a></span>markMessagesAsReadWithTimestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.hyphenate.chat.EMConversation.markMessagesAsReadWithTimestamp </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>timestamp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>将会话中时间戳不晚于指定时间点的未读接收消息设置为已读。</p>
+<p>只会修改未读的接收消息，会话的未读数会相应减少。该操作为本地操作，不会向服务器发送已读回执。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timestamp</td><td>指定的时间点（包含该时间点的消息），Unix 时间戳，单位为毫秒。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>消息是否设置成功：<ul>
+<li>若时间戳无效或数据库操作失败，返回 <code>false</code>。</li>
+<li>否则，返回 <code>true</code>。 </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
 <a id="a225951942f771b466605030fd7ae68be" name="a225951942f771b466605030fd7ae68be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a225951942f771b466605030fd7ae68be">&#9670;&#160;</a></span>marks()</h2>
 
@@ -1304,7 +1336,7 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>消息列表（不包含查询起始时间戳对应的消息）。 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">弃用</a></b></dt><dd>已废弃，请使用 <code><a class="el" href="">asyncSearchMsgFromDB(String, long, int, List, EMSearchDirection, EMMessageSearchScope, EMValueCallBack)</a></code></dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">弃用</a></b></dt><dd>已废弃，请使用 <code><a class="el" href="">asyncSearchMsgFromDB(String, long, int, List, EMSearchDirection, EMMessageSearchScope, EMValueCallBack)</a></code></dd></dl>
 
 </div>
 </div>
