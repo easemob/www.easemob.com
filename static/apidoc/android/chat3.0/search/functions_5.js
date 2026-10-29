@@ -23,5 +23,6 @@ var searchData=
   ['fetchsupportlanguages_20',['fetchSupportLanguages',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager.html#a061e2f3d93d0c399524b7dbbc62a0a5b',1,'com::hyphenate::chat::EMChatManager']]],
   ['fetchuserinfobyattribute_21',['fetchUserInfoByAttribute',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#a2a98f1cc2139ce16fc0aeb1da91e4507',1,'com::hyphenate::chat::EMUserInfoManager']]],
   ['fetchuserinfobyuserid_22',['fetchUserInfoByUserId',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_user_info_manager.html#af3b91717ccfaa5b92e1599ff25eeacbd',1,'com::hyphenate::chat::EMUserInfoManager']]],
-  ['filter_23',['filter',['../interfacecom_1_1hyphenate_1_1chat_1_1_e_m_custom_conversation_filter.html#afce94afbcd06c4d5d67253ac16c741a5',1,'com::hyphenate::chat::EMCustomConversationFilter']]]
+  ['filter_23',['filter',['../interfacecom_1_1hyphenate_1_1chat_1_1_e_m_custom_conversation_filter.html#afce94afbcd06c4d5d67253ac16c741a5',1,'com::hyphenate::chat::EMCustomConversationFilter']]],
+  ['fromnative_24',['fromNative',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_connection_state.html#a9a81a394ba1687f4e2cb340a29d3c5ad',1,'com::hyphenate::chat::EMConnectionState']]]
 ];
