@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.25.1</span>
+   <div id="projectname">hyphenate_SDK4.0<span id="projectnumber">&#160;4.26.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -139,6 +139,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ab36367adfea7e7e707b143d39356f452"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ed8afb8f7d33e8f343e4591ce379353" id="r_a4ed8afb8f7d33e8f343e4591ce379353"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ed8afb8f7d33e8f343e4591ce379353">isConnected</a> ()</td></tr>
 <tr class="separator:a4ed8afb8f7d33e8f343e4591ce379353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61246bf899da3d703ec29b34382e0f12" id="r_a61246bf899da3d703ec29b34382e0f12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_connection_state.html">EMConnectionState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61246bf899da3d703ec29b34382e0f12">getConnectionState</a> ()</td></tr>
+<tr class="separator:a61246bf899da3d703ec29b34382e0f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd23f89f9f3ee8eff6b13199fa6152e5" id="r_acd23f89f9f3ee8eff6b13199fa6152e5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd23f89f9f3ee8eff6b13199fa6152e5">isLoggedIn</a> ()</td></tr>
 <tr class="separator:acd23f89f9f3ee8eff6b13199fa6152e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87445125262a00a08ecd01bf91fdfac0" id="r_a87445125262a00a08ecd01bf91fdfac0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87445125262a00a08ecd01bf91fdfac0">setDebugMode</a> (boolean debugMode)</td></tr>
@@ -486,7 +488,7 @@ Public 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">弃用</a></b></dt><dd>已废弃</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">弃用</a></b></dt><dd>已废弃</dd></dl>
 <p>Contains account-validation check, get-dns check, get-Token check, login check. So the <code><a class="el" href="">EMAChatClient.CheckResultListener#onResult(int, int, String)</a></code> callback will be called four times.</p>
 
 </div>
@@ -608,6 +610,32 @@ Public 成员函数</h2></td></tr>
 <p>如果为 <code>null</code>，在打开 EMLog 日志时，可以看到异常原因。</p>
 <p>也可以通过 <code><a class="el" href="">EMOptions#getAccessToken(boolean)</a></code> 方法传入 <code>true</code>从服务端获取 token。</p>
 <dl class="section return"><dt>返回</dt><dd>身份认证 token。 </dd></dl>
+
+</div>
+</div>
+<a id="a61246bf899da3d703ec29b34382e0f12" name="a61246bf899da3d703ec29b34382e0f12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61246bf899da3d703ec29b34382e0f12">&#9670;&#160;</a></span>getConnectionState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_connection_state.html">EMConnectionState</a> com.hyphenate.chat.EMClient.getConnectionState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取 SDK 真实的 socket 连接状态。</p>
+<ul>
+<li><code><a class="el" href="">EMConnectionState#DISCONNECTED</a></code>：未连接或已断开（含未初始化、已登出）。</li>
+<li><code><a class="el" href="">EMConnectionState#CONNECTING</a></code>：SDK 正在拨号建立连接。</li>
+<li><code><a class="el" href="">EMConnectionState#CONNECTED</a></code>：已连接。</li>
+</ul>
+<p>在服务器断开的宽限期内（底层延迟通知 <code><a class="el" href="">EMConnectionListener#onDisconnected(int)</a></code>）， 本方法在重连尝试开始拨号前返回 <code><a class="el" href="">EMConnectionState#DISCONNECTED</a></code>。</p>
+<p>未初始化或已登出时返回 <code><a class="el" href="">EMConnectionState#DISCONNECTED</a></code>；底层返回未知状态值时按 <code><a class="el" href="">EMConnectionState#DISCONNECTED</a></code> 处理。</p>
+<dl class="section return"><dt>返回</dt><dd>当前真实连接状态。 </dd></dl>
 
 </div>
 </div>
@@ -826,12 +854,14 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>检查 SDK 是否连接到 Chat 服务器。</p>
-<dl class="section return"><dt>返回</dt><dd>是否连接到 Chat 服务器的结果。<ul>
-<li><code>true</code> 表示已经连接到 Chat 服务器。</li>
-<li><code>false</code> 表示没有连接到 Chat 服务器。 </li>
+<p>检查底层长连接是否可用，用于判断当前能否收发消息。</p>
+<p>处于服务器断开宽限期时，本方法返回 <code>false</code>，但 App 可能尚未收到 <code><a class="el" href="">EMConnectionListener#onDisconnected(int)</a></code>。</p>
+<dl class="section return"><dt>返回</dt><dd>底层长连接是否可用。<ul>
+<li><code>true</code>：可用；</li>
+<li><code>false</code>：不可用。</li>
 </ul>
 </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">弃用</a></b></dt><dd>已废弃，请使用 <code><a class="el" href="">getConnectionState()</a></code>。本方法只能区分“已连接”与“未连接”， 无法表达“拨号中（<code><a class="el" href="">EMConnectionState#CONNECTING</a></code>）”状态；<code><a class="el" href="">getConnectionState()</a></code> 返回完整的三态连接状态，更适合界面展示与状态判断。</dd></dl>
 
 </div>
 </div>
@@ -897,7 +927,7 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p>查询是否登录过。</p>
 <p>如果登录成功后未调用 <code>logout</code> 方法，这个方法的返回值一直是 <code>true</code>。</p>
-<p>如果需要判断当前是否连接到服务器，请使用 <code><a class="el" href="">isConnected()</a></code> 方法。</p>
+<p>如果需要判断当前是否连接到服务器，请使用 <code><a class="el" href="">getConnectionState()</a></code> 方法。</p>
 <div class="fragment"><div class="line"><span class="keywordflow">if</span>(<a class="code hl_class" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html">EMClient</a>.getInstance().<a class="code hl_function" href="#ab36367adfea7e7e707b143d39356f452">isLoggedInBefore</a>()){</div>
 <div class="line">    <span class="comment">// enter main activity</span></div>
 <div class="line">}<span class="keywordflow">else</span>{</div>
