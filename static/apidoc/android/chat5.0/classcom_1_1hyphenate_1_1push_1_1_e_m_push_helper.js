@@ -5,6 +5,7 @@ var classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper =
     [ "getPushTokenWithType", "classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#a7033be1a5ff7d14d6a2aea9c0ffaf76c", null ],
     [ "getPushType", "classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#a06b5e3f91162ff17fb2bb34359ae87a6", null ],
     [ "init", "classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#ab6a24847062d68d3fadb47752c40fc8f", null ],
+    [ "isPushTokenBound", "classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#adb5c671c907aef0e50d73cdea814a155", null ],
     [ "onErrorResponse", "classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#a9fcd8060edf5f9f4001e541f7f1121f3", null ],
     [ "onReceiveToken", "classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#a70f41be2ec8a6d11281411a1a77dd93d", null ],
     [ "register", "classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#ac295ce2bbbd3cbc1e77151cfb1fc6562", null ],

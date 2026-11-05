@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">hyphenate_SDK_5.0<span id="projectnumber">&#160;5.1.0</span>
+   <div id="projectname">hyphenate_SDK_5.0<span id="projectnumber">&#160;5.2.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -270,10 +270,10 @@ Protected 成员函数</h2></td></tr>
 <p>发送文文本消息示例如下：</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a> message = <a class="code hl_class" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">EMMessage</a>.<a class="code hl_function" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2c3d73d52f3e6febc67933dfa99f9ed2">createTextSendMessage</a>(content, toChatUsername);</div>
 <div class="line"><a class="code hl_class" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html">EMClient</a>.getInstance().chatManager().<a class="code hl_function" href="#ad50be7183f088c415b9507bc7ce792e6">sendMessage</a>(message);</div>
-<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager_html_ad50be7183f088c415b9507bc7ce792e6"><div class="ttname"><a href="#ad50be7183f088c415b9507bc7ce792e6">com.hyphenate.chat.EMChatManager.sendMessage</a></div><div class="ttdeci">void sendMessage(final EMMessage msg)</div><div class="ttdef"><b>定义</b> EMChatManager.java:783</div></div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_chat_manager_html_ad50be7183f088c415b9507bc7ce792e6"><div class="ttname"><a href="#ad50be7183f088c415b9507bc7ce792e6">com.hyphenate.chat.EMChatManager.sendMessage</a></div><div class="ttdeci">void sendMessage(final EMMessage msg)</div><div class="ttdef"><b>定义</b> EMChatManager.java:812</div></div>
 <div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_client_html"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html">com.hyphenate.chat.EMClient</a></div><div class="ttdef"><b>定义</b> EMClient.java:100</div></div>
-<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_message_html"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">com.hyphenate.chat.EMMessage</a></div><div class="ttdef"><b>定义</b> EMMessage.java:99</div></div>
-<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_message_html_a2c3d73d52f3e6febc67933dfa99f9ed2"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2c3d73d52f3e6febc67933dfa99f9ed2">com.hyphenate.chat.EMMessage.createTextSendMessage</a></div><div class="ttdeci">static EMMessage createTextSendMessage(String content, String username)</div><div class="ttdef"><b>定义</b> EMMessage.java:736</div></div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_message_html"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html">com.hyphenate.chat.EMMessage</a></div><div class="ttdef"><b>定义</b> EMMessage.java:100</div></div>
+<div class="ttc" id="aclasscom_1_1hyphenate_1_1chat_1_1_e_m_message_html_a2c3d73d52f3e6febc67933dfa99f9ed2"><div class="ttname"><a href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a2c3d73d52f3e6febc67933dfa99f9ed2">com.hyphenate.chat.EMMessage.createTextSendMessage</a></div><div class="ttdeci">static EMMessage createTextSendMessage(String content, String username)</div><div class="ttdef"><b>定义</b> EMMessage.java:828</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">成员函数说明</h2>
 <a id="ace81b019cf17b0449b4eddd7aeffe19d" name="ace81b019cf17b0449b4eddd7aeffe19d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace81b019cf17b0449b4eddd7aeffe19d">&#9670;&#160;</a></span>addConversationListener()</h2>
@@ -1602,7 +1602,23 @@ Protected 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>下载消息的附件。</p>
+<p>下载消息的附件（原始文件）。</p>
+<p>各消息体类型的下载行为： </p><ul>
+<li>
+图片 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a6aaa42c08b50d853f43a9dea5008a25e">Type#IMAGE</a></code>：下载原图。 </li>
+<li>
+视频 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#aaca12dd5a6df696a29219c9b5ad090a1">Type#VIDEO</a></code>：下载原始视频文件。 </li>
+<li>
+语音 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#ad4f7fcbc1fb5b56c48cabe31e6b22fe5">Type#VOICE</a></code>：下载语音原文件。 </li>
+<li>
+文件 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a3342887dd01c4f0b431637fc9ccb1f50">Type#FILE</a></code>：下载文件。 </li>
+<li>
+合并消息 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a49cec67ada7f08842cc6b0543785726d">Type#COMBINE</a></code>：下载合并文件。 </li>
+<li>
+文本 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a0157bc665bb470f9893a03e7adcf3125">Type#TXT</a></code> 等无附件的消息体：自动跳过，不视为失败。 </li>
+</ul>
+<p>下载结果按请求级别只回调一次：全部附件下载成功回调 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa819895b47f578c0bc25b8c7eca9fe45">EMCallBack#onSuccess()</a></code>；任一附件下载失败即终止剩余下载并回调 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#a26e40e77141d471fec8ff69ea7ebbfce">EMCallBack#onError(int, String)</a></code>。</p>
+<p>下载进度是消息级别的：SDK 将各附件按文件大小加权聚合成一条 0-100 的总进度，通过 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#ab28356a9e3b29515ba3dd3bef57578a0">EMCallBack#onProgress(int, String)</a></code> 统一上报，而非每个附件各上报一条进度。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>要下载附件的消息。 </td></tr>
@@ -1632,7 +1648,16 @@ Protected 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>下载图片消息的大图。</p>
-<p>该方法仅适用于图片消息。</p>
+<p>各消息体类型的下载行为： </p><ul>
+<li>
+图片 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a6aaa42c08b50d853f43a9dea5008a25e">Type#IMAGE</a></code>：下载大图。 </li>
+<li>
+语音 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#ad4f7fcbc1fb5b56c48cabe31e6b22fe5">Type#VOICE</a></code>：语音没有大图概念，归一化下载语音原文件。 </li>
+<li>
+视频、文件等其他类型的消息体：静默跳过，不标记失败、不参与进度、不影响下载结果。 </li>
+</ul>
+<p>注意：若整条消息中没有适用的消息体（例如纯文件消息），会回调 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa819895b47f578c0bc25b8c7eca9fe45">EMCallBack#onSuccess()</a></code>，但实际没有下载任何内容。</p>
+<p>大图下载会上报进度：各消息体以原始文件大小作为进度权重，每个 tick 按实际响应长度折算百分比，聚合成消息级进度通过 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#ab28356a9e3b29515ba3dd3bef57578a0">EMCallBack#onProgress(int, String)</a></code> 上报（含归一化的语音原文件）。下载结果按请求级别只回调一次：任一适用的消息体下载失败即终止剩余下载并回调 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#a26e40e77141d471fec8ff69ea7ebbfce">EMCallBack#onError(int, String)</a></code>。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>要下载大图的图片消息。 </td></tr>
@@ -1688,7 +1713,18 @@ Protected 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>下载消息的缩略图。</p>
-<p>该方法仅适用于图片消息和视频消息。</p>
+<p>各消息体类型的下载行为： </p><ul>
+<li>
+图片 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#a6aaa42c08b50d853f43a9dea5008a25e">Type#IMAGE</a></code>：下载图片缩略图。 </li>
+<li>
+视频 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#aaca12dd5a6df696a29219c9b5ad090a1">Type#VIDEO</a></code>：下载视频缩略图。 </li>
+<li>
+语音 <code><a class="el" href="enumcom_1_1hyphenate_1_1chat_1_1_e_m_message_1_1_type.html#ad4f7fcbc1fb5b56c48cabe31e6b22fe5">Type#VOICE</a></code>：语音没有缩略图概念，归一化下载语音原文件。 </li>
+<li>
+文件等其他类型的消息体：静默跳过，不标记失败、不参与进度、不影响下载结果。 </li>
+</ul>
+<p>注意：若整条消息中没有适用的消息体（例如纯文件消息），会回调 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#aa819895b47f578c0bc25b8c7eca9fe45">EMCallBack#onSuccess()</a></code>，但实际没有下载任何内容。</p>
+<p>缩略图（含归一化的语音原文件）的大小无法预先获取，下载过程中不会上报进度，仅回调成功或失败。下载结果按请求级别只回调一次：任一适用的消息体下载失败即终止剩余下载并回调 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#a26e40e77141d471fec8ff69ea7ebbfce">EMCallBack#onError(int, String)</a></code>。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>要下载缩略图的消息。 </td></tr>
@@ -2622,6 +2658,7 @@ Protected 成员函数</h2></td></tr>
 <p>如果是语音，图片类等有附件的消息，SDK 会自动上传附件。</p>
 <p>可以通过 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a6e9a1ee0a82e8f3d7c70115cb4b9b4c2">EMOptions#setAutoTransferMessageAttachments(boolean)</a></code> 设置是否上传到聊天服务器。</p>
 <p>发送消息的状态，可以通过设置 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#ac6fd24b05850f7f8e680c0caf1ea3f50">EMMessage#setMessageStatusCallback(EMCallBack)</a></code> 进行监听。</p>
+<p>对于包含多个附件消息体的消息，附件上传进度是消息级别的，而非单个附件级别：SDK 将各附件按原始文件大小加权聚合成一条 0-100 的总进度，通过 <code><a class="el" href="interfacecom_1_1hyphenate_1_1_e_m_call_back.html#ab28356a9e3b29515ba3dd3bef57578a0">EMCallBack#onProgress(int, String)</a></code> 统一上报，而非每个附件各上报一条进度。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>要发送的消息，必填。 </td></tr>

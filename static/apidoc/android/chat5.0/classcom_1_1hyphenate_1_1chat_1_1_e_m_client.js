@@ -14,6 +14,7 @@ var classcom_1_1hyphenate_1_1chat_1_1_e_m_client =
     [ "contactManager", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#acf1538f9850034cebd46f2cc726c7b72", null ],
     [ "fetchLoggedInDevicesFromServerWithToken", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#adf72f8b59be80290a131471a75603903", null ],
     [ "getAccessToken", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a002fa0f7dde35321d4f86571b34100c5", null ],
+    [ "getConnectionState", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a61246bf899da3d703ec29b34382e0f12", null ],
     [ "getCurrentUser", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a72d5e507d270eed6b3a58eed82ff4931", null ],
     [ "getOptions", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a34ee764ec4a8839b8c366e5961305aa7", null ],
     [ "groupManager", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a519220cf905c540e9ca60a944d7930d5", null ],

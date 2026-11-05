@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">hyphenate_SDK_5.0<span id="projectnumber">&#160;5.1.0</span>
+   <div id="projectname">hyphenate_SDK_5.0<span id="projectnumber">&#160;5.2.0</span>
    </div>
    <div id="projectbrief">hyphenate java IM SDK</div>
   </td>
@@ -135,9 +135,10 @@ Public 成员函数</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>即时通讯状态连接监听器。</p>
-<p>如果遇到弱网掉线情况，应用收到 onDisconnected，此时不需要处理重连操作，SDK 在底层自动处理重连。</p>
-<p>回调函数只有 onConnected 和 onDisconnected 无需考虑连接中，断开中一类的中间状态。</p>
-<p>注意：应用不要在这两个回调函数中更新界面，这两个线程属于工作线程，直接更新界面会导致界面的并发错误。也不要在这两个回调函数中 做大量的耗时操作，这可能会影响其他监听器处理连接事件。</p>
+<p>如果遇到弱网掉线情况，SDK 会在底层自动重连，应用无需自行处理重连。</p>
+<p>对于可恢复的断开，SDK 会在 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a743a8477b71bc95b8bd9bfde92af357f">com.hyphenate.chat.EMOptions#getDisconnectNotifyThreshold()</a></code> 秒内暂缓回调 <code><a class="el" href="#a18ad7da02f0b8284c6b0a1627501e050">onDisconnected(int)</a></code>，期间若连接恢复则不会有任何断开回调；超过阈值仍未恢复才会回调 <code><a class="el" href="#a18ad7da02f0b8284c6b0a1627501e050">onDisconnected(int)</a></code>。对于致命错误，会立即回调 <code><a class="el" href="#a18ad7da02f0b8284c6b0a1627501e050">onDisconnected(int)</a></code>。</p>
+<p>展示界面连接状态时，请使用 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a61246bf899da3d703ec29b34382e0f12">com.hyphenate.chat.EMClient#getConnectionState()</a></code>，不要仅依赖 <code><a class="el" href="classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a4ed8afb8f7d33e8f343e4591ce379353">com.hyphenate.chat.EMClient#isConnected()</a></code>。</p>
+<p>注意：<code><a class="el" href="#a4bbce5c21524f7b44d7922ebd35d9986">onConnected()</a></code> 与 <code><a class="el" href="#a18ad7da02f0b8284c6b0a1627501e050">onDisconnected(int)</a></code> 均在工作线程回调，不要在其中直接更新 UI，也不要执行大量耗时操作。</p>
 <p>示例代码如下： 注册连接监听器： <code>java EMClient.getInstance().addConnectionListener(mConnectionListener); </code></p>
 <p>移除连接监听器： <code>java EMClient.getInstance().removeConnectionListener(mConnectionListener); </code> </p>
 </div><h2 class="groupheader">成员函数说明</h2>
