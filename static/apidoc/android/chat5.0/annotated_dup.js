@@ -11,6 +11,7 @@ var annotated_dup =
           [ "EMChatThreadManager", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_thread_manager.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_thread_manager" ],
           [ "EMClient", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client" ],
           [ "EMCmdMessageBody", "classcom_1_1hyphenate_1_1chat_1_1_e_m_cmd_message_body.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_cmd_message_body" ],
+          [ "EMConnectionState", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_connection_state.html", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_connection_state" ],
           [ "EMContact", "classcom_1_1hyphenate_1_1chat_1_1_e_m_contact.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_contact" ],
           [ "EMContactManager", "classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager" ],
           [ "EMConversation", "classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html", "classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation" ],

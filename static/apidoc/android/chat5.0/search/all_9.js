@@ -54,11 +54,13 @@ var searchData=
   ['ispeerreceipt_51',['isPeerReceipt',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message_read_receipt.html#af488c2d202b779ce8140b59908079646',1,'com::hyphenate::chat::EMMessageReadReceipt']]],
   ['ispinned_52',['isPinned',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_conversation.html#a7af4f15a91c9f8588f0a0dd4af4848d6',1,'com::hyphenate::chat::EMConversation']]],
   ['ispublic_53',['isPublic',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group_configs.html#a1cc29a2cfac269d22a8625bb048ad642',1,'com.hyphenate.chat.EMGroupConfigs.isPublic'],['../classcom_1_1hyphenate_1_1chat_1_1_e_m_group.html#a6db83d8a1156a964a2ca13e5bb51fcd2',1,'com.hyphenate.chat.EMGroup.isPublic()']]],
-  ['isread_54',['isRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a54480f908bb96879e7f61a206516de0e',1,'com::hyphenate::chat::EMMessage']]],
-  ['issdkinited_55',['isSdkInited',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a1492d6fc949f1bd70d4fe42f393bc7af',1,'com::hyphenate::chat::EMClient']]],
-  ['issendoriginalimage_56',['isSendOriginalImage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a05f113c7ad47b96e25ac1514f53e789c',1,'com::hyphenate::chat::EMImageMessageBody']]],
-  ['issortmessagebyservertime_57',['isSortMessageByServerTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a96cacc44c07c257d46db6d3467860f5b',1,'com::hyphenate::chat::EMOptions']]],
-  ['issupportpush_58',['isSupportPush',['../classcom_1_1hyphenate_1_1push_1_1_push_listener.html#ab366ceb1b74ed57177c901b3e26c2d1f',1,'com::hyphenate::push::PushListener']]],
-  ['isuseagorachatdomainconfigured_59',['isUseAgoraChatDomainConfigured',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab69ce84625a6ab9b3bfc8fc07ae55357',1,'com::hyphenate::chat::EMOptions']]],
-  ['isusereplacedmessagecontents_60',['isUseReplacedMessageContents',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a89afc22bce78d06f7591debca234303d',1,'com::hyphenate::chat::EMOptions']]]
+  ['ispushtokenbound_54',['isPushTokenBound',['../classcom_1_1hyphenate_1_1push_1_1_e_m_push_helper.html#adb5c671c907aef0e50d73cdea814a155',1,'com::hyphenate::push::EMPushHelper']]],
+  ['isread_55',['isRead',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_message.html#a54480f908bb96879e7f61a206516de0e',1,'com::hyphenate::chat::EMMessage']]],
+  ['issdkinited_56',['isSdkInited',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html#a1492d6fc949f1bd70d4fe42f393bc7af',1,'com::hyphenate::chat::EMClient']]],
+  ['issendoriginalimage_57',['isSendOriginalImage',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_image_message_body.html#a05f113c7ad47b96e25ac1514f53e789c',1,'com::hyphenate::chat::EMImageMessageBody']]],
+  ['issortmessagebyservertime_58',['isSortMessageByServerTime',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a96cacc44c07c257d46db6d3467860f5b',1,'com::hyphenate::chat::EMOptions']]],
+  ['issupportpush_59',['isSupportPush',['../classcom_1_1hyphenate_1_1push_1_1_push_listener.html#ab366ceb1b74ed57177c901b3e26c2d1f',1,'com::hyphenate::push::PushListener']]],
+  ['isuseagorachatdomainconfigured_60',['isUseAgoraChatDomainConfigured',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ab69ce84625a6ab9b3bfc8fc07ae55357',1,'com::hyphenate::chat::EMOptions']]],
+  ['isusepushinbackground_61',['isUsePushInBackground',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#aa9792cb15d1842f51a59cff878e2f552',1,'com::hyphenate::chat::EMOptions']]],
+  ['isusereplacedmessagecontents_62',['isUseReplacedMessageContents',['../classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#a89afc22bce78d06f7591debca234303d',1,'com::hyphenate::chat::EMOptions']]]
 ];

@@ -35,5 +35,6 @@ var searchData=
   ['file_5fupload_5ffailed_32',['FILE_UPLOAD_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#ad2311cd2907213d8df4d3292ef6aa296',1,'com::hyphenate::EMError']]],
   ['file_5fvoice_5fto_5ftext_5ffailed_33',['FILE_VOICE_TO_TEXT_FAILED',['../classcom_1_1hyphenate_1_1_e_m_error.html#adf5a6ac5e26bfb8ca787bf87a89bdfc8',1,'com::hyphenate::EMError']]],
   ['filter_34',['filter',['../interfacecom_1_1hyphenate_1_1chat_1_1_e_m_custom_conversation_filter.html#afce94afbcd06c4d5d67253ac16c741a5',1,'com::hyphenate::chat::EMCustomConversationFilter']]],
-  ['fromnativemask_35',['fromNativeMask',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_options_1_1_e_m_data_sync_type.html#adec863c1cb504faaff54ecff8433dfe8',1,'com::hyphenate::chat::EMOptions::EMDataSyncType']]]
+  ['fromnative_35',['fromNative',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_connection_state.html#a9a81a394ba1687f4e2cb340a29d3c5ad',1,'com::hyphenate::chat::EMConnectionState']]],
+  ['fromnativemask_36',['fromNativeMask',['../enumcom_1_1hyphenate_1_1chat_1_1_e_m_options_1_1_e_m_data_sync_type.html#adec863c1cb504faaff54ecff8433dfe8',1,'com::hyphenate::chat::EMOptions::EMDataSyncType']]]
 ];

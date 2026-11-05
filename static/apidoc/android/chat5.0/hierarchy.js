@@ -18,6 +18,7 @@ var hierarchy =
     [ "com.hyphenate.chat.EMChatThreadManager", "classcom_1_1hyphenate_1_1chat_1_1_e_m_chat_thread_manager.html", null ],
     [ "com.hyphenate.chat.EMClient", "classcom_1_1hyphenate_1_1chat_1_1_e_m_client.html", null ],
     [ "com.hyphenate.EMConnectionListener", "interfacecom_1_1hyphenate_1_1_e_m_connection_listener.html", null ],
+    [ "com.hyphenate.chat.EMConnectionState", "enumcom_1_1hyphenate_1_1chat_1_1_e_m_connection_state.html", null ],
     [ "com.hyphenate.chat.EMContact", "classcom_1_1hyphenate_1_1chat_1_1_e_m_contact.html", null ],
     [ "com.hyphenate.EMContactListener", "interfacecom_1_1hyphenate_1_1_e_m_contact_listener.html", null ],
     [ "com.hyphenate.chat.EMContactManager", "classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html", null ],

@@ -52,11 +52,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a30a00840020f30d51c1e026eeaa29707",
-"classcom_1_1hyphenate_1_1chat_1_1_e_m_group_member_info.html#a8f2d76f99b3b8ae2529afe0565ae9c04",
-"classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#ad216e0c50516d30a1ed15a848664b33b",
-"enumcom_1_1hyphenate_1_1chat_1_1_e_m_group_manager_1_1_e_m_group_configs_type.html#af5514682040ccaa126bab8f5a9153076",
-"interfacecom_1_1hyphenate_1_1_e_m_multi_device_listener.html#a35519eed94528e5e3e59c16d9f9082b8"
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_contact_manager.html#a2d833ab93efff995a2dfd4c9910a3b26",
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_group_member_info.html#a8cff8e49440b08bc06f02c0fab0ac297",
+"classcom_1_1hyphenate_1_1chat_1_1_e_m_options.html#abace8c88e4569e33298671963e285135",
+"enumcom_1_1hyphenate_1_1chat_1_1_e_m_file_message_body_1_1_e_m_download_status.html#a7e0b077d0ee8ed19522683dfae3cdc39",
+"interfacecom_1_1hyphenate_1_1_e_m_message_listener.html#ad95580a239a0b9d9439a177263558e76"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';
