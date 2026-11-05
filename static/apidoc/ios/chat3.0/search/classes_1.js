@@ -6,7 +6,6 @@ var searchData=
   ['iemgroupmanager_2dp',['IEMGroupManager-p',['../protocol_i_e_m_group_manager-p.html',1,'']]],
   ['iempresencemanager_2dp',['IEMPresenceManager-p',['../protocol_i_e_m_presence_manager-p.html',1,'']]],
   ['iempushmanager_2dp',['IEMPushManager-p',['../protocol_i_e_m_push_manager-p.html',1,'']]],
-  ['iemstatisticsmanager_2dp',['IEMStatisticsManager-p',['../protocol_i_e_m_statistics_manager-p.html',1,'']]],
   ['iemthreadmanager_2dp',['IEMThreadManager-p',['../protocol_i_e_m_thread_manager-p.html',1,'']]],
   ['iemuserinfomanager_2dp',['IEMUserInfoManager-p',['../protocol_i_e_m_user_info_manager-p.html',1,'']]]
 ];

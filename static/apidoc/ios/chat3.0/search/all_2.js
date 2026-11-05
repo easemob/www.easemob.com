@@ -10,11 +10,10 @@ var searchData=
   ['bitspersample',['bitsPerSample',['../interface_e_m_voice_param.html#a773f5624eff153c8f4d860277f5a7b37',1,'EMVoiceParam']]],
   ['blacklist',['blacklist',['../interface_e_m_chatroom.html#a1fe8db5d70110519916c4c2e1e4511fa',1,'EMChatroom::blacklist()'],['../interface_e_m_group.html#ad54a4aff8522f802f4238c588c9659c5',1,'EMGroup::blacklist()']]],
   ['blockgroup_3acompletion_3a',['blockGroup:completion:',['../protocol_i_e_m_group_manager-p.html#afde6db742f5ba2658f13b4da20facf3e',1,'IEMGroupManager-p']]],
-  ['blockgroup_3aerror_3a',['blockGroup:error:',['../protocol_i_e_m_group_manager-p.html#a487453c25ed20ec204134829318dcc54',1,'IEMGroupManager-p']]],
   ['blockmembers_3afromchatroom_3acompletion_3a',['blockMembers:fromChatroom:completion:',['../protocol_i_e_m_chatroom_manager-p.html#a0e760cb2bfa80449c216591b3204734f',1,'IEMChatroomManager-p']]],
   ['blockmembers_3afromchatroom_3aerror_3a',['blockMembers:fromChatroom:error:',['../protocol_i_e_m_chatroom_manager-p.html#a90322d04463fe7757629cac47a5dddf5',1,'IEMChatroomManager-p']]],
   ['blockmembers_3afromgroup_3acompletion_3a',['blockMembers:fromGroup:completion:',['../protocol_i_e_m_group_manager-p.html#a048543934a19754b79ed05f3f21a135b',1,'IEMGroupManager-p']]],
-  ['blockoccupants_3afromgroup_3aerror_3a',['blockOccupants:fromGroup:error:',['../protocol_i_e_m_group_manager-p.html#a7de6f3cc13996041e6447f429e6bac4a',1,'IEMGroupManager-p']]],
+  ['bodies',['bodies',['../interface_e_m_chat_message.html#adc7fa931cd7228bd51c9be70d19385cf',1,'EMChatMessage']]],
   ['body',['body',['../interface_e_m_chat_message.html#afa78db9d43f69fd65879aa902115455f',1,'EMChatMessage::body()'],['../interface_e_m_search_server_message_result.html#a7fccb3fc313fc674a65b8b8baef9e2a0',1,'EMSearchServerMessageResult::body()']]],
   ['broadcast',['broadcast',['../interface_e_m_chat_message.html#ae270c2da86b6797658fe447ec33dc304',1,'EMChatMessage']]],
   ['buildingname',['buildingName',['../interface_e_m_location_message_body.html#a809d3ba9da893b3275707bc0fec93f4b',1,'EMLocationMessageBody']]]

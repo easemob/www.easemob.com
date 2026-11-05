@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['datasynctype',['dataSyncType',['../interface_e_m_options.html#a390e72a137ab48313102ead12af7b0e0',1,'EMOptions']]],
   ['deletemessagesonleavechatroom',['deleteMessagesOnLeaveChatroom',['../interface_e_m_options.html#a797ac92d3bd6513878d76f72e4e6dbea',1,'EMOptions']]],
   ['deletemessagesonleavegroup',['deleteMessagesOnLeaveGroup',['../interface_e_m_options.html#abf8e8fb082dfa30e48cc501d21c0b809',1,'EMOptions']]],
   ['deliveronlineonly',['deliverOnlineOnly',['../interface_e_m_chat_message.html#a71d6ac796c0387e1fe2c40ea0c6ed54f',1,'EMChatMessage']]],
@@ -7,7 +8,7 @@ var searchData=
   ['device',['device',['../interface_e_m_presence_status_detail.html#a6d33951b1c41d946bbe78bb3be76ab79',1,'EMPresenceStatusDetail']]],
   ['devicename',['deviceName',['../interface_e_m_device_config.html#a5cc53b35d80ecedf58f4659f608d0d11',1,'EMDeviceConfig::deviceName()'],['../interface_e_m_login_extension_info.html#a97c56772b85bc409ab6baf7e1838dde6',1,'EMLoginExtensionInfo::deviceName()']]],
   ['deviceuuid',['deviceUUID',['../interface_e_m_device_config.html#af74b727782d2b66df9a4ce59c0480df0',1,'EMDeviceConfig']]],
-  ['direction',['direction',['../interface_e_m_chat_message.html#ac3276607543ee0dc1d9e8e5b64e924ff',1,'EMChatMessage::direction()'],['../interface_e_m_chat_message_statistics.html#a4414ef611fdddfdfcf55814d2bc62bc6',1,'EMChatMessageStatistics::direction()'],['../interface_e_m_fetch_server_messages_option.html#a567ac1d7e20fa8e7f46b05b278bcf7fc',1,'EMFetchServerMessagesOption::direction()']]],
+  ['direction',['direction',['../interface_e_m_chat_message.html#ac3276607543ee0dc1d9e8e5b64e924ff',1,'EMChatMessage::direction()'],['../interface_e_m_fetch_server_messages_option.html#a567ac1d7e20fa8e7f46b05b278bcf7fc',1,'EMFetchServerMessagesOption::direction()']]],
   ['disconnectnotifythreshold',['disconnectNotifyThreshold',['../interface_e_m_options.html#a9df7051e70fa7016cc1f796524aea863',1,'EMOptions']]],
   ['displayname',['displayName',['../interface_e_m_file_message_body.html#ab4500ce2155f1e2bcc6d06ea5a0f007d',1,'EMFileMessageBody::displayName()'],['../interface_e_m_push_options.html#aff81594ee835e1eac87a9008ed53d1e7',1,'EMPushOptions::displayName()']]],
   ['displaystyle',['displayStyle',['../interface_e_m_push_options.html#ac4afe6ecb687f5a5000d411ac70cbf56',1,'EMPushOptions']]],

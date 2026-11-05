@@ -1,13 +1,10 @@
 var searchData=
 [
+  ['saveblacklist_3acompletion_3a',['saveBlackList:completion:',['../protocol_i_e_m_contact_manager-p.html#ab5c70d0d39907b2d2cc6e71588b7192a',1,'IEMContactManager-p']]],
   ['searchmessagesfromserverwithoption_3apagesize_3apagenum_3acompletion_3a',['searchMessagesFromServerWithOption:pageSize:pageNum:completion:',['../protocol_i_e_m_chat_manager-p.html#a4345e303676c81f52cbb53815ee5feb8',1,'IEMChatManager-p']]],
   ['searchmessageswithtypes_3atimestamp_3acount_3afromuser_3asearchdirection_3acompletion_3a',['searchMessagesWithTypes:timestamp:count:fromUser:searchDirection:completion:',['../interface_e_m_conversation.html#a45f53c7c266c09be295056bea2410901',1,'EMConversation::searchMessagesWithTypes:timestamp:count:fromUser:searchDirection:completion:()'],['../protocol_i_e_m_chat_manager-p.html#a1e66936daa71ebd1eec81f0a34a3b385',1,'IEMChatManager-p::searchMessagesWithTypes:timestamp:count:fromUser:searchDirection:completion:()']]],
-  ['searchpublicgroupwithid_3acompletion_3a',['searchPublicGroupWithId:completion:',['../protocol_i_e_m_group_manager-p.html#a3ec6e53cf430657cd418a5b296274319',1,'IEMGroupManager-p']]],
-  ['searchpublicgroupwithid_3aerror_3a',['searchPublicGroupWithId:error:',['../protocol_i_e_m_group_manager-p.html#a936b75743993d82e5ad9d61cd64bcb6a',1,'IEMGroupManager-p']]],
-  ['sendgroupmessagereadack_3atogroup_3acontent_3acompletion_3a',['sendGroupMessageReadAck:toGroup:content:completion:',['../protocol_i_e_m_chat_manager-p.html#a3da6f68c3fb96564d93d493ff21d0542',1,'IEMChatManager-p']]],
   ['sendmessage_3aprogress_3acompletion_3a',['sendMessage:progress:completion:',['../protocol_i_e_m_chat_manager-p.html#a9e907db464e5f5572a0d3b3b48effdba',1,'IEMChatManager-p']]],
-  ['sendmessagereadack_3atouser_3acompletion_3a',['sendMessageReadAck:toUser:completion:',['../protocol_i_e_m_chat_manager-p.html#ad332c114b5e7bc3c7945923fa19b8eb8',1,'IEMChatManager-p']]],
-  ['servicecheckwithusername_3apassword_3acompletion_3a',['serviceCheckWithUsername:password:completion:',['../interface_e_m_client.html#af871f580c475ae7ab2fa67ff3008a332',1,'EMClient']]],
+  ['sendmessagereadreceipts_3acompletion_3a',['sendMessageReadReceipts:completion:',['../protocol_i_e_m_chat_manager-p.html#a997de55fceed9466e1e88ae503bbd4c7',1,'IEMChatManager-p']]],
   ['setchatroomattribute_3akey_3avalue_3aautodelete_3acompletionblock_3a',['setChatroomAttribute:key:value:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#aecbc07f8ea29376026ff32d5fd11b735',1,'IEMChatroomManager-p']]],
   ['setchatroomattributeforced_3akey_3avalue_3aautodelete_3acompletionblock_3a',['setChatroomAttributeForced:key:value:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#a7ba3bc575b969ac173acea06a686e374',1,'IEMChatroomManager-p']]],
   ['setchatroomattributes_3aattributes_3aautodelete_3acompletionblock_3a',['setChatroomAttributes:attributes:autoDelete:completionBlock:',['../protocol_i_e_m_chatroom_manager-p.html#ac4c2220c3d82da71b282bb05252372ec',1,'IEMChatroomManager-p']]],
@@ -23,5 +20,7 @@ var searchData=
   ['sharedmanager',['sharedManager',['../interface_e_m_local_notification_manager.html#a13dae8749df020c38b0d562923fa2bf7',1,'EMLocalNotificationManager']]],
   ['subscribe_3aexpiry_3acompletion_3a',['subscribe:expiry:completion:',['../protocol_i_e_m_presence_manager-p.html#ab6d03351191dc2c558aa5069c33cc25c',1,'IEMPresenceManager-p']]],
   ['subscribeusersinfo_3acompletion_3a',['subscribeUsersInfo:completion:',['../protocol_i_e_m_user_info_manager-p.html#ac2a07528093670d7eac18d5379276dc3',1,'IEMUserInfoManager-p']]],
+  ['syncdatafinished_3atype_3a',['syncDataFinished:type:',['../protocol_e_m_client_delegate-p.html#a742f6696b8d0f2ce9253dca51725eb4c',1,'EMClientDelegate-p']]],
+  ['syncdatastartwithtype_3a',['syncDataStartWithType:',['../protocol_e_m_client_delegate-p.html#a1966154c0dca9e8be4bb480b223739a8',1,'EMClientDelegate-p']]],
   ['syncsilentmodeconversationsfromservercompletion_3a',['syncSilentModeConversationsFromServerCompletion:',['../protocol_i_e_m_push_manager-p.html#ad68bc8591e51285579d20c01fd825f26',1,'IEMPushManager-p']]]
 ];
