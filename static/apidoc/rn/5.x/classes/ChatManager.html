@@ -1,5 +1,5 @@
 <!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>ChatManager | react-native-chat-sdk</title><meta name="description" content="Documentation for react-native-chat-sdk"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
-<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">Chat SDK for React Native 5.0.0</a>
+<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">Chat SDK for React Native 5.1.0</a>
 <div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
 <ul role="listbox" id="tsd-search-results"></ul>
 <div id="tsd-search-status" aria-live="polite" aria-atomic="true">
@@ -75,6 +75,7 @@
 <a href="#getallconversations" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>All<wbr/>Conversations</span></a>
 <a href="#getconversation" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conversation</span></a>
 <a href="#getconversationmessagecount" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conversation<wbr/>Message<wbr/>Count</span></a>
+<a href="#getconversationsfromdb" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conversations<wbr/>From<wbr/>DB</span></a>
 <a href="#getconversationunreadcount" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conversation<wbr/>Unread<wbr/>Count</span></a>
 <a href="#getconvmsgswithkeyword" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conv<wbr/>Msgs<wbr/>With<wbr/>Keyword</span></a>
 <a href="#getconvsmsgswithkeyword" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Convs<wbr/>Msgs<wbr/>With<wbr/>Keyword</span></a>
@@ -967,11 +968,21 @@
 <h3 class="tsd-anchor-link" id="getallconversations"><span>get<wbr/>All<wbr/>Conversations</span></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="getallconversations-1"><span class="tsd-kind-call-signature">getAllConversations</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="ChatConversation.html" class="tsd-signature-type tsd-kind-class">ChatConversation</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+<div class="tsd-signature tsd-anchor-link" id="getallconversations-1"><span class="tsd-kind-call-signature">getAllConversations</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">isSort</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="ChatConversation.html" class="tsd-signature-type tsd-kind-class">ChatConversation</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>获取本地数据库中所有会话。</p>
 <p>该方法会先从内存中获取，如果未找到任何会话，从本地数据库获取。</p>
 </div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">isSort</span>: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></span>
+<div class="tsd-comment tsd-typography"><p>是否对会话排序：</p>
+<ul>
+<li>（默认）<code>true</code>：是。置顶会话优先，其他会话按最新消息时间降序排列。</li>
+<li><code>false</code>：否。顺序不指定。</li>
+</ul>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="ChatConversation.html" class="tsd-signature-type tsd-kind-class">ChatConversation</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4><p>获取的会话。</p>
 
 <div class="tsd-comment tsd-typography">
@@ -1044,6 +1055,35 @@
 <h4 class="tsd-anchor-link" id="throws-34">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="getconversationsfromdb"><span>get<wbr/>Conversations<wbr/>From<wbr/>DB</span></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="getconversationsfromdb-1"><span class="tsd-kind-call-signature">getConversationsFromDB</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">params</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-kind-property">cursor</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">;</span> <span class="tsd-kind-property">pageSize</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="ChatCursorResult.html" class="tsd-signature-type tsd-kind-class">ChatCursorResult</a><span class="tsd-signature-symbol">&lt;</span><a href="ChatConversation.html" class="tsd-signature-type tsd-kind-class">ChatConversation</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>从本地数据库分页获取会话。</p>
+<p>需要在初始化 SDK 前将 <a href="ChatOptions.html#autoloadconversations" class="tsd-kind-property">ChatOptions.autoLoadConversations</a> 设置为 <code>false</code>。
+会话按置顶状态、最新消息的服务器时间、会话 ID（不区分大小写）排序，均为降序。</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">params</span>: <span class="tsd-signature-symbol">{</span> <span class="tsd-kind-property">cursor</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">;</span> <span class="tsd-kind-property">pageSize</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span> <span class="tsd-signature-symbol">}</span></span>
+<div class="tsd-comment tsd-typography"><p>分页选项。</p>
+<ul>
+<li><code>cursor</code>：上一页结果中的游标。第一页不传或传入空字符串。</li>
+<li><code>pageSize</code>：每页大小，取值范围为 1 到 100。默认值为 20。</li>
+</ul>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="ChatCursorResult.html" class="tsd-signature-type tsd-kind-class">ChatCursorResult</a><span class="tsd-signature-symbol">&lt;</span><a href="ChatConversation.html" class="tsd-signature-type tsd-kind-class">ChatConversation</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><p>获取的会话和下一页的游标。游标为空表示已是最后一页。</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-35">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。游标无效时会产生原生错误 110。</p>
+</div>
+<div class="tsd-tag-since">
+<h4 class="tsd-anchor-link" id="since">Since</h4><p>5.1.0</p>
+</div></div></div></li></ul></section>
+<section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getconversationunreadcount"><span>get<wbr/>Conversation<wbr/>Unread<wbr/>Count</span></h3>
 <ul class="tsd-signatures">
 <li class="">
@@ -1068,7 +1108,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-35">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-36">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getconvmsgswithkeyword"><span>get<wbr/>Conv<wbr/>Msgs<wbr/>With<wbr/>Keyword</span></h3>
@@ -1105,7 +1145,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-36">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-37">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getconvsmsgswithkeyword"><span>get<wbr/>Convs<wbr/>Msgs<wbr/>With<wbr/>Keyword</span></h3>
@@ -1128,7 +1168,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-37">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-38">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getgroupmessagereadreceipts"><span>get<wbr/>Group<wbr/>Message<wbr/>Read<wbr/>Receipts</span></h3>
@@ -1153,7 +1193,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-38">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-39">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getlatestmessage"><span>get<wbr/>Latest<wbr/>Message</span></h3>
@@ -1183,7 +1223,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-39">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-40">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getlatestreceivedmessage"><span>get<wbr/>Latest<wbr/>Received<wbr/>Message</span></h3>
@@ -1210,7 +1250,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-40">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-41">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmessage"><span>get<wbr/>Message</span></h3>
@@ -1230,7 +1270,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-41">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-42">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmessagecount"><span>get<wbr/>Message<wbr/>Count</span></h3>
@@ -1244,7 +1284,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-42">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>.</p>
+<h4 class="tsd-anchor-link" id="throws-43">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>.</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmessagecountwithtimestamp"><span>get<wbr/>Message<wbr/>Count<wbr/>With<wbr/>Timestamp</span></h3>
@@ -1272,7 +1312,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-43">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>.</p>
+<h4 class="tsd-anchor-link" id="throws-44">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>.</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmessagepininfo"><span>get<wbr/>Message<wbr/>Pin<wbr/>Info</span></h3>
@@ -1292,7 +1332,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-44">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-45">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmessageswithids"><span>get<wbr/>Messages<wbr/>With<wbr/>Ids</span></h3>
@@ -1315,7 +1355,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-45">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-46">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmessagethread"><span>get<wbr/>Message<wbr/>Thread</span></h3>
@@ -1335,7 +1375,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-46">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-47">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmsgs"><span>get<wbr/>Msgs</span></h3>
@@ -1355,7 +1395,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-47">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-48">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmsgswithkeyword"><span>get<wbr/>Msgs<wbr/>With<wbr/>Keyword</span></h3>
@@ -1389,7 +1429,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-48">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-49">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmsgswithmsgtype"><span>get<wbr/>Msgs<wbr/>With<wbr/>Msg<wbr/>Type</span></h3>
@@ -1408,7 +1448,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-49">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-50">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getmsgwithtimestamp"><span>get<wbr/>Msg<wbr/>With<wbr/>Timestamp</span></h3>
@@ -1432,7 +1472,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-50">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-51">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getpinnedmessages"><span>get<wbr/>Pinned<wbr/>Messages</span></h3>
@@ -1458,7 +1498,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-51">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-52">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getreactionlist"><span>get<wbr/>Reaction<wbr/>List</span></h3>
@@ -1478,7 +1518,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-52">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-53">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getthreadconversation"><span>get<wbr/>Thread<wbr/>Conversation</span></h3>
@@ -1505,7 +1545,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-53">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-54">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="getunreadcount"><span>get<wbr/>Unread<wbr/>Count</span></h3>
@@ -1519,7 +1559,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-54">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-55">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="importmessages"><span>import<wbr/>Messages</span></h3>
@@ -1539,7 +1579,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-55">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-56">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="insertmessage"><span>insert<wbr/>Message</span></h3>
@@ -1560,7 +1600,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-56">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-57">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="joinchatthread"><span>join<wbr/>Chat<wbr/>Thread</span></h3>
@@ -1590,7 +1630,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-57">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-58">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="leavechatthread"><span>leave<wbr/>Chat<wbr/>Thread</span></h3>
@@ -1619,7 +1659,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-58">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-59">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="modifymsgbody"><span>modify<wbr/>Msg<wbr/>Body</span></h3>
@@ -1648,7 +1688,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-59">Throws</h4><p>如果有异常会在此抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-60">Throws</h4><p>如果有异常会在此抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="pinconversation"><span>pin<wbr/>Conversation</span></h3>
@@ -1677,7 +1717,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-60">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-61">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="pinmessage"><span>pin<wbr/>Message</span></h3>
@@ -1696,7 +1736,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-61">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-62">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="recallmessage"><span>recall<wbr/>Message</span></h3>
@@ -1721,7 +1761,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-62">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-63">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="removeallmessagelistener"><span>remove<wbr/>All<wbr/>Message<wbr/>Listener</span></h3>
@@ -1759,7 +1799,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-63">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-64">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="removememberwithchatthread"><span>remove<wbr/>Member<wbr/>With<wbr/>Chat<wbr/>Thread</span></h3>
@@ -1784,7 +1824,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-64">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-65">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="removemessagelistener"><span>remove<wbr/>Message<wbr/>Listener</span></h3>
@@ -1828,7 +1868,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-65">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-66">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="removemessagesfromserverwithtimestamp"><span>remove<wbr/>Messages<wbr/>From<wbr/>Server<wbr/>With<wbr/>Timestamp</span></h3>
@@ -1857,7 +1897,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-66">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-67">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="removemessageswithtimestamp"><span>remove<wbr/>Messages<wbr/>With<wbr/>Timestamp</span></h3>
@@ -1883,7 +1923,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-67">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>.</p>
+<h4 class="tsd-anchor-link" id="throws-68">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>.</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="removereaction"><span>remove<wbr/>Reaction</span></h3>
@@ -1905,7 +1945,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-68">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-69">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="resendmessage"><span>resend<wbr/>Message</span></h3>
@@ -1927,7 +1967,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-69">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-70">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="searchmessages"><span>search<wbr/>Messages</span></h3>
@@ -1956,7 +1996,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-70">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-71">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="searchmessagesfromserver"><span>search<wbr/>Messages<wbr/>From<wbr/>Server</span></h3>
@@ -1983,7 +2023,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-71">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-72">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="searchmessagesinconversation"><span>search<wbr/>Messages<wbr/>In<wbr/>Conversation</span></h3>
@@ -2014,7 +2054,7 @@
 </ul>
 </div>
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-72">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>.</p>
+<h4 class="tsd-anchor-link" id="throws-73">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>.</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="sendmessage"><span>send<wbr/>Message</span></h3>
@@ -2041,7 +2081,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-73">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-74">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="sendmessagereadreceipts"><span>send<wbr/>Message<wbr/>Read<wbr/>Receipts</span></h3>
@@ -2066,7 +2106,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-74">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-75">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="setconversationextension"><span>set<wbr/>Conversation<wbr/>Extension</span></h3>
@@ -2127,7 +2167,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-75">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-76">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="unpinmessage"><span>unpin<wbr/>Message</span></h3>
@@ -2146,7 +2186,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-76">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-77">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="updatechatthreadname"><span>update<wbr/>Chat<wbr/>Thread<wbr/>Name</span></h3>
@@ -2171,7 +2211,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-77">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-78">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="updateconversationmessage"><span>update<wbr/>Conversation<wbr/>Message</span></h3>
@@ -2201,7 +2241,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-78">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-79">Throws</h4><p>如果有异常会在此抛出，包括错误码和错误信息，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="updatemessage"><span>update<wbr/>Message</span></h3>
@@ -2220,7 +2260,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-79">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-80">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="voicefiletotext"><span>voice<wbr/>File<wbr/>To<wbr/>Text</span></h3>
@@ -2243,7 +2283,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-80">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-81">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="voicemessagetotext"><span>voice<wbr/>Message<wbr/>To<wbr/>Text</span></h3>
@@ -2263,7 +2303,7 @@
 
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-throws">
-<h4 class="tsd-anchor-link" id="throws-81">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
+<h4 class="tsd-anchor-link" id="throws-82">Throws</h4><p>如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="ChatError.html" class="tsd-kind-class">ChatError</a>。</p>
 </div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="_callmethod"><code class="tsd-tag">Protected</code> <code class="tsd-tag">Static</code><span>_<wbr/>call<wbr/>Method</span></h3>
@@ -2349,7 +2389,7 @@
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
 <div><a href="#_eventemitter" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>_<wbr/>event<wbr/>Emitter</span></a><a href="#tag"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>TAG</span></a></div></details>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
-<div><a href="#addmessagelistener"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Message<wbr/>Listener</span></a><a href="#addreaction"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Reaction</span></a><a href="#addremoteandlocalconversationsmark"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Remote<wbr/>And<wbr/>Local<wbr/>Conversations<wbr/>Mark</span></a><a href="#clearallconversationunreadmessagecount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>clear<wbr/>All<wbr/>Conversation<wbr/>Unread<wbr/>Message<wbr/>Count</span></a><a href="#clearconversationunreadmessagecount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>clear<wbr/>Conversation<wbr/>Unread<wbr/>Message<wbr/>Count</span></a><a href="#createchatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Chat<wbr/>Thread</span></a><a href="#deleteallmessageandconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>All<wbr/>Message<wbr/>And<wbr/>Conversation</span></a><a href="#deleteconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Conversation</span></a><a href="#deleteconversationallmessages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Conversation<wbr/>All<wbr/>Messages</span></a><a href="#deleteconversations"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Conversations</span></a><a href="#deletemessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Message</span></a><a href="#deletemessagesbeforetimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Messages<wbr/>Before<wbr/>Timestamp</span></a><a href="#deletemessageswithtimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Messages<wbr/>With<wbr/>Timestamp</span></a><a href="#deleteremoteandlocalconversationsmark"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Remote<wbr/>And<wbr/>Local<wbr/>Conversations<wbr/>Mark</span></a><a href="#destroychatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>destroy<wbr/>Chat<wbr/>Thread</span></a><a href="#downloadattachment"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>Attachment</span></a><a href="#downloadattachmentincombine"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>Attachment<wbr/>In<wbr/>Combine</span></a><a href="#downloadbigimage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>Big<wbr/>Image</span></a><a href="#downloadthumbnail"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>Thumbnail</span></a><a href="#downloadthumbnailincombine"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>Thumbnail<wbr/>In<wbr/>Combine</span></a><a href="#fetchchatthreadfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Chat<wbr/>Thread<wbr/>From<wbr/>Server</span></a><a href="#fetchchatthreadwithparentfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Chat<wbr/>Thread<wbr/>With<wbr/>Parent<wbr/>From<wbr/>Server</span></a><a href="#fetchcombinemessagedetail"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Combine<wbr/>Message<wbr/>Detail</span></a><a href="#fetchgroupmessagereadreceipts"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Group<wbr/>Message<wbr/>Read<wbr/>Receipts</span></a><a href="#fetchhistorymessagesbyoptions"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>History<wbr/>Messages<wbr/>By<wbr/>Options</span></a><a href="#fetchjoinedchatthreadfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Joined<wbr/>Chat<wbr/>Thread<wbr/>From<wbr/>Server</span></a><a href="#fetchjoinedchatthreadwithparentfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Joined<wbr/>Chat<wbr/>Thread<wbr/>With<wbr/>Parent<wbr/>From<wbr/>Server</span></a><a href="#fetchlastmessagewithchatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Last<wbr/>Message<wbr/>With<wbr/>Chat<wbr/>Thread</span></a><a href="#fetchmemberswithchatthreadfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Members<wbr/>With<wbr/>Chat<wbr/>Thread<wbr/>From<wbr/>Server</span></a><a href="#fetchpinnedmessages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Pinned<wbr/>Messages</span></a><a href="#fetchreactiondetail"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Reaction<wbr/>Detail</span></a><a href="#fetchreactionlist"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Reaction<wbr/>List</span></a><a href="#fetchsupportedlanguages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Supported<wbr/>Languages</span></a><a href="#getallconversations"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>All<wbr/>Conversations</span></a><a href="#getconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conversation</span></a><a href="#getconversationmessagecount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conversation<wbr/>Message<wbr/>Count</span></a><a href="#getconversationunreadcount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conversation<wbr/>Unread<wbr/>Count</span></a><a href="#getconvmsgswithkeyword"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conv<wbr/>Msgs<wbr/>With<wbr/>Keyword</span></a><a href="#getconvsmsgswithkeyword"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Convs<wbr/>Msgs<wbr/>With<wbr/>Keyword</span></a><a href="#getgroupmessagereadreceipts"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Group<wbr/>Message<wbr/>Read<wbr/>Receipts</span></a><a href="#getlatestmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Latest<wbr/>Message</span></a><a href="#getlatestreceivedmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Latest<wbr/>Received<wbr/>Message</span></a><a href="#getmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Message</span></a><a href="#getmessagecount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Message<wbr/>Count</span></a><a href="#getmessagecountwithtimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Message<wbr/>Count<wbr/>With<wbr/>Timestamp</span></a><a href="#getmessagepininfo"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Message<wbr/>Pin<wbr/>Info</span></a><a href="#getmessageswithids"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Messages<wbr/>With<wbr/>Ids</span></a><a href="#getmessagethread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Message<wbr/>Thread</span></a><a href="#getmsgs"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Msgs</span></a><a href="#getmsgswithkeyword"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Msgs<wbr/>With<wbr/>Keyword</span></a><a href="#getmsgswithmsgtype"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Msgs<wbr/>With<wbr/>Msg<wbr/>Type</span></a><a href="#getmsgwithtimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Msg<wbr/>With<wbr/>Timestamp</span></a><a href="#getpinnedmessages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Pinned<wbr/>Messages</span></a><a href="#getreactionlist"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Reaction<wbr/>List</span></a><a href="#getthreadconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Thread<wbr/>Conversation</span></a><a href="#getunreadcount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Unread<wbr/>Count</span></a><a href="#importmessages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>import<wbr/>Messages</span></a><a href="#insertmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>insert<wbr/>Message</span></a><a href="#joinchatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>join<wbr/>Chat<wbr/>Thread</span></a><a href="#leavechatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>leave<wbr/>Chat<wbr/>Thread</span></a><a href="#modifymsgbody"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>modify<wbr/>Msg<wbr/>Body</span></a><a href="#pinconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>pin<wbr/>Conversation</span></a><a href="#pinmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>pin<wbr/>Message</span></a><a href="#recallmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>recall<wbr/>Message</span></a><a href="#removeallmessagelistener"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>All<wbr/>Message<wbr/>Listener</span></a><a href="#removeconversationfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Conversation<wbr/>From<wbr/>Server</span></a><a href="#removememberwithchatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Member<wbr/>With<wbr/>Chat<wbr/>Thread</span></a><a href="#removemessagelistener"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Message<wbr/>Listener</span></a><a href="#removemessagesfromserverwithmsgids"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Messages<wbr/>From<wbr/>Server<wbr/>With<wbr/>Msg<wbr/>Ids</span></a><a href="#removemessagesfromserverwithtimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Messages<wbr/>From<wbr/>Server<wbr/>With<wbr/>Timestamp</span></a><a href="#removemessageswithtimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Messages<wbr/>With<wbr/>Timestamp</span></a><a href="#removereaction"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Reaction</span></a><a href="#resendmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>resend<wbr/>Message</span></a><a href="#searchmessages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>search<wbr/>Messages</span></a><a href="#searchmessagesfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>search<wbr/>Messages<wbr/>From<wbr/>Server</span></a><a href="#searchmessagesinconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>search<wbr/>Messages<wbr/>In<wbr/>Conversation</span></a><a href="#sendmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>send<wbr/>Message</span></a><a href="#sendmessagereadreceipts"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>send<wbr/>Message<wbr/>Read<wbr/>Receipts</span></a><a href="#setconversationextension"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Conversation<wbr/>Extension</span></a><a href="#setnativelistener"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Native<wbr/>Listener</span></a><a href="#translatemessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>translate<wbr/>Message</span></a><a href="#unpinmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>unpin<wbr/>Message</span></a><a href="#updatechatthreadname"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>update<wbr/>Chat<wbr/>Thread<wbr/>Name</span></a><a href="#updateconversationmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>update<wbr/>Conversation<wbr/>Message</span></a><a href="#updatemessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>update<wbr/>Message</span></a><a href="#voicefiletotext"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>voice<wbr/>File<wbr/>To<wbr/>Text</span></a><a href="#voicemessagetotext"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>voice<wbr/>Message<wbr/>To<wbr/>Text</span></a><a href="#_callmethod" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>_<wbr/>call<wbr/>Method</span></a><a href="#checkerrorfromresult" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>check<wbr/>Error<wbr/>From<wbr/>Result</span></a><a href="#handlegroupfilecallback" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>handle<wbr/>Group<wbr/>File<wbr/>Callback</span></a><a href="#handlemessagecallback" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>handle<wbr/>Message<wbr/>Callback</span></a></div></details></div></details></div>
+<div><a href="#addmessagelistener"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Message<wbr/>Listener</span></a><a href="#addreaction"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Reaction</span></a><a href="#addremoteandlocalconversationsmark"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Remote<wbr/>And<wbr/>Local<wbr/>Conversations<wbr/>Mark</span></a><a href="#clearallconversationunreadmessagecount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>clear<wbr/>All<wbr/>Conversation<wbr/>Unread<wbr/>Message<wbr/>Count</span></a><a href="#clearconversationunreadmessagecount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>clear<wbr/>Conversation<wbr/>Unread<wbr/>Message<wbr/>Count</span></a><a href="#createchatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Chat<wbr/>Thread</span></a><a href="#deleteallmessageandconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>All<wbr/>Message<wbr/>And<wbr/>Conversation</span></a><a href="#deleteconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Conversation</span></a><a href="#deleteconversationallmessages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Conversation<wbr/>All<wbr/>Messages</span></a><a href="#deleteconversations"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Conversations</span></a><a href="#deletemessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Message</span></a><a href="#deletemessagesbeforetimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Messages<wbr/>Before<wbr/>Timestamp</span></a><a href="#deletemessageswithtimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Messages<wbr/>With<wbr/>Timestamp</span></a><a href="#deleteremoteandlocalconversationsmark"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>delete<wbr/>Remote<wbr/>And<wbr/>Local<wbr/>Conversations<wbr/>Mark</span></a><a href="#destroychatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>destroy<wbr/>Chat<wbr/>Thread</span></a><a href="#downloadattachment"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>Attachment</span></a><a href="#downloadattachmentincombine"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>Attachment<wbr/>In<wbr/>Combine</span></a><a href="#downloadbigimage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>Big<wbr/>Image</span></a><a href="#downloadthumbnail"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>Thumbnail</span></a><a href="#downloadthumbnailincombine"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>Thumbnail<wbr/>In<wbr/>Combine</span></a><a href="#fetchchatthreadfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Chat<wbr/>Thread<wbr/>From<wbr/>Server</span></a><a href="#fetchchatthreadwithparentfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Chat<wbr/>Thread<wbr/>With<wbr/>Parent<wbr/>From<wbr/>Server</span></a><a href="#fetchcombinemessagedetail"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Combine<wbr/>Message<wbr/>Detail</span></a><a href="#fetchgroupmessagereadreceipts"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Group<wbr/>Message<wbr/>Read<wbr/>Receipts</span></a><a href="#fetchhistorymessagesbyoptions"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>History<wbr/>Messages<wbr/>By<wbr/>Options</span></a><a href="#fetchjoinedchatthreadfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Joined<wbr/>Chat<wbr/>Thread<wbr/>From<wbr/>Server</span></a><a href="#fetchjoinedchatthreadwithparentfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Joined<wbr/>Chat<wbr/>Thread<wbr/>With<wbr/>Parent<wbr/>From<wbr/>Server</span></a><a href="#fetchlastmessagewithchatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Last<wbr/>Message<wbr/>With<wbr/>Chat<wbr/>Thread</span></a><a href="#fetchmemberswithchatthreadfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Members<wbr/>With<wbr/>Chat<wbr/>Thread<wbr/>From<wbr/>Server</span></a><a href="#fetchpinnedmessages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Pinned<wbr/>Messages</span></a><a href="#fetchreactiondetail"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Reaction<wbr/>Detail</span></a><a href="#fetchreactionlist"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Reaction<wbr/>List</span></a><a href="#fetchsupportedlanguages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>fetch<wbr/>Supported<wbr/>Languages</span></a><a href="#getallconversations"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>All<wbr/>Conversations</span></a><a href="#getconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conversation</span></a><a href="#getconversationmessagecount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conversation<wbr/>Message<wbr/>Count</span></a><a href="#getconversationsfromdb"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conversations<wbr/>From<wbr/>DB</span></a><a href="#getconversationunreadcount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conversation<wbr/>Unread<wbr/>Count</span></a><a href="#getconvmsgswithkeyword"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Conv<wbr/>Msgs<wbr/>With<wbr/>Keyword</span></a><a href="#getconvsmsgswithkeyword"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Convs<wbr/>Msgs<wbr/>With<wbr/>Keyword</span></a><a href="#getgroupmessagereadreceipts"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Group<wbr/>Message<wbr/>Read<wbr/>Receipts</span></a><a href="#getlatestmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Latest<wbr/>Message</span></a><a href="#getlatestreceivedmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Latest<wbr/>Received<wbr/>Message</span></a><a href="#getmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Message</span></a><a href="#getmessagecount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Message<wbr/>Count</span></a><a href="#getmessagecountwithtimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Message<wbr/>Count<wbr/>With<wbr/>Timestamp</span></a><a href="#getmessagepininfo"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Message<wbr/>Pin<wbr/>Info</span></a><a href="#getmessageswithids"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Messages<wbr/>With<wbr/>Ids</span></a><a href="#getmessagethread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Message<wbr/>Thread</span></a><a href="#getmsgs"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Msgs</span></a><a href="#getmsgswithkeyword"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Msgs<wbr/>With<wbr/>Keyword</span></a><a href="#getmsgswithmsgtype"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Msgs<wbr/>With<wbr/>Msg<wbr/>Type</span></a><a href="#getmsgwithtimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Msg<wbr/>With<wbr/>Timestamp</span></a><a href="#getpinnedmessages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Pinned<wbr/>Messages</span></a><a href="#getreactionlist"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Reaction<wbr/>List</span></a><a href="#getthreadconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Thread<wbr/>Conversation</span></a><a href="#getunreadcount"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Unread<wbr/>Count</span></a><a href="#importmessages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>import<wbr/>Messages</span></a><a href="#insertmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>insert<wbr/>Message</span></a><a href="#joinchatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>join<wbr/>Chat<wbr/>Thread</span></a><a href="#leavechatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>leave<wbr/>Chat<wbr/>Thread</span></a><a href="#modifymsgbody"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>modify<wbr/>Msg<wbr/>Body</span></a><a href="#pinconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>pin<wbr/>Conversation</span></a><a href="#pinmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>pin<wbr/>Message</span></a><a href="#recallmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>recall<wbr/>Message</span></a><a href="#removeallmessagelistener"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>All<wbr/>Message<wbr/>Listener</span></a><a href="#removeconversationfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Conversation<wbr/>From<wbr/>Server</span></a><a href="#removememberwithchatthread"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Member<wbr/>With<wbr/>Chat<wbr/>Thread</span></a><a href="#removemessagelistener"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Message<wbr/>Listener</span></a><a href="#removemessagesfromserverwithmsgids"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Messages<wbr/>From<wbr/>Server<wbr/>With<wbr/>Msg<wbr/>Ids</span></a><a href="#removemessagesfromserverwithtimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Messages<wbr/>From<wbr/>Server<wbr/>With<wbr/>Timestamp</span></a><a href="#removemessageswithtimestamp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Messages<wbr/>With<wbr/>Timestamp</span></a><a href="#removereaction"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Reaction</span></a><a href="#resendmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>resend<wbr/>Message</span></a><a href="#searchmessages"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>search<wbr/>Messages</span></a><a href="#searchmessagesfromserver"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>search<wbr/>Messages<wbr/>From<wbr/>Server</span></a><a href="#searchmessagesinconversation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>search<wbr/>Messages<wbr/>In<wbr/>Conversation</span></a><a href="#sendmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>send<wbr/>Message</span></a><a href="#sendmessagereadreceipts"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>send<wbr/>Message<wbr/>Read<wbr/>Receipts</span></a><a href="#setconversationextension"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Conversation<wbr/>Extension</span></a><a href="#setnativelistener"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set<wbr/>Native<wbr/>Listener</span></a><a href="#translatemessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>translate<wbr/>Message</span></a><a href="#unpinmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>unpin<wbr/>Message</span></a><a href="#updatechatthreadname"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>update<wbr/>Chat<wbr/>Thread<wbr/>Name</span></a><a href="#updateconversationmessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>update<wbr/>Conversation<wbr/>Message</span></a><a href="#updatemessage"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>update<wbr/>Message</span></a><a href="#voicefiletotext"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>voice<wbr/>File<wbr/>To<wbr/>Text</span></a><a href="#voicemessagetotext"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>voice<wbr/>Message<wbr/>To<wbr/>Text</span></a><a href="#_callmethod" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>_<wbr/>call<wbr/>Method</span></a><a href="#checkerrorfromresult" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>check<wbr/>Error<wbr/>From<wbr/>Result</span></a><a href="#handlegroupfilecallback" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>handle<wbr/>Group<wbr/>File<wbr/>Callback</span></a><a href="#handlemessagecallback" class="tsd-is-protected tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>handle<wbr/>Message<wbr/>Callback</span></a></div></details></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../modules.html">react-native-chat-sdk</a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container">
