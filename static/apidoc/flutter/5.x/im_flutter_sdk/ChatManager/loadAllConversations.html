@@ -54,8 +54,9 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatConversation-class.html">ChatConversation</a></span>&gt;</span></span>&gt;</span></span>
-<span class="name ">loadAllConversations</span>(<wbr>)
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../im_flutter_sdk/ChatConversation-class.html">ChatConversation</a></span>&gt;</span></span>&gt;</span></span>
+<span class="name ">loadAllConversations</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="loadAllConversations-param-isSort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isSort</span> = <span class="default-value">true</span>, </span></li>
+</ol>})
 
       
 
@@ -64,6 +65,9 @@
 <section class="desc markdown">
   <p>获取本地数据库中所有会话。</p>
 <p>会先从内存中获取，如果没有会从本地数据库获取。</p>
+<p>Param <code>isSort</code> 是否对会话排序，默认为 <code>true</code>。
+按最近一条消息的时间戳倒序返回会话，置顶会话在前，非置顶会话在后。
+为 <code>false</code> 时不保证会话顺序。</p>
 <p><strong>Return</strong>  返回获取的会话。</p>
 <p><strong>Throws</strong>  如果有异常会在这里抛出，包含错误码和错误描述，详见 <a href="../../im_flutter_sdk/ChatError-class.html">ChatError</a>。</p>
 </section>
@@ -72,10 +76,15 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;List&lt;ChatConversation&gt;&gt; loadAllConversations() async {
+  <pre class="language-dart"><code class="language-dart">&#47;&#47; 5.1.0
+Future&lt;List&lt;ChatConversation&gt;&gt; loadAllConversations({
+  bool isSort = true,
+}) async {
   try {
     Map result = await platform_interface.Client.instance.chatManager
-        .callNativeMethod(ChatMethodKeys.loadAllConversations);
+        .callNativeMethod(ChatMethodKeys.loadAllConversations, {
+      &#39;isSort&#39;: isSort,
+    });
     ChatError.hasErrorFromResult(result);
     List&lt;ChatConversation&gt; conversationList = [];
     result[ChatMethodKeys.loadAllConversations]?.forEach((element) {
@@ -113,7 +122,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      5.0.0
+      5.1.0
   </span>
   
 </footer>

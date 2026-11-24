@@ -75,6 +75,8 @@
 <li><span class="parameter" id="withAppId-param-webSocketPort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">webSocketPort</span>, </span></li>
 <li><span class="parameter" id="withAppId-param-chatAreaCode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">chatAreaCode</span>, </span></li>
 <li><span class="parameter" id="withAppId-param-enableEmptyConversation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableEmptyConversation</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="withAppId-param-autoLoadConversations"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoLoadConversations</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="withAppId-param-enableChatroomConversation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableChatroomConversation</span> = <span class="default-value">false</span>, </span></li>
 <li><span class="parameter" id="withAppId-param-deviceName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">deviceName</span>, </span></li>
 <li><span class="parameter" id="withAppId-param-osType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">osType</span>, </span></li>
 <li><span class="parameter" id="withAppId-param-useReplacedMessageContents"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">useReplacedMessageContents</span> = <span class="default-value">false</span>, </span></li>
@@ -95,7 +97,7 @@
 <section class="desc markdown">
   <p>设置 SDK
 Param <a href="../../im_flutter_sdk/ChatOptions/appKey.html">appKey</a> 创建 app 时在 console 后台上注册的 app 唯一识别符。</p>
-<p>Param <code>debugMode</code> 是否输出调试信息，在 ChatClient 初始化完成后调用，详见 <a href="../../im_flutter_sdk/ChatClient/init.html">ChatClient.init</a>。</p>
+<p>Param <code>debugMode</code> 是否开启调试日志。创建 <a href="../../im_flutter_sdk/ChatOptions-class.html">ChatOptions</a> 时配置，并将该配置传给 <a href="../../im_flutter_sdk/ChatClient/init.html">ChatClient.init</a>。</p>
 <ul>
 <li><code>true</code>：SDK 会在 log 里输出调试信息；</li>
 <li>（默认）<code>false</code>：不会输出调试信息。</li>
@@ -105,15 +107,15 @@ Param <a href="../../im_flutter_sdk/ChatOptions/appKey.html">appKey</a> 创建 a
 <li>（默认）<code>true</code>：是；</li>
 <li><code>false</code>：否。</li>
 </ul>
-<p>Param <code>autoAcceptGroupInvitation</code> 是否自动接受群组邀请。</p>
+<p>Param <code>autoAcceptGroupInvitation</code> 是否自动接受群组邀请。
+-（默认）<code>true</code>：是；</p>
 <ul>
-<li><code>true</code>：是；</li>
-<li>（默认）<code>false</code>：否。</li>
+<li><code>false</code>：否。</li>
 </ul>
 <p>Param <code>requireDeliveryAck</code> 是否发送已送达回执。</p>
 <ul>
-<li>（默认）<code>true</code>：是；</li>
-<li><code>false</code>：否。</li>
+<li><code>true</code>：是；</li>
+<li>（默认）<code>false</code>：否。</li>
 </ul>
 <p>Param <code>deleteMessagesAsExitGroup</code> 是否在离开群组时删除群组历史消息。</p>
 <ul>
@@ -167,6 +169,8 @@ Param <a href="../../im_flutter_sdk/ChatOptions/appKey.html">appKey</a> 创建 a
 <li><code>true</code>：包含空会话；</li>
 <li>（默认）<code>false</code>：不包含空会话。</li>
 </ul>
+<p>Param <code>autoLoadConversations</code> 是否自动加载会话，默认为 <code>true</code>。使用 <a href="../../im_flutter_sdk/ChatManager/getConversationsFromDB.html">ChatManager.getConversationsFromDB</a> 时需设为 <code>false</code>。</p>
+<p>Param <code>enableChatroomConversation</code> 是否为聊天室消息创建会话，默认为 <code>false</code>。</p>
 <p>Param <code>deviceName</code> 自定义设备名称。</p>
 <p>Param <code>osType</code> 自定义系统类型。</p>
 <p>Param <code>useReplacedMessageContents</code> 是否在文本审核时，返回给发送者被替换内容的文本消息。</p>
@@ -210,6 +214,8 @@ Param <a href="../../im_flutter_sdk/ChatOptions/appKey.html">appKey</a> 创建 a
   int? webSocketPort,
   int? chatAreaCode,
   bool enableEmptyConversation = false,
+  bool autoLoadConversations = true,
+  bool enableChatroomConversation = false,
   String? deviceName,
   int? osType,
   bool useReplacedMessageContents = false,
@@ -246,6 +252,8 @@ Param <a href="../../im_flutter_sdk/ChatOptions/appKey.html">appKey</a> 创建 a
         webSocketPort: webSocketPort,
         chatAreaCode: chatAreaCode ?? ChatAreaCode.GLOB,
         enableEmptyConversation: enableEmptyConversation,
+        autoLoadConversations: autoLoadConversations,
+        enableChatroomConversation: enableChatroomConversation,
         deviceName: deviceName,
         osType: osType,
         useReplacedMessageContents: useReplacedMessageContents,
@@ -289,7 +297,7 @@ Param <a href="../../im_flutter_sdk/ChatOptions/appKey.html">appKey</a> 创建 a
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      5.0.0
+      5.1.0
   </span>
   
 </footer>

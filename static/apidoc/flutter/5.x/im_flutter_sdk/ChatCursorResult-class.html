@@ -57,10 +57,13 @@
   <p>带游标及分页获取结果的泛型类。
 做为分页获取且含有游标的返回对象。</p>
 <p>示例代码如下：</p>
-<pre class="language-dart"><code class="language-dart">  String? cursor;
-  ChatCursorResult&lt;ChatGroup&gt; result = await ChatClient.getInstance.groupManager.getPublicGroupsFromServer(pageSize: 10, cursor: cursor);
-  List&lt;ChatGroup&gt;? group = result.data;
-  cursor = result.cursor;
+<pre class="language-dart"><code class="language-dart">  final ChatCursorResult&lt;ChatMessage&gt; result = await ChatClient.getInstance
+      .chatManager.fetchHistoryMessagesByOption(
+    conversationId,
+    ChatConversationType.Chat,
+  );
+  final List&lt;ChatMessage&gt; messages = result.data;
+  final String? nextCursor = result.cursor;
 </code></pre>
 </section>
 
@@ -71,7 +74,7 @@
     <h2>Constructors</h2>
     <dl class="constructor-summary-list">
         <dt id="ChatCursorResult.new" class="callable">
-          <span class="name"><a href="../im_flutter_sdk/ChatCursorResult/ChatCursorResult.html">ChatCursorResult</a></span><span class="signature">(<span class="parameter" id="param-cursor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span><span class="parameter" id="param-data"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">data</span>, {</span><span class="parameter" id="param-totalCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">totalCount</span></span>})</span>
+          <span class="name"><a href="../im_flutter_sdk/ChatCursorResult/ChatCursorResult.html">ChatCursorResult</a></span><span class="signature">(<span class="parameter" id="-param-cursor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cursor</span>, </span><span class="parameter" id="-param-data"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">data</span>, {</span><span class="parameter" id="-param-totalCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">totalCount</span></span>})</span>
         </dt>
         <dd>
           
@@ -236,7 +239,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      5.0.0
+      5.1.0
   </span>
   
 </footer>
