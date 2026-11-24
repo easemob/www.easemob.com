@@ -72,6 +72,14 @@
       return _onGroupChanged(argMap);
     }
   });
+  &#47;&#47; 5.1.0: the native sides report group shared file download events on
+  &#47;&#47; the file progress channel; forward them to [downloadCallback].
+  platform_interface.Client.instance.progressManager.updateNativeHandler((
+    MethodCall call,
+  ) async {
+    ChatLog.d(&quot;${call.method}: arguments: ${call.arguments}&quot;);
+    return _onDownloadEvent(call);
+  });
 }</code></pre>
 </section>
 
@@ -100,7 +108,7 @@
 <footer>
   <span class="no-break">
     im_flutter_sdk
-      5.0.0
+      5.1.0
   </span>
   
 </footer>
